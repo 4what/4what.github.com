@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>Summary</h2>
+	<p>
+		setHomePage
+	</p>
+
+<h2>Browser Compatibility</h2>
+	<p>
+		IE<sup><a href="http://msdn.microsoft.com/en-us/library/ms531405">[1]</a></sup>
+	</p>
+
+<h2>Syntax</h2>
+	<textarea cols="" rows="" name="code" class="js">
+	homePage.setHomePage(sPageURL)
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="html">
+	<a href="javascript: void(0);" id="homepage">Set Home Page</a>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	function setHome() {
+		// for IE
+		try {
+			this.style.behavior = "url(#default#homepage)";
+			this.setHomePage(window.location.href);
+		} catch (e) {}
+	}
+
+	document.getElementById("homepage").onclick = setHome;
+	</script>
+	</textarea>
+
+<h2>Example</h2>
+	<a href="javascript: void(0);" id="homepage">Set Home Page</a>
+
+	<script type="text/javascript">
+	function setHome() {
+		// for IE
+		try {
+			this.style.behavior = "url(#default#homepage)";
+			this.setHomePage(window.location.href);
+		} catch (e) {}
+	}
+
+	document.getElementById("homepage").onclick = setHome;
+	</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

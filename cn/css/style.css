@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+@import url("base.css");
+
+/**
+ * [Typography]
+ *
+ * background-color	{@value}
+ * border-color		{@value}
+ * color			{@value}
+ * font-family		{@value}
+ * font-size		{@value}
+ */
+
+/* Document */
+body {
+font-family: Arial, "Comic Sans MS", "Courier New", Georgia, Impact, Verdana; /* Core fonts for the Web */
+font-size: 12px;
+/*
+word-break: break-all;
+word-wrap: break-word;
+*/
+}
+
+/* Hypertext */
+a:link {
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
+
+/* Form */
+input, select, textarea {
+font-family: Arial;
+}
+
+
+/*------------------------------------*/
+#body-blank {
+}
+
+
+/*--------------------------------------
+  MAIN
+--------------------------------------*/
+#main {
+text-align: center;
+}
+
+
+/*--------------------------------------
+  CONTAINER
+--------------------------------------*/
+#container {
+}
+
+
+/*--------------------------------------
+  TOPBAR
+--------------------------------------*/
+#topbar {
+}
+
+
+/*--------------------------------------
+  HEADER
+--------------------------------------*/
+#header {
+margin: 0 auto;
+}
+
+	/*------------------------------------*/
+	#logo {
+	}
+
+	#title {
+	}
+
+	#banner {
+	}
+
+	#slogan {
+	}
+
+
+/*--------------------------------------
+  NAVBAR
+--------------------------------------*/
+#navbar {
+}
+
+	/*------------------------------------*/
+	.original {
+	}
+
+	.highlight {
+	}
+
+	.current {
+	}
+
+	.dimmed {
+	}
+
+	.spotlight {
+	}
+
+	.ignore {
+	}
+
+
+/*--------------------------------------
+  CONTENT
+--------------------------------------*/
+#content {
+margin: 0 auto;
+}
+
+	/*--------------------------------------
+	  SIDEBAR
+	--------------------------------------*/
+	#sidebar {
+	}
+
+	/*------------------------------------*/
+	#menu {
+	}
+
+	#submenu {
+	}
+
+	#subnav {
+	}
+
+	/*------------------------------------*/
+	.box {
+	}
+
+	.item {
+	}
+
+	.wrapper {
+	}
+
+	/*------------------------------------*/
+	.prompt {
+	}
+
+	.tip {
+	}
+
+	/*------------------------------------*/
+	.heading {
+	}
+
+	.subheading {
+	}
+
+	.chapter {
+	}
+
+	.layer {
+	}
+
+	.merge {
+	}
+
+	.slice {
+	}
+
+	.layout {
+	}
+
+
+/*--------------------------------------
+  FOOTER
+--------------------------------------*/
+#footer {
+margin: 0 auto;
+}
+
+	/*------------------------------------*/
+	#copyright {
+	}
+
+	#legal {
+	}

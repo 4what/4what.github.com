@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4what - Java</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>Summary</h2>
+	<p>
+		Singleton pattern
+	</p>
+
+<h2>Syntax</h2>
+	<textarea cols="" rows="" name="code" class="java">
+	public class Singleton {
+		private static Singleton instance = new Singleton();
+
+		private Singleton() {
+		}
+
+		public static Singleton getInstance() {
+			return instance;
+		}
+	}
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="java">
+	public class Singleton {
+		private static Singleton instance = null;
+
+		private Singleton() {
+		}
+
+		public static Singleton getInstance() {
+			if (instance == null) {
+				instance = new Singleton();
+			}
+			return instance;
+		}
+	}
+	</textarea>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

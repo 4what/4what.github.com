@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>util.js</h2>
+	<p>
+		<strong>Last modified:</strong>
+		<script type="text/javascript">document.write(document.lastModified);</script>
+	</p>
+	<p>
+		<span id="api-menu"></span>
+	</p>
+
+<h2 id="api-method"></h2>
+	<h3>Summary:</h3>
+		<ul id="api-summary">
+			<li class="JSON"><p><em>{Category: Miscellaneous}</em> JSON</p></li>
+			<li class="ajax"><p><em>{Category: AJAX}</em> AJAX</p></li>
+			<li class="bind"><p><em>{Category: Event}</em> bind</p></li>
+			<li class="cancel"><p><em>{Category: Event}</em> cancel</p></li>
+			<li class="clock"><p><em>{Category: Miscellaneous}</em> clock</p></li>
+			<li class="cookie"><p><em>{Category: Miscellaneous}</em> cookie</p></li>
+			<li class="extend"><p><em>{Category: Core}</em> extend</p></li>
+			<li class="fav"><p><em>{Category: Miscellaneous}</em> 添加到收藏夹</p></li>
+			<li class="get"><p><em>{Category: Core}</em> get</p></li>
+			<li class="iframeDoc"><p><em>{Category: Miscellaneous}</em> iframeDoc</p></li>
+			<li class="iframeHeight"><p><em>{Category: CSS}</em> IFRAME 自适应高度</p></li>
+			<li class="inArray"><p><em>{Category: Array}</em> 返回数组元素索引</p></li>
+			<li class="jsonp"><p><em>{Category: AJAX}</em> (cross domain) jsonp</p></li>
+			<li class="keyCode"><p><em>{Category: Event}</em> keyCode</p></li>
+			<li class="load"><p><em>{Category: Miscellaneous}</em> load</p></li>
+			<li class="loader"><p><em>{Category: Miscellaneous}</em> (cross domain) loader</p></li>
+			<li class="random"><p><em>{Category: Miscellaneous}</em> 生成一个随机数</p></li>
+			<li class="randoms"><p><em>{Category: Array}</em> 生成一个随机数组</p></li>
+			<li class="remove"><p><em>{Category: Array}</em> 删除数组元素</p></li>
+			<li class="script"><p><em>{Category: AJAX}</em> (cross domain) getScript</p></li>
+			<li class="style"><p><em>{Category: CSS}</em> style</p></li>
+			<li class="timer"><p><em>{Category: Miscellaneous}</em> timer</p></li>
+			<li class="unbind"><p><em>{Category: Event}</em> unbind</p></li>
+			<li class="unique"><p><em>{Category: Array}</em> 数组元素去重</p></li>
+			<li class="url"><p><em>{Category: Miscellaneous}</em> url</p></li>
+			<li class="verify"><p><em>{Category: Form}</em> verify</p></li>
+			<li class="windowName"><p><em>{Category: AJAX}</em> windowName</p></li>
+			<li class="zoomOut"><p><em>{Category: CSS}</em> 根据宽高最大值缩小图片</p></li>
+		</ul>
+
+	<h3>Syntax:</h3>
+		<ul id="api-syntax">
+			<li class="ajax">
+				<textarea cols="" rows="" name="code" class="js">
+				$js.ajax({
+					url:
+						//"ajax/data.jsp"
+						"ajax/data.xml"
+						+ "?timestamp=" + new Date().getTime()
+					,
+					//type: "POST",
+					//contentType: "",
+					//async: false,
+					data: {
+						name: "value"
+					},
+					beforeSend: function(xhr) {
+						//xhr.setRequestHeader("", "");
+					},
+					complete: function(xhr) {},
+					success: function(data, xhr) {
+						$4what.log(
+							data,
+							document.getElementById("api-example")
+						);
+					},
+					error: function(xhr) {
+						alert("Error: " + xhr.status + " " + xhr.statusText);
+					}
+				});
+				</textarea>
+			</li>
+			<li class="cookie">
+				<textarea cols="" rows="" name="code" class="js">
+				$js.cookie("key", "value"/*, {
+					domain: ".example.com",
+					expires: 7, // new Date()
+					path: "/",
+					secure: true
+				}*/);
+
+				//$js.cookie("key", null/*, {domain: ".example.com"}*/);
+
+				$4what.log(
+					$js.cookie("key"),
+					document.getElementById("api-example")
+				);
+
+				$4what.log(
+					document.cookie,
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="iframeHeight">
+				<textarea cols="" rows="" name="code" class="html">
+				<iframe src="../../docs/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$js.iframeHeight("iframeHeight");
+				</textarea>
+			</li>
+			<li class="inArray">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$js.inArray("a", ["a", "b", "c"]),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="jsonp">
+				<textarea cols="" rows="" name="code" class="js">
+				$js.jsonp("http://www.example.com:8080/project/4what.cn/sample/javascript/jsonp/data.jsp" + "?timestamp=" + new Date().getTime(), function(data) {
+					for (var key in data) {
+						$4what.log(
+							key + ": " + data[key],
+							document.getElementById("api-example")
+						)
+					}
+				});
+				</textarea>
+			</li>
+			<li class="loader">
+				<textarea cols="" rows="" name="code" class="js">
+				$js.loader($.ui, "../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+					$4what.log(
+						$.ui.version,
+						document.getElementById("api-example")
+					);
+				});
+				</textarea>
+			</li>
+			<li class="random">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$js.random(0, 10, true),
+					document.getElementById("api-example")
+				);
+
+				$4what.log(
+					$js.random(0, 10),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="randoms">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$js.randoms(3, 0, 10),
+					document.getElementById("api-example")
+				);
+
+				$4what.log(
+					$js.randoms(3, 0, 10, true),
+					document.getElementById("api-example")
+				);
+
+				$4what.log(
+					$js.randoms(3, 0, 10, true, false),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="remove">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$js.remove("a", ["a", "b", "c"]),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="script">
+				<textarea cols="" rows="" name="code" class="js">
+				$js.script("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+					$4what.log(
+						$.ui.version,
+						document.getElementById("api-example")
+					)
+				});
+				</textarea>
+			</li>
+			<li class="style">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$js.style(document.body, "background-color"),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="unique">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$js.unique([0, 1, 0, 1]),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="url">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$js.url.get("method"),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="windowName">
+				<textarea cols="" rows="" name="code" class="html">
+				<input type="button" name="" value="Request" id="windowName-request" />
+
+				<form action="http://www.example.com:8080/project/4what.cn/sample/javascript/window.name/data.jsp?windowname=true" method="post" id="windowName-form">
+					<input type="text" name="name" value="value" class="text" />
+					<input type="button" name="" value="Submit" id="windowName-form-submit" />
+				</form>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				function doRequest() {
+					$js.windowName({
+						url: "http://www.example.com:8080/project/4what.cn/sample/javascript/window.name/data.jsp?windowname=true" + "&timestamp=" + new Date().getTime(),
+						local: "window.name/blank.txt",
+						callback: function(data) {
+							$4what.log(data);
+						}
+					});
+				}
+				document.getElementById("windowName-request").onclick = doRequest;
+
+				function doSubmit() {
+					$js.windowName({
+						form: document.getElementById("windowName-form"),
+						local: "window.name/blank.txt",
+						callback: function(data) {
+							$4what.log(data);
+						}
+					});
+				}
+				document.getElementById("windowName-form-submit").onclick = doSubmit;
+				</textarea>
+			</li>
+			<li class="zoomOut">
+				<textarea cols="" rows="" name="code" class="html">
+				<div id="zoomOut">
+					<img src="../../images/100x100.png" alt="" />
+				</div>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				function handler() {
+					$js.zoomOut(document.getElementById("zoomOut"), 50, 50);
+				}
+				window.onload = handler;
+				</textarea>
+			</li>
+		</ul>
+
+	<h3>Example:</h3>
+		<dl id="api-example">
+			<dd class="iframeHeight">
+				<iframe src="../../docs/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
+			</dd>
+			<dd class="timer">
+				<textarea cols="" rows="" name="" class="textarea" id="timer-fn">
+					// loop
+					var iteration = 100000000;
+					for (
+						var i = 0; i < iteration; i++
+						//var i = iteration - 1; i > 0; i--
+					) {}
+				</textarea>
+				<input type="button" name="" value="Run" id="timer-run" />
+			</dd>
+			<dd class="windowName">
+				<ol>
+					<li>
+						<input type="button" name="" value="Request" id="windowName-request" />
+					</li>
+					<li>
+						<form action="http://www.example.com:8080/project/4what.cn/sample/javascript/window.name/data.jsp?windowname=true" method="post" id="windowName-form">
+							<input type="text" name="name" value="value" class="text" />
+							<input type="button" name="" value="Submit" id="windowName-form-submit" />
+						</form>
+					</li>
+				</ol>
+			</dd>
+			<dd class="zoomOut">
+				<div id="zoomOut">
+					<img src="../../images/100x100.png" alt="" />
+				</div>
+			</dd>
+		</dl>
+
+
+		<script type="text/javascript" src="../../js/util.jquery.js"></script>
+
+		<script type="text/javascript">
+		$jq.api($js, [
+			$("#api-summary li"),
+			$("#api-syntax li"),
+			$("#api-example dd")
+		], {
+			ajax: function() {
+				$js.ajax({
+					url:
+						//"ajax/data.jsp"
+						"ajax/data.xml"
+						+ "?timestamp=" + new Date().getTime()
+					,
+					//type: "POST",
+					//contentType: "",
+					//async: false,
+					data: {
+						name: "value"
+					},
+					beforeSend: function(xhr) {
+						//xhr.setRequestHeader("", "");
+					},
+					complete: function(xhr) {},
+					success: function(data, xhr) {
+						$4what.log(
+							data,
+							document.getElementById("api-example")
+						);
+					},
+					error: function(xhr) {
+						alert("Error: " + xhr.status + " " + xhr.statusText);
+					}
+				});
+			},
+			cookie: function() {
+				$js.cookie("key", "value"/*, {
+					domain: ".example.com",
+					expires: 7, // new Date()
+					path: "/",
+					secure: true
+				}*/);
+
+				//$js.cookie("key", null/*, {domain: ".example.com"}*/);
+
+				$4what.log(
+					$js.cookie("key"),
+					document.getElementById("api-example")
+				);
+
+				$4what.log(
+					document.cookie,
+					document.getElementById("api-example")
+				);
+			},
+			iframeHeight: function() {
+				$js.iframeHeight("iframeHeight");
+			},
+			inArray: function() {
+				$4what.log(
+					$js.inArray("a", ["a", "b", "c"]),
+					document.getElementById("api-example")
+				);
+			},
+			jsonp: function() {
+				$js.jsonp("http://www.example.com:8080/project/4what.cn/sample/javascript/jsonp/data.jsp" + "?timestamp=" + new Date().getTime(), function(data) {
+					for (var key in data) {
+						$4what.log(
+							key + ": " + data[key],
+							document.getElementById("api-example")
+						)
+					}
+				});
+			},
+			loader: function() {
+				$js.loader($.ui, "../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+					$4what.log(
+						$.ui.version,
+						document.getElementById("api-example")
+					);
+				});
+			},
+			random: function() {
+				$4what.log(
+					$js.random(0, 10, true),
+					document.getElementById("api-example")
+				);
+
+				$4what.log(
+					$js.random(0, 10),
+					document.getElementById("api-example")
+				);
+			},
+			randoms: function() {
+				$4what.log(
+					$js.randoms(3, 0, 10),
+					document.getElementById("api-example")
+				);
+
+				$4what.log(
+					$js.randoms(3, 0, 10, true),
+					document.getElementById("api-example")
+				);
+
+				$4what.log(
+					$js.randoms(3, 0, 10, true, false),
+					document.getElementById("api-example")
+				);
+			},
+			remove: function() {
+				$4what.log(
+					$js.remove("a", ["a", "b", "c"]),
+					document.getElementById("api-example")
+				);
+			},
+			script: function() {
+				$js.script("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+					$4what.log(
+						$.ui.version,
+						document.getElementById("api-example")
+					)
+				});
+			},
+			style: function() {
+				$4what.log(
+					$js.style(document.body, "background-color"),
+					document.getElementById("api-example")
+				);
+			},
+			timer: function() {
+				function handler() {
+					eval('$js.timer(function() { ' + document.getElementById("timer-fn").value + ' }, function(result) { $4what.log(result); });');
+				}
+				document.getElementById("timer-run").onclick = handler;
+			},
+			unique: function() {
+				$4what.log(
+					$js.unique([0, 1, 0, 1]),
+					document.getElementById("api-example")
+				);
+			},
+			url: function() {
+				$4what.log(
+					$js.url.get("method"),
+					document.getElementById("api-example")
+				);
+			},
+			windowName: function() {
+				function doRequest() {
+					$js.windowName({
+						url: "http://www.example.com:8080/project/4what.cn/sample/javascript/window.name/data.jsp?windowname=true" + "&timestamp=" + new Date().getTime(),
+						local: "window.name/blank.txt",
+						callback: function(data) {
+							$4what.log(data);
+						}
+					});
+				}
+				document.getElementById("windowName-request").onclick = doRequest;
+
+				function doSubmit() {
+					$js.windowName({
+						form: document.getElementById("windowName-form"),
+						local: "window.name/blank.txt",
+						callback: function(data) {
+							$4what.log(data);
+						}
+					});
+				}
+				document.getElementById("windowName-form-submit").onclick = doSubmit;
+			},
+			zoomOut: function() {
+				function handler() {
+					$js.zoomOut(document.getElementById("zoomOut"), 50, 50);
+				}
+				window.onload = handler;
+			}
+		});
+		</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>Summary</h2>
+	<p>
+		unique
+	</p>
+
+<h2>Syntax</h2>
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	function unique() {
+		return [
+			function(array) {
+				// Number + String
+				var
+				result = [],
+				element, exist;
+				for (var i = 0, l = array.length; i < l; i++) {
+					element = array[i];
+					exist = false;
+					for (var j = result.length - 1; j >= 0; j--) {
+						if (result[j] === element) {
+							exist = true;
+							break;
+						}
+					}
+					if (!exist) {
+						result.push(element);
+					}
+				}
+				return result;
+			},
+			function(array) {
+				// Number + String (slow)
+				array.sort();
+				for (var i = 1; i < array.length; i++) {
+					if (array[i] === array[i - 1]) {
+						array.splice(i--, 1);
+					}
+				}
+				return array;
+			},
+			function(array) {
+				// Number + String
+				var
+				result = [],
+				element;
+				for (var i = 0, l = array.length; i < l; i++) {
+					element = array[i];
+					if ($js.inArray(element, result) === -1) {
+						result.push(element);
+					}
+				}
+				return result;
+			},
+			function(array) {
+				// Number + String
+				var
+				result = [],
+				element, key,
+				map = {};
+				for (var i = 0, l = array.length; i < l; i++) {
+					element = array[i];
+					key = typeof element + "-" + element;
+					if (
+						!map[key]
+						//!(key in map)
+					) {
+						result.push(element);
+						map[key] = true;
+					}
+				}
+				return result;
+			}
+		];
+	}
+	</script>
+	</textarea>
+
+<h2>Example</h2>
+	<script type="text/javascript">
+	</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

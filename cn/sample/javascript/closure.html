@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>Summary</h2>
+	<p>
+		Closure
+		<sup><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Closures">[1]</a></sup>
+	</p>
+
+<h2>Syntax</h2>
+	<textarea cols="" rows="" name="code" class="html">
+	<div id="box">
+		<input type="button" name="" value="1" />
+		<input type="button" name="" value="2" />
+		<input type="button" name="" value="3" />
+	</div>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	function closure() {
+		function log(i) {
+			return function() {
+				alert(i);
+			};
+		}
+
+		var
+		btns = document.getElementById("box").getElementsByTagName("input"),
+		handler;
+
+		for (var i = 0, l = btns.length; i < l; i++) {
+			handler = log(i + 1);
+
+			btns[i].onclick =
+				//function() { alert(i + 1); }; // fail
+				//function() { handler(); }; // fail
+
+				//log(i + 1); // success
+				handler; // success
+		}
+	}
+
+	closure();
+	</script>
+	</textarea>
+
+<h2>Example</h2>
+	<div id="box">
+		<input type="button" name="" value="1" />
+		<input type="button" name="" value="2" />
+		<input type="button" name="" value="3" />
+	</div>
+
+	<script type="text/javascript">
+	function closure() {
+		function log(i) {
+			return function() {
+				alert(i);
+			};
+		}
+
+		var
+		btns = document.getElementById("box").getElementsByTagName("input"),
+		handler;
+
+		for (var i = 0, l = btns.length; i < l; i++) {
+			handler = log(i + 1);
+
+			btns[i].onclick =
+				//function() { alert(i + 1); }; // fail
+				//function() { handler(); }; // fail
+
+				//log(i + 1); // success
+				handler; // success
+		}
+	}
+
+	closure();
+	</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/**
+ * [Typography]
+ *
+ * background-color	{@value}
+ * border-color		{@value}
+ * color			{@value}
+ * font-family		{@value}
+ * font-size		{@value}
+ */
+
+/*--------------------------------------
+  SyntaxHighlighter
+--------------------------------------*/
+.syntaxhighlighter.ie,
+.syntaxhighlighter {
+/*
+background-color: #eee !important;
+border-color: #ddd !important;
+border-style: solid !important;
+border-width: 1px 0 !important;
+*/
+font-size: 1em !important;
+margin: 0 !important;
+padding: 0 0 10px 0 !important;
+}
+.syntaxhighlighter .line.alt1 {
+background-color: #fff !important;
+/*background-color: #eee !important;*/
+}
+.syntaxhighlighter .line.alt2 {
+background-color: #fff !important;
+/*background-color: #eee !important;*/
+}
+.syntaxhighlighter .gutter .line {
+/*border-right: 5px solid #808080 !important;*/
+}
