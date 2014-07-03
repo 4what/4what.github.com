@@ -4,7 +4,7 @@
  * UtilJq
  *
  * @author http://4what.github.com/
- * @version 2013.11.28
+ * @version 2014.07.03
  */
 (function() {
 
@@ -346,7 +346,7 @@ var UtilJq = window["$jq"] = {
 		defaults = {
 			callback: new Function(), // {Function}
 			template: new Function("id", ""), // {Function} (*)
-			timeout: 0 // {Number|Boolean}
+			timeout: false // {Boolean|Number}
 		},
 		settings = $.extend(defaults, options),
 
@@ -365,7 +365,7 @@ var UtilJq = window["$jq"] = {
 
 				// timeout
 				if (settings.timeout) {
-					window.setTimeout($.colorbox.close, (isNaN(settings.timeout) ? 2000 : settings.timeout));
+					window.setTimeout($.colorbox.close, settings.timeout === true ? 1000 * 2 : settings.timeout);
 				}
 			}
 		}, params);
