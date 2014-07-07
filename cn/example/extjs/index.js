@@ -7,7 +7,7 @@
 	// nav
 	var _nav = new Ext.Panel({
 		region: "west",
-		title: "太平洋网络",
+		title: "导航",
 		collapseMode: "mini",
 		collapsible: true,
 		iconCls: "icon-accordion",

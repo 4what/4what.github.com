@@ -1,9 +1,9 @@
-<%@ page contentType="text/html; charset=utf-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 <%@ page import="java.util.*" %>
 
 <%
-	request.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("UTF-8");
 
 	out.clear();
 

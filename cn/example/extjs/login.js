@@ -150,7 +150,7 @@
 		resizable: false,
 		width: 380,
 		items: [_form],
-		buttons: ["&copy; 太平洋网络"]
+		buttons: ["&copy; 4what"]
 	}).show();
 
 });
