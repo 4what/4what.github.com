@@ -42,7 +42,7 @@
 		//Ext.data.Store
 		Ext.data.GroupingStore
 		({
-			url: "data/json.json", // 自定义
+			url: "data/json.txt", // 自定义
 			autoDestroy: true,
 			autoLoad: {
 				params: {
