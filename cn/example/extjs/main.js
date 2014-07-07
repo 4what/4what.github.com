@@ -42,11 +42,16 @@
 		//Ext.data.Store
 		Ext.data.GroupingStore
 		({
-			proxy: new Ext.data.HttpProxy({
-				method: "GET",
-				url: "data/json.json"
-			}),
-			//url: "data/json.json", // 自定义
+/*
+			proxy: new
+				Ext.data.HttpProxy
+				//Ext.data.ScriptTagProxy
+				({
+					method: "GET",
+					url: "data/json.json" // 自定义
+				}),
+*/
+			url: "data/json.json", // 自定义
 			autoDestroy: true,
 			autoLoad: {
 				params: {
