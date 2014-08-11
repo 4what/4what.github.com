@@ -25,12 +25,14 @@ position: relative;
 width: 267px;
 }
 .item p {
-background: blue;
+background: navy;
+border-radius: 10px;
 color: #fff;
 display: none;
-/*font-size: 9px;*/
+font-size: 10px;
 margin: 0 auto;
-opacity: 0.5;
+opacity: 0.8;
+padding: 10px;
 position: relative;
 top: 40%;
 width: 100px;
@@ -47,13 +49,11 @@ width: 50px;
 <script type="text/javascript">
 $(function() {
 
-	var diff = {
-		count: 0,
-		items: $("#game div.item"),
-		result: $("#result")
-	};
+	//$("body").pagecontainer( "change", "#home");
 
-	diff.items.each(function() {
+	var count = 0;
+
+	$("#game div.item").each(function() {
 		var that = this;
 
 		$(that).find("span").each(function(i) {
@@ -62,19 +62,15 @@ $(function() {
 
 				$(that).find("p").eq(i).show();
 
-				diff.count++;
+				count++;
 
-				if (diff.count === 3) {
+				if (count === 3) {
 					window.setTimeout(function() {
-						diff.result.popup("open");
-					}, 1500);
+						$("#over").click();
+					}, 1000);
 				}
 			});
 		});
-	});
-
-	diff.result.popup({
-		transition: "pop"
 	});
 
 });
@@ -83,8 +79,8 @@ $(function() {
 
 <body>
 
-<div id="intro" data-role="page">
-	<div data-role="content">
+<div id="home" data-role="page">
+	<div class="ui-content" role="main">
 		<p>
 			三星4G手机支持三大运营商
 			同样的手机外观，不同的4G制式
@@ -103,7 +99,7 @@ $(function() {
 			<br />
 			<br />
 		</p>
-		<a href="#game" data-role="button" data-icon="search" data-inline="true" data-transition="slide">开抢</a>
+		<a href="#game" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">开抢</a>
 		<p>
 			<br />
 			免责申明：XXXXXXXXXXXXXXX
@@ -112,7 +108,7 @@ $(function() {
 </div>
 
 <div id="game" data-role="page">
-	<div data-role="content">
+	<div class="ui-content" role="main">
 		<p>
 			发现并【点击】三款三星4G手机不同之处
 			<br />
@@ -121,30 +117,32 @@ $(function() {
 			<br />
 			<br />
 		</p>
-		<div class="item" style="background-image: url(images/1.jpg)">
+		<div class="item" style="background-image: url(images/1.jpg);">
 			<span style="left: 50px; top: 80px;"></span>
 			<p>被你发现了！三星4G手机支持移动4G根本不是事儿</p>
 		</div>
-		<div class="item" style="background-image: url(images/2.jpg)">
+		<div class="item" style="background-image: url(images/2.jpg);">
 			<span style="left: 150px; top: 50px;"></span>
 			<p>好厉害！三星4G手机支持联通4G毫无压力</p>
 		</div>
-		<div class="item" style="background-image: url(images/3.jpg)">
+		<div class="item" style="background-image: url(images/3.jpg);">
 			<span style="left: 165px; top: 300px;"></span>
 			<p>好眼力！ 三星4G手机支持电信4G不在话下</p>
 		</div>
 	</div>
-</div>
 
-<div id="result" data-role="popup" data-dismissible="false" data-overlay-theme="a" data-theme="a">
-	<div data-role="header">
-		<h1>游戏完成</h1>
-	</div>
-	<div data-role="content">
-		<p>
-			请您保存好兑奖码，按照以下方式回复给官方微信：兑奖+姓名+手机号+兑换码，兑换您的流量红包
-		</p>
-		<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">分享到朋友圈</a>
+	<a href="#result" id="over" data-rel="popup" data-position-to="window" data-transition="pop"></a>
+
+	<div id="result" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
+		<div data-role="header" data-theme="a">
+			<h1>游戏完成</h1>
+		</div>
+		<div class="ui-content" role="main">
+			<p>
+				请您保存好兑奖码，按照以下方式回复给官方微信：兑奖+姓名+手机号+兑换码，兑换您的流量红包
+			</p>
+			<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">分享到朋友圈</a>
+		</div>
 	</div>
 </div>
 
