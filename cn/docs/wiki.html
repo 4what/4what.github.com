@@ -23,6 +23,8 @@
 
 <div id="navbar">
 	<ul>
+		<li><a href="#x-ua-compatible">X-UA-Compatible</a> |</li>
+		<li><a href="#viewport">Viewport</a> |</li>
 		<li><a href="#layout-engine">Layout Engine</a> |</li>
 		<li><a href="#flash">Flash</a> |</li>
 		<li><a href="#css-hack">CSS Hack</a> |</li>
@@ -39,6 +41,23 @@
 <!-- end of "#navbar" -->
 
 <div id="content">
+	<h2><a name="x-ua-compatible"><span>-</span> X-UA-Compatible</a><sup><a href="http://blogs.msdn.com/b/askie/archive/2009/03/23/understanding-compatibility-modes-in-internet-explorer-8.aspx">[1]</a><a href="http://msdn.microsoft.com/zh-cn/library/cc288325">[2]</a><a href="http://msdn.microsoft.com/en-us/library/jj676915">[3]</a><a href="http://www.chromium.org/developers/how-tos/chrome-frame-getting-started">[4]</a></sup></h2>
+		<div id="chapter-x-ua-compatible">
+			<textarea cols="" rows="" name="code" class="html">
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+			</textarea>
+			<p>
+				<code>5</code>, <code>7</code>, <code>EmulateIE7</code>, <code>8</code>, <code>EmulateIE8</code>, <code>Edge</code>
+			</p>
+		</div>
+
+	<h2><a name="viewport"><span>-</span> Viewport</a><sup><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">[1]</a><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">[2]</a><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">[3]</a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">[4]</a><a href="http://dev.w3.org/csswg/css-device-adapt/#viewport-meta">[5]</a><a href="http://www.w3.org/TR/css-device-adapt/#viewport-meta-element">[6]</a><a href="https://developers.google.com/speed/docs/insights/ConfigureViewport">[7]</a></sup></h2>
+		<div id="chapter-viewport">
+			<textarea cols="" rows="" name="code" class="html">
+				<meta name="viewport" content="width=device-width" />
+			</textarea>
+		</div>
+
 	<h2><a name="layout-engine"><span>-</span> Layout Engine</a></h2>
 		<div id="chapter-layout-engine">
 			<table>
@@ -227,12 +246,12 @@
 			<h3><a>Column groups: the COLGROUP and COL elements</a><sup><a href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.4">[1]</a></sup></h3>
 			<h3><a>How to specify alternate text</a><sup><a href="http://www.w3.org/TR/html401/struct/objects.html#adef-alt">[1]</a></sup></h3>
 				<p>
-				The <code>alt</code> attribute must be specified for the <code>IMG</code> and <code>AREA</code> elements. It is optional for the <code>INPUT</code> and <code>APPLET</code> elements.
+					The <code>alt</code> attribute must be specified for the <code>IMG</code> and <code>AREA</code> elements. It is optional for the <code>INPUT</code> and <code>APPLET</code> elements.
 				</p>
 			<h3><a>Notes on helping search engines index your Web site</a><sup><a href="http://www.w3.org/TR/html401/appendix/notes.html#h-B.4">[1]</a></sup></h3>
 			<h3><a>Tabbing navigation</a><sup><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.11.1">[1]</a></sup></h3>
 				<p>
-				The following elements support the <code>tabindex</code> attribute: <code>A</code>, <code>AREA</code>, <code>BUTTON</code>, <code>INPUT</code>, <code>OBJECT</code>, <code>SELECT</code>, and <code>TEXTAREA</code>.
+					The following elements support the <code>tabindex</code> attribute: <code>A</code>, <code>AREA</code>, <code>BUTTON</code>, <code>INPUT</code>, <code>OBJECT</code>, <code>SELECT</code>, and <code>TEXTAREA</code>.
 				</p>
 			<h3>
 				<a>The SCRIPT element</a><sup><a href="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.1">[1]</a></sup>:
@@ -240,7 +259,7 @@
 				<a>charset</a>
 			</h3>
 				<p>
-				Note that the <code>charset</code> attribute refers to the <code>character encoding</code> of the script designated by the <code>src</code> attribute; it does not concern the content of the <code>SCRIPT</code> element.
+					Note that the <code>charset</code> attribute refers to the <code>character encoding</code> of the script designated by the <code>src</code> attribute; it does not concern the content of the <code>SCRIPT</code> element.
 				</p>
 		</div>
 
