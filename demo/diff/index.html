@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<meta name="viewport" content="width=device-width" />
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />-->
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+
+<style type="text/css">
+.item {
+background-position: 0 0;
+background-repeat: no-repeat;
+height: 400px;
+margin: 0 auto;
+position: relative;
+width: 267px;
+}
+.item p {
+background: blue;
+color: #fff;
+display: none;
+/*font-size: 9px;*/
+margin: 0 auto;
+opacity: 0.5;
+position: relative;
+top: 40%;
+width: 100px;
+}
+.item span {
+border: 1px solid red;
+border-radius: 50px;
+height: 50px;
+position: absolute;
+width: 50px;
+}
+</style>
+
+<script type="text/javascript">
+$(function() {
+
+	var diff = {
+		count: 0,
+		items: $("#game div.item"),
+		result: $("#result")
+	};
+
+	diff.items.each(function() {
+		var that = this;
+
+		$(that).find("span").each(function(i) {
+			$(this).click(function() {
+				$(this).hide();
+
+				$(that).find("p").eq(i).show();
+
+				diff.count++;
+
+				if (diff.count === 3) {
+					diff.result.popup("open");
+				}
+			});
+		});
+	});
+
+	diff.result.popup({
+		transition: "pop"
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+<div id="intro" data-role="page">
+	<div data-role="content">
+		<p>
+			三星4G手机支持三大运营商
+			同样的手机外观，不同的4G制式
+			<br />
+			<br />
+			找茬抢流量红包，抢到你手软！
+			<br />
+			<br />
+			活动须知
+			<br />
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			<br />
+			<br />
+		</p>
+		<a href="#game" data-role="button" data-icon="search" data-inline="true" data-transition="slide">开抢</a>
+		<p>
+			<br />
+			免责申明：XXXXXXXXXXXXXXX
+		</p>
+	</div>
+</div>
+
+<div id="game" data-role="page">
+	<div data-role="content">
+		<p>
+			发现并【点击】三款三星4G手机不同之处
+			<br />
+			<br />
+			提示：三星4G手机支持三大运营商，同样的手机外观，不同的4G制式
+			<br />
+			<br />
+		</p>
+		<div class="item" style="background-image: url(images/1.jpg)">
+			<span style="left: 50px; top: 80px;"></span>
+			<p>被你发现了！三星4G手机支持移动4G根本不是事儿</p>
+		</div>
+		<div class="item" style="background-image: url(images/2.jpg)">
+			<span style="left: 150px; top: 50px;"></span>
+			<p>好厉害！三星4G手机支持联通4G毫无压力</p>
+		</div>
+		<div class="item" style="background-image: url(images/3.jpg)">
+			<span style="left: 165px; top: 300px;"></span>
+			<p>好眼力！ 三星4G手机支持电信4G不在话下</p>
+		</div>
+	</div>
+</div>
+
+<div id="result" data-role="popup" data-dismissible="false" data-overlay-theme="a" data-theme="a">
+	<div data-role="header">
+		<h1>游戏完成</h1>
+	</div>
+	<div data-role="content">
+		<p>
+			请您保存好兑奖码，按照以下方式回复给官方微信：兑奖+姓名+手机号+兑换码，兑换您的流量红包
+		</p>
+		<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">分享到朋友圈</a>
+	</div>
+</div>
+
+</body>
+</html>
