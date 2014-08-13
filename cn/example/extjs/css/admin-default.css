@@ -96,6 +96,9 @@ background-image: url("../images/icon/preview.png") !important;
 .icon-tab {
 background-image: url("../images/icon/tabs.gif") !important;
 }
+.icon-tab-new {
+background-image: url("../images/icon/new_tab.gif") !important;
+}
 
 .icon-collapse {
 background-image: url("../images/icon/collapse-all.gif") !important;
@@ -193,6 +196,19 @@ background-image: url("../images/icon/forum.gif") !important;
 }
 .icon-folder-setting {
 background-image: url("../images/icon/folder_wrench.png") !important;
+}
+
+.icon-rss {
+background-image: url("../images/icon/rss.gif") !important;
+}
+.icon-rss-add {
+background-image: url("../images/icon/rss_add.gif") !important;
+}
+.icon-rss-del {
+background-image: url("../images/icon/rss_delete.gif") !important;
+}
+.icon-rss-load {
+background-image: url("../images/icon/rss_load.gif") !important;
 }
 
 .icon-article {

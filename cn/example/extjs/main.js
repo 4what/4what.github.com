@@ -182,7 +182,7 @@
 					_grid["btn-save"].setDisabled(count < 1);
 
 					// 自定义
-					_grid["btn-cfg"].setDisabled(count !== 1);
+					_grid["btn-tab-new"].setDisabled(count !== 1);
 				}
 			}
 		});
@@ -499,11 +499,25 @@
 				},
 				"-",
 				{
-					ref: "../btn-cfg",
 					text: "配置",
 					xtype: "button",
-					disabled: true,
 					iconCls: "icon-cfg",
+					handler: function(button, e) {
+						// 自定义
+						$ext.iframewindow({
+							title: "配置",
+							src: "login.html",
+							iconCls: "icon-cfg"
+						}).show();
+					}
+				},
+				"-",
+				{
+					ref: "../btn-tab-new",
+					text: "View in New Tab",
+					xtype: "button",
+					disabled: true,
+					iconCls: "icon-tab-new",
 					handler: function(button, e) {
 						var
 						record = _grid.getSelectionModel().getSelected(),
@@ -515,7 +529,7 @@
 						$ext.tab.load("main", {
 							title: id,
 							src: "main.html?id=" + id,
-							iconCls: "icon-cfg"
+							iconCls: "icon-grid"
 						}, window.parent);
 					}
 				},
@@ -526,21 +540,6 @@
 					iconCls: "icon-menu",
 					menu: {
 						items: [
-							{
-								menu: [
-									{
-										text: "$ext.iframewindow",
-										handler: function(button, e) {
-											// 自定义
-											$ext.iframewindow({
-												title: "标题",
-												src: "login.html"
-											}).show();
-										}
-									}
-								]
-							},
-							"-",
 							{
 								text: "新增",
 								iconCls: "icon-user-add"
@@ -609,6 +608,23 @@
 							{
 								text: "修改",
 								iconCls: "icon-task-edit"
+							},
+							"-",
+							{
+								text: "订阅",
+								iconCls: "icon-rss"
+							},
+							{
+								text: "新增",
+								iconCls: "icon-rss-add"
+							},
+							{
+								text: "删除",
+								iconCls: "icon-rss-del"
+							},
+							{
+								text: "读取",
+								iconCls: "icon-rss-load"
 							},
 							"-",
 							{
