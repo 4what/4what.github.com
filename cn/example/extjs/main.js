@@ -1286,6 +1286,27 @@
 		//x: 0,
 		//y: 0,
 		items: [_form],
+		tools: [
+			{id: "toggle"},
+			{id: "close"},
+			{id: "minimize"},
+			{id: "maximize"},
+			{id: "restore"},
+			{id: "gear"},
+			{id: "pin"},
+			{id: "unpin"},
+			{id: "right"},
+			{id: "left"},
+			{id: "up"},
+			{id: "down"},
+			{id: "refresh"},
+			{id: "minus"},
+			{id: "plus"},
+			{id: "help"},
+			{id: "search"},
+			{id: "save"},
+			{id: "print"}
+		],
 		listeners: {
 			beforeshow: function(cmp) {
 				_reset();
