@@ -1,429 +1,163 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>ÑÅÂí¹ş½ÌÄã¿ªÆô±¦±´ÒôÀÖÇ±ÄÜ</title>
-    <meta name="keywords" content="ÒôÀÖ£¬¿Î³Ì£¬Ç±ÄÜ" />
-    <meta name="description" content="ÑÅÂí¹şÒôÀÖÖĞĞÄ1954Äêµ®ÉúÓÚÈÕ±¾£¬×÷Îª¹ú¼ÊÒ»Á÷µÄÒôÀÖÅàÑµ»ú¹¹¡£ÖÁ½ñÒÑÓĞ58ÄêµÄÀúÊ·£¬±é²¼È«Çò47¸ö¹ú¼ÒºÍµØÇø£¬ÓµÓĞ7600¶à¸öÒôÀÖÖĞĞÄ£¬ 70ÍòÃûÑ§ÉúºÍ2Íò1Ç§Ãû½ÌÊ¦µÄÇ¿´óÏµÍ³£¬Ä¿Ç°ÒÑÓĞ500¶àÍòÑ§Éú´ÓÑÅÂí¹şÒôÀÖÖĞĞÄ±ÏÒµ¡£ 2005ÄêÔÚÖĞ¹úÉÏº£¿ªÊ¼µÚÒ»¼ÒÑÅÂí¹şÒôÀÖÖĞĞÄÀ´£¬Ä¿Ç°È«¹úÒÑÓĞ22¼ÒÒôÀÖÖĞĞÄ¡£ÏÖÔÚ£¬ÑÅÂí¹şÒôÀÖÖĞĞÄÀ´µ½¹ş¶û±õ£¬ÖÂÁ¦ÓÚ½«·á¸»µÄÒôÀÖ¿Î³ÌºÍÓÅÖÊ·şÎñ£¬Í¨¹ıÓÅĞãµÄ½ÌÊ¦´«´ï¸øº¢×Ó£¬ÈÃ¿ìÀÖµÄÒôÀÖ¸ĞÈ¾ÄãÎÒ¡£" />
-    <meta name="Author" content="niujianqiang_bj author_bj">
-    <link href="http://js.3conline.com/pcbaby/2012/zt2012.css" rel="stylesheet" type="text/css" />
-    <link href="http://www1.pcbaby.com.cn/zt/b140811/YAMAHA/css/style.css" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
 
+<meta name="viewport" content="width=device-width" />
 
-    <SCRIPT type=text/javascript src="js/batch_upload.js"></SCRIPT>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <!--[if IE 6]><script>document.execCommand("BackgroundImageCache", false, true)</script><![endif]-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />-->
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+
+<script type="text/javascript" src="js/shake.js"></script>
+
+<style type="text/css">
+.item {
+background-position: 0 0;
+background-repeat: no-repeat;
+height: 400px;
+margin: 0 auto;
+position: relative;
+width: 267px;
+}
+.item p {
+background: navy;
+border-radius: 10px;
+color: #fff;
+display: none;
+font-size: 10px;
+margin: 0 auto;
+opacity: 0.8;
+padding: 10px;
+position: relative;
+top: 40%;
+width: 100px;
+}
+.item span {
+border: 1px solid red;
+border-radius: 50px;
+height: 50px;
+position: absolute;
+width: 50px;
+}
+</style>
+
+<script type="text/javascript">
+$(function() {
+
+	//$("body").pagecontainer( "change", "#home");
+
+	var count = 0;
+
+	$("#game div.item").each(function() {
+		var that = this;
+
+		$(that).find("span").each(function(i) {
+			$(this).click(function() {
+				$(this).hide();
+
+				$(that).find("p").eq(i).show();
+
+				count++;
+
+				if (count === 3) {
+					window.setTimeout(function() {
+						$("#over").click();
+					}, 1000);
+				}
+			});
+		});
+	});
+
+	window.addEventListener('shake', shakeEventDidOccur, false);
+
+	//define a custom method to fire when shake occurs.
+	function shakeEventDidOccur () {
+
+		//put your own code here etc.
+		if (confirm("Undo?")) {
+
+		}
+	}
+
+});
+</script>
 </head>
 
 <body>
-<script>if(!window._addIvyID) document.write("<scr"+"ipt src='http://www.pconline.com.cn/_hux_/baby/default/index.js'><\/scr"+"ipt>");</script>
-<!--¼ÆÊıÆ÷-->
-<span class="spanclass">
-<script>
-    document.write("<img style=display:none src=http://count.pcbaby.com.cn/count.php?channel=11&screen="+screen.width+"*"+screen.height+"&refer="+encodeURIComponent(document.referrer)+"&anticache="+new Date().getTime()+"&url="+encodeURIComponent(location.href)+"&from=cms >");
-</script>
-</span>
 
-<!--Í·²¿-->
-<script src="http://www.pcbaby.com.cn/global/zt_header/index.html"></script>
-
-
-<div class="doc">
-    <!-- header -->
-    <div class="banner1"></div>
-    <div class="banner2">
-        <div class="tb main">
-            <a href="http://bbs.pcbaby.com.cn/topic-2018884.html" target="_blank" class="aa a3"></a>
-            <a href="javascript:;" onclick="alert('¾´ÇëÆÚ´ı£¡');"  class="aa a4"></a>
-            <a href="javascript:;" onclick="alert('¾´ÇëÆÚ´ı£¡');"  class="aa a5"></a>
-        </div>
-    </div>
-    <!-- /header -->
-
-    <!-- wraper -->
-    <div class="box1">
-        <div class="tb main">
-            <div class="tab01">
-                <ul class="control" id ="slide03_control">
-                    <li id="dx"></li>
-                    <li id="qn"></li>
-                </ul>
-                <div id="slide03" class="tab">
-                    <ul>
-                        <li><img width="580" height="450" alt="" src="http://www1.pcbaby.com.cn/zt/b140811/YAMAHA/images/b7.jpg" /></li>
-                        <li class="bg" id="bg"><a href="javascript:;" id="cy"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="box2">
-        <div class="tb main">
-            <a href="http://www.yamaha.com.cn/musicschool/index.html" target="_blank" class="a2" title="ÏêÇéµã»÷"></a>
-        </div>
-    </div>
-
-    <div class="box3">
-        <div class="tb main">
-            <a href="http://www.yamaha.com.cn/musicschool/index.html" target="_blank" title="ÏêÇéµã»÷" class="kc"></a>
-        </div>
-    </div>
-
-    <div class="box4">
-        <div class="tb main">
-            <a href="http://www.yamaha.com.cn/minisite/music_school/introduction/index.html" target="_blank" class="a1" title="ÏêÇéµã»÷"></a>
-        </div>
-    </div>
-    <!-- <a href="javascript:;"  style="width:100px;height:100px;background:#ccc;display:inline-block;"  id="test"></a> -->
-    <input type="hidden" name="" value="${user.userId}" id="user-id" />
-    <input type="hidden" name="" value="${postCount}" id="postCount" />
-
-    <form action="" method="post" id="post-frm">
-        <input type="hidden" name="score" id="score" value="" />
-        <input type="hidden" name="status" value="0" />
-        <div id="form" style="display: none;">
-
-            <div id="oc"></div>
-            <div class="age"><input type="text" name="age"></div>
-            <div class="name"><input type="text" name="guardianName"></div>
-            <div class="gender">
-                <select name="gender">
-                    <!--<option value="">ÇëÑ¡Ôñ</option>-->
-                    <option value="ÄĞ" selected="selected">ÄĞ</option>
-                    <option value="Å®">Å®</option>
-                </select>
-            </div>
-            <div class="address">
-                <input type="text" name="address" value="" />
-            </div>
-            <div class="phone">
-                <input type="text" name="mobile" value="" />
-            </div>
-            <!--
-             <div class="city">
-                <input type="text" name="province">
-            </div>
-            <div class="county">
-                <input type="text" name="area">
-            </div>
-            <div class="street">
-                <input type="text" class="xx" name="street">
-            </div>
-             -->
-            <div class="btn"><input type="submit" class="button" value=""/></div>
-        </div>
-    </form>
-
-
-
-    <div id="overlay"></div>
-    <div id="win">
-        <h2><span id="close">¡Á</span></h2>
-        <div class="video">
-            <script>
-                var lotteryloader = new BatchUploader();
-                lotteryloader.show();
-            </script>
-        </div>
-    </div>
-
-
-
-
-
-    <!-- /wraper -->
-
+<div id="home" data-role="page">
+	<div class="ui-content" role="main">
+		<p>
+			ä¸‰æ˜Ÿ4Gæ‰‹æœºæ”¯æŒä¸‰å¤§è¿è¥å•†
+			åŒæ ·çš„æ‰‹æœºå¤–è§‚ï¼Œä¸åŒçš„4Gåˆ¶å¼
+			<br />
+			<br />
+			æ‰¾èŒ¬æŠ¢æµé‡çº¢åŒ…ï¼ŒæŠ¢åˆ°ä½ æ‰‹è½¯ï¼
+			<br />
+			<br />
+			æ´»åŠ¨é¡»çŸ¥
+			<br />
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			XXXXXXXXXXXXXXXXXXXXXXXXXX
+			<br />
+			<br />
+		</p>
+		<a href="#game" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">å¼€æŠ¢</a>
+		<p>
+			<br />
+			å…è´£ç”³æ˜ï¼šXXXXXXXXXXXXXXX
+		</p>
+	</div>
 </div>
 
-<!--Ò³Ãæ½Å±¾ÇøS-->
-<!--ËùÓĞÒ³ÃæÓÃµ½µÄjs½Å±¾¶¼±ØĞë·Åµ½´ËÎ»ÖÃ£¬°üÀ¨ÍâÁ´jsºÍÄÚÇ¶js-->
-<script src="http://js.3conline.com/min/temp/v2/core-pc_v1,dpl-tab_v2.js"></script>
+<div id="game" data-role="page">
+	<div class="ui-content" role="main">
+		<p>
+			å‘ç°å¹¶ã€ç‚¹å‡»ã€‘ä¸‰æ¬¾ä¸‰æ˜Ÿ4Gæ‰‹æœºä¸åŒä¹‹å¤„
+			<br />
+			<br />
+			æç¤ºï¼šä¸‰æ˜Ÿ4Gæ‰‹æœºæ”¯æŒä¸‰å¤§è¿è¥å•†ï¼ŒåŒæ ·çš„æ‰‹æœºå¤–è§‚ï¼Œä¸åŒçš„4Gåˆ¶å¼
+			<br />
+			<br />
+		</p>
+		<div class="item" style="background-image: url(images/1.jpg);">
+			<span style="left: 50px; top: 80px;"></span>
+			<p>è¢«ä½ å‘ç°äº†ï¼ä¸‰æ˜Ÿ4Gæ‰‹æœºæ”¯æŒç§»åŠ¨4Gæ ¹æœ¬ä¸æ˜¯äº‹å„¿</p>
+		</div>
+		<div class="item" style="background-image: url(images/2.jpg);">
+			<span style="left: 150px; top: 50px;"></span>
+			<p>å¥½å‰å®³ï¼ä¸‰æ˜Ÿ4Gæ‰‹æœºæ”¯æŒè”é€š4Gæ¯«æ— å‹åŠ›</p>
+		</div>
+		<div class="item" style="background-image: url(images/3.jpg);">
+			<span style="left: 165px; top: 300px;"></span>
+			<p>å¥½çœ¼åŠ›ï¼ ä¸‰æ˜Ÿ4Gæ‰‹æœºæ”¯æŒç”µä¿¡4Gä¸åœ¨è¯ä¸‹</p>
+		</div>
+	</div>
 
-<!--µ¯²ã-->
-<script>
+	<a href="#result" id="over" data-rel="popup" data-position-to="window" data-transition="pop"></a>
 
-    //    $("#form").hide();
+	<div id="result" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
+		<div data-role="header" data-theme="a">
+			<h1>æ¸¸æˆå®Œæˆ</h1>
+		</div>
+		<div class="ui-content" role="main">
+			<p>
+				è¯·æ‚¨ä¿å­˜å¥½å…‘å¥–ç ï¼ŒæŒ‰ç…§ä»¥ä¸‹æ–¹å¼å›å¤ç»™å®˜æ–¹å¾®ä¿¡ï¼šå…‘å¥–+å§“å+æ‰‹æœºå·+å…‘æ¢ç ï¼Œå…‘æ¢æ‚¨çš„æµé‡çº¢åŒ…
+			</p>
+			<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">åˆ†äº«åˆ°æœ‹å‹åœˆ</a>
+		</div>
+	</div>
+</div>
 
-    var oWin = document.getElementById("win");
-    var oLay = document.getElementById("overlay");
-    var oBtn = document.getElementById("cy");
-    var oClose = document.getElementById("close");
-    oBtn.onclick = function ()
-    {
-
-        var count = parseInt($("#postCount").val(), 10);
-//        if(PC.play.user.status() === false){
-////        if(false){
-//            alert("ÇëµÇÂ¼Í¨ĞĞÖ¤");
-//            window.location.href = "#top";
-////            oLay.style.display = "none";
-////            oWin.style.display = "none";
-//        }else
-
-        if(count >= 3) {
-            alert("±§Ç¸£¬Ã¿¸öÓÃ»§×î¶à²ÎÓë¸ÃÓÎÏ·3´Î£¡£¡£¡");
-            //return false;
-        } else{
-            //thisMovie("index").startGame(); //»Øµ÷º¯Êı£¬³É¹¦Ê±µ÷ÓÃ
-            oLay.style.display = "block";
-            oWin.style.display = "block"
-        }
-
-
-    };
-    oClose.onclick = function ()
-    {
-        oLay.style.display = "none";
-        oWin.style.display = "none"
-    }
-
-</script>
-<!--µ¯²ãend-->
-
-<script type="text/javascript">
-    var oF = document.getElementById("form");
-    var oC = document.getElementById("oc");
-   
-    oC.onclick = function ()
-    {
-        oF.style.display = "none";
-        window.location.reload();
-
-
-    }
-</script>
-
-
-
-
-
-<script>
-    function thisMovie(movieName) {
-        if (navigator.appName.indexOf("Microsoft") != -1) {
-            if(window[movieName+"_ob"]){
-                return window[movieName+"_ob"];
-            }else{
-                return document[movieName+"_ob"];
-            };
-        } else {
-            if(document[movieName+"_em"]){
-                return document[movieName+"_em"];
-            }else{
-                return document[movieName];
-            };
-        }
-    }
-    function myPlay(){
-//
-//    var count = parseInt($("#postCount").val(), 10);
-//
-////	if(PC.play.user.status() === false){
-//	if(false){
-//        alert("ÇëµÇÂ¼Í¨ĞĞÖ¤");
-//        oLay.style.display = "none";
-//        oWin.style.display = "none";
-//	}else if(count > 5) {
-//        alert("±§Ç¸£¬Ã¿¸öÓÃ»§×î¶à²ÎÓë5´Î¸ÃÓÎÏ·£¡£¡£¡");
-//        //return false;
-//    } else{
-        thisMovie("index").startGame(); //»Øµ÷º¯Êı£¬³É¹¦Ê±µ÷ÓÃ
-        //}
-
-    }
-    function PlayOver(_Score){
-//	alert("»ñµÃµÄ·ÖÊı£º" + _Score);
-
-
-
-
-        if(_Score >= 100) {
-            alert("¹§Ï²Äú»ñµÃµÄ£º" + _Score + "·Ö£¬ÇëÌîĞ´ÏêÏ¸ĞÅÏ¢£¬½«ÓĞ»ú»á»ñµÃ¾«ÃÀ½±Æ·£¡£¡£¡");
-            oLay.style.display = "none";
-            oWin.style.display = "none"
-            $("#score").val(_Score);
-            $("#form").show();
-        }  else {
-            alert("¹§Ï²Äú»ñµÃµÄ£º" + _Score + "·Ö£¬¸ĞĞ»²ÎÓë£¡£¡£¡");
-            $.post("action/do_post.jsp", {method: "insert", score:_Score, age:0,status:1});
-            oLay.style.display = "none";
-            oWin.style.display = "none"
-            var counter = $("#postCount"),
-                    n = parseInt(counter.val(), 10) + 1;
-            counter.val(n);
-            //window.location.reload();
-        }
-    }
-</script>
-
-<!--Ñ¡Ïî¿¨-->
-<script>
-    pc.ready(function(){
-        new pc.tab({
-            target: pc.getElems('#slide03 li'),
-            control: pc.getElems('#slide03_control li'),
-            type:'click'
-        });
-    });
-</script>
-
-
-
-<script type="text/javascript">
-
-
-    // login
-    PC.play.login.init(/*function() {}*/);
-
-    // post
-    var _post = {
-        form: $("#post-frm")
-    };
-
-    _post.form.resetForm();
-
-    //    if (PC.play.user.status() === false) {
-    ////		_post.form.submit(function() {
-    //        alert("ÇëµÇÂ¼Í¨ĞĞÖ¤");
-    ////			return false;
-    ////		});
-    //    } else {
-    _post.form.validate({
-        /*
-         onfocusout: false,
-         onkeyup: false,
-         errorLabelContainer: "ul.error",
-         wrapper: "li",
-         showErrors: function(errorMap, errorList) {
-         this.defaultShowErrors();
-         if (errorList.length > 0) {
-         PC.play.alert($("ul.error").html());
-         }
-         },
-         */
-        rules: {
-            "age": {
-                required: true ,
-                number:true,
-                min:1,
-                max:100
-            },
-            "guardianName": {
-                required: true
-            },
-            "address": {
-                required: true
-            },
-            "mobile": {
-	            isMobile: true,
-	            required: true
-            }
-/*
-            "province": {
-                required: true
-            },
-            "area": {
-                required: true
-            } ,
-            "street": {
-                required: true
-            }
-*/
-        },
-        messages: {
-//                "nickname": {
-//                    required: ""
-//            isChinese:"",
-//            maxlength:"",
-//            minlength:""
-//                }
-            "age": {
-                required: "" ,
-                number:"",
-                min:"",
-                max:""
-            },
-            "guardianName": {
-                required: ""
-            },
-            "address": {
-                required: ""
-            },
-            "mobile": {
-	            isMobile: "",
-                required: ""
-            }
-/*
-            "province": {
-                required: ""
-            },
-            "area": {
-                required: ""
-            } ,
-            "street": {
-                required: ""
-            }
-*/
-        },
-        submitHandler: function(form) {
-
-            $(form).ajaxSubmit({
-                type: "POST",
-                url: "action/do_post.jsp",
-                data: {
-                    method: "insert"
-                },
-                dataType: "json",
-                beforeSend: function() {
-                    $jq.disableSubmit(form, true);
-                },
-                complete: function() {
-                    $jq.disableSubmit(form, false);
-                },
-                success: function(data) {
-                    var msg = data.msg;
-                    switch (msg) {
-                        case "success":
-                            alert("²Ù×÷³É¹¦");
-                            window.location.reload();
-                            break;
-                        case "login":
-                            alert("ÇëµÇÂ¼Í¨ĞĞÖ¤");
-                            window.location.reload();
-                            break;
-                        case "offline":
-                            alert("»î¶¯ÏÂÏß£¬Ğ»Ğ»²ÎÓë");
-                            break;
-                        case "exist":
-                            alert("ÖØ¸´Ìá½»");
-                            break;
-                        case "limit":
-                            alert("ÊıÁ¿ÏŞÖÆ");
-                            window.location.reload();
-                            break;
-                        default:
-                            alert(msg);
-                            break;
-                    }
-                },
-                error: function(xhr) {
-                    alert("´íÎó£º" + xhr.status + " " + xhr.statusText);
-                }
-            });
-        }
-    });
-    //    }
-
-    //} catch (e) {}
-    //});
-</script>
-
-
-<!--Ñ¡Ïî¿¨end-->
-<!--Ò³Ãæ½Å±¾ÇøE-->
-
-<script src="http://www.pcbaby.com.cn/global/footer/index.html" class=" defer"></script>
-<script>_submitIvyID();</script>
 </body>
 </html>
