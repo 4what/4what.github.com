@@ -15,10 +15,15 @@
 <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 
+
+<!--<link rel="stylesheet" type="text/css" href="js/jquery/plugin/countdown/jquery.countdown.css" />-->
+<script type="text/javascript" src="js/jquery/plugin/countdown/jquery.countdown.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery/plugin/countdown/jquery.countdown-zh-CN.js"></script>-->
+
 <script type="text/javascript" src="js/shake.js"></script>
 
 <style type="text/css">
-.item {
+#game .item {
 background-position: 0 0;
 background-repeat: no-repeat;
 height: 400px;
@@ -26,7 +31,7 @@ margin: 0 auto;
 position: relative;
 width: 267px;
 }
-.item p {
+#game .item p {
 background: navy;
 border-radius: 10px;
 color: #fff;
@@ -39,12 +44,17 @@ position: relative;
 top: 40%;
 width: 100px;
 }
-.item span {
+#game .item span {
 border: 1px solid red;
-border-radius: 50px;
-height: 50px;
+border-radius: 12px;
+height: 24px;
 position: absolute;
-width: 50px;
+width: 24px;
+}
+
+#countup {
+color: red;
+font-weight: bold;
 }
 </style>
 
@@ -52,6 +62,13 @@ width: 50px;
 $(function() {
 
 	//$("body").pagecontainer( "change", "#home");
+
+	$("#start").click(function() {
+		$("#countup").countdown({
+			since: new Date(),
+			layout: '{mnn}′{snn}″'
+		});
+	});
 
 	var count = 0;
 
@@ -67,24 +84,27 @@ $(function() {
 				count++;
 
 				if (count === 3) {
+					$("#countup").countdown("pause");
+
+					var times = $("#countup").countdown("getTimes");
+					$("#score").text(times[5] + "分" + times[6] + "秒");
+
 					window.setTimeout(function() {
-						$("#over").click();
-					}, 1000);
+						$("#complete").click();
+//						$( ":mobile-pagecontainer" ).pagecontainer( "change" );
+					}, 800);
 				}
 			});
 		});
 	});
 
-	window.addEventListener('shake', shakeEventDidOccur, false);
+	$("#go").click(function() {
+		alert("红包")
+	});
 
-	//define a custom method to fire when shake occurs.
-	function shakeEventDidOccur () {
-
-		//put your own code here etc.
-		if (confirm("Undo?")) {
-
-		}
-	}
+	window.addEventListener("shake", function() {
+		alert("抽奖");
+	}, false);
 
 });
 </script>
@@ -112,7 +132,7 @@ $(function() {
 			<br />
 			<br />
 		</p>
-		<a href="#game" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">开抢</a>
+		<a href="#game" id="start" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">开抢</a>
 		<p>
 			<br />
 			免责申明：XXXXXXXXXXXXXXX
@@ -130,32 +150,45 @@ $(function() {
 			<br />
 			<br />
 		</p>
-		<div class="item" style="background-image: url(images/1.jpg);">
-			<span style="left: 50px; top: 80px;"></span>
-			<p>被你发现了！三星4G手机支持移动4G根本不是事儿</p>
-		</div>
-		<div class="item" style="background-image: url(images/2.jpg);">
+		<div id="countup"></div>
+		<div class="item" style="background-image: url(images/item-1.jpg);">
 			<span style="left: 150px; top: 50px;"></span>
-			<p>好厉害！三星4G手机支持联通4G毫无压力</p>
+			<p>秘密就在信号条上，三星4G手机支持各种4G网络制式</p>
 		</div>
-		<div class="item" style="background-image: url(images/3.jpg);">
-			<span style="left: 165px; top: 300px;"></span>
-			<p>好眼力！ 三星4G手机支持电信4G不在话下</p>
+		<div class="item" style="background-image: url(images/item-2.jpg);">
+			<span style="left: 150px; top: 50px;"></span>
+			<p>秘密就在信号条上，三星4G手机支持各种4G网络制式</p>
+		</div>
+		<div class="item" style="background-image: url(images/item-3.jpg);">
+			<span style="left: 150px; top: 50px;"></span>
+			<p>秘密就在信号条上，三星4G手机支持各种4G网络制式</p>
 		</div>
 	</div>
 
-	<a href="#result" id="over" data-rel="popup" data-position-to="window" data-transition="pop"></a>
+	<a href="#bonus" id="complete" data-rel="popup" data-position-to="window" data-transition="pop"></a>
 
-	<div id="result" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
+	<div id="bonus" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
 		<div data-role="header" data-theme="a">
-			<h1>游戏完成</h1>
+			<h1>用时：<span id="score"></span></h1>
 		</div>
 		<div class="ui-content" role="main">
 			<p>
-				请您保存好兑奖码，按照以下方式回复给官方微信：兑奖+姓名+手机号+兑换码，兑换您的流量红包
+				好眼力，恭喜你！快来抢红包吧！
+				<br />
+				<br />
+				<span id="go"><img src="images/bonus.png" alt="" id="" style="width: 200px;" /></span>
 			</p>
-			<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">分享到朋友圈</a>
+			<!--<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">分享到朋友圈</a>-->
 		</div>
+	</div>
+</div>
+
+<div id="result" data-role="page">
+	<div class="ui-content" role="main">
+		<p>
+			<img src="images/result.png" alt="" />
+		</p>
+		<a href="#game" id="share" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">开抢</a>
 	</div>
 </div>
 
