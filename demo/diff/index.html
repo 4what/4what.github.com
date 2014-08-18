@@ -22,11 +22,11 @@
 <script type="text/javascript" src="js/shake.js"></script>
 
 <script type="text/javascript">
-$(function() {
+$(window).load(function() {
 
-//	if (window.location.hash) {
-//		$(":mobile-pagecontainer").pagecontainer("change", "#home");
-//	}
+	if (window.location.hash) {
+		$(":mobile-pagecontainer").pagecontainer("change", "#home");
+	}
 
 	var countup = $("#countup");
 
@@ -76,7 +76,7 @@ $(function() {
 
 <div id="game" data-role="page">
 	<div class="ui-content" role="main">
-		<div id="countup" style="font-family: Georgia;"></div>
+		<div id="countup"></div>
 
 		<div id="diff">
 			<div id="flipsnap">
@@ -115,7 +115,6 @@ $(function() {
 				<br />
 				点击，赢取幸运大红包
 			</p>
-			<!--<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">分享到朋友圈</a>-->
 		</div>
 	</div>
 </div>
@@ -130,18 +129,23 @@ $(function() {
 
 <div id="contact" data-role="page">
 	<div class="ui-content" role="main">
-		<p>
-			填写以下信息，我们会在*天之内以邮寄的形式将奖品快递到您所留地址！
-			<br />
-			<br />
-		</p>
 		<form action="" method="post">
-			<input type="text" name="name" value="" placeholder="姓名" />
-			<input type="text" name="phone" value="" placeholder="电话" />
-			<input type="text" name="idcard" value="" placeholder="身份证" />
-			<input type="text" name="address" value="" placeholder="地址" />
+			<label for="form-provider">运营商：</label>
+			<select name="provider" id="form-provider">
+				<option value="中国移动" selected="selected">中国移动</option>
+				<option value="中国联通">中国联通</option>
+				<option value="中国电信">中国电信</option>
+			</select>
 
-			<input type="submit" name="" value="提交" data-inline="true" data-theme="b" />
+			<p>
+				填写以下信息，我们会在*天之内以邮寄的形式将奖品快递到您所留地址！
+			</p>
+			<input type="text" name="name" value="" data-clear-btn="true" placeholder="姓名" />
+			<input type="text" name="phone" value="" data-clear-btn="true" placeholder="电话" />
+			<input type="text" name="idcard" value="" data-clear-btn="true" placeholder="身份证" />
+			<input type="text" name="address" value="" data-clear-btn="true" placeholder="地址" />
+
+			<input type="submit" name="" value="提交" data-theme="b" />
 		</form>
 	</div>
 </div>
