@@ -15,62 +15,43 @@
 <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
 
-
-<!--<link rel="stylesheet" type="text/css" href="js/jquery/plugin/countdown/jquery.countdown.css" />-->
 <script type="text/javascript" src="js/jquery/plugin/countdown/jquery.countdown.min.js"></script>
-<!--<script type="text/javascript" src="js/jquery/plugin/countdown/jquery.countdown-zh-CN.js"></script>-->
+
+<!--<script type="text/javascript" src="js/jquery/plugin/jssorslider/jssor.slider.min.js"></script>-->
+<script type="text/javascript" src="js/flipsnap.min.js"></script>
 
 <script type="text/javascript" src="js/shake.js"></script>
-
-<style type="text/css">
-#game .item {
-background-position: 0 0;
-background-repeat: no-repeat;
-height: 400px;
-margin: 0 auto;
-position: relative;
-width: 267px;
-}
-#game .item p {
-background: navy;
-border-radius: 10px;
-color: #fff;
-display: none;
-font-size: 10px;
-margin: 0 auto;
-opacity: 0.8;
-padding: 10px;
-position: relative;
-top: 40%;
-width: 100px;
-}
-#game .item span {
-border: 1px solid red;
-border-radius: 12px;
-height: 24px;
-position: absolute;
-width: 24px;
-}
-
-#countup {
-color: red;
-font-weight: bold;
-}
-</style>
 
 <script type="text/javascript">
 $(function() {
 
-	//$("body").pagecontainer( "change", "#home");
+//	if (window.location.hash) {
+//		$(":mobile-pagecontainer").pagecontainer("change", "#home");
+//	}
+
+	var countup = $("#countup");
 
 	$("#start").click(function() {
-		$("#countup").countdown({
+		countup.countdown({
 			since: new Date(),
 			layout: '{mnn}′{snn}″'
 		});
 	});
 
-	var count = 0;
+/*
+	var slider = new $JssorSlider$("slider1_container", {
+		$AutoPlay: false,
+		$Loop: 0,
+		$ThumbnailNavigatorOptions: {
+			$Class: $JssorThumbnailNavigator$,
+			$ChanceToShow: 2
+		}
+	});
+*/
+
+	Flipsnap("#flipsnap", {
+		distance: 220
+	});
 
 	$("#game div.item").each(function() {
 		var that = this;
@@ -81,25 +62,22 @@ $(function() {
 
 				$(that).find("p").eq(i).show();
 
-				count++;
+				countup.countdown("pause");
 
-				if (count === 3) {
-					$("#countup").countdown("pause");
+				var times = countup.countdown("getTimes");
+				$("#score").text(times[5] + "分" + times[6] + "秒");
 
-					var times = $("#countup").countdown("getTimes");
-					$("#score").text(times[5] + "分" + times[6] + "秒");
-
-					window.setTimeout(function() {
-						$("#complete").click();
-//						$( ":mobile-pagecontainer" ).pagecontainer( "change" );
-					}, 800);
-				}
+				window.setTimeout(function() {
+					$("#complete").click();
+				}, 800);
 			});
 		});
 	});
 
-	$("#go").click(function() {
-		alert("红包")
+	$("#lottery").click(function() {
+		$(":mobile-pagecontainer").pagecontainer("change", "#result", {
+			transition: "slide"
+		});
 	});
 
 	window.addEventListener("shake", function() {
@@ -142,15 +120,23 @@ $(function() {
 
 <div id="game" data-role="page">
 	<div class="ui-content" role="main">
-		<p>
-			发现并【点击】三款三星4G手机不同之处
-			<br />
-			<br />
-			提示：三星4G手机支持三大运营商，同样的手机外观，不同的4G制式
-			<br />
-			<br />
-		</p>
 		<div id="countup"></div>
+
+		<div id="diff">
+			<div id="flipsnap">
+				<div class="item">
+					<img src="images/item-1.jpg" alt="" />
+				</div>
+				<div class="item">
+					<img src="images/item-2.jpg" alt="" />
+				</div>
+				<div class="item">
+					<img src="images/item-3.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+
+<!--
 		<div class="item" style="background-image: url(images/item-1.jpg);">
 			<span style="left: 150px; top: 50px;"></span>
 			<p>秘密就在信号条上，三星4G手机支持各种4G网络制式</p>
@@ -163,6 +149,7 @@ $(function() {
 			<span style="left: 150px; top: 50px;"></span>
 			<p>秘密就在信号条上，三星4G手机支持各种4G网络制式</p>
 		</div>
+-->
 	</div>
 
 	<a href="#bonus" id="complete" data-rel="popup" data-position-to="window" data-transition="pop"></a>
@@ -176,7 +163,7 @@ $(function() {
 				好眼力，恭喜你！快来抢红包吧！
 				<br />
 				<br />
-				<span id="go"><img src="images/bonus.png" alt="" id="" style="width: 200px;" /></span>
+				<span id="lottery"><img src="images/bonus.png" alt="" id="" style="width: 200px;" /></span>
 			</p>
 			<!--<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">分享到朋友圈</a>-->
 		</div>

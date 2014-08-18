@@ -45,3 +45,65 @@ a:active {
 input, select, textarea {
 font-family: "微软雅黑", Arial;
 }
+
+
+/*
+#game .item {
+background-position: 0 0;
+background-repeat: no-repeat;
+height: 400px;
+margin: 0 auto;
+position: relative;
+width: 267px;
+}
+#game .item p {
+background: navy;
+border-radius: 10px;
+color: #fff;
+display: none;
+font-size: 10px;
+margin: 0 auto;
+opacity: 0.8;
+padding: 10px;
+position: relative;
+top: 40%;
+width: 100px;
+}
+#game .item span {
+border: 1px solid red;
+border-radius: 12px;
+height: 24px;
+position: absolute;
+width: 24px;
+}
+*/
+
+#countup {
+color: red;
+font-weight: bold;
+}
+
+#diff {
+height: 400px;
+overflow: hidden;
+/*overflow-x: scroll;*/
+/*overflow-y: hidden;*/
+width: 100%;
+}
+
+#flipsnap {
+width: 300%; /* 320px(item width) * 3(item count) */
+}
+
+/*
+#flipsnap:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+}
+*/
+
+#flipsnap .item {
+float: left;
+}
