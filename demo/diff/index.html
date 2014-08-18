@@ -17,7 +17,6 @@
 
 <script type="text/javascript" src="js/jquery/plugin/countdown/jquery.countdown.min.js"></script>
 
-<!--<script type="text/javascript" src="js/jquery/plugin/jssorslider/jssor.slider.min.js"></script>-->
 <script type="text/javascript" src="js/flipsnap.min.js"></script>
 
 <script type="text/javascript" src="js/shake.js"></script>
@@ -38,44 +37,23 @@ $(function() {
 		});
 	});
 
-/*
-	var slider = new $JssorSlider$("slider1_container", {
-		$AutoPlay: false,
-		$Loop: 0,
-		$ThumbnailNavigatorOptions: {
-			$Class: $JssorThumbnailNavigator$,
-			$ChanceToShow: 2
-		}
-	});
-*/
-
 	Flipsnap("#flipsnap", {
 		distance: 220
 	});
 
-	$("#game div.item").each(function() {
-		var that = this;
+	$("#diff .item span").click(function() {
+		$(this).hide();
 
-		$(that).find("span").each(function(i) {
-			$(this).click(function() {
-				$(this).hide();
+		countup.countdown("pause");
 
-				$(that).find("p").eq(i).show();
+		var times = countup.countdown("getTimes");
+		$("#score").text(times[5] + "分" + times[6] + "秒");
 
-				countup.countdown("pause");
-
-				var times = countup.countdown("getTimes");
-				$("#score").text(times[5] + "分" + times[6] + "秒");
-
-				window.setTimeout(function() {
-					$("#complete").click();
-				}, 800);
-			});
-		});
+		$("#complete").click();
 	});
 
 	$("#lottery").click(function() {
-		$(":mobile-pagecontainer").pagecontainer("change", "#result", {
+		$(":mobile-pagecontainer").pagecontainer("change", "#bonus", {
 			transition: "slide"
 		});
 	});
@@ -92,29 +70,7 @@ $(function() {
 
 <div id="home" data-role="page">
 	<div class="ui-content" role="main">
-		<p>
-			三星4G手机支持三大运营商
-			同样的手机外观，不同的4G制式
-			<br />
-			<br />
-			找茬抢流量红包，抢到你手软！
-			<br />
-			<br />
-			活动须知
-			<br />
-			XXXXXXXXXXXXXXXXXXXXXXXXXX
-			XXXXXXXXXXXXXXXXXXXXXXXXXX
-			XXXXXXXXXXXXXXXXXXXXXXXXXX
-			XXXXXXXXXXXXXXXXXXXXXXXXXX
-			XXXXXXXXXXXXXXXXXXXXXXXXXX
-			<br />
-			<br />
-		</p>
-		<a href="#game" id="start" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">开抢</a>
-		<p>
-			<br />
-			免责申明：XXXXXXXXXXXXXXX
-		</p>
+		<a href="#game" id="start" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">Start</a>
 	</div>
 </div>
 
@@ -125,57 +81,68 @@ $(function() {
 		<div id="diff">
 			<div id="flipsnap">
 				<div class="item">
+					<span></span>
 					<img src="images/item-1.jpg" alt="" />
 				</div>
 				<div class="item">
+					<span></span>
 					<img src="images/item-2.jpg" alt="" />
 				</div>
 				<div class="item">
+					<span></span>
 					<img src="images/item-3.jpg" alt="" />
 				</div>
 			</div>
 		</div>
-
-<!--
-		<div class="item" style="background-image: url(images/item-1.jpg);">
-			<span style="left: 150px; top: 50px;"></span>
-			<p>秘密就在信号条上，三星4G手机支持各种4G网络制式</p>
-		</div>
-		<div class="item" style="background-image: url(images/item-2.jpg);">
-			<span style="left: 150px; top: 50px;"></span>
-			<p>秘密就在信号条上，三星4G手机支持各种4G网络制式</p>
-		</div>
-		<div class="item" style="background-image: url(images/item-3.jpg);">
-			<span style="left: 150px; top: 50px;"></span>
-			<p>秘密就在信号条上，三星4G手机支持各种4G网络制式</p>
-		</div>
--->
 	</div>
 
-	<a href="#bonus" id="complete" data-rel="popup" data-position-to="window" data-transition="pop"></a>
+	<a href="#result" id="complete" data-rel="popup" data-position-to="window" data-transition="pop"></a>
 
-	<div id="bonus" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
+	<div id="result" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
 		<div data-role="header" data-theme="a">
-			<h1>用时：<span id="score"></span></h1>
+			<h1>成绩：<span id="score"></span></h1>
 		</div>
 		<div class="ui-content" role="main">
 			<p>
+				<strong>秘密就在信号条上，三星4G手机支持4G网络制式</strong>
+				<br />
+				<br />
 				好眼力，恭喜你！快来抢红包吧！
 				<br />
 				<br />
-				<span id="lottery"><img src="images/bonus.png" alt="" id="" style="width: 200px;" /></span>
+				<img src="images/bonus.png" alt="" id="lottery" style="width: 200px;" />
+				<br />
+				<br />
+				点击，赢取幸运大红包
 			</p>
 			<!--<a href="#" data-role="button" data-icon="action" data-inline="true" data-theme="a">分享到朋友圈</a>-->
 		</div>
 	</div>
 </div>
 
-<div id="result" data-role="page">
+<div id="bonus" data-role="page">
 	<div class="ui-content" role="main">
 		<p>
-			<img src="images/result.png" alt="" />
+			<a href="#contact"><img src="images/result.png" alt="" /></a>
 		</p>
-		<a href="#game" id="share" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">开抢</a>
+	</div>
+</div>
+
+<div id="contact" data-role="page">
+	<div class="ui-content" role="main">
+		<p>
+			填写以下信息，我们会在*天之内以邮寄的形式将奖品快递到您所留地址！
+			<br />
+			<br />
+		</p>
+		<form action="" method="post">
+			<input type="text" name="name" value="" placeholder="姓名" />
+			<input type="text" name="phone" value="" placeholder="电话" />
+			<input type="text" name="idcard" value="" placeholder="身份证" />
+			<input type="text" name="address" value="" placeholder="地址" />
+
+			<input type="submit" name="" value="提交" data-inline="true" data-theme="b" />
+		</form>
 	</div>
 </div>
 
