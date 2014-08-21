@@ -5,21 +5,19 @@
 <title></title>
 <meta name="author" content="4what" />
 
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=640" />
 
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<!--<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile-1.4.3.min.css" />-->
+<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile.structure-1.4.3.min.css" />
+<script type="text/javascript" src="js/jquery/mobile/jquery.mobile-1.4.3.min.js"></script>
 
-<!--<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />-->
-<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
-<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
-
-<script type="text/javascript" src="js/jquery/plugin/countdown/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="js/jquery/plugin/jquery.countdown.min.js"></script>
 
 <script type="text/javascript" src="js/flipsnap.min.js"></script>
 
-<script type="text/javascript" src="js/shake.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 <script type="text/javascript">
 $(window).load(function() {
@@ -30,37 +28,41 @@ $(window).load(function() {
 
 	var countup = $("#countup");
 
-	$("#start").click(function() {
+	if ($("body").width() < 640) {
+		$("#game").css("width", "640px");
+
+		Flipsnap("#game", {
+			distance: 190
+		});
+	}
+
+	$("#start span").click(function() {
+		$(this).fadeOut(function() {
+			$("#rule span, #tip").fadeIn();
+		});
+
 		countup.countdown({
 			since: new Date(),
 			layout: '{mnn}′{snn}″'
 		});
-	});
 
-	Flipsnap("#flipsnap", {
-		distance: 220
-	});
+		$("#game span").click(function() {
+			$(this).hide();
 
-	$("#diff .item span").click(function() {
-		$(this).hide();
+			countup.countdown("pause");
 
-		countup.countdown("pause");
+			var times = countup.countdown("getTimes");
+			$("#score").text(times[5] + "分" + times[6] + "秒");
 
-		var times = countup.countdown("getTimes");
-		$("#score").text(times[5] + "分" + times[6] + "秒");
+			$("#complete").click();
+		});
 
-		$("#complete").click();
-	});
-
-	$("#lottery").click(function() {
-		$(":mobile-pagecontainer").pagecontainer("change", "#bonus", {
-			transition: "slide"
+		$("#lottery").click(function() {
+			$(":mobile-pagecontainer").pagecontainer("change", "#bonus", {
+				transition: "slide"
+			});
 		});
 	});
-
-	window.addEventListener("shake", function() {
-		alert("抽奖");
-	}, false);
 
 });
 </script>
@@ -70,32 +72,38 @@ $(window).load(function() {
 
 <div id="home" data-role="page">
 	<div class="ui-content" role="main">
-		<a href="#game" id="start" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">Start</a>
-	</div>
-</div>
-
-<div id="game" data-role="page">
-	<div class="ui-content" role="main">
-		<div id="countup"></div>
-
-		<div id="diff">
-			<div id="flipsnap">
-				<div class="item">
-					<span></span>
-					<img src="images/item-1.jpg" alt="" />
-				</div>
-				<div class="item">
-					<span></span>
-					<img src="images/item-2.jpg" alt="" />
-				</div>
-				<div class="item">
-					<span></span>
-					<img src="images/item-3.jpg" alt="" />
-				</div>
+		<div id="timer">
+			<div>
+				时间：<span id="countup">00′00″</span>
 			</div>
+		</div>
+		<div id="rule">
+			&nbsp;
+			<span>找到三张图片的任意一处不同，就算挑战成功！</span>
+		</div>
+		<div id="game">
+			<div>
+				<span></span>
+				<img src="images/item-1.png" alt="" />
+			</div>
+			<div>
+				<span></span>
+				<img src="images/item-2.png" alt="" />
+			</div>
+			<div>
+				<span></span>
+				<img src="images/item-3.png" alt="" />
+			</div>
+		</div>
+		<div id="tip">
+			<span><em></em>点击图片缩放看得更清楚哦！</span>
+		</div>
+		<div id="start">
+			<span></span>
 		</div>
 	</div>
 
+	<!--<a href="#game" id="start" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">Start</a>-->
 	<a href="#result" id="complete" data-rel="popup" data-position-to="window" data-transition="pop"></a>
 
 	<div id="result" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
