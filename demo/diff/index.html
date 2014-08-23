@@ -76,9 +76,6 @@ $(window).load(function() {
 
 			countup.countdown("pause");
 
-//			var times = countup.countdown("getTimes");
-//			$("#score").text(times[5] + "分" + times[6] + "秒");
-
 			help.fadeOut(function() {
 				$("#magnify, #complete").fadeIn();
 			});
@@ -115,6 +112,12 @@ $(window).load(function() {
 										goto("#page-success");
 									} else {
 										goto("#page-fail");
+
+										//var times = countup.countdown("getTimes");
+										$("#score").text(
+											//times[5] + "′" + times[6] + "″"
+											countup.text()
+										);
 									}
 								});
 
