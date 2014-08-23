@@ -9,36 +9,61 @@
 
 <script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
 
-<!--<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile-1.4.3.min.css" />-->
-<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile.structure-1.4.3.min.css" />
+<!--<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile.structure-1.4.3.min.css" />-->
+<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile-1.4.3.min.css" />
 <script type="text/javascript" src="js/jquery/mobile/jquery.mobile-1.4.3.min.js"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="js/jquery/ui/jquery-ui.min.css" />-->
+<script type="text/javascript" src="js/jquery/ui/jquery-ui.min.js"></script>
 
 <script type="text/javascript" src="js/jquery/plugin/jquery.countdown.min.js"></script>
 
-<script type="text/javascript" src="js/flipsnap.min.js"></script>
+<!--<script type="text/javascript" src="js/flipsnap.min.js"></script>-->
 
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 <script type="text/javascript">
 $(window).load(function() {
 
-	if (window.location.hash) {
-		$(":mobile-pagecontainer").pagecontainer("change", "#home");
-	}
-
-	var countup = $("#countup");
-
-	if ($("body").width() < 640) {
-		$("#game").css("width", "640px");
-
-		Flipsnap("#game", {
-			distance: 190
+	function goto(to) {
+		$(":mobile-pagecontainer").pagecontainer("change", to, {
+			transition: "slide"
 		});
 	}
 
-	$("#start span").click(function() {
+	if (window.location.hash) {
+		goto("#page-home");
+	}
+
+	var
+	countup = $("#countup"),
+	game = $("#game"),
+	help = $("#rule span, #tip"),
+	points = game.find("span"),
+	start = $("#start span"),
+	stop = true;
+
+/*
+	if ($("body").width() < 640) {
+		game.width(640);
+
+		Flipsnap(game, {
+			distance: 190
+		});
+	}
+*/
+
+	game.click(function() {
+		if (stop) {
+			start.stop().effect("shake");
+		}
+	});
+
+	start.click(function() {
+		stop = false;
+
 		$(this).fadeOut(function() {
-			$("#rule span, #tip").fadeIn();
+			help.fadeIn();
 		});
 
 		countup.countdown({
@@ -46,22 +71,60 @@ $(window).load(function() {
 			layout: '{mnn}′{snn}″'
 		});
 
-		$("#game span").click(function() {
-			$(this).hide();
+		points.click(function() {
+			points.hide();
 
 			countup.countdown("pause");
 
-			var times = countup.countdown("getTimes");
-			$("#score").text(times[5] + "分" + times[6] + "秒");
+//			var times = countup.countdown("getTimes");
+//			$("#score").text(times[5] + "分" + times[6] + "秒");
 
-			$("#complete").click();
-		});
+			help.fadeOut(function() {
+				$("#magnify, #complete").fadeIn();
+			});
 
-		$("#lottery").click(function() {
-			$(":mobile-pagecontainer").pagecontainer("change", "#bonus", {
-				transition: "slide"
+			$("#bonus").click(function() {
+				goto("#page-lottery");
+
+				$("#page-lottery span").click(function() {
+					//$.ajax({});
+
+					var data = {
+						status: true
+					};
+
+					if (data.status) {
+						goto("#page-result");
+
+						var
+						contact = $("#contact"),
+						isp = ["移动", "联通", "电信"];
+
+						$("#isp ul img").each(function(index) {
+							$(this).click(function() {
+								goto("#page-contact");
+
+								contact.find("input[name='isp']").val(isp[index]);
+
+								$("#submit span").click(function() {
+									//contact.submit();
+
+									if (new Date().getSeconds() % 2) {
+										goto("#page-success");
+									} else {
+										goto("#page-fail");
+									}
+								});
+
+							});
+						});
+					} else {
+
+					}
+				});
 			});
 		});
+
 	});
 
 });
@@ -70,11 +133,11 @@ $(window).load(function() {
 
 <body>
 
-<div id="home" data-role="page">
+<div id="page-home" data-role="page">
 	<div class="ui-content" role="main">
 		<div id="timer">
 			<div>
-				时间：<span id="countup">00′00″</span>
+				时间:<span id="countup">00′00″</span>
 			</div>
 		</div>
 		<div id="rule">
@@ -82,79 +145,130 @@ $(window).load(function() {
 			<span>找到三张图片的任意一处不同，就算挑战成功！</span>
 		</div>
 		<div id="game">
-			<div>
-				<span></span>
-				<img src="images/item-1.png" alt="" />
-			</div>
-			<div>
-				<span></span>
-				<img src="images/item-2.png" alt="" />
-			</div>
-			<div>
-				<span></span>
-				<img src="images/item-3.png" alt="" />
-			</div>
+			<ul>
+				<li>
+					<span></span>
+					<img src="images/item-1.png" alt="" />
+				</li>
+				<li>
+					<span></span>
+					<img src="images/item-2.png" alt="" />
+				</li>
+				<li>
+					<span></span>
+					<img src="images/item-3.png" alt="" />
+				</li>
+			</ul>
+			<div id="magnify"></div>
 		</div>
 		<div id="tip">
-			<span><em></em>点击图片缩放看得更清楚哦！</span>
+			<span><em></em>放大图片看得更清楚哦！</span>
+		</div>
+		<div id="complete">
+			<p>
+				秘密就在信号条上
+				<br />
+				三星4G手机支持各种4G网络制式！
+			</p>
+			<span class="btn" id="bonus">好眼力，恭喜你！快来抢红包吧！</span>
 		</div>
 		<div id="start">
 			<span></span>
 		</div>
 	</div>
+</div>
 
-	<!--<a href="#game" id="start" data-role="button" data-icon="search" data-inline="true" data-theme="b" data-transition="slide">Start</a>-->
-	<a href="#result" id="complete" data-rel="popup" data-position-to="window" data-transition="pop"></a>
+<div id="page-lottery" data-role="page">
+	<div class="ui-content" role="main">
+		<span class="bonus"></span>
+		<span class="btn">点击，赢取幸运大红包</span>
+	</div>
+</div>
 
-	<div id="result" data-role="popup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
-		<div data-role="header" data-theme="a">
-			<h1>成绩：<span id="score"></span></h1>
+<div id="page-result" data-role="page">
+	<div class="ui-content" role="main">
+		<div id="award">
+			<span></span>
 		</div>
-		<div class="ui-content" role="main">
+		<div id="detail">
 			<p>
-				<strong>秘密就在信号条上，三星4G手机支持4G网络制式</strong>
+				恭喜！你以超强眼力和无敌幸运
 				<br />
-				<br />
-				好眼力，恭喜你！快来抢红包吧！
-				<br />
-				<br />
-				<img src="images/bonus.png" alt="" id="lottery" style="width: 200px;" />
-				<br />
-				<br />
-				点击，赢取幸运大红包
+				赢得三星赠送的流量红包
 			</p>
+		</div>
+		<div id="isp">
+			<p>点击您手机的运营商领取红包并填写获奖信息</p>
+			<ul>
+				<li><img src="images/cm.png" alt="" /></li>
+				<li><img src="images/cu.png" alt="" /></li>
+				<li><img src="images/ct.png" alt="" /></li>
+			</ul>
 		</div>
 	</div>
 </div>
 
-<div id="bonus" data-role="page">
+<div id="page-contact" data-role="page">
 	<div class="ui-content" role="main">
-		<p>
-			<a href="#contact"><img src="images/result.png" alt="" /></a>
-		</p>
-	</div>
-</div>
+		<form action="" method="post" id="contact">
+			<p>请如实填写以下信息！</p>
+			<div class="fieldset">
+				<input type="hidden" name="isp" value="" />
 
-<div id="contact" data-role="page">
-	<div class="ui-content" role="main">
-		<form action="" method="post">
-			<label for="form-provider">运营商：</label>
-			<select name="provider" id="form-provider">
-				<option value="中国移动" selected="selected">中国移动</option>
-				<option value="中国联通">中国联通</option>
-				<option value="中国电信">中国电信</option>
-			</select>
-
-			<p>
-				填写以下信息，我们会在*天之内以邮寄的形式将奖品快递到您所留地址！
-			</p>
-			<input type="text" name="name" value="" data-clear-btn="true" placeholder="姓名" />
-			<input type="text" name="phone" value="" data-clear-btn="true" placeholder="电话" />
-			<input type="text" name="address" value="" data-clear-btn="true" placeholder="地址" />
-			<input type="text" name="idcard" value="" data-clear-btn="true" placeholder="身份证" />
-
-			<input type="submit" name="" value="提交" data-theme="b" />
+				<input type="text" name="name" value="" placeholder="姓名" required="required" />
+				<input type="text" name="phone" value="" placeholder="电话" />
+			</div>
 		</form>
+		<div id="submit">
+			<span class="btn">确认无误，提交！</span>
+		</div>
+	</div>
+</div>
+
+<div id="page-success" data-role="page">
+	<div class="ui-content" role="main">
+		<div class="overlay"></div>
+		<div class="wrapper">
+			<div class="share">
+				<p>
+					分享幸运
+					<br />
+					呼朋唤友一起来玩儿吧
+				</p>
+			</div>
+			<div class="msg">
+				<span></span>
+				<p>
+					我们会尽快与您取得联系，请耐心等待！
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="page-fail" data-role="page">
+	<div class="ui-content" role="main">
+		<div class="overlay"></div>
+		<div class="wrapper">
+			<div class="share">
+				<p>
+					分享到朋友圈
+				</p>
+			</div>
+			<div class="msg">
+				<em></em>
+				<div>
+					本次时间：
+					<br />
+					<span id="score">00′00″</span>
+				</div>
+				<p>
+					Sorry~
+					<br />
+					看来幸运女神暂时还没有降临到你身上哦
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
 
