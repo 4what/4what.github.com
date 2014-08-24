@@ -7,18 +7,22 @@
 
 <meta name="viewport" content="width=640" />
 
-<script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
 
-<!--<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile.structure-1.4.3.min.css" />-->
 <link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile-1.4.3.min.css" />
 <script type="text/javascript" src="js/jquery/mobile/jquery.mobile-1.4.3.min.js"></script>
-
-<!--<link rel="stylesheet" type="text/css" href="js/jquery/ui/jquery-ui.min.css" />-->
-<script type="text/javascript" src="js/jquery/ui/jquery-ui.min.js"></script>
 
 <script type="text/javascript" src="js/jquery/plugin/jquery.countdown.min.js"></script>
 
 <!--<script type="text/javascript" src="js/flipsnap.min.js"></script>-->
+
+<script type="text/javascript" src="js/jquery/plugin/jquery.form.js"></script>
+
+<script type="text/javascript" src="js/jquery/plugin/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery/plugin/validation/messages_cn.js" charset="GBK"></script>
+
+<script type="text/javascript" src="js/validate.js"></script>
+<script type="text/javascript" src="js/additional-methods.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 
@@ -27,7 +31,7 @@ $(window).load(function() {
 
 	function goto(to) {
 		$(":mobile-pagecontainer").pagecontainer("change", to, {
-			transition: "slide"
+			transition: new Date().getSeconds() % 2 ? "flip" : "slide"
 		});
 	}
 
@@ -40,8 +44,7 @@ $(window).load(function() {
 	game = $("#game"),
 	help = $("#rule span, #tip"),
 	points = game.find("span"),
-	start = $("#start span"),
-	stop = true;
+	start = $("#start span");
 
 /*
 	if ($("body").width() < 640) {
@@ -53,15 +56,7 @@ $(window).load(function() {
 	}
 */
 
-	game.click(function() {
-		if (stop) {
-			start.stop().effect("shake");
-		}
-	});
-
 	start.click(function() {
-		stop = false;
-
 		$(this).fadeOut(function() {
 			help.fadeIn();
 		});
@@ -84,48 +79,92 @@ $(window).load(function() {
 				goto("#page-lottery");
 
 				$("#page-lottery span").click(function() {
-					// TODO:
-					//$.ajax({});
+/*
+					$.ajax({
+						type: "POST",
+						url: "", // TODO
+						//data: {},
+						dataType: "json",
+						beforeSend: function() {
+							$.mobile.loading("show");
+						},
+						complete: function() {
+							$.mobile.loading("hide");
+						},
+						success: function(data) {
+*/
+							// TODO
+							if (new Date().getSeconds() % 2) {
+								goto("#page-result");
 
-					var data = {
-						status: true
-					};
+								var
+								contact = $("#contact"),
+								isp = ["移动", "联通", "电信"];
 
-					if (data.status) {
-						goto("#page-result");
-
-						var
-						contact = $("#contact"),
-						isp = ["移动", "联通", "电信"];
-
-						$("#isp ul img").each(function(index) {
-							$(this).click(function() {
-								goto("#page-contact");
-
-								contact.find("input[name='isp']").val(isp[index]);
-
-								$("#submit span").click(function() {
-									// TODO:
-									//contact.submit();
-
-									if (new Date().getSeconds() % 2) {
-										goto("#page-success");
-									} else {
-										goto("#page-fail");
-
-										//var times = countup.countdown("getTimes");
-										$("#score").text(
-											//times[5] + "′" + times[6] + "″"
-											countup.text()
-										);
+								contact.resetForm().validate({
+									rules: {
+										"name": {
+											required: true
+										},
+										"phone": {
+											required: true,
+											isPhone: true
+										}
+									},
+									submitHandler: function(form) {
+/*
+										// TODO
+										$(form).ajaxSubmit({
+											type: "POST",
+											url: "", // TODO
+											//data: {},
+											dataType: "json",
+											beforeSend: function() {
+												$.mobile.loading("show");
+											},
+											complete: function() {
+												$.mobile.loading("hide");
+											},
+											success: function(data) {
+*/
+												goto("#page-success");
+/*
+											},
+											error: function(xhr) {
+												alert("错误：" + xhr.status + " " + xhr.statusText);
+											}
+										});
+*/
 									}
 								});
 
-							});
-						});
-					} else {
+								$("#isp ul img").each(function(index) {
+									$(this).click(function() {
+										goto("#page-contact");
 
-					}
+										contact.find("input[name='isp']").val(isp[index]);
+
+										$("#submit span").click(function() {
+											contact.submit();
+										});
+									});
+								});
+							} else {
+								goto("#page-fail");
+
+								//var times = countup.countdown("getTimes");
+								$("#score").text(
+									//times[5] + "′" + times[6] + "″"
+									countup.text()
+								);
+							}
+/*
+						},
+						error: function(xhr) {
+							alert("错误：" + xhr.status + " " + xhr.statusText);
+						}
+					});
+*/
 				});
 			});
 		});
@@ -167,7 +206,7 @@ $(window).load(function() {
 			<div id="magnify"></div>
 		</div>
 		<div id="tip">
-			<span><em></em>放大图片看得更清楚哦！</span>
+			<span><em></em>点击图片缩放看得更清楚哦！</span>
 		</div>
 		<div id="complete">
 			<p>
@@ -220,7 +259,7 @@ $(window).load(function() {
 			<div class="fieldset">
 				<input type="hidden" name="isp" value="" />
 
-				<input type="text" name="name" value="" placeholder="姓名" required="required" />
+				<input type="text" name="name" value="" placeholder="姓名" />
 				<input type="text" name="phone" value="" placeholder="电话" />
 			</div>
 		</form>

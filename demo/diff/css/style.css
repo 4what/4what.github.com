@@ -91,10 +91,11 @@ position: relative;
 width: 33.3%;
 }
 #game ul span {
-border: 1px solid red;
+background: url("../images/transparent.png") repeat 0 0; /* for IE8 */
+/*border: 1px solid red;*/
 border-radius: 18px;
 height: 36px;
-left: 135px;
+left: 125px;
 position: absolute;
 top: 20px;
 width: 36px;
@@ -290,6 +291,7 @@ width: 496px;
 #page-success .share p {
 bottom: 15px;
 color: #0c4da2;
+cursor: pointer;
 font-size: 24px;
 left: 80px;
 position: absolute;
@@ -328,6 +330,7 @@ width: 389px;
 #page-fail .share p {
 bottom: 15px;
 color: #fff;
+cursor: pointer;
 font-size: 28px;
 left: 60px;
 position: absolute;
