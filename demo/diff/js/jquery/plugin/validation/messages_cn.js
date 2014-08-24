@@ -3,21 +3,21 @@
  * Locale: CN
  */
 jQuery.extend(jQuery.validator.messages, {
-        required: "±ØÑ¡×Ö¶Î",
-		remote: "ÇëĞŞÕı¸Ã×Ö¶Î",
-		email: "ÇëÊäÈëÕıÈ·¸ñÊ½µÄµç×ÓÓÊ¼ş",
-		url: "ÇëÊäÈëºÏ·¨µÄÍøÖ·",
-		date: "ÇëÊäÈëºÏ·¨µÄÈÕÆÚ",
-		dateISO: "ÇëÊäÈëºÏ·¨µÄÈÕÆÚ (ISO).",
-		number: "ÇëÊäÈëºÏ·¨µÄÊı×Ö",
-		digits: "Ö»ÄÜÊäÈëÕûÊı",
-		creditcard: "ÇëÊäÈëºÏ·¨µÄĞÅÓÃ¿¨ºÅ",
-		equalTo: "ÇëÔÙ´ÎÊäÈëÏàÍ¬µÄÖµ",
-		accept: "ÇëÊäÈëÓµÓĞºÏ·¨ºó×ºÃûµÄ×Ö·û´®",
-		maxlength: jQuery.validator.format("ÇëÊäÈëÒ»¸ö³¤¶È×î¶àÊÇ {0} µÄ×Ö·û´®"),
-		minlength: jQuery.validator.format("ÇëÊäÈëÒ»¸ö³¤¶È×îÉÙÊÇ {0} µÄ×Ö·û´®"),
-		rangelength: jQuery.validator.format("ÇëÊäÈëÒ»¸ö³¤¶È½éÓÚ {0} ºÍ {1} Ö®¼äµÄ×Ö·û´®"),
-		range: jQuery.validator.format("ÇëÊäÈëÒ»¸ö½éÓÚ {0} ºÍ {1} Ö®¼äµÄÖµ"),
-		max: jQuery.validator.format("ÇëÊäÈëÒ»¸ö×î´óÎª {0} µÄÖµ"),
-		min: jQuery.validator.format("ÇëÊäÈëÒ»¸ö×îĞ¡Îª {0} µÄÖµ")
+        required: "å¿…é€‰å­—æ®µ",
+		remote: "è¯·ä¿®æ­£è¯¥å­—æ®µ",
+		email: "è¯·è¾“å…¥æ­£ç¡®æ ¼å¼çš„ç”µå­é‚®ä»¶",
+		url: "è¯·è¾“å…¥åˆæ³•çš„ç½‘å€",
+		date: "è¯·è¾“å…¥åˆæ³•çš„æ—¥æœŸ",
+		dateISO: "è¯·è¾“å…¥åˆæ³•çš„æ—¥æœŸ (ISO).",
+		number: "è¯·è¾“å…¥åˆæ³•çš„æ•°å­—",
+		digits: "åªèƒ½è¾“å…¥æ•´æ•°",
+		creditcard: "è¯·è¾“å…¥åˆæ³•çš„ä¿¡ç”¨å¡å·",
+		equalTo: "è¯·å†æ¬¡è¾“å…¥ç›¸åŒçš„å€¼",
+		accept: "è¯·è¾“å…¥æ‹¥æœ‰åˆæ³•åç¼€åçš„å­—ç¬¦ä¸²",
+		maxlength: jQuery.validator.format("è¯·è¾“å…¥ä¸€ä¸ªé•¿åº¦æœ€å¤šæ˜¯ {0} çš„å­—ç¬¦ä¸²"),
+		minlength: jQuery.validator.format("è¯·è¾“å…¥ä¸€ä¸ªé•¿åº¦æœ€å°‘æ˜¯ {0} çš„å­—ç¬¦ä¸²"),
+		rangelength: jQuery.validator.format("è¯·è¾“å…¥ä¸€ä¸ªé•¿åº¦ä»‹äº {0} å’Œ {1} ä¹‹é—´çš„å­—ç¬¦ä¸²"),
+		range: jQuery.validator.format("è¯·è¾“å…¥ä¸€ä¸ªä»‹äº {0} å’Œ {1} ä¹‹é—´çš„å€¼"),
+		max: jQuery.validator.format("è¯·è¾“å…¥ä¸€ä¸ªæœ€å¤§ä¸º {0} çš„å€¼"),
+		min: jQuery.validator.format("è¯·è¾“å…¥ä¸€ä¸ªæœ€å°ä¸º {0} çš„å€¼")
 });
