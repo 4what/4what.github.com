@@ -70,17 +70,17 @@ $(window).load(function() {
 		items.toggle(function() {
 			$(this).animate({
 				width: "+=30"
-			}).siblings("span").css({
-					left: 130,
-					top: 20
-				});
+			}, "fast").siblings("span").css({
+				left: 130,
+				top: 20
+			});
 		}, function() {
 			$(this).animate({
 				width: "-=30"
 			}).siblings("span").css({
-					left: 120,
-					top: 15
-				});
+				left: 120,
+				top: 15
+			}, "fast");
 		});
 
 		points.click(function() {
