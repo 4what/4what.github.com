@@ -22,6 +22,8 @@
 			}
 
 			move = function (e) {
+				$(".loupe").hide();
+
 				var os = $small.offset(),
 					sW = $small.outerWidth(),
 					sH = $small.outerHeight(),
@@ -56,9 +58,12 @@
 				})
 				.append($big = $('<img />').attr('src', $this.attr($this.is('img') ? 'src' : 'href')).css('position', 'absolute'))
 				.mousemove(move)
-				.hide()
+
 				.click(move)
+
+				.hide()
 				.appendTo('body');
+
 
 			$this.data('loupe', true)
 				.mouseenter(move)
