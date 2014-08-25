@@ -5,7 +5,7 @@
 <title></title>
 <meta name="author" content="4what" />
 
-<meta name="viewport" content="width=640" />
+<meta name="viewport" content="width=640, user-scalable=no" />
 
 <script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
 
@@ -15,9 +15,6 @@
 <script type="text/javascript" src="js/jquery/plugin/jquery.countdown.min.js"></script>
 
 <!--<script type="text/javascript" src="js/flipsnap.min.js"></script>-->
-
-<!--<script type="text/javascript" src="js/jquery/plugin/jquery.loupe.modified.js"></script>-->
-<script type="text/javascript" src="js/jquery/plugin/jquery.mlens-1.4-modified.js"></script>
 
 <script type="text/javascript" src="js/jquery/plugin/jquery.form.js"></script>
 
@@ -31,29 +28,6 @@
 
 <script type="text/javascript">
 $(window).load(function() {
-
-	alert(9)
-
-	$(".magnify").each(function() {
-		$(this).mlens({
-			imgSrc: $(this).attr("data-big"), // path of the hi-res version of the image
-			imgSrc2x: $(this).attr("data-big2x"), // path of the hi-res @2x version of the image // for retina displays (optional)
-			lensShape: "circle", // shape of the lens (circle/square)
-			lensSize: 180, // size of the lens (in px)
-			borderSize: 4, // size of the lens border (in px)
-			borderColor: "#fff", // color of the lens border (#hex)
-			borderRadius: 0, // border radius (optional, only if the shape is square)
-			imgOverlay: $(this).attr("data-overlay"), // path of the overlay image (optional)
-			overlayAdapt: true, // true if the overlay image has to adapt to the lens size (true/false)
-			zoomLevel: 2 // zoom level multiplicator (number)
-		});
-	});
-
-/*
-	$("body").click(function() {
-		console.log(2)
-	});
-*/
 
 	function goto(to) {
 		$(":mobile-pagecontainer").pagecontainer("change", to, {
@@ -218,15 +192,15 @@ $(window).load(function() {
 			<ul>
 				<li>
 					<span></span>
-					<img src="images/item-1.png" alt="" class="magnify" data-big="images/item-1-big.png" data-big2x="images/item-1-big.png" />
+					<img src="images/item-1.png" alt="" />
 				</li>
 				<li>
 					<span></span>
-					<img src="images/item-2.png" alt="" class="magnify" data-big="images/item-2-big.png" data-big2x="images/item-2-big.png" />
+					<img src="images/item-2.png" alt="" />
 				</li>
 				<li>
 					<span></span>
-					<img src="images/item-3.png" alt="" class="magnify" data-big="images/item-3-big.png" data-big2x="images/item-2-big.png" />
+					<img src="images/item-3.png" alt="" />
 				</li>
 			</ul>
 			<div id="magnify"></div>
