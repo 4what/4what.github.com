@@ -92,7 +92,7 @@ width: 33.3%;
 }
 #game ul span {
 background: url("../images/transparent.png") repeat 0 0; /* for IE8 */
-/*border: 1px solid red;*/
+border: 1px solid red;
 border-radius: 18px;
 height: 36px;
 left: 125px;

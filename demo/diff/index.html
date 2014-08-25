@@ -43,6 +43,7 @@ $(window).load(function() {
 	countup = $("#countup"),
 	game = $("#game"),
 	help = $("#rule span, #tip"),
+	items = game.find("img"),
 	points = game.find("span"),
 	start = $("#start span");
 
@@ -55,6 +56,22 @@ $(window).load(function() {
 		});
 	}
 */
+
+	items.toggle(function() {
+		$(this).animate({
+			width: "+=30"
+		}).siblings("span").css({
+			left: 135,
+			top: 28
+		});
+	}, function() {
+		$(this).animate({
+			width: "-=30"
+		}).siblings("span").css({
+			left: 125,
+			top: 20
+		});
+	});
 
 	start.click(function() {
 		$(this).fadeOut(function() {
