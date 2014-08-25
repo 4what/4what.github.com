@@ -180,13 +180,13 @@
 				
 				//touch events imitating mousemove both for the target and for the image
 				$target.on("touchmove", function(e) {
-					e.preventDefault();
+					//e.preventDefault();
 					var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
 					$.fn.mlens("move",$image.attr("data-id"),touch);
 				});
 				
 	            $image.on("touchmove",function(e) {
-					e.preventDefault();
+					//e.preventDefault();
 					var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
 					$.fn.mlens("move",$image.attr("data-id"),touch);
 				});
@@ -203,27 +203,27 @@
 				}, function() {
 					$target.hide();
 				});
-				
+
 				//touch events for the target (target visibility)
 				$target.on("touchstart", function(e) {
-					e.preventDefault();
+					//e.preventDefault();
 					$(this).show();
 				});
 				
 				$target.on("touchend", function(e) {
-					e.preventDefault();
-					$(this).hide();
+					//e.preventDefault();
+					///$(this).hide();
 				});
 				
 				//touch events for the image (target visibility)
 				$image.on("touchstart", function(e) {
-					e.preventDefault();
+					//e.preventDefault();
 					$target.show();
 				});
 				
 				$image.on("touchend", function(e) {
-					e.preventDefault();
-					$target.hide();
+					//e.preventDefault();
+					//$target.hide();
 				});
 				
 				//saving data in mlens instance
