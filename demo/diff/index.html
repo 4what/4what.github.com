@@ -16,7 +16,7 @@
 
 <!--<script type="text/javascript" src="js/flipsnap.min.js"></script>-->
 
-<script type="text/javascript" src="js/jquery/plugin/jquery.loupe.min.js"></script>
+<script type="text/javascript" src="js/jquery/plugin/jquery.loupe.modified.js"></script>
 
 <script type="text/javascript" src="js/jquery/plugin/jquery.form.js"></script>
 
@@ -37,12 +37,12 @@ border-radius: 100%;
 <script type="text/javascript">
 $(window).load(function() {
 
-	alert(3)
-	$(".magnify").loupe(/*{
-		loupe: "loupe",
-		height: 150,
+	alert(5)
+	$(".magnify").loupe({
+		//loupe: "loupe",
+		height: 200,
 		width: 200
-	}*/);
+	});
 	$(".loupe img").click(function() {
 //		alert(1)
 	});
