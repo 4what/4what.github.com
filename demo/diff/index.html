@@ -5,7 +5,7 @@
 <title></title>
 <meta name="author" content="4what" />
 
-<meta name="viewport" content="width=640, user-scalable=no" />
+<meta name="viewport" content="width=640" />
 
 <script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
 
@@ -40,11 +40,7 @@ $(window).load(function() {
 	}
 
 	var
-	countup = $("#countup"),
 	game = $("#game"),
-	help = $("#rule span, #tip"),
-	items = game.find("img"),
-	points = game.find("span"),
 	start = $("#start span");
 
 /*
@@ -58,6 +54,17 @@ $(window).load(function() {
 */
 
 	start.click(function() {
+		var
+		countup = $("#countup"),
+
+	    help = $("#rule span, #tip"),
+
+		overlay = $("#page-home").find(".overlay, .wrapper"),
+		zoom = $("#zoom"),
+
+		items = game.find("img"),
+		points = game.add(zoom).find("span");
+
 		$(this).fadeOut(function() {
 			help.fadeIn();
 		});
@@ -67,6 +74,7 @@ $(window).load(function() {
 			layout: '{mnn}′{snn}″'
 		});
 
+/*
 		items.toggle(function() {
 			$(this).animate({
 				width: "+=30"
@@ -82,9 +90,25 @@ $(window).load(function() {
 				top: 15
 			}, "fast");
 		});
+*/
+
+		items.click(function(e) {
+			zoom.find("img").attr("src", $(this).attr("data-big"));
+
+			overlay.fadeIn();
+		});
+
+		overlay.click(function(e) {
+			if (!$(e.target).is(zoom.find("img, span"))) {
+				overlay.fadeOut();
+			}
+		});
 
 		points.click(function() {
 			points.hide();
+
+			overlay.hide();
+			overlay.unbind("click");
 
 			items.unbind("click");
 
@@ -211,15 +235,15 @@ $(window).load(function() {
 			<ul>
 				<li>
 					<span></span>
-					<img src="images/item-1.png" alt="" />
+					<img src="images/item-1.png" alt="" data-big="images/item-1-big.png" />
 				</li>
 				<li>
 					<span></span>
-					<img src="images/item-2.png" alt="" />
+					<img src="images/item-2.png" alt="" data-big="images/item-2-big.png" />
 				</li>
 				<li>
 					<span></span>
-					<img src="images/item-3.png" alt="" />
+					<img src="images/item-3.png" alt="" data-big="images/item-3-big.png" />
 				</li>
 			</ul>
 			<div id="magnify"></div>
@@ -237,6 +261,13 @@ $(window).load(function() {
 		</div>
 		<div id="start">
 			<span></span>
+		</div>
+		<div class="overlay"></div>
+		<div class="wrapper">
+			<div id="zoom">
+				<span></span>
+				<img src="images/item-1-big.png" alt="" />
+			</div>
 		</div>
 	</div>
 </div>
