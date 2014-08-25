@@ -16,7 +16,7 @@
 
 <!--<script type="text/javascript" src="js/flipsnap.min.js"></script>-->
 
-<script type="text/javascript" src="js/jquery/plugin/jquery.mlens-1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery/plugin/jquery.loupe.min.js"></script>
 
 <script type="text/javascript" src="js/jquery/plugin/jquery.form.js"></script>
 
@@ -28,8 +28,24 @@
 
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 
+<style type="text/css">
+.loupe {
+border-radius: 100%;
+}
+</style>
+
 <script type="text/javascript">
 $(window).load(function() {
+
+	alert(3)
+	$(".magnify").loupe(/*{
+		loupe: "loupe",
+		height: 150,
+		width: 200
+	}*/);
+	$(".loupe img").click(function() {
+		alert(1)
+	});
 
 	function goto(to) {
 		$(":mobile-pagecontainer").pagecontainer("change", to, {
@@ -57,22 +73,6 @@ $(window).load(function() {
 		});
 	}
 */
-
-	alert(2)
-	$("#green_monster").mlens(
-	{
-		imgSrc: $("#green_monster").attr("data-big"),	    // path of the hi-res version of the image
-		imgSrc2x: $("#green_monster").attr("data-big2x"),  // path of the hi-res @2x version of the image
-                                                                   //for retina displays (optional)
-		lensShape: "circle",				// shape of the lens (circle/square)
-		lensSize: 180,					// size of the lens (in px)
-		borderSize: 4,					// size of the lens border (in px)
-		borderColor: "#fff",				// color of the lens border (#hex)
-		borderRadius: 0,				// border radius (optional, only if the shape is square)
-		imgOverlay: $("#green_monster").attr("data-overlay"), // path of the overlay image (optional)
-		overlayAdapt: true, // true if the overlay image has to adapt to the lens size (true/false)
-		zoomLevel: 2                                    // zoom level multiplicator (number)
-	});
 
 	start.click(function() {
 		$(this).fadeOut(function() {
@@ -210,15 +210,15 @@ $(window).load(function() {
 			<ul>
 				<li>
 					<span></span>
-					<img src="images/item-1.png" alt="" id="green_monster" data-big2x="images/item-1-big.png" data-overlay="" />
+					<a href="images/item-1-big.png" class="magnify"><img src="images/item-1.png" alt="" /></a>
 				</li>
 				<li>
 					<span></span>
-					<img src="images/item-2.png" alt="" />
+					<a href="images/item-2-big.png" class="magnify"><img src="images/item-2.png" alt="" /></a>
 				</li>
 				<li>
 					<span></span>
-					<img src="images/item-3.png" alt="" />
+					<a href="images/item-3-big.png" class="magnify"><img src="images/item-3.png" alt="" /></a>
 				</li>
 			</ul>
 			<div id="magnify"></div>
