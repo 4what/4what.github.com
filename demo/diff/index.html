@@ -57,22 +57,6 @@ $(window).load(function() {
 	}
 */
 
-	items.toggle(function() {
-		$(this).animate({
-			width: "+=30"
-		}).siblings("span").css({
-			left: 135,
-			top: 28
-		});
-	}, function() {
-		$(this).animate({
-			width: "-=30"
-		}).siblings("span").css({
-			left: 125,
-			top: 20
-		});
-	});
-
 	start.click(function() {
 		$(this).fadeOut(function() {
 			help.fadeIn();
@@ -83,8 +67,26 @@ $(window).load(function() {
 			layout: '{mnn}′{snn}″'
 		});
 
+		items.toggle(function() {
+			$(this).animate({
+				width: "+=30"
+			}).siblings("span").css({
+					left: 135,
+					top: 28
+				});
+		}, function() {
+			$(this).animate({
+				width: "-=30"
+			}).siblings("span").css({
+					left: 125,
+					top: 20
+				});
+		});
+
 		points.click(function() {
 			points.hide();
+
+			items.unbind("click");
 
 			countup.countdown("pause");
 
