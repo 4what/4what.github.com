@@ -16,7 +16,8 @@
 
 <!--<script type="text/javascript" src="js/flipsnap.min.js"></script>-->
 
-<script type="text/javascript" src="js/jquery/plugin/jquery.loupe.modified.js"></script>
+<!--<script type="text/javascript" src="js/jquery/plugin/jquery.loupe.modified.js"></script>-->
+<script type="text/javascript" src="js/jquery/plugin/jquery.mlens-1.4.js"></script>
 
 <script type="text/javascript" src="js/jquery/plugin/jquery.form.js"></script>
 
@@ -29,15 +30,23 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 <style type="text/css">
-.loupe {
-border-radius: 100%;
+#green_wrapper {
+	position: relative;
+	width: 640px;
+	height: auto;
+	margin: 0 auto;
+	border: 12px solid #fff;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px rgba(50,50,50 0.5);
+	float: left;
 }
 </style>
 
 <script type="text/javascript">
 $(window).load(function() {
 
-	alert(6)
+	alert(7)
+/*
 	$(".magnify").loupe({
 		//loupe: "loupe",
 		height: 200,
@@ -45,6 +54,24 @@ $(window).load(function() {
 	});
 	$(".loupe img").click(function() {
 //		alert(1)
+	});
+*/
+
+	$(".magnify").each(function() {
+		$(this).mlens(
+			{
+				imgSrc: $(this).attr("data-big"), // path of the hi-res version of the image
+				imgSrc2x: $(this).attr("data-big2x"), // path of the hi-res @2x version of the image
+				//for retina displays (optional)
+				lensShape: "circle", // shape of the lens (circle/square)
+				lensSize: 180, // size of the lens (in px)
+				borderSize: 4, // size of the lens border (in px)
+				borderColor: "#fff", // color of the lens border (#hex)
+				borderRadius: 0, // border radius (optional, only if the shape is square)
+				imgOverlay: $(this).attr("data-overlay"), // path of the overlay image (optional)
+				overlayAdapt: true, // true if the overlay image has to adapt to the lens size (true/false)
+				zoomLevel: 2                                    // zoom level multiplicator (number)
+			});
 	});
 
 	function goto(to) {
@@ -63,6 +90,10 @@ $(window).load(function() {
 	help = $("#rule span, #tip"),
 	points = game.find("span"),
 	start = $("#start span");
+
+//			game.on("touchmove", function() {
+//				console.log(1)
+//			})
 
 /*
 	if ($("body").width() < 640) {
@@ -210,15 +241,15 @@ $(window).load(function() {
 			<ul>
 				<li>
 					<span></span>
-					<a href="images/item-1-big.png" class="magnify"><img src="images/item-1.png" alt="" /></a>
+					<img src="images/item-1.png" alt="" class="magnify" data-big="images/item-1-big.png" data-big2x="images/item-1-big.png" />
 				</li>
 				<li>
 					<span></span>
-					<a href="images/item-2-big.png" class="magnify"><img src="images/item-2.png" alt="" /></a>
+					<img src="images/item-2.png" alt="" class="magnify" data-big="images/item-2-big.png" data-big2x="images/item-2-big.png" />
 				</li>
 				<li>
 					<span></span>
-					<a href="images/item-3-big.png" class="magnify"><img src="images/item-3.png" alt="" /></a>
+					<img src="images/item-3.png" alt="" class="magnify" data-big="images/item-3-big.png" data-big2x="images/item-2-big.png" />
 				</li>
 			</ul>
 			<div id="magnify"></div>
