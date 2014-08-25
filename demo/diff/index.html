@@ -16,6 +16,8 @@
 
 <!--<script type="text/javascript" src="js/flipsnap.min.js"></script>-->
 
+<script type="text/javascript" src="js/jquery/plugin/jquery.mlens-1.4.min.js"></script>
+
 <script type="text/javascript" src="js/jquery/plugin/jquery.form.js"></script>
 
 <script type="text/javascript" src="js/jquery/plugin/validation/jquery.validate.min.js"></script>
@@ -31,7 +33,7 @@ $(window).load(function() {
 
 	function goto(to) {
 		$(":mobile-pagecontainer").pagecontainer("change", to, {
-			transition: new Date().getSeconds() % 2 ? "flip" : "slide"
+			transition: new Date().getMilliseconds() % 2 ? "flip" : "slide"
 		});
 	}
 
@@ -55,6 +57,20 @@ $(window).load(function() {
 		});
 	}
 */
+	$("#green_monster").mlens(
+	{
+		imgSrc: $("#green_monster").attr("data-big"),	    // path of the hi-res version of the image
+		imgSrc2x: $("#green_monster").attr("data-big2x"),  // path of the hi-res @2x version of the image
+                                                                   //for retina displays (optional)
+		lensShape: "circle",				// shape of the lens (circle/square)
+		lensSize: 180,					// size of the lens (in px)
+		borderSize: 4,					// size of the lens border (in px)
+		borderColor: "#fff",				// color of the lens border (#hex)
+		borderRadius: 0,				// border radius (optional, only if the shape is square)
+		imgOverlay: $("#green_monster").attr("data-overlay"), // path of the overlay image (optional)
+		overlayAdapt: true, // true if the overlay image has to adapt to the lens size (true/false)
+		zoomLevel: 2                                    // zoom level multiplicator (number)
+	});
 
 	start.click(function() {
 		$(this).fadeOut(function() {
@@ -94,7 +110,7 @@ $(window).load(function() {
 						success: function(data) {
 */
 							// TODO
-							if (new Date().getSeconds() % 2) {
+							if (new Date().getMilliseconds() % 2) {
 								goto("#page-result");
 
 								var
@@ -192,7 +208,7 @@ $(window).load(function() {
 			<ul>
 				<li>
 					<span></span>
-					<img src="images/item-1.png" alt="" />
+					<img src="images/item-1.png" alt="" id="green_monster" data-big2x="item-1.png" data-overlay="" />
 				</li>
 				<li>
 					<span></span>
