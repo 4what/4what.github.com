@@ -165,21 +165,23 @@ width: 100%;
 #page-home .wrapper,
 #page-home .overlay {
 display: none;
+overflow-x: scroll;
+overflow-y: hidden;
 }
 
 #zoom {
 margin: 100px auto 0 auto;
 position: relative;
-width: 380px;
+/*width: 380px;*/
 }
 #zoom span {
 background: url("../images/transparent.png") repeat 0 0; /* for IE8 */
 border: 1px solid red;
 border-radius: 100%;
 height: 70px;
-left: 210px;
+/*left: 210px;*/
 position: absolute;
-top: 45px;
+/*top: 45px;*/
 width: 70px;
 }
 
