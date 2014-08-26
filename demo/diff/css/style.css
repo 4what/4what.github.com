@@ -92,7 +92,7 @@ width: 33.3%;
 }
 #game ul span {
 background: url("../images/transparent.png") repeat 0 0; /* for IE8 */
-border: 1px solid red;
+/*border: 1px solid red;*/
 border-radius: 100%;
 height: 50px;
 left: 120px;
@@ -176,7 +176,7 @@ position: relative;
 }
 #zoom span {
 background: url("../images/transparent.png") repeat 0 0; /* for IE8 */
-border: 1px solid red;
+/*border: 1px solid red;*/
 border-radius: 100%;
 height: 70px;
 /*left: 210px;*/
