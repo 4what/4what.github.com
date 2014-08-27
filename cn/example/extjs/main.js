@@ -693,8 +693,8 @@
 				"->",
 				//" ",
 				new Ext.ux.form.SearchField({
-					store: _jsonstore,
 					//width: 240, // 240|360 // 自定义
+					store: _jsonstore,
 					emptyText: "关键字"
 				})
 			],
