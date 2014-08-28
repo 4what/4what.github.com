@@ -277,15 +277,15 @@ background-image: url("../images/icon/save.gif") !important;
 
 
 /* dataview */
-#dataview {
+.dataview {
 background: #fff;
 }
-#dataview ul {
+.dataview ul {
 background: #fff;
 overflow: auto;
 text-align: center;
 }
-#dataview ul li {
+.dataview ul li {
 border: 1px solid #fff;
 border-radius: 5px;
 cursor: pointer;
@@ -294,17 +294,17 @@ margin: 5px;
 overflow: hidden;
 padding: 5px 10px;
 }
-#dataview ul li.x-view-over {
+.dataview ul li.x-view-over {
 background: #efefef url("../js/extjs/3.4.1.1/resources/images/default/grid/row-over.gif") repeat-x left top;
 border: 1px solid #ddd;
 }
-#dataview ul li.x-view-selected {
+.dataview ul li.x-view-selected {
 background: #eff5fb url("../js/extjs/3.4.1.1/examples/view/images/selected.gif") no-repeat right bottom;
 border: 1px solid #99bbe8;
 }
-#dataview ul li em {
+.dataview ul li em {
 color: #999;
 }
-#dataview ul li span {
+.dataview ul li span {
 display: block;
 }

@@ -1745,7 +1745,7 @@
 
 	// dataview
 	var _dataview = new Ext.DataView({
-		id: "dataview",
+		cls: "dataview",
 		itemSelector: "li.item",
 		multiSelect: true,
 		overClass: "x-view-over",
