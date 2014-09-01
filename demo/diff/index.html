@@ -57,9 +57,7 @@ $(window).load(function() {
 		var
 		countup = $("#countup"),
 
-	    help = $("#rule span, #tip"),
-
-		overlay = $("#page-home").find(".overlay, .wrapper"),
+		overlay = $("#page-game").find(".overlay, .wrapper"),
 		zoom = $("#zoom"),
 
 		items = game.find("img"),
@@ -67,9 +65,7 @@ $(window).load(function() {
 
 		bonus = $("#bonus");
 
-		$(this).fadeOut(function() {
-			help.fadeIn();
-		});
+		goto("#page-game");
 
 		countup.countdown({
 			since: new Date(),
@@ -86,27 +82,7 @@ $(window).load(function() {
 			}
 		}, 1000);
 
-/*
-		items.toggle(function() {
-			$(this).animate({
-				width: "+=30"
-			}, "fast").siblings("span").css({
-				left: 130,
-				top: 20
-			});
-		}, function() {
-			$(this).animate({
-				width: "-=30"
-			}).siblings("span").css({
-				left: 120,
-				top: 15
-			}, "fast");
-		});
-*/
-
 		items.click(function(e) {
-			//zoom.find("img").attr("src", $(this).attr("data-big"));
-
 			overlay.fadeIn();
 		});
 
@@ -128,14 +104,14 @@ $(window).load(function() {
 
 			countup.countdown("pause");
 
-			help.fadeOut(function() {
-				$("#magnify, #complete").fadeIn();
+			$("#rule span, #tip").fadeOut(function() {
+				game.find(".magnify").add("#complete").fadeIn();
 			});
 
 			bonus.click(function() {
 				goto("#page-lottery");
 
-				$("#page-lottery span").click(function() {
+				$("#lottery span").click(function() {
 /*
 					$.ajax({
 						type: "POST",
@@ -237,6 +213,14 @@ $(window).load(function() {
 
 <div id="page-home" data-role="page">
 	<div class="ui-content" role="main">
+		<div id="start">
+			<div><span></span></div>
+		</div>
+	</div>
+</div>
+
+<div id="page-game" data-role="page">
+	<div class="ui-content" role="main">
 		<div id="timer">
 			<div>
 				时间:<span id="countup">00′00″</span>
@@ -249,19 +233,21 @@ $(window).load(function() {
 		<div id="game">
 			<ul>
 				<li>
+					<img src="images/item-1.png" alt="" />
 					<span></span>
-					<img src="images/item-1.png" alt="" data-big="images/item-1-big.jpg" />
+					<img src="images/magnify-1.png" alt="" class="magnify" />
 				</li>
 				<li>
+					<img src="images/item-2.png" alt="" />
 					<span></span>
-					<img src="images/item-2.png" alt="" data-big="images/item-2-big.jpg" />
+					<img src="images/magnify-2.png" alt="" class="magnify" />
 				</li>
 				<li>
+					<img src="images/item-3.png" alt="" />
 					<span></span>
-					<img src="images/item-3.png" alt="" data-big="images/item-3-big.jpg" />
+					<img src="images/magnify-3.png" alt="" class="magnify" />
 				</li>
 			</ul>
-			<div id="magnify"></div>
 		</div>
 		<div id="tip">
 			<span><em></em>点击图片缩放看得更清楚哦！</span>
@@ -273,9 +259,6 @@ $(window).load(function() {
 				三星4G手机支持各种4G网络制式！
 			</p>
 			<span class="btn" id="bonus">好眼力，恭喜你！快来抢红包吧！</span>
-		</div>
-		<div id="start">
-			<span></span>
 		</div>
 		<div class="overlay"></div>
 		<div class="wrapper">
@@ -291,8 +274,9 @@ $(window).load(function() {
 
 <div id="page-lottery" data-role="page">
 	<div class="ui-content" role="main">
-		<span class="bonus"></span>
-		<span class="btn">点击，赢取幸运大红包</span>
+		<div id="lottery">
+			<div><span></span></div>
+		</div>
 	</div>
 </div>
 
@@ -374,9 +358,11 @@ $(window).load(function() {
 					<span id="score">00′00″</span>
 				</div>
 				<p>
-					对不起~
+					<span>对不起~</span>
 					<br />
 					看来幸运女神暂时还没有降临到你身上哦
+					<br />
+					让你的朋友们来试试吧！
 				</p>
 			</div>
 		</div>
