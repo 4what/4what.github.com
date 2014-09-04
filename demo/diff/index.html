@@ -61,9 +61,9 @@ $(window).load(function() {
 		zoom = $("#zoom"),
 
 		items = game.find("img"),
-		points = game.add(zoom).find("span"),
+		points = game.add(zoom).find("ul span"),
 
-		bonus = $("#bonus");
+		complete = $("#complete");
 
 		goto("#page-game");
 
@@ -76,7 +76,7 @@ $(window).load(function() {
 		sec = 0,
 		interval = window.setInterval(function() {
 			if (++ sec === 90) {
-				bonus.text("快来抢红包！");
+				$("#bonus").text("快来抢红包！");
 
 				found();
 			}
@@ -105,10 +105,10 @@ $(window).load(function() {
 			countup.countdown("pause");
 
 			$("#rule span, #tip").fadeOut(function() {
-				game.find("img.magnify").add("#complete").fadeIn();
+				game.find("img.magnify").add(complete).fadeIn();
 			});
 
-			bonus.click(function() {
+			complete.find("div").click(function() {
 				goto("#page-lottery");
 
 				$("#lottery span").click(function() {
@@ -248,17 +248,18 @@ $(window).load(function() {
 					<img src="images/magnify-3.png" alt="" class="magnify" />
 				</li>
 			</ul>
+			<div id="complete">
+				<div>
+					秘密就在信号条上
+					<br />
+					三星4G手机支持所有4G网络制式！
+					<br />
+					<span id="bonus">恭喜你快来抢红包吧！</span>
+				</div>
+			</div>
 		</div>
 		<div id="tip">
 			<span><em></em>点击图片缩放看得更清楚哦！</span>
-		</div>
-		<div id="complete">
-			<p>
-				秘密就在信号条上
-				<br />
-				三星4G手机支持各种4G网络制式！
-			</p>
-			<span class="btn" id="bonus">好眼力，恭喜你！快来抢红包吧！</span>
 		</div>
 		<div class="overlay"></div>
 		<div class="wrapper">
@@ -315,7 +316,7 @@ $(window).load(function() {
 			</div>
 		</form>
 		<div id="submit">
-			<span class="btn">确认无误，提交！</span>
+			<span>确认无误，提交！</span>
 		</div>
 	</div>
 </div>
