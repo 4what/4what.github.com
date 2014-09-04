@@ -61,9 +61,7 @@ $(window).load(function() {
 		zoom = $("#zoom"),
 
 		items = game.find("img"),
-		points = game.add(zoom).find("span"),
-
-		complete = $("#complete");
+		points = game.add(zoom).find("span");
 
 		goto("#page-game");
 
@@ -71,16 +69,6 @@ $(window).load(function() {
 			since: new Date(),
 			layout: '{mnn}′{snn}″'
 		});
-
-		var
-		sec = 0,
-		interval = window.setInterval(function() {
-			if (++ sec === 90) {
-				$("#bonus").text("快来抢红包！");
-
-				found();
-			}
-		}, 1000);
 
 		items.click(function(e) {
 			overlay.fadeIn();
@@ -93,7 +81,9 @@ $(window).load(function() {
 		});
 
 		function found() {
-			window.clearInterval(interval);
+			window.clearTimeout(timeout_found);
+
+			var complete = $("#complete");
 
 			points.hide();
 
@@ -108,7 +98,9 @@ $(window).load(function() {
 				game.find("img.magnify").add(complete).fadeIn();
 			});
 
-			complete.find("div").click(function() {
+			function lucky() {
+				window.clearTimeout(timeout_lucky);
+
 				goto("#page-lottery");
 
 				$("#lottery span").click(function() {
@@ -199,10 +191,20 @@ $(window).load(function() {
 					});
 */
 				});
-			});
+			}
+
+			complete.find("div").click(lucky);
+
+			var timeout_lucky = window.setTimeout(lucky, 1000 * 3);
 		}
 
 		points.click(found);
+
+		var timeout_found = window.setTimeout(function() {
+			$("#bonus").text("快来抢红包！");
+
+			found();
+		}, 1000 * 90);
 	});
 
 });
