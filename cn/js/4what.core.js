@@ -13,7 +13,7 @@ $4what.extend("include", function(args) {
 	var root = (function() {
 		var
 		result = "",
-		folders = ["docs", "sample"],
+		folders = ["article", "sample"],
 		path,
 		pathname = window.location.pathname,
 		re;
