@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<!--<meta name="viewport" content="width=640" />-->
+
+<script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile-1.4.3.min.css" />-->
+<!--<script type="text/javascript" src="js/jquery/mobile/jquery.mobile-1.4.3.min.js"></script>-->
+
+<script type="text/javascript" src="js/util.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript">
+$(window).load(function() {
+
+	var props = [
+		{
+			r: 10,
+			x: 10,
+			y: 10
+		},
+		{
+			r: 20,
+			x: 100,
+			y: 100
+		},
+		{
+			r: 30,
+			x: 200,
+			y: 200
+		}
+	];
+
+	var points = $("#game li");
+
+	points.each(function(i) {
+//		console.log("i: " + i)
+
+/*
+		var prop = props[i];
+		$(this).css({
+			height: prop.r,
+			left: prop.x,
+			top: prop.y,
+			width: prop.r
+		});
+*/
+
+		var
+		max = 960,
+		mr = 100,
+		r = $js.random(50, mr, true),
+		valid,
+		x_end,
+		y_end,
+		x,
+		y;
+
+		function gp() {
+			x = $js.random(0, max - mr, true);
+			y = $js.random(0, max - mr, true);
+
+			x_end = x + r;
+			y_end = y + r;
+
+			points.each(function(j) {
+				valid = true;
+
+				var
+				pos = $(this).position(),
+
+				height = $(this).height(),
+				width = $(this).width(),
+
+				ix = pos.left,
+				iy = pos.top,
+				ixe = ix + width,
+				iye = iy + height;
+
+				if ((x < ixe && x_end > ix) && (y < iye && y_end > iy)) {
+					valid = false;
+					return false;
+				}
+			});
+
+//			console.log(valid)
+			if (!valid) {
+				gp();
+			}
+		}
+
+		gp();
+
+		$(this).css({
+			height: r,
+			left: x,
+			top: y,
+			width: r
+		});
+	}).click(function() {
+		$(this).css("background", "#fff");
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+<ul id="game">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+</body>
+</html>
