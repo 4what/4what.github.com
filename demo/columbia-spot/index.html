@@ -19,93 +19,69 @@
 <script type="text/javascript">
 $(window).load(function() {
 
-	var props = [
-		{
-			r: 10,
-			x: 10,
-			y: 10
-		},
-		{
-			r: 20,
-			x: 100,
-			y: 100
-		},
-		{
-			r: 30,
-			x: 200,
-			y: 200
-		}
-	];
+	console.log($js.timer(function() {
 
-	var points = $("#game li");
+	var
+	spots = $("#game li"),
 
-	points.each(function(i) {
-//		console.log("i: " + i)
+	h_max = 640,
+	w_max = 640,
 
-/*
-		var prop = props[i];
-		$(this).css({
-			height: prop.r,
-			left: prop.x,
-			top: prop.y,
-			width: prop.r
-		});
-*/
+	d_max = 80,
+	d_min = 40,
 
-		var
-		max = 640,
-		mr = 80,
-		r = $js.random(40, mr, true),
-		valid,
-		x_end,
-		y_end,
-		x,
-		y;
+	x, y, x2, y2;
 
-		function gp() {
-			x = $js.random(0, max - mr, true);
-			y = $js.random(0, max - mr, true);
+	var arr = [];
 
-			x_end = x + r;
-			y_end = y + r;
+	function gp(d) {
+		x = $js.random(0, w_max - d_max, true);
+		y = $js.random(0, h_max - d_max, true);
+		x2 = x + d;
+		y2 = y + d;
 
-			points.each(function(j) {
-				valid = true;
+		var valid = true;
 
-				var
-				pos = $(this).position(),
+		for (var item, i = arr.length - 1; i >= 0; i--) {
+			item = arr[i];
 
-				height = $(this).height(),
-				width = $(this).width(),
+			valid = true;
 
-				ix = pos.left,
-				iy = pos.top,
-				ixe = ix + width,
-				iye = iy + height;
+			if ((x < item.x2 && x2 > item.x) && (y < item.y2 && y2 > item.y)) {
+				valid = false;
 
-				if ((x < ixe && x_end > ix) && (y < iye && y_end > iy)) {
-					valid = false;
-					return false;
-				}
-			});
-
-//			console.log(valid)
-			if (!valid) {
-				gp();
+				break;
 			}
 		}
 
-		gp();
+		if (!valid) {
+			gp(d);
+		}
+	}
+
+	spots.each(function(i) {
+		var d = $js.random(d_min, d_max, true);
+
+		gp(d);
+
+		arr.push({
+			x: x,
+			y: y,
+			x2: x2,
+			y2: y2
+		});
 
 		$(this).css({
-			height: r,
-			left: x,
-			top: y,
-			width: r
+			height: d,
+			left: arr[i].x,
+			top: arr[i].y,
+			width: d
 		});
 	}).on("vmousedown", function() {
 		$(this).css("background", "#fff");
 	});
+
+	}))
 
 });
 </script>
@@ -114,6 +90,7 @@ $(window).load(function() {
 <body>
 
 <ul id="game">
+	<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
 	<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
 	<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
 	<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
