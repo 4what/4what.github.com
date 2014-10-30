@@ -48,9 +48,9 @@ font-family: Arial;
 /**/
 #game {
 background: #000;
-height: 960px;
+height: 640px;
 position: relative;
-width: 960px;
+width: 640px;
 }
 #game li {
 background: blue;
