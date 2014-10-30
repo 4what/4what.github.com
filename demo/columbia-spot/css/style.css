@@ -55,8 +55,7 @@ width: 960px;
 #game li {
 background: blue;
 border-radius: 100%;
-float: left;
-height: 50px;
-/*position: absolute;*/
-width: 50px;
+/*height: 100px;*/
+position: absolute;
+/*width: 100px;*/
 }
