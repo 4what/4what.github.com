@@ -130,14 +130,14 @@ function load (){
         if((starty-endy) > 100){
             if(index < 4){
                 index++;
-                $('.sec').eq(index).slideDown('fast').siblings().slideUp();
+                $('.sec').eq(index).slideDown('normal').siblings().slideUp();
                 console.log(index)
             }
         }
         if((starty-endy) < -100){
             if(index > 0) {
                 index--;
-                $('.sec').eq(index).slideDown('fast').siblings().slideUp();
+                $('.sec').eq(index).slideDown('normal').siblings().slideUp();
                 console.log(index)
             }
         }
