@@ -36,7 +36,7 @@ input, select, textarea {
 }
 
 
-/*---------------------------------- Return --*/
+/*------------------------------------*/
 #iframe-return {
 height: 26px;
 position: fixed !important; /* for IE7+, Std */
