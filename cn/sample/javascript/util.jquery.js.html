@@ -186,14 +186,15 @@
 				<textarea cols="" rows="" name="code" class="js">
 				$jq.paginator($("#paginator"), {
 					debug: true,
-					param: "pageNo",
+					//param: "pageNum",
 					data: {
 						name: "value"
 					},
-					current: 1,
+					//ellipsis: false,
 					pages: 5,
-					records: 100,
-					rows: 10,
+					pageNum: 10,
+					pageSize: 10,
+					total: 100,
 					previous: "<",
 					next: ">",
 					first: "<<",
@@ -203,8 +204,7 @@
 				$jq.paginator($("#paginator-ajax"), {
 					ajax: true,
 					callback: function(index) {},
-					records: 100,
-					ellipsis: false
+					total: 100
 				});
 				</textarea>
 			</li>
@@ -359,7 +359,7 @@
 		</dl>
 
 
-		<script type="text/javascript" src="../../js/util.jquery.js"></script>
+		<script type="text/javascript" src="../../js/util.jquery-1.1.js"></script>
 
 		<script type="text/javascript" src="../../js/fckeditor/fckeditor.js"></script> <!-- same origin -->
 
@@ -433,14 +433,15 @@
 			paginator: function() {
 				$jq.paginator($("#paginator"), {
 					debug: true,
-					param: "pageNo",
+					//param: "pageNum",
 					data: {
 						name: "value"
 					},
-					current: 1,
+					//ellipsis: false,
 					pages: 5,
-					records: 100,
-					rows: 10,
+					pageNum: 10,
+					pageSize: 10,
+					total: 100,
 					previous: "<",
 					next: ">",
 					first: "<<",
@@ -450,8 +451,7 @@
 				$jq.paginator($("#paginator-ajax"), {
 					ajax: true,
 					callback: function(index) {},
-					records: 100,
-					ellipsis: false
+					total: 100
 				});
 			},
 			scroll: function() {

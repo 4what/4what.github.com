@@ -1,9 +1,5 @@
 ﻿Ext.onReady(function() {
 
-	// tip
-	Ext.QuickTips.init();
-
-
 	// vtypes
 	Ext.apply(Ext.form.VTypes, $ext.vtypes.daterange());
 	Ext.apply(Ext.form.VTypes, $ext.vtypes.html());

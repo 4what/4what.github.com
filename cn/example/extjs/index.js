@@ -1,9 +1,5 @@
 ﻿Ext.onReady(function() {
 
-	// tip
-	Ext.QuickTips.init();
-
-
 	// nav
 	var _nav = new Ext.Panel({
 		region: "west",

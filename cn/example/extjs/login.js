@@ -1,9 +1,5 @@
 ﻿Ext.onReady(function() {
 
-	// tip
-	Ext.QuickTips.init();
-
-
 	// form
 	var _form = new Ext.form.FormPanel({
 		baseCls: "x-plain",

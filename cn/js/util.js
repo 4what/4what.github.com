@@ -3,7 +3,7 @@
 /**
  * 4what JavaScript Library
  *
- * @author http://4what.github.com/
+ * @author http://www.4what.cn/
  * @version 2014.02.27
  */
 (function() {

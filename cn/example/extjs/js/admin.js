@@ -13,3 +13,6 @@ $ext.msg.alert(/*{
 
 // tab
 $ext.tab.reload("main");
+
+// tip
+Ext.QuickTips.init();

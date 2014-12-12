@@ -3,8 +3,8 @@
 /**
  * UtilJq
  *
- * @author http://4what.github.com/
- * @version 2014.07.03
+ * @author http://www.4what.cn/
+ * @version 1.1 Build 2014.12.12
  */
 (function() {
 
@@ -396,21 +396,20 @@ var UtilJq = window["$jq"] = {
 	paginator: function(target, options) {
 		var
 		defaults = {
-			debug: false, // {Boolean} (!ajax)
+			debug: false, // {Boolean} !ajax
 
 			ajax: false, // {Boolean}
-			callback: new Function(), // {Function} (*: ajax)
+			callback: new Function(), // {Function} ajax
 
-			param: "", // {String} (*: !ajax)
-			data: null, // {Object} (!ajax)
-
-			current: 1, // {Number} (*: !ajax)
-			pages: 5, // {Number}
-
-			records: 0, // {Number} (*)
-			rows: 10, // {Number}
+			param: "pageNum", // {String}
+			data: null, // {Object} !ajax
 
 			ellipsis: true, // {Boolean}
+			pages: 5, // {Number}
+
+			pageNum: 1, // {Number}
+			pageSize: 10, // {Number}
+			total: 0, // {Number} (*)
 
 			previous: "Previous", // {String}
 			next: "Next", // {String}
@@ -421,7 +420,7 @@ var UtilJq = window["$jq"] = {
 
 		// init
 		function init(index) {
-			var totalPages = Math.ceil(settings.records / settings.rows);
+			var totalPages = Math.ceil(settings.total / settings.pageSize);
 
 			if (totalPages > 1) {
 				var query = "?";
@@ -539,7 +538,7 @@ var UtilJq = window["$jq"] = {
 			}
 		}
 
-		init(settings.current);
+		init(settings.pageNum);
 	},
 
 	/**
