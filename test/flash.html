@@ -11,20 +11,16 @@ font-style: normal;
 margin: 0;
 padding: 0;
 }
-
-img {
-border: none;
-vertical-align: middle;
-}
 </style>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+swfobject.embedSWF("LEDtest_4800x736.swf", "flash", "100%", "1080", "9.0.0", "expressInstall.swf", {}, {scale: "exactfit"});
+</script>	
 </head>
 
 <body>
 
-<object type="application/x-shockwave-flash" data="LEDtest_4800x736.swf" width="4800" height="736">
-	<param name="movie" value="LEDtest_4800x736.swf" />
-	<div>alt</div>
-</object>
-
-</body>
+<div id="flash"></div>
+ 
+ </body>
 </html>
