@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>Summary</h2>
+	<p>
+		marquee
+		<sup><a href="http://msdn.microsoft.com/en-us/library/ms535851">[1]</a></sup>
+		<sup><a href="https://developer.mozilla.org/en-US/docs/HTML/Element/marquee">[2]</a></sup>
+	</p>
+
+<h2>Syntax</h2>
+	<textarea cols="" rows="" name="code" class="html">
+	<marquee behavior="scroll" direction="left" loop="-1" scrollamount="6" scrolldelay="85">Content...</marquee>
+
+	<marquee behavior="slide" direction="right">Content...</marquee>
+
+	<marquee behavior="alternate" direction="up">Content...</marquee>
+
+	<marquee direction="down" scrolldelay="6" truespeed="1">Content...</marquee>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="css">
+	<style type="text/css">
+	#box {
+	border: 2px solid red;
+	height: 4em;
+	overflow: hidden;
+	position: relative;
+	width: 450px;
+	}
+	</style>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="html">
+	<div id="box">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<ol>
+			<li></li>
+		</ol>
+	</div>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	function marquee() {
+		var
+		box = document.getElementById("box"),
+		ul = box.getElementsByTagName("ul")[0],
+		ol = box.getElementsByTagName("ol")[0];
+		ol.innerHTML = ul.innerHTML;
+		if (ol.offsetTop - box.scrollTop <= 0) {
+			box.scrollTop -= ul.offsetHeight;
+		} else {
+			box.scrollTop++;
+		}
+	}
+
+	window.setInterval(marquee, 10);
+	</script>
+	</textarea>
+
+<h2>Example</h2>
+	<marquee behavior="scroll" direction="left" loop="-1" scrollamount="6" scrolldelay="85">Content...</marquee>
+
+	<marquee behavior="slide" direction="right">Content...</marquee>
+
+	<marquee behavior="alternate" direction="up">Content...</marquee>
+
+	<marquee direction="down" scrolldelay="6" truespeed="1">Content...</marquee>
+
+	<style type="text/css">
+	#box {
+	border: 2px solid red;
+	height: 4em;
+	overflow: hidden;
+	position: relative;
+	width: 450px;
+	}
+	</style>
+
+	<div id="box">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<ol>
+			<li></li>
+		</ol>
+	</div>
+
+	<script type="text/javascript">
+	function marquee() {
+		var
+		box = document.getElementById("box"),
+		ul = box.getElementsByTagName("ul")[0],
+		ol = box.getElementsByTagName("ol")[0];
+		ol.innerHTML = ul.innerHTML;
+		if (ol.offsetTop - box.scrollTop <= 0) {
+			box.scrollTop -= ul.offsetHeight;
+		} else {
+			box.scrollTop++;
+		}
+	}
+
+	window.setInterval(marquee, 10);
+	</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

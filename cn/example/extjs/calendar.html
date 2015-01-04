@@ -1,0 +1,87 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="js/extjs/3.4.1.1/resources/css/ext-all.css" />
+<script type="text/javascript" src="js/extjs/3.4.1.1/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/ext-all.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/src/locale/ext-lang-zh_CN.js"></script>
+
+<!-- Calendar-specific includes -->
+<link rel="stylesheet" type="text/css" href="js/extjs/3.4.1.1/examples/calendar/resources/css/calendar.css" />
+
+<!--
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/Ext.calendar.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/templates/DayHeaderTemplate.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/templates/DayBodyTemplate.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/templates/DayViewTemplate.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/templates/BoxLayoutTemplate.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/templates/MonthViewTemplate.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/dd/CalendarScrollManager.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/dd/StatusProxy.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/dd/CalendarDD.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/dd/DayViewDD.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/EventRecord.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/views/MonthDayDetailView.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/widgets/CalendarPicker.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/WeekEventRenderer.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/views/CalendarView.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/views/MonthView.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/views/DayHeaderView.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/views/DayBodyView.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/views/DayView.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/views/WeekView.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/widgets/DateRangeField.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/widgets/ReminderField.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/EventEditForm.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/EventEditWindow.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/src/CalendarPanel.js"></script>
+-->
+
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/calendar-all-debug.js"></script>
+
+<!-- App -->
+<link rel="stylesheet" type="text/css" href="js/extjs/3.4.1.1/examples/calendar/resources/css/examples.css" />
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/app/calendar-list.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/app/event-list.js"></script>
+<script type="text/javascript" src="js/extjs/3.4.1.1/examples/calendar/app/test-app.js"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="css/admin.css" />-->
+<!--[if IE]><![if !IE]><![endif]-->
+<link rel="stylesheet" type="text/css" href="css/ie-extjs.css" />
+<!--[if IE]><![endif]><![endif]-->
+
+<script type="text/javascript" src="js/util.extjs-1.1.js"></script>
+<script type="text/javascript" src="js/admin.js"></script>
+
+<link rel="stylesheet" type="text/css" href="calendar.css" />
+<script type="text/javascript" src="calendar.js"></script>
+</head>
+
+<body>
+
+<div style="display: none;">
+	<div id="app-header-content">
+		<div id="app-logo">
+			<div class="logo-top">&nbsp;</div>
+			<div id="logo-body">&nbsp;</div>
+			<div class="logo-bottom">&nbsp;</div>
+		</div>
+		<h1>Ext JS Calendar</h1>
+		<span id="app-msg" class="x-hidden"></span>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var updateLogoDt = function() {
+		document.getElementById("logo-body").innerHTML = new Date().getDate();
+	};
+	updateLogoDt();
+	setInterval(updateLogoDt, 1000);
+</script>
+
+</body>
+</html>

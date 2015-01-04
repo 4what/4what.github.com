@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>Summary</h2>
+	<p>
+		OOP
+	</p>
+
+<h2>Syntax</h2>
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	// log
+	function log(data) {
+		var p = document.createElement("p");
+		p.innerHTML = data;
+		document.body.appendChild(p);
+	}
+
+	(function() {
+
+		// object
+		var o =
+			new Object()
+			//new Array("x", "y")
+			//new Boolean(true)
+			//new Date()
+			//new Function("arg", "")
+			//new Number(0)
+			//new RegExp("", "")
+			//new String("qwerty")
+		;
+		log("o: " + o);
+
+		o.prop = "value";
+		log("o.prop: " + o.prop);
+
+		// prototype
+		var Human = function() {
+			log("new Human");
+		};
+
+		Human.id = "id";
+		log("Human.id: " + Human.id); // "id"
+
+		Human.prototype.age = 0;
+		log("Human.age: " + Human.age); // "undefined"
+
+		var adam = new Human(); // "new Human"
+		log("adam.id: " + adam.id); // "undefined"
+		log("adam.age: " + adam.age); // "0"
+
+		adam.age = 100;
+		log("adam.age: " + adam.age); // "100"
+
+		delete adam.age;
+		log("adam.age: " + adam.age); // "0"
+
+		// inheritance
+		var Woman = function(gender) {
+			log("new Woman");
+			// constructor
+			this.gender = gender;
+		};
+		Woman.prototype = new Human(); // "new Human"
+
+		var eve = new Woman("female"); // "new Woman"
+		log("eve.age: " + eve.age); // "0"
+		log("eve.gender: " + eve.gender); // "female"
+
+	})();
+	</script>
+	</textarea>
+
+<h2>Example</h2>
+	<script type="text/javascript">
+	// log
+	function log(data) {
+		var p = document.createElement("p");
+		p.innerHTML = data;
+		document.body.appendChild(p);
+	}
+
+	(function() {
+
+		// object
+		var o =
+			new Object()
+			//new Array("x", "y")
+			//new Boolean(true)
+			//new Date()
+			//new Function("arg", "")
+			//new Number(0)
+			//new RegExp("", "")
+			//new String("qwerty")
+		;
+		log("o: " + o);
+
+		o.prop = "value";
+		log("o.prop: " + o.prop);
+
+		// prototype
+		var Human = function() {
+			log("new Human");
+		};
+
+		Human.id = "id";
+		log("Human.id: " + Human.id); // "id"
+
+		Human.prototype.age = 0;
+		log("Human.age: " + Human.age); // "undefined"
+
+		var adam = new Human(); // "new Human"
+		log("adam.id: " + adam.id); // "undefined"
+		log("adam.age: " + adam.age); // "0"
+
+		adam.age = 100;
+		log("adam.age: " + adam.age); // "100"
+
+		delete adam.age;
+		log("adam.age: " + adam.age); // "0"
+
+		// inheritance
+		var Woman = function(gender) {
+			log("new Woman");
+			// constructor
+			this.gender = gender;
+		};
+		Woman.prototype = new Human(); // "new Human"
+
+		var eve = new Woman("female"); // "new Woman"
+		log("eve.age: " + eve.age); // "0"
+		log("eve.gender: " + eve.gender); // "female"
+
+	})();
+	</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

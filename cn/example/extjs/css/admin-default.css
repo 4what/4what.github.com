@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+/**
+ * [Typography]
+ *
+ * background-color	{@value}
+ * border-color		{@value}
+ * color			{@value}
+ * font-family		{@value}
+ * font-size		{@value}
+ */
+
+/* Document */
+body {
+color: #333;
+font-family: Arial;
+font-size: 12px;
+line-height: 1.5em;
+/*
+word-break: break-all;
+word-wrap: break-word;
+*/
+}
+
+/* Hypertext */
+a:link {
+color: #333;
+text-decoration: none;
+}
+a:visited {
+color: #333;
+text-decoration: none;
+}
+a:hover {
+color: #333;
+text-decoration: underline;
+}
+a:active {
+}
+
+/* Form */
+input, select, textarea {
+font-family: Arial;
+}
+
+
+/*------------------------------------*/
+* {
+font-family: Arial !important;
+}
+
+
+/* <a href="" target="_blank" class="external" title="浏览"></a> */
+a.external {
+background: url("../images/external-link-ltr-icon.png") no-repeat right center;
+padding: 0 13px 0 0;
+}
+
+
+input.displayfield {
+background: none;
+border: none;
+}
+
+
+/* icon */
+.icon-16 {
+height: 16px !important;
+width: 16px !important;
+}
+
+.icon-hide {
+display: none !important;
+}
+
+.icon-text {
+background-repeat: no-repeat !important;
+padding: 0 0 0 18px !important;
+}
+
+.icon-accordion {
+background-image: url("../images/icon/accordian.gif") !important;
+}
+.icon-detail {
+background-image: url("../images/icon/details.gif") !important;
+}
+.icon-form {
+background-image: url("../images/icon/form.png") !important;
+}
+.icon-grid {
+background-image: url("../images/icon/grid.png") !important;
+}
+.icon-preview {
+background-image: url("../images/icon/preview.png") !important;
+}
+.icon-tab {
+background-image: url("../images/icon/tabs.gif") !important;
+}
+.icon-tab-new {
+background-image: url("../images/icon/new_tab.gif") !important;
+}
+
+.icon-collapse {
+background-image: url("../images/icon/collapse-all.gif") !important;
+}
+.icon-expand {
+background-image: url("../images/icon/expand-all.gif") !important;
+}
+
+.icon-login {
+background-image: url("../images/icon/icon_padlock.png") !important;
+}
+.icon-logout {
+background-image: url("../images/icon/logout.png") !important;
+}
+
+.icon-group {
+background-image: url("../images/icon/group.png") !important;
+}
+
+.icon-user {
+background-image: url("../images/icon/user.png") !important;
+}
+.icon-user-add {
+background-image: url("../images/icon/user_add.png") !important;
+}
+.icon-user-del {
+background-image: url("../images/icon/user_delete.png") !important;
+}
+.icon-user-edit {
+background-image: url("../images/icon/user_edit.png") !important;
+}
+.icon-user-msg {
+background-image: url("../images/icon/user_comment.png") !important;
+}
+
+.icon-add {
+background-image: url("../images/icon/add.png") !important;
+}
+.icon-del {
+background-image: url("../images/icon/delete.gif") !important;
+}
+.icon-edit {
+background-image: url("../images/icon/cog_edit.png") !important;
+}
+.icon-save {
+background-image: url("../images/icon/disk.png") !important;
+}
+
+.icon-down {
+background-image: url("../images/icon/arrow-down.gif") !important;
+}
+.icon-up {
+background-image: url("../images/icon/arrow-up.gif") !important;
+}
+
+.icon-error {
+background-image: url("../images/icon/exclamation.gif") !important;
+}
+.icon-valid {
+background-image: url("../images/icon/accept.png") !important;
+}
+
+.icon-info {
+background-image: url("../images/icon/information.png") !important;
+}
+.icon-warning {
+background-image: url("../images/icon/error.png") !important;
+}
+
+.icon-msg {
+background-image: url("../images/icon/messages.png") !important;
+}
+.icon-msg-add {
+background-image: url("../images/icon/message.png") !important;
+}
+.icon-msg-edit {
+background-image: url("../images/icon/message_edit.png") !important;
+}
+.icon-msg-send {
+background-image: url("../images/icon/go-to-post.gif") !important;
+}
+
+.icon-task {
+background-image: url("../images/icon/icon-active.gif") !important;
+}
+.icon-task-edit {
+background-image: url("../images/icon/edit.gif") !important;
+}
+
+.icon-folder-album {
+background-image: url("../images/icon/album.gif") !important;
+}
+.icon-folder-msg {
+background-image: url("../images/icon/forum.gif") !important;
+}
+.icon-folder-setting {
+background-image: url("../images/icon/folder_wrench.png") !important;
+}
+
+.icon-rss {
+background-image: url("../images/icon/rss.gif") !important;
+}
+.icon-rss-add {
+background-image: url("../images/icon/rss_add.gif") !important;
+}
+.icon-rss-del {
+background-image: url("../images/icon/rss_delete.gif") !important;
+}
+.icon-rss-load {
+background-image: url("../images/icon/rss_load.gif") !important;
+}
+
+.icon-article {
+background-image: url("../images/icon/article.gif") !important;
+}
+.icon-attach {
+background-image: url("../images/icon/page_attach.png") !important;
+}
+.icon-calendar {
+background-image: url("../images/icon/calendar.gif") !important;
+}
+.icon-cfg {
+background-image: url("../images/icon/cog.png") !important;
+}
+.icon-chart {
+background-image: url("../images/icon/chart.gif") !important;
+}
+.icon-chk {
+background-image: url("../images/icon/saved.png") !important;
+}
+.icon-component {
+background-image: url("../images/icon/cmp.gif") !important;
+}
+.icon-connect {
+background-image: url("../images/icon/connect.png") !important;
+}
+.icon-ctrl {
+background-image: url("../images/icon/gears.png") !important;
+}
+.icon-doc {
+background-image: url("../images/icon/docs.gif") !important;
+}
+.icon-fav {
+background-image: url("../images/icon/fav.gif") !important;
+}
+.icon-find {
+background-image: url("../images/icon/find.png") !important;
+}
+.icon-image {
+background-image: url("../images/icon/image_add.png") !important;
+}
+.icon-mail-send {
+background-image: url("../images/icon/email_go.png") !important;
+}
+.icon-member {
+background-image: url("../images/icon/member.png") !important;
+}
+.icon-menu {
+background-image: url("../images/icon/list-items.gif") !important;
+}
+.icon-package {
+background-image: url("../images/icon/pkg.gif") !important;
+}
+.icon-pdf {
+background-image: url("../images/icon/pdf.gif") !important;
+}
+.icon-print {
+background-image: url("../images/icon/printer.png") !important;
+}
+.icon-refresh {
+background-image: url("../images/icon/refresh.gif") !important;
+}
+.icon-submit {
+background-image: url("../images/icon/save.gif") !important;
+}
+
+
+/* dataview */
+.dataview {
+background: #fff;
+}
+.dataview ul {
+background: #fff;
+overflow: auto;
+text-align: center;
+}
+.dataview ul li {
+border: 1px solid #fff;
+border-radius: 5px;
+cursor: pointer;
+float: left;
+margin: 5px;
+overflow: hidden;
+padding: 5px 10px;
+}
+.dataview ul li.x-view-over {
+background: #efefef url("../js/extjs/3.4.1.1/resources/images/default/grid/row-over.gif") repeat-x left top;
+border: 1px solid #ddd;
+}
+.dataview ul li.x-view-selected {
+background: #eff5fb url("../js/extjs/3.4.1.1/examples/view/images/selected.gif") no-repeat right bottom;
+border: 1px solid #99bbe8;
+}
+.dataview ul li em {
+color: #999;
+}
+.dataview ul li span {
+display: block;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - Java</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>Summary</h2>
+	<p>
+		TimerTask
+	</p>
+
+<h2>Syntax</h2>
+	<h3>Task.java</h3>
+	<textarea cols="" rows="" name="code" class="java">
+	package demo.timertask;
+
+	import java.util.Date;
+
+	public class Task extends java.util.TimerTask {
+		@Override
+		public void run() {
+			System.out.println("<Task>: " + new Date());
+		}
+	}
+	</textarea>
+
+	<h3>ContextListener.java:</h3>
+	<textarea cols="" rows="" name="code" class="java">
+	package demo.timertask;
+
+	import javax.servlet.ServletContextEvent;
+	import javax.servlet.ServletContextListener;
+
+	import java.util.Timer;
+
+	public final class ContextListener implements ServletContextListener {
+		Timer timer = new Timer();
+
+		@Override
+		public void contextInitialized(ServletContextEvent sce) {
+			timer.schedule(new Task(), 0, 1000 * 60 * 60 * 24);
+			System.out.println("<TimerTask>: Start");
+		}
+
+		@Override
+		public void contextDestroyed(ServletContextEvent sce) {
+			timer.cancel();
+			System.out.println("<TimerTask>: End");
+		}
+	}
+	</textarea>
+
+	<h3>web.xml:</h3>
+	<textarea cols="" rows="" name="code" class="xml">
+	<listener>
+		<listener-class>demo.timertask.ContextListener</listener-class>
+	</listener>
+	</textarea>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

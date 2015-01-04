@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/**
+ * [Typography]
+ *
+ * background-color	{@value}
+ * border-color		{@value}
+ * color			{@value}
+ * font-family		{@value}
+ * font-size		{@value}
+ */
+
+/* Document */
+body {
+background: #f4f4f4;
+color: #575757;
+font-family: Arial, "微软雅黑";
+font-size: 14px;
+margin: 20px 0 0 0
+/*
+word-break: break-all;
+word-wrap: break-word;
+*/
+}
+
+/* Hypertext */
+a:link {
+color: #1370ab;
+}
+a:visited {
+color: #1370ab;
+}
+a:hover {
+color: #074ae5;
+position: relative;
+top: 1px;
+}
+
+/* Form */
+input, select, textarea {
+font-family: Arial, "微软雅黑";
+}
+
+
+/*--------------------------------------
+  MAIN
+--------------------------------------*/
+#main {
+width: 750px;
+}
+
+
+/*--------------------------------------
+  CONTAINER
+--------------------------------------*/
+#container {
+float: right;
+width: 670px;
+}
+
+
+/*--------------------------------------
+  HEADER
+--------------------------------------*/
+#header {
+border-bottom: 1px solid #b6bcc6;
+}
+#header p {
+color: #787878;
+font-size: 11px;
+margin: 5px 0 0 0;
+text-align: right;
+}
+
+	/*------------------------------------*/
+	h1 {
+	color: #4465a2;
+	font-size: 18px;
+	font-weight: normal;
+	}
+
+
+/*--------------------------------------
+  CONTENT
+--------------------------------------*/
+#content {
+margin: 0 auto;
+}
+
+	/*------------------------------------*/
+	ul {
+	list-style: disc inside;
+	margin: 15px 0 0 0;
+	}
+	ul li {
+	line-height: 2em;
+	margin: 0 0 0 20px;
+	}
+
+
+/*--------------------------------------
+  FOOTER
+--------------------------------------*/
+#footer {
+border-top: 1px solid #b6bcc6;
+font-size: 11px;
+margin: 15px auto 0 auto;
+padding: 15px 0 0 0;
+text-align: right;
+}

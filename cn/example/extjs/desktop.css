@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#iframe-win-shortcut img {
+background-image: url(js/extjs/3.4.1.1/examples/desktop/images/im48x48.png);
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="js/extjs/3.4.1.1/examples/desktop/images/im48x48.png",sizingMethod="scale");
+height: 48px;
+width: 48px;
+}
+#calendar-win-shortcut img {
+background-image: url(js/extjs/3.4.1.1/examples/desktop/images/grid48x48.png);
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="js/extjs/3.4.1.1/examples/desktop/images/grid48x48.png",sizingMethod="scale");
+height: 48px;
+width: 48px;
+}

@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+@import url("reset.css");
+
+/**
+ * [Typography]
+ *
+ * background-color	{@value}
+ * border-color		{@value}
+ * color			{@value}
+ * font-family		{@value}
+ * font-size		{@value}
+ */
+
+/* Document */
+body {
+color: #333;
+font-family: "微软雅黑", Arial;
+/*
+font-size: 12px;
+word-break: break-all;
+word-wrap: break-word;
+*/
+}
+
+/* Hypertext */
+a:link {
+color: #333;
+text-decoration: underline;
+}
+a:visited {
+color: #333;
+text-decoration: underline;
+}
+a:hover {
+color: #333;
+text-decoration: underline;
+}
+a:active {
+}
+
+/* Form */
+input, select, textarea {
+font-family: Arial;
+}
+
+
+/**/
+.ui-page {
+background: url("../images/bg.jpg") no-repeat center 0;
+color: #666;
+font-weight: bold;
+text-align: center;
+}
+.ui-content {
+display: table; /* for IE8, Std */
+height: 960px;
+margin: 0 auto;
+overflow: hidden;
+padding: 0;
+position: relative;
+width: 640px;
+}
+
+/**/
+#start {
+display: table-cell; /* for IE8, Std */
+* position: absolute; /* for IE7- */
+* top: 50%; /* for IE7- */
+vertical-align: middle; /* for IE8, Std */
+}
+#start div {
+* position: relative; /* for IE7- */
+* top: -50%; /* for IE7- */
+}
+#start span {
+background: url("../images/sprite.png") no-repeat 0 -2500px;
+cursor: pointer;
+display: block;
+height: 325px;
+margin: 0 auto;
+width: 322px;
+}
+
+/**/
+#timer {
+margin-top: 10px;
+text-align: left;
+}
+#timer div {
+background: url("../images/sprite.png") no-repeat 0 -200px;
+font-size: 28px;
+height: 69px;
+line-height: 69px;
+margin-left: 15px;
+text-align: center;
+width: 224px;
+}
+#timer span {
+color: #0c4da2;
+font-size: 46px;
+}
+
+#game {
+overflow: hidden;
+padding-top: 50px;
+position: relative;
+}
+#game ul li {
+float: left;
+position: relative;
+width: 33.3%;
+}
+#game ul span {
+background: url("../images/transparent.png") repeat 0 0; /* for IE8 */
+/*border: 1px solid red;*/
+border-radius: 100%;
+height: 50px;
+left: 120px;
+position: absolute;
+top: 15px;
+width: 50px;
+}
+
+/**/
+#rule {
+color: #0c4da2;
+font-size: 28px;
+margin-top: 50px;
+}
+
+#tip {
+color: #0c4da2;
+font-size: 26px;
+margin-top: 150px;
+}
+#tip span {
+border: 4px solid #0c4da2;
+border-radius: 10px;
+padding: 15px 5px 15px 65px;
+position: relative;
+text-indent: 2em;
+}
+#tip span em {
+background: url("../images/sprite.png") no-repeat 0 -300px;
+height: 47px;
+left: 10px;
+position: absolute;
+top: 10px;
+width: 48px;
+}
+
+/**/
+.overlay {
+background: #000;
+height: 100%;
+left: 0;
+opacity: 0.4;
+position: absolute;
+top: 0;
+width: 100%;
+}
+.wrapper {
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;
+}
+
+#page-game .wrapper,
+#page-game .overlay {
+display: none;
+overflow-x: scroll;
+overflow-y: hidden;
+}
+
+#zoom {
+margin: 100px auto 0 auto;
+position: relative;
+}
+#zoom span {
+background: url("../images/transparent.png") repeat 0 0; /* for IE8 */
+/*border: 1px solid red;*/
+border-radius: 100%;
+height: 70px;
+position: absolute;
+width: 70px;
+}
+
+/**/
+img.magnify {
+display: none;
+left: 50px;
+position: absolute;
+top: -40px;
+}
+
+#complete {
+color: #fff;
+display: none;
+position: absolute;
+top: 170px;
+width: 100%;
+}
+#complete div {
+background: url("../images/sprite.png") no-repeat 0 0;
+cursor: pointer;
+font-size: 30px;
+height: 157px;
+margin: 0 auto;
+padding-top: 15px;
+width: 557px;
+}
+#complete em {
+font-size: 24px;
+}
+
+/**/
+#lottery {
+display: table-cell; /* for IE8, Std */
+* position: absolute; /* for IE7- */
+* top: 50%; /* for IE7- */
+vertical-align: middle; /* for IE8, Std */
+}
+#lottery div {
+* position: relative; /* for IE7- */
+* top: -50%; /* for IE7- */
+}
+#lottery span {
+background: url("../images/sprite.png") no-repeat 0 -400px;
+cursor: pointer;
+display: block;
+height: 432px;
+margin: 150px auto 100px auto;
+width: 332px;
+}
+
+/**/
+#award {
+margin-top: 50px;
+}
+#award span {
+background: url("../images/sprite.png") no-repeat 0 -1200px;
+display: block;
+height: 381px;
+margin: 0 auto;
+width: 266px;
+}
+
+#detail {
+color: #0c4da2;
+font-size: 36px;
+margin-top: 50px;
+}
+#detail p {
+border: 4px solid #0c4da2;
+border-radius: 10px;
+margin: 0 auto;
+padding: 15px;
+width: 15em;
+}
+
+#isp {
+background: #fff;
+height: 100%;
+margin-top: 50px;
+}
+#isp p {
+font-size: 24px;
+padding-top: 30px;
+}
+#isp ul {
+margin: 30px auto 0 auto;
+width: 90%;
+}
+#isp ul li {
+float: left;
+width: 33.3%;
+}
+#isp ul img {
+border: 4px solid #e5e5e5;
+border-radius: 10px;
+cursor: pointer;
+}
+#isp ul img:hover {
+border-color: #0c4da2;
+}
+
+/**/
+#contact {
+background: #fff;
+border: 4px solid #0c4da2;
+border-radius: 10px;
+margin: 200px auto 0 auto;
+opacity: 0.8;
+width: 80%;
+}
+#contact p {
+background: #0c4da2;
+color: #fff;
+font-size: 28px;
+padding: 20px 20px;
+text-align: left;
+}
+#contact .fieldset {
+padding: 0 30px 40px 30px;
+}
+#contact .fieldset div {
+margin-top: 40px;
+}
+
+#submit {
+background: #0c4da2;
+border-bottom: 8px solid #063284;
+border-radius: 10px;
+box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+color: #fff;
+cursor: pointer;
+font-size: 36px;
+margin-top: 100px;
+opacity: 0.8;
+padding: 20px 40px;
+}
+
+/**/
+#page-success .share {
+background: url("../images/sprite.png") no-repeat 0 -1600px;
+height: 113px;
+position: absolute;
+right: 20px;
+top: 10px;
+width: 496px;
+}
+#page-success .share p {
+bottom: 15px;
+color: #0c4da2;
+cursor: pointer;
+font-size: 24px;
+left: 80px;
+position: absolute;
+text-align: center;
+}
+
+#page-success .msg {
+background: #fff;
+border: 4px solid #0c4da2;
+border-radius: 10px;
+margin: 300px auto 0 auto;
+width: 80%;
+}
+#page-success .msg span {
+background: url("../images/sprite.png") no-repeat 0 -1800px;
+display: block;
+height: 125px;
+margin: 50px auto 0 auto;
+width: 135px;
+}
+#page-success .msg p {
+color: #0c4da2;
+font-size: 38px;
+padding: 50px 15px;
+}
+
+/**/
+#page-fail .share {
+background: url("../images/sprite.png") no-repeat 0 -2000px;
+height: 96px;
+position: absolute;
+right: 20px;
+top: 10px;
+width: 389px;
+}
+#page-fail .share p {
+bottom: 15px;
+color: #fff;
+cursor: pointer;
+font-size: 28px;
+left: 60px;
+position: absolute;
+text-align: center;
+}
+
+#page-fail .msg {
+background: url("../images/sprite.png") no-repeat 0 -2300px;
+border-radius: 10px;
+margin: 300px auto 0 auto;
+position: relative;
+width: 80%;
+}
+#page-fail .msg em {
+background: url("../images/sprite.png") no-repeat 0 -2100px;
+height: 142px;
+left: 20px;
+position: absolute;
+top: -30px;
+width: 132px;
+}
+#page-fail .msg div {
+color: #fff;
+padding: 20px 20px;
+}
+#page-fail .msg div span {
+font-size: 46px;
+}
+#page-fail .msg p {
+background: #fff;
+border: 4px solid #0c4da2;
+font-size: 26px;
+line-height: 1.5em;
+padding: 80px 0;
+}
+#page-fail .msg p span {
+font-size: 36px;
+}
+
+/**/
+#page-offline .msg {
+background: #fff;
+border: 4px solid #0c4da2;
+border-radius: 10px;
+color: #0c4da2;
+font-size: 38px;
+margin: 300px auto 0 auto;
+padding: 50px 0;
+width: 80%;
+}

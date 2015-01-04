@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<meta name="viewport" content="width=640" />
+
+<script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile-1.4.3.min.css" />
+<script type="text/javascript" src="js/jquery/mobile/jquery.mobile-1.4.3.min.js"></script>
+
+<script type="text/javascript" src="js/jquery/plugin/jquery.countdown.min.js"></script>
+
+<!--<script type="text/javascript" src="js/flipsnap.min.js"></script>-->
+
+<script type="text/javascript" src="js/jquery/plugin/jquery.form.js"></script>
+
+<script type="text/javascript" src="js/jquery/plugin/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery/plugin/validation/messages_cn.js"></script>
+
+<script type="text/javascript" src="js/validate.js"></script>
+<script type="text/javascript" src="js/additional-methods.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript">
+$(window).load(function() {
+
+	function goto(to) {
+		$(":mobile-pagecontainer").pagecontainer("change", to, {
+			transition: new Date().getMilliseconds() % 2 ? "flip" : "slide"
+		});
+	}
+
+	if (window.location.hash) {
+		goto("#page-home");
+	}
+
+	var
+	game = $("#game"),
+	start = $("#start span");
+
+/*
+	if ($("body").width() < 640) {
+		game.width(640);
+
+		Flipsnap(game, {
+			distance: 190
+		});
+	}
+*/
+
+	start.click(function() {
+		var
+		countup = $("#countup"),
+
+		overlay = $("#page-game").find(".overlay, .wrapper"),
+		zoom = $("#zoom"),
+
+		items = game.find("img"),
+		points = game.add(zoom).find("span");
+
+		goto("#page-game");
+
+		countup.countdown({
+			since: new Date(),
+			layout: '{mnn}′{snn}″'
+		});
+
+		items.click(function(e) {
+			overlay.fadeIn();
+		});
+
+		overlay.click(function(e) {
+			if (!$(e.target).is(zoom.find("img, span"))) {
+				overlay.fadeOut();
+			}
+		});
+
+		function found() {
+			window.clearTimeout(timeout_found);
+
+			var complete = $("#complete");
+
+			points.hide();
+
+			overlay.hide();
+			overlay.unbind("click");
+
+			items.unbind("click");
+
+			countup.countdown("pause");
+
+			$("#rule span, #tip").fadeOut(function() {
+				game.find("img.magnify").add(complete).fadeIn();
+			});
+
+			function lucky() {
+				window.clearTimeout(timeout_lucky);
+
+				goto("#page-lottery");
+
+				$("#lottery span").click(function() {
+/*
+					$.ajax({
+						type: "POST",
+						url: "", // TODO
+						//data: {},
+						dataType: "json",
+						beforeSend: function() {
+							$.mobile.loading("show");
+						},
+						complete: function() {
+							$.mobile.loading("hide");
+						},
+						success: function(data) {
+*/
+							// TODO
+							if (new Date().getMilliseconds() % 2) {
+								goto("#page-result");
+
+								var
+								contact = $("#contact"),
+								isp = ["移动", "联通", "电信"];
+
+								contact.resetForm().validate({
+									rules: {
+										"name": {
+											required: true
+										},
+										"phone": {
+											required: true,
+											isPhone: true
+										}
+									},
+									submitHandler: function(form) {
+/*
+										// TODO
+										$(form).ajaxSubmit({
+											type: "POST",
+											url: "", // TODO
+											//data: {},
+											dataType: "json",
+											beforeSend: function() {
+												$.mobile.loading("show");
+											},
+											complete: function() {
+												$.mobile.loading("hide");
+											},
+											success: function(data) {
+*/
+												goto("#page-success");
+/*
+											},
+											error: function(xhr) {
+												alert("错误：" + xhr.status + " " + xhr.statusText);
+											}
+										});
+*/
+									}
+								});
+
+								$("#isp ul img").each(function(index) {
+									$(this).click(function() {
+										goto("#page-contact");
+
+										contact.find("input[name='isp']").val(isp[index]);
+
+										$("#submit span").click(function() {
+											contact.submit();
+										});
+									});
+								});
+							} else {
+								goto("#page-fail");
+
+								//var times = countup.countdown("getTimes");
+								$("#score").text(
+									//times[5] + "′" + times[6] + "″"
+									countup.text()
+								);
+							}
+/*
+						},
+						error: function(xhr) {
+							alert("错误：" + xhr.status + " " + xhr.statusText);
+						}
+					});
+*/
+				});
+			}
+
+			complete.find("div").click(lucky);
+
+			var timeout_lucky = window.setTimeout(lucky, 1000 * 5);
+		}
+
+		points.click(found);
+
+		var timeout_found = window.setTimeout(function() {
+			$("#bonus").text("快来抢红包！");
+
+			found();
+		}, 1000 * 90);
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+<div id="page-home" data-role="page">
+	<div class="ui-content" role="main">
+		<div id="start">
+			<div><span></span></div>
+		</div>
+	</div>
+</div>
+
+<div id="page-game" data-role="page">
+	<div class="ui-content" role="main">
+		<div id="timer">
+			<div>
+				时间:<span id="countup">00′00″</span>
+			</div>
+		</div>
+		<div id="rule">
+			&nbsp;
+			<span>找到三张图片的任意一处不同，就算挑战成功！</span>
+		</div>
+		<div id="game">
+			<ul>
+				<li>
+					<img src="images/item-1.png" alt="" />
+					<span></span>
+					<img src="images/magnify-1.png" alt="" class="magnify" />
+				</li>
+				<li>
+					<img src="images/item-2.png" alt="" />
+					<span></span>
+					<img src="images/magnify-2.png" alt="" class="magnify" />
+				</li>
+				<li>
+					<img src="images/item-3.png" alt="" />
+					<span></span>
+					<img src="images/magnify-3.png" alt="" class="magnify" />
+				</li>
+			</ul>
+			<div id="complete">
+				<div>
+					秘密就在信号条上
+					<br />
+					三星4G手机支持所有4G网络制式！
+					<br />
+					<em id="bonus">恭喜你快来抢红包吧！</em>
+				</div>
+			</div>
+		</div>
+		<div id="tip">
+			<span><em></em>点击图片缩放看得更清楚哦！</span>
+		</div>
+		<div class="overlay"></div>
+		<div class="wrapper">
+			<div id="zoom">
+				<img src="images/items.jpg" alt="" />
+				<span style="left: 210px; top: 60px;"></span>
+				<span style="left: 600px; top: 60px;"></span>
+				<span style="left: 960px; top: 60px;"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="page-lottery" data-role="page">
+	<div class="ui-content" role="main">
+		<div id="lottery">
+			<div><span></span></div>
+		</div>
+	</div>
+</div>
+
+<div id="page-result" data-role="page">
+	<div class="ui-content" role="main">
+		<div id="award">
+			<span></span>
+		</div>
+		<div id="detail">
+			<p>
+				恭喜！你以超强眼力和无敌幸运
+				<br />
+				赢得三星赠送的流量红包
+			</p>
+		</div>
+		<div id="isp">
+			<p>点击您手机的运营商领取红包并填写获奖信息</p>
+			<ul>
+				<li><img src="images/cm.png" alt="" /></li>
+				<li><img src="images/cu.png" alt="" /></li>
+				<li><img src="images/ct.png" alt="" /></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="page-contact" data-role="page">
+	<div class="ui-content" role="main">
+		<form action="" method="post" id="contact">
+			<p>请如实填写以下信息！</p>
+			<div class="fieldset">
+				<input type="hidden" name="isp" value="" />
+
+				<input type="text" name="name" value="" placeholder="姓名" />
+				<input type="text" name="phone" value="" placeholder="电话" />
+			</div>
+		</form>
+		<div id="submit">
+			<span>确认无误，提交！</span>
+		</div>
+	</div>
+</div>
+
+<div id="page-success" data-role="page">
+	<div class="ui-content" role="main">
+		<div class="overlay"></div>
+		<div class="wrapper">
+			<div class="share">
+				<p>
+					分享幸运
+					<br />
+					呼朋唤友一起来玩儿吧
+				</p>
+			</div>
+			<div class="msg">
+				<span></span>
+				<p>
+					我们会尽快与您取得联系，请耐心等待！
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="page-fail" data-role="page">
+	<div class="ui-content" role="main">
+		<div class="overlay"></div>
+		<div class="wrapper">
+			<div class="share">
+				<p>
+					分享到朋友圈
+				</p>
+			</div>
+			<div class="msg">
+				<em></em>
+				<div>
+					本次时间：
+					<br />
+					<span id="score">00′00″</span>
+				</div>
+				<p>
+					<span>对不起~</span>
+					<br />
+					看来幸运女神暂时还没有降临到你身上哦
+					<br />
+					让你的朋友们来试试吧！
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,3204 @@
+{
+	"rows": [
+		{
+			"id": 1,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 17,
+			"year": 2010
+		},
+		{
+			"id": 2,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 43,
+			"year": 2010
+		},
+		{
+			"id": 3,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 22,
+			"year": 2009
+		},
+		{
+			"id": 4,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 37,
+			"year": 2009
+		},
+		{
+			"id": 5,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 25,
+			"year": 2009
+		},
+		{
+			"id": 6,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 34,
+			"year": 2010
+		},
+		{
+			"id": 7,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 26,
+			"year": 2009
+		},
+		{
+			"id": 8,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 7,
+			"year": 2009
+		},
+		{
+			"id": 9,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 38,
+			"year": 2010
+		},
+		{
+			"id": 10,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#2",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 11,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 26,
+			"year": 2010
+		},
+		{
+			"id": 12,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 9,
+			"year": 2009
+		},
+		{
+			"id": 13,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#2",
+			"value": 21,
+			"year": 2010
+		},
+		{
+			"id": 14,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 11,
+			"year": 2010
+		},
+		{
+			"id": 15,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 37,
+			"year": 2010
+		},
+		{
+			"id": 16,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#1",
+			"value": 7,
+			"year": 2009
+		},
+		{
+			"id": 17,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 26,
+			"year": 2010
+		},
+		{
+			"id": 18,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 0,
+			"year": 2010
+		},
+		{
+			"id": 19,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 33,
+			"year": 2009
+		},
+		{
+			"id": 20,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 22,
+			"year": 2009
+		},
+		{
+			"id": 21,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 26,
+			"year": 2010
+		},
+		{
+			"id": 22,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 12,
+			"year": 2009
+		},
+		{
+			"id": 23,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 40,
+			"year": 2010
+		},
+		{
+			"id": 24,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 46,
+			"year": 2009
+		},
+		{
+			"id": 25,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 5,
+			"year": 2010
+		},
+		{
+			"id": 26,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 17,
+			"year": 2009
+		},
+		{
+			"id": 27,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 34,
+			"year": 2009
+		},
+		{
+			"id": 28,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 23,
+			"year": 2009
+		},
+		{
+			"id": 29,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 29,
+			"year": 2010
+		},
+		{
+			"id": 30,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#2",
+			"value": 10,
+			"year": 2009
+		},
+		{
+			"id": 31,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 32,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 30,
+			"year": 2010
+		},
+		{
+			"id": 33,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 14,
+			"year": 2009
+		},
+		{
+			"id": 34,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 31,
+			"year": 2010
+		},
+		{
+			"id": 35,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 15,
+			"year": 2009
+		},
+		{
+			"id": 36,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 49,
+			"year": 2009
+		},
+		{
+			"id": 37,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 45,
+			"year": 2009
+		},
+		{
+			"id": 38,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 5,
+			"year": 2010
+		},
+		{
+			"id": 39,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 47,
+			"year": 2010
+		},
+		{
+			"id": 40,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 18,
+			"year": 2010
+		},
+		{
+			"id": 41,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 14,
+			"year": 2010
+		},
+		{
+			"id": 42,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 43,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 12,
+			"year": 2009
+		},
+		{
+			"id": 44,
+			"category": "Google",
+			"city": "HK",
+			"product": "#2",
+			"value": 39,
+			"year": 2010
+		},
+		{
+			"id": 45,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 7,
+			"year": 2009
+		},
+		{
+			"id": 46,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 38,
+			"year": 2010
+		},
+		{
+			"id": 47,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 21,
+			"year": 2010
+		},
+		{
+			"id": 48,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 49,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 21,
+			"year": 2010
+		},
+		{
+			"id": 50,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 30,
+			"year": 2009
+		},
+		{
+			"id": 51,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#1",
+			"value": 25,
+			"year": 2009
+		},
+		{
+			"id": 52,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 32,
+			"year": 2010
+		},
+		{
+			"id": 53,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 8,
+			"year": 2009
+		},
+		{
+			"id": 54,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 33,
+			"year": 2009
+		},
+		{
+			"id": 55,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 56,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#1",
+			"value": 14,
+			"year": 2009
+		},
+		{
+			"id": 57,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 39,
+			"year": 2010
+		},
+		{
+			"id": 58,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 19,
+			"year": 2010
+		},
+		{
+			"id": 59,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 60,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 18,
+			"year": 2010
+		},
+		{
+			"id": 61,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 25,
+			"year": 2009
+		},
+		{
+			"id": 62,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#2",
+			"value": 1,
+			"year": 2009
+		},
+		{
+			"id": 63,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 18,
+			"year": 2009
+		},
+		{
+			"id": 64,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#1",
+			"value": 15,
+			"year": 2010
+		},
+		{
+			"id": 65,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 31,
+			"year": 2009
+		},
+		{
+			"id": 66,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 34,
+			"year": 2010
+		},
+		{
+			"id": 67,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 14,
+			"year": 2009
+		},
+		{
+			"id": 68,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 44,
+			"year": 2010
+		},
+		{
+			"id": 69,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 9,
+			"year": 2010
+		},
+		{
+			"id": 70,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 71,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 11,
+			"year": 2010
+		},
+		{
+			"id": 72,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 44,
+			"year": 2009
+		},
+		{
+			"id": 73,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 15,
+			"year": 2010
+		},
+		{
+			"id": 74,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#1",
+			"value": 43,
+			"year": 2010
+		},
+		{
+			"id": 75,
+			"category": "Google",
+			"city": "HK",
+			"product": "#2",
+			"value": 35,
+			"year": 2010
+		},
+		{
+			"id": 76,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 27,
+			"year": 2010
+		},
+		{
+			"id": 77,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#2",
+			"value": 9,
+			"year": 2010
+		},
+		{
+			"id": 78,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 21,
+			"year": 2010
+		},
+		{
+			"id": 79,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 44,
+			"year": 2010
+		},
+		{
+			"id": 80,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 31,
+			"year": 2009
+		},
+		{
+			"id": 81,
+			"category": "Google",
+			"city": "SH",
+			"product": "#1",
+			"value": 49,
+			"year": 2010
+		},
+		{
+			"id": 82,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 45,
+			"year": 2010
+		},
+		{
+			"id": 83,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 42,
+			"year": 2009
+		},
+		{
+			"id": 84,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 29,
+			"year": 2010
+		},
+		{
+			"id": 85,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#1",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 86,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 30,
+			"year": 2010
+		},
+		{
+			"id": 87,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 39,
+			"year": 2010
+		},
+		{
+			"id": 88,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 44,
+			"year": 2010
+		},
+		{
+			"id": 89,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 30,
+			"year": 2010
+		},
+		{
+			"id": 90,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 4,
+			"year": 2010
+		},
+		{
+			"id": 91,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 24,
+			"year": 2010
+		},
+		{
+			"id": 92,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 30,
+			"year": 2010
+		},
+		{
+			"id": 93,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#1",
+			"value": 35,
+			"year": 2010
+		},
+		{
+			"id": 94,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 42,
+			"year": 2010
+		},
+		{
+			"id": 95,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#1",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 96,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 31,
+			"year": 2010
+		},
+		{
+			"id": 97,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 14,
+			"year": 2010
+		},
+		{
+			"id": 98,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 30,
+			"year": 2009
+		},
+		{
+			"id": 99,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 43,
+			"year": 2010
+		},
+		{
+			"id": 100,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 14,
+			"year": 2009
+		},
+		{
+			"id": 101,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 12,
+			"year": 2010
+		},
+		{
+			"id": 102,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 34,
+			"year": 2009
+		},
+		{
+			"id": 103,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 12,
+			"year": 2010
+		},
+		{
+			"id": 104,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 43,
+			"year": 2009
+		},
+		{
+			"id": 105,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 41,
+			"year": 2010
+		},
+		{
+			"id": 106,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 40,
+			"year": 2009
+		},
+		{
+			"id": 107,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 37,
+			"year": 2010
+		},
+		{
+			"id": 108,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 27,
+			"year": 2010
+		},
+		{
+			"id": 109,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 49,
+			"year": 2009
+		},
+		{
+			"id": 110,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 13,
+			"year": 2010
+		},
+		{
+			"id": 111,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 37,
+			"year": 2009
+		},
+		{
+			"id": 112,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 18,
+			"year": 2009
+		},
+		{
+			"id": 113,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#2",
+			"value": 8,
+			"year": 2009
+		},
+		{
+			"id": 114,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 39,
+			"year": 2010
+		},
+		{
+			"id": 115,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 24,
+			"year": 2010
+		},
+		{
+			"id": 116,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 48,
+			"year": 2009
+		},
+		{
+			"id": 117,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 48,
+			"year": 2010
+		},
+		{
+			"id": 118,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 40,
+			"year": 2010
+		},
+		{
+			"id": 119,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 42,
+			"year": 2010
+		},
+		{
+			"id": 120,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 21,
+			"year": 2010
+		},
+		{
+			"id": 121,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 37,
+			"year": 2010
+		},
+		{
+			"id": 122,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 21,
+			"year": 2009
+		},
+		{
+			"id": 123,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#1",
+			"value": 3,
+			"year": 2009
+		},
+		{
+			"id": 124,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 24,
+			"year": 2010
+		},
+		{
+			"id": 125,
+			"category": "Google",
+			"city": "HK",
+			"product": "#2",
+			"value": 42,
+			"year": 2009
+		},
+		{
+			"id": 126,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 36,
+			"year": 2009
+		},
+		{
+			"id": 127,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 17,
+			"year": 2009
+		},
+		{
+			"id": 128,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 28,
+			"year": 2010
+		},
+		{
+			"id": 129,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 10,
+			"year": 2009
+		},
+		{
+			"id": 130,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 27,
+			"year": 2009
+		},
+		{
+			"id": 131,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 48,
+			"year": 2009
+		},
+		{
+			"id": 132,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 17,
+			"year": 2010
+		},
+		{
+			"id": 133,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 0,
+			"year": 2010
+		},
+		{
+			"id": 134,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 21,
+			"year": 2009
+		},
+		{
+			"id": 135,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 40,
+			"year": 2010
+		},
+		{
+			"id": 136,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 3,
+			"year": 2010
+		},
+		{
+			"id": 137,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 26,
+			"year": 2010
+		},
+		{
+			"id": 138,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 139,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 36,
+			"year": 2009
+		},
+		{
+			"id": 140,
+			"category": "Google",
+			"city": "HK",
+			"product": "#2",
+			"value": 3,
+			"year": 2009
+		},
+		{
+			"id": 141,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 22,
+			"year": 2010
+		},
+		{
+			"id": 142,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 12,
+			"year": 2010
+		},
+		{
+			"id": 143,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 144,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 15,
+			"year": 2010
+		},
+		{
+			"id": 145,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 146,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 35,
+			"year": 2010
+		},
+		{
+			"id": 147,
+			"category": "Google",
+			"city": "HK",
+			"product": "#2",
+			"value": 34,
+			"year": 2009
+		},
+		{
+			"id": 148,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 8,
+			"year": 2009
+		},
+		{
+			"id": 149,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 16,
+			"year": 2010
+		},
+		{
+			"id": 150,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 23,
+			"year": 2010
+		},
+		{
+			"id": 151,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 31,
+			"year": 2009
+		},
+		{
+			"id": 152,
+			"category": "Google",
+			"city": "HK",
+			"product": "#2",
+			"value": 13,
+			"year": 2009
+		},
+		{
+			"id": 153,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 37,
+			"year": 2009
+		},
+		{
+			"id": 154,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 28,
+			"year": 2009
+		},
+		{
+			"id": 155,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 4,
+			"year": 2010
+		},
+		{
+			"id": 156,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 5,
+			"year": 2009
+		},
+		{
+			"id": 157,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 40,
+			"year": 2010
+		},
+		{
+			"id": 158,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 35,
+			"year": 2009
+		},
+		{
+			"id": 159,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 27,
+			"year": 2010
+		},
+		{
+			"id": 160,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 31,
+			"year": 2010
+		},
+		{
+			"id": 161,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 7,
+			"year": 2009
+		},
+		{
+			"id": 162,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 15,
+			"year": 2010
+		},
+		{
+			"id": 163,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 9,
+			"year": 2010
+		},
+		{
+			"id": 164,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 32,
+			"year": 2010
+		},
+		{
+			"id": 165,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 46,
+			"year": 2009
+		},
+		{
+			"id": 166,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 40,
+			"year": 2010
+		},
+		{
+			"id": 167,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#1",
+			"value": 30,
+			"year": 2010
+		},
+		{
+			"id": 168,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 0,
+			"year": 2009
+		},
+		{
+			"id": 169,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 19,
+			"year": 2010
+		},
+		{
+			"id": 170,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#2",
+			"value": 47,
+			"year": 2009
+		},
+		{
+			"id": 171,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 35,
+			"year": 2009
+		},
+		{
+			"id": 172,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 29,
+			"year": 2010
+		},
+		{
+			"id": 173,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 42,
+			"year": 2010
+		},
+		{
+			"id": 174,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 24,
+			"year": 2009
+		},
+		{
+			"id": 175,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 15,
+			"year": 2010
+		},
+		{
+			"id": 176,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 46,
+			"year": 2010
+		},
+		{
+			"id": 177,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 31,
+			"year": 2009
+		},
+		{
+			"id": 178,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 38,
+			"year": 2009
+		},
+		{
+			"id": 179,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 37,
+			"year": 2009
+		},
+		{
+			"id": 180,
+			"category": "Google",
+			"city": "SH",
+			"product": "#1",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 181,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 6,
+			"year": 2009
+		},
+		{
+			"id": 182,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 3,
+			"year": 2009
+		},
+		{
+			"id": 183,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 184,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 30,
+			"year": 2010
+		},
+		{
+			"id": 185,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 44,
+			"year": 2009
+		},
+		{
+			"id": 186,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 187,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 16,
+			"year": 2010
+		},
+		{
+			"id": 188,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 29,
+			"year": 2009
+		},
+		{
+			"id": 189,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 4,
+			"year": 2010
+		},
+		{
+			"id": 190,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 191,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 17,
+			"year": 2009
+		},
+		{
+			"id": 192,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 25,
+			"year": 2009
+		},
+		{
+			"id": 193,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 43,
+			"year": 2010
+		},
+		{
+			"id": 194,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 46,
+			"year": 2009
+		},
+		{
+			"id": 195,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 27,
+			"year": 2010
+		},
+		{
+			"id": 196,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#2",
+			"value": 47,
+			"year": 2009
+		},
+		{
+			"id": 197,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 15,
+			"year": 2010
+		},
+		{
+			"id": 198,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 199,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 23,
+			"year": 2009
+		},
+		{
+			"id": 200,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 44,
+			"year": 2010
+		},
+		{
+			"id": 201,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 23,
+			"year": 2009
+		},
+		{
+			"id": 202,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 36,
+			"year": 2010
+		},
+		{
+			"id": 203,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 47,
+			"year": 2009
+		},
+		{
+			"id": 204,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 46,
+			"year": 2009
+		},
+		{
+			"id": 205,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 48,
+			"year": 2010
+		},
+		{
+			"id": 206,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 3,
+			"year": 2010
+		},
+		{
+			"id": 207,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 32,
+			"year": 2010
+		},
+		{
+			"id": 208,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#2",
+			"value": 5,
+			"year": 2009
+		},
+		{
+			"id": 209,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 34,
+			"year": 2010
+		},
+		{
+			"id": 210,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 30,
+			"year": 2009
+		},
+		{
+			"id": 211,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 33,
+			"year": 2009
+		},
+		{
+			"id": 212,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 32,
+			"year": 2010
+		},
+		{
+			"id": 213,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 1,
+			"year": 2009
+		},
+		{
+			"id": 214,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 32,
+			"year": 2009
+		},
+		{
+			"id": 215,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 8,
+			"year": 2010
+		},
+		{
+			"id": 216,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 18,
+			"year": 2010
+		},
+		{
+			"id": 217,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#1",
+			"value": 21,
+			"year": 2010
+		},
+		{
+			"id": 218,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 1,
+			"year": 2010
+		},
+		{
+			"id": 219,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 41,
+			"year": 2009
+		},
+		{
+			"id": 220,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 17,
+			"year": 2009
+		},
+		{
+			"id": 221,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 30,
+			"year": 2009
+		},
+		{
+			"id": 222,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 45,
+			"year": 2010
+		},
+		{
+			"id": 223,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 47,
+			"year": 2010
+		},
+		{
+			"id": 224,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#1",
+			"value": 27,
+			"year": 2009
+		},
+		{
+			"id": 225,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 8,
+			"year": 2010
+		},
+		{
+			"id": 226,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 16,
+			"year": 2009
+		},
+		{
+			"id": 227,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 37,
+			"year": 2009
+		},
+		{
+			"id": 228,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 19,
+			"year": 2010
+		},
+		{
+			"id": 229,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 42,
+			"year": 2010
+		},
+		{
+			"id": 230,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 6,
+			"year": 2009
+		},
+		{
+			"id": 231,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 26,
+			"year": 2010
+		},
+		{
+			"id": 232,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 233,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#1",
+			"value": 27,
+			"year": 2009
+		},
+		{
+			"id": 234,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 235,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 36,
+			"year": 2010
+		},
+		{
+			"id": 236,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 35,
+			"year": 2010
+		},
+		{
+			"id": 237,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 0,
+			"year": 2010
+		},
+		{
+			"id": 238,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 14,
+			"year": 2010
+		},
+		{
+			"id": 239,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 10,
+			"year": 2009
+		},
+		{
+			"id": 240,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 24,
+			"year": 2010
+		},
+		{
+			"id": 241,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 25,
+			"year": 2009
+		},
+		{
+			"id": 242,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 1,
+			"year": 2010
+		},
+		{
+			"id": 243,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 48,
+			"year": 2009
+		},
+		{
+			"id": 244,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 20,
+			"year": 2010
+		},
+		{
+			"id": 245,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 46,
+			"year": 2010
+		},
+		{
+			"id": 246,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 6,
+			"year": 2009
+		},
+		{
+			"id": 247,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 38,
+			"year": 2009
+		},
+		{
+			"id": 248,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 249,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 41,
+			"year": 2009
+		},
+		{
+			"id": 250,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 251,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 48,
+			"year": 2010
+		},
+		{
+			"id": 252,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 3,
+			"year": 2009
+		},
+		{
+			"id": 253,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 21,
+			"year": 2009
+		},
+		{
+			"id": 254,
+			"category": "Google",
+			"city": "SH",
+			"product": "#1",
+			"value": 1,
+			"year": 2009
+		},
+		{
+			"id": 255,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 17,
+			"year": 2009
+		},
+		{
+			"id": 256,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 36,
+			"year": 2009
+		},
+		{
+			"id": 257,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#2",
+			"value": 0,
+			"year": 2010
+		},
+		{
+			"id": 258,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 14,
+			"year": 2009
+		},
+		{
+			"id": 259,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 36,
+			"year": 2010
+		},
+		{
+			"id": 260,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#2",
+			"value": 10,
+			"year": 2010
+		},
+		{
+			"id": 261,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 28,
+			"year": 2009
+		},
+		{
+			"id": 262,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 14,
+			"year": 2009
+		},
+		{
+			"id": 263,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 26,
+			"year": 2009
+		},
+		{
+			"id": 264,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#1",
+			"value": 28,
+			"year": 2009
+		},
+		{
+			"id": 265,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 35,
+			"year": 2010
+		},
+		{
+			"id": 266,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 16,
+			"year": 2009
+		},
+		{
+			"id": 267,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 17,
+			"year": 2009
+		},
+		{
+			"id": 268,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 27,
+			"year": 2009
+		},
+		{
+			"id": 269,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#2",
+			"value": 20,
+			"year": 2009
+		},
+		{
+			"id": 270,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 31,
+			"year": 2009
+		},
+		{
+			"id": 271,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 28,
+			"year": 2009
+		},
+		{
+			"id": 272,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 43,
+			"year": 2009
+		},
+		{
+			"id": 273,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 274,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 2,
+			"year": 2009
+		},
+		{
+			"id": 275,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 9,
+			"year": 2010
+		},
+		{
+			"id": 276,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 3,
+			"year": 2010
+		},
+		{
+			"id": 277,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 21,
+			"year": 2010
+		},
+		{
+			"id": 278,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 3,
+			"year": 2010
+		},
+		{
+			"id": 279,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 8,
+			"year": 2009
+		},
+		{
+			"id": 280,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 281,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 282,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 19,
+			"year": 2010
+		},
+		{
+			"id": 283,
+			"category": "Google",
+			"city": "SH",
+			"product": "#1",
+			"value": 16,
+			"year": 2009
+		},
+		{
+			"id": 284,
+			"category": "Google",
+			"city": "SH",
+			"product": "#1",
+			"value": 46,
+			"year": 2009
+		},
+		{
+			"id": 285,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 18,
+			"year": 2009
+		},
+		{
+			"id": 286,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 48,
+			"year": 2010
+		},
+		{
+			"id": 287,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 28,
+			"year": 2009
+		},
+		{
+			"id": 288,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#2",
+			"value": 0,
+			"year": 2009
+		},
+		{
+			"id": 289,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 10,
+			"year": 2009
+		},
+		{
+			"id": 290,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#3",
+			"value": 29,
+			"year": 2009
+		},
+		{
+			"id": 291,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 29,
+			"year": 2010
+		},
+		{
+			"id": 292,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#1",
+			"value": 36,
+			"year": 2009
+		},
+		{
+			"id": 293,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 12,
+			"year": 2009
+		},
+		{
+			"id": 294,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 38,
+			"year": 2010
+		},
+		{
+			"id": 295,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 49,
+			"year": 2010
+		},
+		{
+			"id": 296,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 23,
+			"year": 2009
+		},
+		{
+			"id": 297,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 298,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 36,
+			"year": 2010
+		},
+		{
+			"id": 299,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 32,
+			"year": 2009
+		},
+		{
+			"id": 300,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#3",
+			"value": 10,
+			"year": 2010
+		},
+		{
+			"id": 301,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#2",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 302,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 18,
+			"year": 2009
+		},
+		{
+			"id": 303,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 36,
+			"year": 2010
+		},
+		{
+			"id": 304,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 0,
+			"year": 2009
+		},
+		{
+			"id": 305,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 46,
+			"year": 2009
+		},
+		{
+			"id": 306,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 43,
+			"year": 2010
+		},
+		{
+			"id": 307,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 48,
+			"year": 2009
+		},
+		{
+			"id": 308,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 44,
+			"year": 2009
+		},
+		{
+			"id": 309,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 44,
+			"year": 2010
+		},
+		{
+			"id": 310,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 44,
+			"year": 2009
+		},
+		{
+			"id": 311,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 24,
+			"year": 2010
+		},
+		{
+			"id": 312,
+			"category": "Google",
+			"city": "SH",
+			"product": "#1",
+			"value": 32,
+			"year": 2010
+		},
+		{
+			"id": 313,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 46,
+			"year": 2009
+		},
+		{
+			"id": 314,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 28,
+			"year": 2009
+		},
+		{
+			"id": 315,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 17,
+			"year": 2009
+		},
+		{
+			"id": 316,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 20,
+			"year": 2009
+		},
+		{
+			"id": 317,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 24,
+			"year": 2010
+		},
+		{
+			"id": 318,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 49,
+			"year": 2010
+		},
+		{
+			"id": 319,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 32,
+			"year": 2009
+		},
+		{
+			"id": 320,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 321,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 20,
+			"year": 2010
+		},
+		{
+			"id": 322,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 10,
+			"year": 2009
+		},
+		{
+			"id": 323,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 16,
+			"year": 2010
+		},
+		{
+			"id": 324,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#2",
+			"value": 34,
+			"year": 2010
+		},
+		{
+			"id": 325,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#1",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 326,
+			"category": "Google",
+			"city": "HK",
+			"product": "#2",
+			"value": 15,
+			"year": 2010
+		},
+		{
+			"id": 327,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 0,
+			"year": 2009
+		},
+		{
+			"id": 328,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 38,
+			"year": 2010
+		},
+		{
+			"id": 329,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 1,
+			"year": 2010
+		},
+		{
+			"id": 330,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 1,
+			"year": 2009
+		},
+		{
+			"id": 331,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 45,
+			"year": 2009
+		},
+		{
+			"id": 332,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 14,
+			"year": 2009
+		},
+		{
+			"id": 333,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 13,
+			"year": 2010
+		},
+		{
+			"id": 334,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 5,
+			"year": 2009
+		},
+		{
+			"id": 335,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 30,
+			"year": 2009
+		},
+		{
+			"id": 336,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 1,
+			"year": 2010
+		},
+		{
+			"id": 337,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 30,
+			"year": 2009
+		},
+		{
+			"id": 338,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 7,
+			"year": 2010
+		},
+		{
+			"id": 339,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 8,
+			"year": 2009
+		},
+		{
+			"id": 340,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 21,
+			"year": 2009
+		},
+		{
+			"id": 341,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 42,
+			"year": 2009
+		},
+		{
+			"id": 342,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 30,
+			"year": 2009
+		},
+		{
+			"id": 343,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 11,
+			"year": 2010
+		},
+		{
+			"id": 344,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 10,
+			"year": 2010
+		},
+		{
+			"id": 345,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 3,
+			"year": 2010
+		},
+		{
+			"id": 346,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 43,
+			"year": 2010
+		},
+		{
+			"id": 347,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 37,
+			"year": 2009
+		},
+		{
+			"id": 348,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 29,
+			"year": 2010
+		},
+		{
+			"id": 349,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 21,
+			"year": 2009
+		},
+		{
+			"id": 350,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 0,
+			"year": 2010
+		},
+		{
+			"id": 351,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#1",
+			"value": 12,
+			"year": 2009
+		},
+		{
+			"id": 352,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 28,
+			"year": 2010
+		},
+		{
+			"id": 353,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 0,
+			"year": 2009
+		},
+		{
+			"id": 354,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 43,
+			"year": 2010
+		},
+		{
+			"id": 355,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 43,
+			"year": 2009
+		},
+		{
+			"id": 356,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 36,
+			"year": 2010
+		},
+		{
+			"id": 357,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 20,
+			"year": 2010
+		},
+		{
+			"id": 358,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 359,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 44,
+			"year": 2010
+		},
+		{
+			"id": 360,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 19,
+			"year": 2010
+		},
+		{
+			"id": 361,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#1",
+			"value": 45,
+			"year": 2010
+		},
+		{
+			"id": 362,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 9,
+			"year": 2009
+		},
+		{
+			"id": 363,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 19,
+			"year": 2009
+		},
+		{
+			"id": 364,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 23,
+			"year": 2010
+		},
+		{
+			"id": 365,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#1",
+			"value": 0,
+			"year": 2010
+		},
+		{
+			"id": 366,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#2",
+			"value": 31,
+			"year": 2009
+		},
+		{
+			"id": 367,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 31,
+			"year": 2009
+		},
+		{
+			"id": 368,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 36,
+			"year": 2009
+		},
+		{
+			"id": 369,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 22,
+			"year": 2010
+		},
+		{
+			"id": 370,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#3",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 371,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 5,
+			"year": 2009
+		},
+		{
+			"id": 372,
+			"category": "Apple",
+			"city": "GZ",
+			"product": "#2",
+			"value": 11,
+			"year": 2010
+		},
+		{
+			"id": 373,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 46,
+			"year": 2009
+		},
+		{
+			"id": 374,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#2",
+			"value": 24,
+			"year": 2009
+		},
+		{
+			"id": 375,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#1",
+			"value": 20,
+			"year": 2010
+		},
+		{
+			"id": 376,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#3",
+			"value": 16,
+			"year": 2010
+		},
+		{
+			"id": 377,
+			"category": "Google",
+			"city": "BJ",
+			"product": "#3",
+			"value": 3,
+			"year": 2009
+		},
+		{
+			"id": 378,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 25,
+			"year": 2009
+		},
+		{
+			"id": 379,
+			"category": "Microsoft",
+			"city": "HK",
+			"product": "#1",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 380,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#1",
+			"value": 27,
+			"year": 2009
+		},
+		{
+			"id": 381,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#3",
+			"value": 20,
+			"year": 2010
+		},
+		{
+			"id": 382,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 2,
+			"year": 2009
+		},
+		{
+			"id": 383,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 1,
+			"year": 2009
+		},
+		{
+			"id": 384,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#3",
+			"value": 6,
+			"year": 2010
+		},
+		{
+			"id": 385,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#2",
+			"value": 36,
+			"year": 2009
+		},
+		{
+			"id": 386,
+			"category": "Google",
+			"city": "SH",
+			"product": "#2",
+			"value": 25,
+			"year": 2010
+		},
+		{
+			"id": 387,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 25,
+			"year": 2009
+		},
+		{
+			"id": 388,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 389,
+			"category": "Microsoft",
+			"city": "GZ",
+			"product": "#3",
+			"value": 29,
+			"year": 2009
+		},
+		{
+			"id": 390,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#1",
+			"value": 29,
+			"year": 2009
+		},
+		{
+			"id": 391,
+			"category": "Apple",
+			"city": "BJ",
+			"product": "#2",
+			"value": 39,
+			"year": 2009
+		},
+		{
+			"id": 392,
+			"category": "Apple",
+			"city": "SH",
+			"product": "#3",
+			"value": 8,
+			"year": 2010
+		},
+		{
+			"id": 393,
+			"category": "Google",
+			"city": "GZ",
+			"product": "#2",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 394,
+			"category": "Google",
+			"city": "HK",
+			"product": "#1",
+			"value": 28,
+			"year": 2009
+		},
+		{
+			"id": 395,
+			"category": "Microsoft",
+			"city": "BJ",
+			"product": "#1",
+			"value": 49,
+			"year": 2010
+		},
+		{
+			"id": 396,
+			"category": "Apple",
+			"city": "HK",
+			"product": "#2",
+			"value": 28,
+			"year": 2009
+		},
+		{
+			"id": 397,
+			"category": "Google",
+			"city": "SH",
+			"product": "#1",
+			"value": 23,
+			"year": 2009
+		},
+		{
+			"id": 398,
+			"category": "Google",
+			"city": "HK",
+			"product": "#3",
+			"value": 4,
+			"year": 2009
+		},
+		{
+			"id": 399,
+			"category": "Microsoft",
+			"city": "SH",
+			"product": "#3",
+			"value": 3,
+			"year": 2009
+		},
+		{
+			"id": 400,
+			"category": "Google",
+			"city": "SH",
+			"product": "#3",
+			"value": 21,
+			"year": 2009
+		}
+	]
+}

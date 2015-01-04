@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+@import url("reset.css");
+@import url("return.css");
+
+/**
+ * [Typography]
+ *
+ * background-color	{@value}
+ * border-color		{@value}
+ * color			{@value}
+ * font-family		{@value}
+ * font-size		{@value}
+ */
+
+/* Document */
+body {
+color: #333;
+font-family: Arial, "微软雅黑";
+font-size: 12px;
+margin: 15px 10px;
+/*
+word-break: break-all;
+word-wrap: break-word;
+*/
+}
+
+/* Hypertext */
+a:link {
+}
+a:visited {
+}
+a:hover {
+}
+
+/* Form */
+input, select, textarea {
+font-family: Arial, "微软雅黑";
+}
+
+
+/*--------------------------------------
+  MAIN
+--------------------------------------*/
+#main {
+text-align: center;
+}
+
+
+/*--------------------------------------
+  CONTAINER
+--------------------------------------*/
+#container {
+}
+
+
+/*--------------------------------------
+  CONTENT
+--------------------------------------*/
+#content {
+margin: 0 auto;
+text-align: left;
+width: 750px;
+}
+
+	/*------------------------------------*/
+	h1.heading {
+	font-family: Georgia;
+	font-size: 24px;
+	font-variant: small-caps;
+	text-align: center;
+	}
+	h1.heading span {
+	border-bottom: 1px dashed;
+	}
+
+	/*------------------------------------*/
+	#catalog {
+	margin: 20px 0 0 0;
+	overflow: hidden;
+	}
+	#catalog ul li {
+	float: left;
+	height: 120px;
+	overflow: hidden;
+	width: 120px;
+	margin: 5px 5px 0 0;
+	}
+	#catalog ul li a {
+	border: 1px solid #999;
+	color: #003f7e;
+	float: left;
+	font-family: Georgia;
+	font-size: 11px;
+	font-weight: bold;
+	height: 118px;
+	overflow: hidden;
+	text-decoration: none;
+	width: 118px;
+	}
+	#catalog ul li a:hover {
+	border: 3px solid #c30;
+	color: #c00;
+	height: 114px;
+	top: 0;
+	width: 114px;
+	}
+	#catalog ul li span {
+	display: block;
+	margin: 15px 5px 3px 5px;
+	}
+	#catalog span strong,
+	#catalog span em {
+	color: #333;
+	display: block;
+	font-family: Arial;
+	font-size: 10px;
+	font-weight: normal;
+	margin: 3px 0 0 0;
+	}
+	#catalog span strong {
+	text-decoration: line-through;
+	}
+
+	/*------------------------------------*/
+	#body-js #catalog ul li,
+	#body-java #catalog ul li {
+	width: 245px;
+	}
+	#body-js #catalog a,
+	#body-java #catalog a {
+	width: 243px;
+	}
+	#body-js #catalog a:hover,
+	#body-java #catalog a:hover {
+	width: 239px;
+	}
+
+	/*------------------------------------*/
+	#catalog ol {
+	line-height: 2em;
+	list-style: decimal inside;
+	margin: 0 auto;
+	width: 720px;
+	}
+
+	/*------------------------------------*/
+	#api-summary em {
+	background: #ddd;
+	font-style: italic;
+	}
+
+	#api-example ol {
+	line-height: 2.5em;
+	list-style: square outside;
+	padding: 0 20px;
+	}
+	#api-example ol li {
+	margin: 20px 0;
+	}
+
+
+/* Structural */
+h2 {
+border-bottom: 1px solid #808080;
+font-family: Georgia;
+font-size: 22px;
+line-height: 1.5em;
+margin: 0 0 10px 0;
+}
+h3 {
+font-size: 16px;
+margin: 0 0 5px 0;
+}
+h5 {
+color: navy;
+font-size: 14px;
+margin: 0 0 5px 0;
+}
+h5 a {
+color: navy;
+}
+h6 {
+color: maroon;
+font-size: 14px;
+margin: 0 0 5px 0;
+}
+h6 a {
+color: maroon;
+}
+
+p {
+margin: 0 0 10px 0;
+}
+
+samp,
+dl,
+xmp {
+background: #eee;
+border-color: #ddd #ddd #ddd #808080;
+border-style: solid;
+border-width: 1px 1px 1px 5px;
+font-family: "Courier New", "微软雅黑";
+margin: 0 0 10px 0;
+padding: 20px;
+}
+xmp {
+display: block; /* for IE8 */
+padding: 3px 20px 20px 20px;
+* padding-top: 20px;
+}
+
+/* List */
+dl {
+}
+dt {
+margin: 0 0 5px 0;
+}
+dd {
+}
+
+/* Text */
+code {
+color: green;
+font-family: "Courier New", "微软雅黑";
+font-style: italic;
+}
+
+samp {
+display: block;
+}
+
+sup {
+color: #c0c0c0;
+}
+
+textarea.textarea,
+select.select,
+input.text {
+border-color: #999 #ccc #ccc #999;
+border-style: solid;
+border-width: 1px;
+padding: 2px;
+}
+select.select,
+input.text {
+vertical-align: middle;
+}
+input.text {
+width: 25em;
+}
+textarea.textarea {
+height: 10em;
+width: 35em;
+}

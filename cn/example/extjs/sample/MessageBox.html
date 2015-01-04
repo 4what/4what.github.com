@@ -1,0 +1,87 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../js/extjs/3.4.1.1/resources/css/ext-all.css" />
+<script type="text/javascript" src="../js/extjs/3.4.1.1/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../js/extjs/3.4.1.1/ext-all.js"></script>
+<script type="text/javascript" src="../js/extjs/3.4.1.1/src/locale/ext-lang-zh_CN.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+<!--[if IE]><![if !IE]><![endif]-->
+<link rel="stylesheet" type="text/css" href="../css/ie-extjs.css" />
+<!--[if IE]><![endif]><![endif]-->
+
+<style type="text/css">
+.icon {
+background: red;
+}
+</style>
+
+<script type="text/javascript">
+//
+function msgCallback(buttonId, text, opt) {
+	switch(buttonId) {
+		case "yes":
+			alert("是");
+			break;
+		case "no":
+			alert("否");
+			break;
+		case "ok":
+			alert("确定");
+			break;
+		case "cancel":
+			alert("取消");
+			break;
+		default:
+			break;
+	}
+	// for prompt
+	if (text) {
+		alert(text);
+	}
+}
+
+
+Ext.onReady(function() {
+
+//	Ext.Msg.buttonText.yes = "NO";
+
+	Ext.Msg.show({
+		title: "标题",
+		msg: "内容",
+		buttons: Ext.Msg.YESNOCANCEL,
+//		modal: false,
+//		closable: false,
+//		icon: Ext.Msg.ERROR,
+		fn: msgCallback
+	});
+
+//	Ext.Msg.alert("标题", "内容", msgCallback);
+//	Ext.Msg.confirm("标题", "内容", msgCallback);
+//	Ext.Msg.prompt("标题", "内容", msgCallback, this, true/*240*/, "默认值");
+
+//	Ext.Msg.progress("标题", "内容", "进度");
+//	Ext.Msg.updateProgress(0.5, "进度", "内容");
+//	Ext.Msg.wait("内容", "标题", {
+//		interval: 250
+//	});
+
+//	Ext.Msg.setIcon(Ext.Msg.WARNING);
+//	Ext.Msg.setIcon("icon");
+//	Ext.Msg.updateText("新内容");
+
+});
+</script>
+</head>
+
+<body>
+
+<input type="button" name="" value="Hide" onClick="Ext.Msg.hide();" />
+
+</body>
+</html>

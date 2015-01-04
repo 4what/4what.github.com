@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<meta name="viewport" content="width=640, user-scalable=no" />
+
+<script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery/ui/1.9.2/jquery-ui.min.css" />
+<script type="text/javascript" src="js/jquery/ui/1.9.2/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile-1.4.4.min.css" />
+<script type="text/javascript" src="js/jquery/mobile/jquery.mobile-1.4.4.min.js"></script>
+
+<script type="text/javascript" src="js/util.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript">
+$(window).load(function() {
+
+	function goto(to) {
+		$(":mobile-pagecontainer").pagecontainer("change", to, {
+			transition: new Date().getMilliseconds() % 2 ? "flip" : "slide"
+		});
+	}
+
+	if (window.location.hash) {
+		goto("#page-home");
+	}
+
+	$("#start").click(function() {
+		$(this).hide();
+		$("#main").show();
+
+		var
+		game = $("#game"),
+
+		coords = [],
+		spots = [],
+
+		amount = 40,
+		count = 0,
+
+		height = 640,
+		width = 640,
+
+		max = 80,
+		min = 40,
+
+		x, y, x2, y2;
+
+		function gen(d) {
+			x = $js.random(0, width - max, true);
+			y = $js.random(0, height - max, true);
+			x2 = x + d;
+			y2 = y + d;
+
+			var valid = true;
+
+			for (var item, i = coords.length - 1; i >= 0; i--) {
+				item = coords[i];
+
+				valid = true;
+
+				if ((x < item.x2 && x2 > item.x) && (y < item.y2 && y2 > item.y)) {
+					valid = false;
+
+					break;
+				}
+			}
+
+			if (!valid) {
+				gen(d);
+			}
+		}
+
+		for (var i = 0; i < amount; i++) {
+			var d = $js.random(min, max, true);
+
+			gen(d);
+
+			coords.push({
+				x: x,
+				y: y,
+				x2: x2,
+				y2: y2
+			});
+
+			spots.push(
+				$("<li></li>").css({
+					height: d,
+					left: coords[i].x,
+					top: coords[i].y,
+					width: d
+				}).on("vmousedown", function() {
+					if (!$(this).is(".clicked")) {
+						$(this).addClass("clicked");
+
+						score.progress();
+					}
+				})
+			);
+		}
+
+		game.append(spots);
+
+		var timer = (function() {
+			var
+			that = this,
+
+			progressbar = $("#timer");
+
+			progressbar.progressbar({
+				value: false,
+				change: function() {},
+				complete: function() {
+					progressbar.find(".label span").text("Time Up");
+				}
+			});
+
+			that.progress = function progress() {
+				if (spots.length > 0) {
+					var val = progressbar.progressbar("value") || 0;
+
+					progressbar.progressbar("value", val + 1);
+
+					if (val < 99) {
+						setTimeout(progress, (60 * 1000) / 100);
+					}
+				}
+			};
+
+			return that;
+		})();
+
+		timer.progress();
+
+		var disappear = setInterval(function() {
+			spots = $.grep(spots, function(n, i) {
+				return n.is(":not(.clicked):visible");
+			});
+
+			var l = spots.length;
+
+			if (l > 0) {
+				spots[$js.random(0, l - 1, true)].fadeOut();
+			} else {
+				clearInterval(disappear);
+
+				alert("Count：" + count);
+			}
+		}, 1000);
+
+		var score = (function() {
+			var
+			that = this,
+
+			progressbar = $("#score");
+
+			progressbar.progressbar({
+				value: 0,
+				change: function() {},
+				complete: function() {}
+			});
+
+			that.progress = function progress() {
+				progressbar.find(".label span").text(++count);
+
+				var val = progressbar.progressbar("value") || 0;
+
+				progressbar.progressbar("value", val + 1);
+			};
+
+			return that;
+		})();
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+<div id="page-home" data-role="page">
+	<div class="ui-content" role="main">
+		<div id="start">
+			<button type="button">Start</button>
+		</div>
+
+		<div id="main">
+			<ul id="game"></ul>
+
+			<div id="timer">
+				<div class="label">时间进度：<span></span></div>
+			</div>
+
+			<div id="score">
+				<div class="label">热能指数：<span>0</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

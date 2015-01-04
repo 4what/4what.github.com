@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>util.jquery.js</h2>
+	<p>
+		<strong>Last modified:</strong>
+		<script type="text/javascript">document.write(document.lastModified);</script>
+	</p>
+	<p>
+		<span id="api-menu"></span>
+	</p>
+
+<h2 id="api-method"></h2>
+	<h3>Summary:</h3>
+		<ul id="api-summary">
+			<li class="api"><p><em>{Category: Miscellaneous}</em> API</p></li>
+			<li class="blockKey"><p><em>{Category: Event}</em> 阻止键盘事件</p></li>
+			<li class="center"><p><em>{Category: CSS}</em> 改变窗口大小内容始终水平居中</p></li>
+			<li class="ckeditor"><p><em>{Category: Form}</em> CKeditor 3.6.6.1</p></li>
+			<li class="dialog"><p><em>{Category: Miscellaneous}</em> jQuery ColorBox 对话框</p></li>
+			<li class="disableSubmit"><p><em>{Category: Form}</em> 禁用表单提交按钮</p></li>
+			<li class="domain"><p><em>{Category: Miscellaneous}</em> 判断当前域名是否在给定数组中并返回</p></li>
+			<li class="fckeditor"><p><em>{Category: Form}</em> FCKeditor 2.6.10</p></li>
+			<li class="field"><p><em>{Category: Form}</em> 返回表单中 name 属性为目标值的元素对象</p></li>
+			<li class="height"><p><em>{Category: CSS}</em> max-height | min-height</p></li>
+			<li class="iframeHeight"><p><em>{Category: CSS}</em> IFRAME 自适应高度</p></li>
+			<li class="minWidth"><p><em>{Category: CSS}</em> 窗口宽度大于目标值时内容宽度自适应否则固定</p></li>
+			<li class="paginator"><p><em>{Category: Miscellaneous}</em> 支持 Ajax 的分页组件</p></li>
+			<li class="scroll"><p><em>{Category: Effect}</em> 跟随滚动条</p></li>
+			<li class="select"><p><em>{Category: Form}</em> 加载 select, radio, checkbox 的默认值</p></li>
+			<li class="share"><p><em>{Category: Miscellaneous}</em> 分享按钮</p></li>
+			<li class="stripHtml"><p><em>{Category: Miscellaneous}</em> 过滤 HTML 标签</p></li>
+		</ul>
+
+	<h3>Syntax:</h3>
+		<ul id="api-syntax">
+			<li class="blockKey">
+				<textarea cols="" rows="" name="code" class="html">
+				<input type="text" name="" value="" class="text" id="blockKey" />
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				// Backspace, Space
+				$jq.blockKey([8, 32], $("#blockKey"));
+				</textarea>
+			</li>
+			<li class="center">
+				<textarea cols="" rows="" name="code" class="html">
+				<div style="border: 2px solid red; height: 150px; margin: 0 auto; width: 960px;"></div>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.center(960);
+				</textarea>
+			</li>
+			<li class="disableSubmit">
+				<textarea cols="" rows="" name="code" class="html">
+				<form action="" method="post" id="disableSubmit-disable">
+					<input type="submit" name="" value="Submit" />
+					<input type="image" name="" value="" src="../../images/100x100.png" />
+				</form>
+
+				<form action="" method="post" id="disableSubmit-enable">
+					<input type="submit" name="" value="Submit" disabled="disabled" />
+					<input type="image" name="" value="" src="../../images/100x100.png" disabled="disabled" />
+				</form>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.disableSubmit($("#disableSubmit-disable"), true);
+
+				$jq.disableSubmit($("#disableSubmit-enable"), false);
+				</textarea>
+			</li>
+			<li class="domain">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$jq.domain([
+						"pconline",
+						"pcauto",
+						"pcgames",
+						"pclady",
+						"pcbaby",
+						"pchouse"
+					]),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+			<li class="fckeditor">
+				<textarea cols="" rows="" name="code" class="html">
+				<textarea cols="" rows="" name="fckeditor-textarea-name"></textarea>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="html">
+				<div id="fckeditor-div"></div>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				function fckeditor(name, target, options) {
+					$jq.fckeditor(name, target, $.extend({
+						basepath: "../../js/fckeditor/"
+						//config: "../plugin/fckconfig.js",
+						//height: "100%",
+						//toolbarset: "Default",
+						//value: "",
+						//width: "100%"
+					}, options));
+				}
+
+				fckeditor("fckeditor-textarea-name");
+
+				fckeditor("fckeditor-name", $("#fckeditor-div"), {
+					toolbarset: "Default",
+					value: "value"
+				});
+				</textarea>
+			</li>
+			<li class="field">
+				<textarea cols="" rows="" name="code" class="html">
+				<form action="" method="post" id="field">
+					<input type="text" name="name" value="value" class="text" />
+				</form>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$jq.field($("#field"), "name").val()
+				);
+				</textarea>
+			</li>
+			<li class="height">
+				<textarea cols="" rows="" name="code" class="html">
+				<div id="height-max" style="border: 2px solid #000; overflow: hidden;">
+					<p style="background: red; height: 200px; width: 100px;"></p>
+				</div>
+
+				<div id="id="height-min" style="border: 2px solid #000; overflow: hidden;">
+					<p style="background: red; height: 100px; width: 100px;"></p>
+				</div>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.height($("#height-max"), "max", 100);
+
+				$jq.height($("#height-min"), "min", 200);
+				</textarea>
+			</li>
+			<li class="iframeHeight">
+				<textarea cols="" rows="" name="code" class="html">
+				<iframe src="../../docs/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.iframeHeight($("#iframeHeight"));
+				</textarea>
+			</li>
+			<li class="minWidth">
+				<textarea cols="" rows="" name="code" class="html">
+				<div style="border: 2px solid red; height: 150px;" id="minWidth"></div>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.minWidth($("#minWidth"), 960);
+				</textarea>
+			</li>
+			<li class="paginator">
+				<textarea cols="" rows="" name="code" class="html">
+				<div id="paginator"></div>
+
+				<div id="paginator-ajax"></div>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.paginator($("#paginator"), {
+					debug: true,
+					//param: "pageNum",
+					data: {
+						name: "value"
+					},
+					//ellipsis: false,
+					pages: 5,
+					pageNum: 10,
+					pageSize: 10,
+					total: 100,
+					previous: "<",
+					next: ">",
+					first: "<<",
+					last: ">>"
+				});
+
+				$jq.paginator($("#paginator-ajax"), {
+					ajax: true,
+					callback: function(index) {},
+					total: 100
+				});
+				</textarea>
+			</li>
+			<li class="scroll">
+				<textarea cols="" rows="" name="code" class="html">
+				<span id="scroll" style="border: 2px solid red; bottom: 0; height: 100px; position: absolute; right: 0; width: 100px;"></span>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.scroll($("#scroll"), {
+					duration: "slow"
+					//offset: 50,
+					//position: "top"
+				});
+				</textarea>
+			</li>
+			<li class="select">
+				<textarea cols="" rows="" name="code" class="html">
+				<select name="gender" class="select">
+					<option value="male" selected="selected">male</option> Male
+					<option value="female">female</option> Female
+				</select>
+
+				<input type="radio" name="agree" value="yes" checked="checked" /> Yes
+				<input type="radio" name="agree" value="no" /> No
+
+				<input type="checkbox" name="city" value="bj" checked="checked" /> 北京
+				<input type="checkbox" name="city" value="sh" /> 上海
+				<input type="checkbox" name="city" value="gz" /> 广州
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.select({
+					"gender": "female",
+					"agree": "no",
+					"city": ["sh", "gz"]
+				}, $("#select"));
+				</textarea>
+			</li>
+			<li class="share">
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.share(document.getElementById("api-example"), {
+					//url: "http://www.example.com/",
+					//title: "title",
+					//pic: ""
+				});
+				</textarea>
+			</li>
+			<li class="stripHtml">
+				<textarea cols="" rows="" name="code" class="js">
+				$4what.log(
+					$jq.stripHtml($("#api-syntax").html()),
+					document.getElementById("api-example")
+				);
+				</textarea>
+			</li>
+		</ul>
+
+	<h3>Example:</h3>
+		<dl id="api-example">
+			<dd class="blockKey">
+				<input type="text" name="" value="" class="text" id="blockKey" />
+			</dd>
+			<dd class="center">
+				<div style="border: 2px solid red; height: 150px; margin: 0 auto; width: 960px;"></div>
+			</dd>
+			<dd class="disableSubmit">
+				<ol>
+					<li>
+						<form action="" method="post" id="disableSubmit-disable">
+							<input type="submit" name="" value="Submit" />
+							<input type="image" name="" value="" src="../../images/100x100.png" />
+						</form>
+					</li>
+					<li>
+						<form action="" method="post" id="disableSubmit-enable">
+							<input type="submit" name="" value="Submit" disabled="disabled" />
+							<input type="image" name="" value="" src="../../images/100x100.png" disabled="disabled" />
+						</form>
+					</li>
+				</ol>
+			</dd>
+			<dd class="fckeditor">
+				<ol>
+					<li>
+						<textarea cols="" rows="" name="fckeditor-textarea-name"></textarea>
+					</li>
+					<li>
+						<div id="fckeditor-div"></div>
+					</li>
+				</ol>
+			</dd>
+			<dd class="field">
+				<form action="" method="post" id="field">
+					<input type="text" name="name" value="value" class="text" />
+				</form>
+			</dd>
+			<dd class="height">
+				<ol>
+					<li>
+						<div id="height-max" style="border: 2px solid #000; overflow: hidden;">
+							<p style="background: red; height: 200px; width: 100px;"></p>
+						</div>
+					</li>
+					<li>
+						<div id="height-min" style="border: 2px solid #000; overflow: hidden;">
+							<p style="background: red; height: 100px; width: 100px;"></p>
+						</div>
+					</li>
+				</ol>
+			</dd>
+			<dd class="iframeHeight">
+				<iframe src="../../docs/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
+			</dd>
+			<dd class="minWidth">
+				<div style="border: 2px solid red; height: 150px;" id="minWidth"></div>
+			</dd>
+			<dd class="paginator">
+				<ol>
+					<li>
+						<div id="paginator"></div>
+					</li>
+					<li>
+						<div id="paginator-ajax"></div>
+					</li>
+				</ol>
+			</dd>
+			<dd class="scroll">
+				<div style="height: 2048px;">
+					<span id="scroll" style="border: 2px solid red; bottom: 0; height: 100px; position: absolute; right: 0; width: 100px;"></span>
+				</div>
+			</dd>
+			<dd class="select">
+				<ol id="select">
+					<li>
+						<select name="gender" class="select">
+							<option value="male" selected="selected">male</option> Male
+							<option value="female">female</option> Female
+						</select>
+					</li>
+					<li>
+						<input type="radio" name="agree" value="yes" checked="checked" /> Yes
+						<input type="radio" name="agree" value="no" /> No
+					</li>
+					<li>
+						<input type="checkbox" name="city" value="bj" checked="checked" /> 北京
+						<input type="checkbox" name="city" value="sh" /> 上海
+						<input type="checkbox" name="city" value="gz" /> 广州
+					</li>
+				</ol>
+			</dd>
+		</dl>
+
+
+		<script type="text/javascript" src="../../js/util.jquery-1.1.js"></script>
+
+		<script type="text/javascript" src="../../js/fckeditor/fckeditor.js"></script> <!-- same origin -->
+
+
+		<script type="text/javascript">
+		$jq.api($jq, [
+			$("#api-summary li"),
+			$("#api-syntax li"),
+			$("#api-example dd")
+		], {
+			blockKey: function() {
+				// Backspace, Space
+				$jq.blockKey([8, 32], $("#blockKey"));
+			},
+			center: function() {
+				$jq.center(960);
+			},
+			disableSubmit: function() {
+				$jq.disableSubmit($("#disableSubmit-disable"), true);
+
+				$jq.disableSubmit($("#disableSubmit-enable"), false);
+			},
+			domain: function() {
+				$4what.log(
+					$jq.domain([
+						"pconline",
+						"pcauto",
+						"pcgames",
+						"pclady",
+						"pcbaby",
+						"pchouse"
+					]),
+					document.getElementById("api-example")
+				);
+			},
+			fckeditor: function() {
+				function fckeditor(name, target, options) {
+					$jq.fckeditor(name, target, $.extend({
+						basepath: "../../js/fckeditor/"
+						//config: "../plugin/fckconfig.js",
+						//height: "100%",
+						//toolbarset: "Default",
+						//value: "",
+						//width: "100%"
+					}, options));
+				}
+
+				fckeditor("fckeditor-textarea-name");
+
+				fckeditor("fckeditor-name", $("#fckeditor-div"), {
+					toolbarset: "Default",
+					value: "value"
+				});
+			},
+			field: function() {
+				$4what.log(
+					$jq.field($("#field"), "name").val()
+				);
+			},
+			height: function() {
+				$jq.height($("#height-max"), "max", 100);
+
+				$jq.height($("#height-min"), "min", 200);
+			},
+			iframeHeight: function() {
+				$jq.iframeHeight($("#iframeHeight"));
+			},
+			minWidth: function() {
+				$jq.minWidth($("#minWidth"), 960);
+			},
+			paginator: function() {
+				$jq.paginator($("#paginator"), {
+					debug: true,
+					//param: "pageNum",
+					data: {
+						name: "value"
+					},
+					//ellipsis: false,
+					pages: 5,
+					pageNum: 10,
+					pageSize: 10,
+					total: 100,
+					previous: "<",
+					next: ">",
+					first: "<<",
+					last: ">>"
+				});
+
+				$jq.paginator($("#paginator-ajax"), {
+					ajax: true,
+					callback: function(index) {},
+					total: 100
+				});
+			},
+			scroll: function() {
+				$jq.scroll($("#scroll"), {
+					duration: "slow"
+					//offset: 50,
+					//position: "top"
+				});
+			},
+			select: function() {
+				$jq.select({
+					"gender": "female",
+					"agree": "no",
+					"city": ["sh", "gz"]
+				}, $("#select"));
+			},
+			share: function() {
+				$jq.share(document.getElementById("api-example"), {
+					//url: "http://www.example.com/",
+					//title: "title",
+					//pic: ""
+				});
+			},
+			stripHtml: function() {
+				$4what.log(
+					$jq.stripHtml($("#api-syntax").html()),
+					document.getElementById("api-example")
+				);
+			}
+		});
+		</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

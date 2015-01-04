@@ -1,0 +1,184 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../js/extjs/3.4.1.1/resources/css/ext-all.css" />
+<script type="text/javascript" src="../js/extjs/3.4.1.1/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../js/extjs/3.4.1.1/ext-all.js"></script>
+<script type="text/javascript" src="../js/extjs/3.4.1.1/src/locale/ext-lang-zh_CN.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+<!--[if IE]><![if !IE]><![endif]-->
+<link rel="stylesheet" type="text/css" href="../css/ie-extjs.css" />
+<!--[if IE]><![endif]><![endif]-->
+
+<script type="text/javascript">
+Ext.onReady(function() {
+
+	// tip
+	Ext.QuickTips.init();
+
+
+	// toolbar
+	var _toolbar = new Ext.Toolbar({
+		renderTo: "box",
+		buttonAlign: "center", // left|center|right
+		enableOverflow: true,
+		//width: 240,
+		items: [
+			{
+				text: "按钮",
+				xtype: "button",
+				//disabled: true,
+				//iconAlign: "top", // top|right|bottom|left
+				iconCls: "",
+				//scale: "medium", // small|medium|large
+				//tooltip: "文字",
+				//tooltip: {title: "标题", text: "文字"},
+				//type: "submit", // button|submit|reset
+				handler: function(button, e) {
+					alert(button.text);
+				}
+			},
+			"-",
+			{
+				text: "开关",
+				xtype: "button",
+				enableToggle: true,
+				toggleHandler: function(button, state) {
+					alert(state);
+				}
+			},
+			"-",
+			{
+				text: "[ON]",
+				xtype: "button",
+				enableToggle: true,
+				pressed: true,
+				toggleGroup: "toggleGroup"
+			},
+			"",
+			{
+				text: "[OFF]",
+				xtype: "button",
+				enableToggle: true,
+				pressed: false,
+				toggleGroup: "toggleGroup"
+			},
+			"-",
+			{
+				text: "菜单",
+				xtype: "button",
+				//arrowAlign: "bottom", // right|bottom
+				menu: {
+					//defaults: {},
+					items: [
+						{
+							text: "Item",
+							//canActivate: false,
+							//disabled: true,
+							hideOnClick: false,
+							//href: "",
+							//hrefTarget: "_blank",
+							iconCls: "",
+							menu: [
+								"文字",
+								"-",
+								{
+									text: "CheckItem",
+									checked: true,
+									checkHandler: function(item, checked) {
+										alert(checked);
+									}
+								},
+								"-",
+								{
+									text: "[ON]",
+									checked: true,
+									group: "checkGroup"
+								},
+								{
+									text: "[OFF]",
+									checked: false,
+									group: "checkGroup"
+								}
+							],
+							handler: function(item, e) {
+								alert(item.text);
+							}
+						},
+						"-",
+						{
+							text: "日期",
+							menu: {
+								xtype: "datemenu",
+								handler: function(picker, date) {
+									alert(date);
+								}
+							}
+						},
+						{
+							text: "颜色",
+							menu: {
+								xtype: "colormenu",
+								handler: function(palette, color) {
+									alert(color);
+								}
+							}
+						}
+					]
+				}
+			},
+			"-",
+			{
+				text: "SplitButton",
+				xtype: "splitbutton",
+				//arrowTooltip: "文字",
+				menu: {
+					items: [
+						{
+							text: "Item"
+						}
+					]
+				},
+				arrowHandler: function(button, e) {
+					alert(button.text);
+				}
+			},
+			{
+				text: "CycleButton",
+				xtype: "cycle",
+				prependText: "文字",
+				showText: true,
+				items: [
+					{
+						text: "[ON]",
+						checked: true
+					},
+					{
+						text: "[OFF]",
+						checked: false
+					}
+				],
+				changeHandler: function(button, item) {
+					alert(item.text);
+				}
+			},
+			"->",
+			"文字"
+		]
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+<div id="box"></div>
+
+</body>
+</html>
