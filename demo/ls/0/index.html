@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<meta name="viewport" content="width=device-width" />
+
+<script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery/plugin/fullpage/jquery.fullPage.css" />
+
+<script type="text/javascript" src="js/jquery/plugin/fullpage/jquery.fullPage.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript">
+// viewport
+if (window.devicePixelRatio && window.devicePixelRatio === 2) {
+	document.writeln('<meta name="viewport" content="width=750" />'); // for iPhone 6
+}
+
+$(window).load(function() {
+
+	document.addEventListener("touchstart", function() {
+		// bgm
+		document.getElementById("bgm").play(); // for iOS
+	});
+
+	// fullpage
+	$("#page").fullpage({
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+<audio src="bgm.mp3" autoplay="autoplay" loop="loop" id="bgm"></audio>
+
+<div id="page">
+    <div class="section" id="section-1">
+    </div>
+    <div class="section" id="section-2">
+    </div>
+    <div class="section" id="section-3">
+    </div>
+    <div class="section" id="section-4">
+    </div>
+    <div class="section" id="section-5">
+    </div>
+    <div class="section" id="section-6">
+    </div>
+    <div class="section" id="section-7">
+    </div>
+    <div class="section" id="section-8">
+    </div>
+    <div class="section" id="section-9">
+    </div>
+    <div class="section" id="section-10">
+    </div>
+    <div class="section" id="section-11">
+    </div>
+    <div class="section" id="section-12">
+    </div>
+</div>
+
+</body>
+</html>

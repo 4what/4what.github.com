@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@import url("reset.css");
+
+/**
+ * [Typography]
+ *
+ * background-color	{@value}
+ * border-color		{@value}
+ * color			{@value}
+ * font-family		{@value}
+ * font-size		{@value}
+ */
+
+/* Document */
+body {
+background: url("../images/bg.png");
+color: #333;
+font-family: "微软雅黑", Arial;
+/*
+font-size: 12px;
+word-break: break-all;
+word-wrap: break-word;
+*/
+}
+
+/* Hypertext */
+a:link {
+color: #333;
+text-decoration: underline;
+}
+a:visited {
+color: #333;
+text-decoration: underline;
+}
+a:hover {
+color: #333;
+text-decoration: underline;
+}
+a:active {
+}
+
+/* Form */
+input, select, textarea {
+font-family: Arial;
+}
+
+
+/**/
+#section-1 {
+background: url("../images/bg-1.jpg") no-repeat center center;
+}
+#section-2 {
+background: url("../images/bg-2.jpg") no-repeat center center;
+}
+#section-3 {
+background: url("../images/bg-3.jpg") no-repeat center center;
+}
+#section-4 {
+background: url("../images/bg-4.jpg") no-repeat center center;
+}
+#section-5 {
+background: url("../images/bg-5.jpg") no-repeat center center;
+}
+#section-6 {
+background: url("../images/bg-6.jpg") no-repeat center center;
+}
+#section-7 {
+background: url("../images/bg-7.jpg") no-repeat center center;
+}
+#section-8 {
+background: url("../images/bg-8.jpg") no-repeat center center;
+}
+#section-9 {
+background: url("../images/bg-9.jpg") no-repeat center center;
+}
+#section-10 {
+background: url("../images/bg-10.jpg") no-repeat center center;
+}
+#section-11 {
+background: url("../images/bg-11.jpg") no-repeat center center;
+}
+#section-12 {
+background: url("../images/bg-12.jpg") no-repeat center center;
+}
