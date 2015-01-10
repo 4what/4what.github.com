@@ -47,39 +47,47 @@ font-family: Arial;
 
 
 /**/
-#section-1 {
+#pages {
+}
+
+.section {
+margin: 0 auto;
+width: 750px !important;
+}
+
+#page-1 {
 background: url("../images/bg-1.jpg") no-repeat center 0;
 }
-#section-2 {
+#page-2 {
 background: url("../images/bg-2.jpg") no-repeat center 0;
 }
-#section-3 {
+#page-3 {
 background: url("../images/bg-3.jpg") no-repeat center 0;
 }
-#section-4 {
+#page-4 {
 background: url("../images/bg-4.jpg") no-repeat center 0;
 }
-#section-5 {
+#page-5 {
 background: url("../images/bg-5.jpg") no-repeat center 0;
 }
-#section-6 {
+#page-6 {
 background: url("../images/bg-6.jpg") no-repeat center 0;
 }
-#section-7 {
+#page-7 {
 background: url("../images/bg-7.jpg") no-repeat center 0;
 }
-#section-8 {
+#page-8 {
 background: url("../images/bg-8.jpg") no-repeat center 0;
 }
-#section-9 {
+#page-9 {
 background: url("../images/bg-9.jpg") no-repeat center 0;
 }
-#section-10 {
+#page-10 {
 background: url("../images/bg-10.jpg") no-repeat center 0;
 }
-#section-11 {
+#page-11 {
 background: url("../images/bg-11.jpg") no-repeat center 0;
 }
-#section-12 {
+#page-12 {
 background: url("../images/bg-12.jpg") no-repeat center 0;
 }
