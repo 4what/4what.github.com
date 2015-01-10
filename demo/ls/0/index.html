@@ -5,7 +5,7 @@
 <title></title>
 <meta name="author" content="4what" />
 
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="height=1206" />
 
 <script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
 
@@ -17,12 +17,14 @@
 
 <script type="text/javascript">
 // viewport
+/*
 if (window.devicePixelRatio === 2) {
-	document.writeln('<meta name="viewport" content="width=750" />'); // for iPhone 6
+	document.writeln('<meta name="viewport" content="width=750" />');
 }
+*/
 
 $(window).load(function() {
-	alert("浏览器宽高：" + document.body.scrollWidth + "*" + document.body.scrollHeight)
+	//alert(document.body.scrollWidth + "*" + document.body.scrollHeight)
 
 	document.addEventListener("touchstart", function() {
 		// bgm
@@ -31,6 +33,28 @@ $(window).load(function() {
 
 	// fullpage
 	$("#pages").fullpage({
+		afterLoad: function(anchorLink, index) {
+			var txt = $("div.section").eq(index - 1).find(".txt");
+
+			switch (index) {
+				case 6:
+				case 7:
+					txt.fadeIn(600).animate({
+						left: 0
+					});
+					break;
+				case 8:
+					txt.eq(0).fadeIn(function() {
+						txt.eq(1).fadeIn().animate({
+							width: 318
+						}, 800);
+					});
+					break;
+				default:
+					txt.fadeIn(600);
+					break;
+			}
+		}
 	});
 
 });
@@ -40,30 +64,50 @@ $(window).load(function() {
 <body>
 
 <div id="pages">
-    <div class="section" id="page-1">
-    </div>
-    <div class="section" id="page-2">
-    </div>
-    <div class="section" id="page-3">
-    </div>
-    <div class="section" id="page-4">
-    </div>
-    <div class="section" id="page-5">
-    </div>
-    <div class="section" id="page-6">
-    </div>
-    <div class="section" id="page-7">
-    </div>
-    <div class="section" id="page-8">
-    </div>
-    <div class="section" id="page-9">
-    </div>
-    <div class="section" id="page-10">
-    </div>
-    <div class="section" id="page-11">
-    </div>
-    <div class="section" id="page-12">
-    </div>
+	<div class="section" id="page-1">
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-2">
+		<img src="images/txt-2.png" alt="" class="txt" style="right: 10px; top: 175px;" />
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-3">
+		<img src="images/txt-3.png" alt="" class="txt" style="left: 54px; top: 195px;" />
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-4">
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-5">
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-6">
+		<img src="images/txt-6.png" alt="" class="txt" style="left: -419px; top: 0;" />
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-7">
+		<img src="images/txt-7.png" alt="" class="txt" style="bottom: 0; left: -419px;" />
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-8">
+		<img src="images/txt-8-1.png" alt="" class="txt" style="left: 169px; top: 130px;" />
+		<img src="images/txt-8-2.png" alt="" class="txt" style="left: 185px; top: 385px; width: 0;" />
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-9">
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-10">
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-11">
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+	<div class="section" id="page-12">
+		<img src="images/txt-12.png" alt="" class="txt" style="left: 169px; top: 365px;" />
+		<div class="up"><img src="images/up.png" alt="" /></div>
+	</div>
+
 </div>
 
 <audio src="bgm.mp3" autoplay="autoplay" loop="loop" id="bgm"></audio>

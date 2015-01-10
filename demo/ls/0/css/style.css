@@ -48,10 +48,15 @@ font-family: Arial;
 
 /**/
 #pages {
+text-align: center;
 }
 
-.section {
+div.section {
 margin: 0 auto;
+/*
+iPhone 5-: 640*1008
+iPhone 6: 750*1206
+*/
 width: 750px !important;
 }
 
@@ -90,4 +95,15 @@ background: url("../images/bg-11.jpg") no-repeat center 0;
 }
 #page-12 {
 background: url("../images/bg-12.jpg") no-repeat center 0;
+}
+
+div.section .txt {
+display: none;
+position: absolute;
+}
+div.section .up {
+bottom: 20px;
+left: 0;
+position: absolute;
+width: 100%;
 }
