@@ -97,11 +97,11 @@ background: url("../images/bg-11.jpg") no-repeat center 0;
 background: url("../images/bg-12.jpg") no-repeat center 0;
 }
 
-div.section .txt {
+.section .txt {
 display: none;
 position: absolute;
 }
-div.section .up {
+.section .up {
 bottom: 20px;
 left: 0;
 position: absolute;

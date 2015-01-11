@@ -5,7 +5,7 @@
 <title></title>
 <meta name="author" content="4what" />
 
-<meta name="viewport" content="height=1206" />
+<!--<meta name="viewport" content="width=device-width" />-->
 
 <script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js"></script>
 
@@ -16,12 +16,13 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 <script type="text/javascript">
+//window.location.href = "http://3g.163.com/ntes/special/00040MS5/chillcool.html";
+
 // viewport
-/*
-if (window.devicePixelRatio === 2) {
+//alert(window.devicePixelRatio);
+if (window.devicePixelRatio === 2) { // for retina
 	document.writeln('<meta name="viewport" content="width=750" />');
 }
-*/
 
 $(window).load(function() {
 	//alert(document.body.scrollWidth + "*" + document.body.scrollHeight)
@@ -39,19 +40,22 @@ $(window).load(function() {
 			switch (index) {
 				case 6:
 				case 7:
-					txt.fadeIn(600).animate({
+					txt.fadeIn().animate({
 						left: 0
-					});
+					}, 200);
 					break;
 				case 8:
 					txt.eq(0).fadeIn(function() {
 						txt.eq(1).fadeIn().animate({
 							width: 318
-						}, 800);
+						});
 					});
 					break;
+				case 12:
+					txt.fadeIn(1000);
+					break;
 				default:
-					txt.fadeIn(600);
+					txt.fadeIn();
 					break;
 			}
 		}
@@ -67,11 +71,11 @@ $(window).load(function() {
 	<div class="section" id="page-1">
 	</div>
 	<div class="section" id="page-2">
-		<img src="images/txt-2.png" alt="" class="txt" style="right: 10px; top: 175px;" />
+		<img src="images/txt-2.png" alt="" class="txt" style="right: 10px; top: 170px;" />
 		<div class="up"><img src="images/up.png" alt="" /></div>
 	</div>
 	<div class="section" id="page-3">
-		<img src="images/txt-3.png" alt="" class="txt" style="left: 54px; top: 195px;" />
+		<img src="images/txt-3.png" alt="" class="txt" style="left: 40px; top: 190px;" />
 		<div class="up"><img src="images/up.png" alt="" /></div>
 	</div>
 	<div class="section" id="page-4">
