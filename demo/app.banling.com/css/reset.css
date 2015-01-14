@@ -6,7 +6,7 @@
  * reset.css
  *
  * @author 4what
- * @version 2013.03.14
+ * @version 2014.12.03
  */
 
 * {
@@ -34,8 +34,7 @@ border-spacing: 0;
 }
 
 /* Text */
-q:before,
-q:after {
+q:after, q:before {
 content: ""; /* for IE8, Std */
 }
 
