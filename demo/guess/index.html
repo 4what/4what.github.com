@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<!--<meta name="viewport" content="width=device-width" />-->
+
+<script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jquery/mobile/jquery.mobile-1.4.5.min.css" />
+<script type="text/javascript" src="js/jquery/mobile/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript" src="js/util.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript">
+$(window).load(function() {
+
+	function goto(to) {
+		$(":mobile-pagecontainer").pagecontainer("change", to, {
+			transition: new Date().getMilliseconds() % 2 ? "flip" : "slide"
+		});
+	}
+
+	if (window.location.hash) {
+		goto("#page-home");
+	}
+
+	var
+	cards = $("#game li"),
+	correct = $js.random(0, 2, true),
+
+	changed = 0,
+	over;
+
+	cards.each(function(i) {
+		var status = i === correct;
+
+		if (status) {
+			$(this).addClass("correct");
+		}
+
+		$(this).find("span").html(status ? '车' : '羊').end().click(function() {
+			var that = this;
+
+			if (over) {
+				return;
+			}
+
+			over = true;
+
+			$(this).fadeTo(400, 0.5);
+
+			$("span", cards.not(this).not(".correct")).eq(0).fadeIn(function() {
+				if (confirm("换？")) {
+					changed = 1;
+					status = !status;
+
+					$(that).fadeTo(400, 1.0, function() {
+						cards.filter(".correct").fadeTo(400, 0.5);
+					});
+				}
+
+				$("span", cards).fadeIn();
+
+				alert("status: " + (status ? 1 : 0) + ", changed: " + changed);
+			});
+		});
+	});
+
+});
+</script>
+</head>
+
+<body>
+
+<div id="page-home" data-role="page">
+	<div class="ui-content" role="main">
+		<ul id="game">
+			<li><span></span></li>
+			<li><span></span></li>
+			<li><span></span></li>
+		</ul>
+	</div>
+</div>
+
+<div id="page-result" data-role="page">
+	<div class="ui-content" role="main">
+
+	</div>
+</div>
+
+</body>
+</html>
