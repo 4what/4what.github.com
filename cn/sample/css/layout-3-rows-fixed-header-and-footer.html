@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - Cascading Style Sheets</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+	<style type="text/css">
+	html {
+	height: 100%;
+	overflow: hidden;
+	padding: 100px 0; /* for IE6 */
+	}
+
+	body{
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	}
+
+	#header {
+	background: red;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	}
+
+	#content {
+	background: green;
+	bottom: 100px;
+	height: auto !important; /* for IE7+, Std */
+	height: 100%; /* for IE6 */
+	overflow: auto;
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	}
+
+	#footer {
+	background: blue;
+	bottom: 0;
+	height: 100px;
+	position: absolute;
+	width: 100%;
+	}
+	</style>
+
+	<div id="header"></div>
+
+	<div id="content">
+
+<h2>Specification</h2>
+	<p></p>
+
+<h2>Syntax</h2>
+	<textarea cols="" rows="" name="code" class="css">
+	<style type="text/css">
+	html {
+	height: 100%;
+	overflow: hidden;
+	padding: 100px 0; /* for IE6 */
+	}
+
+	body{
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	}
+
+	#header {
+	background: red;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	}
+
+	#content {
+	background: green;
+	bottom: 100px;
+	height: auto !important; /* for IE7+, Std */
+	height: 100%; /* for IE6 */
+	overflow: auto;
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	}
+
+	#footer {
+	background: blue;
+	bottom: 0;
+	height: 100px;
+	position: absolute;
+	width: 100%;
+	}
+	</style>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="html">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+	</textarea>
+
+<h2>Example</h2>
+
+	</div>
+
+	<div id="footer"></div>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

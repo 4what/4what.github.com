@@ -145,7 +145,7 @@ width: 750px;
 	}
 
 	/*------------------------------------*/
-	#api-summary em {
+	#api-spec em {
 	background: #ddd;
 	font-style: italic;
 	}
@@ -232,6 +232,9 @@ display: block;
 
 sup {
 color: #c0c0c0;
+font-size: 0.8em;
+* font-size: 100%;
+font-size: 100%\0;
 }
 
 textarea.textarea,
