@@ -67,33 +67,34 @@ $4what.extend("include", function(args) {
 
 			// jQuery lightBox
 			case "jquery-lightbox":
-				this.load(root + "js/jquery/plugin/lightbox/jquery.lightbox-0.5.css");
-				this.load(root + "js/jquery/plugin/lightbox/jquery.lightbox-0.5.pack.js");
+				this.load(root + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.css");
+				this.load(root + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.pack.js");
 				break;
 
 			// SyntaxHighlighter
 			case "syntaxhighlighter":
-				this.load(root + "js/syntaxhighlighter/shCore.css");
-				this.load(root + "js/syntaxhighlighter/shCoreDefault.css");
-				//this.load(root + "js/syntaxhighlighter/shThemeDjango.css");
-				//this.load(root + "js/syntaxhighlighter/shThemeEclipse.css");
-				//this.load(root + "js/syntaxhighlighter/shThemeEmacs.css");
-				//this.load(root + "js/syntaxhighlighter/shThemeFadeToGrey.css");
-				//this.load(root + "js/syntaxhighlighter/shThemeMDUltra.css");
-				//this.load(root + "js/syntaxhighlighter/shThemeMidnight.css");
-				//this.load(root + "js/syntaxhighlighter/shThemeRDark.css");
-				this.load(root + "css/shTheme-4what.css");
+				this.load(root + "js/syntaxhighlighter/3.0.83/shCore.css");
+				this.load(root + "js/syntaxhighlighter/3.0.83/shCoreDefault.css");
+				//this.load(root + "js/syntaxhighlighter/3.0.83/shThemeDjango.css");
+				//this.load(root + "js/syntaxhighlighter/3.0.83/shThemeEclipse.css");
+				//this.load(root + "js/syntaxhighlighter/3.0.83/shThemeEmacs.css");
+				//this.load(root + "js/syntaxhighlighter/3.0.83/shThemeFadeToGrey.css");
+				//this.load(root + "js/syntaxhighlighter/3.0.83/shThemeMDUltra.css");
+				//this.load(root + "js/syntaxhighlighter/3.0.83/shThemeMidnight.css");
+				//this.load(root + "js/syntaxhighlighter/3.0.83/shThemeRDark.css");
 
-				this.load(root + "js/syntaxhighlighter/shCore.js");
-				//this.load(root + "js/syntaxhighlighter/shAutoloader.js");
+				this.load(root + "css/shTheme.css");
 
-				this.load(root + "js/syntaxhighlighter/shLegacy.js"); // v1.5
+				this.load(root + "js/syntaxhighlighter/3.0.83/shCore.js");
+				//this.load(root + "js/syntaxhighlighter/3.0.83/shAutoloader.js");
 
-				this.load(root + "js/syntaxhighlighter/shBrushCss.js");
-				this.load(root + "js/syntaxhighlighter/shBrushJava.js");
-				this.load(root + "js/syntaxhighlighter/shBrushJScript.js");
-				this.load(root + "js/syntaxhighlighter/shBrushPhp.js");
-				this.load(root + "js/syntaxhighlighter/shBrushXml.js");
+				this.load(root + "js/syntaxhighlighter/3.0.83/shLegacy.js"); // v1.5
+
+				this.load(root + "js/syntaxhighlighter/3.0.83/shBrushCss.js");
+				this.load(root + "js/syntaxhighlighter/3.0.83/shBrushJava.js");
+				this.load(root + "js/syntaxhighlighter/3.0.83/shBrushJScript.js");
+				this.load(root + "js/syntaxhighlighter/3.0.83/shBrushPhp.js");
+				this.load(root + "js/syntaxhighlighter/3.0.83/shBrushXml.js");
 
 				// v3
 				$(function() {

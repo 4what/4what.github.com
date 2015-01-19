@@ -4,7 +4,7 @@
  * UtilJq
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2014.12.12
+ * @version 1.1 Build 2015.01.16
  */
 (function() {
 
@@ -21,7 +21,7 @@ var UtilJq = window["$jq"] = {
 	  Category: CSS
 	--------------------------------------*/
 	/**
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Number} min
 	 */
 	center: function(min) {
@@ -37,7 +37,7 @@ var UtilJq = window["$jq"] = {
 	/**
 	 * max-height | min-height
 	 *
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
 	 * @param {String} method "max|min"
 	 * @param {Number} limit
@@ -60,7 +60,7 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
 	 */
 	iframeHeight: function(target) {
@@ -72,7 +72,7 @@ var UtilJq = window["$jq"] = {
 	/**
 	 * min-width
 	 *
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
 	 * @param {Number} width
 	 */
@@ -86,7 +86,7 @@ var UtilJq = window["$jq"] = {
 	  Category: Effect
 	--------------------------------------*/
 	/**
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
 	 * @param {Object} options (optional)
 	 */
@@ -139,7 +139,7 @@ var UtilJq = window["$jq"] = {
 	  Category: Event
 	--------------------------------------*/
 	/**
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Number[]} code
 	 * @param {Object|String} target (optional)
 	 */
@@ -157,7 +157,7 @@ var UtilJq = window["$jq"] = {
 	  Category: Form
 	--------------------------------------*/
 	/**
-	 * @requires CKEditor 3.6.6.1, jQuery 1.3.2
+	 * @requires CKEditor 3.6.6.2, jQuery 1.3.2+
 	 * @param {Object|String} target
 	 * @param {Object} options
 	 * @param {Object} params
@@ -202,7 +202,7 @@ var UtilJq = window["$jq"] = {
 	/**
 	 * disable submit button
 	 *
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} form
 	 * @param {Boolean} bln
 	 */
@@ -211,7 +211,7 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * @requires FCKeditor 2.6.10, jQuery 1.3.2
+	 * @requires FCKeditor 2.6.10, jQuery 1.3.2+
 	 * @param {String} name
 	 * @param {Object|String} target (optional)
 	 * @param {Object} options
@@ -251,7 +251,7 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} form
 	 * @param {String} name
 	 * @return {Object}
@@ -261,7 +261,7 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * @requires jQuery 1.3.2
+	 * @requires jQuery 1.3.2+
 	 * @param {Object} data {"name": value | [value, ...], ...}
 	 * @param {Object|String} target (optional)
 	 */
@@ -288,7 +288,7 @@ var UtilJq = window["$jq"] = {
 	  Category: Miscellaneous
 	--------------------------------------*/
 	/**
-	 * @requires jQuery 1.3.2, $js.url
+	 * @requires jQuery 1.3.2+, $js.url
 	 * @param {Object} obj
 	 * @param {Object[]|String[]} spec
 	 * @param {Object} example
@@ -337,7 +337,7 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * @requires jQuery 1.3.2, jQuery ColorBox
+	 * @requires jQuery 1.3.2+, jQuery ColorBox
 	 * @param {Object} options
 	 * @param {Object} params (optional)
 	 */
@@ -389,7 +389,7 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * @requires jQuery 1.3.2, $js.url
+	 * @requires jQuery 1.3.2+, $js.url
 	 * @param {Object|String} target
 	 * @param {Object} options
 	 */

@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 2014.02.27
+ * @version 2015.01.19
  */
 (function() {
 
@@ -167,6 +167,8 @@ Util.fn = Util.prototype = {
 	},
 
 	/**
+	 * TODO: IE10+
+	 *
 	 * window.name
 	 *
 	 * @requires $js.bind, $js.url
@@ -174,17 +176,13 @@ Util.fn = Util.prototype = {
 	 */
 	windowName: function(options) {
 		var
+		callback = options.callback || new Function(), // {Function}
 		form = options.form, // {Object} (*: !url)
 		url = options.url, // {String} (*: !form)
 
-		local = options.local || "robots.txt", // {String}
-
-		callback = options.callback || new Function(), // {Function}
-
-		iframe,
-		name = "windowname",
-
-		status = false;
+		complete, iframe,
+		local = window.location.protocol + "//" + window.location.host + "/robots.txt", // {String} // IE9: absolute path
+		name = "windowname-" + new Date().getTime();
 
 		try {
 			iframe = document.createElement('<iframe name="' + name + '"></iframe>'); // for IE
@@ -197,14 +195,14 @@ Util.fn = Util.prototype = {
 		iframe.style.display = "none";
 
 		this.bind(iframe, "load", function() {
-			if (status) {
+			if (complete) {
 				var results = iframe.contentWindow.name;
 				iframe.contentWindow.document.write("");
 				iframe.contentWindow.close();
 				document.body.removeChild(iframe);
 				callback(results);
 			} else {
-				status = true;
+				complete = true;
 				iframe.contentWindow.location.href = local;
 			}
 		});

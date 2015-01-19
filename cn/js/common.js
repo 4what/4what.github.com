@@ -51,11 +51,11 @@ if (name === "index" || (!re && /\/$/.test(pathname))) {
 
 				// jQuery lightBox
 				$("ul.gallery p a").lightBox({
-					imageLoading: "js/jquery/plugin/lightbox/images/lightbox-ico-loading.gif",
-					imageBtnPrev: "js/jquery/plugin/lightbox/images/lightbox-btn-prev.gif",
-					imageBtnNext: "js/jquery/plugin/lightbox/images/lightbox-btn-next.gif",
-					imageBtnClose: "js/jquery/plugin/lightbox/images/lightbox-btn-close.gif",
-					imageBlank: "js/jquery/plugin/lightbox/images/lightbox-blank.gif"
+					imageLoading: "js/jquery/plugin/lightbox/0.5/images/lightbox-ico-loading.gif",
+					imageBtnPrev: "js/jquery/plugin/lightbox/0.5/images/lightbox-btn-prev.gif",
+					imageBtnNext: "js/jquery/plugin/lightbox/0.5/images/lightbox-btn-next.gif",
+					imageBtnClose: "js/jquery/plugin/lightbox/0.5/images/lightbox-btn-close.gif",
+					imageBlank: "js/jquery/plugin/lightbox/0.5/images/lightbox-blank.gif"
 				});
 
 			});
