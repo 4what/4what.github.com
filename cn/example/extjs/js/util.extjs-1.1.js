@@ -5,7 +5,7 @@
  *
  * @author http://www.4what.cn/
  * @version 1.1 Build 2014.10.17
- * @requires ExtJS 3.x (3.2.1+)
+ * @requires ExtJS 3.2+
  */
 (function() {
 
