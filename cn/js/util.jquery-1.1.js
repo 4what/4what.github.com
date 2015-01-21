@@ -4,7 +4,7 @@
  * UtilJq
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2015.01.16
+ * @version 1.1 Build 2015.01.21
  */
 (function() {
 
@@ -157,7 +157,7 @@ var UtilJq = window["$jq"] = {
 	  Category: Form
 	--------------------------------------*/
 	/**
-	 * @requires CKEditor 3, jQuery 1.3.2+
+	 * @requires CKEditor 3.x, jQuery 1.3.2+
 	 * @param {Object|String} target
 	 * @param {Object} options
 	 * @param {Object} params
@@ -211,7 +211,7 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * @requires FCKeditor 2, jQuery 1.3.2+
+	 * @requires FCKeditor 2.x, jQuery 1.3.2+
 	 * @param {String} name
 	 * @param {Object|String} target (optional)
 	 * @param {Object} options

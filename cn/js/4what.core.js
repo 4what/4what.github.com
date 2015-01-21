@@ -96,7 +96,7 @@ $4what.extend("include", function(args) {
 				this.load(root + "js/syntaxhighlighter/3.0.83/shBrushPhp.js");
 				this.load(root + "js/syntaxhighlighter/3.0.83/shBrushXml.js");
 
-				// v3
+				// v3.x
 				$(function() {
 
 					//SyntaxHighlighter.defaults["auto-links"] = true;
