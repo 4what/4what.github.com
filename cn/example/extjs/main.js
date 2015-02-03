@@ -101,6 +101,7 @@
 
 
 	// roweditor
+	// !Ext.grid.CheckboxSelectionModel
 	var _roweditor = new Ext.ux.grid.RowEditor({
 		cancelText: "取消",
 		//commitChangesText: "",
@@ -113,11 +114,14 @@
 					method: "update",
 					id: record.get("id")
 				};
+				_grid.body.mask("请稍候……");
 				Ext.Ajax.request({
 					url: "data/data.json", // 自定义
 					method: "POST",
 					params: changes,
-					callback: function(options, success, response) {},
+					callback: function(options, success, response) {
+						_grid.body.unmask();
+					},
 					success: function(response, options) {
 						var
 						msg,
@@ -327,6 +331,7 @@
 													"id" // 自定义
 												));
 											});
+											_grid.body.mask("请稍候……");
 											Ext.Ajax.request({
 												url: "data/data.json", // 自定义
 												method: "POST",
@@ -335,7 +340,9 @@
 													method: "delete",
 													id: ids
 												},
-												callback: function(options, success, response) {},
+												callback: function(options, success, response) {
+													_grid.body.unmask();
+												},
 												success: function(response, options) {
 													var
 													msg,
@@ -425,7 +432,8 @@
 										id
 									);
 
-									//_roweditor.startEditing(_jsonstore.indexOf(record)); // for RowEditor
+									// RowEditor
+									//_roweditor.startEditing(_jsonstore.indexOf(record));
 
 									// 自定义
 								}
@@ -447,6 +455,7 @@
 								if (data.length === 0) {
 									return;
 								}
+								_grid.body.mask("请稍候……");
 								Ext.Ajax.request({
 									url: "data/data.json", // 自定义
 									method: "POST",
@@ -455,7 +464,9 @@
 										method: "save",
 										data: Ext.util.JSON.encode(data)
 									},
-									callback: function(options, success, response) {},
+									callback: function(options, success, response) {
+										_grid.body.unmask();
+									},
 									success: function(response, options) {
 										var
 										msg,
@@ -1456,6 +1467,7 @@
 						switch (buttonId) {
 							case "yes":
 								var node = _tree.getSelectionModel().getSelectedNode();
+								_tree.body.mask("请稍候……");
 								Ext.Ajax.request({
 									url: "data/data.json", // 自定义
 									method: "POST",
@@ -1464,7 +1476,9 @@
 										method: "delete",
 										id: node.id
 									},
-									callback: function(options, success, response) {},
+									callback: function(options, success, response) {
+										_tree.body.unmask();
+									},
 									success: function(response, options) {
 										var
 										msg,
