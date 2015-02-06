@@ -62,32 +62,13 @@
 							text: "系统配置",
 							iconCls: "icon-folder-setting",
 							singleClickExpand: true,
-							children: [
-								{
-									text: "角色权限",
-									leaf: true,
-									href: ""
-									//hrefTarget: "_blank"
-								},
-								{
-									text: "系统日志",
-									leaf: true,
-									href: ""
-									//hrefTarget: "_blank"
-								}
-							]
+							children: []
 						},
 						{
-							text: "帐户管理",
+							text: "用户管理",
 							iconCls: "icon-group",
 							singleClickExpand: true,
 							children: [
-								{
-									text: "个人资料",
-									leaf: true,
-									href: ""
-									//hrefTarget: "_blank"
-								},
 								{
 									text: "修改密码",
 									leaf: true,
