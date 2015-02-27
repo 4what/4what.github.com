@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+<style type="text/css">
+html,
+body,
+#map {
+height: 100%;
+margin: 0;
+overflow: hidden;
+width: 100%;
+}
+</style>  
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=chOUYahQ554nOwe9IiFaDLEi&v=1.0"></script>
+</head>
+
+<body>
+
+<div id="map"></div> 
+
+<script type="text/javascript">
+var map = new BMap.Map("map");
+map.addControl(new BMap.ZoomControl());
+var local = new BMap.LocalSearch(map, {
+	renderOptions: {map: map}
+});
+local.search("罗兰湖餐厅");
+</script>
+</body>
+</html>
