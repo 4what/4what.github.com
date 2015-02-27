@@ -111,14 +111,15 @@ $(window).load(function() {
 
 <audio src="bgm.mp3" autoplay="autoplay" loop="loop" id="bgm"></audio>
 
+<!--
 <script type="text/javascript" src="js/WeixinApi.js?v=4.3"></script>
 <script type="text/javascript">
 // 微信分享的数据
 var wxData = {
 	"appId": "", // 服务号可以填写appId
+	"desc": "李斯琴&陶英婚礼请柬",
 	"imgUrl": "http://www1.pconline.com.cn/zt/20150209/ls/images/weixin.jpg",
 	"link": window.location.href,
-	"desc": "李斯琴&陶英婚礼请柬",
 	"title": ""
 };
 
@@ -155,6 +156,23 @@ var wxCallbacks = {
 };
 
 WeixinApi.share(wxData, wxCallbacks);
+</script>
+-->
+
+<script type="text/javascript" src="http://js.3conline.com/wap/common/wxApi.min.js"></script>
+<script type="text/javascript">
+wxApi.init(function () {
+    var shareData = {
+	    desc: "李斯琴&陶英婚礼请柬",
+	    imgUrl: "http://www1.pconline.com.cn/zt/20150209/ls/images/weixin.jpg",
+	    link: "http://www1.pconline.com.cn/zt/20150209/ls/",
+	    title: ""
+    };
+    wx.onMenuShareAppMessage(shareData);
+    wx.onMenuShareTimeline(shareData);
+    wx.onMenuShareQQ(shareData);
+    wx.onMenuShareWeibo(shareData);
+});
 </script>
 </body>
 </html>

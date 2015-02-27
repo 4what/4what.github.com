@@ -33,5 +33,21 @@ var local = new BMap.LocalSearch(map, {
 });
 local.search("罗兰湖餐厅");
 </script>
+
+<script type="text/javascript" src="http://js.3conline.com/wap/common/wxApi.min.js"></script>
+<script type="text/javascript">
+wxApi.init(function () {
+    var shareData = {
+	    desc: "李斯琴&陶英婚礼请柬",
+	    imgUrl: "http://www1.pconline.com.cn/zt/20150209/ls/images/weixin.jpg",
+	    link: "http://www1.pconline.com.cn/zt/20150209/ls/",
+	    title: ""
+    };
+    wx.onMenuShareAppMessage(shareData);
+    wx.onMenuShareTimeline(shareData);
+    wx.onMenuShareQQ(shareData);
+    wx.onMenuShareWeibo(shareData);
+});
+</script>
 </body>
 </html>
