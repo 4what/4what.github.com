@@ -232,25 +232,23 @@
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				function doRequest() {
+				document.getElementById("windowName-request").onclick = function() {
 					$js.windowName({
-						url: "http://www.example.com:8080/project/4what.cn/sample/javascript/window.name/data.jsp?windowname=true" + "&timestamp=" + new Date().getTime(),
+						url: "http://www.example.com:8080/project/4what.cn/sample/javascript/window.name/data.jsp?windowname=true&name=value" + "&timestamp=" + new Date().getTime(),
 						callback: function(data) {
 							$4what.log(data);
 						}
 					});
-				}
-				document.getElementById("windowName-request").onclick = doRequest;
+				};
 
-				function doSubmit() {
+				document.getElementById("windowName-form-submit").onclick = function() {
 					$js.windowName({
 						form: document.getElementById("windowName-form"),
 						callback: function(data) {
 							$4what.log(data);
 						}
 					});
-				}
-				document.getElementById("windowName-form-submit").onclick = doSubmit;
+				};
 				</textarea>
 			</li>
 			<li class="zoomOut">
@@ -261,10 +259,9 @@
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				function handler() {
+				window.onload = function() {
 					$js.zoomOut(document.getElementById("zoomOut"), 50, 50);
-				}
-				window.onload = handler;
+				};
 				</textarea>
 			</li>
 		</ul>
@@ -437,10 +434,9 @@
 				);
 			},
 			timer: function() {
-				function handler() {
+				document.getElementById("timer-run").onclick = function() {
 					eval('$js.timer(function() { ' + document.getElementById("timer-fn").value + ' }, function(result) { $4what.log(result); });');
-				}
-				document.getElementById("timer-run").onclick = handler;
+				};
 			},
 			unique: function() {
 				$4what.log(
@@ -455,31 +451,28 @@
 				);
 			},
 			windowName: function() {
-				function doRequest() {
+				document.getElementById("windowName-request").onclick = function() {
 					$js.windowName({
-						url: "http://www.example.com:8080/project/4what.cn/sample/javascript/window.name/data.jsp?windowname=true" + "&timestamp=" + new Date().getTime(),
+						url: "http://www.example.com:8080/project/4what.cn/sample/javascript/window.name/data.jsp?windowname=true&name=value" + "&timestamp=" + new Date().getTime(),
 						callback: function(data) {
 							$4what.log(data);
 						}
 					});
-				}
-				document.getElementById("windowName-request").onclick = doRequest;
+				};
 
-				function doSubmit() {
+				document.getElementById("windowName-form-submit").onclick = function() {
 					$js.windowName({
 						form: document.getElementById("windowName-form"),
 						callback: function(data) {
 							$4what.log(data);
 						}
 					});
-				}
-				document.getElementById("windowName-form-submit").onclick = doSubmit;
+				};
 			},
 			zoomOut: function() {
-				function handler() {
+				window.onload = function() {
 					$js.zoomOut(document.getElementById("zoomOut"), 50, 50);
-				}
-				window.onload = handler;
+				};
 			}
 		});
 		</script>

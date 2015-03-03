@@ -13,12 +13,6 @@ $4what.bind(window, "load", function() {
 
 // breadcrumb
 function breadcrumb() {
-	function handler() {
-		for (var j = anchors.length - 1; j >= 0; j--) {
-			anchors[j].className = no;
-		}
-		this.className = yes;
-	}
 	var
 	anchors = document.getElementById("navbar").getElementsByTagName("a"),
 	name,
@@ -31,7 +25,14 @@ function breadcrumb() {
 		if ($4what.file(name).test(pathname) || (name === "index" && /\/$/.test(pathname))) {
 			item.className = yes;
 		} else {
-			//item.onclick = handler;
+/*
+			item.onclick = function() {
+				for (var j = anchors.length - 1; j >= 0; j--) {
+					anchors[j].className = no;
+				}
+				this.className = yes;
+			};
+*/
 		}
 	}
 }

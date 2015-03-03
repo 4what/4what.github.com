@@ -18,7 +18,7 @@
 
 <h2>Browser Compatibility</h2>
 	<p>
-		IE<sup><a href="http://msdn.microsoft.com/en-us/library/ms531405">[1]</a></sup>
+		IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms531405">[1]</a></sup>
 	</p>
 
 <h2>Syntax</h2>
@@ -32,15 +32,13 @@
 
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	function setHome() {
+	document.getElementById("homepage").onclick = function() {
 		// for IE
 		try {
 			this.style.behavior = "url(#default#homepage)";
 			this.setHomePage(window.location.href);
 		} catch (e) {}
-	}
-
-	document.getElementById("homepage").onclick = setHome;
+	};
 	</script>
 	</textarea>
 
@@ -48,15 +46,13 @@
 	<a href="javascript: void(0);" id="homepage">Set Home Page</a>
 
 	<script type="text/javascript">
-	function setHome() {
+	document.getElementById("homepage").onclick = function() {
 		// for IE
 		try {
 			this.style.behavior = "url(#default#homepage)";
 			this.setHomePage(window.location.href);
 		} catch (e) {}
-	}
-
-	document.getElementById("homepage").onclick = setHome;
+	};
 	</script>
 
 <script type="text/javascript" src="../../js/analytics.js"></script>

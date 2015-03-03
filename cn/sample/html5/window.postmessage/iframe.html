@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<meta name="author" content="4what" />
+
+<script type="text/javascript">
+function receiver(e) {
+	if (e.origin !== "http://localhost:8080") {
+		//return;
+	}
+
+	alert("e.data: " + e.data);
+	alert("e.origin: " + e.origin);
+
+	e.source.postMessage(new Date(), e.origin);
+}
+
+try {
+	window.addEventListener("message", receiver, false);
+} catch (e) {
+	window.attachEvent("onmessage", receiver);
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

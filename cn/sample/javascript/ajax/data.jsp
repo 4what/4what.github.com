@@ -5,6 +5,9 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 
+	// CORS
+	response.setHeader("Access-Control-Allow-Origin", "*");
+
 	// defer
 	for (int i = 0; i < 10000; i++) {
 		System.out.println(new Date());
