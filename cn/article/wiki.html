@@ -182,14 +182,12 @@
 				</textarea>
 			<h3><a>@import</a><sup><a href="http://www.w3.org/TR/CSS21/cascade.html#at-import">[1]</a></sup></h3>
 			<h3><a>Relationships between 'display', 'position', and 'float'</a><sup><a href="http://www.w3.org/TR/CSS21/visuren.html#dis-pos-flo">[1]</a></sup></h3>
-				<ol>
-					<li>
-						if ( <code>'position'</code> == <code>'absolute'</code> || <code>'position'</code> == <code>'fixed'</code> ) { <code>'float'</code> = <code>'none'</code> }
-					</li>
-					<li>
-						if ( <code>'float'</code> != <code>'none'</code> ) { <code>'display'</code> = <code>'block'</code> }
-					</li>
-				</ol>
+				<p>
+					if ( <code>'position'</code> == <code>'absolute'</code> || <code>'position'</code> == <code>'fixed'</code> ) { <code>'float'</code> = <code>'none'</code> }
+				</p>
+				<p>
+					if ( <code>'float'</code> != <code>'none'</code> ) { <code>'display'</code> = <code>'block'</code> }
+				</p>
 			<h3><a>URLs and URIs</a><sup><a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-uri">[1]</a></sup></h3>
 		</div>
 
@@ -357,19 +355,36 @@
 	<h2><a name="xhtml1"><span>-</span> XHTML 1.0</a></h2>
 		<div id="chapter-xhtml1">
 			<h3><a>Element Prohibitions</a><sup><a href="http://www.w3.org/TR/xhtml1/#prohibitions">[1]</a></sup></h3>
-				<dl>
-					<dt><code>a</code></dt>
-					<dd>must not contain other <code>a</code> elements.</dd>
-					<dt><code>pre</code></dt>
-					<dd>must not contain the <code>img</code>, <code>object</code>, <code>big</code>, <code>small</code>, <code>sub</code>, or <code>sup</code> elements.</dd>
-					<dt><code>button</code></dt>
-					<dd>must not contain the <code>input</code>, <code>select</code>, <code>textarea</code>, <code>label</code>, <code>button</code>, <code>form</code>, <code>fieldset</code>, <code>iframe</code> or
-						<code>isindex</code> elements.</dd>
-					<dt><code>label</code></dt>
-					<dd>must not contain other <code>label</code> elements.</dd>
-					<dt><code>form</code></dt>
-					<dd>must not contain other <code>form</code> elements.</dd>
-				</dl>
+				<p>
+					<code>a</code>
+				</p>
+				<p>
+					must not contain other <code>a</code> elements.
+				</p>
+				<p>
+					<code>pre</code>
+				</p>
+				<p>
+					must not contain the <code>img</code>, <code>object</code>, <code>big</code>, <code>small</code>, <code>sub</code>, or <code>sup</code> elements.
+				</p>
+				<p>
+					<code>button</code>
+				</p>
+				<p>
+					must not contain the <code>input</code>, <code>select</code>, <code>textarea</code>, <code>label</code>, <code>button</code>, <code>form</code>, <code>fieldset</code>, <code>iframe</code> or <code>isindex</code> elements.
+				</p>
+				<p>
+					<code>label</code>
+				</p>
+				<p>
+					must not contain other <code>label</code> elements.
+				</p>
+				<p>
+					<code>form</code>
+				</p>
+				<p>
+					must not contain other <code>form</code> elements.
+				</p>
 			<h3><a>Script and Style elements</a><sup><a href="http://www.w3.org/TR/xhtml1/#h-4.8">[1]</a></sup></h3>
 				<textarea cols="" rows="" name="code" class="js">
 				<script type="text/javascript">

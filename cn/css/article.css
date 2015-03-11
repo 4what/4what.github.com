@@ -139,7 +139,7 @@ font-size: 14px;
 h3 {
 color: #aa7;
 font-size: 16px;
-margin: 5px 0 0 0;
+margin: 10px 0 0 0;
 }
 h3:first-letter {
 font-size: 22px;
@@ -151,6 +151,7 @@ border-bottom: 1px dashed #aa7;
 
 p {
 margin: 5px 0 0 0;
+text-indent: 1em;
 }
 
 xmp,
@@ -172,12 +173,6 @@ margin: 5px 0 0 0;
 dt {
 }
 dd {
-}
-
-ol {
-list-style: square inside;
-margin: 5px 0 0 0;
-text-indent: 2em;
 }
 
 /* Table */
