@@ -20,8 +20,8 @@ border-style: solid !important;
 border-width: 1px 0 !important;
 */
 font-size: 1em !important;
-margin: 0 !important;
-padding: 0 0 10px 0 !important;
+margin: 5px 0 0 0 !important;
+padding: 0 !important;
 }
 .syntaxhighlighter .line.alt1 {
 background-color: #fff !important;
