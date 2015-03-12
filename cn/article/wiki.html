@@ -173,21 +173,21 @@
 				<textarea cols="" rows="" name="code" class="css">
 				Value: [ <border-width> || <border-style> || <'border-top-color'> ] | inherit
 				</textarea>
-				<p>
-					Omitted values are set to their <code>initial</code> values.
-				</p>
+				<blockquote>
+					Omitted values are set to their <code>initial values</code>.
+				</blockquote>
 			<h3><a>'cursor'</a><sup><a href="http://www.w3.org/TR/CSS21/ui.html#cursor-props">[1]</a><a href="http://www.w3.org/TR/css3-ui/#cursor">[2]</a><a href="https://developer.mozilla.org/en-US/docs/Using_URL_values_for_the_cursor_property?redirect=no">[3]</a></sup></h3>
 				<textarea cols="" rows="" name="code" class="css">
 				Value: [ [<uri> ,]* [ auto | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize | text | wait | help | progress ] ] | inherit
 				</textarea>
 			<h3><a>@import</a><sup><a href="http://www.w3.org/TR/CSS21/cascade.html#at-import">[1]</a></sup></h3>
 			<h3><a>Relationships between 'display', 'position', and 'float'</a><sup><a href="http://www.w3.org/TR/CSS21/visuren.html#dis-pos-flo">[1]</a></sup></h3>
-				<p>
+				<blockquote>
 					if ( <code>'position'</code> == <code>'absolute'</code> || <code>'position'</code> == <code>'fixed'</code> ) { <code>'float'</code> = <code>'none'</code> }
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					if ( <code>'float'</code> != <code>'none'</code> ) { <code>'display'</code> = <code>'block'</code> }
-				</p>
+				</blockquote>
 			<h3><a>URLs and URIs</a><sup><a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-uri">[1]</a></sup></h3>
 		</div>
 
@@ -206,34 +206,38 @@
 		<div id="chapter-html401">
 			<h3><a>Column groups: the COLGROUP and COL elements</a><sup><a href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.4">[1]</a></sup></h3>
 			<h3><a>How to specify alternate text</a><sup><a href="http://www.w3.org/TR/html401/struct/objects.html#adef-alt">[1]</a></sup></h3>
-				<p>
+				<blockquote>
 					The <code>alt</code> attribute must be specified for the <code>IMG</code> and <code>AREA</code> elements. It is optional for the <code>INPUT</code> and <code>APPLET</code> elements.
-				</p>
+				</blockquote>
 			<h3><a>Notes on helping search engines index your Web site</a><sup><a href="http://www.w3.org/TR/html401/appendix/notes.html#h-B.4">[1]</a></sup></h3>
 			<h3><a>Tabbing navigation</a><sup><a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.11.1">[1]</a></sup></h3>
-				<p>
+				<blockquote>
 					The following elements support the <code>tabindex</code> attribute: <code>A</code>, <code>AREA</code>, <code>BUTTON</code>, <code>INPUT</code>, <code>OBJECT</code>, <code>SELECT</code>, and <code>TEXTAREA</code>.
-				</p>
-			<h3>
-				<a>The SCRIPT element</a>:
-				<a>defer</a><sup><a href="http://www.w3.org/TR/html401/interact/scripts.html#adef-defer">[1]</a></sup>,
-				<a>charset</a>
-			</h3>
-				<p>
+				</blockquote>
+			<h3><a>The SCRIPT element</a><sup><a href="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.1">[1]</a></sup></h3>
+				<blockquote><code>defer</code><sup><a href="http://www.w3.org/TR/html401/interact/scripts.html#adef-defer">[1]</a></sup></blockquote>
+				<blockquote>When set, this boolean attribute provides a hint to the user agent that the script is not going to generate any document content (e.g., no "document.write" in javascript) and thus, the user agent can continue parsing and rendering.</blockquote>
+				<blockquote><code>charset</code></blockquote>
+				<blockquote>
 					Note that the <code>charset</code> attribute refers to the <code>character encoding</code> of the script designated by the <code>src</code> attribute; it does not concern the content of the <code>SCRIPT</code> element.
-				</p>
+				</blockquote>
 		</div>
 
 	<h2><a name="html5"><span>-</span> HTML 5</a></h2>
 		<div id="chapter-html5">
-			<h3>
-				<a>The script element</a>:
-				<a>async</a><sup><a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-async">[1]</a></sup>,
-				<a>defer</a><sup><a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-defer">[1]</a></sup>
-			</h3>
-				<p>
+			<h3><a>The script element</a><sup><a href="http://www.w3.org/TR/html5/scripting-1.html#the-script-element">[1]</a></sup></h3>
+				<blockquote><code>async</code><sup><a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-async">[1]</a></sup></blockquote>
+				<blockquote>
+					The <code>async</code> and <code>defer</code> attributes are boolean attributes that indicate how the script should be executed. The <code>defer</code> and <code>async</code> attributes must not be specified if the <code>src</code> attribute is not present.
+				</blockquote>
+				<blockquote><code>defer</code><sup><a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-defer">[1]</a></sup></blockquote>
+				<blockquote>
 					The <code>defer</code> attribute may be specified even if the <code>async</code> attribute is specified, to cause legacy Web browsers that only support <code>defer</code> (and not <code>async</code>) to fall back to the <code>defer</code> behavior instead of the synchronous blocking behavior that is the default.
-				</p>
+				</blockquote>
+				<blockquote><code>type</code><sup><a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-type">[1]</a></sup></blockquote>
+				<blockquote>
+					The <code>type</code> attribute gives the language of the script or format of the data. If the attribute is present, its value must be a valid MIME type. The <code>charset</code> parameter must not be specified. The default, which is used if the attribute is absent, is "<code>text/javascript</code>".
+				</blockquote>
 			<h3><a>Viewport</a><sup><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">[1]</a><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">[2]</a><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">[3]</a><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">[4]</a><a href="http://dev.w3.org/csswg/css-device-adapt/#viewport-meta">[5]</a><a href="http://www.w3.org/TR/css-device-adapt/#viewport-meta-element">[6]</a><a href="https://developers.google.com/speed/docs/insights/ConfigureViewport">[7]</a></sup></h3>
 				<textarea cols="" rows="" name="code" class="html">
 					<meta name="viewport" content="width=device-width" />
@@ -242,9 +246,9 @@
 				<textarea cols="" rows="" name="code" class="html">
 					<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 				</textarea>
-				<p>
-					IE: <code>5</code>, <code>7</code>, <code>EmulateIE7</code>, <code>8</code>, <code>EmulateIE8</code>, <code>Edge</code>
-				</p>
+				<blockquote>
+					<code>IE = 5 | 7 | EmulateIE7 | 8 | EmulateIE8 | Edge</code>
+				</blockquote>
 		</div>
 
 	<h2><a name="include"><span>-</span> Include</a></h2>
@@ -355,36 +359,36 @@
 	<h2><a name="xhtml1"><span>-</span> XHTML 1.0</a></h2>
 		<div id="chapter-xhtml1">
 			<h3><a>Element Prohibitions</a><sup><a href="http://www.w3.org/TR/xhtml1/#prohibitions">[1]</a></sup></h3>
-				<p>
+				<blockquote>
 					<code>a</code>
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					must not contain other <code>a</code> elements.
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					<code>pre</code>
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					must not contain the <code>img</code>, <code>object</code>, <code>big</code>, <code>small</code>, <code>sub</code>, or <code>sup</code> elements.
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					<code>button</code>
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					must not contain the <code>input</code>, <code>select</code>, <code>textarea</code>, <code>label</code>, <code>button</code>, <code>form</code>, <code>fieldset</code>, <code>iframe</code> or <code>isindex</code> elements.
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					<code>label</code>
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					must not contain other <code>label</code> elements.
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					<code>form</code>
-				</p>
-				<p>
+				</blockquote>
+				<blockquote>
 					must not contain other <code>form</code> elements.
-				</p>
+				</blockquote>
 			<h3><a>Script and Style elements</a><sup><a href="http://www.w3.org/TR/xhtml1/#h-4.8">[1]</a></sup></h3>
 				<textarea cols="" rows="" name="code" class="js">
 				<script type="text/javascript">

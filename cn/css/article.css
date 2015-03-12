@@ -123,6 +123,11 @@ width: 95%;
 
 
 /* Structural */
+blockquote {
+margin: 5px 0 0 0;
+text-indent: 1em;
+}
+
 h2 {
 border-bottom: 1px solid #808080;
 color: #005a9c;
@@ -136,6 +141,7 @@ cursor: pointer;
 h2 a span {
 font-size: 14px;
 }
+
 h3 {
 color: #aa7;
 font-size: 16px;
@@ -151,14 +157,14 @@ border-bottom: 1px dashed #aa7;
 
 p {
 margin: 5px 0 0 0;
-text-indent: 1em;
 }
 
-xmp,
-pre {
+pre,
+xmp {
 font-family: Arial, "微软雅黑";
 margin: 5px 0 0 0;
 }
+
 pre span {
 text-decoration: line-through;
 }
