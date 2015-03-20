@@ -19,7 +19,7 @@ height: 100%;
 body {
 background: #02080e url("../images/page_background.jpg") repeat-y center 0;
 color: #d6f9ff;
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
 height: 100%;
 /*
@@ -44,7 +44,7 @@ text-decoration: none;
 
 /* Form */
 input, select, textarea {
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }
 
 
