@@ -348,6 +348,7 @@ width: 85%;
 	float: left;
 	left: 10px;
 	line-height: 2em;
+	overflow: hidden;
 	position: relative;
 	}
 
