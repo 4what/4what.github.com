@@ -351,6 +351,8 @@ width: 85%;
 	position: relative;
 	}
 
+	#contact ul li,
+	#hardware ul li,
 	#about ul li {
 	width: 100%;
 	}
