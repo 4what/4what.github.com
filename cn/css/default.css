@@ -21,7 +21,7 @@ overflow-x: hidden;
 body {
 background: #333;
 color: #c0c0c0;
-font-family: /*Copperplate, */"Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-family: Copperplate, "Lucida Grande", "Lucida Sans Unicode", /*"Helvetica Neue", Arial,*/ "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
 /*
 word-break: break-all;
@@ -47,7 +47,7 @@ a:active {
 
 /* Form */
 input, select, textarea {
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
 }
 
@@ -96,7 +96,7 @@ width: 720px;
 
 	/*------------------------------------*/
 	#navbar {
-	font-family: Georgia;
+	font-family: Copperplate, Georgia;
 	text-align: center;
 	}
 	#navbar ul {
@@ -173,7 +173,7 @@ width: 85%;
 
 	/*------------------------------------*/
 	h2.heading {
-	font-family: Georgia;
+	font-family: Copperplate, Georgia;
 	font-size: 24px;
 	font-variant: small-caps;
 	margin: 20px 0 0 0;
@@ -204,7 +204,7 @@ width: 85%;
 	  home.html
 	--------------------------------------*/
 	#overview {
-	font-family: "Chalkboard SE", "Comic Sans MS", "Lantinghei SC", "Microsoft YaHei";
+	font-family: Copperplate, "Chalkboard SE", "Comic Sans MS", "Lantinghei SC", "Microsoft YaHei";
 	margin: 20px 0 0 0;
 	}
 	#overview a {
@@ -317,8 +317,8 @@ width: 85%;
 	#about {
 	margin: 5px 0 0 0;
 	}
+
 	#about dl {
-	float: left;
 	}
 	#about dt {
 	font-weight: bold;
@@ -349,6 +349,10 @@ width: 85%;
 	left: 10px;
 	line-height: 2em;
 	position: relative;
+	}
+
+	#about ul li {
+	width: 100%;
 	}
 
 	/*--------------------------------------
@@ -404,7 +408,7 @@ width: 85%;
 	}
 	#subnav em {
 	float: left;
-	font-family: Georgia;
+	font-family: Copperplate, Georgia;
 	font-size: 14px;
 	font-style: italic;
 	font-weight: bold;
