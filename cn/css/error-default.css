@@ -14,7 +14,7 @@
 body {
 background: #f4f4f4;
 color: #575757;
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 14px;
 margin: 20px 0 0 0
 /*
@@ -38,7 +38,7 @@ top: 1px;
 
 /* Form */
 input, select, textarea {
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }
 
 

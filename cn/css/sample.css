@@ -16,7 +16,7 @@
 /* Document */
 body {
 color: #333;
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
 margin: 15px 10px;
 /*
@@ -35,7 +35,7 @@ a:hover {
 
 /* Form */
 input, select, textarea {
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }
 
 
@@ -65,7 +65,6 @@ width: 750px;
 
 	/*------------------------------------*/
 	h1.heading {
-	font-family: Georgia;
 	font-size: 24px;
 	font-variant: small-caps;
 	text-align: center;
@@ -90,7 +89,6 @@ width: 750px;
 	border: 1px solid #999;
 	color: #003f7e;
 	float: left;
-	font-family: Georgia;
 	font-size: 11px;
 	font-weight: bold;
 	height: 118px;
@@ -111,9 +109,8 @@ width: 750px;
 	}
 	#catalog span strong,
 	#catalog span em {
-	color: #333;
+	color: #999;
 	display: block;
-	font-family: Arial;
 	font-size: 10px;
 	font-weight: normal;
 	margin: 3px 0 0 0;
@@ -200,7 +197,7 @@ background: #eee;
 border-color: #ddd #ddd #ddd #808080;
 border-style: solid;
 border-width: 1px 1px 1px 5px;
-font-family: "Courier New", "微软雅黑";
+font-family: "Courier New", monospace;
 margin: 0 0 10px 0;
 padding: 20px;
 }
@@ -221,7 +218,7 @@ dd {
 /* Text */
 code {
 color: green;
-font-family: "Courier New", "微软雅黑";
+font-family: "Courier New", monospace;
 font-style: italic;
 }
 

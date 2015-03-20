@@ -19,7 +19,7 @@ height: 100%;
 body {
 background: #02080e url("../images/page_background.jpg") repeat-y center 0;
 color: #d6f9ff;
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
 height: 100%;
 /*
@@ -44,7 +44,7 @@ text-decoration: none;
 
 /* Form */
 input, select, textarea {
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }
 
 
@@ -153,7 +153,7 @@ text-transform: uppercase;
 }
 #navbar ul li a {
 color: #fff;
-font-family: Georgia, "微软雅黑";
+font-family: Georgia;
 font-weight: bold;
 }
 #navbar ul li a:hover {
@@ -273,7 +273,6 @@ width: 466px;
 
 	#news h2 {
 	color: #feaf00;
-	font-family: Georgia, "微软雅黑";
 	font-size: 18px;
 	font-weight: normal;
 	margin: 20px 0 0 0;

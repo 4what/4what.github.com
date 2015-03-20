@@ -116,7 +116,7 @@ $4what.extend("include", function(args) {
 
 				// v1.5
 				this.bind(window, "load", function() {
-					dp.SyntaxHighlighter.HighlightAll("code", true, true, false, 1, false); // (name, [showGutter], [showControls], [collapseAll], [firstLine], [showColumns])
+					dp.SyntaxHighlighter.HighlightAll("code", true, false, false, 1, false); // (name, [showGutter], [showControls], [collapseAll], [firstLine], [showColumns])
 				});
 				break;
 			default:

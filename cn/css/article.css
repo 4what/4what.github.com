@@ -16,7 +16,7 @@
 /* Document */
 body {
 color: #333;
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
 margin: 15px 10px;
 /*
@@ -37,7 +37,7 @@ top: 1px;
 
 /* Form */
 input, select, textarea {
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }
 
 
@@ -161,15 +161,12 @@ margin: 5px 0 0 0;
 
 pre,
 xmp {
-font-family: Arial, "微软雅黑";
+font-family: "Courier New", monospace;
 margin: 5px 0 0 0;
 }
 
 pre span {
 text-decoration: line-through;
-}
-
-xmp {
 }
 
 /* List */
@@ -211,7 +208,7 @@ background: #eee;
 /* Text */
 code {
 background: #ddd;
-font-family: "Courier New", "微软雅黑";
+font-family: "Courier New", monospace;
 font-style: italic;
 }
 

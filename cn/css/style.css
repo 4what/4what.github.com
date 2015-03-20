@@ -14,7 +14,7 @@
 
 /* Document */
 body {
-font-family: Arial, "Comic Sans MS", "Courier New", Georgia, Impact, Verdana; /* Core fonts for the Web */
+font-family: Arial, "Comic Sans MS", "Courier New", Georgia, Impact, Verdana, sans-serif; /* Core fonts for the Web */
 font-size: 12px;
 /*
 word-break: break-all;
@@ -34,7 +34,8 @@ a:active {
 
 /* Form */
 input, select, textarea {
-font-family: Arial;
+font-family: sans-serif;
+font-size: 12px;
 }
 
 

@@ -17,7 +17,7 @@ body {
 background: url("../images/bg.jpg") no-repeat center center;
 background-size: 100% 100%;
 color: #333;
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
 /*
 word-break: break-all;
@@ -43,7 +43,7 @@ a:active {
 
 /* Form */
 input, select, textarea {
-font-family: Arial, "微软雅黑";
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }
 
 

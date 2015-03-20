@@ -165,6 +165,7 @@
 
 	<h2><a name="css21"><span>-</span> CSS 2.1</a></h2>
 		<div id="chapter-css21">
+			<h3><a>@import</a><sup><a href="http://www.w3.org/TR/CSS21/cascade.html#at-import">[1]</a></sup></h3>
 			<h3><a>'background'</a><sup><a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background">[1]</a></sup></h3>
 				<textarea cols="" rows="" name="code" class="css">
 				Value: [ <'background-color'> || <'background-image'> || <'background-repeat'> || <'background-attachment'> || <'background-position'> ] | inherit
@@ -180,13 +181,13 @@
 				<textarea cols="" rows="" name="code" class="css">
 				Value: [ [<uri> ,]* [ auto | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize | text | wait | help | progress ] ] | inherit
 				</textarea>
-			<h3><a>@import</a><sup><a href="http://www.w3.org/TR/CSS21/cascade.html#at-import">[1]</a></sup></h3>
+			<h3><a>'font-family'</a><sup><a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-family">[1]</a></sup></h3>
 			<h3><a>Relationships between 'display', 'position', and 'float'</a><sup><a href="http://www.w3.org/TR/CSS21/visuren.html#dis-pos-flo">[1]</a></sup></h3>
 				<blockquote>
-					if ( <code>'position'</code> == <code>'absolute'</code> || <code>'position'</code> == <code>'fixed'</code> ) { <code>'float'</code> = <code>'none'</code> }
+					<code>position: "absolute|fixed"</code> > <code>float: "none"</code>
 				</blockquote>
 				<blockquote>
-					if ( <code>'float'</code> != <code>'none'</code> ) { <code>'display'</code> = <code>'block'</code> }
+					<code>float: "!none"</code> > <code>display: "block"</code>
 				</blockquote>
 			<h3><a>URLs and URIs</a><sup><a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-uri">[1]</a></sup></h3>
 		</div>
