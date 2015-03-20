@@ -21,7 +21,7 @@ overflow-x: hidden;
 body {
 background: #333;
 color: #c0c0c0;
-font-family: /*Copperplate,*/ "Lucida Grande", "Lucida Sans Unicode", /*"Helvetica Neue", Arial,*/ "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-family: "Lucida Grande", "Lucida Sans Unicode", /*"Helvetica Neue", Arial,*/ "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
 /*
 word-break: break-all;
@@ -96,7 +96,7 @@ width: 720px;
 
 	/*------------------------------------*/
 	#navbar {
-	font-family: /*Copperplate,*/ Georgia;
+	font-family: Georgia;
 	text-align: center;
 	}
 	#navbar ul {
@@ -173,7 +173,7 @@ width: 85%;
 
 	/*------------------------------------*/
 	h2.heading {
-	font-family: /*Copperplate,*/ Georgia;
+	font-family: Georgia;
 	font-size: 24px;
 	font-variant: small-caps;
 	margin: 20px 0 0 0;
@@ -204,7 +204,7 @@ width: 85%;
 	  home.html
 	--------------------------------------*/
 	#overview {
-	font-family: /*Copperplate,*/ "Chalkboard SE", "Comic Sans MS", "Lantinghei SC", "Microsoft YaHei";
+	font-family: "Comic Sans MS", "Lantinghei SC", "Microsoft YaHei";
 	margin: 20px 0 0 0;
 	}
 	#overview a {
@@ -348,12 +348,9 @@ width: 85%;
 	float: left;
 	left: 10px;
 	line-height: 2em;
-	overflow: hidden;
 	position: relative;
 	}
 
-	#contact ul li,
-	#hardware ul li,
 	#about ul li {
 	width: 100%;
 	}
@@ -411,7 +408,7 @@ width: 85%;
 	}
 	#subnav em {
 	float: left;
-	font-family: /*Copperplate,*/ Georgia;
+	font-family: Georgia;
 	font-size: 14px;
 	font-style: italic;
 	font-weight: bold;
