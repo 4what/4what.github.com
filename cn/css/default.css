@@ -271,7 +271,7 @@ width: 85%;
 	#catalog .layer ul li {
 	background: url("../images/bullet-square.png") no-repeat 0 center;
 	}
-	#catalog .layer ul span {
+	#catalog .layer ul em {
 	color: #08c;
 	font-variant: small-caps;
 	}
