@@ -13,7 +13,7 @@
 /* Document */
 body {
 color: #333;
-font-family: Arial;
+font-family: sans-serif;
 font-size: 12px;
 line-height: 1.5em;
 /*
@@ -40,13 +40,13 @@ a:active {
 
 /* Form */
 input, select, textarea {
-font-family: Arial;
+font-family: sans-serif;
 }
 
 
 /*------------------------------------*/
 * {
-font-family: Arial !important;
+font-family: sans-serif !important;
 }
 
 
