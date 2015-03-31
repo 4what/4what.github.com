@@ -69,9 +69,12 @@ overflow: hidden;
 /*float: right;*/
 /*width: 90%;*/
 }
+.submit {
+text-align: center;
+}
 .submit .ui-btn-inline {
-float: right;
-margin-right: 0;
+/*float: right;*/
+/*margin-right: 0;*/
 }
 .footer {
 margin-top: 20px;
