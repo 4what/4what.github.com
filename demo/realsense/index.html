@@ -30,8 +30,11 @@ $(document).on("pagecreate", function() {
 */
 
 	$("#page-home .submit").click(function() {
-//		alert(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test($("#email").val()))
-		$("#dialog-result").popup("open");
+		$("#dialog-result").text(
+			/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@intel.com$/.test($("#email").val()) ?
+			"Succeed! Thanks!" :
+			"Please enter a valid email address (username@intel.com)."
+		).popup("open");
 		return false;
 	});
 
@@ -42,7 +45,7 @@ $(document).on("pagecreate", function() {
 <body>
 
 <div id="page-home" data-role="page">
-	<div class="ui-content" role="main">
+	<div class="ui-content" role="main" style="padding: 0;">
 		<img src="images/banner-1.jpg" alt="" class="banner" />
 		<div class="intro">
 			Welcome to experience Intel Real Sense together with Perceptual Computing Group! You may register with Intel email.
@@ -50,16 +53,14 @@ $(document).on("pagecreate", function() {
 		<form action="" method="post" class="form">
 			<div class="email">
 				<label for="email">My Intel email:</label>
-				<input type="email" name="email" id="email" value="" placeholder="请填写英特尔公司邮箱" />
+				<input type="email" name="email" id="email" value="" placeholder="username@intel.com" />
 			</div>
 			<div class="submit">
 				<input type="submit" name="" value="Register Now" data-icon="mail" data-inline="true" />
 			</div>
 		</form>
 		<img src="images/banner-2.jpg" alt="" class="footer" />
-		<div class="ui-content" id="dialog-result" data-role="popup" data-theme="a" data-transition="pop">
-			Succeed! Thanks!
-		</div>
+		<div class="ui-content" id="dialog-result" data-role="popup" data-theme="a" data-transition="pop"></div>
 	</div>
 </div>
 
