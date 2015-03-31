@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/*___________________________________4what____________________________________*/
+
+/**
+ * reset.css
+ *
+ * @author 4what
+ * @version 2014.12.03
+ */
+
+* {
+font-size: 100%;
+font-style: normal;
+margin: 0;
+padding: 0;
+}
+
+/* Image */
+img {
+border: none;
+vertical-align: middle;
+}
+
+/* List */
+ol, ul {
+list-style: none;
+}
+
+/* Table */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* Text */
+q:after, q:before {
+content: ""; /* for IE8, Std */
+}
+
+/* Outlines and the focus */
+:focus {
+outline: none; /* for IE8, Std */
+}
+
+/* Clear */
+.clear {
+zoom: 1; /* for IE7- */ /* hasLayout */
+}
+.clear:after {
+clear: both;
+content: ".";
+display: block;
+font-size: 0;
+height: 0;
+visibility: hidden;
+}
