@@ -66,8 +66,8 @@ width: 90%;
 overflow: hidden;
 }
 .email {
-float: right;
-width: 90%;
+/*float: right;*/
+/*width: 90%;*/
 }
 .submit .ui-btn-inline {
 float: right;
