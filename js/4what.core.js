@@ -61,8 +61,13 @@ $4what.extend("include", function(args) {
 
 				// v1.9 for jQuery 1.6+
 				//this.load(root + "js/jquery/ui/1.9.2/jquery-ui.min.css");
-				this.load(root + "js/jquery/ui/1.9.2/jquery-ui.min.js");
+				//this.load(root + "js/jquery/ui/1.9.2/jquery-ui.min.js");
 				//this.load(root + "js/jquery/ui/1.9.2/jquery.ui.datepicker-zh-CN.min.js");
+
+				// v1.10.4 for jQuery 1.6+
+				//this.load(root + "js/jquery/ui/1.10.4/jquery-ui.min.css");
+				this.load(root + "js/jquery/ui/1.10.4/jquery-ui.min.js");
+				//this.load(root + "js/jquery/ui/1.10.4/jquery.ui.datepicker-zh-CN.min.js");
 				break;
 
 			// jQuery lightBox
