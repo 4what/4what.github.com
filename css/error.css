@@ -31,7 +31,7 @@ color: #fff;
 /*--------------------------------------
   MAIN
 --------------------------------------*/
-#main {
+.main {
 position: absolute;
 right: 50px;
 text-align: right;
@@ -42,10 +42,10 @@ top: 50px;
 /*--------------------------------------
   HEADER
 --------------------------------------*/
-#header {
+.header {
 border: none;
 }
-#header p {
+.header p {
 color: #fff;
 }
 
@@ -58,7 +58,7 @@ color: #fff;
 /*--------------------------------------
   FOOTER
 --------------------------------------*/
-#footer {
+.footer {
 border: none;
 }
 

@@ -53,26 +53,26 @@ font-size: 12px;
 
 
 /*------------------------------------*/
-#body-home {
+.body-home {
 }
 
 
 /*--------------------------------------
   HEADER
 --------------------------------------*/
-#iframe-header {
+.iframe-header {
 height: 120px;
 width: 100%;
 }
 
-#body-header {
+.body-header {
 background: #333 url("../images/hr.png") repeat-x 0 bottom;
 border-top: 5px solid #555;
 height: 115px;
 text-align: center;
 }
 
-#header {
+.header {
 margin: 0 auto;
 position: relative;
 text-align: left;
@@ -144,7 +144,7 @@ width: 720px;
 /*--------------------------------------
   MAIN
 --------------------------------------*/
-#main {
+.main {
 text-align: center;
 }
 
@@ -152,21 +152,21 @@ text-align: center;
 /*--------------------------------------
   CONTAINER
 --------------------------------------*/
-#container {
+.container {
 }
 
 
 /*--------------------------------------
   CONTENT
 --------------------------------------*/
-#content {
+.content {
 margin: 0 auto;
 text-align: left;
 width: 720px;
 }
 
 /*------------------------------------*/
-#body-home #content {
+.body-home .content {
 text-align: center;
 width: 85%;
 }
@@ -252,26 +252,26 @@ width: 85%;
 	}
 
 	/*------------------------------------*/
-	#catalog {
+	.catalog {
 	margin: 20px auto 0 auto;
 	overflow: hidden;
 	text-align: left;
 	width: 720px;
 	}
-	#catalog .layer {
+	.catalog .layer {
 	clear: none;
 	float: left;
 	width: 240px;
 	}
-	#catalog .layer ul {
+	.catalog .layer ul {
 	line-height: 2em;
 	margin: 5px 0 0 0;
 	text-indent: 10px;
 	}
-	#catalog .layer ul li {
+	.catalog .layer ul li {
 	background: url("../images/bullet-square.png") no-repeat 0 center;
 	}
-	#catalog .layer ul em {
+	.catalog .layer ul em {
 	color: #08c;
 	font-variant: small-caps;
 	}
@@ -279,14 +279,14 @@ width: 85%;
 	/*--------------------------------------
 	  works.html
 	--------------------------------------*/
-	#works {
+	.works {
 	margin: 5px 0 0 0;
 	}
-	#works ul {
+	.works ul {
 	line-height: 2em;
 	text-indent: 10px;
 	}
-	#works ul li {
+	.works ul li {
 	background: url("../images/bullet-square.png") no-repeat 0 center;
 	}
 
@@ -316,77 +316,77 @@ width: 85%;
 	/*--------------------------------------
 	  about.html
 	--------------------------------------*/
-	#contact,
-	#hardware,
-	#about {
+	.contact,
+	.hardware,
+	.timeline {
 	margin: 5px 0 0 0;
 	}
 
-	#about dl {
+	.timeline dl {
 	}
-	#about dt {
+	.timeline dt {
 	font-weight: bold;
 	}
-	#about dd {
+	.timeline dd {
 	background: url("../images/bullet-circle.png") no-repeat 0 center;
 	text-indent: 10px;
 	}
 
-	#contact ol,
-	#hardware ol,
-	#about ol {
+	.contact ol,
+	.hardware ol,
+	.timeline ol {
 	float: left;
 	font-weight: bold;
 	line-height: 2em;
 	}
 
-	#contact ol li,
-	#hardware ol li {
+	.contact ol li,
+	.hardware ol li {
 	background: url("../images/bullet-square.png") no-repeat 0 10px;
 	text-indent: 10px;
 	}
 
-	#contact ul,
-	#hardware ul,
-	#about ul {
+	.contact ul,
+	.hardware ul,
+	.timeline ul {
 	float: left;
 	left: 10px;
 	line-height: 2em;
 	position: relative;
 	}
 
-	#about ul li {
+	.timeline ul li {
 	width: 100%;
 	}
 
 	/*--------------------------------------
 	  search.html
 	--------------------------------------*/
-	#iframe-search {
+	.iframe-search {
 	/*height: 150px;*/
 	height: 125px;
 	margin: 20px auto 0 auto;
 	width: 720px;
 	}
 
-	#body-search {
+	.body-search {
 	background: #222 url("../images/hr.png") repeat-x 0 0;
 	margin: 0 auto;
 	width: 680px;
 	}
 
-	#search {
+	.search {
 	float: right;
 	text-align: right;
 	width: 50%
 	}
-	#search h3.subheading {
+	.search h3.subheading {
 	border-left: none;
 	border-right: 10px solid #555;
 	padding: 0 10px 0 0;
 	text-indent: 0;
 	}
-	#search form {
+	.search form {
 	margin: 10px 0 0 0;
 	}
 
@@ -464,27 +464,27 @@ width: 85%;
 	/*--------------------------------------
 	  search-results.html
 	--------------------------------------*/
-	#search-results {
+	.search-results {
 	margin: 5px 0 0 0;
 	}
 
 	/*--------------------------------------
 	  sitemap.html
 	--------------------------------------*/
-	#sitemap {
+	.sitemap {
 	margin: 5px 0 0 0;
 	}
-	#sitemap dt {
+	.sitemap dt {
 	background: url("../images/bullet-square.png") no-repeat 0 center;
 	line-height: 3em;
 	text-indent: 10px;
 	}
-	#sitemap dd {
+	.sitemap dd {
 	overflow: auto;
 	text-indent: 10px;
 	width: 100%;
 	}
-	#sitemap dd a {
+	.sitemap dd a {
 	float: left;
 	}
 
@@ -492,53 +492,43 @@ width: 85%;
 /*--------------------------------------
   FOOTER
 --------------------------------------*/
-#iframe-footer {
+.iframe-footer {
 height: 50px;
 margin: 20px 0 0 0;
 width: 100%;
 }
 
-/*
-#body-works #iframe-footer,
-#body-home #iframe-footer {
-bottom: 0;
-left: 0;
-position: absolute;
-}
-*/
-
-#body-footer {
+.body-footer {
 background: #333 url("../images/hr.png") repeat-x 0 0;
 text-align: center;
 }
 
-#footer {
+.footer {
 margin: 0 auto;
 position: relative;
 width: 720px;
 }
-#footer a {
+.footer a {
 text-decoration: underline;
 }
 
 	/*------------------------------------*/
-	#copyright {
+	.copyright {
 	float: right;
 	line-height: 50px;
 	}
 
-	#valid {
+	.valid {
 	color: #808080;
 	}
-	#valid a {
+	.valid a {
 	color: #808080;
 	}
-	#valid a:hover {
+	.valid a:hover {
 	color: #fff;
 	}
 
-	/*------------------------------------*/
-	#util {
+	.tools {
 	float: left;
 	line-height: 50px;
 	}

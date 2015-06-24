@@ -45,7 +45,7 @@ font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft
 /*--------------------------------------
   MAIN
 --------------------------------------*/
-#main {
+.main {
 width: 750px;
 }
 
@@ -53,7 +53,7 @@ width: 750px;
 /*--------------------------------------
   CONTAINER
 --------------------------------------*/
-#container {
+.container {
 float: right;
 width: 670px;
 }
@@ -62,10 +62,10 @@ width: 670px;
 /*--------------------------------------
   HEADER
 --------------------------------------*/
-#header {
+.header {
 border-bottom: 1px solid #b6bcc6;
 }
-#header p {
+.header p {
 color: #787878;
 font-size: 11px;
 margin: 5px 0 0 0;
@@ -83,7 +83,7 @@ text-align: right;
 /*--------------------------------------
   CONTENT
 --------------------------------------*/
-#content {
+.content {
 margin: 0 auto;
 }
 
@@ -101,7 +101,7 @@ margin: 0 auto;
 /*--------------------------------------
   FOOTER
 --------------------------------------*/
-#footer {
+.footer {
 border-top: 1px solid #b6bcc6;
 font-size: 11px;
 margin: 15px auto 0 auto;
