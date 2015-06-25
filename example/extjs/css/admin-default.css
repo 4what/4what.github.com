@@ -53,7 +53,7 @@ font-family: sans-serif !important;
 /* <a href="" target="_blank" class="external" title="浏览"></a> */
 a.external {
 background: url("../images/external-link-ltr-icon.png") no-repeat right center;
-padding: 0 13px 0 0;
+padding-right: 13px;
 }
 
 
