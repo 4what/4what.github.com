@@ -16,7 +16,7 @@ background: #f4f4f4;
 color: #575757;
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 14px;
-margin: 20px 0 0 0
+margin-top: 20px;
 /*
 word-break: break-all;
 word-wrap: break-word;
@@ -68,7 +68,7 @@ border-bottom: 1px solid #b6bcc6;
 .header p {
 color: #787878;
 font-size: 11px;
-margin: 5px 0 0 0;
+margin-top: 5px;
 text-align: right;
 }
 
@@ -90,11 +90,11 @@ margin: 0 auto;
 	/*------------------------------------*/
 	ul {
 	list-style: disc inside;
-	margin: 15px 0 0 0;
+	margin-top: 15px;
 	}
 	ul li {
 	line-height: 2em;
-	margin: 0 0 0 20px;
+	margin-left: 20px;
 	}
 
 
@@ -105,6 +105,6 @@ margin: 0 auto;
 border-top: 1px solid #b6bcc6;
 font-size: 11px;
 margin: 15px auto 0 auto;
-padding: 15px 0 0 0;
+padding-top: 15px;
 text-align: right;
 }

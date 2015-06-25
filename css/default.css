@@ -110,7 +110,7 @@ width: 720px;
 	float: left;
 	height: 25px;
 	line-height: 25px;
-	margin: 0 0 0 5px;
+	margin-left: 5px;
 	padding: 0 15px;
 	}
 	#navbar a:hover {
@@ -176,7 +176,7 @@ width: 85%;
 	font-family: Georgia;
 	font-size: 24px;
 	font-variant: small-caps;
-	margin: 20px 0 0 0;
+	margin-top: 20px;
 	}
 	h2.heading span {
 	border-bottom: 1px dashed;
@@ -186,7 +186,7 @@ width: 85%;
 	border-left: 10px solid #555;
 	font-size: 16px;
 	font-variant: small-caps;
-	margin: 20px 0 0 0;
+	margin-top: 20px;
 	text-indent: 10px;
 	}
 	h3.subheading span {
@@ -205,7 +205,7 @@ width: 85%;
 	--------------------------------------*/
 	#overview {
 	font-family: "Comic Sans MS", "Lantinghei SC", "Microsoft YaHei";
-	margin: 20px 0 0 0;
+	margin-top: 20px;
 	}
 	#overview a {
 	}
@@ -265,7 +265,7 @@ width: 85%;
 	}
 	.catalog .layer ul {
 	line-height: 2em;
-	margin: 5px 0 0 0;
+	margin-top: 5px;
 	text-indent: 10px;
 	}
 	.catalog .layer ul li {
@@ -280,7 +280,7 @@ width: 85%;
 	  works.html
 	--------------------------------------*/
 	.works {
-	margin: 5px 0 0 0;
+	margin-top: 5px;
 	}
 	.works ul {
 	line-height: 2em;
@@ -299,7 +299,7 @@ width: 85%;
 	}
 	.gallery li {
 	float: left;
-	margin: 10px 0 0 0;
+	margin-top: 10px;
 	width: 25%;
 	}
 	.gallery a img {
@@ -319,7 +319,7 @@ width: 85%;
 	.contact,
 	.hardware,
 	.timeline {
-	margin: 5px 0 0 0;
+	margin-top: 5px;
 	}
 
 	.timeline dl {
@@ -383,23 +383,23 @@ width: 85%;
 	.search h3.subheading {
 	border-left: none;
 	border-right: 10px solid #555;
-	padding: 0 10px 0 0;
+	padding-right: 10px;
 	text-indent: 0;
 	}
 	.search .form {
-	margin: 10px 0 0 0;
+	margin-top: 5px;
 	}
 
 	/*------------------------------------*/
 	#subnav {
 	float: left;
-	margin: 20px 0 0 0;
+	margin-top: 20px;
 	width: 250px;
 	}
 	#subnav ul li {
 	height: 20px;
 	line-height: 20px;
-	margin: 0 0 2px 0;
+	margin-bottom: 2px;
 	* margin-bottom: -2px;
 	}
 	#subnav a {
@@ -465,14 +465,14 @@ width: 85%;
 	  search-results.html
 	--------------------------------------*/
 	.search-results {
-	margin: 5px 0 0 0;
+	margin-top: 5px;
 	}
 
 	/*--------------------------------------
 	  sitemap.html
 	--------------------------------------*/
 	.sitemap {
-	margin: 5px 0 0 0;
+	margin-top: 5px;
 	}
 	.sitemap dt {
 	background: url("../images/bullet-square.png") no-repeat 0 center;
@@ -494,7 +494,7 @@ width: 85%;
 --------------------------------------*/
 .iframe-footer {
 height: 50px;
-margin: 20px 0 0 0;
+margin-top: 20px;
 width: 100%;
 }
 

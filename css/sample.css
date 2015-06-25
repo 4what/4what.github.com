@@ -75,7 +75,7 @@ width: 750px;
 
 	/*------------------------------------*/
 	.catalog {
-	margin: 20px 0 0 0;
+	margin-top: 20px;
 	overflow: hidden;
 	}
 	.catalog ul li {
@@ -113,7 +113,7 @@ width: 750px;
 	display: block;
 	font-size: 10px;
 	font-weight: normal;
-	margin: 3px 0 0 0;
+	margin-top: 3px;
 	}
 	.catalog span strong {
 	text-decoration: line-through;
@@ -147,16 +147,16 @@ h2 {
 border-bottom: 1px solid #808080;
 font-size: 22px;
 line-height: 1.5em;
-margin: 0 0 10px 0;
+margin-bottom: 10px;
 }
 h3 {
 font-size: 16px;
-margin: 0 0 5px 0;
+margin-bottom: 5px;
 }
 h5 {
 color: navy;
 font-size: 14px;
-margin: 0 0 5px 0;
+margin-bottom: 5px;
 }
 h5 a {
 color: navy;
@@ -164,14 +164,14 @@ color: navy;
 h6 {
 color: maroon;
 font-size: 14px;
-margin: 0 0 5px 0;
+margin-bottom: 5px;
 }
 h6 a {
 color: maroon;
 }
 
 p {
-margin: 0 0 10px 0;
+margin-bottom: 10px;
 }
 
 samp,
@@ -182,7 +182,7 @@ border-color: #ddd #ddd #ddd #808080;
 border-style: solid;
 border-width: 1px 1px 1px 5px;
 font-family: "Courier New", monospace;
-margin: 0 0 10px 0;
+margin-bottom: 10px;
 padding: 20px;
 }
 xmp {

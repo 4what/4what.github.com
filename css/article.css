@@ -124,7 +124,7 @@ width: 95%;
 
 /* Structural */
 blockquote {
-margin: 5px 0 0 0;
+margin-top: 5px;
 text-indent: 1em;
 }
 
@@ -133,7 +133,7 @@ border-bottom: 1px solid #808080;
 color: #005a9c;
 font-size: 22px;
 line-height: 1.5em;
-margin: 20px 0 0 0;
+margin-top: 20px;
 }
 h2 a {
 cursor: pointer;
@@ -145,7 +145,7 @@ font-size: 14px;
 h3 {
 color: #aa7;
 font-size: 16px;
-margin: 10px 0 0 0;
+margin-top: 10px;
 }
 h3:first-letter {
 font-size: 22px;
@@ -156,13 +156,13 @@ border-bottom: 1px dashed #aa7;
 }
 
 p {
-margin: 5px 0 0 0;
+margin-top: 5px;
 }
 
 pre,
 xmp {
 font-family: "Courier New", monospace;
-margin: 5px 0 0 0;
+margin-top: 5px;
 }
 
 pre span {
@@ -171,7 +171,7 @@ text-decoration: line-through;
 
 /* List */
 dl {
-margin: 5px 0 0 0;
+margin-top: 5px;
 }
 dt {
 }
@@ -181,7 +181,7 @@ dd {
 /* Table */
 table {
 border: 1px solid #808080;
-margin: 5px 0 0 0;
+margin-top: 5px;
 }
 caption {
 font-weight: bold;
@@ -232,7 +232,7 @@ font-size: 100%\0;
 --------------------------------------*/
 .iframe-footer {
 height: 30px;
-margin: 20px 0 0 0;
+margin-top: 20px;
 width: 100%;
 }
 
