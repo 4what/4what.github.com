@@ -295,13 +295,7 @@ swiper = new Swiper(".swiper-container", {
 			default:
 				break;
 		}
-		var arrow = $("#arrow");
-		if (swiper.activeIndex >= 5) {
-			arrow.show();
-		}
-		if (swiper.isEnd) {
-			arrow.hide();
-		}
+		$("#arrow").toggle(!(swiper.activeIndex < 5 || swiper.isEnd));
 	}
 });
 </script>

@@ -92,15 +92,7 @@ transform: translate(-50%, -50%);
 position: absolute;
 left: 50%;
 top: 50%;
-}
 
-.subtitle {
-display: none;
-font-size: 16px;
-line-height: 1.5em;
-}
-
-.swiper-slide img.photo {
 /*-webkit-animation: photo 1.2s ease-in-out 0s 1;*/
 /*animation: photo 1.2s ease-in-out 0s 1;*/
 /*
@@ -139,6 +131,7 @@ width: 60%;
 }
 */
 
+/**/
 #arrow {
 bottom: 16px;
 display: none;
@@ -183,6 +176,12 @@ width: 20px;
 	}
 }
 
+/**/
+.subtitle {
+display: none;
+font-size: 16px;
+line-height: 1.5em;
+}
 
 /**/
 .overlay {
