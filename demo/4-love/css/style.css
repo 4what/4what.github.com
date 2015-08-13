@@ -137,11 +137,11 @@ width: 80%;
 }
 
 /**/
-.animation-zoom {
--webkit-animation: zoom 4s ease-in-out 0s;
-animation: zoom 4s ease-in-out 0s;
+.animation-us {
+-webkit-animation: us 4s ease-in-out 0s;
+animation: us 4s ease-in-out 0s;
 }
-@-webkit-keyframes zoom {
+@-webkit-keyframes us {
 	from {
 	opacity: 0;
 	-webkit-transform: scale3d(0.2, 0.2, 0.2);
@@ -151,7 +151,7 @@ animation: zoom 4s ease-in-out 0s;
 	opacity: 1
 	}
 }
-@keyframes zoom {
+@keyframes us {
 	from {
 	opacity: 0;
 	-webkit-transform: scale3d(0.2, 0.2, 0.2);

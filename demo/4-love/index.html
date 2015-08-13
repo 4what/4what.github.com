@@ -160,7 +160,7 @@ $(document).one("touchstart", function() {
 
 
 var album = "";
-for (var i = 0; i < 2; i++) {
+for (var i = 0; i < 86; i++) {
 	album += '<div class="swiper-slide"><img data-src="images/p-' + (i + 1) + '.jpg" alt="" class="photo swiper-lazy" /><div class="swiper-lazy-preloader"></div></div>';
 }
 $(".swiper-slide:last").before(album);
@@ -268,7 +268,7 @@ swiper = new Swiper(".swiper-container", {
 		if (swiper.isEnd) {
 			subtitle.eq(4).delay(1000).fadeIn(1000 * 4).delay(1000).fadeOut(1000 * 2, function() {
 				setTimeout(function() {
-					$("#us").show(0).addClass("animation-zoom");
+					$("#us").show(0).addClass("animation-us");
 				}, 1000 * 0.5);
 			});
 		}
