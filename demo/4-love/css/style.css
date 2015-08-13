@@ -137,6 +137,33 @@ width: 80%;
 }
 
 /**/
+.animation-zoom {
+-webkit-animation: zoom 4s ease-in-out 0s;
+animation: zoom 4s ease-in-out 0s;
+}
+@-webkit-keyframes zoom {
+	from {
+	opacity: 0;
+	-webkit-transform: scale3d(0.2, 0.2, 0.2);
+	transform: scale3d(0.2, 0.2, 0.2);
+	}
+	to {
+	opacity: 1
+	}
+}
+@keyframes zoom {
+	from {
+	opacity: 0;
+	-webkit-transform: scale3d(0.2, 0.2, 0.2);
+	-ms-transform: scale3d(0.2, 0.2, 0.2);
+	transform: scale3d(0.2, 0.2, 0.2);
+	}
+	to {
+	opacity: 1
+	}
+}
+
+/**/
 #arrow {
 bottom: 16px;
 display: none;

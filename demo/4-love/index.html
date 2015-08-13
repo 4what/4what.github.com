@@ -8,7 +8,7 @@
 <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
 
 <link rel="stylesheet" type="text/css" href="js/swiper/3.1.0/swiper.min.css" />
-<link rel="stylesheet" type="text/css" href="js/swiper/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="js/swiper/plugin/animate.min.css" />
 
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -17,17 +17,16 @@
 <div class="swiper-container">
 	<div class="swiper-wrapper">
 		<div class="swiper-slide">
-			<div>
-				<div class="subtitle" style="font-size: 18px; font-weight: bold;">
-					本故事并非虚构<br />
-					如有雷同纯属巧合
-				</div>
-				<div class="subtitle">
-					爱一个人的同时就赋予了对方伤害你的权力
-				</div>
-				<div class="subtitle">
-					伤得痛了哭得累了之后…
-				</div>
+			<!--<img src="images/us.jpg" alt="" id="us" class="zoom" />-->
+			<div class="subtitle" style="font-size: 18px; font-weight: bold;">
+				本故事并非虚构<br />
+				如有雷同纯属巧合
+			</div>
+			<div class="subtitle">
+				爱一个人的同时就赋予了对方伤害你的权力
+			</div>
+			<div class="subtitle">
+				伤得痛了哭得累了之后…
 			</div>
 		</div>
 		<div class="swiper-slide">
@@ -129,34 +128,17 @@
 			</div>
 		</div>
 		<div class="swiper-slide">
-			<div>
-				<div class="subtitle">
-					……
-				</div>
+			<div class="subtitle">
+				却如何抹掉脑海深处的刻骨铭心…
 			</div>
 		</div>
 		<div class="swiper-slide">
-			<div>
-				<div class="subtitle">
-					我们…
-				</div>
-				<img src="images/us.jpg" alt="" id="us" />
+			<!--<div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="4s" swiper-animate-delay="1s"><img src="images/us.jpg" alt="" id="us" /></div>-->
+			<div class="subtitle">
+				我们…
 			</div>
+			<img src="images/us.jpg" alt="" id="us" />
 		</div>
-<!--
-		<div class="swiper-slide">
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="2s"><img src="images/p-1.jpg" alt="" class="photo" style="left: 0; top: 0; -webkit-transform: rotate(15deg); transform: rotate(15deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="3s"><img src="images/p-2.jpg" alt="" class="photo" style="left: 0; top: 10px; -webkit-transform: rotate(25deg); transform: rotate(25deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="4s"><img src="images/p-3.jpg" alt="" class="photo" style="left: 0; top: 20px; -webkit-transform: rotate(35deg); transform: rotate(35deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="5s"><img src="images/p-4.jpg" alt="" class="photo" style="left: 0; top: 30px; -webkit-transform: rotate(45deg); transform: rotate(45deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="6s"><img src="images/p-5.jpg" alt="" class="photo" style="left: 0; top: 40px; -webkit-transform: rotate(55deg); transform: rotate(55deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="7s"><img src="images/p-6.jpg" alt="" class="photo" style="left: 0; top: 50px; -webkit-transform: rotate(65deg); transform: rotate(65deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="8s"><img src="images/p-7.jpg" alt="" class="photo" style="left: 0; top: 60px; -webkit-transform: rotate(75deg); transform: rotate(75deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="9s"><img src="images/p-8.jpg" alt="" class="photo" style="left: 0; top: 70px; -webkit-transform: rotate(85deg); transform: rotate(85deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="10s"><img src="images/p-9.jpg" alt="" class="photo" style="left: 0; top: 80px; -webkit-transform: rotate(95deg); transform: rotate(95deg);" /></div>
-			<div class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.4s" swiper-animate-delay="11s"><img src="images/p-10.jpg" alt="" class="photo" style="left: 0; top: 90px; -webkit-transform: rotate(105deg); transform: rotate(105deg);" /></div>
-		</div>
--->
 	</div>
 	<!--<div class="swiper-pagination"></div>-->
 	<div id="arrow"><span></span></div>
@@ -169,7 +151,7 @@
 <script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="js/swiper/3.1.0/swiper.jquery.min.js"></script>
 
-<script type="text/javascript" src="js/swiper/swiper.animate1.0.2.min.js"></script>
+<script type="text/javascript" src="js/swiper/plugin/swiper.animate1.0.2.min.js"></script>
 
 <script type="text/javascript">
 $(document).one("touchstart", function() {
@@ -178,7 +160,7 @@ $(document).one("touchstart", function() {
 
 
 var album = "";
-for (var i = 0; i < 86; i++) {
+for (var i = 0; i < 2; i++) {
 	album += '<div class="swiper-slide"><img data-src="images/p-' + (i + 1) + '.jpg" alt="" class="photo swiper-lazy" /><div class="swiper-lazy-preloader"></div></div>';
 }
 $(".swiper-slide:last").before(album);
@@ -247,7 +229,7 @@ swiper = new Swiper(".swiper-container", {
 						setTimeout(function() {
 							$(".actionsheet", "#contact-actionsheet").animate({
 								"bottom": 0
-							}, 1000 * 0.2, function() {
+							}, 1000 * 0.15, function() {
 								setTimeout(function() {
 									$("#contact-actionsheet-block-button").addClass("selected");
 									setTimeout(function() {
@@ -286,7 +268,7 @@ swiper = new Swiper(".swiper-container", {
 		if (swiper.isEnd) {
 			subtitle.eq(4).delay(1000).fadeIn(1000 * 4).delay(1000).fadeOut(1000 * 2, function() {
 				setTimeout(function() {
-					$("#us").fadeIn(1000 * 4);
+					$("#us").show(0).addClass("animation-zoom");
 				}, 1000 * 0.5);
 			});
 		}
