@@ -87,37 +87,6 @@ left: 50%;
 top: 50%;
 }
 
-/*
-img.photo {
--webkit-animation: photo 1.2s ease-in-out 0s 1;
-animation: photo 1.2s ease-in-out 0s 1;
-}
-@-webkit-keyframes photo {
-	from {
-	opacity: 0;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	}
-	to {
-	opacity: 1;
-	-webkit-transform: translate3d(1000px);
-	transform: translate3d(1000px);
-	}
-}
-@keyframes photo {
-	from {
-	opacity: 0;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translateZ(0, 0, 0);
-	}
-	to {
-	opacity: 1;
-	-webkit-transform: translate3d(1000px);
-	transform: translateZ(1000px);
-	}
-}
-*/
-
 /**/
 .subtitle {
 display: none;
@@ -131,21 +100,19 @@ border-color: #fff;
 border-style: solid;
 border-width: 8px 8px 24px 8px;
 display: none;
+-ms-transform: rotate(-15deg);
 -webkit-transform: rotate(-15deg);
 transform: rotate(-15deg);
 width: 80%;
 }
-
-/**/
 .animation-us {
--webkit-animation: us 4s ease-in-out 0s;
-animation: us 4s ease-in-out 0s;
+-webkit-animation: us 4s ease-in-out 0s 1 normal none;
+animation: us 4s ease-in-out 0s 1 normal none;
 }
 @-webkit-keyframes us {
 	from {
 	opacity: 0;
-	-webkit-transform: scale3d(0.2, 0.2, 0.2);
-	transform: scale3d(0.2, 0.2, 0.2);
+	-webkit-transform: scale(0.2, 0.2);
 	}
 	to {
 	opacity: 1
@@ -154,9 +121,7 @@ animation: us 4s ease-in-out 0s;
 @keyframes us {
 	from {
 	opacity: 0;
-	-webkit-transform: scale3d(0.2, 0.2, 0.2);
-	-ms-transform: scale3d(0.2, 0.2, 0.2);
-	transform: scale3d(0.2, 0.2, 0.2);
+	transform: scale(0.2, 0.2);
 	}
 	to {
 	opacity: 1
@@ -172,8 +137,8 @@ width: 100%;
 z-index: 1;
 }
 #arrow span {
--webkit-animation: arrow 1.2s ease-in-out 0s infinite;
-animation: arrow 1.2s ease-in-out 0s infinite;
+-webkit-animation: arrow 1.8s ease-in-out 0s infinite normal none;
+animation: arrow 1.8s ease-in-out 0s infinite normal none;
 background: url("../images/arrow-1.png") no-repeat 0 0;
 background-size: contain;
 display: block;
@@ -188,12 +153,10 @@ width: 21px;
 	50% {
 	opacity: 1;
 	-webkit-transform: translate(0, -10px);
-	transform: translate(0, -10px);
 	}
 	100% {
 	opacity: 0;
 	-webkit-transform: translate(0, -10px);
-	transform: translate(0, -10px);
 	}
 }
 @keyframes arrow {
@@ -202,12 +165,10 @@ width: 21px;
 	}
 	50% {
 	opacity: 1;
-	-webkit-transform: translate(0, -10px);
 	transform: translate(0, -10px);
 	}
 	100% {
 	opacity: 0;
-	-webkit-transform: translate(0, -10px);
 	transform: translate(0, -10px);
 	}
 }
