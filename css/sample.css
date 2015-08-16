@@ -107,16 +107,12 @@ width: 750px;
 	display: block;
 	margin: 15px 5px 3px 5px;
 	}
-	.catalog span strong,
 	.catalog span em {
 	color: #999;
 	display: block;
 	font-size: 10px;
 	font-weight: normal;
 	margin-top: 3px;
-	}
-	.catalog span strong {
-	text-decoration: line-through;
 	}
 
 	.catalog ol {
@@ -145,6 +141,7 @@ width: 750px;
 /* Structural */
 h2 {
 border-bottom: 1px solid #808080;
+clear: both;
 font-size: 22px;
 line-height: 1.5em;
 margin-bottom: 10px;

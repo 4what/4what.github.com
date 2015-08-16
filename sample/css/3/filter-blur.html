@@ -15,32 +15,41 @@
 
 <h2>Specification</h2>
 	<p>
-		<sup><a href="http://dev.w3.org/fxtf/filters/#funcdef-blur">[1]</a><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter#blur%28%29">[2]</a></sup>
+		<sup><a href="http://www.w3.org/TR/filter-effects/#funcdef-blur">[1]</a><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter#blur%28%29">[2]</a></sup>
+	</p>
+
+<h2>Browser Compatibility</h2>
+	<p>
+		<del>IE</del>
 	</p>
 
 <h2>Syntax</h2>
 	<textarea cols="" rows="" name="code" class="css">
 	<style type="text/css">
-	#blur {
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
+	#box {
+	-webkit-filter: blur(10px); /* for Chrome, Opera, Safari */
+	filter: blur(10px); /* for Firefox */
 	}
 	</style>
 	</textarea>
 
 	<textarea cols="" rows="" name="code" class="html">
-	<img src="../../../images/100x100.png" alt="" id="blur" />
+	<div id="box">
+		<img src="../../../images/100x100.png" alt="" />
+	</div>
 	</textarea>
 
 <h2>Example</h2>
 	<style type="text/css">
-	#blur {
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
+	#box {
+	-webkit-filter: blur(10px); /* for Chrome, Opera, Safari */
+	filter: blur(10px); /* for Firefox */
 	}
 	</style>
 
-	<img src="../../../images/100x100.png" alt="" id="blur" />
+	<div id="box">
+		<img src="../../../images/100x100.png" alt="" />
+	</div>
 
 <script type="text/javascript" src="../../../js/analytics.js"></script>
 </body>

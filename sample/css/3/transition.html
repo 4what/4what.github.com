@@ -14,41 +14,61 @@
 <body>
 
 <h2>Specification</h2>
-	<p></p>
+	<p>
+		<sup><a href="http://www.w3.org/TR/css3-transitions/">[1]</a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">[2]</a></sup>
+	</p>
+
+<h2>Browser Compatibility</h2>
+	<p>
+		IE10+, Std
+	</p>
 
 <h2>Syntax</h2>
 	<textarea cols="" rows="" name="code" class="css">
 	<style type="text/css">
 	#box {
-	border: 2px solid red;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	width: 10em;
+	background: #000;
+	height: 100px;
+	transition: all 1s ease-in-out 0s; /* for IE10+, Std */
+	width: 100px;
+	}
+	#box:hover {
+	background: red;
+	border-radius: 10px;
+	height: 50px;
+	opacity: 0.1;
+	-webkit-transform: rotate(360deg); /* for Safari */
+	transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+	width: 50px;
 	}
 	</style>
 	</textarea>
 
 	<textarea cols="" rows="" name="code" class="html">
-	<div id="box">
-		1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
-	</div>
+	<div id="box"></div>
 	</textarea>
 
 <h2>Example</h2>
 	<style type="text/css">
 	#box {
-	border: 2px solid red;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	width: 10em;
+	background: #000;
+	height: 100px;
+	transition: all 1s ease-in-out 0s; /* for IE10+, Std */
+	width: 100px;
+	}
+	#box:hover {
+	background: red;
+	border-radius: 10px;
+	height: 50px;
+	opacity: 0.5;
+	-ms-transform: rotate(360deg); /* for IE9+ */
+	-webkit-transform: rotate(360deg); /* for Safari */
+	transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+	width: 50px;
 	}
 	</style>
 
-	<div id="box">
-		1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
-	</div>
+	<div id="box"></div>
 
 <script type="text/javascript" src="../../../js/analytics.js"></script>
 </body>

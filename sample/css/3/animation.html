@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - Cascading Style Sheets</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
+<script type="text/javascript" src="../../../js/util.js"></script>
+<script type="text/javascript" src="../../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2>Specification</h2>
+	<p>
+		<sup><a href="http://www.w3.org/TR/css3-animations/">[1]</a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">[2]</a></sup>
+	</p>
+
+<h2>Browser Compatibility</h2>
+	<p>
+		IE10+, Std
+	</p>
+
+<h2>Syntax</h2>
+	<textarea cols="" rows="" name="code" class="css">
+	<style type="text/css">
+	#box {
+	-webkit-animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for Safari */
+	animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for Chrome, Firefox, IE10+, Opera */
+	background: #000;
+	height: 100px;
+	width: 100px;
+	}
+	@-webkit-keyframes name {
+		from {
+		background: red;
+		}
+		50% {
+		background: green;
+		}
+		to {
+		background: blue;
+		border-radius: 10px;
+		height: 50px;
+		opacity: 0.5;
+		transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+		width: 50px;
+		}
+	}
+	@keyframes name {
+		from {
+		background: red;
+		}
+		50% {
+		background: green;
+		}
+		to {
+		background: blue;
+		border-radius: 10px;
+		height: 50px;
+		opacity: 0.5;
+		transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+		width: 50px;
+		}
+	}
+	</style>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="html">
+	<div id="box"></div>
+	<ul id="output"></ul>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	/**
+	 * https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_animations#Adding_the_animation_event_listeners
+	 * for Chrome, Firefox, IE10+, Opera
+	 */
+	function listener(e) {
+		var l = document.createElement("li");
+		switch (e.type) {
+			case "animationstart":
+				l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
+				break;
+			case "animationend":
+				l.innerHTML = "Ended: elapsed time is " + e.elapsedTime;
+				break;
+			case "animationiteration":
+				l.innerHTML = "New loop started at time " + e.elapsedTime;
+				break;
+		}
+		document.getElementById("output").appendChild(l);
+	}
+	var e = document.getElementById("box");
+	e.addEventListener("animationstart", listener, false);
+	e.addEventListener("animationend", listener, false);
+	e.addEventListener("animationiteration", listener, false);
+	</script>
+	</textarea>
+
+<h2>Example</h2>
+	<style type="text/css">
+	#box {
+	-webkit-animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for Safari */
+	animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for Chrome, Firefox, IE10+, Opera */
+	background: #000;
+	height: 100px;
+	width: 100px;
+	}
+	@-webkit-keyframes name {
+		from {
+		background: red;
+		}
+		50% {
+		background: green;
+		}
+		to {
+		background: blue;
+		border-radius: 10px;
+		height: 50px;
+		opacity: 0.5;
+		transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+		width: 50px;
+		}
+	}
+	@keyframes name {
+		from {
+		background: red;
+		}
+		50% {
+		background: green;
+		}
+		to {
+		background: blue;
+		border-radius: 10px;
+		height: 50px;
+		opacity: 0.5;
+		transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+		width: 50px;
+		}
+	}
+	</style>
+
+	<div id="box"></div>
+	<ul id="output"></ul>
+
+	<script type="text/javascript">
+	/**
+	 * https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_animations#Adding_the_animation_event_listeners
+	 * for Chrome, Firefox, IE10+, Opera
+	 */
+	function listener(e) {
+		var l = document.createElement("li");
+		switch (e.type) {
+			case "animationstart":
+				l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
+				break;
+			case "animationend":
+				l.innerHTML = "Ended: elapsed time is " + e.elapsedTime;
+				break;
+			case "animationiteration":
+				l.innerHTML = "New loop started at time " + e.elapsedTime;
+				break;
+		}
+		document.getElementById("output").appendChild(l);
+	}
+	var e = document.getElementById("box");
+	e.addEventListener("animationstart", listener, false);
+	e.addEventListener("animationend", listener, false);
+	e.addEventListener("animationiteration", listener, false);
+	</script>
+
+<script type="text/javascript" src="../../../js/analytics.js"></script>
+</body>
+</html>

@@ -20,10 +20,12 @@
 	<textarea cols="" rows="" name="code" class="css">
 	<style type="text/css">
 	#zoomout img {
-	_ height: expression(this.height > 50 ? 50 : "inherit"); /* for IE6 */
 	max-height: 50px; /* for IE7+, Std */
 	max-width: 50px; /* for IE7+, Std */
-	_ width: expression(this.width > 50 && this.width > this.height ? 50 : "inherit"); /* for IE6 */
+	}
+	* html #zoomout img {
+	height: expression(this.height > 50 ? 50 : "inherit"); /* for IE6 */
+	width: expression(this.width > 50 && this.width > this.height ? 50 : "inherit"); /* for IE6 */
 	}
 	</style>
 	</textarea>
@@ -37,10 +39,12 @@
 <h2>Example</h2>
 	<style type="text/css">
 	#zoomout img {
-	_ height: expression(this.height > 50 ? 50 : "inherit"); /* for IE6 */
 	max-height: 50px; /* for IE7+, Std */
 	max-width: 50px; /* for IE7+, Std */
-	_ width: expression(this.width > 50 && this.width > this.height ? 50 : "inherit"); /* for IE6 */
+	}
+	* html #zoomout img {
+	height: expression(this.height > 50 ? 50 : "inherit"); /* for IE6 */
+	width: expression(this.width > 50 && this.width > this.height ? 50 : "inherit"); /* for IE6 */
 	}
 	</style>
 
