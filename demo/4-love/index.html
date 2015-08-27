@@ -154,13 +154,18 @@
 <script type="text/javascript" src="js/swiper/plugin/swiper.animate1.0.2.min.js"></script>
 
 <script type="text/javascript">
+var bmg = document.getElementById("bgm");
+bmg.play();
+
 $(document).one("touchstart", function() {
-	document.getElementById("bgm").play();
+	if (bmg.paused) {
+		bmg.play();
+	}
 });
 
 
 var album = "";
-for (var i = 0; i < 86; i++) {
+for (var i = 0; i < 83; i++) {
 	album += '<div class="swiper-slide"><img data-src="images/p-' + (i + 1) + '.jpg" alt="" class="photo swiper-lazy" /><div class="swiper-lazy-preloader"></div></div>';
 }
 $(".swiper-slide:last").before(album);
