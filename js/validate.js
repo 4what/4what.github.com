@@ -2,7 +2,7 @@
  * Validate
  *
  * @author 4what
- * @version 2012.06.22
+ * @version 2015.09.11
  */
 (function() {
 
@@ -12,7 +12,7 @@ var Validate = window["Validate"] = {
 		return /^[\u0391-\uFFE5]+$/.test(value);
 	},
 
-	// ID card
+	// id card
 	isIdCard: function(number) {
 		var date, Ai;
 		var verify = "10x98765432";
