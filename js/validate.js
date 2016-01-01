@@ -2,7 +2,7 @@
  * Validate
  *
  * @author 4what
- * @version 2015.09.11
+ * @version 2016.01.01
  */
 (function() {
 
@@ -39,7 +39,7 @@ var Validate = window["Validate"] = {
 
 	// mobile phone
 	isMobile: function(value) {
-		return /^((\(\d{2,3}\))|(\d{3}\-))?((13\d{9})|(15\d{9})|(18[0123456789]\d{8}))$/.test(value);
+		return /^1\d{10}$/.test(value);
 	},
 
 	// postal code
