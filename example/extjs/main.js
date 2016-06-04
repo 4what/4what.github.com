@@ -927,6 +927,7 @@
 									"form-multiselect-id", // 自定义
 									combo.findRecord(combo.valueField, value)
 								);
+								combo.reset();
 							}
 						}
 					}
