@@ -4,7 +4,7 @@
  * UtilExt
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2014.10.17
+ * @version 1.1 Build 2016.06.06
  * @requires ExtJS 3.2+
  */
 (function() {
@@ -351,13 +351,14 @@ var UtilExt = $ext = {
 		 */
 		load: function(multiselect, data) {
 			Ext.select(multiselect).each(function(element, composite, index) {
-				var store = Ext.getCmp(element.id).store;
-				if (store.proxy !== undefined) {
-					store.load({
+				var item = Ext.getCmp(element.id);
+				if (item.store.proxy !== undefined) {
+					item.store.load({
 						params: /number|string/.test(typeof data) ? {
 							id: data
 						} : data
 					});
+					item.clearInvalid();
 				}
 			});
 		},
