@@ -4,7 +4,7 @@
  * UtilExt
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2016.06.06
+ * @version 1.1 Build 2016.06.07
  * @requires ExtJS 3.2+
  */
 (function() {
@@ -320,6 +320,7 @@ var UtilExt = $ext = {
 			}
 			if (!exist) {
 				store.add(record);
+				multiselect.clearInvalid();
 			}
 		},
 		/**
