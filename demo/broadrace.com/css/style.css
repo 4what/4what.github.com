@@ -76,7 +76,6 @@ width: 100%;
 }
 
 .header h1 {
-/*background: url("../images/logo.png") no-repeat 0 center;*/
 float: left;
 height: 100%;
 left: 5%;
@@ -208,6 +207,9 @@ display: none;
 	.service ul h3 {
 	margin-top: 50px;
 	}
+	.service ul h3.highlight {
+	color: #2e6299;
+	}
 	.service ul span {
 	border-bottom: 2px solid #666;
     display: block;
@@ -221,7 +223,13 @@ display: none;
 	text-align: left;
 	}
 	.service ul img {
+	-webkit-filter: grayscale(100%); /* for Chrome, Opera, Safari */
+	filter: grayscale(100%); /* for Firefox */
 	max-width: 90%;
+	}
+	.service ul img.highlight {
+	-webkit-filter: grayscale(0%); /* for Chrome, Opera, Safari */
+	filter: grayscale(0%); /* for Firefox */
 	}
 
 	/*------------------------------------*/
@@ -249,6 +257,14 @@ display: none;
 	}
 	.case ul img {
 	max-width: 90%;
+	}
+	.case .more {
+	-webkit-filter: grayscale(100%); /* for Chrome, Opera, Safari */
+	filter: grayscale(100%); /* for Firefox */
+	}
+	.case .more:hover {
+	-webkit-filter: grayscale(0%); /* for Chrome, Opera, Safari */
+	filter: grayscale(0%); /* for Firefox */
 	}
 
 	/*------------------------------------*/
