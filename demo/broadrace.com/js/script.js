@@ -1,11 +1,31 @@
-﻿new Swiper(".swiper-container", {
-	nextButton: ".swiper-button-next",
-	prevButton: ".swiper-button-prev"
-});
+﻿$(function() {
+
+	var qrcode = $(".qrcode");
+
+	$(".action-qrcode").add(qrcode).hover(function() {
+		qrcode.stop().animate({
+			bottom: 0
+		}, 200);
+	}, function() {
+		qrcode.stop().animate({
+			bottom: "-" + qrcode.height()
+		});
+	});
 
 
-$(".goto-top").click(function() {
-	$("html, body").animate({
-		scrollTop: 0
-	}, 500);
+	$(".action-top").click(function() {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 500);
+	});
+
+
+	$(".slick").slick({
+		prevArrow: ".slick-prev",
+		nextArrow: ".slick-next",
+
+		speed: 200
+	}).on("afterChange", function(event, slick, currentSlide, nextSlide) {
+	});
+
 });
