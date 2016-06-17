@@ -26,11 +26,11 @@ word-wrap: break-word;
 /* Hypertext */
 a:link {
 color: #333;
-text-decoration: underline;
+text-decoration: none;
 }
 a:visited {
 color: #333;
-text-decoration: underline;
+text-decoration: none;
 }
 a:hover {
 color: #333;
@@ -126,14 +126,14 @@ display: none;
 
 	/*------------------------------------*/
 	.header .tel {
-	color: #2e6299;
 	position: absolute;
 	right: 5%;
 	top: 0;
 	width: 20%;
 	}
-	.header .tel span {
+	.header .tel a {
 	background: url("../images/tel.png") no-repeat 0 center;
+	color: #2e6299;
 	float: right;
 	text-indent: 25px;
 	}
