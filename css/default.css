@@ -292,7 +292,6 @@ width: 85%;
 
 	/*------------------------------------*/
 	.gallery {
-	line-height: 2em;
 	text-align: center;
 	word-break: break-all;
 	word-wrap: break-word;
@@ -302,15 +301,21 @@ width: 85%;
 	margin-top: 10px;
 	width: 25%;
 	}
-	.gallery a img {
+	.gallery div a img {
 	border-color: #555;
 	border-style: solid;
 	border-width: 5px 5px 20px 5px;
 	height: 200px;
 	width: 150px;
 	}
-	.gallery a:hover img {
+	.gallery div a:hover img {
 	border-color: inherit;
+	}
+	.gallery p {
+	margin-top: 5px;
+	}
+	.gallery em {
+	color: #808080;
 	}
 
 	/*--------------------------------------
