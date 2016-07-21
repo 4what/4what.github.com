@@ -14,27 +14,19 @@
 
 /* Document */
 body {
-color: #333;
-font-family: /*"Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", */"Microsoft YaHei", sans-serif;
+font-family: "Microsoft YaHei", sans-serif;
 font-size: 14px;
-/*
 -webkit-text-size-adjust: none;
-word-break: break-all;
-word-wrap: break-word;
-*/
 }
 
 /* Hypertext */
 a:link {
-color: #333;
 text-decoration: none;
 }
 a:visited {
-color: #333;
 text-decoration: none;
 }
 a:hover {
-color: #333;
 text-decoration: underline;
 }
 a:active {
@@ -42,7 +34,7 @@ a:active {
 
 /* Form */
 input, select, textarea {
-font-family: /*"Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", */"Microsoft YaHei", sans-serif;
+font-family: "Microsoft YaHei", sans-serif;
 }
 
 
@@ -112,146 +104,124 @@ width: 20%;
 
 
 /*--------------------------------------
+  BANNER
+--------------------------------------*/
+.banner {
+position: relative;
+}
+.banner img {
+width: 100%;
+}
+.banner .countdown {
+bottom: 1%;
+color: #fff;
+left: 0;
+position: absolute;
+width: 100%;
+}
+.banner .countdown ul {
+margin: 1% auto 0 auto;
+overflow: hidden;
+width: 18em;
+}
+.banner .countdown ul li {
+float: left;
+padding: 0 2px;
+width: 5.5em;
+}
+.banner .countdown ul div {
+background: rgba(0, 0, 0, 0.6);
+border-radius: 10px;
+padding: 0.5em 0;
+}
+.banner .countdown ul p {
+font-size: 32px;
+}
+
+
+/*--------------------------------------
   CONTENT
 --------------------------------------*/
 .content {
+background: url("../images/bg.jpg") repeat-y center 0;
+background-size: 100% auto;
+padding: 80px 0;
 }
-
-.content img.bg {
-width: 100%;
+h2 {
+color: #e2cbab;
+font-size: 56px;
+margin-top: 20px;
 }
-
-	/*------------------------------------*/
-	.banner {
-	position: relative;
-	}
-	.banner .countdown {
-	bottom: 20%;
-	color: #fff;
-	position: absolute;
-	right: 40px;
-	}
-	.banner .countdown ul {
-	margin-top: 10px;
-	overflow: hidden;
-	}
-	.banner .countdown ul li {
-	float: left;
-	padding: 0 2px;
-	width: 5.5em;
-	}
-	.banner .countdown ul div {
-	background: rgba(0, 0, 0, 0.6);
-	border-radius: 10px;
-	padding: 1em 0;
-	}
-	.banner .countdown ul p {
-	font-size: 20px;
-	}
 
 	/*------------------------------------*/
 	.intro {
-	overflow: hidden;
-	position: relative;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid #665c5c;
+	margin: 0 auto;
+	width: 80%;
 	}
 	.intro .wrapper {
-	left: 0;
-	position: absolute;
-	top: 20px;
-	width: 100%;
-	}
-	.intro h2 {
-	color: #bd334f;
-	font-size: 20px;
-	font-weight: bold;
+	padding: 0 20px;
 	}
 	.intro p {
-	margin: 20px auto 0 auto;
+	color: #eee;
+	padding: 20px 0;
 	text-align: left;
-	width: 80%;
 	}
 
 	/*------------------------------------*/
-	.chinajoy {
-	color: #fff;
-	overflow: hidden;
+	.guide {
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid #665c5c;
+	margin: 80px auto 0 auto;
+	padding-bottom: 20px;
 	position: relative;
-	}
-	.chinajoy .wrapper {
-	left: 0;
-	position: absolute;
-	top: 20px;
-	width: 100%;
-	}
-	.chinajoy .wrapper div {
-	border: 1px dotted #fff;
-	border-radius: 8px;
-	margin: 20px auto 0 auto;
-	padding: 20px;
 	width: 80%;
 	}
-	.chinajoy h2 {
-	font-size: 18px;
-	font-weight: bold;
+	.guide .wrapper {
+	padding: 0 20px;
 	}
-	.chinajoy p {
-	margin-top: 20px;
-	text-align: left;
+	.guide h3 {
+	color: #c8c8c8;
+	font-size: 48px;
+	font-weight: normal;
 	}
-	.chinajoy .more {
-	display: block;
-	margin-top: 40px;
-	}
-	.chinajoy .more a {
-	border: 1px dotted #fff;
+	.guide .box {
+	background: rgba(255, 255, 255, 0.2);
 	border-radius: 8px;
-	color: #fff;
-	font-size: 16px;
-	padding: 10px 20px;
-	text-decoration: none;
+	margin-top: 20px;
+	padding: 20px 20px 0;
 	}
-
-	/*------------------------------------*/
-	.schedule {
-	overflow: hidden;
-	position: relative;
-	}
-	.schedule .wrapper {
-	left: 0;
-	position: absolute;
-	top: 40px;
+	.guide .box img {
+	border-radius: 8px;
+	margin: 20px 0;
 	width: 100%;
 	}
-	.schedule h2 {
-	color: #daeca2;
-	font-size: 20px;
-	font-weight: bold;
+	.guide .line-left {
+	left: 0;
+	position: absolute;
+	top: -100px;
 	}
-	.schedule p {
-	color: #fff;
-	margin-top: 20px;
+	.guide .line-right {
+	position: absolute;
+	right: -70px;
+	top: 80px;
 	}
 
 	/*------------------------------------*/
 	.guest {
-	overflow: hidden;
-	position: relative;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid #665c5c;
+	margin: 80px auto 0 auto;
+	padding-bottom: 20px;
+	width: 80%;
 	}
 	.guest .wrapper {
-	left: 0;
-	position: absolute;
-	top: 40px;
-	width: 100%;
-	}
-	.guest h2 {
-	color: #a5d206;
-	font-size: 20px;
-	font-weight: bold;
+	padding: 0 20px;
 	}
 	.guest ul {
-	margin: 40px auto 0 auto;
+	margin-top: 20px;
 	overflow: hidden;
-	width: 80%;
 	}
 	.guest ul li {
 	float: left;
@@ -282,38 +252,21 @@ width: 100%;
 	padding-bottom: 10px;
 	width: 90%;
 	}
-	.guest .more {
-	margin-top: 40px;
-	}
-	.guest .more a {
-	border: 1px dotted #333;
-	border-radius: 8px;
-	color: #333;
-	font-size: 16px;
-	padding: 10px 20px;
-	text-decoration: none;
-	}
 
 	/*------------------------------------*/
 	.sponsor {
-	overflow: hidden;
-	position: relative;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid #665c5c;
+	margin: 80px auto 0 auto;
+	padding-bottom: 20px;
+	width: 80%;
 	}
 	.sponsor .wrapper {
-	left: 0;
-	position: absolute;
-	top: 40px;
-	width: 100%;
-	}
-	.sponsor h2 {
-	color: #1b5c51;
-	font-size: 20px;
-	font-weight: bold;
+	padding: 0 20px;
 	}
 	.sponsor ul {
-	margin: 40px auto 0 auto;
+	margin: 20px auto 0 auto;
 	overflow: hidden;
-	width: 80%;
 	}
 	.sponsor ul li {
 	float: left;
@@ -325,39 +278,21 @@ width: 100%;
 	.sponsor ul img {
 	width: 100%;
 	}
-	.sponsor .action {
-	margin-top: 40px;
-	}
-	.sponsor .action a {
-	border: 1px dotted #333;
-	border-radius: 8px;
-	color: #333;
-	font-size: 16px;
-	margin: 0 100px;
-	padding: 10px 20px;
-	text-decoration: none;
-	}
 
 	/*------------------------------------*/
 	.media {
-	overflow: hidden;
-	position: relative;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid #665c5c;
+	margin: 80px auto 0 auto;
+	padding-bottom: 20px;
+	width: 80%;
 	}
 	.media .wrapper {
-	left: 0;
-	position: absolute;
-	top: 40px;
-	width: 100%;
-	}
-	.media h2 {
-	color: #d6468b;
-	font-size: 20px;
-	font-weight: bold;
+	padding: 0 20px;
 	}
 	.media ul {
-	margin: 40px auto 0 auto;
+	margin: 20px auto 0 auto;
 	overflow: hidden;
-	width: 80%;
 	}
 	.media ul li {
 	float: left;
@@ -369,39 +304,21 @@ width: 100%;
 	.media ul img {
 	width: 100%;
 	}
-	.media .action {
-	margin-top: 40px;
-	}
-	.media .action a {
-	border: 1px dotted #333;
-	border-radius: 8px;
-	color: #333;
-	font-size: 16px;
-	margin: 0 100px;
-	padding: 10px 20px;
-	text-decoration: none;
-	}
 
 	/*------------------------------------*/
 	.partner {
-	overflow: hidden;
-	position: relative;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid #665c5c;
+	margin: 80px auto 0 auto;
+	padding-bottom: 20px;
+	width: 80%;
 	}
 	.partner .wrapper {
-	left: 0;
-	position: absolute;
-	top: 40px;
-	width: 100%;
-	}
-	.partner h2 {
-	color: #a5d206;
-	font-size: 20px;
-	font-weight: bold;
+	padding: 0 20px;
 	}
 	.partner ul {
-	margin: 40px auto 0 auto;
+	margin: 20px auto 0 auto;
 	overflow: hidden;
-	width: 80%;
 	}
 	.partner ul li {
 	float: left;
@@ -412,18 +329,6 @@ width: 100%;
 	}
 	.partner ul img {
 	width: 100%;
-	}
-	.partner .action {
-	margin-top: 40px;
-	}
-	.partner .action a {
-	border: 1px dotted #333;
-	border-radius: 8px;
-	color: #333;
-	font-size: 16px;
-	margin: 0 100px;
-	padding: 10px 20px;
-	text-decoration: none;
 	}
 
 
