@@ -49,14 +49,19 @@ if (name === "index" || (!re && /\/$/.test(pathname))) {
 			/* jQuery */
 			$(function() {
 
+/*
 				// jQuery lightBox
 				$("ul.gallery div a").lightBox({
 					imageLoading: "js/jquery/plugin/lightbox/0.5/images/lightbox-ico-loading.gif",
 					imageBtnPrev: "js/jquery/plugin/lightbox/0.5/images/lightbox-btn-prev.gif",
 					imageBtnNext: "js/jquery/plugin/lightbox/0.5/images/lightbox-btn-next.gif",
 					imageBtnClose: "js/jquery/plugin/lightbox/0.5/images/lightbox-btn-close.gif",
-					imageBlank: "js/jquery/plugin/lightbox/0.5/images/lightbox-blank.gif"
+					imageBlank: "js/jquery/plugin/lightbox/0.5/images/lightbox-blank.gif",
+
+					txtImage: "",
+					txtOf: "/"
 				});
+*/
 
 			});
 			break;
