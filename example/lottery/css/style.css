@@ -14,8 +14,8 @@
 
 /* Document */
 body {
-background: url("../images/bg.jpg") no-repeat center center;
-background-size: 100% 100%;
+background: url("../images/bg.jpg") no-repeat 0 0;
+background-size: cover;
 color: #333;
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
