@@ -50,7 +50,7 @@ if (name === "index" || (!re && /\/$/.test(pathname))) {
 			$(function() {
 
 				// jQuery lightBox
-				$("ul.gallery p a").lightBox({
+				$("ul.gallery div a").lightBox({
 					imageLoading: "js/jquery/plugin/lightbox/0.5/images/lightbox-ico-loading.gif",
 					imageBtnPrev: "js/jquery/plugin/lightbox/0.5/images/lightbox-btn-prev.gif",
 					imageBtnNext: "js/jquery/plugin/lightbox/0.5/images/lightbox-btn-next.gif",
