@@ -22,9 +22,9 @@
 
 <div class="navbar">
 	<ul>
-		<li><a href="#css-hack">CSS Hack</a> |</li>
 		<li><a href="#css21">CSS 2.1</a> |</li>
 		<li><a href="#css3">CSS 3</a> |</li>
+		<li><a href="#css-hack">CSS Hack</a> |</li>
 		<li><a href="#flash">Flash</a> |</li>
 		<li><a href="#html401">HTML 4.01</a> |</li>
 		<li><a href="#html5">HTML 5</a> |</li>
@@ -37,6 +37,47 @@
 </div>
 
 <div class="content">
+	<h2><a name="css21"><span>-</span> CSS 2.1</a></h2>
+		<div id="chapter-css21">
+			<h3><a>'background'</a><sup><a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background">[1]</a></sup></h3>
+				<textarea cols="" rows="" name="code" class="css">
+				Value: [ <'background-color'> || <'background-image'> || <'background-repeat'> || <'background-attachment'> || <'background-position'> ] | inherit
+				</textarea>
+			<h3><a>'border'</a><sup><a href="http://www.w3.org/TR/CSS21/box.html#propdef-border">[1]</a></sup></h3>
+				<textarea cols="" rows="" name="code" class="css">
+				Value: [ <border-width> || <border-style> || <'border-top-color'> ] | inherit
+				</textarea>
+				<blockquote>
+					Omitted values are set to their <code>initial values</code>.
+				</blockquote>
+			<h3><a>'cursor'</a><sup><a href="http://www.w3.org/TR/CSS21/ui.html#cursor-props">[1]</a><a href="http://www.w3.org/TR/css3-ui/#cursor">[2]</a><a href="https://developer.mozilla.org/en-US/docs/Using_URL_values_for_the_cursor_property?redirect=no">[3]</a></sup></h3>
+				<textarea cols="" rows="" name="code" class="css">
+				Value: [ [<uri> ,]* [ auto | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize | text | wait | help | progress ] ] | inherit
+				</textarea>
+			<h3><a>'font-family'</a><sup><a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-family">[1]</a></sup></h3>
+			<h3><a>@import</a><sup><a href="http://www.w3.org/TR/CSS21/cascade.html#at-import">[1]</a></sup></h3>
+			<h3><a>Media types</a><sup><a href="http://www.w3.org/TR/CSS21/media.html">[1]</a></sup></h3>
+			<h3><a>Relationships between 'display', 'position', and 'float'</a><sup><a href="http://www.w3.org/TR/CSS21/visuren.html#dis-pos-flo">[1]</a></sup></h3>
+				<blockquote>
+					<code>position: "absolute|fixed"</code> > <code>float: "none"</code>
+				</blockquote>
+				<blockquote>
+					<code>float: "!none"</code> > <code>display: "block"</code>
+				</blockquote>
+			<h3><a>URLs and URIs</a><sup><a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-uri">[1]</a></sup></h3>
+		</div>
+
+	<h2><a name="css3"><span>-</span> CSS 3</a></h2>
+		<div id="chapter-css3">
+			<h3><a>Media Queries</a><sup><a href="http://www.w3.org/TR/css3-mediaqueries/">[1]</a></sup></h3>
+			<h3><a>text-size-adjust</a><sup><a href="https://drafts.csswg.org/css-size-adjust/">[1]</a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust">[2]</a></sup></h3>
+				<textarea cols="" rows="" name="code" class="css">
+				body {
+				-webkit-text-size-adjust: none; /* for Safari (iOS) */
+				}
+				</textarea>
+		</div>
+
 	<h2><a name="css-hack"><span>-</span> CSS Hack</a></h2>
 		<div id="chapter-css-hack">
 			<table>
@@ -161,47 +202,6 @@
 					<td>×</td>
 				</tr>
 			</table>
-		</div>
-
-	<h2><a name="css21"><span>-</span> CSS 2.1</a></h2>
-		<div id="chapter-css21">
-			<h3><a>'background'</a><sup><a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background">[1]</a></sup></h3>
-				<textarea cols="" rows="" name="code" class="css">
-				Value: [ <'background-color'> || <'background-image'> || <'background-repeat'> || <'background-attachment'> || <'background-position'> ] | inherit
-				</textarea>
-			<h3><a>'border'</a><sup><a href="http://www.w3.org/TR/CSS21/box.html#propdef-border">[1]</a></sup></h3>
-				<textarea cols="" rows="" name="code" class="css">
-				Value: [ <border-width> || <border-style> || <'border-top-color'> ] | inherit
-				</textarea>
-				<blockquote>
-					Omitted values are set to their <code>initial values</code>.
-				</blockquote>
-			<h3><a>'cursor'</a><sup><a href="http://www.w3.org/TR/CSS21/ui.html#cursor-props">[1]</a><a href="http://www.w3.org/TR/css3-ui/#cursor">[2]</a><a href="https://developer.mozilla.org/en-US/docs/Using_URL_values_for_the_cursor_property?redirect=no">[3]</a></sup></h3>
-				<textarea cols="" rows="" name="code" class="css">
-				Value: [ [<uri> ,]* [ auto | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize | text | wait | help | progress ] ] | inherit
-				</textarea>
-			<h3><a>'font-family'</a><sup><a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-family">[1]</a></sup></h3>
-			<h3><a>@import</a><sup><a href="http://www.w3.org/TR/CSS21/cascade.html#at-import">[1]</a></sup></h3>
-			<h3><a>Media types</a><sup><a href="http://www.w3.org/TR/CSS21/media.html">[1]</a></sup></h3>
-			<h3><a>Relationships between 'display', 'position', and 'float'</a><sup><a href="http://www.w3.org/TR/CSS21/visuren.html#dis-pos-flo">[1]</a></sup></h3>
-				<blockquote>
-					<code>position: "absolute|fixed"</code> > <code>float: "none"</code>
-				</blockquote>
-				<blockquote>
-					<code>float: "!none"</code> > <code>display: "block"</code>
-				</blockquote>
-			<h3><a>URLs and URIs</a><sup><a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-uri">[1]</a></sup></h3>
-		</div>
-
-	<h2><a name="css3"><span>-</span> CSS 3</a></h2>
-		<div id="chapter-css3">
-			<h3><a>Media Queries</a><sup><a href="http://www.w3.org/TR/css3-mediaqueries/">[1]</a></sup></h3>
-			<h3><a>text-size-adjust</a><sup><a href="https://drafts.csswg.org/css-size-adjust/">[1]</a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust">[2]</a></sup></h3>
-				<textarea cols="" rows="" name="code" class="css">
-				body {
-				-webkit-text-size-adjust: none; /* for Safari (iOS) */
-				}
-				</textarea>
 		</div>
 
 	<h2><a name="flash"><span>-</span> Flash</a></h2>
