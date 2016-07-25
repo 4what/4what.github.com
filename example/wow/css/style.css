@@ -2,15 +2,6 @@
 
 @import url("../../../css/reset.css");
 
-/**
- * [Typography]
- *
- * background-color	{@value #02080e}
- * color			{@value #00b3fe, #728a96, #77d8f3, #d6f9ff, #feaf00, #fff}
- * font-family		{@value Arial, Georgia}
- * font-size		{@value 11px, 12px, 18px}
- */
-
 /* Document */
 html {
 height: 100%;

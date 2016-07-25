@@ -2,16 +2,6 @@
 
 @import url("base.css");
 
-/**
- * [Typography]
- *
- * background-color	{@value}
- * border-color		{@value}
- * color			{@value}
- * font-family		{@value}
- * font-size		{@value}
- */
-
 /* Document */
 body {
 font-family: Arial, "Comic Sans MS", "Courier New", Georgia, Impact, Verdana, sans-serif; /* Core fonts for the Web */

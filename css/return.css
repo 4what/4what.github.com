@@ -2,16 +2,6 @@
 
 @import url("reset.css");
 
-/**
- * [Typography]
- *
- * background-color	{@value}
- * border-color		{@value}
- * color			{@value}
- * font-family		{@value}
- * font-size		{@value}
- */
-
 /* Document */
 .body-return {
 color: #333;
