@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title></title>
-<meta name="author" content="4what" />
+<meta name="author" content="4what">
 
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="impress-not-supported">
@@ -22,7 +22,7 @@
 
 	<!-- step: 1 -->
 	<div id="winner" class="step" data-x="0" data-y="0" data-z="-3000" data-rotate="300">
-		<img src="" alt="" />
+		<img src="" alt="">
 		<div></div>
 	</div>
 
@@ -96,7 +96,7 @@ var lottery = {
 
 		steps = $(), // frags, shapes
 		template = function(src, id) {
-			return '<div class="step item"' + (!id ? '' : ' id="item-' + id + '"') + '><img src="' + src + '" alt="" /></div>';
+			return '<div class="step item"' + (!id ? '' : ' id="item-' + id + '"') + '><img src="' + src + '" alt=""></div>';
 		},
 
 		idle = true,
@@ -473,8 +473,8 @@ var lottery = {
 };
 </script>
 
-<script type="text/javascript" src="conf.js"></script>
+<script src="conf.js"></script>
 
-<script type="text/javascript" src="../../js/analytics.js"></script>
+<script src="../../js/analytics.js"></script>
 </body>
 </html>
