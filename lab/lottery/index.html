@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <title></title>
-<meta name="author" content="4what">
+<meta name="author" content="4what" />
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="impress-not-supported">
@@ -22,7 +22,7 @@
 
 	<!-- step: 1 -->
 	<div id="winner" class="step" data-x="0" data-y="0" data-z="-3000" data-rotate="300">
-		<img src="" alt="">
+		<img src="" alt="" />
 		<div></div>
 	</div>
 
@@ -46,21 +46,21 @@
 	<p>Use a spacebar or arrow keys to navigate</p>
 </div>
 
-<script type="text/javascript">
+<script>
 if ("ontouchstart" in document.documentElement) {
 	document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 }
 </script>
 -->
 
-<script type="text/javascript" src="js/impress/0.5.3/impress.modified.js"></script>
+<script src="js/impress/0.5.3/impress.modified.js"></script>
 
-<script type="text/javascript" src="../../js/jquery/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../../js/jquery/ui/1.9.2/jquery-ui.min.js"></script>
+<script src="../../js/jquery/jquery-1.8.3.min.js"></script>
+<script src="../../js/jquery/ui/1.9.2/jquery-ui.min.js"></script>
 
-<script type="text/javascript" src="../../js/util.js"></script>
+<script src="../../js/util.js"></script>
 
-<script type="text/javascript">
+<script>
 /**
  * for Chrome, FireFox, Safari
  *
@@ -96,7 +96,7 @@ var lottery = {
 
 		steps = $(), // frags, shapes
 		template = function(src, id) {
-			return '<div class="step item"' + (!id ? '' : ' id="item-' + id + '"') + '><img src="' + src + '" alt=""></div>';
+			return '<div class="step item"' + (!id ? '' : ' id="item-' + id + '"') + '><img src="' + src + '" alt="" /></div>';
 		},
 
 		idle = true,
