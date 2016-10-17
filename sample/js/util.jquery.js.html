@@ -28,11 +28,9 @@
 			<li class="api"><p><em>{Category: Miscellaneous}</em> API</p></li>
 			<li class="blockKey"><p><em>{Category: Event}</em> 阻止键盘事件</p></li>
 			<li class="center"><p><em>{Category: CSS}</em> 改变窗口大小内容始终水平居中</p></li>
-			<li class="ckeditor"><p><em>{Category: Form}</em> CKeditor 3.x</p></li>
 			<li class="dialog"><p><em>{Category: Miscellaneous}</em> jQuery ColorBox 对话框</p></li>
 			<li class="disableSubmit"><p><em>{Category: Form}</em> 禁用表单提交按钮</p></li>
 			<li class="domain"><p><em>{Category: Miscellaneous}</em> 判断当前域名是否在给定数组中并返回</p></li>
-			<li class="fckeditor"><p><em>{Category: Form}</em> FCKeditor 2.x</p></li>
 			<li class="field"><p><em>{Category: Form}</em> 返回表单中 name 属性为目标值的元素对象</p></li>
 			<li class="height"><p><em>{Category: CSS}</em> max-height | min-height</p></li>
 			<li class="iframeHeight"><p><em>{Category: CSS}</em> IFRAME 自适应高度</p></li>
@@ -97,35 +95,6 @@
 					]),
 					document.getElementById("api-example")
 				);
-				</textarea>
-			</li>
-			<li class="fckeditor">
-				<textarea cols="" rows="" name="code" class="html">
-				<textarea cols="" rows="" name="fckeditor-textarea-name"></textarea>
-				</textarea>
-
-				<textarea cols="" rows="" name="code" class="html">
-				<div id="fckeditor-div"></div>
-				</textarea>
-
-				<textarea cols="" rows="" name="code" class="js">
-				function fckeditor(name, target, options) {
-					$jq.fckeditor(name, target, $.extend({
-						basepath: "../../js/fckeditor/"
-						//config: "../plugin/fckconfig.js",
-						//height: "100%",
-						//toolbarset: "Default",
-						//value: "",
-						//width: "100%"
-					}, options));
-				}
-
-				fckeditor("fckeditor-textarea-name");
-
-				fckeditor("fckeditor-name", $("#fckeditor-div"), {
-					toolbarset: "Default",
-					value: "value"
-				});
 				</textarea>
 			</li>
 			<li class="field">
@@ -287,16 +256,6 @@
 					</li>
 				</ol>
 			</dd>
-			<dd class="fckeditor">
-				<ol>
-					<li>
-						<textarea cols="" rows="" name="fckeditor-textarea-name"></textarea>
-					</li>
-					<li>
-						<div id="fckeditor-div"></div>
-					</li>
-				</ol>
-			</dd>
 			<dd class="field">
 				<form action="" method="post" id="field">
 					<input type="text" name="name" value="value" class="text" />
@@ -359,10 +318,7 @@
 		</dl>
 
 
-		<script type="text/javascript" src="../../js/util.jquery-1.1.js"></script>
-
-		<script type="text/javascript" src="../../js/fckeditor/fckeditor.js"></script> <!-- same origin -->
-
+		<script type="text/javascript" src="../../js/util.jquery-1.2.js"></script>
 
 		<script type="text/javascript">
 		$jq.api($jq, [
@@ -394,25 +350,6 @@
 					]),
 					document.getElementById("api-example")
 				);
-			},
-			fckeditor: function() {
-				function fckeditor(name, target, options) {
-					$jq.fckeditor(name, target, $.extend({
-						basepath: "../../js/fckeditor/"
-						//config: "../plugin/fckconfig.js",
-						//height: "100%",
-						//toolbarset: "Default",
-						//value: "",
-						//width: "100%"
-					}, options));
-				}
-
-				fckeditor("fckeditor-textarea-name");
-
-				fckeditor("fckeditor-name", $("#fckeditor-div"), {
-					toolbarset: "Default",
-					value: "value"
-				});
 			},
 			field: function() {
 				$4what.log(

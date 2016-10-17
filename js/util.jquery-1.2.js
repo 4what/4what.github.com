@@ -4,7 +4,7 @@
  * UtilJq
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2015.01.21
+ * @version 1.2 Build 2016.10.17
  */
 (function() {
 
@@ -39,7 +39,7 @@ var UtilJq = window["$jq"] = {
 	 *
 	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
-	 * @param {String} method "max|min"
+	 * @param {String} method max|min
 	 * @param {Number} limit
 	 */
 	height: function(target, method, limit) {
@@ -95,7 +95,7 @@ var UtilJq = window["$jq"] = {
 		defaults = {
 			duration: 0, // {Number|String}
 			offset: 0, // {Number}
-			position: "bottom" // {String} "bottom|top"
+			position: "bottom" // {String} bottom|top
 		},
 		settings = $.extend(defaults, options);
 
@@ -157,49 +157,6 @@ var UtilJq = window["$jq"] = {
 	  Category: Form
 	--------------------------------------*/
 	/**
-	 * @requires CKEditor 3.x, jQuery 1.3.2+
-	 * @param {Object|String} target
-	 * @param {Object} options
-	 * @param {Object} params
-	 */
-	ckeditor: function(target, options, params) {
-		var
-		defaults = {
-			basepath: "" // {String} cross origin
-		},
-		settings = $.extend(defaults, options);
-
-		params = $.extend({
-			//height: "", // {Number|String} Percent units (%) are not supported
-			language: "zh-cn", // {String}
-			skin: "v2", // {String}
-			toolbar: "Basic" // {String|Object[]} Full|Basic
-			//width: "" // {Number|String}
-		}, params);
-
-		function init() {
-			//CKEDITOR.replaceByClassEnabled = false;
-
-			CKEDITOR.replace(
-				target, // element|id|name
-				params
-			);
-		}
-
-		if (settings.basepath) {
-			CKEDITOR_BASEPATH = settings.basepath;
-
-			$(function() {
-
-				init();
-
-			});
-		} else {
-			init();
-		}
-	},
-
-	/**
 	 * disable submit button
 	 *
 	 * @requires jQuery 1.3.2+
@@ -208,46 +165,6 @@ var UtilJq = window["$jq"] = {
 	 */
 	disableSubmit: function(form, bln) {
 		$(form).find(":submit, :image").attr("disabled", bln);
-	},
-
-	/**
-	 * @requires FCKeditor 2.x, jQuery 1.3.2+
-	 * @param {String} name
-	 * @param {Object|String} target (optional)
-	 * @param {Object} options
-	 */
-	fckeditor: function(name, target, options) {
-		var
-		basepath = options.basepath, // {String} same origin
-		config = options.config, // {String}
-		height = options.height, // {String}
-		toolbarset = options.toolbarset || "Basic", // {String}
-		value = options.value || "", // {String}
-		width = options.width, // {String}
-
-		fckeditor = new FCKeditor(name);
-
-		// settings
-		fckeditor.BasePath = basepath;
-		if (config) {
-			fckeditor.Config["CustomConfigurationsPath"] = config;
-		}
-		if (height) {
-			fckeditor.Height = height;
-		}
-		fckeditor.ToolbarSet = toolbarset;
-		if (width) {
-			fckeditor.Width = width;
-		}
-
-		if (!target) {
-			// textarea
-			fckeditor.ReplaceTextarea();
-		} else {
-			fckeditor.Value = value;
-			$(target).html(fckeditor.CreateHtml());
-		}
-		//fckeditor.Create();
 	},
 
 	/**

@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 2015.01.19
+ * @version 2016.10.17
  */
 (function() {
 
@@ -48,7 +48,7 @@ Util.fn = Util.prototype = {
 		type = options.type || "GET", // {String} (uppercase)
 		contentType = options.contentType || "application/x-www-form-urlencoded", // {String}
 		async = options.async === false ? false : true, // {Boolean}
-		data = options.data || null, // {Object|String} {name: value, ...}|"key=value&..."
+		data = options.data || null, // {Object|String} {name: value, ...} | "key=value&..."
 		beforeSend = options.beforeSend || new Function(), // {Function}
 		complete = options.complete || new Function(), // {Function}
 		success = options.success || new Function(), // {Function}
