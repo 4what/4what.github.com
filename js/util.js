@@ -4,16 +4,15 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 2016.10.17
+ * @version 2016.11.01
  */
 (function() {
 
-var Util = function(foobar) {
-	// constructor
-	//this.prop = foobar;
+var Util = function() {
+	this.version = "";
 };
 
-Util.fn = Util.prototype = {
+Util.prototype = {
 	/*--------------------------------------
 	  Category: Core
 	--------------------------------------*/
@@ -27,14 +26,6 @@ Util.fn = Util.prototype = {
 		return this;
 	},
 
-	/**
-	 * @param {String} id
-	 * @return {Object}
-	 */
-	get: function(id) {
-		return document.getElementById(id);
-	},
-
 	/*--------------------------------------
 	  Category: AJAX
 	--------------------------------------*/
@@ -45,18 +36,21 @@ Util.fn = Util.prototype = {
 	ajax: function(options) {
 		var
 		url = options.url, // {String} (*)
-		type = options.type || "GET", // {String} (uppercase)
-		contentType = options.contentType || "application/x-www-form-urlencoded", // {String}
-		async = options.async === false ? false : true, // {Boolean}
+		type = (options.type || "GET").toUpperCase(), // {String}
 		data = options.data || null, // {Object|String} {name: value, ...} | "key=value&..."
+		async = options.async !== false, // {Boolean}
+		contentType = options.contentType === false ? false : "application/x-www-form-urlencoded", // {Boolean|String}
+		processData = options.processData !== false, // {Boolean}
 		beforeSend = options.beforeSend || new Function(), // {Function}
 		complete = options.complete || new Function(), // {Function}
 		success = options.success || new Function(), // {Function}
 		error = options.error || new Function(), // {Function}
 
-		xhr = window.ActiveXObject ?
-					new ActiveXObject("Microsoft.XMLHTTP") : // for IE6
-					new XMLHttpRequest(); // for IE7+, Std
+		//crossDomain = /^https?:\/\//.test(url) && !new RegExp("^" + window.location.protocol + "\/\/" + window.location.host + "(?:\/|$)").test(url),
+			
+		xhr = window.XMLHttpRequest ?
+				new XMLHttpRequest() : // for IE7+, Std
+				new ActiveXObject("Microsoft.XMLHTTP"); // for IE6
 
 		function callback() {
 			if (xhr.readyState === 4) {
@@ -77,22 +71,24 @@ Util.fn = Util.prototype = {
 		url = this.url.encode(url);
 
 		if (data) {
-			data = this.url.serialize(typeof data !== "string" ? data : this.url.parse(data));
+			if (processData) {
+				data = this.url.serialize(typeof data !== "string" ? data : this.url.parse(data));
+			}
 
 			if (type === "GET") {
 				url += (/\?/.test(url) ? "&" : "?") + data;
 
-				data = null; // for IE
+				data = null; // "method: POST"? (IE6)
 			}
 		}
 
 		xhr.open(type, url, async);
 
-		beforeSend(xhr);
-
-		if (data) {
-			xhr.setRequestHeader("Content-Type", contentType); // "POST"
+		if (type === "POST" && contentType) {
+			xhr.setRequestHeader("Content-Type", contentType);
 		}
+
+		beforeSend(xhr);
 
 		xhr.send(data);
 
@@ -167,9 +163,7 @@ Util.fn = Util.prototype = {
 	},
 
 	/**
-	 * TODO: IE10+
-	 *
-	 * window.name
+	 * for IE9-, Std
 	 *
 	 * @requires $js.bind, $js.url
 	 * @param {Object} options
@@ -224,7 +218,7 @@ Util.fn = Util.prototype = {
 	 * @return {Number}
 	 */
 	inArray: function(element, array) {
-		// for IE9+ Std
+		// for IE9+, Std
 		if (array.indexOf) {
 			return array.indexOf(element);
 		}
@@ -313,12 +307,12 @@ Util.fn = Util.prototype = {
 	 * @param {String} id
 	 */
 	iframeHeight: function(id) {
-		var that = this;
+		var self = this;
 		document.getElementById(id).onload = function() {
-			var body = that.iframeDoc(id).body;
+			var body = self.iframeDoc(id).body;
 			document.getElementById(id).height = body.scrollHeight
-				+ parseInt(that.style(body, "margin-top"), 10)
-				+ parseInt(that.style(body, "margin-bottom"), 10);
+				+ parseInt(self.style(body, "margin-top"), 10)
+				+ parseInt(self.style(body, "margin-bottom"), 10);
 		};
 	},
 
@@ -431,6 +425,8 @@ Util.fn = Util.prototype = {
 	  Category: Form
 	--------------------------------------*/
 	/**
+	 * TODO
+	 * 
 	 * @requires $js.keyCode
 	 * @param {Event} e
 	 * @param {String} type
@@ -451,7 +447,7 @@ Util.fn = Util.prototype = {
 	},
 
 	/*--------------------------------------
-	  Category: Miscellaneous
+	  Category: Misc
 	--------------------------------------*/
 	/**
 	 * @param {String} id (optional)
@@ -548,7 +544,6 @@ Util.fn = Util.prototype = {
 	},
 
 	/**
-	 * add to favorites
 	 * for IE, Firefox
 	 *
 	 * @param {String} title (optional)
@@ -584,7 +579,7 @@ Util.fn = Util.prototype = {
 	},
 
 	/**
-	 * JavaScript Object Notation
+	 * TODO
 	 */
 	JSON: {
 		/**
@@ -593,14 +588,6 @@ Util.fn = Util.prototype = {
 		 */
 		parse: function(text) {
 			return eval("(" + text + ")");
-		},
-		/**
-		 * @param {Object} value
-		 * @return {String}
-		 */
-		stringify: function(value) {
-			// TODO
-			return "";
 		}
 	},
 
@@ -611,7 +598,7 @@ Util.fn = Util.prototype = {
 		var
 		css = '<style type="text/css">@import url("' + url + '");</style>',
 		js = '<script type="text/javascript" src="' + url + '"></script>';
-		document.write(/\.css$/.test(url) ? css : js);
+		document.write(/\.css$/i.test(url) ? css : js);
 	},
 
 	/**
@@ -621,7 +608,7 @@ Util.fn = Util.prototype = {
 	 * @param {Function} callback
 	 */
 	loader: function(obj, url, callback) {
-		var that = this;
+		var self = this;
 
 		//callback = callback || new Function();
 
@@ -630,24 +617,24 @@ Util.fn = Util.prototype = {
 			return;
 		}
 
-		that._loader = that._loader || {};
+		self._loader = self._loader || {};
 
-		that._loader[url] = that._loader[url] || {
+		self._loader[url] = self._loader[url] || {
 			loaded: false,
 			queue: []
 		};
 
-		if (that._loader[url].loaded) {
+		if (self._loader[url].loaded) {
 			callback();
 			return;
 		}
 
-		if (that._loader[url].queue.push(callback) === 1) {
-			that.script(url, function() {
-				that._loader[url].loaded = true;
+		if (self._loader[url].queue.push(callback) === 1) {
+			self.script(url, function() {
+				self._loader[url].loaded = true;
 
-				for (var i = 0, l = that._loader[url].queue.length; i < l; i++) {
-					that._loader[url].queue[i]();
+				for (var i = 0, l = self._loader[url].queue.length; i < l; i++) {
+					self._loader[url].queue[i]();
 				}
 			});
 		}
@@ -686,9 +673,6 @@ Util.fn = Util.prototype = {
 		}
 	},
 
-	/**
-	 *
-	 */
 	url: {
 		/**
 		 * @param {String} url
@@ -743,7 +727,6 @@ Util.fn = Util.prototype = {
 	}
 };
 
-// global object
 window["$js"] = new Util();
 
 })();
