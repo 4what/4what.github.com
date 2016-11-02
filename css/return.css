@@ -2,7 +2,6 @@
 
 @import url("reset.css");
 
-/* Document */
 .body-return {
 color: #333;
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
@@ -13,7 +12,6 @@ word-wrap: break-word;
 */
 }
 
-/* Hypertext */
 a:link {
 }
 a:visited {
@@ -21,7 +19,6 @@ a:visited {
 a:hover {
 }
 
-/* Form */
 input, select, textarea {
 }
 

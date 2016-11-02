@@ -3,7 +3,6 @@
 @import url("reset.css");
 @import url("return.css");
 
-/* Document */
 body {
 color: #333;
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
@@ -15,7 +14,6 @@ word-wrap: break-word;
 */
 }
 
-/* Hypertext */
 a:link {
 }
 a:visited {
@@ -25,7 +23,6 @@ position: relative;
 top: 1px;
 }
 
-/* Form */
 input, select, textarea {
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }
@@ -112,7 +109,7 @@ width: 95%;
 	}
 
 
-/* Structural */
+/**/
 blockquote {
 margin-top: 5px;
 text-indent: 1em;
@@ -159,7 +156,6 @@ pre span {
 text-decoration: line-through;
 }
 
-/* List */
 dl {
 margin-top: 5px;
 }
@@ -168,7 +164,6 @@ dt {
 dd {
 }
 
-/* Table */
 table {
 border: 1px solid #808080;
 margin-top: 5px;
@@ -195,7 +190,6 @@ td.dimmed {
 background: #eee;
 }
 
-/* Text */
 code {
 background: #ddd;
 font-family: "Courier New", monospace;
@@ -215,6 +209,7 @@ font-size: 0.8em;
 * font-size: 100%;
 font-size: 100%\0;
 }
+/**/
 
 
 /*--------------------------------------

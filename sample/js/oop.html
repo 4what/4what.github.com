@@ -13,19 +13,9 @@
 
 <body>
 
-<h2>Specification</h2>
-	<p></p>
-
-<h2>Syntax</h2>
+<h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	// log
-	function log(data) {
-		var p = document.createElement("p");
-		p.innerHTML = data;
-		document.body.appendChild(p);
-	}
-
 	(function() {
 
 		// object
@@ -39,57 +29,50 @@
 			//new RegExp("", "")
 			//new String("qwerty")
 		;
-		log("o: " + o);
+		$4what.log("o: " + o);
 
 		o.prop = "value";
-		log("o.prop: " + o.prop);
+		$4what.log("o.prop: " + o.prop); // value
 
 		// prototype
 		var Human = function() {
-			log("new Human");
+			$4what.log("new Human");
 		};
 
 		Human.id = "id";
-		log("Human.id: " + Human.id); // "id"
+		$4what.log("Human.id: " + Human.id); // id
 
 		Human.prototype.age = 0;
-		log("Human.age: " + Human.age); // "undefined"
+		$4what.log("Human.age: " + Human.age); // undefined
 
-		var adam = new Human(); // "new Human"
-		log("adam.id: " + adam.id); // "undefined"
-		log("adam.age: " + adam.age); // "0"
+		var adam = new Human(); // new Human
+		$4what.log("adam.id: " + adam.id); // undefined
+		$4what.log("adam.age: " + adam.age); // 0
 
 		adam.age = 100;
-		log("adam.age: " + adam.age); // "100"
+		$4what.log("adam.age: " + adam.age); // 100
 
 		delete adam.age;
-		log("adam.age: " + adam.age); // "0"
+		$4what.log("adam.age: " + adam.age); // 0
 
 		// inheritance
 		var Woman = function(gender) {
-			log("new Woman");
+			$4what.log("new Woman");
 			// constructor
 			this.gender = gender;
 		};
-		Woman.prototype = new Human(); // "new Human"
+		Woman.prototype = new Human(); // new Human
 
-		var eve = new Woman("female"); // "new Woman"
-		log("eve.age: " + eve.age); // "0"
-		log("eve.gender: " + eve.gender); // "female"
+		var eve = new Woman("female"); // new Woman
+		$4what.log("eve.age: " + eve.age); // 0
+		$4what.log("eve.gender: " + eve.gender); // female
 
 	})();
 	</script>
 	</textarea>
 
-<h2>Example</h2>
+<h2><span>Example</span></h2>
 	<script type="text/javascript">
-	// log
-	function log(data) {
-		var p = document.createElement("p");
-		p.innerHTML = data;
-		document.body.appendChild(p);
-	}
-
 	(function() {
 
 		// object
@@ -103,43 +86,43 @@
 			//new RegExp("", "")
 			//new String("qwerty")
 		;
-		log("o: " + o);
+		$4what.log("o: " + o);
 
 		o.prop = "value";
-		log("o.prop: " + o.prop);
+		$4what.log("o.prop: " + o.prop); // value
 
 		// prototype
 		var Human = function() {
-			log("new Human");
+			$4what.log("new Human");
 		};
 
 		Human.id = "id";
-		log("Human.id: " + Human.id); // "id"
+		$4what.log("Human.id: " + Human.id); // id
 
 		Human.prototype.age = 0;
-		log("Human.age: " + Human.age); // "undefined"
+		$4what.log("Human.age: " + Human.age); // undefined
 
-		var adam = new Human(); // "new Human"
-		log("adam.id: " + adam.id); // "undefined"
-		log("adam.age: " + adam.age); // "0"
+		var adam = new Human(); // new Human
+		$4what.log("adam.id: " + adam.id); // undefined
+		$4what.log("adam.age: " + adam.age); // 0
 
 		adam.age = 100;
-		log("adam.age: " + adam.age); // "100"
+		$4what.log("adam.age: " + adam.age); // 100
 
 		delete adam.age;
-		log("adam.age: " + adam.age); // "0"
+		$4what.log("adam.age: " + adam.age); // 0
 
 		// inheritance
 		var Woman = function(gender) {
-			log("new Woman");
+			$4what.log("new Woman");
 			// constructor
 			this.gender = gender;
 		};
-		Woman.prototype = new Human(); // "new Human"
+		Woman.prototype = new Human(); // new Human
 
-		var eve = new Woman("female"); // "new Woman"
-		log("eve.age: " + eve.age); // "0"
-		log("eve.gender: " + eve.gender); // "female"
+		var eve = new Woman("female"); // new Woman
+		$4what.log("eve.age: " + eve.age); // 0
+		$4what.log("eve.gender: " + eve.gender); // female
 
 	})();
 	</script>

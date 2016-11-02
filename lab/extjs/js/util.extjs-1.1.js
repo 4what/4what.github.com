@@ -1,10 +1,10 @@
 ﻿/*___________________________________4what____________________________________*/
 
 /**
- * UtilExt
+ * ExtJS Util
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2016.06.07
+ * @version 1.1 Build 2016.11.01
  * @requires ExtJS 3.2+
  */
 (function() {
@@ -235,19 +235,19 @@ var UtilExt = $ext = {
 							settings.minWidth
 					});
 
-					var that = this;
+					var self = this;
 
 					// icon
-					that.setIcon(Ext.Msg.INFO);
+					self.setIcon(Ext.Msg.INFO);
 
 					// timeout
 					if (typeof settings.timeout === "function") {
-						settings.timeout = settings.timeout(that, title, msg);
+						settings.timeout = settings.timeout(self, title, msg);
 					}
 					if (settings.timeout) {
 						window.setTimeout(function() {
-							if (that.isVisible()) {
-								that.hide();
+							if (self.isVisible()) {
+								self.hide();
 								if (fn) {
 									fn();
 								}
@@ -491,8 +491,8 @@ var UtilExt = $ext = {
 		 */
 		insert: function(form, id, name, options) {
 			var
-			that = this,
-			fields = that.fields(form, name),
+			self = this,
+			fields = self.fields(form, name),
 			item = form.insert(form.items.indexOfKey(id) + fields.length + 1, {
 				xtype: "compositefield",
 				autoWidth: true,
@@ -506,7 +506,7 @@ var UtilExt = $ext = {
 						xtype: "button",
 						iconCls: "icon-del",
 						handler: function(button, e) {
-							that.remove(form, item);
+							self.remove(form, item);
 							fields.remove(item.getId());
 						}
 					}
@@ -530,11 +530,11 @@ var UtilExt = $ext = {
 		 */
 		removeAll: function(form) {
 			var
-			that = this,
-			fields = that.fields(form);
+			self = this,
+			fields = self.fields(form);
 			Ext.iterate(fields, function(key, value, o) {
 				Ext.each(value, function(item, index, allItems) {
-					that.remove(form, Ext.getCmp(item));
+					self.remove(form, Ext.getCmp(item));
 				});
 				o[key] = [];
 			});

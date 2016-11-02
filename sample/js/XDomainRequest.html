@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2><span>Specification</span></h2>
+	<p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/API/XDomainRequest">[1]</a>
+	</p>
+
+<h2><span>Compatibility</span></h2>
+	<p>
+		IE8-10<sup><a href="https://msdn.microsoft.com/en-us/library/cc288060">[1]</a></sup>
+	</p>
+
+<h2><span>Syntax</span></h2>
+	<textarea cols="" rows="" name="code" class="js">
+	if (window.XDomainRequest) {
+		var xdr = new XDomainRequest();
+
+		xdr.onload = function() {
+			$4what.log(xdr.responseText);
+		};
+
+		xdr.onerror = function() {
+			alert("Error");
+		};
+
+		xdr.open("POST", "http://www.example.com:8080/studio/project/4what.cn/sample/js/ajax/data.jsp" + "?timestamp=" + new Date().getTime());
+
+		xdr.send("name=value");
+	}
+	</textarea>
+
+<h2><span>Example</span></h2>
+	<script type="text/javascript">
+	if (window.XDomainRequest) {
+		var xdr = new XDomainRequest();
+
+		xdr.onload = function() {
+			$4what.log(xdr.responseText);
+		};
+
+		xdr.onerror = function() {
+			alert("Error");
+		};
+
+		xdr.open("POST", "http://www.example.com:8080/studio/project/4what.cn/sample/js/ajax/data.jsp" + "?timestamp=" + new Date().getTime());
+
+		xdr.send("name=value");
+	}
+	</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

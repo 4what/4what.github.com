@@ -13,57 +13,42 @@
 
 <body>
 
-<h2>Specification</h2>
-	<p></p>
-
-<h2>Syntax</h2>
+<h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	function log(data) {
-		var p = document.createElement("p");
-		p.innerHTML = data;
-		document.body.appendChild(p);
-	}
-
 	var module = (function(o) {
 		var private = "private";
 
 		o.property = "property";
 
 		o.method = function() {
-			log("method()");
+			$4what.log("method()");
 		};
 
 		return o;
 	})(module || {});
 
-	log(module.property);
+	$4what.log(module.property);
 
 	module.method();
 	</script>
 	</textarea>
 
-<h2>Example</h2>
+<h2><span>Example</span></h2>
 	<script type="text/javascript">
-	function log(data) {
-		var p = document.createElement("p");
-		p.innerHTML = data;
-		document.body.appendChild(p);
-	}
-
 	var module = (function(o) {
 		var private = "private";
 
 		o.property = "property";
 
 		o.method = function() {
-			log("method()");
+			$4what.log("method()");
 		};
 
 		return o;
 	})(module || {});
 
-	log(module.property);
+	$4what.log(module.property);
 
 	module.method();
 	</script>

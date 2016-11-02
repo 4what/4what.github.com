@@ -8,7 +8,6 @@
 <style type="text/css">
 @import url("../css/reset.css");
 
-/* Document */
 body {
 color: #333;
 font-family: sans-serif;
@@ -20,7 +19,6 @@ word-wrap: break-word;
 */
 }
 
-/* Hypertext */
 a:link {
 color: #333;
 text-decoration: underline;
@@ -36,7 +34,6 @@ text-decoration: underline;
 a:active {
 }
 
-/* Form */
 input, select, textarea {
 font-family: sans-serif;
 }
@@ -105,7 +102,7 @@ var schedule = {
 	 */
 	init: function(options) {
 		var
-		that = this,
+		self = this,
 
 		defaults = {
 			box: $("#schedule"), // {Object|String}
@@ -138,7 +135,7 @@ var schedule = {
 			start = false;
 			end = false;
 			warning = false;
-			that.result = [];
+			self.result = [];
 		}
 
 		// clear
@@ -242,12 +239,12 @@ var schedule = {
 								} else if (i > start) {
 									cells.removeClass("opacity");
 									end = i;
-									that.result = [start, end];
+									self.result = [start, end];
 								}
 							} else {
 								if (i > start) {
 									end = false;
-									that.result = [];
+									self.result = [];
 									$(this).mouseenter();
 								}
 							}
@@ -266,7 +263,7 @@ var schedule = {
 		});
 
 		// load
-		that.load = function(data) {
+		self.load = function(data) {
 			if (data) {
 				reset();
 				clear();
@@ -293,7 +290,7 @@ var schedule = {
 			}
 		};
 
-		that.load(settings.data);
+		self.load(settings.data);
 	}
 };
 

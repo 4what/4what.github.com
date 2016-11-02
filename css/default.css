@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* Document */
 * html { /* for IE6 */
 overflow-x: hidden;
 }
@@ -19,7 +18,6 @@ word-wrap: break-word;
 */
 }
 
-/* Hypertext */
 a:link {
 color: #c0c0c0;
 text-decoration: none;
@@ -35,7 +33,6 @@ text-decoration: underline;
 a:active {
 }
 
-/* Form */
 input, select, textarea {
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;

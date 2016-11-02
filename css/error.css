@@ -3,7 +3,6 @@
 @import url("reset.css");
 @import url("error-default.css");
 
-/* Document */
 html {
 height: 100%;
 overflow: hidden;
@@ -16,7 +15,6 @@ margin: 0;
 overflow: hidden;
 }
 
-/* Hypertext */
 a:link {
 color: #fff;
 }

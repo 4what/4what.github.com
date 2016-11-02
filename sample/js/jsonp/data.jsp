@@ -3,6 +3,8 @@
 <%@ page import="java.util.Date" %>
 
 <%
+	out.clear();
+
 	request.setCharacterEncoding("UTF-8");
 
 	out.println(

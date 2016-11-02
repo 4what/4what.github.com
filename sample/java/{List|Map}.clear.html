@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - Java</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2><span>Map.clear()</span></h2>
+	<textarea cols="" rows="" name="code" class="java">
+	List results = new ArrayList();
+
+	Map map = new HashMap();
+
+	map.put("key", "value");
+
+	System.out.println("map: " + map); // {key=value}
+
+	results.add(map);
+
+	System.out.println("results: " + results); // [{key=value}]
+
+	map.clear();
+
+	System.out.println("map: " + map); // {}
+	System.out.println("results: " + results); // [{}]
+
+	map.put("foo", "bar");
+
+	System.out.println("map: " + map); // {foo=bar}
+	System.out.println("results: " + results); // [{foo=bar}]
+
+	results.add(map);
+
+	System.out.println("results: " + results); // [{foo=bar}, {foo=bar}]
+	</textarea>
+
+<h2><span>List.clear()</span></h2>
+	<textarea cols="" rows="" name="code" class="java">
+	List results = new ArrayList();
+
+	List list = new ArrayList();
+
+	list.add("foo");
+
+	System.out.println("list: " + list); // [foo]
+
+	results.add(list);
+
+	System.out.println("results: " + results); // [[foo]]
+
+	list.clear();
+
+	System.out.println("list: " + list); // []
+	System.out.println("results: " + results); // [[]]
+
+	list.add("bar");
+
+	System.out.println("list: " + list); // [bar]
+	System.out.println("results: " + results); // [[bar]]
+
+	results.add(list);
+
+	System.out.println("results: " + results); // [[bar], [bar]]
+	</textarea>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

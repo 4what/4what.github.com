@@ -3,9 +3,9 @@
 <%@ page import="java.util.*" %>
 
 <%
-	request.setCharacterEncoding("UTF-8");
-
 	out.clear();
+
+	request.setCharacterEncoding("UTF-8");
 
 	String method = request.getParameter("method");
 

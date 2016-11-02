@@ -3,19 +3,16 @@
 @import url("reset.css");
 @import url("return.css");
 
-/* Document */
 body {
 color: #333;
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
+line-height: 1.5em;
 margin: 15px 10px;
-/*
 word-break: break-all;
 word-wrap: break-word;
-*/
 }
 
-/* Hypertext */
 a:link {
 }
 a:visited {
@@ -23,7 +20,6 @@ a:visited {
 a:hover {
 }
 
-/* Form */
 input, select, textarea {
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }
@@ -65,7 +61,7 @@ width: 750px;
 
 	/*------------------------------------*/
 	.catalog {
-	margin-top: 20px;
+	margin-top: 10px;
 	overflow: hidden;
 	}
 	.catalog ul li {
@@ -75,7 +71,7 @@ width: 750px;
 	width: 120px;
 	margin: 5px 5px 0 0;
 	}
-	.catalog ul li a {
+	.catalog ul a {
 	border: 1px solid #999;
 	color: #003f7e;
 	float: left;
@@ -86,18 +82,18 @@ width: 750px;
 	text-decoration: none;
 	width: 118px;
 	}
-	.catalog ul li a:hover {
+	.catalog ul a:hover {
 	border: 3px solid #c30;
 	color: #c00;
 	height: 114px;
 	top: 0;
 	width: 114px;
 	}
-	.catalog ul li span {
+	.catalog ul span {
 	display: block;
 	margin: 15px 5px 3px 5px;
 	}
-	.catalog span em {
+	.catalog ul span em {
 	color: #999;
 	display: block;
 	font-size: 10px;
@@ -108,93 +104,27 @@ width: 750px;
 	.catalog ol {
 	line-height: 2em;
 	list-style: decimal inside;
-	margin: 0 auto;
-	width: 720px;
 	}
 
 	/*------------------------------------*/
-	#api-spec em {
-	background: #ddd;
-	font-style: italic;
-	}
-
-	#api-example ol {
-	line-height: 2.5em;
-	list-style: square outside;
-	padding: 0 20px;
-	}
-	#api-example ol li {
-	margin: 20px 0;
+	#api-example {
+	margin-top: 10px;
 	}
 
 
-/* Structural */
+/**/
 h2 {
-border-bottom: 1px solid #808080;
 clear: both;
 font-size: 22px;
 line-height: 1.5em;
-margin-bottom: 10px;
+margin-top: 10px;
+}
+h2 span {
+border-bottom: 1px solid #808080;
 }
 h3 {
 font-size: 16px;
-margin-bottom: 5px;
-}
-h5 {
-color: navy;
-font-size: 14px;
-margin-bottom: 5px;
-}
-h5 a {
-color: navy;
-}
-h6 {
-color: maroon;
-font-size: 14px;
-margin-bottom: 5px;
-}
-h6 a {
-color: maroon;
-}
-
-p {
-margin-bottom: 10px;
-}
-
-samp,
-dl,
-xmp {
-background: #eee;
-border-color: #ddd #ddd #ddd #808080;
-border-style: solid;
-border-width: 1px 1px 1px 5px;
-font-family: "Courier New", monospace;
-margin-bottom: 10px;
-padding: 20px;
-}
-xmp {
-display: block; /* for IE8 */
-padding: 3px 20px 20px 20px;
-* padding-top: 20px;
-}
-
-/* List */
-dl {
-}
-dt {
-}
-dd {
-}
-
-/* Text */
-code {
-color: green;
-font-family: "Courier New", monospace;
-font-style: italic;
-}
-
-samp {
-display: block;
+margin-top: 10px;
 }
 
 sup {
@@ -202,6 +132,30 @@ color: #c0c0c0;
 font-size: 0.8em;
 * font-size: 100%;
 font-size: 100%\0;
+}
+
+samp,
+xmp {
+/*background: #eee;*/
+border-color: #ddd #ddd #ddd #808080;
+border-style: solid;
+border-width: 1px 1px 1px 5px;
+font-family: "Courier New", monospace;
+margin-top: 10px;
+padding: 20px;
+}
+samp {
+display: block;
+}
+xmp {
+display: block; /* for IE8+ */
+padding-top: 3px;
+padding-top: 20px\9; /* for IE10- */
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* for IE10+ */
+	xmp {
+	padding-top: 3px;
+	}
 }
 
 textarea.textarea,
@@ -223,3 +177,4 @@ textarea.textarea {
 height: 10em;
 width: 35em;
 }
+/**/

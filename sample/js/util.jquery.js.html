@@ -13,36 +13,33 @@
 
 <body>
 
-<h2>util.jquery.js</h2>
-	<p>
-		<strong>Last modified:</strong>
-		<script type="text/javascript">document.write(document.lastModified);</script>
-	</p>
-	<p>
-		<span id="api-menu"></span>
-	</p>
+<div>
+	<strong>Last modified:</strong>
+	<script type="text/javascript">document.write(document.lastModified);</script>
+</div>
 
-<h2 id="api-method"></h2>
-	<h3>Specification:</h3>
-		<ul id="api-spec">
-			<li class="api"><p><em>{Category: Miscellaneous}</em> API</p></li>
-			<li class="blockKey"><p><em>{Category: Event}</em> 阻止键盘事件</p></li>
-			<li class="center"><p><em>{Category: CSS}</em> 改变窗口大小内容始终水平居中</p></li>
-			<li class="dialog"><p><em>{Category: Miscellaneous}</em> jQuery ColorBox 对话框</p></li>
-			<li class="disableSubmit"><p><em>{Category: Form}</em> 禁用表单提交按钮</p></li>
-			<li class="domain"><p><em>{Category: Miscellaneous}</em> 判断当前域名是否在给定数组中并返回</p></li>
-			<li class="field"><p><em>{Category: Form}</em> 返回表单中 name 属性为目标值的元素对象</p></li>
-			<li class="height"><p><em>{Category: CSS}</em> max-height | min-height</p></li>
-			<li class="iframeHeight"><p><em>{Category: CSS}</em> IFRAME 自适应高度</p></li>
-			<li class="minWidth"><p><em>{Category: CSS}</em> 窗口宽度大于目标值时内容宽度自适应否则固定</p></li>
-			<li class="paginator"><p><em>{Category: Miscellaneous}</em> 支持 Ajax 的分页组件</p></li>
-			<li class="scroll"><p><em>{Category: Effect}</em> 跟随滚动条</p></li>
-			<li class="select"><p><em>{Category: Form}</em> 加载 select, radio, checkbox 的默认值</p></li>
-			<li class="share"><p><em>{Category: Miscellaneous}</em> 分享按钮</p></li>
-			<li class="stripHtml"><p><em>{Category: Miscellaneous}</em> 过滤 HTML 标签</p></li>
-		</ul>
+<div id="api-menu"></div>
 
-	<h3>Syntax:</h3>
+<h2><span id="api-method"></span></h2>
+	<ul id="api-spec">
+		<li class="api">API</li>
+		<li class="blockKey">阻止键盘事件</li>
+		<li class="center">改变窗口大小内容始终水平居中</li>
+		<li class="dialog">jQuery ColorBox 对话框</li>
+		<li class="disableSubmit">禁用表单提交按钮</li>
+		<li class="domain">判断当前域名是否在给定数组中并返回</li>
+		<li class="field">返回表单中 name 属性为目标值的元素对象</li>
+		<li class="height">max-height | min-height</li>
+		<li class="iframeHeight">IFRAME 自适应高度</li>
+		<li class="minWidth">窗口宽度大于目标值时内容宽度自适应否则固定</li>
+		<li class="paginator">支持 Ajax 的分页组件</li>
+		<li class="scroll">跟随滚动条</li>
+		<li class="select">加载 select, radio, checkbox 的默认值</li>
+		<li class="share">分享按钮</li>
+		<li class="stripHtml">过滤 HTML 标签</li>
+	</ul>
+
+	<h3>Syntax</h3>
 		<ul id="api-syntax">
 			<li class="blockKey">
 				<textarea cols="" rows="" name="code" class="html">
@@ -92,8 +89,7 @@
 						"pclady",
 						"pcbaby",
 						"pchouse"
-					]),
-					document.getElementById("api-example")
+					])
 				);
 				</textarea>
 			</li>
@@ -105,9 +101,7 @@
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$jq.field($("#field"), "name").val()
-				);
+				$4what.log($jq.field($("#field"), "name").val());
 				</textarea>
 			</li>
 			<li class="height">
@@ -224,107 +218,85 @@
 			</li>
 			<li class="stripHtml">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$jq.stripHtml($("#api-syntax").html()),
-					document.getElementById("api-example")
-				);
+				$4what.log($jq.stripHtml($("#api-syntax").html()));
 				</textarea>
 			</li>
 		</ul>
 
-	<h3>Example:</h3>
-		<dl id="api-example">
-			<dd class="blockKey">
+	<h3>Example</h3>
+		<ul id="api-example">
+			<li class="blockKey">
 				<input type="text" name="" value="" class="text" id="blockKey" />
-			</dd>
-			<dd class="center">
+			</li>
+			<li class="center">
 				<div style="border: 2px solid red; height: 150px; margin: 0 auto; width: 960px;"></div>
-			</dd>
-			<dd class="disableSubmit">
-				<ol>
-					<li>
-						<form action="" method="post" id="disableSubmit-disable">
-							<input type="submit" value="Submit" />
-							<input type="image" src="../../images/100x100.png" />
-						</form>
-					</li>
-					<li>
-						<form action="" method="post" id="disableSubmit-enable">
-							<input type="submit" value="Submit" disabled="disabled" />
-							<input type="image" src="../../images/100x100.png" disabled="disabled" />
-						</form>
-					</li>
-				</ol>
-			</dd>
-			<dd class="field">
+			</li>
+			<li class="disableSubmit">
+				<form action="" method="post" id="disableSubmit-disable">
+					<input type="submit" value="Submit" />
+					<input type="image" src="../../images/100x100.png" />
+				</form>
+
+				<form action="" method="post" id="disableSubmit-enable">
+					<input type="submit" value="Submit" disabled="disabled" />
+					<input type="image" src="../../images/100x100.png" disabled="disabled" />
+				</form>
+			</li>
+			<li class="field">
 				<form action="" method="post" id="field">
 					<input type="text" name="name" value="value" class="text" />
 				</form>
-			</dd>
-			<dd class="height">
-				<ol>
-					<li>
-						<div id="height-max" style="border: 2px solid #000; overflow: hidden;">
-							<p style="background: red; height: 200px; width: 100px;"></p>
-						</div>
-					</li>
-					<li>
-						<div id="height-min" style="border: 2px solid #000; overflow: hidden;">
-							<p style="background: red; height: 100px; width: 100px;"></p>
-						</div>
-					</li>
-				</ol>
-			</dd>
-			<dd class="iframeHeight">
+			</li>
+			<li class="height">
+				<div id="height-max" style="border: 2px solid #000; overflow: hidden;">
+					<p style="background: red; height: 200px; width: 100px;"></p>
+				</div>
+
+				<div id="height-min" style="border: 2px solid #000; overflow: hidden;">
+					<p style="background: red; height: 100px; width: 100px;"></p>
+				</div>
+			</li>
+			<li class="iframeHeight">
 				<iframe src="../../article/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
-			</dd>
-			<dd class="minWidth">
+			</li>
+			<li class="minWidth">
 				<div style="border: 2px solid red; height: 150px;" id="minWidth"></div>
-			</dd>
-			<dd class="paginator">
-				<ol>
-					<li>
-						<div id="paginator"></div>
-					</li>
-					<li>
-						<div id="paginator-ajax"></div>
-					</li>
-				</ol>
-			</dd>
-			<dd class="scroll">
+			</li>
+			<li class="paginator">
+				<div id="paginator"></div>
+
+				<div id="paginator-ajax"></div>
+			</li>
+			<li class="scroll">
 				<div style="height: 2048px;">
 					<span id="scroll" style="border: 2px solid red; bottom: 0; height: 100px; position: absolute; right: 0; width: 100px;"></span>
 				</div>
-			</dd>
-			<dd class="select">
-				<ol id="select">
-					<li>
-						<select name="gender" class="select">
-							<option value="male" selected="selected">male</option> Male
-							<option value="female">female</option> Female
-						</select>
-					</li>
-					<li>
-						<input type="radio" name="agree" value="yes" checked="checked" /> Yes
-						<input type="radio" name="agree" value="no" /> No
-					</li>
-					<li>
-						<input type="checkbox" name="city" value="bj" checked="checked" /> 北京
-						<input type="checkbox" name="city" value="sh" /> 上海
-						<input type="checkbox" name="city" value="gz" /> 广州
-					</li>
-				</ol>
-			</dd>
-		</dl>
+			</li>
+			<li class="select">
+				<div id="select">
+					<select name="gender" class="select">
+						<option value="male" selected="selected">male</option> Male
+						<option value="female">female</option> Female
+					</select>
+
+					<input type="radio" name="agree" value="yes" checked="checked" /> Yes
+					<input type="radio" name="agree" value="no" /> No
+
+					<input type="checkbox" name="city" value="bj" checked="checked" /> 北京
+					<input type="checkbox" name="city" value="sh" /> 上海
+					<input type="checkbox" name="city" value="gz" /> 广州
+				</div>
+			</li>
+		</ul>
 
 
-		<script type="text/javascript" src="../../js/util.jquery-1.2.js"></script>
+		<script type="text/javascript" src="../../js/util.jquery-1.1.js"></script>
 
 		<script type="text/javascript">
-		$jq.api($jq, [
-			$("#api-spec li"),
-			$("#api-syntax li"),
-			$("#api-example dd")
+		$4what.api($jq, [
+			$("#api-spec > li"),
+			$("#api-syntax > li"),
+			$("#api-example > li")
 		], {
 			blockKey: function() {
 				// Backspace, Space
@@ -347,14 +319,11 @@
 						"pclady",
 						"pcbaby",
 						"pchouse"
-					]),
-					document.getElementById("api-example")
+					])
 				);
 			},
 			field: function() {
-				$4what.log(
-					$jq.field($("#field"), "name").val()
-				);
+				$4what.log($jq.field($("#field"), "name").val());
 			},
 			height: function() {
 				$jq.height($("#height-max"), "max", 100);
@@ -413,10 +382,7 @@
 				});
 			},
 			stripHtml: function() {
-				$4what.log(
-					$jq.stripHtml($("#api-syntax").html()),
-					document.getElementById("api-example")
-				);
+				$4what.log($jq.stripHtml($("#api-syntax").html()));
 			}
 		});
 		</script>

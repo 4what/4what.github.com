@@ -1,22 +1,14 @@
 ﻿/*___________________________________4what____________________________________*/
 
 /**
- * UtilJq
+ * jQuery Util
  *
  * @author http://www.4what.cn/
- * @version 1.2 Build 2016.10.17
+ * @version 1.1 Build 2016.11.01
  */
 (function() {
 
 var UtilJq = window["$jq"] = {
-	/*--------------------------------------
-	  Category: Core
-	--------------------------------------*/
-	/**
-	 * @requires $js
-	 */
-	//$js: window["$js"] || undefined,
-
 	/*--------------------------------------
 	  Category: CSS
 	--------------------------------------*/
@@ -202,57 +194,8 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/*--------------------------------------
-	  Category: Miscellaneous
+	  Category: Misc
 	--------------------------------------*/
-	/**
-	 * @requires jQuery 1.3.2+, $js.url
-	 * @param {Object} obj
-	 * @param {Object[]|String[]} spec
-	 * @param {Object} example
-	 */
-	api: function(obj, spec, example) {
-		var
-		menu = [],
-		methods = [],
-		param = $js.url.get("method"),
-		status = false;
-
-		for (var key in obj) {
-			methods.push(key);
-
-			if (key === param) {
-				status = true;
-			}
-		}
-
-		methods.sort();
-
-		for (var item, i = 0, l = methods.length; i < l; i++) {
-			item = methods[i];
-			menu.push('<a href="?method=' + item + '">' + item + '</a>');
-		}
-
-		$("#api-menu").html(menu.join(" | "));
-
-		for (var i = spec.length - 1; i >= 0; i--) {
-			$(spec[i]).each(function() {
-				if (!$(this).hasClass(param)) {
-					$(this).hide();
-				}
-			});
-		}
-
-		if (!status) {
-			return;
-		}
-
-		$("#api-method").html(param);
-
-		try {
-			example[param]();
-		} catch(e) {}
-	},
-
 	/**
 	 * @requires jQuery 1.3.2+, jQuery ColorBox
 	 * @param {Object} options
@@ -291,8 +234,6 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * detect domain
-	 *
 	 * @param {String[]} domains
 	 * @return {String}
 	 */
@@ -495,13 +436,11 @@ var UtilJq = window["$jq"] = {
 	},
 
 	/**
-	 * remove html tags and space chars
-	 *
 	 * @param {String} value
 	 * @return {String}
 	 */
 	stripHtml: function(value) {
-		return value.replace(/<.[^<>]*?>/g, "") // <>
+		return value.replace(/<.[^<>]*?>/g, "") // /<\/?[^>]+>/gi
 			.replace(/&nbsp;|&#160;/gi, ""); // non-breaking space
 	}
 };

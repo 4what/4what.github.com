@@ -12,7 +12,6 @@
  * font-size		{@value}
  */
 
-/* Document */
 body {
 color: #333;
 font-family: /*"Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", */"Microsoft YaHei", sans-serif;
@@ -23,7 +22,6 @@ word-wrap: break-word;
 */
 }
 
-/* Hypertext */
 a:link {
 color: #333;
 text-decoration: none;
@@ -39,7 +37,6 @@ text-decoration: underline;
 a:active {
 }
 
-/* Form */
 input, select, textarea {
 font-family: /*"Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", */"Microsoft YaHei", sans-serif;
 }

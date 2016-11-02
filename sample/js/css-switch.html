@@ -13,10 +13,7 @@
 
 <body>
 
-<h2>Specification</h2>
-	<p></p>
-
-<h2>Syntax</h2>
+<h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="html">
 	<link rel="alternate stylesheet" type="text/css" title="Other" href="alt.css" />
 	</textarea>
@@ -28,9 +25,6 @@
 
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	/**
-	 * @param {String} name
-	 */
 	function setCSS(name) {
 		var links = document.getElementsByTagName("link");
 		for (var item, i = links.length - 1; i >= 0; i--) {
@@ -46,16 +40,13 @@
 	</script>
 	</textarea>
 
-<h2>Example</h2>
+<h2><span>Example</span></h2>
 	<link rel="alternate stylesheet" type="text/css" title="Other" href="alt.css" />
 
 	<a href='javascript: setCSS("Other");'>Other</a>
 	<input type="button" value="Normal" onclick="setCSS();" />
 
 	<script type="text/javascript">
-	/**
-	 * @param {String} name
-	 */
 	function setCSS(name) {
 		var links = document.getElementsByTagName("link");
 		for (var item, i = links.length - 1; i >= 0; i--) {

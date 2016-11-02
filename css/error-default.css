@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* Document */
 body {
 background: #f4f4f4;
 color: #575757;
@@ -13,7 +12,6 @@ word-wrap: break-word;
 */
 }
 
-/* Hypertext */
 a:link {
 color: #1370ab;
 }
@@ -26,7 +24,6 @@ position: relative;
 top: 1px;
 }
 
-/* Form */
 input, select, textarea {
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 }

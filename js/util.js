@@ -9,7 +9,7 @@
 (function() {
 
 var Util = function() {
-	this.version = "";
+	//this.version = "";
 };
 
 Util.prototype = {

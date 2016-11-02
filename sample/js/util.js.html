@@ -13,73 +13,70 @@
 
 <body>
 
-<h2>util.js</h2>
-	<p>
-		<strong>Last modified:</strong>
-		<script type="text/javascript">document.write(document.lastModified);</script>
-	</p>
-	<p>
-		<span id="api-menu"></span>
-	</p>
+<div>
+	<strong>Last modified:</strong>
+	<script type="text/javascript">document.write(document.lastModified);</script>
+</div>
 
-<h2 id="api-method"></h2>
-	<h3>Specification:</h3>
-		<ul id="api-spec">
-			<li class="JSON"><p><em>{Category: Miscellaneous}</em> JSON</p></li>
-			<li class="ajax"><p><em>{Category: AJAX}</em> AJAX</p></li>
-			<li class="bind"><p><em>{Category: Event}</em> bind</p></li>
-			<li class="cancel"><p><em>{Category: Event}</em> cancel</p></li>
-			<li class="clock"><p><em>{Category: Miscellaneous}</em> clock</p></li>
-			<li class="cookie"><p><em>{Category: Miscellaneous}</em> cookie</p></li>
-			<li class="extend"><p><em>{Category: Core}</em> extend</p></li>
-			<li class="fav"><p><em>{Category: Miscellaneous}</em> 添加到收藏夹</p></li>
-			<li class="get"><p><em>{Category: Core}</em> get</p></li>
-			<li class="iframeDoc"><p><em>{Category: Miscellaneous}</em> iframeDoc</p></li>
-			<li class="iframeHeight"><p><em>{Category: CSS}</em> IFRAME 自适应高度</p></li>
-			<li class="inArray"><p><em>{Category: Array}</em> 返回数组元素索引</p></li>
-			<li class="jsonp"><p><em>{Category: AJAX}</em> (cross domain) jsonp</p></li>
-			<li class="keyCode"><p><em>{Category: Event}</em> keyCode</p></li>
-			<li class="load"><p><em>{Category: Miscellaneous}</em> load</p></li>
-			<li class="loader"><p><em>{Category: Miscellaneous}</em> (cross domain) loader</p></li>
-			<li class="random"><p><em>{Category: Miscellaneous}</em> 生成一个随机数</p></li>
-			<li class="randoms"><p><em>{Category: Array}</em> 生成一个随机数组</p></li>
-			<li class="remove"><p><em>{Category: Array}</em> 删除数组元素</p></li>
-			<li class="script"><p><em>{Category: AJAX}</em> (cross domain) getScript</p></li>
-			<li class="style"><p><em>{Category: CSS}</em> style</p></li>
-			<li class="timer"><p><em>{Category: Miscellaneous}</em> timer</p></li>
-			<li class="unbind"><p><em>{Category: Event}</em> unbind</p></li>
-			<li class="unique"><p><em>{Category: Array}</em> 数组元素去重</p></li>
-			<li class="url"><p><em>{Category: Miscellaneous}</em> url</p></li>
-			<li class="verify"><p><em>{Category: Form}</em> verify</p></li>
-			<li class="windowName"><p><em>{Category: AJAX}</em> windowName</p></li>
-			<li class="zoomOut"><p><em>{Category: CSS}</em> 根据宽高最大值缩小图片</p></li>
-		</ul>
+<div id="api-menu"></div>
 
-	<h3>Syntax:</h3>
+<h2><span id="api-method"></span></h2>
+	<ul id="api-spec">
+		<li class="JSON"></li>
+		<li class="ajax">same-origin</li>
+		<li class="bind"></li>
+		<li class="cancel"></li>
+		<li class="clock"></li>
+		<li class="cookie"></li>
+		<li class="extend"></li>
+		<li class="fav">添加到收藏夹</li>
+		<li class="get">get</li>
+		<li class="iframeDoc"></li>
+		<li class="iframeHeight">IFRAME 自适应高度</li>
+		<li class="inArray">返回数组元素索引</li>
+		<li class="jsonp">cross-domain</li>
+		<li class="keyCode"></li>
+		<li class="load"></li>
+		<li class="loader">cross-domain</li>
+		<li class="random">生成一个随机数</li>
+		<li class="randoms">生成一个随机数组</li>
+		<li class="remove">删除数组元素</li>
+		<li class="script">cross-domain</li>
+		<li class="style"></li>
+		<li class="timer"></li>
+		<li class="unbind"></li>
+		<li class="unique">数组元素去重</li>
+		<li class="url"></li>
+		<li class="verify"></li>
+		<li class="windowName">cross-domain; IE9-, Std</li>
+		<li class="zoomOut">根据宽高最大值缩小图片</li>
+	</ul>
+
+	<h3>Syntax</h3>
 		<ul id="api-syntax">
 			<li class="ajax">
 				<textarea cols="" rows="" name="code" class="js">
 				$js.ajax({
 					url:
-						//"ajax/data.jsp"
-						"ajax/data.xml"
-						+ "?timestamp=" + new Date().getTime()
+						"ajax/data.jsp"
+						//"ajax/data.xml"
+							+ "?timestamp=" + new Date().getTime()
 					,
-					//type: "POST",
-					//contentType: "",
-					//async: false,
+					type: "GET",
 					data: {
 						name: "value"
 					},
+					//async: false,
+					//contentType: false,
+					//processData: false,
 					beforeSend: function(xhr) {
-						//xhr.setRequestHeader("", "");
+						//if ("withCredentials" in xhr) {
+							//xhr.withCredentials = true; // for Std?
+						//}
 					},
 					complete: function(xhr) {},
 					success: function(data, xhr) {
-						$4what.log(
-							data,
-							document.getElementById("api-example")
-						);
+						$4what.log(data);
 					},
 					error: function(xhr) {
 						alert("Error: " + xhr.status + " " + xhr.statusText);
@@ -98,15 +95,9 @@
 
 				//$js.cookie("key", null/*, {domain: ".example.com"}*/);
 
-				$4what.log(
-					$js.cookie("key"),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.cookie("key"));
 
-				$4what.log(
-					document.cookie,
-					document.getElementById("api-example")
-				);
+				$4what.log(document.cookie);
 				</textarea>
 			</li>
 			<li class="iframeHeight">
@@ -120,20 +111,14 @@
 			</li>
 			<li class="inArray">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$js.inArray("a", ["a", "b", "c"]),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.inArray("a", ["a", "b", "c"]));
 				</textarea>
 			</li>
 			<li class="jsonp">
 				<textarea cols="" rows="" name="code" class="js">
-				$js.jsonp("http://www.example.com:8080/studio/project/4what.cn/sample/js/jsonp/data.jsp" + "?timestamp=" + new Date().getTime(), function(data) {
+				$js.jsonp("http://www.example.com:8080/studio/project/4what.cn/sample/js/jsonp/data.jsp" + "?name=value" + "&timestamp=" + new Date().getTime(), function(data) {
 					for (var key in data) {
-						$4what.log(
-							key + ": " + data[key],
-							document.getElementById("api-example")
-						)
+						$4what.log(key + ": " + data[key])
 					}
 				});
 				</textarea>
@@ -141,107 +126,74 @@
 			<li class="loader">
 				<textarea cols="" rows="" name="code" class="js">
 				$js.loader($.ui, "../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
-					$4what.log(
-						$.ui.version,
-						document.getElementById("api-example")
-					);
+					$4what.log($.ui.version);
 				});
 				</textarea>
 			</li>
 			<li class="random">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$js.random(0, 10, true),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.random(0, 10, true));
 
-				$4what.log(
-					$js.random(0, 10),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.random(0, 10));
 				</textarea>
 			</li>
 			<li class="randoms">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$js.randoms(3, 0, 10),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.randoms(3, 0, 10));
 
-				$4what.log(
-					$js.randoms(3, 0, 10, true),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.randoms(3, 0, 10, true));
 
-				$4what.log(
-					$js.randoms(3, 0, 10, true, false),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.randoms(3, 0, 10, true, false));
 				</textarea>
 			</li>
 			<li class="remove">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$js.remove("a", ["a", "b", "c"]),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.remove("a", ["a", "b", "c"]));
 				</textarea>
 			</li>
 			<li class="script">
 				<textarea cols="" rows="" name="code" class="js">
 				$js.script("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
-					$4what.log(
-						$.ui.version,
-						document.getElementById("api-example")
-					)
+					$4what.log($.ui.version)
 				});
 				</textarea>
 			</li>
 			<li class="style">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$js.style(document.body, "background-color"),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.style(document.body, "background-color"));
 				</textarea>
 			</li>
 			<li class="unique">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$js.unique([0, 1, 0, 1]),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.unique([0, 1, 0, 1]));
 				</textarea>
 			</li>
 			<li class="url">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log(
-					$js.url.get("method"),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.url.get("method"));
 				</textarea>
 			</li>
 			<li class="windowName">
 				<textarea cols="" rows="" name="code" class="html">
 				<input type="button" value="Request" id="windowName-request" />
 
-				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/window.name/data.jsp?windowname=true" method="post" id="windowName-form">
+				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=true" method="post" id="windowName-form">
 					<input type="text" name="name" value="value" class="text" />
-					<input type="button" value="Submit" id="windowName-form-submit" />
+					<input type="button" value="Submit" id="windowName-submit" />
 				</form>
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
 				document.getElementById("windowName-request").onclick = function() {
 					$js.windowName({
-						url: "http://www.example.com:8080/studio/project/4what.cn/sample/js/window.name/data.jsp?windowname=true&name=value" + "&timestamp=" + new Date().getTime(),
+						url: "http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=true&name=value" + "&timestamp=" + new Date().getTime(),
 						callback: function(data) {
 							$4what.log(data);
 						}
 					});
 				};
 
-				document.getElementById("windowName-form-submit").onclick = function() {
+				document.getElementById("windowName-submit").onclick = function() {
 					$js.windowName({
 						form: document.getElementById("windowName-form"),
 						callback: function(data) {
@@ -266,12 +218,12 @@
 			</li>
 		</ul>
 
-	<h3>Example:</h3>
-		<dl id="api-example">
-			<dd class="iframeHeight">
+	<h3>Example</h3>
+		<ul id="api-example">
+			<li class="iframeHeight">
 				<iframe src="../../article/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
-			</dd>
-			<dd class="timer">
+			</li>
+			<li class="timer">
 				<textarea cols="" rows="" name="" class="textarea" id="timer-fn">
 					// loop
 					var iteration = 100000000;
@@ -281,58 +233,53 @@
 					) {}
 				</textarea>
 				<input type="button" value="Run" id="timer-run" />
-			</dd>
-			<dd class="windowName">
-				<ol>
-					<li>
-						<input type="button" value="Request" id="windowName-request" />
-					</li>
-					<li>
-						<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/window.name/data.jsp?windowname=true" method="post" id="windowName-form">
-							<input type="text" name="name" value="value" class="text" />
-							<input type="button" value="Submit" id="windowName-form-submit" />
-						</form>
-					</li>
-				</ol>
-			</dd>
-			<dd class="zoomOut">
+			</li>
+			<li class="windowName">
+				<input type="button" value="Request" id="windowName-request" />
+
+				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=true" method="post" id="windowName-form">
+					<input type="text" name="name" value="value" class="text" />
+					<input type="button" value="Submit" id="windowName-submit" />
+				</form>
+			</li>
+			<li class="zoomOut">
 				<div id="zoomOut">
 					<img src="../../images/100x100.png" alt="" />
 				</div>
-			</dd>
-		</dl>
+			</li>
+		</ul>
 
 
-		<script type="text/javascript" src="../../js/util.jquery-1.2.js"></script>
+		<script type="text/javascript" src="../../js/util.jquery-1.1.js"></script>
 
 		<script type="text/javascript">
-		$jq.api($js, [
-			$("#api-spec li"),
-			$("#api-syntax li"),
-			$("#api-example dd")
+		$4what.api($js, [
+			$("#api-spec > li"),
+			$("#api-syntax > li"),
+			$("#api-example > li")
 		], {
 			ajax: function() {
 				$js.ajax({
 					url:
-						//"ajax/data.jsp"
-						"ajax/data.xml"
-						+ "?timestamp=" + new Date().getTime()
+						"ajax/data.jsp"
+						//"ajax/data.xml"
+							+ "?timestamp=" + new Date().getTime()
 					,
-					//type: "POST",
-					//contentType: "",
-					//async: false,
+					type: "GET",
 					data: {
 						name: "value"
 					},
+					//async: false,
+					//contentType: false,
+					//processData: false,
 					beforeSend: function(xhr) {
-						//xhr.setRequestHeader("", "");
+						//if ("withCredentials" in xhr) {
+							//xhr.withCredentials = true; // for Std?
+						//}
 					},
 					complete: function(xhr) {},
 					success: function(data, xhr) {
-						$4what.log(
-							data,
-							document.getElementById("api-example")
-						);
+						$4what.log(data);
 					},
 					error: function(xhr) {
 						alert("Error: " + xhr.status + " " + xhr.statusText);
@@ -349,89 +296,50 @@
 
 				//$js.cookie("key", null/*, {domain: ".example.com"}*/);
 
-				$4what.log(
-					$js.cookie("key"),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.cookie("key"));
 
-				$4what.log(
-					document.cookie,
-					document.getElementById("api-example")
-				);
+				$4what.log(document.cookie);
 			},
 			iframeHeight: function() {
 				$js.iframeHeight("iframeHeight");
 			},
 			inArray: function() {
-				$4what.log(
-					$js.inArray("a", ["a", "b", "c"]),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.inArray("a", ["a", "b", "c"]));
 			},
 			jsonp: function() {
-				$js.jsonp("http://www.example.com:8080/studio/project/4what.cn/sample/js/jsonp/data.jsp" + "?timestamp=" + new Date().getTime(), function(data) {
+				$js.jsonp("http://www.example.com:8080/studio/project/4what.cn/sample/js/jsonp/data.jsp" + "?name=value" + "&timestamp=" + new Date().getTime(), function(data) {
 					for (var key in data) {
-						$4what.log(
-							key + ": " + data[key],
-							document.getElementById("api-example")
-						)
+						$4what.log(key + ": " + data[key])
 					}
 				});
 			},
 			loader: function() {
 				$js.loader($.ui, "../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
-					$4what.log(
-						$.ui.version,
-						document.getElementById("api-example")
-					);
+					$4what.log($.ui.version);
 				});
 			},
 			random: function() {
-				$4what.log(
-					$js.random(0, 10, true),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.random(0, 10, true));
 
-				$4what.log(
-					$js.random(0, 10),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.random(0, 10));
 			},
 			randoms: function() {
-				$4what.log(
-					$js.randoms(3, 0, 10),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.randoms(3, 0, 10));
 
-				$4what.log(
-					$js.randoms(3, 0, 10, true),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.randoms(3, 0, 10, true));
 
-				$4what.log(
-					$js.randoms(3, 0, 10, true, false),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.randoms(3, 0, 10, true, false));
 			},
 			remove: function() {
-				$4what.log(
-					$js.remove("a", ["a", "b", "c"]),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.remove("a", ["a", "b", "c"]));
 			},
 			script: function() {
 				$js.script("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
-					$4what.log(
-						$.ui.version,
-						document.getElementById("api-example")
-					)
+					$4what.log($.ui.version)
 				});
 			},
 			style: function() {
-				$4what.log(
-					$js.style(document.body, "background-color"),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.style(document.body, "background-color"));
 			},
 			timer: function() {
 				document.getElementById("timer-run").onclick = function() {
@@ -439,28 +347,22 @@
 				};
 			},
 			unique: function() {
-				$4what.log(
-					$js.unique([0, 1, 0, 1]),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.unique([0, 1, 0, 1]));
 			},
 			url: function() {
-				$4what.log(
-					$js.url.get("method"),
-					document.getElementById("api-example")
-				);
+				$4what.log($js.url.get("method"));
 			},
 			windowName: function() {
 				document.getElementById("windowName-request").onclick = function() {
 					$js.windowName({
-						url: "http://www.example.com:8080/studio/project/4what.cn/sample/js/window.name/data.jsp?windowname=true&name=value" + "&timestamp=" + new Date().getTime(),
+						url: "http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=true&name=value" + "&timestamp=" + new Date().getTime(),
 						callback: function(data) {
 							$4what.log(data);
 						}
 					});
 				};
 
-				document.getElementById("windowName-form-submit").onclick = function() {
+				document.getElementById("windowName-submit").onclick = function() {
 					$js.windowName({
 						form: document.getElementById("windowName-form"),
 						callback: function(data) {
