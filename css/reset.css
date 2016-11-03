@@ -6,7 +6,7 @@
  * reset.css
  *
  * @author 4what
- * @version 2016.10.31
+ * @version 2016.11.03
  */
 
 * {
@@ -39,7 +39,6 @@ border-spacing: 0;
 outline: none; /* for IE8, Std */
 }
 
-/* Clear */
 .clear {
 zoom: 1; /* for IE7- (hasLayout) */
 }

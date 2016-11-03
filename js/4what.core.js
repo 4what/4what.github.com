@@ -8,9 +8,9 @@ var $4what = function() {
 	 * @requires jQuery 1.3.2+
 	 * @param {Object} obj
 	 * @param {Object[]|String[]} spec
-	 * @param {Object} demo
+	 * @param {Object} code
 	 */
-	this.api = function(obj, spec, demo) {
+	this.api = function(obj, spec, code) {
 		var
 		menu = [],
 		methods = [],
@@ -49,7 +49,7 @@ var $4what = function() {
 		$("#api-method").html(param);
 
 		try {
-			demo[param]();
+			code[param]();
 		} catch(e) {}
 	};
 

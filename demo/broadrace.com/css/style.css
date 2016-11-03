@@ -2,16 +2,6 @@
 
 @import url("reset.css");
 
-/**
- * [Typography]
- *
- * background-color	{@value}
- * border-color		{@value}
- * color			{@value}
- * font-family		{@value}
- * font-size		{@value}
- */
-
 body {
 color: #333;
 font-family: /*"Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", */"Microsoft YaHei", sans-serif;

@@ -177,7 +177,7 @@
 				<textarea cols="" rows="" name="code" class="html">
 				<input type="button" value="Request" id="windowName-request" />
 
-				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=true" method="post" id="windowName-form">
+				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=1" method="post" id="windowName-form">
 					<input type="text" name="name" value="value" class="text" />
 					<input type="button" value="Submit" id="windowName-submit" />
 				</form>
@@ -186,7 +186,7 @@
 				<textarea cols="" rows="" name="code" class="js">
 				document.getElementById("windowName-request").onclick = function() {
 					$js.windowName({
-						url: "http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=true&name=value" + "&timestamp=" + new Date().getTime(),
+						url: "http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=1&name=value" + "&timestamp=" + new Date().getTime(),
 						callback: function(data) {
 							$4what.log(data);
 						}
@@ -237,7 +237,7 @@
 			<li class="windowName">
 				<input type="button" value="Request" id="windowName-request" />
 
-				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=true" method="post" id="windowName-form">
+				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=1" method="post" id="windowName-form">
 					<input type="text" name="name" value="value" class="text" />
 					<input type="button" value="Submit" id="windowName-submit" />
 				</form>
@@ -355,7 +355,7 @@
 			windowName: function() {
 				document.getElementById("windowName-request").onclick = function() {
 					$js.windowName({
-						url: "http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=true&name=value" + "&timestamp=" + new Date().getTime(),
+						url: "http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=1&name=value" + "&timestamp=" + new Date().getTime(),
 						callback: function(data) {
 							$4what.log(data);
 						}

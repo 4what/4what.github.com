@@ -6,7 +6,7 @@
  * reset.css
  *
  * @author 4what
- * @version 2014.12.03
+ * @version 2016.11.03
  */
 
 * {
@@ -16,26 +16,22 @@ margin: 0;
 padding: 0;
 }
 
-/* Image */
 img {
 border: none;
 vertical-align: middle;
 }
 
-/* List */
+q:after, q:before {
+content: ""; /* for IE8, Std */
+}
+
 ol, ul {
 list-style: none;
 }
 
-/* Table */
 table {
 border-collapse: collapse;
 border-spacing: 0;
-}
-
-/* Text */
-q:after, q:before {
-content: ""; /* for IE8, Std */
 }
 
 /* Outlines and the focus */
@@ -43,9 +39,8 @@ content: ""; /* for IE8, Std */
 outline: none; /* for IE8, Std */
 }
 
-/* Clear */
 .clear {
-zoom: 1; /* for IE7- */ /* hasLayout */
+zoom: 1; /* for IE7- (hasLayout) */
 }
 .clear:after {
 clear: both;
