@@ -4,7 +4,7 @@
  * ExtJS Util
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2016.11.01
+ * @version 1.1 Build 2016.11.04
  * @requires ExtJS 3.2+
  */
 (function() {
@@ -174,7 +174,7 @@ var UtilExt = $ext = {
 			frame: true,
 			//frameConfig: {id: ""},
 			loadMask: {
-				msg: "请稍候……"
+				msg: "正在载入…"
 			}
 		};
 	},
@@ -205,7 +205,7 @@ var UtilExt = $ext = {
 			plain: true,
 			width: width,
 			loadMask: {
-				msg: "请稍候……"
+				msg: "正在载入…"
 			}
 		});
 	},

@@ -251,7 +251,7 @@ width: 85%;
 	width: 240px;
 	}
 	.catalog .layer ul {
-	line-height: 2em;
+	line-height: 2;
 	margin-top: 5px;
 	text-indent: 10px;
 	}
@@ -270,7 +270,7 @@ width: 85%;
 	margin-top: 5px;
 	}
 	.works ul {
-	line-height: 2em;
+	line-height: 2;
 	text-indent: 10px;
 	}
 	.works ul li {
@@ -329,7 +329,7 @@ width: 85%;
 	.timeline ol {
 	float: left;
 	font-weight: bold;
-	line-height: 2em;
+	line-height: 2;
 	}
 
 	.contact ol li,
@@ -343,7 +343,7 @@ width: 85%;
 	.timeline ul {
 	float: left;
 	left: 10px;
-	line-height: 2em;
+	line-height: 2;
 	position: relative;
 	}
 
@@ -468,7 +468,7 @@ width: 85%;
 	}
 	.sitemap dt {
 	background: url("../images/bullet-square.png") no-repeat 0 center;
-	line-height: 3em;
+	line-height: 2.5;
 	text-indent: 10px;
 	}
 	.sitemap dd {

@@ -33,6 +33,7 @@ text-decoration: none;
 
 input, select, textarea {
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-size: 12px;
 }
 
 
@@ -243,7 +244,7 @@ width: 466px;
 	.news {
 	background: url("../images/frontpage_news_bgmt.jpg") no-repeat 0 0;
 	height: 416px;
-	line-height: 1.5em;
+	line-height: 1.5;
 	padding: 10px 30px 10px 50px;
 	}
 

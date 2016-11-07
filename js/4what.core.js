@@ -179,7 +179,7 @@ var $4what = function() {
 	this.log = function(data, target) {
 		var p = document.createElement("p");
 		p.innerHTML = data;
-		!target ? document.body.appendChild(p) : target.appendChild(p);
+		(target || document.body).appendChild(p);
 	};
 };
 

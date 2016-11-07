@@ -4,7 +4,7 @@ body {
 background: #f4f4f4;
 color: #575757;
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 14px;
+font-size: 12px;
 margin-top: 20px;
 /*
 word-break: break-all;
@@ -26,6 +26,7 @@ top: 1px;
 
 input, select, textarea {
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-size: 12px;
 }
 
 
@@ -54,7 +55,6 @@ border-bottom: 1px solid #b6bcc6;
 }
 .header p {
 color: #787878;
-font-size: 11px;
 margin-top: 5px;
 text-align: right;
 }
@@ -76,11 +76,11 @@ margin: 0 auto;
 
 	/*------------------------------------*/
 	ul {
+	line-height: 1.5;
 	list-style: disc inside;
 	margin-top: 15px;
 	}
 	ul li {
-	line-height: 2em;
 	margin-left: 20px;
 	}
 
@@ -90,7 +90,6 @@ margin: 0 auto;
 --------------------------------------*/
 .footer {
 border-top: 1px solid #b6bcc6;
-font-size: 11px;
 margin: 15px auto 0 auto;
 padding-top: 15px;
 text-align: right;

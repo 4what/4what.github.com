@@ -127,7 +127,7 @@
 					}
 					$ext.failure.form(form, action, msg);
 				},
-				waitMsg: "请稍候……"
+				waitMsg: "正在载入…"
 			});
 		}
 	}

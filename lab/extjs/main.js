@@ -114,7 +114,7 @@
 					method: "update",
 					id: record.get("id")
 				};
-				_grid.body.mask("请稍候……");
+				_grid.body.mask("正在载入…");
 				Ext.Ajax.request({
 					url: "data/data.json", // 自定义
 					method: "POST",
@@ -331,7 +331,7 @@
 													"id" // 自定义
 												));
 											});
-											_grid.body.mask("请稍候……");
+											_grid.body.mask("正在载入…");
 											Ext.Ajax.request({
 												url: "data/data.json", // 自定义
 												method: "POST",
@@ -417,7 +417,7 @@
 											}
 											$ext.failure.form(form, action, msg);
 										},
-										waitMsg: "请稍候……"
+										waitMsg: "正在载入…"
 									});
 */
 
@@ -455,7 +455,7 @@
 								if (data.length === 0) {
 									return;
 								}
-								_grid.body.mask("请稍候……");
+								_grid.body.mask("正在载入…");
 								Ext.Ajax.request({
 									url: "data/data.json", // 自定义
 									method: "POST",
@@ -1268,7 +1268,7 @@
 					}
 					$ext.failure.form(form, action, msg);
 				},
-				waitMsg: "请稍候……"
+				waitMsg: "正在载入…"
 			});
 		}
 	}
@@ -1468,7 +1468,7 @@
 						switch (buttonId) {
 							case "yes":
 								var node = _tree.getSelectionModel().getSelectedNode();
-								_tree.body.mask("请稍候……");
+								_tree.body.mask("正在载入…");
 								Ext.Ajax.request({
 									url: "data/data.json", // 自定义
 									method: "POST",
@@ -1542,7 +1542,7 @@
 							}
 							$ext.failure.form(form, action, msg);
 						},
-						waitMsg: "请稍候……"
+						waitMsg: "正在载入…"
 					});
 				}
 			}
@@ -1654,7 +1654,7 @@
 					parentId = dropNode.parentNode.id;
 				}
 
-				_tree.body.mask("请稍候……");
+				_tree.body.mask("正在载入…");
 
 				Ext.Ajax.request({
 					url: "data/data.json", // 自定义

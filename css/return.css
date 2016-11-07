@@ -20,10 +20,14 @@ a:hover {
 }
 
 input, select, textarea {
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-size: 12px;
 }
 
 
-/*------------------------------------*/
+/*--------------------------------------
+  return.html
+--------------------------------------*/
 .iframe-return {
 height: 26px;
 position: fixed !important; /* for IE7+, Std */

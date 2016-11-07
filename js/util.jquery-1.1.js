@@ -4,7 +4,7 @@
  * jQuery Util
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2016.11.01
+ * @version 1.1 Build 2016.11.06
  */
 (function() {
 
@@ -406,6 +406,7 @@ var UtilJq = window["$jq"] = {
 	 * http://open.kaixin001.com/
 	 * http://dev.renren.com/
 	 *
+	 * @requires jQuery 1.3.2+
 	 * @param {Object} target (optional)
 	 * @param {Object} params (optional)
 	 * @return {String} (optional)

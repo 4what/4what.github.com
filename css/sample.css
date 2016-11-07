@@ -7,10 +7,12 @@ body {
 color: #333;
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
-line-height: 1.5em;
+line-height: 1.5;
 margin: 15px 10px;
+/*
 word-break: break-all;
 word-wrap: break-word;
+*/
 }
 
 a:link {
@@ -22,6 +24,7 @@ a:hover {
 
 input, select, textarea {
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+font-size: 12px;
 }
 
 
@@ -63,6 +66,8 @@ width: 750px;
 	.catalog {
 	margin-top: 10px;
 	overflow: hidden;
+	word-break: break-all;
+	word-wrap: break-word;
 	}
 	.catalog ul li {
 	float: left;
@@ -75,7 +80,6 @@ width: 750px;
 	border: 1px solid #999;
 	color: #003f7e;
 	float: left;
-	font-size: 11px;
 	font-weight: bold;
 	height: 118px;
 	overflow: hidden;
@@ -91,18 +95,17 @@ width: 750px;
 	}
 	.catalog ul span {
 	display: block;
-	margin: 15px 5px 3px 5px;
+	padding: 5px;
 	}
 	.catalog ul span em {
 	color: #999;
 	display: block;
-	font-size: 10px;
+	font-size: 85%;
 	font-weight: normal;
-	margin-top: 3px;
 	}
 
 	.catalog ol {
-	line-height: 2em;
+	line-height: 2;
 	list-style: decimal inside;
 	}
 
@@ -116,7 +119,6 @@ width: 750px;
 h2 {
 clear: both;
 font-size: 22px;
-line-height: 1.5em;
 margin-top: 10px;
 }
 h2 span {
@@ -129,7 +131,7 @@ margin-top: 10px;
 
 sup {
 color: #c0c0c0;
-font-size: 0.8em;
+font-size: 85%;
 * font-size: 100%;
 font-size: 100%\0;
 }

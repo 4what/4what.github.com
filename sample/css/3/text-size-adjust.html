@@ -15,39 +15,40 @@
 
 <h2><span>Specification</span></h2>
 	<p>
-		<a href="https://www.w3.org/TR/css-text-decor-3/#text-shadow">[1]</a>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">[2]</a>
+		<a href="https://drafts.csswg.org/css-size-adjust/#propdef-text-size-adjust">[1]</a>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust">[2]</a>
+		<a href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16">[3]</a>
 	</p>
 
 <h2><span>Compatibility</span></h2>
 	<p>
-		IE10+
+		Safari (iOS)
 	</p>
 
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="css">
-	<style type="text/css">
-	#box {
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* for IE10+, Std */
+	#box span {
+	-webkit-text-size-adjust: none; /* for Safari (iOS) */
 	}
-	</style>
 	</textarea>
 
 	<textarea cols="" rows="" name="code" class="html">
 	<div id="box">
-		Text
+		<span>Foo</span>
+		Bar
 	</div>
 	</textarea>
 
 <h2><span>Example</span></h2>
 	<style type="text/css">
-	#box {
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* for IE10+, Std */
+	#box span {
+	-webkit-text-size-adjust: none; /* for Safari (iOS) */
 	}
 	</style>
 
 	<div id="box">
-		Text
+		<span>Foo</span>
+		Bar
 	</div>
 
 <script type="text/javascript" src="../../../js/analytics.js"></script>
