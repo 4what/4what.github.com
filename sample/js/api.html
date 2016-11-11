@@ -125,7 +125,7 @@
 	||
 	window.getComputedStyle
 	<sup>IE9+<sup><a href="https://msdn.microsoft.com/en-us/library/ff975168">[1]</a></sup></sup>
-	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/window.getComputedStyle">[1]</a><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration">[2]</a></sup></sup>
+	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle">[1]</a><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration">[2]</a></sup></sup>
 </h3>
 
 
@@ -145,7 +145,7 @@
 
 <h3>
 	detachEvent
-	<sup>IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms536411">[1]</a></sup></sup>
+	<sup>IE10-<sup><a href="https://msdn.microsoft.com/en-us/library/ms536411">[1]</a></sup></sup>
 	||
 	removeEventListener
 	<sup>IE9+<sup><a href="https://msdn.microsoft.com/en-us/library/ff975250">[1]</a></sup></sup>
@@ -275,8 +275,8 @@
 
 
 <h3>
-	doScroll (Quirks)
-	<sup>IE9-<sup><a href="https://msdn.microsoft.com/en-us/library/ms536414">[1]</a></sup></sup>
+	doScroll
+	<sup>IE9- (Quirks)<sup><a href="https://msdn.microsoft.com/en-us/library/ms536414">[1]</a></sup></sup>
 </h3>
 
 
@@ -307,17 +307,6 @@
 	<samp>
 	keyup: <input type="text" name="" value="" onkeyup="alert(event.altKey);" class="text" />
 	</samp>
-
-
-<h3>
-	event.cancelBubble
-	<sup>IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms533545">[1]</a></sup></sup>
-	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/event.cancelBubble">[1]</a></sup></sup>
-	||
-	event.stopPropagation
-	<sup>IE9+<sup><a href="https://msdn.microsoft.com/en-us/library/ff975462">[1]</a></sup></sup>
-	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/event.stopPropagation">[1]</a></sup></sup>
-</h3>
 
 
 <h3>
@@ -470,11 +459,11 @@
 
 
 <h3>
-	onreadystatechange
-	<sup>IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms536957">[1]</a></sup></sup>
-	&&
-	readyState
-	<sup>IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms534359">[1]</a><a href="https://msdn.microsoft.com/en-us/library/ms534361">[2]</a></sup></sup>
+	script.onreadystatechange
+	<sup>IE10-<sup><a href="https://msdn.microsoft.com/en-us/library/ms536957">[1]</a></sup></sup>
+	>
+	script.readyState
+	<sup>IE10-<sup><a href="https://msdn.microsoft.com/en-us/library/ms534359">[1]</a></sup></sup>
 </h3>
 
 
@@ -667,19 +656,6 @@
 
 
 <h3>
-	window.external.AddFavorite
-	<sup>IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms535926">[1]</a></sup></sup>
-	||
-	window.sidebar.addPanel
-	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/window.sidebar">[1]</a></sup></sup>
-</h3>
-
-	<samp>
-	<a href="javascript: $4what.fav();">Add to Favorites</a>
-	</samp>
-
-
-<h3>
 	window.frameElement
 	<sup>IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms533771">[1]</a></sup></sup>
 	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/window.frameElement">[1]</a></sup></sup>
@@ -778,20 +754,6 @@
 
 
 <h3>
-	new ActiveXObject("Microsoft.XMLHTTP")
-	<sup>IE6<sup><a href="https://msdn.microsoft.com/en-us/library/7sw4ddf8">[1]</a></sup></sup>
-	||
-	new XDomainRequest()
-	<sup>IE8-10<sup><a href="https://msdn.microsoft.com/en-us/library/cc288060">[1]</a><a href="https://developer.mozilla.org/en-US/docs/Web/API/XDomainRequest">[2]</a></sup></sup>
-	||
-	new XMLHttpRequest()
-	<sup>W3C<sup><a href="https://www.w3.org/TR/XMLHttpRequest/">[1]</a><a href="https://www.w3.org/TR/XMLHttpRequest2/">[2]</a></sup></sup>
-	<sup>IE7+<sup><a href="https://msdn.microsoft.com/en-us/library/ms535874">[1]</a></sup></sup>
-	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">[1]</a></sup></sup>
-</h3>
-
-
-<h3>
 	Array.indexOf
 	<sup>IE9+<sup><a href="https://msdn.microsoft.com/en-us/library/ff679977">[1]</a></sup></sup>
 	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">[1]</a></sup></sup>
@@ -847,44 +809,6 @@
 	<script type="text/javascript">
 	document.write(window.devicePixelRatio);
 	</script>
-	</samp>
-
-
-<h3>
-	Dimension
-	<sup>IE<sup><a href="https://msdn.microsoft.com/en-us/library/hh781509">[1]</a></sup></sup>
-	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Determining_the_dimensions_of_elements">[1]</a></sup></sup>
-</h3>
-
-
-<h3>
-	Strict Mode
-	<sup>IE10+<sup><a href="https://msdn.microsoft.com/en-us/library/br230269">[1]</a></sup></sup>
-	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">[1]</a></sup></sup>
-</h3>
-
-	<samp>
-	"use strict";
-	</samp>
-
-
-<h3>
-	Version
-	<sup>IE<sup><a href="https://msdn.microsoft.com/en-us/library/s4esdbwz">[1]</a><a href="https://msdn.microsoft.com/zh-cn/library/s4esdbwz">[2]</a></sup></sup>
-</h3>
-
-
-<h3>
-	Web Storage
-	<sup>W3C<sup><a href="https://www.w3.org/TR/webstorage/">[1]</a></sup></sup>
-	<sup>IE8+<sup><a href="https://msdn.microsoft.com/en-us/library/bg142799">[1]</a><a href="https://msdn.microsoft.com/en-us/library/hh781511">[2]</a></sup></sup>
-	<sup>Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">[1]</a></sup></sup>
-</h3>
-
-	<samp>
-	window.localStorage
-	<br/>
-	window.sessionStorage
 	</samp>
 
 <script type="text/javascript" src="../../js/analytics.js"></script>

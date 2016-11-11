@@ -15,8 +15,8 @@
 
 <h2><span>Specification</span></h2>
 	<p>
-		Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">[1]</a></sup>
-		IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms536651">[1]</a></sup>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">[1]</a>
+		<a href="https://msdn.microsoft.com/en-us/library/ms536651">[2]</a>
 	</p>
 
 <h2><span>Syntax</span></h2>
@@ -54,7 +54,7 @@
 
 	document.getElementById("open").onclick = function() {
 		p.open(
-			"child.html" + "?timestamp=" + new Date().getTime(),
+			"child.html",
 			"",
 			"height=0,left=0,resizable=no,scrollbars=no,top=0,width=0"
 		);
@@ -103,7 +103,7 @@
 
 	document.getElementById("open").onclick = function() {
 		p.open(
-			"child.html" + "?timestamp=" + new Date().getTime(),
+			"child.html",
 			"",
 			"height=0,left=0,resizable=no,scrollbars=no,top=0,width=0"
 		);

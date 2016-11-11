@@ -61,7 +61,7 @@ margin: 0 auto;
 	height: 100%;
 	padding: 10px 0;
 	}
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* for IE10+ */
 		h1 {
 		color: #333;
 		}

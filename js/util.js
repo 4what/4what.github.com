@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 2016.11.01
+ * @version 2016.11.10
  */
 (function() {
 
@@ -128,22 +128,21 @@ Util.prototype = {
 		script.type = "text/javascript";
 
 		if (!jsonp) {
-			script.onload = // for Std
-			script.onreadystatechange = // for IE
-				function() {
-					state = script.readyState;
+			if (script.onload !== undefined) {
+				script.onload = function() { // for IE9+, Std
+					callback();
 
-					if (
-						!state
-						|| /loaded|complete/.test(state) // for IE
-					) {
+					clean();
+				}
+			} else {
+				script.onreadystatechange = function() { // for IE10-
+					if (/complete|loaded/.test(script.readyState)) {
 						callback();
-
-						script.onload = script.onreadystatechange = null; // for IE
 
 						clean();
 					}
 				};
+			}
 		} else {
 			var fn = "jsonp_" + new Date().getTime();
 
@@ -179,9 +178,9 @@ Util.prototype = {
 		name = "windowname-" + new Date().getTime();
 
 		try {
-			iframe = document.createElement('<iframe name="' + name + '"></iframe>'); // for IE
+			iframe = document.createElement('<iframe name="' + name + '"></iframe>'); // for IE8-
 		} catch (e) {
-			iframe = document.createElement("iframe"); // for Std
+			iframe = document.createElement("iframe"); // for IE9+, Std
 			iframe.name = name;
 		}
 
@@ -323,13 +322,13 @@ Util.prototype = {
 	 */
 	style: function(target, name) {
 		var value;
-		if (target.currentStyle) { // for IE
+		if (window.getComputedStyle) { // for IE9+, Std
+			value = target.ownerDocument.defaultView.getComputedStyle(target, null).getPropertyValue(name);
+		} else { // for IE
 			var camelCase = name.replace(/-([a-z])/ig, function(all, letter){
 				return letter.toUpperCase();
 			});
 			value = target.currentStyle[camelCase];
-		} else if (window.getComputedStyle) { // for IE9+, Std
-			value = target.ownerDocument.defaultView.getComputedStyle(target, null).getPropertyValue(name);
 		}
 		return value;
 	},
@@ -375,7 +374,7 @@ Util.prototype = {
 	bind: function(target, type, listener) {
 		if (target.addEventListener) { // for IE9+, Std
 			target.addEventListener(type, listener, false);
-		} else if (target.attachEvent) { // for IE
+		} else { // for IE10-
 			target.attachEvent("on" + type, listener);
 		}
 	},
@@ -405,7 +404,7 @@ Util.prototype = {
 		if (e.stopPropagation) { // for IE9+, Std
 			e.stopPropagation();
 		}
-		e.cancelBubble = true; // for IE
+		e.cancelBubble = true;
 	},
 
 	/**
@@ -416,7 +415,7 @@ Util.prototype = {
 	unbind: function(target, type, listener) {
 		if (target.removeEventListener) { // for IE9+, Std
 			target.removeEventListener(type, listener, false);
-		} else if (target.detachEvent) { // for IE
+		} else { // for IE10-
 			target.detachEvent("on" + type, listener);
 		}
 	},
@@ -544,24 +543,6 @@ Util.prototype = {
 	},
 
 	/**
-	 * for IE, Firefox
-	 *
-	 * @param {String} title (optional)
-	 * @param {String} url (optional)
-	 */
-	fav: function(title, url) {
-		if (!title) {
-			title = document.title;
-		}
-		if (!url) {
-			url = window.location.href;
-		}
-		window.sidebar ?
-			window.sidebar.addPanel(title, url, "") : // for Firefox
-			window.external.AddFavorite(url, title); // for IE
-	},
-
-	/**
 	 * https://developer.mozilla.org/en-US/docs/Migrate_apps_from_Internet_Explorer_to_Mozilla#Rich_text_differences
 	 *
 	 * @deprecated
@@ -572,7 +553,7 @@ Util.prototype = {
 	iframeDoc: function(id, name) {
 		//document.getElementById(id).contentWindow.document
 		//window[name].document
-		return document.getElementById(id).contentDocument // for Std
+		return document.getElementById(id).contentDocument // for IE8+, Std
 			|| document.frames[
 				id // id|name
 			].document; // for IE

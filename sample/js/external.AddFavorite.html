@@ -15,36 +15,30 @@
 
 <h2><span>Compatibility</span></h2>
 	<p>
-		IE10-<sup><a href="https://msdn.microsoft.com/en-us/library/ms531405">[1]</a></sup>
+		IE<sup><a href="https://msdn.microsoft.com/en-us/library/ms535926">[1]</a></sup>
 	</p>
 
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="html">
-	<a href="javascript: void(0);" id="homepage">Set Home Page</a>
+	<a href="javascript: void(0);" id="addFavorite">Add to Favorites</a>
 	</textarea>
 
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	document.getElementById("homepage").onclick = function() {
-		// for IE10-
-		try {
-			this.style.behavior = "url(#default#homepage)";
-			this.setHomePage(window.location.href);
-		} catch (e) {}
+	document.getElementById("addFavorite").onclick = function() {
+		// for IE
+		window.external.AddFavorite(window.location.href, document.title);
 	};
 	</script>
 	</textarea>
 
 <h2><span>Example</span></h2>
-	<a href="javascript: void(0);" id="homepage">Set Home Page</a>
+	<a href="javascript: void(0);" id="addFavorite">Add to Favorites</a>
 
 	<script type="text/javascript">
-	document.getElementById("homepage").onclick = function() {
-		// for IE10-
-		try {
-			this.style.behavior = "url(#default#homepage)";
-			this.setHomePage(window.location.href);
-		} catch (e) {}
+	document.getElementById("addFavorite").onclick = function() {
+		// for IE
+		window.external.AddFavorite(window.location.href, document.title);
 	};
 	</script>
 
