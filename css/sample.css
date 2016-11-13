@@ -65,9 +65,11 @@ width: 750px;
 	/*------------------------------------*/
 	.catalog {
 	margin-top: 10px;
-	overflow: hidden;
 	word-break: break-all;
 	word-wrap: break-word;
+	}
+	.catalog ul {
+	overflow: hidden;
 	}
 	.catalog ul li {
 	float: left;

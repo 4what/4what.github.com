@@ -4,11 +4,11 @@
  * jQuery Util
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2016.11.06
+ * @version 1.1 Build 2016.11.12
  */
 (function() {
 
-var UtilJq = window["$jq"] = {
+var UtilJq = window.$jq = {
 	/*--------------------------------------
 	  Category: CSS
 	--------------------------------------*/

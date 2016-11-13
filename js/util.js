@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 2016.11.10
+ * @version 2016.11.12
  */
 (function() {
 
@@ -545,14 +545,15 @@ Util.prototype = {
 	/**
 	 * https://developer.mozilla.org/en-US/docs/Migrate_apps_from_Internet_Explorer_to_Mozilla#Rich_text_differences
 	 *
+	 * document.getElementById(id).contentWindow.document
+	 * window[name].document
+	 *
 	 * @deprecated
 	 * @param {String} id
 	 * @param {String} name (optional)
 	 * @return {Object}
 	 */
 	iframeDoc: function(id, name) {
-		//document.getElementById(id).contentWindow.document
-		//window[name].document
 		return document.getElementById(id).contentDocument // for IE8+, Std
 			|| document.frames[
 				id // id|name
@@ -708,6 +709,6 @@ Util.prototype = {
 	}
 };
 
-window["$js"] = new Util();
+window.$js = new Util();
 
 })();

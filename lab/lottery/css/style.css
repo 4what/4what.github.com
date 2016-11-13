@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import url("../js/impress/0.5.3/impress-demo.css");
-
 body {
 background: url("../images/bg.jpg") no-repeat 0 0;
 background-size: cover;

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2><span>Specification</span></h2>
+	<p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">[1]</a>
+	</p>
+
+<h2><span>Compatibility</span></h2>
+	<p>
+		IE10+,
+		Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">[1]</a></sup>
+	</p>
+
+<h2><span>Syntax</span></h2>
+	<textarea cols="" rows="" name="code" class="html">
+	<input type="text" name="" value="" id="message" />
+	<button id="send">Send</button>
+	<button id="close">Close</button>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	var ws = new WebSocket("ws://localhost:8080/j2ee/websocket/1");
+
+	ws.onclose = function(e) {
+		$4what.log("onclose");
+	};
+	ws.onerror = function(e) {
+		$4what.log("onerror");
+	};
+	ws.onopen = function(e) {
+		$4what.log("onopen");
+	};
+	ws.onmessage = function(e) {
+		$4what.log("onmessage");
+
+		$4what.log(e.data);
+	};
+
+	document.getElementById("close").onclick = function() {
+		ws.close();
+	};
+
+	document.getElementById("send").onclick = function() {
+		ws.send(document.getElementById("message").value);
+	};
+	</script>
+	</textarea>
+
+<h2><span>Example</span></h2>
+	<input type="text" name="" value="" id="message" />
+	<button id="send">Send</button>
+	<button id="close">Close</button>
+
+	<script type="text/javascript">
+	var ws = new WebSocket("ws://localhost:8080/j2ee/websocket/1");
+
+	ws.onclose = function(e) {
+		$4what.log("onclose");
+	};
+	ws.onerror = function(e) {
+		$4what.log("onerror");
+	};
+	ws.onopen = function(e) {
+		$4what.log("onopen");
+	};
+	ws.onmessage = function(e) {
+		$4what.log("onmessage");
+
+		$4what.log(e.data);
+	};
+
+	document.getElementById("close").onclick = function() {
+		ws.close();
+	};
+
+	document.getElementById("send").onclick = function() {
+		ws.send(document.getElementById("message").value);
+	};
+	</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

@@ -185,7 +185,7 @@ var $4what = function() {
 
 $4what.prototype = $js;
 
-window["$4what"] = new $4what();
+window.$4what = new $4what();
 
 })();
 

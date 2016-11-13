@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
 <script type="text/javascript" src="../../../js/util.js"></script>
-<script type="text/javascript" src="../../../js/4what.core.js"></script>
+<script type="text/javascript" src="../../../js/core.js"></script>
 <script type="text/javascript" src="../../../js/sample.js"></script>
 </head>
 
@@ -21,32 +21,76 @@
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="css">
 	<style type="text/css">
-	#line {
+	#box {
+	background: blue;
+	height: 200px;
+	position: relative;
+	width: 200px;
+	}
+
+	#iframe {
+	height: 100px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100px;
+	}
+
+	#overlay {
 	background: red;
-	font-size: 0; /* for IE6 */
-	height: 1px;
-	overflow: hidden; /* for IE6 */
-	width: 100%;
+	height: 100px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100px;
 	}
 	</style>
 	</textarea>
 
 	<textarea cols="" rows="" name="code" class="html">
-	<div id="line"></div>
+	<div id="box">
+		<select name=""><option>value</option></select>
+		<iframe src="" frameborder="0" scrolling="no" id="iframe"></iframe>
+		<div id="overlay">
+			Text
+		</div>
+	</div>
 	</textarea>
 
 <h2><span>Example</span></h2>
 	<style type="text/css">
-	#line {
+	#box {
+	background: blue;
+	height: 200px;
+	position: relative;
+	width: 200px;
+	}
+
+	#iframe {
+	height: 100px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100px;
+	}
+
+	#overlay {
 	background: red;
-	font-size: 0; /* for IE6 */
-	height: 1px;
-	overflow: hidden; /* for IE6 */
-	width: 100%;
+	height: 100px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100px;
 	}
 	</style>
 
-	<div id="line"></div>
+	<div id="box">
+		<select name=""><option>value</option></select>
+		<iframe src="" frameborder="0" scrolling="no" id="iframe"></iframe>
+		<div id="overlay">
+			Text
+		</div>
+	</div>
 
 <script type="text/javascript" src="../../../js/analytics.js"></script>
 </body>
