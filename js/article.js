@@ -24,7 +24,6 @@ function toggle() {
 	}
 }
 
-/* jQuery */
 $(function() {
 
 	// toggle

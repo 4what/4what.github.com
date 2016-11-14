@@ -2,11 +2,11 @@
  * Validate
  *
  * @author 4what
- * @version 2016.01.01
+ * @version 2016.11.14
  */
 (function() {
 
-var Validate = window["Validate"] = {
+var Validate = window.Validate = {
 	// chinese
 	isChinese: function(value) {
 		return /^[\u0391-\uFFE5]+$/.test(value);

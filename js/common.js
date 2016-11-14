@@ -30,23 +30,12 @@ if (name === "index" || (!re && /\/$/.test(pathname))) {
 			}
 		} catch (e) {}
 	}
-
-	/* jQuery */
-	$(window).load(function() {
-
-		// spotlight (for IE7-, Std)
-		//window.setTimeout(function() {
-			$("#overview li").eq(-1).delay(2000).effect("pulsate", 2000);
-		//}, 2000);
-
-	});
 } else {
 	switch (name) {
 		case "works":
 			// include
 			$4what.include("jquery-lightbox");
 
-			/* jQuery */
 			$(function() {
 
 /*

@@ -37,7 +37,6 @@ function breadcrumb() {
 	}
 }
 
-/* jQuery */
 $(function() {
 
 	// logo

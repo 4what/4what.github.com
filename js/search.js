@@ -1,6 +1,5 @@
 ﻿(function() {
 
-/* jQuery */
 $(function() {
 
 	// subnav

@@ -155,7 +155,7 @@ width: 720px;
 /*------------------------------------*/
 .body-home .content {
 text-align: center;
-width: 85%;
+width: 960px;
 }
 
 	/*------------------------------------*/
@@ -220,22 +220,19 @@ width: 85%;
 	font-size: 1.8em;
 	}
 	.font-5 {
-	font-size: 2.1em;
+	font-size: 2em;
 	}
 	.font-6 {
 	font-size: 2.4em;
 	}
 	.font-7 {
-	font-size: 2.7em;
+	font-size: 2.8em;
 	}
 	.font-8 {
 	font-size: 3.0em;
 	}
 	.font-9 {
 	font-size: 3.2em;
-	}
-	.font-10 {
-	font-size: 3.8em;
 	}
 
 	/*------------------------------------*/

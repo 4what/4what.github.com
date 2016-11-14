@@ -3,6 +3,7 @@
 #Sitemap: http://www.example.com/sitemap.xml
 
 #User-Agent: *
-#Disallow:
 
 #Allow: /
+
+#Disallow:
