@@ -15,32 +15,28 @@
 
 <h2><span>Compatibility</span></h2>
 	<p>
-		IE
+		IE9+
+		,
+		Std
 		<sup>
-			<a href="https://msdn.microsoft.com/en-us/library/ms535926">[1]</a>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded">[1]</a>
 		</sup>
 	</p>
 
 <h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="html">
-	<a href="javascript: void(0);" id="addFavorite">Add to Favorites</a>
-	</textarea>
-
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	document.getElementById("addFavorite").onclick = function() {
-		window.external.AddFavorite(window.location.href, document.title);
-	};
+	document.addEventListener("DOMContentLoaded", function(event) {
+		$4what.log("DOMContentLoaded");
+	});
 	</script>
 	</textarea>
 
 <h2><span>Example</span></h2>
-	<a href="javascript: void(0);" id="addFavorite">Add to Favorites</a>
-
 	<script type="text/javascript">
-	document.getElementById("addFavorite").onclick = function() {
-		window.external.AddFavorite(window.location.href, document.title);
-	};
+	document.addEventListener("DOMContentLoaded", function(event) {
+		$4what.log("DOMContentLoaded");
+	});
 	</script>
 
 <script type="text/javascript" src="../../js/analytics.js"></script>

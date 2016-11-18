@@ -31,51 +31,47 @@
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="html">
 	<form action="" method="post" enctype="multipart/form-data" id="form">
-		<input type="file" name="file" id="file" />
+		<input type="file" name="file" multiple="multiple" id="file" />
 	</form>
 	</textarea>
 
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	if ("FormData" in window) { // for IE10+, Std
-		document.getElementById("file").onchange = function() {
-			if (this.value) {
-				var formData = new FormData(document.getElementById("form"));
-				formData.append("name", "value");
+	document.getElementById("file").onchange = function() {
+		if (this.value) {
+			var formData = new FormData(document.getElementById("form"));
+			formData.append("name", "value");
 
-				var xhr = new XMLHttpRequest();
-				xhr.onload = function() {
-					$4what.log(xhr.responseText);
-				};
-				xhr.open("POST", "http://localhost:8080/j2ee/sample/fileupload/upload.jsp", true);
-				xhr.send(formData);
-			}
-		};
-	}
+			var xhr = new XMLHttpRequest();
+			xhr.onload = function() {
+				$4what.log(xhr.responseText);
+			};
+			xhr.open("POST", "http://localhost:8080/j2ee/sample/fileupload/upload.jsp", true);
+			xhr.send(formData);
+		}
+	};
 	</script>
 	</textarea>
 
 <h2><span>Example</span></h2>
 	<form action="" method="post" enctype="multipart/form-data" id="form">
-		<input type="file" name="file" id="file" />
+		<input type="file" name="file" multiple="multiple" id="file" />
 	</form>
 
 	<script type="text/javascript">
-	if ("FormData" in window) { // for IE10+, Std
-		document.getElementById("file").onchange = function() {
-			if (this.value) {
-				var formData = new FormData(document.getElementById("form"));
-				formData.append("name", "value");
+	document.getElementById("file").onchange = function() {
+		if (this.value) {
+			var formData = new FormData(document.getElementById("form"));
+			formData.append("name", "value");
 
-				var xhr = new XMLHttpRequest();
-				xhr.onload = function() {
-					$4what.log(xhr.responseText);
-				};
-				xhr.open("POST", "http://localhost:8080/j2ee/sample/fileupload/upload.jsp", true);
-				xhr.send(formData);
-			}
-		};
-	}
+			var xhr = new XMLHttpRequest();
+			xhr.onload = function() {
+				$4what.log(xhr.responseText);
+			};
+			xhr.open("POST", "http://localhost:8080/j2ee/sample/fileupload/upload.jsp", true);
+			xhr.send(formData);
+		}
+	};
 	</script>
 
 <script type="text/javascript" src="../../js/analytics.js"></script>

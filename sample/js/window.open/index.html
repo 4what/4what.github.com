@@ -71,6 +71,22 @@
 	</script>
 	</textarea>
 
+<h3>child.html</h3>
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	window.onload = function() {
+		var parent = window.opener;
+
+		if (parent) {
+			parent.focus();
+
+			//alert(parent);
+			//alert(parent.document);
+		}
+	};
+	</script>
+	</textarea>
+
 <h2><span>Example</span></h2>
 	<button id="open">Open</button>
 

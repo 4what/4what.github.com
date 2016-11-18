@@ -56,11 +56,9 @@
 
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	document.getElementById("outer")
-		// for IE9+, Std
-		.addEventListener("click", function() {
-			alert("outer");
-		}, true);
+	document.getElementById("outer").addEventListener("click", function(e) {
+		alert("outer");
+	}, true);
 	</script>
 	</textarea>
 
@@ -85,11 +83,9 @@
 	</div>
 
 	<script type="text/javascript">
-	document.getElementById("outer")
-		// for IE9+, Std
-		.addEventListener("click", function(e) {
-			alert("outer");
-		}, true);
+	document.getElementById("outer").addEventListener("click", function(e) {
+		alert("outer");
+	}, true);
 	</script>
 
 <script type="text/javascript" src="../../js/analytics.js"></script>

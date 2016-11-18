@@ -32,22 +32,38 @@
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
 	var iframe = document.createElement("iframe");
-	iframe.src = "http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.postMessage/iframe.html";
-	//iframe.style.display = "none";
+	iframe.src = "http://subdomain.example.com:8080/studio/project/4what.cn/sample/js/Window.postMessage/iframe.html";
+	iframe.style.display = "none";
 
 	document.body.appendChild(iframe);
 
 	iframe.onload = function() {
-		iframe.contentWindow.postMessage(new Date(), "http://www.example.com:8080");
+		iframe.contentWindow.postMessage(new Date(), "http://subdomain.example.com:8080");
 	};
 
+	function receiver(e) {
+		if (e.origin !== "http://subdomain.example.com:8080") {
+			//return;
+		}
+
+		alert("RESPONSE\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
+	}
+
+	$js.bind(window, "message", receiver);
+	</script>
+	</textarea>
+
+<h3>iframe.html</h3>
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
 	function receiver(e) {
 		if (e.origin !== "http://www.example.com:8080") {
 			//return;
 		}
 
-		alert("e.data: " + e.data);
-		alert("e.origin: " + e.origin);
+		alert("REQUEST\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
+
+		e.source.postMessage(new Date(), e.origin);
 	}
 
 	$js.bind(window, "message", receiver);
@@ -57,22 +73,21 @@
 <h2><span>Example</span></h2>
 	<script type="text/javascript">
 	var iframe = document.createElement("iframe");
-	iframe.src = "http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.postMessage/iframe.html";
-	//iframe.style.display = "none";
+	iframe.src = "http://subdomain.example.com:8080/studio/project/4what.cn/sample/js/Window.postMessage/iframe.html";
+	iframe.style.display = "none";
 
 	document.body.appendChild(iframe);
 
 	iframe.onload = function() {
-		iframe.contentWindow.postMessage(new Date(), "http://www.example.com:8080");
+		iframe.contentWindow.postMessage(new Date(), "http://subdomain.example.com:8080");
 	};
 
 	function receiver(e) {
-		if (e.origin !== "http://www.example.com:8080") {
+		if (e.origin !== "http://subdomain.example.com:8080") {
 			//return;
 		}
 
-		alert("e.data: " + e.data);
-		alert("e.origin: " + e.origin);
+		alert("RESPONSE\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
 	}
 
 	$js.bind(window, "message", receiver);
