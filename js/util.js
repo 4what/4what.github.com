@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2016.11.17
+ * @version 1.1 Build 2016.11.18
  */
 (function() {
 
