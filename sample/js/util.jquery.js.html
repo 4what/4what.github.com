@@ -13,6 +13,8 @@
 
 <body>
 
+<h1><a href="../../js/util.jquery.js">Util.jQuery.js</a></h1>
+
 <div>
 	<strong>Last modified:</strong>
 	<script type="text/javascript">document.write(document.lastModified);</script>
@@ -22,18 +24,18 @@
 
 <h2><span id="api-method"></span></h2>
 	<ul id="api-spec">
-		<li class="api">API</li>
 		<li class="blockKey">阻止键盘事件</li>
 		<li class="center">改变窗口大小内容始终水平居中</li>
 		<li class="dialog">jQuery ColorBox 对话框</li>
 		<li class="disableSubmit">禁用表单提交按钮</li>
 		<li class="domain">判断当前域名是否在给定数组中并返回</li>
 		<li class="field">返回表单中 name 属性为目标值的元素对象</li>
-		<li class="height">max-height | min-height</li>
-		<li class="iframeHeight">IFRAME 自适应高度</li>
+		<li class="fixed">跟随滚动条</li>
+		<li class="iFrameAutoHeight">same-origin；IFRAME 自适应高度</li>
+		<li class="maxHeight">max-height</li>
+		<li class="minHeight">min-height</li>
 		<li class="minWidth">窗口宽度大于目标值时内容宽度自适应否则固定</li>
 		<li class="paginator">支持 Ajax 的分页组件</li>
-		<li class="scroll">跟随滚动条</li>
 		<li class="select">加载 select, radio, checkbox 的默认值</li>
 		<li class="share">分享按钮</li>
 		<li class="stripHtml">过滤 HTML 标签</li>
@@ -48,7 +50,7 @@
 
 				<textarea cols="" rows="" name="code" class="js">
 				// Backspace, Space
-				$jq.blockKey([8, 32], $("#blockKey"));
+				$jq.blockKey([8, 32], "#blockKey");
 				</textarea>
 			</li>
 			<li class="center">
@@ -74,9 +76,9 @@
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				$jq.disableSubmit($("#disableSubmit-disable"), true);
+				$jq.disableSubmit("#disableSubmit-disable", true);
 
-				$jq.disableSubmit($("#disableSubmit-enable"), false);
+				$jq.disableSubmit("#disableSubmit-enable", false);
 				</textarea>
 			</li>
 			<li class="domain">
@@ -101,33 +103,51 @@
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log($jq.field($("#field"), "name").val());
+				$4what.log($jq.field("#field", "name").val());
 				</textarea>
 			</li>
-			<li class="height">
+			<li class="fixed">
 				<textarea cols="" rows="" name="code" class="html">
-				<div id="height-max" style="border: 2px solid #000; overflow: hidden;">
-					<p style="background: red; height: 200px; width: 100px;"></p>
-				</div>
+				<span id="fixed" style="border: 2px solid red; bottom: 0; height: 100px; position: absolute; right: 0; width: 100px;"></span>
+				</textarea>
 
-				<div id="id="height-min" style="border: 2px solid #000; overflow: hidden;">
-					<p style="background: red; height: 100px; width: 100px;"></p>
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.fixed("#fixed", {
+					duration: "slow"
+					//offset: 50,
+					//position: "top"
+				});
+				</textarea>
+			</li>
+			<li class="iFrameAutoHeight">
+				<textarea cols="" rows="" name="code" class="html">
+				<iframe src="index.html" frameborder="0" scrolling="no" id="iFrameAutoHeight" style="border: 2px solid red;"></iframe>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.iFrameAutoHeight("#iFrameAutoHeight");
+				</textarea>
+			</li>
+			<li class="maxHeight">
+				<textarea cols="" rows="" name="code" class="html">
+				<div id="maxHeight" style="border: 2px solid red; overflow: hidden;">
+					<p style="background: #000; height: 200px;"></p>
 				</div>
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				$jq.height($("#height-max"), "max", 100);
-
-				$jq.height($("#height-min"), "min", 200);
+				$jq.maxHeight("#maxHeight", 100);
 				</textarea>
 			</li>
-			<li class="iframeHeight">
+			<li class="minHeight">
 				<textarea cols="" rows="" name="code" class="html">
-				<iframe src="../../article/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
+				<div id="minHeight" style="border: 2px solid red;">
+					<p style="background: #000; height: 200px;"></p>
+				</div>
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				$jq.iframeHeight($("#iframeHeight"));
+				$jq.minHeight("#minHeight", 100);
 				</textarea>
 			</li>
 			<li class="minWidth">
@@ -136,7 +156,7 @@
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				$jq.minWidth($("#minWidth"), 960);
+				$jq.minWidth("#minWidth", 960);
 				</textarea>
 			</li>
 			<li class="paginator">
@@ -147,7 +167,7 @@
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				$jq.paginator($("#paginator"), {
+				$jq.paginator("#paginator", {
 					debug: true,
 					//param: "pageNum",
 					data: {
@@ -164,23 +184,10 @@
 					last: ">>"
 				});
 
-				$jq.paginator($("#paginator-ajax"), {
+				$jq.paginator("#paginator-ajax", {
 					ajax: true,
 					callback: function(index) {},
 					total: 100
-				});
-				</textarea>
-			</li>
-			<li class="scroll">
-				<textarea cols="" rows="" name="code" class="html">
-				<span id="scroll" style="border: 2px solid red; bottom: 0; height: 100px; position: absolute; right: 0; width: 100px;"></span>
-				</textarea>
-
-				<textarea cols="" rows="" name="code" class="js">
-				$jq.scroll($("#scroll"), {
-					duration: "slow"
-					//offset: 50,
-					//position: "top"
 				});
 				</textarea>
 			</li>
@@ -209,7 +216,7 @@
 			</li>
 			<li class="share">
 				<textarea cols="" rows="" name="code" class="js">
-				$jq.share(document.getElementById("api-example"), {
+				$jq.share("#api-example", {
 					//url: "http://www.example.com/",
 					//title: "title",
 					//pic: ""
@@ -247,17 +254,23 @@
 					<input type="text" name="name" value="value" class="text" />
 				</form>
 			</li>
-			<li class="height">
-				<div id="height-max" style="border: 2px solid #000; overflow: hidden;">
-					<p style="background: red; height: 200px; width: 100px;"></p>
-				</div>
-
-				<div id="height-min" style="border: 2px solid #000; overflow: hidden;">
-					<p style="background: red; height: 100px; width: 100px;"></p>
+			<li class="fixed">
+				<div style="height: 2048px;">
+					<span id="fixed" style="border: 2px solid red; bottom: 0; height: 100px; position: absolute; right: 0; width: 100px;"></span>
 				</div>
 			</li>
-			<li class="iframeHeight">
-				<iframe src="../../article/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
+			<li class="iFrameAutoHeight">
+				<iframe src="index.html" frameborder="0" scrolling="no" id="iFrameAutoHeight" style="border: 2px solid red;"></iframe>
+			</li>
+			<li class="maxHeight">
+				<div id="maxHeight" style="border: 2px solid red; overflow: hidden;">
+					<p style="background: #000; height: 200px;"></p>
+				</div>
+			</li>
+			<li class="minHeight">
+				<div id="minHeight" style="border: 2px solid red;">
+					<p style="background: #000; height: 200px;"></p>
+				</div>
 			</li>
 			<li class="minWidth">
 				<div style="border: 2px solid red; height: 150px;" id="minWidth"></div>
@@ -266,11 +279,6 @@
 				<div id="paginator"></div>
 
 				<div id="paginator-ajax"></div>
-			</li>
-			<li class="scroll">
-				<div style="height: 2048px;">
-					<span id="scroll" style="border: 2px solid red; bottom: 0; height: 100px; position: absolute; right: 0; width: 100px;"></span>
-				</div>
 			</li>
 			<li class="select">
 				<div id="select">
@@ -300,15 +308,15 @@
 		], {
 			blockKey: function() {
 				// Backspace, Space
-				$jq.blockKey([8, 32], $("#blockKey"));
+				$jq.blockKey([8, 32], "#blockKey");
 			},
 			center: function() {
 				$jq.center(960);
 			},
 			disableSubmit: function() {
-				$jq.disableSubmit($("#disableSubmit-disable"), true);
+				$jq.disableSubmit("#disableSubmit-disable", true);
 
-				$jq.disableSubmit($("#disableSubmit-enable"), false);
+				$jq.disableSubmit("#disableSubmit-enable", false);
 			},
 			domain: function() {
 				$4what.log(
@@ -323,21 +331,22 @@
 				);
 			},
 			field: function() {
-				$4what.log($jq.field($("#field"), "name").val());
+				$4what.log($jq.field("#field", "name").val());
 			},
-			height: function() {
-				$jq.height($("#height-max"), "max", 100);
-
-				$jq.height($("#height-min"), "min", 200);
+			iFrameAutoHeight: function() {
+				$jq.iFrameAutoHeight("#iFrameAutoHeight");
 			},
-			iframeHeight: function() {
-				$jq.iframeHeight($("#iframeHeight"));
+			maxHeight: function() {
+				$jq.maxHeight("#maxHeight", 100);
+			},
+			minHeight: function() {
+				$jq.minHeight("#minHeight", 100);
 			},
 			minWidth: function() {
-				$jq.minWidth($("#minWidth"), 960);
+				$jq.minWidth("#minWidth", 960);
 			},
 			paginator: function() {
-				$jq.paginator($("#paginator"), {
+				$jq.paginator("#paginator", {
 					debug: true,
 					//param: "pageNum",
 					data: {
@@ -354,14 +363,14 @@
 					last: ">>"
 				});
 
-				$jq.paginator($("#paginator-ajax"), {
+				$jq.paginator("#paginator-ajax", {
 					ajax: true,
 					callback: function(index) {},
 					total: 100
 				});
 			},
-			scroll: function() {
-				$jq.scroll($("#scroll"), {
+			fixed: function() {
+				$jq.fixed("#fixed", {
 					duration: "slow"
 					//offset: 50,
 					//position: "top"
@@ -375,7 +384,7 @@
 				}, $("#select"));
 			},
 			share: function() {
-				$jq.share(document.getElementById("api-example"), {
+				$jq.share("#api-example", {
 					//url: "http://www.example.com/",
 					//title: "title",
 					//pic: ""

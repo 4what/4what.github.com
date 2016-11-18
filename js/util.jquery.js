@@ -4,7 +4,7 @@
  * jQuery Util
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2016.11.12
+ * @version 1.2 Build 2016.11.18
  */
 (function() {
 
@@ -27,62 +27,11 @@ var UtilJq = window.$jq = {
 	},
 
 	/**
-	 * max-height | min-height
-	 *
-	 * @requires jQuery 1.3.2+
-	 * @param {Object|String} target
-	 * @param {String} method max|min
-	 * @param {Number} limit
-	 */
-	height: function(target, method, limit) {
-		var is = (function() {
-			return method === "max" ?
-				function(height) {
-					return height > limit;
-				} :
-				function(height) {
-					return height < limit;
-				};
-		})();
-		$(target).each(function() {
-			if (is($(this).height())) {
-				$(this).height(limit);
-			}
-		});
-	},
-
-	/**
-	 * @requires jQuery 1.3.2+
-	 * @param {Object|String} target
-	 */
-	iframeHeight: function(target) {
-		$(target).load(function() {
-			$(this).height($(this).contents().find("body").outerHeight(true));
-		});
-	},
-
-	/**
-	 * min-width
-	 *
-	 * @requires jQuery 1.3.2+
-	 * @param {Object|String} target
-	 * @param {Number} width
-	 */
-	minWidth: function(target, width) {
-		$(window).bind("load resize", function() {
-			$(target).width($(window).width() <= width ? width : "auto");
-		});
-	},
-
-	/*--------------------------------------
-	  Category: Effect
-	--------------------------------------*/
-	/**
 	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
 	 * @param {Object} options (optional)
 	 */
-	scroll: function(target, options) {
+	fixed: function(target, options) {
 		var
 		defaults = {
 			duration: 0, // {Number|String}
@@ -127,6 +76,57 @@ var UtilJq = window.$jq = {
 		$(window).bind("load resize scroll", handler);
 	},
 
+	/**
+	 * same-origin
+	 *
+	 * @requires jQuery 1.3.2+
+	 * @param {Object|String} target
+	 */
+	iFrameAutoHeight: function(target) {
+		$(target).load(function() {
+			$(this).height($(this).contents().find("body").outerHeight(true));
+		});
+	},
+
+	/**
+	 * @requires jQuery 1.3.2+
+	 * @param {Object|String} target
+	 * @param {Number} limit
+	 */
+	maxHeight: function(target, limit) {
+		$(target).each(function() {
+			if ($(this).height() > limit) {
+				$(this).height(limit);
+			}
+		});
+	},
+
+	/**
+	 * @requires jQuery 1.3.2+
+	 * @param {Object|String} target
+	 * @param {Number} limit
+	 */
+	minHeight: function(target, limit) {
+		$(target).each(function() {
+			if ($(this).height() < limit) {
+				$(this).height(limit);
+			}
+		});
+	},
+
+	/**
+	 * min-width
+	 *
+	 * @requires jQuery 1.3.2+
+	 * @param {Object|String} target
+	 * @param {Number} width
+	 */
+	minWidth: function(target, width) {
+		$(window).bind("load resize", function() {
+			$(target).width($(window).width() <= width ? width : "auto");
+		});
+	},
+
 	/*--------------------------------------
 	  Category: Event
 	--------------------------------------*/
@@ -149,8 +149,6 @@ var UtilJq = window.$jq = {
 	  Category: Form
 	--------------------------------------*/
 	/**
-	 * disable submit button
-	 *
 	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} form
 	 * @param {Boolean} bln
@@ -244,6 +242,7 @@ var UtilJq = window.$jq = {
 				return item;
 			}
 		}
+		return false;
 	},
 
 	/**
@@ -430,7 +429,7 @@ var UtilJq = window.$jq = {
 				+ '\n' + '<a href=\'javascript: void(window.open("http://widget.renren.com/dialog/share?resourceUrl=" + "' + url + '" + "&title=" + "' + title + '" + "&pic=" + "' + pic + '", "", ""));\'><img src="http://dev.renren.com/img/rrshare16_16.png" alt="分享到人人网" title="分享到人人网" style="height: 16px; width: 16px;" /></a>';
 
 		if (target) {
-			target.innerHTML = html;
+			$(target).html(html);
 		} else {
 			return html;
 		}

@@ -13,6 +13,8 @@
 
 <body>
 
+<h1><a href="../../js/util.js">Util.js</a></h1>
+
 <div>
 	<strong>Last modified:</strong>
 	<script type="text/javascript">document.write(document.lastModified);</script>
@@ -22,33 +24,32 @@
 
 <h2><span id="api-method"></span></h2>
 	<ul id="api-spec">
-		<li class="JSON"></li>
 		<li class="ajax">same-origin</li>
 		<li class="bind"></li>
-		<li class="cancel"></li>
 		<li class="clock"></li>
 		<li class="cookie"></li>
 		<li class="extend"></li>
-		<li class="get">get</li>
-		<li class="iframeDoc"></li>
-		<li class="iframeHeight">IFRAME 自适应高度</li>
-		<li class="inArray">返回数组元素索引</li>
+		<li class="getScript">cross-domain</li>
+		<li class="iFrameAutoHeight">same-origin</li>
+		<li class="inArray"></li>
+		<li class="include"></li>
+		<li class="json"></li>
 		<li class="jsonp">cross-domain</li>
 		<li class="keyCode"></li>
-		<li class="load"></li>
 		<li class="loader">cross-domain</li>
-		<li class="random">生成一个随机数</li>
-		<li class="randoms">生成一个随机数组</li>
-		<li class="remove">删除数组元素</li>
-		<li class="script">cross-domain</li>
+		<li class="preventDefault"></li>
+		<li class="random"></li>
+		<li class="randoms"></li>
+		<li class="removeElement"></li>
+		<li class="stopPropagation"></li>
 		<li class="style"></li>
 		<li class="timer"></li>
 		<li class="unbind"></li>
-		<li class="unique">数组元素去重</li>
+		<li class="unique"></li>
 		<li class="url"></li>
 		<li class="verify"></li>
-		<li class="windowName">cross-domain; IE9-, Std</li>
-		<li class="zoomOut">根据宽高最大值缩小图片</li>
+		<li class="windowName">for IE9-, Std; cross-domain</li>
+		<li class="zoomOut"></li>
 	</ul>
 
 	<h3>Syntax</h3>
@@ -94,22 +95,27 @@
 				//$js.cookie("key", null/*, {domain: ".example.com"}*/);
 
 				$4what.log($js.cookie("key"));
-
-				$4what.log(document.cookie);
 				</textarea>
 			</li>
-			<li class="iframeHeight">
+			<li class="getScript">
+				<textarea cols="" rows="" name="code" class="js">
+				$js.getScript("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+					$4what.log($.ui.version)
+				});
+				</textarea>
+			</li>
+			<li class="iFrameAutoHeight">
 				<textarea cols="" rows="" name="code" class="html">
-				<iframe src="../../article/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
+				<iframe src="index.html" frameborder="0" scrolling="no" id="iFrameAutoHeight" style="border: 2px solid red;"></iframe>
 				</textarea>
 
 				<textarea cols="" rows="" name="code" class="js">
-				$js.iframeHeight("iframeHeight");
+				$js.iFrameAutoHeight("iFrameAutoHeight");
 				</textarea>
 			</li>
 			<li class="inArray">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log($js.inArray("a", ["a", "b", "c"]));
+				$4what.log($js.inArray("b", ["a", "b", "c"]));
 				</textarea>
 			</li>
 			<li class="jsonp">
@@ -130,9 +136,9 @@
 			</li>
 			<li class="random">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log($js.random(0, 10, true));
-
 				$4what.log($js.random(0, 10));
+
+				$4what.log($js.random(0, 10, true));
 				</textarea>
 			</li>
 			<li class="randoms">
@@ -144,21 +150,14 @@
 				$4what.log($js.randoms(3, 0, 10, true, false));
 				</textarea>
 			</li>
-			<li class="remove">
+			<li class="removeElement">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log($js.remove("a", ["a", "b", "c"]));
-				</textarea>
-			</li>
-			<li class="script">
-				<textarea cols="" rows="" name="code" class="js">
-				$js.script("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
-					$4what.log($.ui.version)
-				});
+				$4what.log($js.removeElement("b", ["a", "b", "c"]));
 				</textarea>
 			</li>
 			<li class="style">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log($js.style(document.body, "background-color"));
+				$4what.log($js.style(document.body, "color"));
 				</textarea>
 			</li>
 			<li class="unique">
@@ -168,16 +167,16 @@
 			</li>
 			<li class="url">
 				<textarea cols="" rows="" name="code" class="js">
-				$4what.log($js.url.get("method"));
+				$4what.log($js.url.param("method"));
 				</textarea>
 			</li>
 			<li class="windowName">
 				<textarea cols="" rows="" name="code" class="html">
-				<input type="button" value="Request" id="windowName-request" />
+				<a href="javascript: void(0);" id="windowName-request">Request</a>
 
 				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=1" method="post" id="windowName-form">
 					<input type="text" name="name" value="value" class="text" />
-					<input type="button" value="Submit" id="windowName-submit" />
+					<button id="windowName-submit">Submit</button>
 				</form>
 				</textarea>
 
@@ -218,8 +217,8 @@
 
 	<h3>Example</h3>
 		<ul id="api-example">
-			<li class="iframeHeight">
-				<iframe src="../../article/wiki.html" frameborder="0" scrolling="no" id="iframeHeight"></iframe>
+			<li class="iFrameAutoHeight">
+				<iframe src="index.html" frameborder="0" scrolling="no" id="iFrameAutoHeight" style="border: 2px solid red;"></iframe>
 			</li>
 			<li class="timer">
 				<textarea cols="" rows="" name="" class="textarea" id="timer-fn">
@@ -230,14 +229,14 @@
 						//var i = iteration - 1; i > 0; i--
 					) {}
 				</textarea>
-				<input type="button" value="Run" id="timer-run" />
+				<button id="timer-run">Run</button>
 			</li>
 			<li class="windowName">
-				<input type="button" value="Request" id="windowName-request" />
+				<a href="javascript: void(0);" id="windowName-request">Request</a>
 
 				<form action="http://www.example.com:8080/studio/project/4what.cn/sample/js/Window.name/data.jsp?windowname=1" method="post" id="windowName-form">
 					<input type="text" name="name" value="value" class="text" />
-					<input type="button" value="Submit" id="windowName-submit" />
+					<button id="windowName-submit">Submit</button>
 				</form>
 			</li>
 			<li class="zoomOut">
@@ -294,14 +293,17 @@
 				//$js.cookie("key", null/*, {domain: ".example.com"}*/);
 
 				$4what.log($js.cookie("key"));
-
-				$4what.log(document.cookie);
 			},
-			iframeHeight: function() {
-				$js.iframeHeight("iframeHeight");
+			getScript: function() {
+				$js.getScript("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+					$4what.log($.ui.version)
+				});
+			},
+			iFrameAutoHeight: function() {
+				$js.iFrameAutoHeight("iFrameAutoHeight");
 			},
 			inArray: function() {
-				$4what.log($js.inArray("a", ["a", "b", "c"]));
+				$4what.log($js.inArray("b", ["a", "b", "c"]));
 			},
 			jsonp: function() {
 				$js.jsonp("http://www.example.com:8080/studio/project/4what.cn/sample/js/jsonp/data.jsp?name=value", function(data) {
@@ -316,9 +318,9 @@
 				});
 			},
 			random: function() {
-				$4what.log($js.random(0, 10, true));
-
 				$4what.log($js.random(0, 10));
+
+				$4what.log($js.random(0, 10, true));
 			},
 			randoms: function() {
 				$4what.log($js.randoms(3, 0, 10));
@@ -327,16 +329,11 @@
 
 				$4what.log($js.randoms(3, 0, 10, true, false));
 			},
-			remove: function() {
-				$4what.log($js.remove("a", ["a", "b", "c"]));
-			},
-			script: function() {
-				$js.script("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
-					$4what.log($.ui.version)
-				});
+			removeElement: function() {
+				$4what.log($js.removeElement("b", ["a", "b", "c"]));
 			},
 			style: function() {
-				$4what.log($js.style(document.body, "background-color"));
+				$4what.log($js.style(document.body, "color"));
 			},
 			timer: function() {
 				document.getElementById("timer-run").onclick = function() {
@@ -347,7 +344,7 @@
 				$4what.log($js.unique([0, 1, 0, 1]));
 			},
 			url: function() {
-				$4what.log($js.url.get("method"));
+				$4what.log($js.url.param("method"));
 			},
 			windowName: function() {
 				document.getElementById("windowName-request").onclick = function() {

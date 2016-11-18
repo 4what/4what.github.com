@@ -71,8 +71,7 @@
 					element = array[i];
 					key = typeof element + "-" + element;
 					if (
-						!map[key]
-						//!(key in map)
+						!(key in map)
 					) {
 						result.push(element);
 						map[key] = true;

@@ -25,14 +25,18 @@
 
 <h2><span>Compatibility</span></h2>
 	<p>
-		IE7+,
-		Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">[1]</a></sup>
+		IE7+
+		,
+		Std
+		<sup>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">[1]</a>
+		</sup>
 	</p>
 
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	var xhr = window.XMLHttpRequest ?
+	var xhr = "XMLHttpRequest" in window ?
 			new XMLHttpRequest() : // for IE7+, Std
 			new ActiveXObject("Microsoft.XMLHTTP"); // for IE6
 
@@ -52,7 +56,7 @@
 
 <h2><span>Example</span></h2>
 	<script type="text/javascript">
-	var xhr = window.XMLHttpRequest ?
+	var xhr = "XMLHttpRequest" in window ?
 			new XMLHttpRequest() : // for IE7+, Std
 			new ActiveXObject("Microsoft.XMLHTTP"); // for IE6
 

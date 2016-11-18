@@ -4,11 +4,11 @@
 $4what.include("jqueryui");
 
 // onload
-$4what.bind(window, "load", function() {
+$js.bind(window, "load", function() {
 	breadcrumb();
 
 	// clock
-	window.setInterval('$4what.clock("clock")', 500);
+	window.setInterval('$js.clock("clock")', 500);
 });
 
 // breadcrumb

@@ -22,9 +22,9 @@
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="html">
 	<div id="box">
-		<input type="button" value="1" />
-		<input type="button" value="2" />
-		<input type="button" value="3" />
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
 	</div>
 	</textarea>
 
@@ -38,7 +38,7 @@
 		}
 
 		var
-		btns = document.getElementById("box").getElementsByTagName("input"),
+		btns = document.getElementById("box").getElementsByTagName("button"),
 		handler;
 
 		for (var i = 0, l = btns.length; i < l; i++) {
@@ -59,9 +59,9 @@
 
 <h2><span>Example</span></h2>
 	<div id="box">
-		<input type="button" value="1" />
-		<input type="button" value="2" />
-		<input type="button" value="3" />
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
 	</div>
 
 	<script type="text/javascript">
@@ -73,7 +73,7 @@
 		}
 
 		var
-		btns = document.getElementById("box").getElementsByTagName("input"),
+		btns = document.getElementById("box").getElementsByTagName("button"),
 		handler;
 
 		for (var i = 0, l = btns.length; i < l; i++) {

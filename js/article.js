@@ -6,7 +6,7 @@ if ($4what.file().exec(window.location.pathname)[1] === "wiki") {
 }
 
 // onload
-$4what.bind(window, "load", function() {
+$js.bind(window, "load", function() {
 	//toggle();
 });
 

@@ -142,6 +142,9 @@ font-style: italic;
 h3 a {
 border-bottom: 1px dashed #aa7;
 }
+h3 sup a {
+border-bottom: none;
+}
 
 p {
 margin-top: 5px;
@@ -206,7 +209,7 @@ color: maroon;
 }
 
 sup {
-font-size: 85%;
+font-size: 70%;
 * font-size: 100%;
 font-size: 100%\0;
 }

@@ -54,12 +54,15 @@ width: 750px;
 
 	/*------------------------------------*/
 	h1.heading {
-	font-size: 24px;
 	font-variant: small-caps;
 	text-align: center;
 	}
 	h1.heading span {
 	border-bottom: 1px dashed;
+	}
+
+	p.log {
+	/*line-height: 2;*/
 	}
 
 	/*------------------------------------*/
@@ -111,13 +114,11 @@ width: 750px;
 	list-style: decimal inside;
 	}
 
-	/*------------------------------------*/
-	#api-example {
-	margin-top: 10px;
-	}
-
 
 /**/
+h1 {
+font-size: 24px;
+}
 h2 {
 clear: both;
 font-size: 22px;
@@ -133,7 +134,7 @@ margin-top: 10px;
 
 sup {
 color: #c0c0c0;
-font-size: 85%;
+font-size: 70%;
 * font-size: 100%;
 font-size: 100%\0;
 }

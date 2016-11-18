@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 2016.11.12
+ * @version 1.1 Build 2016.11.17
  */
 (function() {
 
@@ -30,6 +30,8 @@ Util.prototype = {
 	  Category: AJAX
 	--------------------------------------*/
 	/**
+	 * same-origin
+	 * 
 	 * @requires $js.url
 	 * @param {Object} options
 	 */
@@ -48,9 +50,9 @@ Util.prototype = {
 
 		//crossDomain = /^https?:\/\//.test(url) && !new RegExp("^" + window.location.protocol + "\/\/" + window.location.host + "(?:\/|$)").test(url),
 			
-		xhr = window.XMLHttpRequest ?
-				new XMLHttpRequest() : // for IE7+, Std
-				new ActiveXObject("Microsoft.XMLHTTP"); // for IE6
+		xhr = "XMLHttpRequest" in window ?
+			new XMLHttpRequest() : // for IE7+, Std
+			new ActiveXObject("Microsoft.XMLHTTP"); // for IE6
 
 		function callback() {
 			if (xhr.readyState === 4) {
@@ -98,21 +100,25 @@ Util.prototype = {
 	},
 
 	/**
-	 * @requires $js.script
+	 * cross-domain
+	 * 
+	 * @requires $js.getScript
 	 * @param {String} url
 	 * @param {Function} callback
 	 */
 	jsonp: function(url, callback) {
-		this.script(url, callback, "jsonp");
+		this.getScript(url, callback, "jsonp");
 	},
 
 	/**
+	 * cross-domain
+	 * 
 	 * @requires $js.url
 	 * @param {String} url
 	 * @param {Function} callback
 	 * @param {Boolean|String} jsonp (optional)
 	 */
-	script: function(url, callback, jsonp) {
+	getScript: function(url, callback, jsonp) {
 		var
 		head = document.getElementsByTagName("head")[0],
 		script = document.createElement("script"),
@@ -120,15 +126,13 @@ Util.prototype = {
 		clean = function() {
 			head.removeChild(script);
 			script = undefined;
-		},
-
-		state;
+		};
 
 		script.src = url;
 		script.type = "text/javascript";
 
 		if (!jsonp) {
-			if (script.onload !== undefined) {
+			if ("onload" in script) {
 				script.onload = function() { // for IE9+, Std
 					callback();
 
@@ -163,6 +167,8 @@ Util.prototype = {
 
 	/**
 	 * for IE9-, Std
+	 *
+	 * cross-domain
 	 *
 	 * @requires $js.bind, $js.url
 	 * @param {Object} options
@@ -218,7 +224,7 @@ Util.prototype = {
 	 */
 	inArray: function(element, array) {
 		// for IE9+, Std
-		if (array.indexOf) {
+		if ("indexOf" in array) {
 			return array.indexOf(element);
 		}
 		// for IE8-
@@ -247,8 +253,7 @@ Util.prototype = {
 		while (array.length < size) {
 			element = this.random(min, max, isInt);
 			if (
-				!map[element]
-				//!(element in map)
+				!(element in map)
 			) {
 				array.push(element);
 				map[element] = true;
@@ -268,7 +273,7 @@ Util.prototype = {
 	 * @param {Object[]} array
 	 * @return {Object[]}
 	 */
-	remove: function(element, array) {
+	removeElement: function(element, array) {
 		var index = this.inArray(element, array);
 		if (index !== -1) {
 			array.splice(index, 1);
@@ -288,8 +293,7 @@ Util.prototype = {
 		for (var i = 0, l = array.length; i < l; i++) {
 			element = array[i];
 			if (
-				!map[element]
-				//!(element in map)
+				!(element in map)
 			) {
 				result.push(element);
 				map[element] = true;
@@ -302,14 +306,19 @@ Util.prototype = {
 	  Category: CSS
 	--------------------------------------*/
 	/**
-	 * @requires $js.iframeDoc, $js.style
+	 * same-origin
+	 *
+	 * @requires $js.style
 	 * @param {String} id
 	 */
-	iframeHeight: function(id) {
-		var self = this;
-		document.getElementById(id).onload = function() {
-			var body = self.iframeDoc(id).body;
-			document.getElementById(id).height = body.scrollHeight
+	iFrameAutoHeight: function(id) {
+		var
+		self = this,
+		iframe = document.getElementById(id);
+		iframe.onload = function() {
+			//alert(iframe === this); // for IE9+, Std
+			var body = iframe.contentWindow.document.body;
+			iframe.height = body.offsetHeight
 				+ parseInt(self.style(body, "margin-top"), 10)
 				+ parseInt(self.style(body, "margin-bottom"), 10);
 		};
@@ -322,7 +331,7 @@ Util.prototype = {
 	 */
 	style: function(target, name) {
 		var value;
-		if (window.getComputedStyle) { // for IE9+, Std
+		if ("getComputedStyle" in window) { // for IE9+, Std
 			value = target.ownerDocument.defaultView.getComputedStyle(target, null).getPropertyValue(name);
 		} else { // for IE
 			var camelCase = name.replace(/-([a-z])/ig, function(all, letter){
@@ -372,20 +381,11 @@ Util.prototype = {
 	 * @param {Function} listener
 	 */
 	bind: function(target, type, listener) {
-		if (target.addEventListener) { // for IE9+, Std
+		if ("addEventListener" in target) { // for IE9+, Std
 			target.addEventListener(type, listener, false);
 		} else { // for IE10-
 			target.attachEvent("on" + type, listener);
 		}
-	},
-
-	/**
-	 * @param {Event} e
-	 */
-	cancel: function(e) {
-		e.preventDefault ?
-			e.preventDefault() : // for IE9+, Std
-			e.returnValue = false; // for IE8-
 	},
 
 	/**
@@ -400,8 +400,17 @@ Util.prototype = {
 	/**
 	 * @param {Event} e
 	 */
-	stop: function(e) {
-		if (e.stopPropagation) { // for IE9+, Std
+	preventDefault: function(e) {
+		"preventDefault" in e ?
+			e.preventDefault() : // for IE9+, Std
+			e.returnValue = false; // for IE8-
+	},
+
+	/**
+	 * @param {Event} e
+	 */
+	stopPropagation: function(e) {
+		if ("stopPropagation" in e) { // for IE9+, Std
 			e.stopPropagation();
 		}
 		e.cancelBubble = true;
@@ -413,7 +422,7 @@ Util.prototype = {
 	 * @param {Function} listener
 	 */
 	unbind: function(target, type, listener) {
-		if (target.removeEventListener) { // for IE9+, Std
+		if ("removeEventListener" in target) { // for IE9+, Std
 			target.removeEventListener(type, listener, false);
 		} else { // for IE10-
 			target.detachEvent("on" + type, listener);
@@ -543,40 +552,9 @@ Util.prototype = {
 	},
 
 	/**
-	 * https://developer.mozilla.org/en-US/docs/Migrate_apps_from_Internet_Explorer_to_Mozilla#Rich_text_differences
-	 *
-	 * document.getElementById(id).contentWindow.document
-	 * window[name].document
-	 *
-	 * @deprecated
-	 * @param {String} id
-	 * @param {String} name (optional)
-	 * @return {Object}
-	 */
-	iframeDoc: function(id, name) {
-		return document.getElementById(id).contentDocument // for IE8+, Std
-			|| document.frames[
-				id // id|name
-			].document; // for IE
-	},
-
-	/**
-	 * TODO
-	 */
-	JSON: {
-		/**
-		 * @param {String} text
-		 * @return {Object}
-		 */
-		parse: function(text) {
-			return eval("(" + text + ")");
-		}
-	},
-
-	/**
 	 * @param {String} url
 	 */
-	load: function(url) {
+	include: function(url) {
 		var
 		css = '<style type="text/css">@import url("' + url + '");</style>',
 		js = '<script type="text/javascript" src="' + url + '"></script>';
@@ -584,7 +562,24 @@ Util.prototype = {
 	},
 
 	/**
-	 * @requires $js.script
+	 * TODO
+	 */
+	json: {
+		/**
+		 * @param {String} text
+		 * @return {Object}
+		 */
+		parse: function(text) {
+			return "JSON" in window ?
+				window.JSON.parse(text) : // for IE8+, Std
+				eval("(" + text + ")");
+		}
+	},
+
+	/**
+	 * cross-domain
+	 * 
+	 * @requires $js.getScript
 	 * @param {Object} obj
 	 * @param {String} url
 	 * @param {Function} callback
@@ -612,7 +607,7 @@ Util.prototype = {
 		}
 
 		if (self._loader[url].queue.push(callback) === 1) {
-			self.script(url, function() {
+			self.getScript(url, function() {
 				self._loader[url].loaded = true;
 
 				for (var i = 0, l = self._loader[url].queue.length; i < l; i++) {
@@ -672,7 +667,7 @@ Util.prototype = {
 		 * @param {String} key
 		 * @return {String}
 		 */
-		get: function(key) {
+		param: function(key) {
 			return this.params()[key];
 		},
 		/**

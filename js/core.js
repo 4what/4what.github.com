@@ -14,7 +14,7 @@ var $4what = function() {
 		var
 		menu = [],
 		methods = [],
-		param = this.url.get("method"),
+		param = $js.url.param("method"),
 		status = false;
 
 		for (var key in obj) {
@@ -93,7 +93,7 @@ var $4what = function() {
 			switch (arguments[i]) {
 				// jQuery
 				case "jquery": // for IE6+
-					this.load(
+					$js.include(
 						host +
 							//"js/jquery/jquery-1.3.2.min.js"
 							"js/jquery/jquery-1.8.3.min.js"
@@ -103,38 +103,38 @@ var $4what = function() {
 				// jQuery UI
 				case "jqueryui": // for IE6+
 					// v1.8 for jQuery 1.3.2+
-					//this.load(host + "js/jquery/ui/1.8.24/jquery-ui.min.css");
-					//this.load(host + "js/jquery/ui/1.8.24/jquery-ui.min.js");
-					//this.load(host + "js/jquery/ui/1.8.24/jquery.ui.datepicker-zh-CN.min.js");
+					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.css");
+					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.js");
+					//$js.include(host + "js/jquery/ui/1.8.24/jquery.ui.datepicker-zh-CN.min.js");
 
 					// v1.9 for jQuery 1.6+
-					//this.load(host + "js/jquery/ui/1.9.2/jquery-ui.min.css");
-					this.load(host + "js/jquery/ui/1.9.2/jquery-ui.min.js");
-					//this.load(host + "js/jquery/ui/1.9.2/jquery.ui.datepicker-zh-CN.min.js");
+					//$js.include(host + "js/jquery/ui/1.9.2/jquery-ui.min.css");
+					$js.include(host + "js/jquery/ui/1.9.2/jquery-ui.min.js");
+					//$js.include(host + "js/jquery/ui/1.9.2/jquery.ui.datepicker-zh-CN.min.js");
 					break;
 
 				// jQuery lightBox
 				case "jquery-lightbox":
-					this.load(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.css");
-					this.load(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.pack.js");
+					$js.include(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.css");
+					$js.include(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.pack.js");
 					break;
 
 				// SyntaxHighlighter
 				case "syntaxhighlighter":
-					this.load(host + "js/syntaxhighlighter/3.0.83/shCoreDefault.css");
+					$js.include(host + "js/syntaxhighlighter/3.0.83/shCoreDefault.css");
 
-					this.load(host + "css/syntaxhighlighter.css");
+					$js.include(host + "css/syntaxhighlighter.css");
 
-					this.load(host + "js/syntaxhighlighter/3.0.83/shCore.js");
-					//this.load(host + "js/syntaxhighlighter/3.0.83/shAutoloader.js");
+					$js.include(host + "js/syntaxhighlighter/3.0.83/shCore.js");
+					//$js.include(host + "js/syntaxhighlighter/3.0.83/shAutoloader.js");
 
-					this.load(host + "js/syntaxhighlighter/3.0.83/shLegacy.js"); // v1.5
+					$js.include(host + "js/syntaxhighlighter/3.0.83/shLegacy.js"); // v1.5
 
-					this.load(host + "js/syntaxhighlighter/3.0.83/shBrushCss.js");
-					this.load(host + "js/syntaxhighlighter/3.0.83/shBrushJava.js");
-					this.load(host + "js/syntaxhighlighter/3.0.83/shBrushJScript.js");
-					this.load(host + "js/syntaxhighlighter/3.0.83/shBrushPhp.js");
-					this.load(host + "js/syntaxhighlighter/3.0.83/shBrushXml.js");
+					$js.include(host + "js/syntaxhighlighter/3.0.83/shBrushCss.js");
+					$js.include(host + "js/syntaxhighlighter/3.0.83/shBrushJava.js");
+					$js.include(host + "js/syntaxhighlighter/3.0.83/shBrushJScript.js");
+					$js.include(host + "js/syntaxhighlighter/3.0.83/shBrushPhp.js");
+					$js.include(host + "js/syntaxhighlighter/3.0.83/shBrushXml.js");
 
 					// v3.x
 					$(function() {
@@ -155,7 +155,7 @@ var $4what = function() {
 					});
 
 					// v1.5
-					this.bind(window, "load", function() {
+					$js.bind(window, "load", function() {
 						dp.SyntaxHighlighter.HighlightAll("code", true, false, false, 1, false); // (name, [showGutter], [showControls], [collapseAll], [firstLine], [showColumns])
 					});
 					break;
@@ -178,6 +178,7 @@ var $4what = function() {
 	 */
 	this.log = function(data, target) {
 		var p = document.createElement("p");
+		p.className = "log";
 		p.innerHTML = data;
 		(target || document.body).appendChild(p);
 	};

@@ -20,8 +20,12 @@
 
 <h2><span>Compatibility</span></h2>
 	<p>
-		IE10+,
-		Std<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">[1]</a></sup>
+		IE10+
+		,
+		Std
+		<sup>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">[1]</a>
+		</sup>
 	</p>
 
 <h2><span>Syntax</span></h2>
@@ -33,7 +37,7 @@
 
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	if (window.FormData) { // for IE10+, Std
+	if ("FormData" in window) { // for IE10+, Std
 		document.getElementById("file").onchange = function() {
 			if (this.value) {
 				var formData = new FormData(document.getElementById("form"));
@@ -57,7 +61,7 @@
 	</form>
 
 	<script type="text/javascript">
-	if (window.FormData) { // for IE10+, Std
+	if ("FormData" in window) { // for IE10+, Std
 		document.getElementById("file").onchange = function() {
 			if (this.value) {
 				var formData = new FormData(document.getElementById("form"));

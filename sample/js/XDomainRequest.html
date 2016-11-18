@@ -20,13 +20,16 @@
 
 <h2><span>Compatibility</span></h2>
 	<p>
-		IE8-10<sup><a href="https://msdn.microsoft.com/en-us/library/cc288060">[1]</a></sup>
+		IE8-10
+		<sup>
+			<a href="https://msdn.microsoft.com/en-us/library/cc288060">[1]</a>
+		</sup>
 	</p>
 
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	if (window.XDomainRequest) { // for IE8-10
+	if ("XDomainRequest" in window) { // for IE8-10
 		var xdr = new XDomainRequest();
 
 		xdr.onerror = function() {
@@ -46,7 +49,7 @@
 
 <h2><span>Example</span></h2>
 	<script type="text/javascript">
-	if (window.XDomainRequest) { // for IE8-10
+	if ("XDomainRequest" in window) { // for IE8-10
 		var xdr = new XDomainRequest();
 
 		xdr.onerror = function() {
