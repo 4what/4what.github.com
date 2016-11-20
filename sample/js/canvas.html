@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>4what - JavaScript</title>
+<meta name="author" content="4what" />
+
+<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+<script type="text/javascript" src="../../js/util.js"></script>
+<script type="text/javascript" src="../../js/core.js"></script>
+<script type="text/javascript" src="../../js/sample.js"></script>
+</head>
+
+<body>
+
+<h2><span>Specification</span></h2>
+	<p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">[1]</a>
+	</p>
+
+<h2><span>Compatibility</span></h2>
+	<p>
+		IE9+
+		,
+		Std
+		<sup>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">[1]</a>
+		</sup>
+	</p>
+
+<h2><span>Syntax</span></h2>
+	<textarea cols="" rows="" name="code" class="html">
+	<canvas id="canvas" height="150" width="300" style="border: 1px solid #000"></canvas>
+	</textarea>
+
+	<textarea cols="" rows="" name="code" class="js">
+	<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+
+	ctx.fillStyle = "red";
+	ctx.fillRect(10, 10, 100, 100);
+	</script>
+	</textarea>
+
+<h2><span>Example</span></h2>
+	<canvas id="canvas" height="150" width="300" style="border: 1px solid #000"></canvas>
+
+	<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+
+	ctx.fillStyle = "red";
+	ctx.fillRect(10, 10, 100, 100);
+	</script>
+
+<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>
