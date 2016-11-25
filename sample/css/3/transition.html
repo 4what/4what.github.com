@@ -21,7 +21,7 @@
 
 <h2><span>Compatibility</span></h2>
 	<p>
-		IE10+
+		IE10+, Std
 	</p>
 
 <h2><span>Syntax</span></h2>
@@ -37,9 +37,9 @@
 	background: red;
 	border-radius: 10px;
 	height: 50px;
-	opacity: 0.1;
-	-webkit-transform: rotate(360deg); /* for Safari */
-	transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+	opacity: 0.5;
+	-ms-transform: rotate(360deg); /* for IE9+ */
+	transform: rotate(360deg); /* for IE10+, Std */
 	width: 50px;
 	}
 	</style>
@@ -63,8 +63,7 @@
 	height: 50px;
 	opacity: 0.5;
 	-ms-transform: rotate(360deg); /* for IE9+ */
-	-webkit-transform: rotate(360deg); /* for Safari */
-	transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+	transform: rotate(360deg); /* for IE10+, Std */
 	width: 50px;
 	}
 	</style>

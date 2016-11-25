@@ -22,20 +22,19 @@
 
 <h2><span>Compatibility</span></h2>
 	<p>
-		IE10+
+		IE10+, Std
 	</p>
 
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="css">
 	<style type="text/css">
 	#box {
-	-webkit-animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for Safari */
-	animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for Chrome, Firefox, IE10+, Opera */
+	animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for IE10+, Std */
 	background: #000;
 	height: 100px;
 	width: 100px;
 	}
-	@-webkit-keyframes name {
+	@keyframes name { /* for IE10+, Std */
 		from {
 		background: red;
 		}
@@ -47,23 +46,7 @@
 		border-radius: 10px;
 		height: 50px;
 		opacity: 0.5;
-		transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
-		width: 50px;
-		}
-	}
-	@keyframes name {
-		from {
-		background: red;
-		}
-		50% {
-		background: green;
-		}
-		to {
-		background: blue;
-		border-radius: 10px;
-		height: 50px;
-		opacity: 0.5;
-		transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+		transform: rotate(360deg);
 		width: 50px;
 		}
 	}
@@ -72,46 +55,39 @@
 
 	<textarea cols="" rows="" name="code" class="html">
 	<div id="box"></div>
-	<ul id="output"></ul>
 	</textarea>
 
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	/**
-	 * for Chrome, Firefox, IE10+, Opera
-	 */
 	function listener(e) {
-		var l = document.createElement("li");
 		switch (e.type) {
 			case "animationstart":
-				l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
+				$4what.log("animationstart: " + e.elapsedTime);
 				break;
 			case "animationend":
-				l.innerHTML = "Ended: elapsed time is " + e.elapsedTime;
+				$4what.log("animationend: " + e.elapsedTime);
 				break;
 			case "animationiteration":
-				l.innerHTML = "New loop started at time " + e.elapsedTime;
+				$4what.log("animationiteration: " + e.elapsedTime);
 				break;
 		}
-		document.getElementById("output").appendChild(l);
 	}
-	var e = document.getElementById("box");
-	e.addEventListener("animationstart", listener, false);
-	e.addEventListener("animationend", listener, false);
-	e.addEventListener("animationiteration", listener, false);
+	var box = document.getElementById("box");
+	box.addEventListener("animationstart", listener, false);
+	box.addEventListener("animationend", listener, false);
+	box.addEventListener("animationiteration", listener, false);
 	</script>
 	</textarea>
 
 <h2><span>Example</span></h2>
 	<style type="text/css">
 	#box {
-	-webkit-animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for Safari */
-	animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for Chrome, Firefox, IE10+, Opera */
+	animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for IE10+, Std */
 	background: #000;
 	height: 100px;
 	width: 100px;
 	}
-	@-webkit-keyframes name {
+	@keyframes name { /* for IE10+, Std */
 		from {
 		background: red;
 		}
@@ -123,54 +99,32 @@
 		border-radius: 10px;
 		height: 50px;
 		opacity: 0.5;
-		transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
-		width: 50px;
-		}
-	}
-	@keyframes name {
-		from {
-		background: red;
-		}
-		50% {
-		background: green;
-		}
-		to {
-		background: blue;
-		border-radius: 10px;
-		height: 50px;
-		opacity: 0.5;
-		transform: rotate(360deg); /* for Chrome, Firefox, IE10+, Opera */
+		transform: rotate(360deg);
 		width: 50px;
 		}
 	}
 	</style>
 
 	<div id="box"></div>
-	<ul id="output"></ul>
 
 	<script type="text/javascript">
-	/**
-	 * for Chrome, Firefox, IE10+, Opera
-	 */
 	function listener(e) {
-		var l = document.createElement("li");
 		switch (e.type) {
 			case "animationstart":
-				l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
+				$4what.log("animationstart: " + e.elapsedTime);
 				break;
 			case "animationend":
-				l.innerHTML = "Ended: elapsed time is " + e.elapsedTime;
+				$4what.log("animationend: " + e.elapsedTime);
 				break;
 			case "animationiteration":
-				l.innerHTML = "New loop started at time " + e.elapsedTime;
+				$4what.log("animationiteration: " + e.elapsedTime);
 				break;
 		}
-		document.getElementById("output").appendChild(l);
 	}
-	var e = document.getElementById("box");
-	e.addEventListener("animationstart", listener, false);
-	e.addEventListener("animationend", listener, false);
-	e.addEventListener("animationiteration", listener, false);
+	var box = document.getElementById("box");
+	box.addEventListener("animationstart", listener, false);
+	box.addEventListener("animationend", listener, false);
+	box.addEventListener("animationiteration", listener, false);
 	</script>
 
 <script type="text/javascript" src="../../../js/analytics.js"></script>
