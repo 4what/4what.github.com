@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url("../../../css/reset.css");
+
 body {
 background: url("../images/bg.jpg") no-repeat 0 0;
 background-size: cover;
@@ -13,16 +15,10 @@ word-wrap: break-word;
 }
 
 a:link {
-color: #333;
-text-decoration: underline;
 }
 a:visited {
-color: #333;
-text-decoration: underline;
 }
 a:hover {
-color: #333;
-text-decoration: underline;
 }
 a:active {
 }
@@ -30,6 +26,23 @@ a:active {
 input, select, textarea {
 font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 font-size: 12px;
+}
+
+
+/**/
+.impress-supported .fallback-message {
+display: none;
+}
+.step {
+font-size: 48px;
+line-height: 1.5;
+width: 900px;
+}
+.impress-enabled .step {
+/*opacity: 0.3;*/
+}
+.impress-enabled .step.active {
+/*opacity: 1*/
 }
 
 
