@@ -173,7 +173,7 @@ height: 360px;
 width: 466px;
 }
 
-	/*------------------------------------*/
+	/**/
 	h1.logo {
 	left: 5px;
 	margin-top: 60px;
@@ -204,7 +204,7 @@ float: left;
 width: 466px;
 }
 
-	/*------------------------------------*/
+	/**/
 	.flash-feature {
 	height: 183px;
 	position: relative;
@@ -240,7 +240,7 @@ width: 466px;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/flash/image33.png");
 	}
 
-	/*------------------------------------*/
+	/**/
 	.news {
 	background: url("../images/frontpage_news_bgmt.jpg") no-repeat 0 0;
 	height: 416px;
@@ -280,7 +280,7 @@ width: 466px;
 	color: #77d8f3;
 	}
 
-	/*------------------------------------*/
+	/**/
 	.bottom {
 	background: url("../images/frontpage_news_bgm_fade.gif") no-repeat 0 0;
 	height: 545px;
@@ -327,7 +327,7 @@ display: block;
 height: 207px;
 }
 
-	/*------------------------------------*/
+	/**/
 	.flash-main {
 	background: url("../images/flash/frontpage_arthas.jpg") no-repeat 0 0;
 	height: 1013px;
@@ -349,7 +349,7 @@ top: -105px;
 width: 100%;
 }
 
-	/*------------------------------------*/
+	/**/
 	.return {
 	font-weight: bold;
 	left: 20px;

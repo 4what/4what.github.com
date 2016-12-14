@@ -51,7 +51,7 @@ text-align: center;
 margin: 0 auto;
 }
 
-	/*------------------------------------*/
+	/**/
 	h1 {
 	color: #fff\9;
 	filter: shadow(color=#333333,direction=120); /* for IE9- */
@@ -74,7 +74,7 @@ margin: 0 auto;
 	}
 
 
-/*------------------------------------*/
+/**/
 .navbar {
 background: #eee;
 border-top: 3px solid #808080;
@@ -95,7 +95,7 @@ text-align: left;
 width: 95%;
 }
 
-	/*------------------------------------*/
+	/**/
 	.subnav {
 	border-color: #ddd #ddd #ddd #808080;
 	border-style: solid;
