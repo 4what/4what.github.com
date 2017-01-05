@@ -17,7 +17,7 @@
 			type: "POST",
 			url: "ajax.jsp",
 			data: {
-				"method": "donate",
+				"action": "donate",
 				"id": id
 			},
 			dataType: "json",
@@ -248,7 +248,7 @@
 			type: "POST",
 			url: "ajax.jsp",
 			data: {
-				"method": "lucky",
+				"action": "lucky",
 				"award": award
 			},
 			dataType: "json",

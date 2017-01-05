@@ -104,7 +104,7 @@
 				method: "POST",
 				params: {
 					// 自定义
-					method: "login"
+					action: "login"
 				},
 				success: function(form, action) {
 					// 自定义

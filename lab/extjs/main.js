@@ -18,7 +18,7 @@
 			autoDestroy: true,
 			baseParams: {
 				// 自定义
-				method: "array"
+				action: "array"
 			},
 			reader: new Ext.data.ArrayReader({
 				fields: [
@@ -57,7 +57,7 @@
 			baseParams: {
 				limit: _pagesize,
 				// 自定义
-				method: "json"
+				action: "json"
 			},
 			reader: new Ext.data.JsonReader({
 				fields: [
@@ -111,7 +111,7 @@
 			afteredit: function(roweditor, changes, record, rowIndex) {
 				Ext.Ajax.extraParams = {
 					// 自定义
-					method: "update",
+					action: "update",
 					id: record.get("id")
 				};
 				_grid.body.mask("正在载入…");
@@ -337,7 +337,7 @@
 												method: "POST",
 												params: {
 													// 自定义
-													method: "delete",
+													action: "delete",
 													id: ids
 												},
 												callback: function(options, success, response) {
@@ -394,7 +394,7 @@
 										url: "data/form.json", // 自定义
 										params: {
 											// 自定义
-											method: "form",
+											action: "form",
 											id: id
 										},
 										success: function(form, action) {
@@ -461,7 +461,7 @@
 									method: "POST",
 									params: {
 										// 自定义
-										method: "save",
+										action: "save",
 										data: Ext.util.JSON.encode(data)
 									},
 									callback: function(options, success, response) {
@@ -1242,7 +1242,7 @@
 				method: "POST",
 				params: {
 					// 自定义
-					method: "save"
+					action: "save"
 				},
 				success: function(form, action) {
 					Ext.Msg.alert("", "操作成功", function(buttonId, text, opt) {
@@ -1423,7 +1423,7 @@
 			url: "data/tree.json", // 自定义
 			baseParams: {
 				// 自定义
-				method: "tree"
+				action: "tree"
 			}
 		}),
 		selModel: new
@@ -1474,7 +1474,7 @@
 									method: "POST",
 									params: {
 										// 自定义
-										method: "delete",
+										action: "delete",
 										id: node.id
 									},
 									callback: function(options, success, response) {
@@ -1522,7 +1522,7 @@
 						url: "data/data.json", // 自定义
 						params: {
 							// 自定义
-							method: "form",
+							action: "form",
 							id: _tree.getSelectionModel().getSelectedNode().id
 						},
 						failure: function(form, action) {
@@ -1574,8 +1574,8 @@
 				var
 				callback = new Function(),
 
+				action = "",
 				dropNode = dropEvent.dropNode,
-				method = "",
 				position = dropEvent.point, // above|append|below
 				target = dropEvent.target,
 
@@ -1591,7 +1591,7 @@
 						target.expand();
 					}
 
-					method = "add";
+					action = "add";
 
 					var record = dropEvent.data.selections[0];
 
@@ -1631,15 +1631,15 @@
 						return false;
 					}
 
-					// replace / sort
-					method = target.parentNode !== dropNode.parentNode ? "replace" : "sort";
+					// replace | sort
+					action = target.parentNode !== dropNode.parentNode ? "replace" : "sort";
 
 /*
 					// replace
 					if (target.parentNode === dropNode.parentNode) {
 						return false;
 					}
-					method = "replace";
+					action = "replace";
 */
 
 /*
@@ -1647,7 +1647,7 @@
 					if (target.parentNode !== dropNode.parentNode) {
 						return false;
 					}
-					method = "sort";
+					action = "sort";
 */
 
 					id = dropNode.id;
@@ -1661,7 +1661,7 @@
 					method: "POST",
 					params: {
 						// 自定义
-						method: method,
+						action: action,
 						position: position,
 						id: id,
 						parentId: parentId,
@@ -1889,7 +1889,7 @@
 			url: "data/treegrid.json", // 自定义
 			baseParams: {
 				// 自定义
-				method: "treegrid"
+				action: "treegrid"
 			}
 		}),
 		columns: [
@@ -1965,7 +1965,7 @@
 				url: "data/tree.json", // 自定义
 				baseParams: {
 					// 自定义
-					method: "tree"
+					action: "tree"
 				}
 			})
 		};

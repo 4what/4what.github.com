@@ -7,9 +7,9 @@
 
 	request.setCharacterEncoding("UTF-8");
 
-	String method = request.getParameter("method");
+	String action = request.getParameter("action");
 
-	if (method == null) {
+	if (action == null) {
 		return;
 	}
 
@@ -28,7 +28,7 @@
 		"msg": "message"
 	}
 	*/
-	if (method.equals("form")) {
+	if (action.equals("form")) {
 		out.println("{\"success\": true, \"data\": {"
 			+ "\"id\": \"" + id + "\""
 			+ ", \"date\": \"2011-01-01\""
@@ -56,7 +56,7 @@
 		]
 	}
 	*/
-	if (method.equals("json")) {
+	if (action.equals("json")) {
 		int total = 100;
 
 		StringBuilder results = new StringBuilder("{\"total\": " + total);
@@ -101,7 +101,7 @@
 		]
 	}
 	*/
-	if (method.equals("array")) {
+	if (action.equals("array")) {
 		int total = 100;
 
 		StringBuilder results = new StringBuilder("{\"total\": " + total);
@@ -153,7 +153,7 @@
 		...
 	]
 	*/
-	if (method.equals("tree")) {
+	if (action.equals("tree")) {
 		StringBuilder data = new StringBuilder("[");
 
 /*
@@ -229,7 +229,7 @@
 		...
 	]
 	*/
-	if (method.equals("treegrid")) {
+	if (action.equals("treegrid")) {
 		StringBuilder data = new StringBuilder("[");
 
 		Calendar date = Calendar.getInstance();
