@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2016.11.18
+ * @version 1.1 Build 2017.03.23
  */
 (function() {
 
@@ -180,7 +180,7 @@ Util.prototype = {
 		url = options.url, // {String} (*: !form)
 
 		complete, iframe,
-		local = window.location.protocol + "//" + window.location.host + "/robots.txt", // {String} // IE9: absolute path
+		local = window.location.protocol + "//" + window.location.host + "/robots.txt", // {String} (*: ?) // IE9: absolute path
 		name = "windowname-" + new Date().getTime();
 
 		try {
