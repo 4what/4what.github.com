@@ -359,7 +359,7 @@ width: 960px;
 	}
 
 	.body-search {
-	background: #222 url("../images/hr.png") repeat-x 0 0;
+	background: #222 url("../images/hr.png") repeat-x;
 	margin: 0 auto;
 	width: 680px;
 	}
@@ -488,7 +488,7 @@ width: 100%;
 }
 
 .body-footer {
-background: #333 url("../images/hr.png") repeat-x 0 0;
+background: #333 url("../images/hr.png") repeat-x;
 text-align: center;
 }
 
