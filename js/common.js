@@ -16,7 +16,7 @@ if (name === "index" || (!re && /\/$/.test(pathname))) {
 
 	// onload
 	$js.bind(window, "load", function() {
-		//setFont();
+		setFont();
 	});
 
 	// font
@@ -25,8 +25,8 @@ if (name === "index" || (!re && /\/$/.test(pathname))) {
 			var anchors = document.getElementById("overview").getElementsByTagName("a");
 			for (var i = 0, l = anchors.length; i < l; i++) {
 				anchors[i]
-					.style.fontSize = $js.random(0.5, 2) * 1.618 + "em";
-					//.className = "font-" + $js.random(1, 10, true);
+					//.style.fontSize = $js.random(0.5, 2) * 1.618 + "em";
+					.className = "font-" + $js.random(1, 10, true);
 			}
 		} catch (e) {}
 	}
