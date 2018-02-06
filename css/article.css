@@ -55,7 +55,6 @@ margin: 0 auto;
 	h1 {
 	color: #fff\9;
 	filter: shadow(color=#333333,direction=120); /* for IE9- */
-	font-weight: bold;
 	font-size: 32px;
 	font-variant: small-caps;
 	height: 100%;

@@ -6,7 +6,7 @@
  * reset.css
  *
  * @author 4what
- * @version 2016.11.03
+ * @version 2018.02.06
  */
 
 * {
@@ -22,7 +22,7 @@ vertical-align: middle;
 }
 
 q:after, q:before {
-content: ""; /* for IE8, Std */
+content: ""; /* for IE8+, Std */
 }
 
 ol, ul {
@@ -34,13 +34,12 @@ border-collapse: collapse;
 border-spacing: 0;
 }
 
-/* Outlines and the focus */
 :focus {
-outline: none; /* for IE8, Std */
+outline: none; /* for IE8+, Std */
 }
 
 .clear {
-zoom: 1; /* for IE7- (hasLayout) */
+zoom: 1; /* for IE7-: hasLayout */
 }
 .clear:after {
 clear: both;
