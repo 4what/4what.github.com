@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>洛娃</title>
+<meta name="author" content="4what" />
+
+<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+
+<link rel="stylesheet" href="css/normalize.css/1.1.3/normalize.css" />
+
+<link rel="stylesheet" href="css/animate.css/3.5.2/animate.min.css" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<div class="page" id="page-home">
+	<div class="dialog">
+		<img src="images/home/dialog.png" alt="" style="width: 100%;" />
+	</div>
+</div>
+
+<div class="page" id="page-end">
+	<ul class="action">
+		<li><img src="images/end/btn-mod.png" alt="" style="width: 100%;" /></li>
+		<li><img src="images/end/btn-kill.png" alt="" style="width: 100%;" /></li>
+		<li><img src="images/end/btn-diss.png" alt="" style="width: 100%;" /></li>
+	</ul>
+
+<!--
+	<div class="overlay">
+		<img src="images/test/tip.png" alt="" style="width: 100%;" />
+	</div>
+-->
+</div>
+
+<!--<div id="bgm"><audio src="http://ow5dm6108.bkt.clouddn.com/bgm.m4a" loop="loop"></audio><span class="control"></span></div>-->
+
+<div id="loading"><div><span>正在载入…</span></div></div>
+
+<script>
+/* analytics */
+</script>
+
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+
+<script>
+$(window).load(function() {
+	$("#loading").fadeOut(1000, function() {
+		$("html, body").css("overflow", "visible");
+
+		/* home */
+		var home = $("#page-home");
+
+		home.fadeIn(1000, function() {
+			$(this).click(function() {
+				home.fadeOut(1000, function() {
+
+					/* end */
+					var end = $("#page-end");
+					end.fadeIn(1000, function() {
+						
+					});
+				});
+			});
+		});
+	});
+});
+
+
+///* bgm */
+//(function() {
+//
+//	var
+//	bgm = $("#bgm"),
+//	audio = $("audio", bgm)[0],
+//	control = $(".control", bgm);
+//
+//	$(document).one("touchstart", function(e) {
+//		if (audio.paused && e.target !== control[0]) {
+//			audio.play();
+//		}
+//	});
+//
+//	control.click(function() {
+//		audio.paused ? audio.play() : audio.pause();
+//	});
+//
+//	audio.addEventListener("play", function() {
+//		control.addClass("playing");
+//	}, false);
+//
+//	audio.addEventListener("pause", function() {
+//		control.removeClass("playing");
+//	}, false);
+//
+//})();
+</script>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+$.ajax({
+	url:
+		//"http://pear.bjxinlian.com/home/index2"
+		"http://wx.jdhui.com/sign?url=" + window.location.protocol + "//" + window.location.host + window.location.pathname + encodeURIComponent(window.location.search)
+	,
+	dataType:
+		//"script"
+		"json"
+	,
+	success: function(data) {
+		var result =
+			//window["wx_cfg"]
+			data["data"]
+		;
+		//console.log(result);
+
+		wx.config({
+			debug: false,
+			appId: result[
+				//"AppId"
+				"appId"
+			],
+			timestamp: result[
+				//"Timestamp"
+				"timestamp"
+			],
+			nonceStr: result[
+				//"NonceStr"
+				"nonceStr"
+			],
+			signature: result[
+				//"Signature"
+				"signature"
+			],
+			jsApiList: [
+				"onMenuShareAppMessage",
+				"onMenuShareTimeline"
+			]
+		});
+
+		wx.ready(function() {
+			var
+			title = "TCL C5 蓝调人生",
+			desc = "一不小心看透你！敢测你的蓝调吗？",
+			link = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search,
+			imgUrl = "http://www.ailer.cn/tcl/images/logo.jpg";
+
+			wx.onMenuShareAppMessage({
+				title: title,
+				desc: desc,
+				link: link,
+				imgUrl: imgUrl
+			});
+			wx.onMenuShareTimeline({
+				title: title + " - " + desc,
+				link: link,
+				imgUrl: imgUrl
+			});
+		});
+
+		wx.error(function(res) {
+			//alert(res.errMsg);
+		});
+	},
+	error: function(xhr) {
+		//alert("错误：" + xhr.status + " " + xhr.statusText);
+	}
+});
+</script>
+</body>
+</html>
