@@ -30,7 +30,6 @@
 		<li class="cookie"></li>
 		<li class="extend"></li>
 		<li class="getScript">cross-domain</li>
-		<li class="iFrameAutoHeight">same-origin</li>
 		<li class="inArray"></li>
 		<li class="include"></li>
 		<li class="json"></li>
@@ -41,6 +40,7 @@
 		<li class="random"></li>
 		<li class="randoms"></li>
 		<li class="removeElement"></li>
+		<li class="setIFrameHeight">same-origin</li>
 		<li class="stopPropagation"></li>
 		<li class="style"></li>
 		<li class="timer"></li>
@@ -104,15 +104,6 @@
 				});
 				</textarea>
 			</li>
-			<li class="iFrameAutoHeight">
-				<textarea cols="" rows="" name="code" class="html">
-				<iframe src="index.html" frameborder="0" scrolling="no" id="iFrameAutoHeight" style="border: 2px solid red;"></iframe>
-				</textarea>
-
-				<textarea cols="" rows="" name="code" class="js">
-				$js.iFrameAutoHeight("iFrameAutoHeight");
-				</textarea>
-			</li>
 			<li class="inArray">
 				<textarea cols="" rows="" name="code" class="js">
 				$4what.log($js.inArray("b", ["a", "b", "c"]));
@@ -153,6 +144,15 @@
 			<li class="removeElement">
 				<textarea cols="" rows="" name="code" class="js">
 				$4what.log($js.removeElement("b", ["a", "b", "c"]));
+				</textarea>
+			</li>
+			<li class="setIFrameHeight">
+				<textarea cols="" rows="" name="code" class="html">
+				<iframe src="index.html" frameborder="0" scrolling="no" id="setIFrameHeight" style="border: 2px solid red;"></iframe>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$js.setIFrameHeight("setIFrameHeight");
 				</textarea>
 			</li>
 			<li class="style">
@@ -217,8 +217,8 @@
 
 	<h3>Example</h3>
 		<ul id="api-example">
-			<li class="iFrameAutoHeight">
-				<iframe src="index.html" frameborder="0" scrolling="no" id="iFrameAutoHeight" style="border: 2px solid red;"></iframe>
+			<li class="setIFrameHeight">
+				<iframe src="index.html" frameborder="0" scrolling="no" id="setIFrameHeight" style="border: 2px solid red;"></iframe>
 			</li>
 			<li class="timer">
 				<textarea cols="" rows="" name="" class="textarea" id="timer-fn">
@@ -299,8 +299,8 @@
 					$4what.log($.ui.version)
 				});
 			},
-			iFrameAutoHeight: function() {
-				$js.iFrameAutoHeight("iFrameAutoHeight");
+			setIFrameHeight: function() {
+				$js.setIFrameHeight("setIFrameHeight");
 			},
 			inArray: function() {
 				$4what.log($js.inArray("b", ["a", "b", "c"]));

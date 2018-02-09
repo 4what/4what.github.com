@@ -31,12 +31,12 @@
 		<li class="domain">判断当前域名是否在给定数组中并返回</li>
 		<li class="field">返回表单中 name 属性为目标值的元素对象</li>
 		<li class="fixed">跟随滚动条</li>
-		<li class="iFrameAutoHeight">same-origin；IFRAME 自适应高度</li>
 		<li class="maxHeight">max-height</li>
 		<li class="minHeight">min-height</li>
 		<li class="minWidth">窗口宽度大于目标值时内容宽度自适应否则固定</li>
 		<li class="paginator">支持 Ajax 的分页组件</li>
 		<li class="select">加载 select, radio, checkbox 的默认值</li>
+		<li class="setIFrameHeight">same-origin；IFRAME 自适应高度</li>
 		<li class="share">分享按钮</li>
 		<li class="stripHtml">过滤 HTML 标签</li>
 	</ul>
@@ -117,15 +117,6 @@
 					//offset: 50,
 					//position: "top"
 				});
-				</textarea>
-			</li>
-			<li class="iFrameAutoHeight">
-				<textarea cols="" rows="" name="code" class="html">
-				<iframe src="index.html" frameborder="0" scrolling="no" id="iFrameAutoHeight" style="border: 2px solid red;"></iframe>
-				</textarea>
-
-				<textarea cols="" rows="" name="code" class="js">
-				$jq.iFrameAutoHeight("#iFrameAutoHeight");
 				</textarea>
 			</li>
 			<li class="maxHeight">
@@ -214,6 +205,15 @@
 				}, $("#select"));
 				</textarea>
 			</li>
+			<li class="setIFrameHeight">
+				<textarea cols="" rows="" name="code" class="html">
+				<iframe src="index.html" frameborder="0" scrolling="no" id="setIFrameHeight" style="border: 2px solid red;"></iframe>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="js">
+				$jq.setIFrameHeight("#setIFrameHeight");
+				</textarea>
+			</li>
 			<li class="share">
 				<textarea cols="" rows="" name="code" class="js">
 				$jq.share("#api-example", {
@@ -259,8 +259,8 @@
 					<span id="fixed" style="border: 2px solid red; bottom: 0; height: 100px; position: absolute; right: 0; width: 100px;"></span>
 				</div>
 			</li>
-			<li class="iFrameAutoHeight">
-				<iframe src="index.html" frameborder="0" scrolling="no" id="iFrameAutoHeight" style="border: 2px solid red;"></iframe>
+			<li class="setIFrameHeight">
+				<iframe src="index.html" frameborder="0" scrolling="no" id="setIFrameHeight" style="border: 2px solid red;"></iframe>
 			</li>
 			<li class="maxHeight">
 				<div id="maxHeight" style="border: 2px solid red; overflow: hidden;">
@@ -333,8 +333,8 @@
 			field: function() {
 				$4what.log($jq.field("#field", "name").val());
 			},
-			iFrameAutoHeight: function() {
-				$jq.iFrameAutoHeight("#iFrameAutoHeight");
+			setIFrameHeight: function() {
+				$jq.setIFrameHeight("#setIFrameHeight");
 			},
 			maxHeight: function() {
 				$jq.maxHeight("#maxHeight", 100);

@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 1.1 Build 2017.03.23
+ * @version 1.2 Build 2018.02.09
  */
 (function() {
 
@@ -311,7 +311,7 @@ Util.prototype = {
 	 * @requires $js.style
 	 * @param {String} id
 	 */
-	iFrameAutoHeight: function(id) {
+	setIFrameHeight: function(id) {
 		var
 		self = this,
 		iframe = document.getElementById(id);

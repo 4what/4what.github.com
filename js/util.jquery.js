@@ -4,7 +4,7 @@
  * jQuery Util
  *
  * @author http://www.4what.cn/
- * @version 1.2 Build 2016.11.18
+ * @version 1.3 Build 2018.02.09
  */
 (function() {
 
@@ -77,18 +77,6 @@ var UtilJq = window.$jq = {
 	},
 
 	/**
-	 * same-origin
-	 *
-	 * @requires jQuery 1.3.2+
-	 * @param {Object|String} target
-	 */
-	iFrameAutoHeight: function(target) {
-		$(target).load(function() {
-			$(this).height($(this).contents().find("body").outerHeight(true));
-		});
-	},
-
-	/**
 	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
 	 * @param {Number} limit
@@ -124,6 +112,18 @@ var UtilJq = window.$jq = {
 	minWidth: function(target, width) {
 		$(window).bind("load resize", function() {
 			$(target).width($(window).width() <= width ? width : "auto");
+		});
+	},
+
+	/**
+	 * same-origin
+	 *
+	 * @requires jQuery 1.3.2+
+	 * @param {Object|String} target
+	 */
+	setIFrameHeight: function(target) {
+		$(target).load(function() {
+			$(this).height($(this).contents().find("body").outerHeight(true));
 		});
 	},
 
