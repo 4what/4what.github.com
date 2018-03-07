@@ -43,10 +43,6 @@ var WeiXin = window.WeiXin = function(options, callback) {
 						callback();
 					});
 
-					wx.error(function(res) {
-						alert(res.errMsg);
-					});
-
 					break;
 				default:
 					break;
