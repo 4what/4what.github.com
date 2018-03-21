@@ -268,10 +268,10 @@ width: 960px;
 	}
 	.works ul {
 	line-height: 2;
-	text-indent: 10px;
 	}
 	.works ul li {
-	background: url("../images/bullet-square.png") no-repeat 0 center;
+	background: url("../images/bullet-square.png") no-repeat 0 10px;
+	padding-left: 10px;
 	}
 
 	/**/
