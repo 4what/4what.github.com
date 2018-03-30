@@ -104,13 +104,8 @@ var $4what = function() {
 				case "jqueryui": // for IE6+
 					// v1.8 for jQuery 1.3.2+
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.css");
-					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.js");
+					$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.js");
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery.ui.datepicker-zh-CN.min.js");
-
-					// v1.9 for jQuery 1.6+
-					//$js.include(host + "js/jquery/ui/1.9.2/jquery-ui.min.css");
-					$js.include(host + "js/jquery/ui/1.9.2/jquery-ui.min.js");
-					//$js.include(host + "js/jquery/ui/1.9.2/jquery.ui.datepicker-zh-CN.min.js");
 					break;
 
 				// jQuery lightBox
