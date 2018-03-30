@@ -92,16 +92,19 @@ var $4what = function() {
 		for (var i = 0, l = arguments.length; i < l; i++) {
 			switch (arguments[i]) {
 				// jQuery
-				case "jquery": // for IE6+
+				case "jquery":
 					$js.include(
 						host +
+							// for IE6+
 							//"js/jquery/jquery-1.3.2.min.js"
 							"js/jquery/jquery-1.8.3.min.js"
 					);
 					break;
 
 				// jQuery UI
-				case "jqueryui": // for IE6+
+				case "jqueryui":
+					// for IE6+
+
 					// v1.8 for jQuery 1.3.2+
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.css");
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.js");
