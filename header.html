@@ -8,10 +8,6 @@
 <base target="_top" />
 
 <link rel="stylesheet" type="text/css" href="css/base.css" />
-
-<script type="text/javascript" src="js/util.js"></script>
-<script type="text/javascript" src="js/core.js"></script>
-<script type="text/javascript" src="js/header.js"></script>
 </head>
 
 <body class="body-header">
@@ -23,13 +19,52 @@
 
 	<div id="navbar">
 		<ul>
-			<li><a href="index.html" name="index"><span>Home</span></a></li>
-			<li><a href="works.html" name="works"><span>Works</span></a></li>
-			<li><a href="about.html" name="about"><span>About</span></a></li>
+			<li><a href="index.html"><span>Home</span></a></li>
+			<li><a href="works.html"><span>Works</span></a></li>
+			<li><a href="about.html"><span>About</span></a></li>
 		</ul>
 	</div>
 
 	<span id="clock"></span>
 </div>
+
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<script type="text/javascript">
+(function() {
+
+	(function breadcrumb() {
+		var
+		anchors = document.getElementById("navbar").getElementsByTagName("a"),
+
+		href,
+		pathname = $4what.filename(window.top.location.pathname);
+
+		for (var item, i = 0, l = anchors.length; i < l; i++) {
+			item = anchors[i];
+
+			href = $4what.filename(item.getAttribute("href"));
+
+			if (href === pathname || (href === "index.html" && /\/$/.test(window.top.location.pathname))) {
+				$js.addClass(item, "highlight");
+				break;
+			}
+		}
+	})();
+
+	// clock
+	window.setInterval('$js.clock("clock")', 500);
+
+	// logo
+	$4what.include("jqueryui");
+	$(function() {
+		$("#logo").show("bounce", {
+			distance: 20
+		}, 2000);
+	});
+
+})();
+</script>
 </body>
 </html>

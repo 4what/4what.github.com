@@ -3,20 +3,20 @@
 /* SyntaxHighlighter */
 .syntaxhighlighter.ie,
 .syntaxhighlighter {
-background-color: #eee !important;
-border-color: #ddd !important;
-border-style: solid !important;
-border-width: 1px 0 !important;
-font-size: 100% !important;
-margin: 10px 0 0 0 !important;
-padding: 10px 0 !important;
+	background-color: #eee !important;
+	border-color: #ddd !important;
+	border-style: solid !important;
+	border-width: 1px 0 !important;
+	font-size: 100% !important;
+	margin: 10px 0 0 0 !important;
+	padding: 10px 0 !important;
 }
 .syntaxhighlighter .line.alt1 {
-background-color: #eee !important;
+	background-color: #eee !important;
 }
 .syntaxhighlighter .line.alt2 {
-background-color: #eee !important;
+	background-color: #eee !important;
 }
 .syntaxhighlighter .gutter .line {
-border-right: 5px solid #808080 !important;
+	border-right: 5px solid #808080 !important;
 }

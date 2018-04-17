@@ -4,25 +4,25 @@
 @import url("error-default.css");
 
 html {
-height: 100%;
-overflow: hidden;
+	height: 100%;
+	overflow: hidden;
 }
 
 body {
-color: #fff;
-height: 100%;
-margin: 0;
-overflow: hidden;
+	color: #fff;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
 }
 
 a:link {
-color: #fff;
+	color: #fff;
 }
 a:visited {
-color: #fff;
+	color: #fff;
 }
 a:hover {
-color: #fff;
+	color: #fff;
 }
 
 input, select, textarea {
@@ -33,10 +33,10 @@ input, select, textarea {
   MAIN
 --------------------------------------*/
 .main {
-position: absolute;
-right: 50px;
-text-align: right;
-top: 50px;
+	position: absolute;
+	right: 50px;
+	text-align: right;
+	top: 50px;
 }
 
 
@@ -44,15 +44,15 @@ top: 50px;
   HEADER
 --------------------------------------*/
 .header {
-border: none;
+	border: none;
 }
 .header p {
-color: #fff;
+	color: #fff;
 }
 
 	/**/
 	h1 {
-	color: #fff;
+		color: #fff;
 	}
 
 
@@ -60,38 +60,38 @@ color: #fff;
   FOOTER
 --------------------------------------*/
 .footer {
-border: none;
+	border: none;
 }
 
 
 /* TV */
 #tv {
-height: 100%;
+	height: 100%;
 }
 #tv div {
-float: right;
-height: 100%;
-width: 12.5%;
+	float: right;
+	height: 100%;
+	width: 12.5%;
 }
 
 #tv .col-1 {
-background: black;
+	background: black;
 }
 #tv .col-2 {
-background: blue;
+	background: blue;
 }
 #tv .col-3 {
-background: red;
+	background: red;
 }
 #tv .col-4 {
-background: fuchsia;
+	background: fuchsia;
 }
 #tv .col-5 {
-background: lime;
+	background: lime;
 }
 #tv .col-6 {
-background: aqua;
+	background: aqua;
 }
 #tv .col-7 {
-background: yellow;
+	background: yellow;
 }

@@ -1,32 +1,32 @@
 @charset "UTF-8";
 
 body {
-background: #f4f4f4;
-color: #575757;
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 12px;
-margin-top: 20px;
-/*
-word-break: break-all;
-word-wrap: break-word;
-*/
+	background: #f4f4f4;
+	color: #575757;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
+	margin-top: 20px;
+	/*
+	word-break: break-all;
+	word-wrap: break-word;
+	*/
 }
 
 a:link {
-color: #1370ab;
+	color: #1370ab;
 }
 a:visited {
-color: #1370ab;
+	color: #1370ab;
 }
 a:hover {
-color: #074ae5;
-position: relative;
-top: 1px;
+	color: #074ae5;
+	position: relative;
+	top: 1px;
 }
 
 input, select, textarea {
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 12px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
 }
 
 
@@ -34,7 +34,7 @@ font-size: 12px;
   MAIN
 --------------------------------------*/
 .main {
-width: 750px;
+	width: 750px;
 }
 
 
@@ -42,8 +42,8 @@ width: 750px;
   CONTAINER
 --------------------------------------*/
 .container {
-float: right;
-width: 670px;
+	float: right;
+	width: 670px;
 }
 
 
@@ -51,19 +51,19 @@ width: 670px;
   HEADER
 --------------------------------------*/
 .header {
-border-bottom: 1px solid #b6bcc6;
+	border-bottom: 1px solid #b6bcc6;
 }
 .header p {
-color: #787878;
-margin-top: 5px;
-text-align: right;
+	color: #787878;
+	margin-top: 5px;
+	text-align: right;
 }
 
 	/**/
 	h1 {
-	color: #4465a2;
-	font-size: 18px;
-	font-weight: normal;
+		color: #4465a2;
+		font-size: 18px;
+		font-weight: normal;
 	}
 
 
@@ -71,17 +71,17 @@ text-align: right;
   CONTENT
 --------------------------------------*/
 .content {
-margin: 0 auto;
+	margin: 0 auto;
 }
 
 	/**/
 	ul {
-	line-height: 1.5;
-	list-style: disc inside;
-	margin-top: 15px;
+		line-height: 1.5;
+		list-style: disc inside;
+		margin-top: 15px;
 	}
 	ul li {
-	margin-left: 20px;
+		margin-left: 20px;
 	}
 
 
@@ -89,8 +89,8 @@ margin: 0 auto;
   FOOTER
 --------------------------------------*/
 .footer {
-border-top: 1px solid #b6bcc6;
-margin: 15px auto 0 auto;
-padding-top: 15px;
-text-align: right;
+	border-top: 1px solid #b6bcc6;
+	margin: 15px auto 0 auto;
+	padding-top: 15px;
+	text-align: right;
 }

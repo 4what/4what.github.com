@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 1.2 Build 2018.02.09
+ * @version 1.2 Build 2018.04.17
  */
 (function() {
 
@@ -305,6 +305,47 @@ Util.prototype = {
 	/*--------------------------------------
 	  Category: CSS
 	--------------------------------------*/
+	/**
+	 * @param {Object} target
+	 * @param {String} classname
+	 */
+	addClass: function(target, classname) {
+		if (target.className) {
+			var classes = target.className.split(" ");
+
+			classname = classname.split(" ");
+
+			for (var item, i = classname.length - 1; i >= 0; i--) {
+				item = classname[i];
+				if (this.inArray(item, classes) === -1) {
+					classes.push(item);
+				}
+			}
+			target.className = classes.join(" ");
+		} else {
+			target.className = classname;
+		}
+	},
+
+	/**
+	 * @param {Object} target
+	 * @param {String} classname
+	 */
+	removeClass: function(target, classname) {
+		if (arguments.length > 1) {
+			var classes = target.getAttribute("class").split(" ");
+
+			classname = classname.split(" ");
+
+			for (var i = classname.length - 1; i >= 0; i--) {
+				this.removeElement(classname[i], classes);
+			}
+			target.setAttribute("class", classes.join(" "));
+		} else {
+			target.setAttribute("class", "");
+		}
+	},
+
 	/**
 	 * same-origin
 	 *
@@ -704,6 +745,14 @@ Util.prototype = {
 	}
 };
 
-window.$js = new Util();
+if (typeof module === "object" && typeof module.exports === "object") { // for CommonJS
+	module.exports = new Util();
+} else if (typeof define === "function" && define.amd) { // for RequireJS
+	define(/*"Util", */function() {
+		return new Util();
+	});
+} else {
+	window.$js = new Util();
+}
 
 })();

@@ -6,9 +6,9 @@
 <meta name="author" content="4what" />
 
 <link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
+
 <script type="text/javascript" src="../../../js/util.js"></script>
-<script type="text/javascript" src="../../../js/core.js"></script>
-<script type="text/javascript" src="../../../js/sample.js"></script>
+<script type="text/javascript" src="../../../js/common.js"></script>
 </head>
 
 <body>
@@ -17,50 +17,50 @@
 	<textarea cols="" rows="" name="code" class="css">
 	<style type="text/css">
 	#hack-1 {
-	_ color: red;
+		_ color: red;
 	}
 
 	* html #hack-2 {
-	color: red;
+		color: red;
 	}
 
 	#hack-3 {
-	* color: red;
+		* color: red;
 	}
 
 	#hack-4 {
-	* color: red !important;
-	color: blue;
+		* color: red !important;
+		color: blue;
 	}
 
 	*+ html #hack-5 {
-	color/**/: red;
+		color/**/: red;
 	}
 
 	#hack-6 {
-	color: red !important;
-	color: blue;
+		color: red !important;
+		color: blue;
 	}
 
 	#hack-7[id] {
-	color: red;
+		color: red;
 	}
 
 	#hack-8 {
-	color: red\9;
+		color: red\9;
 	}
 
 	#hack-9 {
-	color: red\0;
+		color: red\0;
 	}
 
 	#hack-10 {
-	color: red\9\0;
+		color: red\9\0;
 	}
 
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		#hack-11 {
-		color: red;
+			color: red;
 		}
 	}
 	</style>
@@ -83,50 +83,50 @@
 <h2><span>Example</span></h2>
 	<style type="text/css">
 	#hack-1 {
-	_ color: red;
+		_ color: red;
 	}
 
 	* html #hack-2 {
-	color: red;
+		color: red;
 	}
 
 	#hack-3 {
-	* color: red;
+		* color: red;
 	}
 
 	#hack-4 {
-	* color: red !important;
-	color: blue;
+		* color: red !important;
+		color: blue;
 	}
 
 	*+ html #hack-5 {
-	color/**/: red;
+		color/**/: red;
 	}
 
 	#hack-6 {
-	color: red !important;
-	color: blue;
+		color: red !important;
+		color: blue;
 	}
 
 	#hack-7[id] {
-	color: red;
+		color: red;
 	}
 
 	#hack-8 {
-	color: red\9;
+		color: red\9;
 	}
 
 	#hack-9 {
-	color: red\0;
+		color: red\0;
 	}
 
 	#hack-10 {
-	color: red\9\0;
+		color: red\9\0;
 	}
 
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		#hack-11 {
-		color: red;
+			color: red;
 		}
 	}
 	</style>
@@ -142,6 +142,8 @@
 	<div>9: <span id="hack-9">E { property: value\0; }</span></div>
 	<div>10: <span id="hack-10">E { property: value\9\0; }</span></div>
 	<div>11: <span id="hack-11">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { E { property: value; } }</span></div>
+
+<script type="text/javascript" src="../../../js/sample.js"></script>
 
 <script type="text/javascript" src="../../../js/analytics.js"></script>
 </body>

@@ -4,11 +4,11 @@
  * jQuery Util
  *
  * @author http://www.4what.cn/
- * @version 1.3 Build 2018.02.09
+ * @version 1.3 Build 2018.04.13
  */
 (function() {
 
-var UtilJq = window.$jq = {
+var UtilJq = {
 	/*--------------------------------------
 	  Category: CSS
 	--------------------------------------*/
@@ -444,5 +444,15 @@ var UtilJq = window.$jq = {
 			.replace(/&nbsp;|&#160;/gi, ""); // non-breaking space
 	}
 };
+
+if (typeof module === "object" && typeof module.exports === "object") { // for CommonJS
+	module.exports = UtilJq;
+} else if (typeof define === "function" && define.amd) { // for RequireJS
+	define(/*"UtilJq", */function() {
+		return UtilJq;
+	});
+} else {
+	window.$jq = UtilJq;
+}
 
 })();

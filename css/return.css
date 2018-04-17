@@ -3,13 +3,13 @@
 @import url("reset.css");
 
 .body-return {
-color: #333;
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 12px;
-/*
-word-break: break-all;
-word-wrap: break-word;
-*/
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
+	/*
+	word-break: break-all;
+	word-wrap: break-word;
+	*/
 }
 
 a:link {
@@ -20,8 +20,8 @@ a:hover {
 }
 
 input, select, textarea {
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 12px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
 }
 
 
@@ -29,29 +29,29 @@ font-size: 12px;
   return.html
 --------------------------------------*/
 .iframe-return {
-height: 26px;
-position: fixed !important; /* for IE7+, Std */
-position: absolute; /* for IE6 */
-right: 0;
-top: 0;
-width: 155px;
+	height: 26px;
+	position: fixed !important; /* for IE7+, Std */
+	position: absolute; /* for IE6 */
+	right: 0;
+	top: 0;
+	width: 155px;
 }
 
 .return {
-background: #eee;
-border-color: #808080;
-border-style: solid;
-border-width: 0 0 1px 5px;
-height: 25px;
-line-height: 25px;
-position: fixed !important; /* for IE7+, Std */
-position: absolute; /* for IE6 */
-right: 0;
-text-align: center;
-top: 0;
-width: 150px;
+	background: #eee;
+	border-color: #808080;
+	border-style: solid;
+	border-width: 0 0 1px 5px;
+	height: 25px;
+	line-height: 25px;
+	position: fixed !important; /* for IE7+, Std */
+	position: absolute; /* for IE6 */
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 150px;
 }
 .return a {
-color: #333;
-text-decoration: none;
+	color: #333;
+	text-decoration: none;
 }

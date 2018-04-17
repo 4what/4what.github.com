@@ -40,10 +40,6 @@
 <meta name="google-site-verification" content="OkTifW_PJu3tvURziIVDC4sthUQDWMBL4fezbNtEep0" />
 
 <link rel="stylesheet" type="text/css" href="css/base.css" />
-
-<script type="text/javascript" src="js/util.js"></script>
-<script type="text/javascript" src="js/core.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
 </head>
 
 <!--
@@ -122,6 +118,24 @@
 <!-- /container -->
 </div>
 <!-- /main -->
+
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<script type="text/javascript">
+(function () {
+
+	(function setFont() {
+		var anchors = document.getElementById("overview").getElementsByTagName("a");
+		for (var i = 0, l = anchors.length; i < l; i++) {
+			anchors[i]
+				//.style.fontSize = $js.random(0.5, 2) * 1.618 + "em";
+				.className = "font-" + $js.random(1, 10, true);
+		}
+	})();
+
+})();
+</script>
 
 <script type="text/javascript" src="js/analytics.js"></script>
 </body>

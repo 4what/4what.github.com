@@ -4,15 +4,15 @@
 @import url("return.css");
 
 body {
-color: #333;
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 12px;
-line-height: 1.5;
-margin: 15px 10px;
-/*
-word-break: break-all;
-word-wrap: break-word;
-*/
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+	margin: 15px 10px;
+	/*
+	word-break: break-all;
+	word-wrap: break-word;
+	*/
 }
 
 a:link {
@@ -23,8 +23,8 @@ a:hover {
 }
 
 input, select, textarea {
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 12px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
 }
 
 
@@ -32,7 +32,7 @@ font-size: 12px;
   MAIN
 --------------------------------------*/
 .main {
-text-align: center;
+	text-align: center;
 }
 
 
@@ -47,139 +47,139 @@ text-align: center;
   CONTENT
 --------------------------------------*/
 .content {
-margin: 0 auto;
-text-align: left;
-width: 750px;
+	margin: 0 auto;
+	text-align: left;
+	width: 750px;
 }
 
 	/**/
 	h1.heading {
-	font-variant: small-caps;
-	text-align: center;
+		font-variant: small-caps;
+		text-align: center;
 	}
 	h1.heading span {
-	border-bottom: 1px dashed;
+		border-bottom: 1px dashed;
 	}
 
 	p.log {
-	/*line-height: 2;*/
+		/*line-height: 2;*/
 	}
 
 	/**/
 	.catalog {
-	margin-top: 10px;
-	word-break: break-all;
-	word-wrap: break-word;
+		margin-top: 10px;
+		word-break: break-all;
+		word-wrap: break-word;
 	}
 	.catalog ul {
-	overflow: hidden;
+		overflow: hidden;
 	}
 	.catalog ul li {
-	float: left;
-	height: 120px;
-	overflow: hidden;
-	width: 120px;
-	margin: 5px 5px 0 0;
+		float: left;
+		height: 120px;
+		overflow: hidden;
+		width: 120px;
+		margin: 5px 5px 0 0;
 	}
 	.catalog ul a {
-	border: 1px solid #999;
-	color: #003f7e;
-	float: left;
-	font-weight: bold;
-	height: 118px;
-	overflow: hidden;
-	text-decoration: none;
-	width: 118px;
+		border: 1px solid #999;
+		color: #003f7e;
+		float: left;
+		font-weight: bold;
+		height: 118px;
+		overflow: hidden;
+		text-decoration: none;
+		width: 118px;
 	}
 	.catalog ul a:hover {
-	border: 3px solid #c30;
-	color: #c00;
-	height: 114px;
-	top: 0;
-	width: 114px;
+		border: 3px solid #c30;
+		color: #c00;
+		height: 114px;
+		top: 0;
+		width: 114px;
 	}
 	.catalog ul span {
-	display: block;
-	padding: 5px;
+		display: block;
+		padding: 5px;
 	}
 	.catalog ul span em {
-	color: #999;
-	display: block;
-	font-size: 85%;
-	font-weight: normal;
+		color: #999;
+		display: block;
+		font-size: 85%;
+		font-weight: normal;
 	}
 
 	.catalog ol {
-	line-height: 2;
-	list-style: decimal inside;
+		line-height: 2;
+		list-style: decimal inside;
 	}
 
 
 /**/
 h1 {
-font-size: 24px;
+	font-size: 24px;
 }
 h2 {
-clear: both;
-font-size: 22px;
-margin-top: 10px;
+	clear: both;
+	font-size: 22px;
+	margin-top: 10px;
 }
 h2 span {
-border-bottom: 1px solid #808080;
+	border-bottom: 1px solid #808080;
 }
 h3 {
-font-size: 16px;
-margin-top: 10px;
+	font-size: 16px;
+	margin-top: 10px;
 }
 
 sup {
-color: #c0c0c0;
-font-size: 70%;
-* font-size: 100%;
-font-size: 100%\0;
+	color: #c0c0c0;
+	font-size: 70%;
+	* font-size: 100%;
+	font-size: 100%\0;
 }
 
 samp,
 xmp {
-/*background: #eee;*/
-border-color: #ddd #ddd #ddd #808080;
-border-style: solid;
-border-width: 1px 1px 1px 5px;
-font-family: "Courier New", monospace;
-margin-top: 10px;
-padding: 20px;
+	/*background: #eee;*/
+	border-color: #ddd #ddd #ddd #808080;
+	border-style: solid;
+	border-width: 1px 1px 1px 5px;
+	font-family: "Courier New", monospace;
+	margin-top: 10px;
+	padding: 20px;
 }
 samp {
-display: block;
+	display: block;
 }
 xmp {
-display: block; /* for IE8+ */
-padding-top: 3px;
-padding-top: 20px\9; /* for IE10- */
+	display: block; /* for IE8+ */
+	padding-top: 3px;
+	padding-top: 20px\9; /* for IE10- */
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* for IE10+ */
 	xmp {
-	padding-top: 3px;
+		padding-top: 3px;
 	}
 }
 
 textarea.textarea,
 select.select,
 input.text {
-border-color: #999 #ccc #ccc #999;
-border-style: solid;
-border-width: 1px;
-padding: 2px;
+	border-color: #999 #ccc #ccc #999;
+	border-style: solid;
+	border-width: 1px;
+	padding: 2px;
 }
 select.select,
 input.text {
-vertical-align: middle;
+	vertical-align: middle;
 }
 input.text {
-width: 25em;
+	width: 25em;
 }
 textarea.textarea {
-height: 10em;
-width: 35em;
+	height: 10em;
+	width: 35em;
 }
 /**/

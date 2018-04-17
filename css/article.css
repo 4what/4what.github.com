@@ -4,14 +4,14 @@
 @import url("return.css");
 
 body {
-color: #333;
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 12px;
-margin: 15px 10px;
-/*
-word-break: break-all;
-word-wrap: break-word;
-*/
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
+	margin: 15px 10px;
+	/*
+	word-break: break-all;
+	word-wrap: break-word;
+	*/
 }
 
 a:link {
@@ -19,13 +19,13 @@ a:link {
 a:visited {
 }
 a:hover {
-position: relative;
-top: 1px;
+	position: relative;
+	top: 1px;
 }
 
 input, select, textarea {
-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-font-size: 12px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
 }
 
 
@@ -33,7 +33,7 @@ font-size: 12px;
   MAIN
 --------------------------------------*/
 .main {
-text-align: center;
+	text-align: center;
 }
 
 
@@ -48,40 +48,40 @@ text-align: center;
   HEADER
 --------------------------------------*/
 .header {
-margin: 0 auto;
+	margin: 0 auto;
 }
 
 	/**/
 	h1 {
-	color: #fff\9;
-	filter: shadow(color=#333333,direction=120); /* for IE9- */
-	font-size: 32px;
-	font-variant: small-caps;
-	height: 100%;
-	padding: 10px 0;
+		color: #fff\9;
+		filter: shadow(color=#333333,direction=120); /* for IE9- */
+		font-size: 32px;
+		font-variant: small-caps;
+		height: 100%;
+		padding: 10px 0;
 	}
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* for IE10+ */
 		h1 {
-		color: #333;
+			color: #333;
 		}
 	}
 	h1 sub {
-	display: block;
-	font-size: 85%;
-	* font-size: 100%;
-	font-size: 100%\0;
+		display: block;
+		font-size: 85%;
+		* font-size: 100%;
+		font-size: 100%\0;
 	}
 
 
 /**/
 .navbar {
-background: #eee;
-border-top: 3px solid #808080;
-margin: 0 auto;
-padding: 5px 0;
+	background: #eee;
+	border-top: 3px solid #808080;
+	margin: 0 auto;
+	padding: 5px 0;
 }
 .navbar ul li {
-display: inline;
+	display: inline;
 }
 
 
@@ -89,78 +89,78 @@ display: inline;
   CONTENT
 --------------------------------------*/
 .content {
-margin: 0 auto;
-text-align: left;
-width: 95%;
+	margin: 0 auto;
+	text-align: left;
+	width: 95%;
 }
 
 	/**/
 	.subnav {
-	border-color: #ddd #ddd #ddd #808080;
-	border-style: solid;
-	border-width: 1px 1px 1px 5px;
-	margin: 5px auto 0 auto;
-	padding: 5px;
-	text-align: center;
-	width: 80%;
+		border-color: #ddd #ddd #ddd #808080;
+		border-style: solid;
+		border-width: 1px 1px 1px 5px;
+		margin: 5px auto 0 auto;
+		padding: 5px;
+		text-align: center;
+		width: 80%;
 	}
 	.subnav li {
-	display: inline;
+		display: inline;
 	}
 
 
 /**/
 blockquote {
-margin-top: 5px;
-text-indent: 1em;
+	margin-top: 5px;
+	text-indent: 1em;
 }
 
 h2 {
-border-bottom: 1px solid #808080;
-color: #005a9c;
-font-size: 22px;
-line-height: 1.5;
-margin-top: 20px;
+	border-bottom: 1px solid #808080;
+	color: #005a9c;
+	font-size: 22px;
+	line-height: 1.5;
+	margin-top: 20px;
 }
 h2 a {
-cursor: pointer;
+	cursor: pointer;
 }
 h2 a span {
-font-size: 50%;
+	font-size: 50%;
 }
 
 h3 {
-color: #aa7;
-font-size: 16px;
-margin-top: 10px;
+	color: #aa7;
+	font-size: 16px;
+	margin-top: 10px;
 }
 h3:first-letter {
-font-size: 120%;
-font-style: italic;
+	font-size: 120%;
+	font-style: italic;
 }
 h3 a {
-border-bottom: 1px dashed #aa7;
+	border-bottom: 1px dashed #aa7;
 }
 h3 sup a {
-border-bottom: none;
+	border-bottom: none;
 }
 
 p {
-margin-top: 5px;
+	margin-top: 5px;
 }
 
 pre,
 xmp {
-font-family: "Courier New", monospace;
-margin-top: 5px;
+	font-family: "Courier New", monospace;
+	margin-top: 5px;
 }
 
 pre span {
-text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 dl {
-margin-top: 5px;
+	margin-top: 5px;
 }
 dt {
 }
@@ -168,49 +168,49 @@ dd {
 }
 
 table {
-border: 1px solid #808080;
-margin-top: 5px;
+	border: 1px solid #808080;
+	margin-top: 5px;
 }
 caption {
-font-weight: bold;
+	font-weight: bold;
 }
 th {
-background: #f0f8ff;
-border-color: transparent #808080 #c0c0c0 #808080;
-border-style: none dashed solid dashed;
-border-width: 0 1px 2px 1px;
-padding: 5px;
-text-align: center;
+	background: #f0f8ff;
+	border-color: transparent #808080 #c0c0c0 #808080;
+	border-style: none dashed solid dashed;
+	border-width: 0 1px 2px 1px;
+	padding: 5px;
+	text-align: center;
 }
 td {
-border-color: #808080;
-border-style: solid dashed;
-border-width: 1px;
-padding: 5px;
+	border-color: #808080;
+	border-style: solid dashed;
+	border-width: 1px;
+	padding: 5px;
 }
 
 td.dimmed {
-background: #eee;
+	background: #eee;
 }
 
 code {
-background: #ddd;
-font-family: "Courier New", monospace;
-font-style: italic;
+	background: #ddd;
+	font-family: "Courier New", monospace;
+	font-style: italic;
 }
 
 em {
-color: navy;
+	color: navy;
 }
 
 strong {
-color: maroon;
+	color: maroon;
 }
 
 sup {
-font-size: 70%;
-* font-size: 100%;
-font-size: 100%\0;
+	font-size: 70%;
+	* font-size: 100%;
+	font-size: 100%\0;
 }
 /**/
 
@@ -219,18 +219,18 @@ font-size: 100%\0;
   FOOTER
 --------------------------------------*/
 .iframe-footer {
-height: 30px;
-margin-top: 20px;
-width: 100%;
+	height: 30px;
+	margin-top: 20px;
+	width: 100%;
 }
 
 .body-footer {
-margin: 0;
+	margin: 0;
 }
 
 .footer {
-background: #eee;
-border-top: 3px solid #808080;
-padding: 5px 0;
-text-align: center;
+	background: #eee;
+	border-top: 3px solid #808080;
+	padding: 5px 0;
+	text-align: center;
 }
