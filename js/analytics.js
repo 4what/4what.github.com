@@ -1,5 +1,4 @@
-﻿/*
-// Google Analytics
+﻿// Google Analytics
 (function(i, s, o, g, r, a, m) {
 	i['GoogleAnalyticsObject'] = r;
 	i[r] = i[r] || function() {
@@ -13,4 +12,3 @@
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 ga('create', 'UA-39252062-1', 'auto');
 ga('send', 'pageview');
-*/
