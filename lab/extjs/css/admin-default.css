@@ -33,7 +33,10 @@ input, select, textarea {
 
 
 * {
+	/*
 	font-family: sans-serif !important;
+	font-size: 12px !important;
+	*/
 }
 
 
