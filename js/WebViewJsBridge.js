@@ -18,8 +18,8 @@ var WebViewJsBridge = window.WebViewJsBridge = {
 
 			url += "&callback=" + fn;
 
-			window[fn] = function(results) {
-				callback(results);
+			window[fn] = function(result) {
+				callback(result);
 				window[fn] = undefined;
 			};
 		}

@@ -31,7 +31,7 @@ Util.prototype = {
 	--------------------------------------*/
 	/**
 	 * same-origin
-	 * 
+	 *
 	 * @requires $js.url
 	 * @param {Object} options
 	 */
@@ -49,7 +49,7 @@ Util.prototype = {
 		error = options.error || new Function(), // {Function}
 
 		//crossDomain = /^https?:\/\//.test(url) && !new RegExp("^" + window.location.protocol + "\/\/" + window.location.host + "(?:\/|$)").test(url),
-			
+
 		xhr = "XMLHttpRequest" in window ?
 			new XMLHttpRequest() : // for IE7+, Std
 			new ActiveXObject("Microsoft.XMLHTTP"); // for IE6
@@ -57,8 +57,8 @@ Util.prototype = {
 		function callback() {
 			if (xhr.readyState === 4) {
 				if (xhr.status === 200) {
-					var results = xhr.responseText || xhr.responseXML;
-					success(results, xhr);
+					var result = xhr.responseText || xhr.responseXML;
+					success(result, xhr);
 				} else {
 					error(xhr);
 				}
@@ -101,7 +101,7 @@ Util.prototype = {
 
 	/**
 	 * cross-domain
-	 * 
+	 *
 	 * @requires $js.getScript
 	 * @param {String} url
 	 * @param {Function} callback
@@ -112,7 +112,7 @@ Util.prototype = {
 
 	/**
 	 * cross-domain
-	 * 
+	 *
 	 * @requires $js.url
 	 * @param {String} url
 	 * @param {Function} callback
@@ -152,8 +152,8 @@ Util.prototype = {
 
 			script.src = this.url.encode(url + (/\?/.test(url) ? "&" : "?") + "callback=" + fn);
 
-			window[fn] = function(results) {
-				callback(results);
+			window[fn] = function(result) {
+				callback(result);
 
 				// garbage collect
 				window[fn] = undefined;
@@ -195,11 +195,11 @@ Util.prototype = {
 
 		this.bind(iframe, "load", function() {
 			if (complete) {
-				var results = iframe.contentWindow.name;
+				var result = iframe.contentWindow.name;
 				iframe.contentWindow.document.write("");
 				iframe.contentWindow.close();
 				document.body.removeChild(iframe);
-				callback(results);
+				callback(result);
 			} else {
 				complete = true;
 				iframe.contentWindow.location.href = local;
@@ -475,7 +475,7 @@ Util.prototype = {
 	--------------------------------------*/
 	/**
 	 * TODO
-	 * 
+	 *
 	 * @requires $js.keyCode
 	 * @param {Event} e
 	 * @param {String} type
@@ -619,7 +619,7 @@ Util.prototype = {
 
 	/**
 	 * cross-domain
-	 * 
+	 *
 	 * @requires $js.getScript
 	 * @param {Object} obj
 	 * @param {String} url

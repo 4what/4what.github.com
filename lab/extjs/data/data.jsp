@@ -59,7 +59,7 @@
 	if (action.equals("json")) {
 		int total = 100;
 
-		StringBuilder results = new StringBuilder("{\"total\": " + total);
+		StringBuilder result = new StringBuilder("{\"total\": " + total);
 
 		StringBuilder rows = new StringBuilder(", \"rows\": [");
 
@@ -84,9 +84,9 @@
 
 		rows.deleteCharAt(rows.length() - 1).append("]");
 
-		results.append(rows).append("}");
+		result.append(rows).append("}");
 
-		out.println(results);
+		out.println(result);
 
 		return;
 	}
@@ -104,7 +104,7 @@
 	if (action.equals("array")) {
 		int total = 100;
 
-		StringBuilder results = new StringBuilder("{\"total\": " + total);
+		StringBuilder result = new StringBuilder("{\"total\": " + total);
 
 		StringBuilder rows = new StringBuilder(", \"rows\": [");
 
@@ -123,9 +123,9 @@
 
 		rows.deleteCharAt(rows.length() - 1).append("]");
 
-		results.append(rows).append("}");
+		result.append(rows).append("}");
 
-		out.println(results);
+		out.println(result);
 
 		return;
 	}
