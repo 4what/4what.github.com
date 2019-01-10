@@ -372,10 +372,10 @@ window.Lottery = {
 							case 32: // space
 								start();
 								return;
-								case 187: // =
+							case 187: // =
 								setAward(award.index, 1);
 								return;
-								case 189: // -
+							case 189: // -
 								if (!settings.client && winner.id) {
 									settings.donate(winner.id);
 								}

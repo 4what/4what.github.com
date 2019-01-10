@@ -10,7 +10,7 @@
 	],
 	//client: true,
 	donate: function(id) {
-		alert("id: " + id);
+		alert("donate: " + id);
 
 /*
 		$.ajax({
@@ -260,7 +260,6 @@
 				path = "";
 
 				callback({"id": data["id"], "src": path + data["name"] + ext});
-
 /*
 			}
 		});
