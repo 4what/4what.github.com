@@ -24,7 +24,7 @@ var WeiXin = window.WeiXin = function(options, callback) {
 			var result = JSON.parse(xhr.responseText);
 
 			switch (result[options.status || "status"]) {
-				case (options.success !== undefined ? options.success : 1):
+				case (options.success !== undefined ? options.success : 0):
 					var jsApiList = options.jsApiList || [
 						"updateAppMessageShareData" , // onMenuShareAppMessage
 						"updateTimelineShareData" // onMenuShareTimeline
