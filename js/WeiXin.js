@@ -6,7 +6,7 @@
  */
 var WeiXin = window.WeiXin = function(options, callback) {
 	var script = document.createElement("script");
-	script.src = "http://res.wx.qq.com/open/js/jweixin-1.2.0.js";
+	script.src = "http://res.wx.qq.com/open/js/jweixin-1.4.0.js";
 	document.body.appendChild(script);
 
 	script.onload = function() {
