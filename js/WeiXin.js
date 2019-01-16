@@ -26,8 +26,8 @@ var WeiXin = window.WeiXin = function(options, callback) {
 			switch (result[options.status || "status"]) {
 				case (options.success !== undefined ? options.success : 0):
 					var jsApiList = options.jsApiList || [
-						"updateAppMessageShareData" , // onMenuShareAppMessage
-						"updateTimelineShareData" // onMenuShareTimeline
+						"updateAppMessageShareData",
+						"updateTimelineShareData"
 					];
 
 					wx.config({
