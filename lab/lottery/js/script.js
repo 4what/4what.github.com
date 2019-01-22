@@ -14,19 +14,19 @@ window.Lottery = {
 			anonymous: true, // {Boolean}
 			auto: false, // {Boolean}
 			awards: [], // {Object[]} [{"index": 0, "name": "", "amount": 0}, ...] (*)
+			cover: "", // {String} (*)
 			client: false, // {Boolean}
 			donate: new Function("id", ""), // {Function} (*: !client)
+			generate: function(callback, award) {
+				callback({ "id": 0, "name": "", "src": "" });
+			}, // {Function} (*: !client),
 			players: null, // {Object[]} [{"id": 0, "src": ""}, ...] (*: !anonymous || client)
 			positions: null, // {Object[]}, [{"0px, 0px, 0px"}, ...]
-			src: "", // {String} (*)
-			total: 0, // {Number} (*: anonymous && !positions)
-			winner: function(callback, award) {
-				callback({"id": 0, "src": ""});
-			} // {Function} (*: !client)
+			total: 0 // {Number} (*: anonymous && !positions)
 		},
 		settings = $.extend(defaults, options),
 
-		reserved = $("#impress div.step").length, // 0: overview; 1: winner;
+		reserved = $("#impress div.step").length, // 0: overview, 1: winner
 		total = settings.anonymous ? (settings.positions ? settings.positions.length : settings.total) : settings.players.length,
 
 		steps = $(), // frags, shapes
@@ -106,7 +106,7 @@ window.Lottery = {
 						}
 
 						if (n > 0) {
-							sign.stop(true, true).hide().html("+" + n).fadeIn().hide("drop", {direction: "up"}, refresh);
+							sign.stop(true, true).hide().html("+" + n).fadeIn(refresh).hide("drop", { direction: "up" });
 						} else {
 							refresh();
 						}
@@ -133,7 +133,9 @@ window.Lottery = {
 					winner.id = data.id;
 				}
 
-				winner.$.find("img").attr("src", data.src);
+				winner.$
+					.find("img").attr("src", data.src)
+					.end().find("p").html(data.name);
 
 				function go() {
 					var fn, loop;
@@ -177,15 +179,15 @@ window.Lottery = {
 					}, settings.anonymous ? 500 : 800);
 				}
 
-				ready.html("READY").show("drop", {direction: "right"}).delay(1000).hide("drop", function() {
+				ready.html("READY").show("drop", { direction: "right" }).delay(1000).hide("drop", function() {
 					$(this).html("GO!");
 				}).fadeIn(go).delay(1000).hide("puff");
 			}
 
 			if (!settings.client) {
-				settings.winner(run, award.index);
+				settings.generate(run, award.index);
 			} else if (settings.players) {
-				function getWinner() {
+				function generate() {
 					var
 					exist,
 					index = $js.random(0, settings.players.length - 1, true);
@@ -198,6 +200,7 @@ window.Lottery = {
 					}
 
 					if (!exist) {
+						winner.name = settings.players[index].name;
 						winner.src = settings.players[index].src;
 
 						winner.cookie.v.push(winner.id = settings.players[index].id);
@@ -206,7 +209,7 @@ window.Lottery = {
 
 						run(winner);
 					} else {
-						getWinner(); // recursion
+						generate(); // recursion
 					}
 				}
 
@@ -215,7 +218,7 @@ window.Lottery = {
 				}
 
 				if (winner.cookie.v.length < settings.players.length) {
-					getWinner();
+					generate();
 				} else {
 					// TODO
 				}
@@ -230,7 +233,7 @@ window.Lottery = {
 		ready.hide();
 
 		for (var i = 0; i < total; i++) {
-			var html = template(settings.src);
+			var html = template(settings.cover);
 			if (!settings.anonymous) {
 				var player = settings.players[i];
 				html = template(player.src, player.id);
@@ -291,7 +294,7 @@ window.Lottery = {
 											always: function(animation, jumpedToEnd) {
 												if ($(this).index() === reserved) {
 													if (turned) {
-														imgs.attr("src", settings.src);
+														imgs.attr("src", settings.cover);
 													}
 
 													window.setTimeout(function() {
