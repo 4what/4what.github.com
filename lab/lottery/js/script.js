@@ -353,7 +353,7 @@ window.Lottery = {
 					}
 				});
 
-				steps.delay(200 - i);
+				steps.delay(100 - i);
 			});
 
 		});
