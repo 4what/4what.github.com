@@ -304,7 +304,7 @@ window.Lottery = {
 																"top": 0
 															}, 2000, function() {
 																if (k === total - 1) {
-																	window.setTimeout(showtime, 500); // recursion
+																	window.setTimeout(showtime, 2000); // recursion
 																}
 															});
 
@@ -349,7 +349,7 @@ window.Lottery = {
 							}
 						}
 
-						window.setTimeout(showtime, 500);
+						window.setTimeout(showtime, 2000);
 					}
 				});
 
