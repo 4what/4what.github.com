@@ -143,10 +143,9 @@ var $4what = function() {
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.js");
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery.ui.datepicker-zh-CN.min.js");
 
-					// v1.9 for jQuery 1.6+
-					//$js.include(host + "js/jquery/ui/1.9.2/jquery-ui.min.css");
-					$js.include(host + "js/jquery/ui/1.9.2/jquery-ui.min.js");
-					//$js.include(host + "js/jquery/ui/1.9.2/jquery.ui.datepicker-zh-CN.min.js");
+					// v1.12.1 for jQuery 1.7+
+					//$js.include(host + "js/jquery/ui/1.12.1/jquery-ui.min.css");
+					$js.include(host + "js/jquery/ui/1.12.1/jquery-ui.min.js");
 					break;
 
 				// jQuery lightBox
