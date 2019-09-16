@@ -4,7 +4,7 @@
  * 4what JavaScript Library
  *
  * @author http://www.4what.cn/
- * @version 1.2 Build 2018.04.17
+ * @version 1.2 Build 2019.09.16
  */
 (function() {
 
@@ -722,12 +722,13 @@ Util.prototype = {
 		 * @return {Object}
 		 */
 		parse: function(text) {
-			var
-			result = {},
-			map = text.split("&");
-			for (var entry, i = 0, l = map.length; i < l; i++) {
-				entry = map[i].split("=");
-				result[entry[0]] = entry[1];
+			var result = {};
+			if (text) {
+				var map = text.split("&");
+				for (var entry, i = 0, l = map.length; i < l; i++) {
+					entry = map[i].split("=");
+					result[entry[0]] = entry[1];
+				}
 			}
 			return result;
 		},
