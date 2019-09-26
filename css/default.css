@@ -306,16 +306,6 @@ input, select, textarea {
 		margin-top: 5px;
 	}
 
-	.timeline dl {
-	}
-	.timeline dt {
-		font-weight: bold;
-	}
-	.timeline dd {
-		background: url("../images/bullet-circle.png") no-repeat 0 center;
-		text-indent: 10px;
-	}
-
 	.contact ol,
 	.hardware ol,
 	.timeline ol {
@@ -339,8 +329,21 @@ input, select, textarea {
 		position: relative;
 	}
 
+	.timeline ol li {
+		text-align: center;
+	}
 	.timeline ul li {
 		width: 100%;
+	}
+
+	.timeline dl {
+	}
+	.timeline dt {
+		font-weight: bold;
+	}
+	.timeline dd {
+		background: url("../images/bullet-circle.png") no-repeat 0 center;
+		text-indent: 10px;
 	}
 
 	/*--------------------------------------
