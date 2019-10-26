@@ -243,12 +243,10 @@ input, select, textarea {
 		width: 240px;
 	}
 	.catalog .layer ul {
+		border-left: 1px dotted #555;
 		line-height: 2;
-		margin-top: 5px;
-		text-indent: 10px;
-	}
-	.catalog .layer ul li {
-		background: url("../images/bullet-square.png") no-repeat 0 center;
+		margin: 5px 0 0 4px;
+		text-indent: 15px;
 	}
 	.catalog .layer ul em {
 		color: #08c;
@@ -271,13 +269,17 @@ input, select, textarea {
 
 	/**/
 	.gallery {
+		border-left: 1px dashed #555;
+		margin: 5px 0 0 4px;
+		overflow: hidden;
 		text-align: center;
+		width: 100%;
 		word-break: break-all;
 		word-wrap: break-word;
 	}
 	.gallery li {
 		float: left;
-		margin-top: 10px;
+		margin: 5px 0;
 		width: 25%;
 	}
 	.gallery div a img {
@@ -314,10 +316,16 @@ input, select, textarea {
 		line-height: 2;
 	}
 
+	.contact ol,
+	.hardware ol {
+		border-left: 1px dotted #555;
+		left: 4px;
+		position: relative;
+	}
+
 	.contact ol li,
 	.hardware ol li {
-		background: url("../images/bullet-square.png") no-repeat 0 10px;
-		text-indent: 10px;
+		text-indent: 15px;
 	}
 
 	.contact ul,
