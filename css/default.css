@@ -382,7 +382,9 @@ input, select, textarea {
 		text-indent: 0;
 	}
 	.search .form {
-		margin-top: 5px;
+		border-right: 1px dashed #555;
+		margin: 5px 4px 0 0;
+		padding-right: 15px;
 	}
 
 	/**/
