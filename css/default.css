@@ -187,6 +187,7 @@ input, select, textarea {
 	--------------------------------------*/
 	#overview {
 		font-family: "Comic Sans MS", "Lantinghei SC", "Microsoft YaHei";
+		font-size: 14px;
 		margin-top: 20px;
 	}
 	#overview a {
@@ -196,38 +197,6 @@ input, select, textarea {
 		position: relative;
 		text-decoration: none;
 		top: 1px;
-	}
-	#overview ul li {
-		display: inline;
-	}
-
-	/**/
-	.font-1 {
-		font-size: 0.8em;
-	}
-	.font-2 {
-		font-size: 1.2em;
-	}
-	.font-3 {
-		font-size: 1.5em;
-	}
-	.font-4 {
-		font-size: 1.8em;
-	}
-	.font-5 {
-		font-size: 2em;
-	}
-	.font-6 {
-		font-size: 2.4em;
-	}
-	.font-7 {
-		font-size: 2.8em;
-	}
-	.font-8 {
-		font-size: 3.0em;
-	}
-	.font-9 {
-		font-size: 3.2em;
 	}
 
 	/**/
