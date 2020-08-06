@@ -1,3 +1,7 @@
-.idea/
-
 players.rar
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
