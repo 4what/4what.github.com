@@ -3,7 +3,7 @@
 	// nav
 	var _nav = new Ext.Panel({
 		region: "west",
-		title: "导航",
+		title: "管理系统",
 		collapseMode: "mini",
 		collapsible: true,
 		iconCls: "icon-accordion",
@@ -40,7 +40,7 @@
 					expanded: true,
 					children: [
 						{
-							text: "产品管理",
+							text: "商品管理",
 							singleClickExpand: true,
 							children: []
 							//qtip: "文字",
