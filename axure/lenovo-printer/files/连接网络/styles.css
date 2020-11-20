@@ -97,7 +97,7 @@
   left:0px;
   top:0px;
   width:374px;
-  height:286px;
+  height:248px;
 }
 #u88 {
   border-width:0px;
@@ -105,7 +105,7 @@
   left:20px;
   top:104px;
   width:374px;
-  height:286px;
+  height:248px;
   display:flex;
 }
 #u88 .text {
@@ -147,7 +147,7 @@
   border-width:0px;
   position:absolute;
   left:40px;
-  top:348px;
+  top:310px;
   width:334px;
   height:22px;
   display:flex;
@@ -195,7 +195,7 @@
   border-width:0px;
   position:absolute;
   left:70px;
-  top:165px;
+  top:175px;
   width:304px;
   height:22px;
   display:flex;
@@ -229,7 +229,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:155px;
+  top:165px;
   width:374px;
   height:1px;
   display:flex;
@@ -315,7 +315,7 @@
   border-width:0px;
   position:absolute;
   left:70px;
-  top:206px;
+  top:216px;
   width:304px;
   height:22px;
   display:flex;
@@ -349,7 +349,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:196px;
+  top:206px;
   width:374px;
   height:1px;
   display:flex;
@@ -379,7 +379,7 @@
   border-width:0px;
   position:absolute;
   left:40px;
-  top:251px;
+  top:261px;
   width:16px;
   height:16px;
   display:flex;
@@ -409,7 +409,7 @@
   border-width:0px;
   position:absolute;
   left:40px;
-  top:171px;
+  top:181px;
   width:13px;
   height:10px;
   display:flex;
@@ -439,7 +439,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:237px;
+  top:247px;
   width:374px;
   height:1px;
   display:flex;
@@ -469,7 +469,7 @@
   border-width:0px;
   position:absolute;
   left:40px;
-  top:212px;
+  top:222px;
   width:13px;
   height:10px;
   display:flex;
@@ -511,7 +511,7 @@
   border-width:0px;
   position:absolute;
   left:70px;
-  top:248px;
+  top:258px;
   width:304px;
   height:22px;
   display:flex;
@@ -532,4 +532,34 @@
   border-width:0px;
   word-wrap:break-word;
   text-transform:none;
+}
+#u100_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:375px;
+  height:2px;
+}
+#u100 {
+  border-width:0px;
+  position:absolute;
+  left:20px;
+  top:289px;
+  width:374px;
+  height:1px;
+  display:flex;
+}
+#u100 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u100_text {
+  border-width:0px;
+  word-wrap:break-word;
+  text-transform:none;
+  visibility:hidden;
 }
