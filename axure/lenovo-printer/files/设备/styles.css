@@ -1109,3 +1109,33 @@
   text-transform:none;
   visibility:hidden;
 }
+#u207_img {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:8px;
+  height:8px;
+}
+#u207 {
+  border-width:0px;
+  position:absolute;
+  left:42px;
+  top:32px;
+  width:8px;
+  height:8px;
+  display:flex;
+}
+#u207 .text {
+  position:absolute;
+  align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+  width:100%;
+}
+#u207_text {
+  border-width:0px;
+  word-wrap:break-word;
+  text-transform:none;
+  visibility:hidden;
+}
