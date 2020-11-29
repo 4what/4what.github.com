@@ -174,13 +174,20 @@
   width:0px;
   height:0px;
 }
-#u118_img {
+#u118_div {
   border-width:0px;
   position:absolute;
   left:0px;
   top:0px;
   width:374px;
   height:258px;
+  background:inherit;
+  background-color:rgba(254, 254, 254, 1);
+  border:none;
+  border-radius:10px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
 }
 #u118 {
   border-width:0px;

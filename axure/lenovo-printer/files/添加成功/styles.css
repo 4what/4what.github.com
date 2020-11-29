@@ -92,13 +92,20 @@
   text-transform:none;
   visibility:hidden;
 }
-#u166_img {
+#u166_div {
   border-width:0px;
   position:absolute;
   left:0px;
   top:0px;
   width:177px;
   height:177px;
+  background:inherit;
+  background-color:rgba(254, 254, 254, 1);
+  border:none;
+  border-radius:20px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
 }
 #u166 {
   border-width:0px;
