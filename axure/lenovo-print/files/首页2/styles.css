@@ -68,7 +68,7 @@
   left:0px;
   top:0px;
   width:177px;
-  height:177px;
+  height:197px;
   background:inherit;
   background-color:rgba(25, 25, 25, 1);
   border:none;
@@ -83,7 +83,7 @@
   left:20px;
   top:254px;
   width:177px;
-  height:177px;
+  height:197px;
   display:flex;
 }
 #u263 .text {
@@ -105,7 +105,7 @@
   left:0px;
   top:0px;
   width:177px;
-  height:177px;
+  height:197px;
   background:inherit;
   background-color:rgba(25, 25, 25, 1);
   border:none;
@@ -120,7 +120,7 @@
   left:217px;
   top:254px;
   width:177px;
-  height:177px;
+  height:197px;
   display:flex;
 }
 #u264 .text {
@@ -160,7 +160,7 @@
   border-width:0px;
   position:absolute;
   left:40px;
-  top:334px;
+  top:274px;
   width:31px;
   height:21px;
   display:flex;
@@ -206,7 +206,7 @@
   border-width:0px;
   position:absolute;
   left:237px;
-  top:334px;
+  top:274px;
   width:31px;
   height:21px;
   display:flex;
@@ -234,7 +234,7 @@
   left:0px;
   top:0px;
   width:177px;
-  height:177px;
+  height:197px;
   background:inherit;
   background-color:rgba(25, 25, 25, 1);
   border:none;
@@ -247,9 +247,9 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:451px;
+  top:471px;
   width:177px;
-  height:177px;
+  height:197px;
   display:flex;
 }
 #u267 .text {
@@ -289,7 +289,7 @@
   border-width:0px;
   position:absolute;
   left:40px;
-  top:531px;
+  top:491px;
   width:31px;
   height:21px;
   display:flex;
@@ -317,7 +317,7 @@
   left:0px;
   top:0px;
   width:177px;
-  height:177px;
+  height:197px;
   background:inherit;
   background-color:rgba(25, 25, 25, 1);
   border:none;
@@ -330,9 +330,9 @@
   border-width:0px;
   position:absolute;
   left:217px;
-  top:451px;
+  top:471px;
   width:177px;
-  height:177px;
+  height:197px;
   display:flex;
 }
 #u269 .text {
@@ -372,7 +372,7 @@
   border-width:0px;
   position:absolute;
   left:237px;
-  top:531px;
+  top:491px;
   width:61px;
   height:21px;
   display:flex;
@@ -530,16 +530,16 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:60px;
-  height:20px;
+  width:72px;
+  height:24px;
 }
 #u276 {
   border-width:0px;
   position:absolute;
   left:20px;
   top:32px;
-  width:60px;
-  height:20px;
+  width:72px;
+  height:24px;
   display:flex;
 }
 #u276 .text {
@@ -614,8 +614,8 @@
 #u278 {
   border-width:0px;
   position:absolute;
-  left:237px;
-  top:274px;
+  left:287px;
+  top:333px;
   width:37px;
   height:40px;
   display:flex;
@@ -644,8 +644,8 @@
 #u279 {
   border-width:0px;
   position:absolute;
-  left:40px;
-  top:471px;
+  left:85px;
+  top:550px;
   width:47px;
   height:40px;
   display:flex;
@@ -674,8 +674,8 @@
 #u280 {
   border-width:0px;
   position:absolute;
-  left:237px;
-  top:471px;
+  left:284px;
+  top:550px;
   width:43px;
   height:40px;
   display:flex;
@@ -704,8 +704,8 @@
 #u281 {
   border-width:0px;
   position:absolute;
-  left:40px;
-  top:274px;
+  left:89px;
+  top:333px;
   width:40px;
   height:40px;
   display:flex;
