@@ -87,10 +87,10 @@
 #u2_img {
   border-width:0px;
   position:absolute;
-  left:0px;
-  top:0px;
-  width:120px;
-  height:40px;
+  left:-10px;
+  top:-10px;
+  width:140px;
+  height:60px;
 }
 #u2 {
   border-width:0px;
