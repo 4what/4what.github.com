@@ -210,8 +210,8 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:46px;
-  height:21px;
+  width:52px;
+  height:24px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
   border:none;
@@ -222,21 +222,21 @@
   font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;
   font-weight:400;
   font-style:normal;
-  font-size:15px;
+  font-size:17px;
   color:#CCCCCC;
 }
 #u395 {
   border-width:0px;
   position:absolute;
   left:20px;
-  top:96px;
-  width:46px;
-  height:21px;
+  top:94px;
+  width:52px;
+  height:24px;
   display:flex;
   font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;
   font-weight:400;
   font-style:normal;
-  font-size:15px;
+  font-size:17px;
   color:#CCCCCC;
 }
 #u395 .text {
