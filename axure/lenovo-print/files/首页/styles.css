@@ -395,10 +395,10 @@
 #u16_img {
   border-width:0px;
   position:absolute;
-  left:0px;
+  left:-5px;
   top:0px;
-  width:72px;
-  height:24px;
+  width:82px;
+  height:34px;
 }
 #u16 {
   border-width:0px;
