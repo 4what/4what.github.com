@@ -135,20 +135,13 @@ input, select, textarea {
   CONTAINER
 --------------------------------------*/
 .container {
-}
-
-
-/*--------------------------------------
-  CONTENT
---------------------------------------*/
-.content {
 	margin: 0 auto;
 	text-align: left;
 	width: 720px;
 }
 
 /**/
-.body-home .content {
+.body-home .container {
 	text-align: center;
 	width: 960px;
 }

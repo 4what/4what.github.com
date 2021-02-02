@@ -1,604 +1,597 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>4what - Wiki</title>
-<meta name="author" content="4what" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>4what - Wiki</title>
+	<meta name="author" content="4what" />
 
-<link rel="stylesheet" type="text/css" href="../css/article.css" />
+	<link rel="stylesheet" type="text/css" href="../css/article.css" />
 
-<script type="text/javascript" src="../js/util.js"></script>
-<script type="text/javascript" src="../js/commons.js"></script>
+	<script type="text/javascript" src="../js/util.js"></script>
+	<script type="text/javascript" src="../js/commons.js"></script>
 </head>
-
 <body>
-<div class="main">
-<div class="container">
+	<div class="main">
+		<div class="header">
+			<h1>Wiki</h1>
+		</div>
 
-<div class="header">
-	<h1>Wiki</h1>
-</div>
+		<div class="navbar">
+			<ul>
+				<li><a href="#css-hack">CSS Hack</a> |</li>
+				<li><a href="#flash">Flash</a> |</li>
+				<li><a href="#html401">HTML 4.01</a> |</li>
+				<li><a href="#html5">HTML5</a> |</li>
+				<li><a href="#ie">IE</a> |</li>
+				<li><a href="#include">Include</a> |</li>
+				<li><a href="#java">Java</a> |</li>
+				<li><a href="#layout-engine">Layout Engine</a> |</li>
+				<li><a href="#xhtml1">XHTML 1.0</a> |</li>
+				<li><a href="#xhtml2">XHTML 2.0</a></li>
+			</ul>
+		</div>
 
-<div class="navbar">
-	<ul>
-		<li><a href="#css-hack">CSS Hack</a> |</li>
-		<li><a href="#flash">Flash</a> |</li>
-		<li><a href="#html401">HTML 4.01</a> |</li>
-		<li><a href="#html5">HTML5</a> |</li>
-		<li><a href="#ie">IE</a> |</li>
-		<li><a href="#include">Include</a> |</li>
-		<li><a href="#java">Java</a> |</li>
-		<li><a href="#layout-engine">Layout Engine</a> |</li>
-		<li><a href="#xhtml1">XHTML 1.0</a> |</li>
-		<li><a href="#xhtml2">XHTML 2.0</a></li>
-	</ul>
-</div>
+		<div class="container">
+			<h2><a name="css-hack"><span>-</span> CSS Hack</a></h2>
+				<div id="chapter-css-hack">
+					<table>
+						<tr>
+							<th>
+								Selector
+								<sup>
+									<a href="http://www.w3.org/TR/CSS21/selector.html#pattern-matching">[1]</a>
+									<a href="http://www.w3.org/TR/selectors-3/#selectors">[2]</a>
+								</sup>
+							</th>
+							<th>IE6</th>
+							<th>IE7</th>
+							<th>IE8</th>
+							<th>IE9</th>
+							<th>IE10</th>
+							<th>IE11</th>
+							<th>Chrome, Firefox, Opera, Safari</th>
+						</tr>
+						<tr>
+							<td>E { <strong>_</strong> property: value; }</td>
+							<td>√</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+						</tr>
+						<tr>
+							<td><strong>* html</strong> E { property: value; }</td>
+							<td>√</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+						</tr>
+						<tr>
+							<td>E { <strong>*</strong> property: value; }</td>
+							<td>√</td>
+							<td>√</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+						</tr>
+						<tr>
+							<td>E { <strong>*</strong> property: value <strong>!important</strong>; }</td>
+							<td>×</td>
+							<td>√</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+						</tr>
+						<tr>
+							<td><strong>*+ html</strong> E { property<strong>/**/</strong>: value; }</td>
+							<td>×</td>
+							<td>√</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+						</tr>
+						<tr>
+							<td>E { property: value <strong>!important</strong>; }</td>
+							<td>×</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+						</tr>
+						<tr>
+							<td>E<strong>[attr]</strong> { property: value; }</td>
+							<td>×</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+						</tr>
+						<tr>
+							<td>E { property: value<strong>\9</strong>; }</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>×</td>
+							<td>×</td>
+						</tr>
+						<tr>
+							<td>E { property: value<strong>\0</strong>; }</td>
+							<td>×</td>
+							<td>×</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>√</td>
+							<td>×</td>
+						</tr>
+						<tr>
+							<td>E { property: value<strong>\9\0</strong>; }</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>√</td>
+							<td>√</td>
+							<td>×</td>
+							<td>×</td>
+						</tr>
+						<tr>
+							<td><strong>@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {</strong> E { property: value; } <strong>}</strong></td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>×</td>
+							<td>√</td>
+							<td>√</td>
+							<td>×</td>
+						</tr>
+					</table>
+				</div>
 
-<div class="content">
-	<h2><a name="css-hack"><span>-</span> CSS Hack</a></h2>
-		<div id="chapter-css-hack">
-			<table>
-				<tr>
-					<th>
-						Selector
+			<h2><a name="flash"><span>-</span> Flash</a></h2>
+				<div id="chapter-flash">
+					<h3>
+						<a>Flash Satay: Embedding Flash While Supporting Standards</a>
 						<sup>
-							<a href="http://www.w3.org/TR/CSS21/selector.html#pattern-matching">[1]</a>
-							<a href="http://www.w3.org/TR/selectors-3/#selectors">[2]</a>
+							<a href="http://www.alistapart.com/articles/flashsatay/">[1]</a>
 						</sup>
-					</th>
-					<th>IE6</th>
-					<th>IE7</th>
-					<th>IE8</th>
-					<th>IE9</th>
-					<th>IE10</th>
-					<th>IE11</th>
-					<th>Chrome, Firefox, Opera, Safari</th>
-				</tr>
-				<tr>
-					<td>E { <strong>_</strong> property: value; }</td>
-					<td>√</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-				</tr>
-				<tr>
-					<td><strong>* html</strong> E { property: value; }</td>
-					<td>√</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-				</tr>
-				<tr>
-					<td>E { <strong>*</strong> property: value; }</td>
-					<td>√</td>
-					<td>√</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-				</tr>
-				<tr>
-					<td>E { <strong>*</strong> property: value <strong>!important</strong>; }</td>
-					<td>×</td>
-					<td>√</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-				</tr>
-				<tr>
-					<td><strong>*+ html</strong> E { property<strong>/**/</strong>: value; }</td>
-					<td>×</td>
-					<td>√</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-				</tr>
-				<tr>
-					<td>E { property: value <strong>!important</strong>; }</td>
-					<td>×</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-				</tr>
-				<tr>
-					<td>E<strong>[attr]</strong> { property: value; }</td>
-					<td>×</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-				</tr>
-				<tr>
-					<td>E { property: value<strong>\9</strong>; }</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>×</td>
-					<td>×</td>
-				</tr>
-				<tr>
-					<td>E { property: value<strong>\0</strong>; }</td>
-					<td>×</td>
-					<td>×</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>√</td>
-					<td>×</td>
-				</tr>
-				<tr>
-					<td>E { property: value<strong>\9\0</strong>; }</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>√</td>
-					<td>√</td>
-					<td>×</td>
-					<td>×</td>
-				</tr>
-				<tr>
-					<td><strong>@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {</strong> E { property: value; } <strong>}</strong></td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>×</td>
-					<td>√</td>
-					<td>√</td>
-					<td>×</td>
-				</tr>
-			</table>
+					</h3>
+						<textarea cols="" rows="" name="code" class="html">
+						<object type="application/x-shockwave-flash" data="flash.swf" width="100" height="100">
+							<param name="movie" value="flash.swf" />
+							<div>alt</div>
+						</object>
+						</textarea>
+				</div>
+
+			<h2><a name="html401"><span>-</span> HTML 4.01</a></h2>
+				<div id="chapter-html401">
+					<h3>
+						<a>How to specify alternate text</a>
+						<sup>
+							<a href="http://www.w3.org/TR/html401/struct/objects.html#adef-alt">[1]</a>
+						</sup>
+					</h3>
+						<blockquote>
+							The <code>alt</code> attribute must be specified for the <code>IMG</code> and <code>AREA</code> elements. It is optional for the <code>INPUT</code> and <code>APPLET</code> elements.
+						</blockquote>
+
+					<h3>
+						<a>Tabbing navigation</a>
+						<sup>
+							<a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.11.1">[1]</a>
+						</sup>
+					</h3>
+						<blockquote>
+							The following elements support the <code>tabindex</code> attribute: <code>A</code>, <code>AREA</code>, <code>BUTTON</code>, <code>INPUT</code>, <code>OBJECT</code>, <code>SELECT</code>, and <code>TEXTAREA</code>.
+						</blockquote>
+
+					<h3>
+						<a>The INPUT element</a>
+						<sup>
+							<a href="http://www.w3.org/TR/html401/interact/forms.html#edef-INPUT">[1]</a>
+						</sup>
+
+					</h3>
+						<blockquote>
+							<code>value</code>
+							<sup>
+								<a href="http://www.w3.org/TR/html401/interact/forms.html#adef-value-INPUT">[1]</a>
+							</sup>
+						</blockquote>
+						<blockquote>This attribute specifies the initial value of the control. It is optional except when the <code>type</code> attribute has the value "<code>radio</code>" or "<code>checkbox</code>".</blockquote>
+
+					<h3>
+						<a>The SCRIPT element</a>
+						<sup>
+							<a href="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.1">[1]</a>
+						</sup>
+					</h3>
+						<blockquote>
+							<code>defer</code>
+							<sup>
+								<a href="http://www.w3.org/TR/html401/interact/scripts.html#adef-defer">[1]</a>
+							</sup>
+						</blockquote>
+						<blockquote>When set, this boolean attribute provides a hint to the user agent that the script is not going to generate any document content (e.g., no "document.write" in javascript) and thus, the user agent can continue parsing and rendering.</blockquote>
+						<blockquote><code>charset</code></blockquote>
+						<blockquote>
+							Note that the <code>charset</code> attribute refers to the <code>character encoding</code> of the script designated by the <code>src</code> attribute; it does not concern the content of the <code>SCRIPT</code> element.
+						</blockquote>
+				</div>
+
+			<h2><a name="html5"><span>-</span> HTML5</a></h2>
+				<div id="chapter-html5">
+					<h3>
+						<a>Link type "stylesheet"</a>
+						<sup>
+							<a href="http://www.w3.org/TR/html5/links.html#link-type-stylesheet">[1]</a>
+						</sup>
+					</h3>
+						<blockquote>
+							The default type for resources given by the <code>stylesheet</code> keyword is <code>text/css</code>.
+						</blockquote>
+
+					<h3>
+						<a>The script element</a>
+						<sup>
+							<a href="http://www.w3.org/TR/html5/scripting-1.html#the-script-element">[1]</a>
+						</sup>
+					</h3>
+						<blockquote>
+							<code>async</code>
+							<sup>
+								<a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-async">[1]</a>
+							</sup>
+						</blockquote>
+						<blockquote>
+							The <code>async</code> and <code>defer</code> attributes are boolean attributes that indicate how the script should be executed. The <code>defer</code> and <code>async</code> attributes must not be specified if the <code>src</code> attribute is not present.
+						</blockquote>
+						<blockquote>
+							<code>defer</code>
+							<sup>
+								<a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-defer">[1]</a>
+							</sup>
+						</blockquote>
+						<blockquote>
+							The <code>defer</code> attribute may be specified even if the <code>async</code> attribute is specified, to cause legacy Web browsers that only support <code>defer</code> (and not <code>async</code>) to fall back to the <code>defer</code> behavior instead of the synchronous blocking behavior that is the default.
+						</blockquote>
+						<blockquote>
+							<code>type</code>
+							<sup>
+								<a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-type">[1]</a>
+							</sup>
+						</blockquote>
+						<blockquote>
+							The <code>type</code> attribute gives the language of the script or format of the data. If the attribute is present, its value must be a valid MIME type. The <code>charset</code> parameter must not be specified. The default, which is used if the attribute is absent, is "<code>text/javascript</code>".
+						</blockquote>
+
+					<h3>
+						<a>The style element</a>
+						<sup>
+							<a href="http://www.w3.org/TR/html5/document-metadata.html#the-style-element">[1]</a>
+						</sup>
+					</h3>
+						<blockquote>
+							<code>type</code>
+							<sup>
+								<a href="http://www.w3.org/TR/html5/document-metadata.html#attr-style-type">[1]</a>
+							</sup>
+						</blockquote>
+						<blockquote>
+							The <code>type</code> attribute gives the styling language. If the attribute is present, its value must be a valid MIME type that designates a styling language. The <code>charset</code> parameter must not be specified. The default value for the <code>type</code> attribute, which is used if the attribute is absent, is "<code>text/css</code>".
+						</blockquote>
+
+					<h3>
+						<a>Void elements</a>
+						<sup>
+							<a href="http://www.w3.org/TR/html5/syntax.html#void-elements">[1]</a>
+							<a href="http://wiki.whatwg.org/wiki/FAQ#Should_I_close_empty_elements_with_.2F.3E_or_.3E.3F">[2]</a>
+						</sup>
+					</h3>
+						<blockquote>
+							<code>area</code>, <code>base</code>, <code>br</code>, <code>col</code>, <code>embed</code>, <code>hr</code>, <code>img</code>, <code>input</code>, <code>keygen</code>, <code>link</code>, <code>meta</code>, <code>param</code>, <code>source</code>, <code>track</code>, <code>wbr</code>
+						</blockquote>
+
+					<h3>
+						<a>Viewport</a>
+						<sup>
+							<a href="http://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">[1]</a>
+						</sup>
+					</h3>
+						<textarea cols="" rows="" name="code" class="html">
+							<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+						</textarea>
+
+					<h3>
+						<a>X-UA-Compatible</a>
+						<sup>
+							<a href="http://blogs.msdn.com/b/askie/archive/2009/03/23/understanding-compatibility-modes-in-internet-explorer-8.aspx">[1]</a>
+							<a href="http://msdn.microsoft.com/zh-cn/library/cc288325">[2]</a>
+							<a href="http://msdn.microsoft.com/en-us/library/jj676915">[3]</a>
+						</sup>
+					</h3>
+						<textarea cols="" rows="" name="code" class="html">
+							<meta http-equiv="X-UA-Compatible" content="IE=Edge" /> <!-- IE=5 | 7 | EmulateIE7 | 8 | EmulateIE8 | Edge -->
+						</textarea>
+				</div>
+
+			<h2><a name="ie"><span>-</span> IE</a></h2>
+				<div id="chapter-ie">
+					<h3>
+						<a>Conditional Comments (IE9-)</a>
+						<sup>
+							<a href="http://msdn.microsoft.com/en-us/library/ms537512">[1]</a>
+						</sup>
+					</h3>
+						<textarea cols="" rows="" name="code" class="html">
+						<!--[if lte IE 8]>
+						IE8-
+						<![endif]-->
+						</textarea>
+				</div>
+
+			<h2><a name="include"><span>-</span> Include</a></h2>
+				<div id="chapter-include">
+					<h3>
+						<a>ASP</a>
+						<sup>
+							<a href="http://msdn.microsoft.com/en-us/library/ms524876">[1]</a>
+						</sup>
+					</h3>
+						<textarea cols="" rows="" name="code" class="html">
+						<!-- #include virtual | file ="filename" -->
+						</textarea>
+
+					<h3>
+						<a>JSP</a>
+						<sup>
+							<a href="http://java.sun.com/products/jsp/syntax/2.0/syntaxref209.html">[1]</a>
+						</sup>
+					</h3>
+						<textarea cols="" rows="" name="code" class="java">
+						<%@ include file="relativeURL" %>
+						</textarea>
+
+					<h3>
+						<a>PHP</a>
+						<sup>
+							<a href="http://www.php.net/manual/en/function.include.php">[1]</a>
+						</sup>
+					</h3>
+						<textarea cols="" rows="" name="code" class="php">
+						<?php include ''; ?>
+						</textarea>
+				</div>
+
+			<h2><a name="java"><span>-</span> Java</a></h2>
+				<div id="chapter-java">
+					<h3>
+						<a>Controlling Access to Members of a Class</a>
+						<sup>
+							<a href="http://java.sun.com/docs/books/tutorial/java/javaOO/accesscontrol.html">[1]</a>
+						</sup>
+					</h3>
+						<table>
+							<caption>Access Levels</caption>
+							<tr>
+								<th>Modifier</th>
+								<th>Class</th>
+								<th>Package</th>
+								<th>Subclass</th>
+								<th>World</th>
+							</tr>
+							<tr>
+								<td><code>public</code></td>
+								<td>Y</td>
+								<td>Y</td>
+								<td>Y</td>
+								<td>Y</td>
+							</tr>
+							<tr>
+								<td><code>protected</code></td>
+								<td>Y</td>
+								<td>Y</td>
+								<td>Y</td>
+								<td>N</td>
+							</tr>
+							<tr>
+								<td>no modifier</td>
+								<td>Y</td>
+								<td>Y</td>
+								<td>N</td>
+								<td>N</td>
+							</tr>
+							<tr>
+								<td><code>private</code></td>
+								<td>Y</td>
+								<td>N</td>
+								<td>N</td>
+								<td>N</td>
+							</tr>
+						</table>
+				</div>
+
+			<h2><a name="layout-engine"><span>-</span> Layout Engine</a></h2>
+				<div id="chapter-layout-engine">
+					<table>
+						<tr>
+							<th></th>
+							<th>IE</th>
+							<th>Chrome</th>
+							<th>Firefox</th>
+							<th>Opera</th>
+							<th>Safari</th>
+						</tr>
+						<tr>
+							<td>Blink</td>
+							<td></td>
+							<td>√</td>
+							<td></td>
+							<td>√</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Gecko</td>
+							<td></td>
+							<td></td>
+							<td>√</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Trident</td>
+							<td>√</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>WebKit</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>√</td>
+						</tr>
+					</table>
+				</div>
+
+			<h2><a name="xhtml1"><span>-</span> XHTML 1.0</a></h2>
+				<div id="chapter-xhtml1">
+					<h3>
+						<a>Element Prohibitions</a>
+						<sup>
+							<a href="http://www.w3.org/TR/xhtml1/#prohibitions">[1]</a>
+						</sup>
+					</h3>
+						<blockquote>
+							<code>a</code>
+						</blockquote>
+						<blockquote>
+							must not contain other <code>a</code> elements.
+						</blockquote>
+						<blockquote>
+							<code>pre</code>
+						</blockquote>
+						<blockquote>
+							must not contain the <code>img</code>, <code>object</code>, <code>big</code>, <code>small</code>, <code>sub</code>, or <code>sup</code> elements.
+						</blockquote>
+						<blockquote>
+							<code>button</code>
+						</blockquote>
+						<blockquote>
+							must not contain the <code>input</code>, <code>select</code>, <code>textarea</code>, <code>label</code>, <code>button</code>, <code>form</code>, <code>fieldset</code>, <code>iframe</code> or <code>isindex</code> elements.
+						</blockquote>
+						<blockquote>
+							<code>label</code>
+						</blockquote>
+						<blockquote>
+							must not contain other <code>label</code> elements.
+						</blockquote>
+						<blockquote>
+							<code>form</code>
+						</blockquote>
+						<blockquote>
+							must not contain other <code>form</code> elements.
+						</blockquote>
+				</div>
+
+			<h2><a name="xhtml2"><span>-</span> XHTML 2.0</a></h2>
+				<style type="text/css">
+				#chapter-f samp,
+				#chapter-f q,
+				#chapter-f kbd,
+				#chapter-f code,
+				#chapter-f abbr,
+				#chapter-f var,
+				#chapter-f dfn,
+				#chapter-f cite {
+				color: red;
+				/*quotes: none;*/
+				}
+				</style>
+				<div id="chapter-xhtml2">
+					<h3>
+						<a>Text Module</a>
+						<sup>
+							<a href="http://www.w3.org/TR/xhtml2/mod-text.html">[1]</a>
+						</sup>
+					</h3>
+						<table>
+							<tr>
+								<th>Element</th>
+								<th>Example</th>
+							</tr>
+							<tr>
+								<td>cite</td>
+								<td><cite>cite</cite></td>
+							</tr>
+							<tr>
+								<td>dfn</td>
+								<td><dfn>dfn</dfn></td>
+							</tr>
+							<tr>
+								<td>var</td>
+								<td><var>var</var></td>
+							</tr>
+							<tr>
+								<td>abbr</td>
+								<td><abbr>abbr</abbr></td>
+							</tr>
+							<tr>
+								<td>code</td>
+								<td><code>code</code></td>
+							</tr>
+							<tr>
+								<td>kbd</td>
+								<td><kbd>kbd</kbd></td>
+							</tr>
+							<tr>
+								<td>q</td>
+								<td><q>q</q></td>
+							</tr>
+							<tr>
+								<td>samp</td>
+								<td><samp>samp</samp></td>
+							</tr>
+						</table>
+				</div>
 		</div>
 
-	<h2><a name="flash"><span>-</span> Flash</a></h2>
-		<div id="chapter-flash">
-			<h3>
-				<a>Flash Satay: Embedding Flash While Supporting Standards</a>
-				<sup>
-					<a href="http://www.alistapart.com/articles/flashsatay/">[1]</a>
-				</sup>
-			</h3>
-				<textarea cols="" rows="" name="code" class="html">
-				<object type="application/x-shockwave-flash" data="flash.swf" width="100" height="100">
-					<param name="movie" value="flash.swf" />
-					<div>alt</div>
-				</object>
-				</textarea>
-		</div>
+		<iframe src="footer.html" frameborder="0" scrolling="no" class="iframe-footer"></iframe>
+	</div>
+	<!-- /main -->
 
-	<h2><a name="html401"><span>-</span> HTML 4.01</a></h2>
-		<div id="chapter-html401">
-			<h3>
-				<a>How to specify alternate text</a>
-				<sup>
-					<a href="http://www.w3.org/TR/html401/struct/objects.html#adef-alt">[1]</a>
-				</sup>
-			</h3>
-				<blockquote>
-					The <code>alt</code> attribute must be specified for the <code>IMG</code> and <code>AREA</code> elements. It is optional for the <code>INPUT</code> and <code>APPLET</code> elements.
-				</blockquote>
+	<iframe src="../return.html" frameborder="0" scrolling="no" class="iframe-return"></iframe>
 
-			<h3>
-				<a>Tabbing navigation</a>
-				<sup>
-					<a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.11.1">[1]</a>
-				</sup>
-			</h3>
-				<blockquote>
-					The following elements support the <code>tabindex</code> attribute: <code>A</code>, <code>AREA</code>, <code>BUTTON</code>, <code>INPUT</code>, <code>OBJECT</code>, <code>SELECT</code>, and <code>TEXTAREA</code>.
-				</blockquote>
+	<script type="text/javascript" src="../js/article.js"></script>
 
-			<h3>
-				<a>The INPUT element</a>
-				<sup>
-					<a href="http://www.w3.org/TR/html401/interact/forms.html#edef-INPUT">[1]</a>
-				</sup>
+	<script type="text/javascript">
+	(function() {
 
-			</h3>
-				<blockquote>
-					<code>value</code>
-					<sup>
-						<a href="http://www.w3.org/TR/html401/interact/forms.html#adef-value-INPUT">[1]</a>
-					</sup>
-				</blockquote>
-				<blockquote>This attribute specifies the initial value of the control. It is optional except when the <code>type</code> attribute has the value "<code>radio</code>" or "<code>checkbox</code>".</blockquote>
+		$4what.include("syntaxhighlighter");
 
-			<h3>
-				<a>The SCRIPT element</a>
-				<sup>
-					<a href="http://www.w3.org/TR/html401/interact/scripts.html#h-18.2.1">[1]</a>
-				</sup>
-			</h3>
-				<blockquote>
-					<code>defer</code>
-					<sup>
-						<a href="http://www.w3.org/TR/html401/interact/scripts.html#adef-defer">[1]</a>
-					</sup>
-				</blockquote>
-				<blockquote>When set, this boolean attribute provides a hint to the user agent that the script is not going to generate any document content (e.g., no "document.write" in javascript) and thus, the user agent can continue parsing and rendering.</blockquote>
-				<blockquote><code>charset</code></blockquote>
-				<blockquote>
-					Note that the <code>charset</code> attribute refers to the <code>character encoding</code> of the script designated by the <code>src</code> attribute; it does not concern the content of the <code>SCRIPT</code> element.
-				</blockquote>
-		</div>
+	})();
+	</script>
 
-	<h2><a name="html5"><span>-</span> HTML5</a></h2>
-		<div id="chapter-html5">
-			<h3>
-				<a>Link type "stylesheet"</a>
-				<sup>
-					<a href="http://www.w3.org/TR/html5/links.html#link-type-stylesheet">[1]</a>
-				</sup>
-			</h3>
-				<blockquote>
-					The default type for resources given by the <code>stylesheet</code> keyword is <code>text/css</code>.
-				</blockquote>
-
-			<h3>
-				<a>The script element</a>
-				<sup>
-					<a href="http://www.w3.org/TR/html5/scripting-1.html#the-script-element">[1]</a>
-				</sup>
-			</h3>
-				<blockquote>
-					<code>async</code>
-					<sup>
-						<a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-async">[1]</a>
-					</sup>
-				</blockquote>
-				<blockquote>
-					The <code>async</code> and <code>defer</code> attributes are boolean attributes that indicate how the script should be executed. The <code>defer</code> and <code>async</code> attributes must not be specified if the <code>src</code> attribute is not present.
-				</blockquote>
-				<blockquote>
-					<code>defer</code>
-					<sup>
-						<a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-defer">[1]</a>
-					</sup>
-				</blockquote>
-				<blockquote>
-					The <code>defer</code> attribute may be specified even if the <code>async</code> attribute is specified, to cause legacy Web browsers that only support <code>defer</code> (and not <code>async</code>) to fall back to the <code>defer</code> behavior instead of the synchronous blocking behavior that is the default.
-				</blockquote>
-				<blockquote>
-					<code>type</code>
-					<sup>
-						<a href="http://www.w3.org/TR/html5/scripting-1.html#attr-script-type">[1]</a>
-					</sup>
-				</blockquote>
-				<blockquote>
-					The <code>type</code> attribute gives the language of the script or format of the data. If the attribute is present, its value must be a valid MIME type. The <code>charset</code> parameter must not be specified. The default, which is used if the attribute is absent, is "<code>text/javascript</code>".
-				</blockquote>
-
-			<h3>
-				<a>The style element</a>
-				<sup>
-					<a href="http://www.w3.org/TR/html5/document-metadata.html#the-style-element">[1]</a>
-				</sup>
-			</h3>
-				<blockquote>
-					<code>type</code>
-					<sup>
-						<a href="http://www.w3.org/TR/html5/document-metadata.html#attr-style-type">[1]</a>
-					</sup>
-				</blockquote>
-				<blockquote>
-					The <code>type</code> attribute gives the styling language. If the attribute is present, its value must be a valid MIME type that designates a styling language. The <code>charset</code> parameter must not be specified. The default value for the <code>type</code> attribute, which is used if the attribute is absent, is "<code>text/css</code>".
-				</blockquote>
-
-			<h3>
-				<a>Void elements</a>
-				<sup>
-					<a href="http://www.w3.org/TR/html5/syntax.html#void-elements">[1]</a>
-					<a href="http://wiki.whatwg.org/wiki/FAQ#Should_I_close_empty_elements_with_.2F.3E_or_.3E.3F">[2]</a>
-				</sup>
-			</h3>
-				<blockquote>
-					<code>area</code>, <code>base</code>, <code>br</code>, <code>col</code>, <code>embed</code>, <code>hr</code>, <code>img</code>, <code>input</code>, <code>keygen</code>, <code>link</code>, <code>meta</code>, <code>param</code>, <code>source</code>, <code>track</code>, <code>wbr</code>
-				</blockquote>
-
-			<h3>
-				<a>Viewport</a>
-				<sup>
-					<a href="http://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">[1]</a>
-				</sup>
-			</h3>
-				<textarea cols="" rows="" name="code" class="html">
-					<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
-				</textarea>
-
-			<h3>
-				<a>X-UA-Compatible</a>
-				<sup>
-					<a href="http://blogs.msdn.com/b/askie/archive/2009/03/23/understanding-compatibility-modes-in-internet-explorer-8.aspx">[1]</a>
-					<a href="http://msdn.microsoft.com/zh-cn/library/cc288325">[2]</a>
-					<a href="http://msdn.microsoft.com/en-us/library/jj676915">[3]</a>
-				</sup>
-			</h3>
-				<textarea cols="" rows="" name="code" class="html">
-					<meta http-equiv="X-UA-Compatible" content="IE=Edge" /> <!-- IE=5 | 7 | EmulateIE7 | 8 | EmulateIE8 | Edge -->
-				</textarea>
-		</div>
-
-	<h2><a name="ie"><span>-</span> IE</a></h2>
-		<div id="chapter-ie">
-			<h3>
-				<a>Conditional Comments (IE9-)</a>
-				<sup>
-					<a href="http://msdn.microsoft.com/en-us/library/ms537512">[1]</a>
-				</sup>
-			</h3>
-				<textarea cols="" rows="" name="code" class="html">
-				<!--[if lte IE 8]>
-				IE8-
-				<![endif]-->
-				</textarea>
-		</div>
-
-	<h2><a name="include"><span>-</span> Include</a></h2>
-		<div id="chapter-include">
-			<h3>
-				<a>ASP</a>
-				<sup>
-					<a href="http://msdn.microsoft.com/en-us/library/ms524876">[1]</a>
-				</sup>
-			</h3>
-				<textarea cols="" rows="" name="code" class="html">
-				<!-- #include virtual | file ="filename" -->
-				</textarea>
-
-			<h3>
-				<a>JSP</a>
-				<sup>
-					<a href="http://java.sun.com/products/jsp/syntax/2.0/syntaxref209.html">[1]</a>
-				</sup>
-			</h3>
-				<textarea cols="" rows="" name="code" class="java">
-				<%@ include file="relativeURL" %>
-				</textarea>
-
-			<h3>
-				<a>PHP</a>
-				<sup>
-					<a href="http://www.php.net/manual/en/function.include.php">[1]</a>
-				</sup>
-			</h3>
-				<textarea cols="" rows="" name="code" class="php">
-				<?php include ''; ?>
-				</textarea>
-		</div>
-
-	<h2><a name="java"><span>-</span> Java</a></h2>
-		<div id="chapter-java">
-			<h3>
-				<a>Controlling Access to Members of a Class</a>
-				<sup>
-					<a href="http://java.sun.com/docs/books/tutorial/java/javaOO/accesscontrol.html">[1]</a>
-				</sup>
-			</h3>
-				<table>
-					<caption>Access Levels</caption>
-					<tr>
-						<th>Modifier</th>
-						<th>Class</th>
-						<th>Package</th>
-						<th>Subclass</th>
-						<th>World</th>
-					</tr>
-					<tr>
-						<td><code>public</code></td>
-						<td>Y</td>
-						<td>Y</td>
-						<td>Y</td>
-						<td>Y</td>
-					</tr>
-					<tr>
-						<td><code>protected</code></td>
-						<td>Y</td>
-						<td>Y</td>
-						<td>Y</td>
-						<td>N</td>
-					</tr>
-					<tr>
-						<td>no modifier</td>
-						<td>Y</td>
-						<td>Y</td>
-						<td>N</td>
-						<td>N</td>
-					</tr>
-					<tr>
-						<td><code>private</code></td>
-						<td>Y</td>
-						<td>N</td>
-						<td>N</td>
-						<td>N</td>
-					</tr>
-				</table>
-		</div>
-
-	<h2><a name="layout-engine"><span>-</span> Layout Engine</a></h2>
-		<div id="chapter-layout-engine">
-			<table>
-				<tr>
-					<th></th>
-					<th>IE</th>
-					<th>Chrome</th>
-					<th>Firefox</th>
-					<th>Opera</th>
-					<th>Safari</th>
-				</tr>
-				<tr>
-					<td>Blink</td>
-					<td></td>
-					<td>√</td>
-					<td></td>
-					<td>√</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Gecko</td>
-					<td></td>
-					<td></td>
-					<td>√</td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Trident</td>
-					<td>√</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>WebKit</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>√</td>
-				</tr>
-			</table>
-		</div>
-
-	<h2><a name="xhtml1"><span>-</span> XHTML 1.0</a></h2>
-		<div id="chapter-xhtml1">
-			<h3>
-				<a>Element Prohibitions</a>
-				<sup>
-					<a href="http://www.w3.org/TR/xhtml1/#prohibitions">[1]</a>
-				</sup>
-			</h3>
-				<blockquote>
-					<code>a</code>
-				</blockquote>
-				<blockquote>
-					must not contain other <code>a</code> elements.
-				</blockquote>
-				<blockquote>
-					<code>pre</code>
-				</blockquote>
-				<blockquote>
-					must not contain the <code>img</code>, <code>object</code>, <code>big</code>, <code>small</code>, <code>sub</code>, or <code>sup</code> elements.
-				</blockquote>
-				<blockquote>
-					<code>button</code>
-				</blockquote>
-				<blockquote>
-					must not contain the <code>input</code>, <code>select</code>, <code>textarea</code>, <code>label</code>, <code>button</code>, <code>form</code>, <code>fieldset</code>, <code>iframe</code> or <code>isindex</code> elements.
-				</blockquote>
-				<blockquote>
-					<code>label</code>
-				</blockquote>
-				<blockquote>
-					must not contain other <code>label</code> elements.
-				</blockquote>
-				<blockquote>
-					<code>form</code>
-				</blockquote>
-				<blockquote>
-					must not contain other <code>form</code> elements.
-				</blockquote>
-		</div>
-
-	<h2><a name="xhtml2"><span>-</span> XHTML 2.0</a></h2>
-		<style type="text/css">
-		#chapter-f samp,
-		#chapter-f q,
-		#chapter-f kbd,
-		#chapter-f code,
-		#chapter-f abbr,
-		#chapter-f var,
-		#chapter-f dfn,
-		#chapter-f cite {
-		color: red;
-		/*quotes: none;*/
-		}
-		</style>
-		<div id="chapter-xhtml2">
-			<h3>
-				<a>Text Module</a>
-				<sup>
-					<a href="http://www.w3.org/TR/xhtml2/mod-text.html">[1]</a>
-				</sup>
-			</h3>
-				<table>
-					<tr>
-						<th>Element</th>
-						<th>Example</th>
-					</tr>
-					<tr>
-						<td>cite</td>
-						<td><cite>cite</cite></td>
-					</tr>
-					<tr>
-						<td>dfn</td>
-						<td><dfn>dfn</dfn></td>
-					</tr>
-					<tr>
-						<td>var</td>
-						<td><var>var</var></td>
-					</tr>
-					<tr>
-						<td>abbr</td>
-						<td><abbr>abbr</abbr></td>
-					</tr>
-					<tr>
-						<td>code</td>
-						<td><code>code</code></td>
-					</tr>
-					<tr>
-						<td>kbd</td>
-						<td><kbd>kbd</kbd></td>
-					</tr>
-					<tr>
-						<td>q</td>
-						<td><q>q</q></td>
-					</tr>
-					<tr>
-						<td>samp</td>
-						<td><samp>samp</samp></td>
-					</tr>
-				</table>
-		</div>
-</div>
-<!-- /content -->
-
-<iframe src="footer.html" frameborder="0" scrolling="no" class="iframe-footer"></iframe>
-
-</div>
-<!-- /container -->
-</div>
-<!-- /main -->
-
-<iframe src="../return.html" frameborder="0" scrolling="no" class="iframe-return"></iframe>
-
-<script type="text/javascript" src="../js/article.js"></script>
-
-<script type="text/javascript">
-(function() {
-
-	$4what.include("syntaxhighlighter");
-
-})();
-</script>
-
-<script type="text/javascript" src="../js/analytics.js"></script>
+	<script type="text/javascript" src="../js/analytics.js"></script>
 </body>
 </html>

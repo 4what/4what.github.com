@@ -1,22 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>4what - JavaScript</title>
-<meta name="author" content="4what" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>4what - JavaScript</title>
+	<meta name="author" content="4what" />
 
-<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
-<script type="text/javascript" src="../../js/util.js"></script>
-<script type="text/javascript" src="../../js/commons.js"></script>
+	<script type="text/javascript" src="../../js/util.js"></script>
+	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
-
 <body>
-
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
-	// object
+	/* object */
 	var o =
 		new Object()
 		//new Array("x", "y")
@@ -32,7 +30,7 @@
 	o.prop = "value";
 	$4what.log("o.prop: " + o.prop); // value
 
-	// prototype
+	/* prototype */
 	var Human = function() {
 		$4what.log("new Human");
 	};
@@ -53,10 +51,10 @@
 	delete adam.age;
 	$4what.log("adam.age: " + adam.age); // 0
 
-	// inheritance
+	/* inheritance */
 	var Woman = function(gender) {
 		$4what.log("new Woman");
-		// constructor
+		/* constructor */
 		this.gender = gender;
 	};
 	Woman.prototype = new Human(); // new Human
@@ -69,7 +67,7 @@
 
 <h2><span>Example</span></h2>
 	<script type="text/javascript">
-	// object
+	/* object */
 	var o =
 		new Object()
 		//new Array("x", "y")
@@ -85,7 +83,7 @@
 	o.prop = "value";
 	$4what.log("o.prop: " + o.prop); // value
 
-	// prototype
+	/* prototype */
 	var Human = function() {
 		$4what.log("new Human");
 	};
@@ -106,7 +104,7 @@
 	delete adam.age;
 	$4what.log("adam.age: " + adam.age); // 0
 
-	// inheritance
+	/* inheritance */
 	var Woman = function(gender) {
 		$4what.log("new Woman");
 		// constructor

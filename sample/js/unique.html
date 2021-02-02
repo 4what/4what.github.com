@@ -1,25 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>4what - JavaScript</title>
-<meta name="author" content="4what" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>4what - JavaScript</title>
+	<meta name="author" content="4what" />
 
-<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
-<script type="text/javascript" src="../../js/util.js"></script>
-<script type="text/javascript" src="../../js/commons.js"></script>
+	<script type="text/javascript" src="../../js/util.js"></script>
+	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
-
 <body>
-
 <h2><span>Syntax</span></h2>
 	<textarea cols="" rows="" name="code" class="js">
 	<script type="text/javascript">
 	function unique() {
 		return [
 			function(array) {
-				// Number + String
+				/* Number + String */
 				var
 				result = [],
 				element, exist;
@@ -39,7 +37,7 @@
 				return result;
 			},
 			function(array) {
-				// Number + String (slow)
+				/* Number + String (slow) */
 				array.sort();
 				for (var i = 1; i < array.length; i++) {
 					if (array[i] === array[i - 1]) {
@@ -49,7 +47,7 @@
 				return array;
 			},
 			function(array) {
-				// Number + String
+				/* Number + String */
 				var
 				result = [],
 				element;
@@ -62,7 +60,7 @@
 				return result;
 			},
 			function(array) {
-				// Number + String
+				/* Number + String */
 				var
 				result = [],
 				element, key,

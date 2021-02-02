@@ -40,13 +40,6 @@ input, select, textarea {
   CONTAINER
 --------------------------------------*/
 .container {
-}
-
-
-/*--------------------------------------
-  CONTENT
---------------------------------------*/
-.content {
 	margin: 0 auto;
 	text-align: left;
 	width: 750px;

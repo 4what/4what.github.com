@@ -40,13 +40,6 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  CONTAINER
---------------------------------------*/
-.container {
-}
-
-
-/*--------------------------------------
   HEADER
 --------------------------------------*/
 .header {
@@ -94,9 +87,9 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  CONTENT
+  CONTAINER
 --------------------------------------*/
-.content {
+.container {
 	margin: 0 auto;
 }
 
@@ -142,12 +135,6 @@ input, select, textarea {
 	}
 
 	.layer {
-	}
-
-	.merge {
-	}
-
-	.slice {
 	}
 
 	.layout {
