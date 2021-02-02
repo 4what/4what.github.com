@@ -1,4 +1,4 @@
-// Modified by 4what
+/* Modified by 4what */
 
 /**
  * impress.js

@@ -220,7 +220,7 @@ window.Lottery = {
 				if (winner.cookie.v.length < settings.players.length) {
 					generate();
 				} else {
-					// TODO
+					/* TODO */
 				}
 			}
 		}
