@@ -213,15 +213,15 @@ var UtilJq = {
 		params = $.extend({
 			html: settings.template(id),
 			onComplete: function() {
-				// close
+				/* close */
 				$("#" + id).find("[class*='dialog-close']").click(function() {
 					$.colorbox.close();
 				});
 
-				// callback
+				/* callback */
 				settings.callback();
 
-				// timeout
+				/* timeout */
 				if (settings.timeout) {
 					window.setTimeout($.colorbox.close, settings.timeout === true ? 1000 * 2 : settings.timeout);
 				}
@@ -275,7 +275,7 @@ var UtilJq = {
 		},
 		settings = $.extend(defaults, options);
 
-		// init
+		/* init */
 		function init(index) {
 			var totalPages = Math.ceil(settings.total / settings.pageSize);
 
@@ -319,7 +319,7 @@ var UtilJq = {
 				start = Math.max(1, Math.ceil(index - (pages / 2))),
 				end = Math.min(totalPages, start + pages - 1),
 
-				// adjust
+				/* adjust */
 				delta = pages - (end - start + 1),
 				start = Math.max(1, start - delta),
 
@@ -339,7 +339,7 @@ var UtilJq = {
 
 				box.append(component);
 
-				// first & previous
+				/* first & previous */
 				if (index > 1) {
 					var
 					first = '<a href="' + url(1) + '" class="first" rel="' + 1 + '">' + settings.first + '</a> ',
@@ -359,7 +359,7 @@ var UtilJq = {
 					box.prepend(widget);
 				}
 
-				// last & next
+				/* last & next */
 				if (index < totalPages) {
 					var
 					last = '<a href="' + url(totalPages) + '" class="last" rel="' + totalPages + '">' + settings.last + '</a> ',
@@ -379,14 +379,14 @@ var UtilJq = {
 					box.append(widget);
 				}
 
-				// ajax
+				/* ajax */
 				if (settings.ajax) {
 					box.find("a").click(function() {
 						var index = parseInt($(this).attr("rel"), 10);
 
-						// recursion
+						/* recursion */
 						init(index);
-						// callback
+						/* callback */
 						settings.callback(index);
 
 						return false;

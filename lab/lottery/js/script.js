@@ -225,7 +225,7 @@ window.Lottery = {
 			}
 		}
 
-		// init
+		/* init */
 		award.$.hide();
 		winner.$.hide();
 
@@ -250,7 +250,7 @@ window.Lottery = {
 
 		$("#impress").append(steps);
 
-		// load
+		/* load */
 		$(function() {
 
 			var
@@ -358,7 +358,7 @@ window.Lottery = {
 
 		});
 
-		// keyup
+		/* keyup */
 		$(document).keyup(function(e) {
 			idle = false;
 
@@ -392,20 +392,20 @@ window.Lottery = {
 				}
 			}
 
-			// enter
+			/* enter */
 			if (!settings.auto && live && code === 13) {
 				live = false;
 			}
 		});
 
-		// clear
+		/* clear */
 		if (!settings.client) {
 			for (var items = [award.cookie.k, winner.cookie.k], i = items.length - 1; i >= 0; i--) {
 				$js.cookie(items[i], null);
 			}
 		}
 
-		// impress
+		/* impress */
 		impress().init();
 	}
 };

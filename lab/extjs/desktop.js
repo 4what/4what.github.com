@@ -411,7 +411,7 @@ MyDesktop.BogusMenuModule = Ext.extend(MyDesktop.BogusModule, {
 });
 
 
-// Array data for the grid
+// array data for the grid
 Ext.grid.dummyData = [
     ['3m Co',71.72,0.02,0.03,'9/1 12:00am'],
     ['Alcoa Inc',29.01,0.42,1.47,'9/1 12:00am'],

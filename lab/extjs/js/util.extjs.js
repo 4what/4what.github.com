@@ -237,10 +237,10 @@ var UtilExt = $ext = {
 
 					var self = this;
 
-					// icon
+					/* icon */
 					self.setIcon(Ext.Msg.INFO);
 
-					// timeout
+					/* timeout */
 					if (typeof settings.timeout === "function") {
 						settings.timeout = settings.timeout(self, title, msg);
 					}

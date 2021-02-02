@@ -77,7 +77,7 @@ var $4what = function() {
 			result = result.slice(slash + 1);
 		}
 
-		// for Win
+		/* for Win */
 		var backslash = result.lastIndexOf("\\");
 		if (backslash > -1) {
 			result = result.slice(backslash + 1);
@@ -124,37 +124,37 @@ var $4what = function() {
 
 		for (var i = 0, l = arguments.length; i < l; i++) {
 			switch (arguments[i]) {
-				// jQuery
+				/* jQuery */
 				case "jquery":
 					$js.include(
 						host +
-							// for IE6+
+							/* for IE6+ */
 							//"js/jquery/jquery-1.3.2.min.js"
 							"js/jquery/jquery-1.8.3.min.js"
 					);
 					break;
 
-				// jQuery UI
+				/* jQuery UI */
 				case "jqueryui":
-					// for IE6+
+					/* for IE6+ */
 
-					// v1.8 for jQuery 1.3.2+
+					/* v1.8 for jQuery 1.3.2+ */
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.css");
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.js");
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery.ui.datepicker-zh-CN.min.js");
 
-					// v1.12.1 for jQuery 1.7+
+					/* v1.12.1 for jQuery 1.7+ */
 					//$js.include(host + "js/jquery/ui/1.12.1/jquery-ui.min.css");
 					$js.include(host + "js/jquery/ui/1.12.1/jquery-ui.min.js");
 					break;
 
-				// jQuery lightBox
+				/* jQuery lightBox */
 				case "jquery-lightbox":
 					$js.include(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.css");
 					$js.include(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.pack.js");
 					break;
 
-				// SyntaxHighlighter
+				/* SyntaxHighlighter */
 				case "syntaxhighlighter":
 					$js.include(host + "js/syntaxhighlighter/3.0.83/shCoreDefault.css");
 
@@ -171,7 +171,7 @@ var $4what = function() {
 					$js.include(host + "js/syntaxhighlighter/3.0.83/shBrushPhp.js");
 					$js.include(host + "js/syntaxhighlighter/3.0.83/shBrushXml.js");
 
-					// v3.x
+					/* v3.x */
 					$(function() {
 
 						//SyntaxHighlighter.defaults["auto-links"] = true;
@@ -189,7 +189,7 @@ var $4what = function() {
 
 					});
 
-					// v1.5
+					/* v1.5 */
 					$js.bind(window, "load", function() {
 						dp.SyntaxHighlighter.HighlightAll("code", true, false, false, 1, false); // (name, [showGutter], [showControls], [collapseAll], [firstLine], [showColumns])
 					});
@@ -199,7 +199,7 @@ var $4what = function() {
 			}
 		}
 
-		// callback
+		/* callback */
 		var callback = arguments[arguments.length - 1];
 
 		if (typeof callback === "function") {
@@ -225,5 +225,5 @@ window.$4what = new $4what();
 
 })();
 
-// init
+/* init */
 $4what.include("jquery");

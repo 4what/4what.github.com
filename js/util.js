@@ -155,7 +155,7 @@ Util.prototype = {
 			window[fn] = function(result) {
 				callback(result);
 
-				// garbage collect
+				/* garbage collect */
 				window[fn] = undefined;
 
 				clean();
@@ -223,11 +223,11 @@ Util.prototype = {
 	 * @return {Number}
 	 */
 	inArray: function(element, array) {
-		// for IE9+, Std
+		/* for IE9+, Std */
 		if ("indexOf" in array) {
 			return array.indexOf(element);
 		}
-		// for IE8-
+		/* for IE8- */
 		for (var i = 0, l = array.length; i < l; i++) {
 			if (array[i] === element) {
 				return i;
@@ -506,22 +506,16 @@ Util.prototype = {
 	clock: function(id, lang) {
 		var
 		date = new Date(),
-		// Year
-		YYYY = date.getFullYear(),
-		// Month
-		MM = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-		// Day
-		DD = date.getDate(),
-		// Weekday
-		WwwD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-		// Hour
-		hh = date.getHours(),
-		// Minute
-		mm = date.getMinutes(),
-		// Second
-		ss = date.getSeconds();
 
-		// + 0
+		YYYY = date.getFullYear(), // Year
+		MM = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], // Month
+		DD = date.getDate(), // Day
+		WwwD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // Weekday
+		hh = date.getHours(), // Hour
+		mm = date.getMinutes(), // Minute
+		ss = date.getSeconds(); // Second
+
+		/* +0 */
 		if (mm < 10) {
 			mm = "0" + mm;
 		}
@@ -531,7 +525,7 @@ Util.prototype = {
 
 		var clock = WwwD[date.getDay()] + ",&nbsp;" + MM[date.getMonth()] + "&nbsp;" + DD + ",&nbsp;" + YYYY + "&nbsp;" + hh + ":" + mm + ":" + ss;
 
-		// zh
+		/* zh */
 		if (lang === "zh") {
 			MM = date.getMonth() + 1;
 			WwwD = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];

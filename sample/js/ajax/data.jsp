@@ -10,7 +10,7 @@
 	String getParameter(HttpServletRequest request, String name) {
 		String value = request.getParameter(name);
 
-		// for XDomainRequest
+		/* for XDomainRequest */
 		try {
 			if (value == null) {
 				Map<String, String> map = new HashMap<String, String>();
@@ -41,7 +41,7 @@
 	request.setCharacterEncoding("UTF-8");
 
 
-	// for CORS
+	/* for CORS */
 	response.setHeader("Access-Control-Allow-Credentials", "true"); // cookie
 
 	String origin = request.getHeader("Origin");
@@ -50,11 +50,11 @@
 	//}
 
 
-	// P3P
+	/* P3P */
 	//response.setHeader("P3P", "CP=\"\"");
 
 
-	// defer
+	/* defer */
 	for (int i = 0; i < 10000; i++) {
 		System.out.println(new Date());
 	}

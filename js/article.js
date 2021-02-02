@@ -15,7 +15,7 @@
 	})();
 */
 
-	// toggle
+	/* toggle */
 	$("h2 a").click(function() {
 		$("#chapter-" + $(this).attr("name")).slideToggle("slow");
 		$(this).find("span").text($(this).is(":contains('-')") ? "+" : "-");

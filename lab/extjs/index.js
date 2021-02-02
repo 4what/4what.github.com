@@ -1,6 +1,6 @@
 ﻿Ext.onReady(function() {
 
-	// nav
+	/* nav */
 	var _nav = new Ext.Panel({
 		region: "west",
 		title: "管理系统",
@@ -32,7 +32,7 @@
 			}
 		},
 		items: [
-			// 自定义
+			// (自定义)
 			{
 				title: "控制面板",
 				iconCls: "icon-ctrl",
@@ -99,7 +99,7 @@
 					xtype: "button",
 					iconCls: "icon-logout",
 					handler: function(button, e) {
-						// 自定义
+						// (自定义)
 						window.location.href = "login.html";
 					}
 				}
@@ -130,7 +130,7 @@
 	});
 
 
-	// main
+	/* main */
 	var _main = new Ext.TabPanel({
 		region: "center",
 		//title: "",
@@ -154,7 +154,7 @@
 	});
 
 
-	// viewport
+	/* viewport */
 	var _viewport = new Ext.Viewport({
 		layout: "border",
 		items: [
@@ -167,8 +167,8 @@
 	});
 
 
-	// homepage
-	// 自定义
+	/* homepage */
+	// (自定义)
 	$ext.tab.load(_main, {
 		title: "主页",
 		src: "main.html",

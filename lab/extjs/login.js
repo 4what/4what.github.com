@@ -1,6 +1,6 @@
 ﻿Ext.onReady(function() {
 
-	// form
+	/* form */
 	var _form = new Ext.form.FormPanel({
 		baseCls: "x-plain",
 		buttonAlign: "center",
@@ -24,14 +24,14 @@
 					{
 						fieldLabel: "用户名",
 						xtype: "textfield",
-						name: "username", // 自定义
+						name: "username", // (自定义)
 						allowBlank: false
 					},
 					{
 						fieldLabel: "密　码",
 						xtype: "textfield",
 						inputType: "password",
-						name: "password", // 自定义
+						name: "password", // (自定义)
 						allowBlank: false
 					}
 				]
@@ -49,13 +49,13 @@
 					{
 						fieldLabel: "用户名",
 						xtype: "textfield",
-						name: "username-passport" // 自定义
+						name: "username-passport" // (自定义)
 					},
 					{
 						fieldLabel: "密　码",
 						xtype: "textfield",
 						inputType: "password",
-						name: "password-passport" // 自定义
+						name: "password-passport" // (自定义)
 					}
 				]
 			}
@@ -96,18 +96,18 @@
 	});
 
 
-	// submit
+	/* submit */
 	function _form_submit() {
 		if (_form.getForm().isValid()) {
 			_form.getForm().submit({
-				url: "data/data.json", // 自定义
+				url: "data/data.json", // (自定义)
 				method: "POST",
 				params: {
-					// 自定义
+					// (自定义)
 					action: "login"
 				},
 				success: function(form, action) {
-					// 自定义
+					// (自定义)
 					window.location.href = "index.html";
 				},
 				failure: function(form, action) {
@@ -116,7 +116,7 @@
 					result = action.result;
 					if (result) {
 						switch (result.msg) {
-							// 自定义
+							// (自定义)
 							case "":
 								msg = "";
 								break;
@@ -133,7 +133,7 @@
 	}
 
 
-	// window
+	/* window */
 	new Ext.Window({
 		title: "管理员登录",
 		border: false,
