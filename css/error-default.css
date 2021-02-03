@@ -73,16 +73,14 @@ input, select, textarea {
 .content {
 	margin: 0 auto;
 }
-
-	/**/
-	ul {
-		line-height: 1.5;
-		list-style: disc inside;
-		margin-top: 15px;
+.content ul {
+	line-height: 1.5;
+	list-style: disc inside;
+	margin-top: 15px;
 	}
-	ul li {
-		margin-left: 20px;
-	}
+.content ul li {
+	margin-left: 20px;
+}
 
 
 /*--------------------------------------

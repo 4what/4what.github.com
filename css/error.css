@@ -64,34 +64,34 @@ input, select, textarea {
 }
 
 
-/* TV */
-#tv {
+/**/
+#bg-nosignal {
 	height: 100%;
 }
-#tv div {
+#bg-nosignal li {
 	float: right;
 	height: 100%;
 	width: 12.5%;
 }
 
-#tv .col-1 {
+#bg-nosignal .color-1 {
 	background: black;
 }
-#tv .col-2 {
+#bg-nosignal .color-2 {
 	background: blue;
 }
-#tv .col-3 {
+#bg-nosignal .color-3 {
 	background: red;
 }
-#tv .col-4 {
+#bg-nosignal .color-4 {
 	background: fuchsia;
 }
-#tv .col-5 {
+#bg-nosignal .color-5 {
 	background: lime;
 }
-#tv .col-6 {
+#bg-nosignal .color-6 {
 	background: aqua;
 }
-#tv .col-7 {
+#bg-nosignal .color-7 {
 	background: yellow;
 }
