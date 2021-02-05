@@ -65,33 +65,33 @@ input, select, textarea {
 
 
 /**/
-#bg-nosignal {
+#nosignal {
 	height: 100%;
 }
-#bg-nosignal li {
+#nosignal li {
 	float: right;
 	height: 100%;
 	width: 12.5%;
 }
 
-#bg-nosignal .color-1 {
+#nosignal .color-1 {
 	background: black;
 }
-#bg-nosignal .color-2 {
+#nosignal .color-2 {
 	background: blue;
 }
-#bg-nosignal .color-3 {
+#nosignal .color-3 {
 	background: red;
 }
-#bg-nosignal .color-4 {
+#nosignal .color-4 {
 	background: fuchsia;
 }
-#bg-nosignal .color-5 {
+#nosignal .color-5 {
 	background: lime;
 }
-#bg-nosignal .color-6 {
+#nosignal .color-6 {
 	background: aqua;
 }
-#bg-nosignal .color-7 {
+#nosignal .color-7 {
 	background: yellow;
 }
