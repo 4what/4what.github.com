@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .a {
+        fill: #fff;
+      }
+
+      .a, .b {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .c {
+        fill: #ef6620;
+      }
+    </style>
+  </defs>
+  <title>img.summary-05</title>
+  <g>
+    <rect class="a" x="13.98" y="6.64" width="18.97" height="36.73" rx="2.21" ry="2.21" transform="translate(48.47 1.53) rotate(90)"/>
+    <path class="b" d="M41.9,27.86V22.14h2.3a.7.7,0,0,1,.7.7v4.32a.7.7,0,0,1-.7.7Z"/>
+    <g>
+      <polygon class="c" points="20.15 17.22 28.14 32.78 38.75 32.78 30.76 17.22 20.15 17.22"/>
+      <polygon class="c" points="7.77 17.22 15.76 32.78 26.37 32.78 18.39 17.22 7.77 17.22"/>
+      <path class="c" d="M6.89,18.83V32.07a.71.71,0,0,0,.71.71H14Z"/>
+      <path class="c" d="M39.67,31.24V17.93a.71.71,0,0,0-.71-.71H32.52Z"/>
+    </g>
+  </g>
+</svg>

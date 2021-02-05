@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+{% meta %}
+<link rel="stylesheet" href="./lib/template.css"/>
+{% stylesheet_tags %}
+<title>{% title %}</title>
+</head>
+<body class="template__body">
+	<div id="container" class="container-fluid" data-showAnimation="{% show_animation %}" data-hideAnimation="{% hide_animation %}">
+		<div id="content" class="template__content js-template-content" data-current-page='1'>
+			{% content %}
+		</div>
+	</div>
+	<div class="template__sidebar-left-float hide-on-portrait">
+		<a class="template__sidebar-left js-template-prev" href="#">
+			<i class="fas fa-caret-left template__arrow-lg-icon"></i>
+		</a>
+	</div>
+	<div class="template__sidebar-right-float hide-on-portrait">
+		<a class="template__sidebar-right js-template-next" href="#">
+			<i class="fas fa-caret-right template__arrow-lg-icon"></i>
+		</a>
+	</div>
+	<div class="hide-on-portrait fixed-top">
+		<nav class="navbar navbar-expand navbar-light bg-light template__navbar">
+			<div class="collapse navbar-collapse template__collapse">
+				<p>{% title %}</p>
+				<div class="dropdown dropup">
+					<button type="button" id="dropdownMenuNavigation" class="btn js-navigation-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-up template__menu-list js-navigation-list" aria-labelledby="dropdownMenuNavigation">
+					</div>
+				</div>
+            </div>
+		</nav>
+		<div class="template__progress progress">
+			<div class="progress-bar js-template-progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0% Completed</div>
+		</div>
+	</div>
+	<div class="fixed-bottom hide-on-landscape">
+		<div class="hide-on-landscape">
+			<nav class="navbar navbar-expand navbar-light bg-light template__navbar">
+				<div class="flex-fill">
+					<a class="template__navbar-left js-template-prev" href="#">
+						<i class="fas fa-caret-left template__arrow-med-icon"></i>
+					</a>
+				</div>
+				<div class="dropdown dropup">
+					<button type="button" id="dropdownMenuNavigationSmall" class="btn js-navigation-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
+					<div class="dropdown-menu dropdown-overlay dropdown-menu-up dropdown-menu-center template__menu-list js-navigation-list" aria-labelledby="dropdownMenuNavigationSmall">
+					</div>
+				</div>
+				<div class="flex-fill">
+					<a class="template__navbar-right js-template-next" href="#">
+						<i class="fas fa-caret-right template__arrow-med-icon"></i>
+					</a>
+				</div>
+			</nav>
+		</div>
+		<div class="template__progress progress">
+			<div class="progress-bar js-template-progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0% Completed</div>
+		</div>
+	</div>
+
+<script src="./lib/template.js" type="text/javascript"></script>
+{% script_tags %}{% script_data %}
+</body>
+</html>

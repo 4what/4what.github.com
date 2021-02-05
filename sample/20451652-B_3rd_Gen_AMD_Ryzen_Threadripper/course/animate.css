@@ -1,0 +1,417 @@
+@charset "UTF-8";
+
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+}
+
+
+
+
+
+
+/*THIS STYLESHEET CONTAINS ANIMATIONS USED COURSE-WIDE.
+FOR PAGE-SPECIFIC VARIATIONS, SEE 'PAGES.CSS'*/
+
+
+.hoverGrow {transition: all .2s ease-out;}
+.hoverGrow:hover { transform: scale(1.1,1.1);}
+
+
+/*DELAYS*/
+
+.delay1 {
+	animation-delay: .25s;
+}
+.delay2 {
+	animation-delay: .5s;
+}
+.delay3 {
+	animation-delay: .75s;
+}
+.delay4 {
+	animation-delay: 1s;
+}
+.delay5 {
+	animation-delay: 1.25s;
+}
+.delay6 {
+	animation-delay: 1.5s;
+}
+.delay7{
+	animation-delay: 1.75s;
+}
+.delay8 {
+	animation-delay: 2s;
+}
+.delay9 {
+	animation-delay: 2.25s;
+}
+.delay10 {
+	animation-delay: 2.5s;
+}
+.delay11 {
+	animation-delay: 2.75s;
+}
+
+.delay12 {
+	animation-delay: 3s;
+}
+
+.delay13 {
+	animation-delay: 3.25s;
+}
+
+.delay14 {
+	animation-delay: 3.5s;
+}
+
+/*FADES*/
+
+.fadeInFast {
+	/*position: absolute;*/
+	animation-name: fadeInFast;
+	animation-duration: .25s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes fadeInFast {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.fadeIn {
+	/*position: absolute;*/
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.fadeOut {
+	/*position: absolute;*/
+	animation-name: fadeOut;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+
+.fadeInOut {
+	animation-name: fadeInOut;
+	animation-duration: 10s;
+	animation-delay: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: backwards;
+}
+
+@keyframes fadeInOut {
+	0% {opacity: 0;}
+	40% {opacity: 1;}
+	80% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+/*SOFT SLIDE IN RIGHT*/
+
+.slideInRightFade {
+	/*position: absolute;*/
+	animation-name: slideInRightFade;
+	animation-duration: .25s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes slideInRightFade {
+	0% {opacity: 0; transform: translateX(40px);}
+	100% {opacity: 1;}
+}
+
+
+
+/*SLIDE IN LEFT*/
+
+.slideInLeft {
+	/*position: absolute;*/
+	animation-name: slideInLeft;
+	animation-duration: .75s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out-in;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes slideInLeft {
+	0% {opacity: 0; transform: translateX(-30px);}
+	30% {opacity: 1; transform: translateX(10px);}
+	100% {}
+}
+
+
+/*SLIDE IN RIGHT*/
+
+.slideInRight {
+	/*position: absolute;*/
+	animation-name: slideInRight;
+	animation-duration: .75s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out-in;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes slideInRight {
+	0% {opacity: 0; transform: translateX(40px);}
+	30% {opacity: 1; transform: translateX(-10px);}
+	100% {}
+}
+
+
+/*SLIDE IN BOTTOM*/
+
+.slideInBottom {
+	/*position: absolute;*/
+	animation-name: slideInBottom;
+	animation-duration: .75s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out-in;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes slideInBottom {
+	0% {opacity: 0; transform: translateY(0px);}
+	30% {opacity: 1; transform: translateY(-10px);}
+	100% {}
+}
+
+
+
+
+/*SLIDE IN TOP - SOFT*/
+
+.slideInTop {
+	/*position: absolute;*/
+	animation-name: slideInTop;
+	animation-duration: .75s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out-in;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes slideInTop {
+	0% {opacity: 0; transform: translateY(-10px);}
+	30% {opacity: 1; transform: translateY(3px);}
+	100% {}
+}
+
+
+/*DROP IN*/
+
+.dropIn {
+	/*position: absolute;*/
+	animation-name: dropIn;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out-in;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes dropIn {
+	0% {opacity: 0; transform: translateY(-10px);}
+	30% {opacity: 1; transform: translateY(10px);}
+	100% {}
+}
+
+
+/*POP IN*/
+
+.popIn {
+	/*position: absolute;*/
+	animation-name: popIn;
+	animation-duration: .75s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out-in;
+	animation-fill-mode: backwards;
+}
+
+/*Specify keyframe positions of said class*/
+@keyframes popIn {
+	0% {opacity: 0; transform: scale(.5,.5);}
+	30% {opacity: 1; transform: scale(1.1,1.1);}
+	100% {}
+}
+
+.scaleUp {
+	animation-name: scaleUp;
+	animation-duration: .75s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+} 
+
+/*Specify keyframe positions of said class*/
+@keyframes scaleUp {
+	0% {opacity: 0; transform: scale(.2,.2);}
+	60% {opacity: 1; transform: scale(.95,.95);}
+	100% {opacity: 1; transform: scale(1,1);}
+}
+
+
+/**
+ * Fade in and up animation
+ */
+
+.fade-in-and-up,
+.fade-in-and-up-color,
+.fade-in-and-up-decal {
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.05, -0.02, 0.46, 1.6);
+    animation-fill-mode: forwards;
+}
+
+.fade-in-and-up-1 { animation-delay: 0.5s }
+.fade-in-and-up-2 { animation-delay: 0.8s }
+.fade-in-and-up-3 { animation-delay: 1.1s }
+.fade-in-and-up-4 { animation-delay: 1.4s }
+.fade-in-and-up-5 { animation-delay: 1.7s }
+.fade-in-and-up-6 { animation-delay: 2s }
+
+.fade-in-and-up {
+    animation-name: fade-in-and-up;
+    opacity: 0;
+    transform: translateY(25%);
+}
+
+@keyframes fade-in-and-up {
+    0% {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+/*
+*********************
+PAGES.CSS
+- This only contains page-specific styles
+*********************
+*/
+.page h3 {
+  opacity: 1;
+  animation: headerfadeinfromtop 0.8s linear;
+  -webkit-animation: headerfadeinfromtop 0.8s linear;
+}
+
+@-ms-keyframes headerfadeinfromtop {
+  0%   { opacity: 0; transform: translateY(8px);}
+  100% { opacity: 1; transform: translateY(0px);}
+}
+@-webkit-keyframes headerfadeinfromtop {
+  0%   { opacity: 0; transform: translateY(8px);}
+  100% { opacity: 1; transform: translateY(0px);}
+}
+@keyframes headerfadeinfromtop {
+  0%   { opacity: 0; transform: translateY(8px);}
+  100% { opacity: 1; transform: translateY(0px);}
+}
+
+.page h4 {
+  opacity: 1;
+  animation-name: fadein;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out; 
+  animation-fill-mode: backwards;
+}
+
+.page h5 {
+  opacity: 1;
+  animation-name: fadein;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out; 
+  animation-fill-mode: backwards;
+}
+
+.page h6 {
+  opacity: 1;
+  animation-name: fadein;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out; 
+  animation-fill-mode: backwards;
+}
+
+.page li {
+  opacity: 1;
+  animation-name: fadein;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
+
+.page p {
+  opacity: 1;
+  animation-name: fadein;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes fadein {
+  0%   { opacity: 0; transform: translateY(5px);}
+  100% { opacity: 1; transform: translateY(0px);}
+}
+@keyframes fadein {
+  0%   { opacity: 0; transform: translateY(5px);}
+  100% { opacity: 1; transform: translateY(0px);}
+}
+
+
+

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .a {
+        fill: #ef6620;
+      }
+
+      .b {
+        font-size: 16.97px;
+        fill: #fff;
+        font-family: Montserrat-SemiBoldItalic, Montserrat;
+        font-weight: 700;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <title>img.rizen-v7</title>
+  <g>
+    <path class="a" d="M24.57,27.6,21.72,42.2H38.51a3.42,3.42,0,0,0,3.42-3.42v-15H29.25A4.78,4.78,0,0,0,24.57,27.6Z"/>
+    <path d="M39.86,46.25H10.14A6.13,6.13,0,0,1,4,40.13V10.41a6.13,6.13,0,0,1,6.12-6.13H39.86A6.13,6.13,0,0,1,46,10.41V40.13A6.13,6.13,0,0,1,39.86,46.25Zm-29.72-40A4.14,4.14,0,0,0,6,10.41V40.13a4.13,4.13,0,0,0,4.12,4.12H39.86A4.13,4.13,0,0,0,44,40.13V10.41a4.14,4.14,0,0,0-4.12-4.13Z"/>
+    <text class="b" transform="translate(27.33 39.21)">7</text>
+  </g>
+</svg>

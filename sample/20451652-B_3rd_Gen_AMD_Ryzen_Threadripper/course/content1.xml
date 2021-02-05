@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monsoon template="mobile-nav">
+	<meta>
+		<title>AMD 3rd Gen RYZEN™ Threadripper</title>
+		<description/>
+		<language>English</language>
+	</meta>
+	<assets>
+		<style src="animate.css" />
+		<style src="course.css" />
+		<style src="pages.css" />
+		<style src="videos.css" />
+		<script src="jquery-ui.min.js" />
+		<script src="survey.js" />
+		<script src="videos.js" />
+		<script src="script.js" />
+		<script src="nav-menu-disable.js" />
+		<style src="menu.css" />
+		<style src="titillium.css" />
+		<style src="components.css" />
+	</assets>
+	<components>
+		<component name="quiz" version="2.0" />
+		<component name="reportcard" version="1.0" />
+		<component name="clicksee" version="2.0" />
+		<component name="tabs" version="1.0" />
+		<component name="conversation" version="0.9" />
+		<component name="hotspots" version="1.0" />
+	</components>
+	<pages>
+		<page id="lap1" title="3rd Gen AMD Ryzen™ Threadripper™">
+			<div class="bg"></div>
+			<div class="container_fluid">
+				<div class="page-lap__container _fluid">
+					<div class="container_fluid">
+						<div class="row">
+							<div class="col-lg-7 text-center" style="margin-top:0px">
+								<picture>
+									<source  media="(max-width: 991px)" srcset="{% assets_folder %}logo.01.png"/>
+									<img src="{% assets_folder %}logo.01.png" class="logo slideInTop delay1" />
+								</picture>
+								<picture>
+									<source  media="(max-width: 991px)" srcset="{% assets_folder %}logo.02.png"/>
+									<img src="{% assets_folder %}logo.02.png" class="logo2 slideInTop delay2" />
+								</picture>
+							</div>
+							<div class="col-lg-5 text-center" style="margin-top:0px">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</page>
+		<page id="pg1" title="3rd Gen AMD Ryzen™ Threadripper™">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container_fluid boxx">
+				<div class="row">
+					<div class="col-lg-12 text-center titleTxt">
+						<h3 class="delay1"><b>3RD GEN AMD RYZEN™ <br/><orange>THREADRIPPER™</orange></b></h3>
+						<div class="line2" />
+						<p class="delay4">The High-End Desktop (HEDT) customer is a high-end, demanding user that simply needs the best, no-compromise hardware available. AMD Ryzen™ Threadripper™ desktop processors have consistently pushed the bar of performance and features for this customer, and the world is noticing...</p>
+						<div class="line2" />
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg3" title="Used by Experts">
+			<div class="bg"></div>
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container_fluid boxx">
+				<div class="row">
+				</div>
+				<div class="row">
+					<div class="col-lg-5" style="margin-bottom:80px">
+					</div>
+					<div class="col-lg-7" style="margin-top: 10%">
+						<h3 class="text-center delay2 ls"><b>USED BY <orange>EXPERTS</orange></b></h3>
+						<p class="text-center delay3 ls">Blur Studios leveraged the power of 3rd Gen AMD Ryzen™ Threadripper™ for the production of critical movie and trailer special effects.</p>
+						<div class="line2" />
+						<img src="{% assets_folder %}used-by-experts-logos.png" class="icon-responsive slideInTop delay5" />
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg3a" title="New Class of Performance">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="bg"></div>
+			<div class="container_fluid boxx">
+				<div class="row">
+					<div class="col-lg-12" style="margin-top:0px">
+						<h3 class="delay1"><b>NEW CLASS OF <orange>PERFORMANCE</orange></b></h3>
+						<div class="line2" />
+						<p class="text-center delay3 ls">Let's explore how the 3rd Gen AMD Ryzen™ Threadripper™ series of desktop processors are the perfect match for creators, gamers, and enthusiasts.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6" style="margin-top:0px">
+					<div class="box01 fadeIn delay4">
+						<img src="{% assets_folder %}img.course_overview.01.png" class="icon-responsive text-center" />
+						<div class="obj">
+							<div class="linede"/>
+							<h5 class="delay5"><orange>LEADERSHIP</orange><br/>PERFORMANCE<sup class="specSup">1</sup></h5>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-6" style="margin-top:0px">
+						<div class="box01 fadeIn delay5">
+						<img src="{% assets_folder %}img.course_overview.02.png" class="icon-responsive text-center" />
+						<div class="obj">
+							<div class="linede"/>
+							<h5 class="delay6"><orange>UNRIVALED</orange><br/>PLATFORM</h5>
+						</div>
+						</div>
+					</div>
+						</div>
+					</div>
+			<div class="marg" />
+		</page>
+		<page id="pg4a" title="Leadership Performance">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container_fluid belt">
+				<div class="row">
+					<div class="col-lg-12" style="margin-top:0px">
+						<h3 class="delay1"><b>LEADERSHIP <orange>PERFORMANCE</orange></b></h3>
+						<div class="line2" />
+						<h4 class="delay3"><orange>Click on the cards below to learn why these features are important to high-end users.</orange></h4>
+					</div>
+				</div>
+			</div>
+			<div class="container_fluid belt">
+				<div class="row slideInBottom delay4" style="margin: 2%;">
+					<div class="col-lg" style="padding:0px;">
+						<div class="card-container">
+							<div class="card">
+								<div class="side">
+									<picture>
+										<source  media="(max-width: 991px)" srcset="{% assets_folder %}programmers-small.png"/>
+										<img src="{% assets_folder %}Programmers-Front.png" class="cardPic"/>
+									</picture>
+								</div>
+								<div class="side back">
+									<img src="{% assets_folder %}Programmers-Back.png" class="cardPic"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg" style="padding:0px;">
+						<div class="card-container">
+							<div class="card">
+								<div class="side">
+									<picture>
+										<source  media="(max-width: 991px)" srcset="{% assets_folder %}creators-small.png"/>
+										<img src="{% assets_folder %}Creators-Front.png" class="cardPic"/>
+									</picture>
+								</div>
+								<div class="side back">
+									<img src="{% assets_folder %}Creators-Back.png" class="cardPic"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg" style="padding:0px;">
+						<div class="card-container">
+							<div class="card">
+								<div class="side">
+									<picture>
+										<source  media="(max-width: 991px)" srcset="{% assets_folder %}business-small.png"/>
+										<img src="{% assets_folder %}Business-Front.png" class="cardPic"/>
+									</picture>
+								</div>
+								<div class="side back">
+									<img src="{% assets_folder %}Business-Back.png" class="cardPic"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg" style="padding:0px;">
+						<div class="card-container">
+							<div class="card">
+								<div class="side">
+									<picture>
+										<source  media="(max-width: 991px)" srcset="{% assets_folder %}video-creators-small.png"/>
+										<img src="{% assets_folder %}Video-Creation-Front.png" class="cardPic"/>
+									</picture>
+								</div>
+								<div class="side back">
+									<img src="{% assets_folder %}Video-Creation-Back.png" class="cardPic"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg" style="padding:0px;">
+						<div class="card-container">
+							<div class="card">
+								<div class="side">
+									<picture>
+										<source  media="(max-width: 991px)" srcset="{% assets_folder %}gamers-small.png"/>
+										<img src="{% assets_folder %}Gamers-Front.png" class="cardPic"/>
+									</picture>
+								</div>
+								<div class="side back">
+									<img src="{% assets_folder %}Gamers-Back.png" class="cardPic"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="marg2" />
+		</page>
+		<page id="pg11" title="Quiz Question 1">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container">
+				<div class="text-center">
+					<h3 class="delay1"><b><orange>Quiz</orange> Question 1</b></h3>
+					<div class="line2" />
+				</div>
+				<component type="quiz">
+					<options showprogress="false" showsummary="true" showcounter="false" random="none" confirm="false" ask="all" />
+					<buttons>
+						<next>Next</next>
+						<continue>Confirm</continue>
+					</buttons>
+					<group name="group1" random="none">
+						<item>
+							<question>AMD Ryzen™ Threadripper™ is a platform without compromise. Which of the following technologies would be appealing to a creator that also plays games <orange>(Choose 3)?</orange>​</question>
+							<answer value="correct">High Boost Speeds With Massive Amounts Of On-Chip Memory​</answer>
+							<answer value="correct">High Core And Thread Count For Content Creation</answer>
+							<answer value="correct">Ultra Fast PCIe® 4.0 Lanes That Can Run Multiple GPUs, NVME Storage, And/Or Other Add-In Cards</answer>
+							<answer>Capacity To Run Outdoor Signage</answer>
+							<feedback for="incorrect"><img src="{% assets_folder %}Icon-Fail.svg" class="feedback-icon" /><h4>Not Quite Correct</h4><p>Creators that also play games are interested in: High boost speeds with on-chip memory, high core and thread count, and ultra fast PCIe® 4.0 lanes to run multiple GPUs, NVME storage, and/or other add-in cards.</p></feedback>
+							<feedback for="correct"><img src="{% assets_folder %}Icon-Pass.svg" class="feedback-icon" /><h4>You're Correct!</h4><p></p></feedback>
+						</item>
+					</group>
+				</component>
+				<div class="row">
+				<div class="col-lg-12" style="margin-top:50px">
+						<p class="width delay3"><b>Do not</b> refresh this course. Doing so will erase your score on previous questions.</p>
+					</div>
+				</div>
+			</div>
+		</page>
+		<page id="pg12" title="Quiz Question 2">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container">
+				<div class="text-center">
+					<h3 class="delay1"><b><orange>Quiz</orange> Question 2</b></h3>
+					<div class="line2" />
+				</div>
+				<component type="quiz">
+					<options showprogress="false" showsummary="true" showcounter="false" random="none" confirm="false" ask="all" />
+					<buttons>
+						<next>Next</next>
+						<continue>Confirm</continue>
+					</buttons>
+					<group name="group1" random="answer">
+						<item>
+							<question>What does HEDT stand for?</question>
+							<answer>Heat Excess Dynamic Thermals</answer>
+							<answer value="correct">High End Desktop</answer>
+							<answer>Hierarchal Electronic Detail Type</answer>
+							<answer>High Endurance Defined Transformation</answer>
+							<feedback for="correct"><img src="{% assets_folder %}Icon-Pass.svg" class="feedback-icon" /><h4>You're Correct!</h4><p>Good job! HEDT stands for High-End Desktop.</p></feedback>
+							<feedback><img src="{% assets_folder %}Icon-Fail.svg" class="feedback-icon" /><h4>Not Quite Correct</h4><p>HEDT stands for High-End Desktop.</p></feedback>
+						</item>
+					</group>
+				</component>
+			</div>
+		</page>
+		<page id="pg3b" title="Workstation Performance">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container_fluid boxx">
+				<div class="row">
+					<div class="col-lg-12" style="margin-top:2%">
+						<h3 class="text-center delay1"><b>WORKSTATION <orange>PERFORMANCE</orange></b></h3>
+						<div class="line2" />
+						<h4 class="delay2"><orange>AMD's MOST PRODUCTIVE HEDT PROCESSORS EVER CREATED<sup class="specSup">4</sup></orange></h4>
+					</div>
+					<div class="col-lg-3" style="margin-top:0%">
+						<picture>
+							<img src="{% assets_folder %}img.workstation_performance-01.png" class="img-responsive slideInTop delay4" />
+						</picture>
+					</div>
+					<div class="col-lg-3" style="margin-top:0%">
+						<picture>
+							<img src="{% assets_folder %}img.workstation_performance-02.png" class="img-responsive slideInTop delay5" />
+						</picture>
+					</div>
+					<div class="col-lg-3" style="margin-top:0%">
+						<picture>
+							<img src="{% assets_folder %}img.workstation_performance-03.png" class="img-responsive slideInTop delay6" />
+						</picture>
+					</div>
+					<div class="col-lg-3" style="margin-top:0%">
+						<picture>
+							<img src="{% assets_folder %}img.workstation_performance-04.png" class="img-responsive slideInTop delay7" />
+						</picture>
+					</div>
+				</div>
+				<picture>
+					<img src="{% assets_folder %}img.workstation_performance_legend.png" class="img-responsive slideInTop delay8" />
+				</picture>
+				<p class="text-center slideInTop delay9" style="margin-top:1%">Estimated SPECwpcSM SPECworkstation™ 3 Performance</p>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg3c" title="Workstation Performance">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container_fluid boxx">
+				<div class="row">
+					<div class="col-lg-12" style="margin-top:2%">
+						<h3 class="text-center delay1"><b>WORKSTATION <orange>PERFORMANCE</orange></b></h3>
+						<div class="line2" />
+						<h4 class="delay2"><orange>DESIGNED FOR VISUAL EFFECTS AND CINEMATIC MASTERING PROFESSIONALS<sup class="specSup">5</sup></orange></h4>
+					</div>
+					<div class="col-lg-12 mt-4">
+						<picture class="hide-mobile">
+							<img src="{% assets_folder %}slide-workstation-chart.png" class="img-responsive slideInTop delay4" />
+						</picture>
+						<picture class="hide-desktop">
+							<img src="{% assets_folder %}slide-workstation-chart-mobile.png" class="img-responsive slideInTop delay4" style="height: 100vh" />
+						</picture>
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg3d" title="THE AMD RYZEN&#8482; THREADRIPPER 3990X">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container_fluid boxx">
+				<div class="row">
+					<div class="col-lg-12" style="margin-top:2%">
+						<h3 class="text-center delay1"><b>AMD RYZEN&#8482; <orange>THREADRIPPER 3990X</orange></b></h3>
+						<div class="line2" />
+						<h4 class="delay2"><orange>ONE PROCESSOR TO RENDER THEM ALL<sup class="specSup">7</sup></orange></h4>
+					</div>
+					<div class="col-lg-12 mt-4">
+						<picture class="hide-mobile">
+							<img src="{% assets_folder %}slide-threadripper3990x.png" class="img-responsive slideInTop delay4" style="max-width: 48%;" />
+						</picture>
+					</div>
+				</div>
+			</div>
+			<div class="container_fluid">
+				<picture class="hide-desktop">
+					<img src="{% assets_folder %}slide-threadripper3990x.png" class="img-responsive slideInTop delay4" style="max-width: 95%;" />
+				</picture>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg3z" title="Technical  Specifications">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container downbox">
+				<div class="row">
+					<div class="col">
+						<h3><b>TECHNICAL <orange>SPECIFICATIONS</orange></b></h3>
+						<div class="line2" />
+						<p>Click on each box below to view complete technical specifications.</p>
+					</div>
+				</div>
+				<div class="row mt-2">
+					<div class="col-lg-6 align-self-center">
+						<component id="clicksee5" type="clicksee">
+						<options
+								theme="default"
+								col="1"
+								col-sm="1"
+								col-md="1"
+								col-lg="1"
+						/>
+						<item>
+							<label><img src="{% assets_folder %}img.tech_specs.logo.01.png" class="icon-responsive" /><p>WORLD'S FIRST 64-CORE HEDT PROCESSOR<sub>3</sub></p></label>
+							<content>
+								<picture>
+										<source  media="(max-width: 991px)" srcset="{% assets_folder %}img.tech_specs_pop_up.01.png"/>
+										<img src="{% assets_folder %}img.tech_specs_pop_up.01.png" class="img-responsive" />
+									</picture>
+								<div class="marg" />
+							</content>
+						</item>
+						<item>
+							<label><img src="{% assets_folder %}img.tech_specs.logo.02.png" class="icon-responsive" /><p>AMD'S MOST POWERFUL 32-CORE DESKTOP PROCESSOR<sub>1</sub></p></label>
+								<content>
+									<picture>
+										<source  media="(max-width: 991px)" srcset="{% assets_folder %}img.tech_specs_pop_up.02.png"/>
+										<img src="{% assets_folder %}img.tech_specs_pop_up.02.png" class="img-responsive" />
+									</picture>
+									<div class="marg" />
+								</content>
+						</item>
+						<item>
+							<label><img src="{% assets_folder %}img.tech_specs.logo.03.png" class="icon-responsive" /><p>AMD'S MOST POWERFUL 24-CORE DESKTOP PROCESSOR<sub>1</sub></p></label>
+								<content>
+									<picture>
+										<source  media="(max-width: 991px)" srcset="{% assets_folder %}img.tech_specs_pop_up.03.png"/>
+										<img src="{% assets_folder %}img.tech_specs_pop_up.03.png" class="img-responsive" />
+									</picture>
+									<div class="marg" />
+								</content>
+						</item>
+						</component>
+					</div>
+					<div class="col-lg-6 justify-content-right" style="margin-top:0px">
+						<img src="{% assets_folder %}slide_technical_specs1.png" class="icon-responsive " />
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg13" title="Quiz Question 3">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container">
+				<div class="text-center">
+					<h3 class="delay1"><b><orange>Quiz</orange> Question 3</b></h3>
+					<div class="line2" />
+				</div>
+				<component type="quiz">
+					<options showprogress="false" showsummary="true" showcounter="false" random="none" confirm="false" ask="all" />
+					<buttons>
+						<next>Next</next>
+						<continue>Confirm</continue>
+					</buttons>
+					<group name="group1" random="none">
+						<item>
+							<question>The AMD Ryzen™ Threadripper™ 3990X has how many cores and threads?​</question>
+							<answer>16 cores / 32 threads</answer>
+							<answer>24 cores / 48 threads</answer>
+							<answer>32 cores / 64 threads​</answer>
+							<answer value="correct">64 cores / 128 threads</answer>
+							<feedback for="correct"><img src="{% assets_folder %}Icon-Pass.svg" class="feedback-icon" /><h4>You're Correct!</h4><p>The AMD Ryzen™ Threadripper™ 3990X has 64 cores and 128 threads.</p></feedback>
+							<feedback><img src="{% assets_folder %}Icon-Fail.svg" class="feedback-icon" /><h4>Not Quite.</h4><p>The AMD Ryzen™ Threadripper™ 3990X has 64 cores and 128 threads.</p></feedback>
+						</item>
+					</group>
+				</component>
+			</div>
+		</page>
+		<page id="pg5" title="The New AMD TRX40 Platform">
+			<div class="bg"></div>
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container_fluid boxx">
+				<div class="row">
+				</div>
+				<div class="row">
+					<div class="col-xl">
+						<h3 class="delay2 ls"><b><orange>The New</orange> AMD TRX40 Platform</b></h3>
+						<p class="delay3 ls">The new AMD TRX40 platform represents the pinnacle of desktop computing, built for serious visual effects artists, data scientists, or anyone who takes their time seriously. The scalable TRX40 chipset offers:</p>
+						<picture>
+							<source  media="(max-width: 991px)" srcset="{% assets_folder %}AMD-TRX40-Platform_pinnacle_mobile.png"/>
+							<img src="{% assets_folder %}AMD-TRX40-Platform_pinnacle.png" class="icon-responsive slideInBottom delay5" style="margin-top:0%;"/>
+						</picture>
+					</div>
+					<div class="col-xl" style="margin-bottom:80px">
+						<img src="{% assets_folder %}img.the_new_amd_trx40_float.png" class="icon-responsive slideInTop delay3" />
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg6" title="AMD TRX40 Platform">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<h3 class="text-center delay1"><b><orange>AMD TRX40</orange> PLATFORM</b></h3>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6" style="margin-top:0px">
+						<h4 class="delay2">World's Only HEDT PCIe®<br/>4.0 Platform<sup>4</sup></h4>
+						<ul>
+							<li class="delay3">All 3rd Gen AMD Ryzen™ Threadripper™ desktop processors include 88 total PCIe® 4.0 lanes with 72 addressable lanes.</li>
+							<li class="delay4">More PCIe® 4.0 lanes get you more bandwidth so you can run more devices at full performance.</li>
+						</ul>
+					</div>
+					<div class="col-lg-6" style="margin-top:0px">
+						<img src="{% assets_folder %}img.amd_trx40_platform.png" class="icon-responsive slideInBottom delay4" />
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg8" title="AMD TRX40 Platform">
+			<div class="bg"></div>
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<h3 class="text-center delay1" style="margin-top: 5%;"><b><orange>AMD TRX40</orange> PLATFORM</b></h3>
+			<div class="container downbox">
+				<div class="row">
+					<div class="col-lg-6 obj" style="margin-top:0px">
+						<div class="lined" />
+						<h4 class="delay2">Quad-Channel ECC Memory</h4>
+						<ul>
+							<li class="delay3">With quad-channel support you have the most memory bandwidth you can get on a desktop platform for better performance.</li>
+							<li class="delay4">ECC memory support protects high-value data by detecting memory errors (such as data corruption) and correcting them.</li>
+							<li class="delay5">The AMD TRX40 platform has a colossal 256GB of maximum memory capacity.</li>
+						</ul>
+						<div class="linede" />
+					</div>
+					<div class="col-lg-6" style="margin-top:0px">
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg9" title="AMD TRX40 Platform">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<h3 class="text-center delay1" style="margin-top: 5%;"><b><orange>AMD TRX40</orange> PLATFORM</b></h3>
+			<div class="container_fluid downbox">
+				<div class="row">
+					<div class="col-lg-6" style="margin-top:0px">
+						<img src="{% assets_folder %}amd_trx40_ryzen_chip.png" class="icon-responsive slideInBottom delay4" />
+					</div>
+					<div class="col-lg-6">
+						<h4 class="text-center delay2 topBumper"><orange>7NM for HEDT</orange></h4>
+						<p class="text-center delay3">7nm technology allows for faster, smaller, and lower power transistors providing huge leaps in performance and efficiency versus previous generation processors.</p>
+						<picture>
+							<source  media="(max-width: 991px)" srcset="{% assets_folder %}img.leadership_in_7nm_chart_mobile.png"/>
+							<img src="{% assets_folder %}img.leadership_in_7nm_chart.png" class="icon-responsive slideInBottom delay5" />
+						</picture>
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg14" title="Quiz Question 4">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container">
+				<div class="text-center">
+					<h3 class="delay1"><b><orange>Quiz</orange> Question 4</b></h3>
+					<div class="line2" />
+				</div>
+				<component type="quiz">
+					<options showprogress="false" showsummary="true" showcounter="false" random="none" confirm="false" ask="all" />
+					<buttons>
+						<next>Next</next>
+						<continue>Confirm</continue>
+					</buttons>
+					<group name="group1" random="none">
+						<item>
+							<question>With ECC Support, memory can protect high-value data</question>
+							<answer>By storing information in the cloud</answer>
+							<answer>By encrypting information stored on the hard drive</answer>
+							<answer  value="correct">By detecting memory errors and correcting them</answer>
+							<answer>By subscribing to a virtual security network</answer>
+							<feedback for="correct"><img src="{% assets_folder %}Icon-Pass.svg" class="feedback-icon" />
+								<h4>You're Correct!</h4><p><b>Good job!</b></p>
+							</feedback>
+							<feedback for="incorrect"><img src="{% assets_folder %}Icon-Fail.svg" class="feedback-icon" />
+								<h4>Not Quite.</h4><p>ECC Support helps detect memory errors and correct them to protect high-value data.</p>
+							</feedback>
+						</item>
+					</group>
+				</component>
+			</div>
+		</page>
+		<page id="pg15" title="Quiz Question 5">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container">
+				<div class="text-center">
+					<h3 class="delay1"><b><orange>Quiz</orange> Question 5</b></h3>
+					<div class="line2" />
+				</div>
+				<component type="quiz">
+					<options showprogress="false" showsummary="true" showcounter="false" random="none" confirm="false" ask="all" />
+					<buttons>
+						<next>Next</next>
+						<continue>Confirm</continue>
+					</buttons>
+					<group name="group1" random="none">
+						<item>
+							<question>The AMD Ryzen™ Threadripper™ has unprecedented expansion for serious multi-GPU and NVME arrays because of which technology?</question>
+							<answer>16 cores / 32 threads</answer>
+							<answer>7 nanometer</answer>
+							<answer>GameCache</answer>
+							<answer  value="correct">PCIe® 4.0</answer>
+							<feedback for="correct"><img src="{% assets_folder %}Icon-Pass.svg" class="feedback-icon" /><h4>You're Correct!</h4><p><b>Good job!</b></p></feedback>
+							<feedback for="incorrect"><img src="{% assets_folder %}Icon-Fail.svg" class="feedback-icon" /><h4>Not Quite.</h4><p>PCIe® 4.0 is the correct technology.</p></feedback>
+						</item>
+					</group>
+				</component>
+			</div>
+		</page>
+		<page id="pg10" title="Key Takeaways">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container_fluid boxx">
+				<div class="row">
+					<div class="col-lg-12" style="margin-top:2%">
+						<h3 class="delay1"><b><orange>KEY</orange> TAKEAWAYS</b></h3>
+						<div class="line2" />
+						<p class="delay4">The 3rd Gen AMD Ryzen™ Threadripper™ is the fastest desktop processor ever created.<sup>6</sup> Period. The most cores. The highest bandwidth. The most memory. If you want to render, encode, game, stream, and deliver, get an AMD Ryzen™ Threadripper™.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md" style="margin-top:2%">
+						<picture>
+							<img src="{% assets_folder %}img.key_takeaway_1.png" class="img-responsive text-center slideInTop delay6" />
+						</picture>
+					</div>
+					<div class="col-md" style="margin-top:2%">
+						<picture>
+							<img src="{% assets_folder %}img.key_takeaway_2.png" class="img-responsive text-center slideInTop delay6" />
+						</picture>
+					</div>
+					<div class="col-md" style="margin-top:2%">
+						<picture>
+							<img src="{% assets_folder %}img.key_takeaway_3.png" class="img-responsive text-center slideInTop delay6" />
+						</picture>
+					</div>
+					<div class="col-md" style="margin-top:2%">
+						<picture>
+							<img src="{% assets_folder %}img.key_takeaway_4.png" class="img-responsive text-center slideInTop delay6" />
+						</picture>
+					</div>
+					<div class="col-md" style="margin-top:2%">
+						<picture>
+							<img src="{% assets_folder %}img.key_takeaway_5.png" class="img-responsive text-center slideInTop delay6" />
+						</picture>
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+		<page id="pg16" title="Report card" weight="0">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container">
+				<div class="text-center">
+					<h3 class="delay1"><b>Report <orange>Card</orange></b></h3>
+					<div class="line2"/>
+				</div>
+				<component id="reportcard1" type="reportcard">
+					<options theme="default" pass="80%" />
+					<overall>
+						<feedback threshold="pass">
+							<div class="statuspass"> </div>
+							<h2>Congratulations!</h2>
+							<p>You passed the quiz and have received credit for successful completion of the course. Your final score was <b>%overall%%</b>. Close the course to receive credit</p>
+						</feedback>
+						<feedback threshold="fail">
+							<div class="statusfail" />
+							<h2>Sorry</h2>
+							<p>Unfortunately you did not pass the quiz this time. You need at least <b>80%</b> to pass the course. You achieved an overall score of <b>%overall%%</b>. Please close the course and try again.</p>
+						</feedback>
+						<feedback threshold="incomplete">
+							<div class="statusincomplete" />
+							<h2>Incomplete</h2>
+							<p>You did not complete the course. Please close the course and try again.</p>
+						</feedback>
+					</overall>
+					<group id="group1">
+						<title>Quiz</title>
+						<feedback threshold="pass"><p>Passed</p></feedback>
+						<feedback threshold="fail"><p>Failed</p></feedback>
+						<feedback threshold="incomplete"><p>Incomplete</p></feedback>
+					</group>
+				</component>
+				<div class="but2">
+					<a href="#" class="exit-button">Exit</a>
+				</div>
+			</div>
+		</page>
+		<page id="pg18" title="Footnotes" weight="0">
+			<img src="{% assets_folder %}logo.01.png" class="img-wins2" />
+			<div class="container">
+				<div class="text-center">
+					<h3 class="delay1"><b>Foot<orange>notes</orange></b></h3>
+					<div class="line2"/>
+				</div>
+				<div class="container_fluid">
+					<div class="row">
+						<div class="col-lg-12" style="margin-top:0px">
+							<ol>
+								<li>
+									Testing by AMD performance labs on 10/07/2019 comparing an AMD Ryzen™ Threadripper™ 3970X and AMD Ryzen™ Threadripper™ 3960X vs. Intel© Core™ i9-9980XE in the Cinebench R20 nT benchmark test. Results may vary. CPK-02
+								</li>
+								<li>
+									Max boost is the maximum frequency achievable by a single core on the processor running a bursty single-threaded workload. Max boost will vary based on several factors, including, but not limited to: thermal paste; system cooling; motherboard design and BIOS; the latest AMD chipset driver; and the latest OS updates. Visit amd.com for more details.
+								</li>
+								<li>
+									Based on AMD internal analysis, December 2019. CPK-24
+								</li>
+								<li>
+									Testing by AMD performance labs on 10/11/2019 using an AMD Ryzen™ Threadripper™ 2990WX processor, AMD Ryzen™ Threadripper™ 3960X processor and AMD Ryzen™ Threadripper™ 3970X processor. Scores are estimates based on AMD internal lab measurements/modelling and may vary. Additional information about SPECwpc® can be found at www.spec.org. PC manufacturers may vary configurations yielding different results. Performance may vary based on use of latest drivers. CPK-06
+								</li>
+								<li>
+									Testing by AMD performance labs on 1/14/2020 using a pre-production AMD Ryzen™ Threadripper™ 3990X processor and the AMD Ryzen™ Threadripper™ 2990X processor. Results may vary. CPK-32
+								</li>
+								<li>
+									Testing by AMD Performance Labs as of December 28, 2019 using the MAXON Cinema4D renderer via Cinebench R20.06 on the Core i9-9980XE, Core i9-10980XE, AMD Ryzen™ Threadripper™ 3970X and AMD Ryzen™ Threadripper™ 3990X processors. Results may vary. CPK-26
+								</li>
+								<li>
+									AMD product warranty does not cover damages caused by overclocking, even when overclocking is enabled via AMD hardware.
+								</li>
+								<li>
+									Performance per watt testing conducted by AMD performance labs as of 10/18/2019. Relative performance per watt evaluated by dividing Cinebench R20 nT score by total system power. Watts per core approximated by dividing system wall power by core count(s). Products tested: AMD Ryzen™ Threadripper™ 3960X, AMD Ryzen™ Threadripper™ 3970X, Intel Core i9-9980XE. Results may vary. CPK-03
+								</li>
+								<li>
+									Performance per watt testing conducted by AMD performance labs as of 11/11/2019. Relative performance per watt evaluated by dividing Cinebench R20 nT score by total system power. Watts per core approximated by dividing system wall power by core count(s). Products tested:  AMD Ryzen™ Threadripper™ 2990WX, AMD Ryzen™ Threadripper™ 3960X and AMD Ryzen™ Threadripper™ 3970X. Results may vary. CPK-10
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="marg" />
+		</page>
+	</pages>
+</monsoon>
