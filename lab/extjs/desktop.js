@@ -1,4 +1,4 @@
-﻿// desktop configuration
+// desktop configuration
 MyDesktop = new Ext.app.App({
 	init: function() {
 		Ext.QuickTips.init();

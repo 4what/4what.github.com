@@ -1,4 +1,4 @@
-﻿Lottery.init({
+Lottery.init({
 	//anonymous: false,
 	//auto: true,
 	awards: [

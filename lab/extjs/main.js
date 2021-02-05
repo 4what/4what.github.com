@@ -1,4 +1,4 @@
-﻿Ext.onReady(function() {
+Ext.onReady(function() {
 
 	/* vtypes */
 	Ext.apply(Ext.form.VTypes, $ext.vtypes.daterange());

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * additional-methods
  *
  * @author 4what

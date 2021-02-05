@@ -1,4 +1,4 @@
-﻿Ext.onReady(function() {
+Ext.onReady(function() {
 
 	/* nav */
 	var _nav = new Ext.Panel({

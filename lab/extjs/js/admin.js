@@ -1,4 +1,4 @@
-﻿/* blank image */
+/* blank image */
 Ext.BLANK_IMAGE_URL = "js/extjs/3.4.1.1/resources/images/default/s.gif";
 
 /* chart */

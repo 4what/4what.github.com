@@ -1,4 +1,4 @@
-﻿Ext.onReady(function() {
+Ext.onReady(function() {
 
 	/* form */
 	var _form = new Ext.form.FormPanel({

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Validate
  *
  * @author 4what
