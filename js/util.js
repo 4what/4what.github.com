@@ -474,7 +474,7 @@ Util.prototype = {
 	  Category: Form
 	--------------------------------------*/
 	/**
-	 * TODO
+	 * TODO:
 	 *
 	 * @requires $js.keyCode
 	 * @param {Event} e
@@ -597,7 +597,7 @@ Util.prototype = {
 	},
 
 	/**
-	 * TODO
+	 * TODO:
 	 */
 	json: {
 		/**
@@ -712,15 +712,15 @@ Util.prototype = {
 			return this.parse(window.location.search.slice(1));
 		},
 		/**
-		 * @param {String} text
+		 * @param {String} search
 		 * @return {Object}
 		 */
-		parse: function(text) {
+		parse: function(search) {
 			var result = {};
-			if (text) {
-				var map = text.split("&");
+			if (search) {
+				var map = search.split("&");
 				for (var entry, i = 0, l = map.length; i < l; i++) {
-					entry = map[i].split("=");
+					entry = map[i].split("="); // TODO: Base64
 					result[entry[0]] = entry[1];
 				}
 			}
