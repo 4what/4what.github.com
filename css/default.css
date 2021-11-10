@@ -234,7 +234,6 @@ input, select, textarea {
 		border-left: 1px dashed #555;
 		margin: 5px 0 0 4px;
 		overflow: hidden;
-		text-align: center;
 		width: 100%;
 		word-break: break-all;
 		word-wrap: break-word;
@@ -242,17 +241,24 @@ input, select, textarea {
 	.gallery li {
 		float: left;
 		margin: 5px 0;
+		text-align: center;
 		width: 25%;
 	}
-	.gallery div a img {
+	.gallery div a span {
 		border-color: #555;
 		border-style: solid;
 		border-width: 5px 5px 20px 5px;
+		display: block;
 		height: 200px;
+		margin: 0 auto;
 		width: 150px;
 	}
-	.gallery div a:hover img {
+	.gallery div a:hover span {
 		border-color: inherit;
+	}
+	.gallery div a img {
+		height: 100%;
+		width: 100%;
 	}
 	.gallery p {
 		margin-top: 5px;
