@@ -3,7 +3,7 @@
 /**
  * jQuery Util
  *
- * @author http://www.4what.cn/
+ * @author http://4what.cn/
  * @version 1.3 Build 2018.04.13
  */
 (function() {
