@@ -45,6 +45,14 @@ input, select, textarea {
 
 
 /*--------------------------------------
+  MAIN
+--------------------------------------*/
+.main {
+	text-align: center;
+}
+
+
+/*--------------------------------------
   HEADER
 --------------------------------------*/
 .iframe-header {
@@ -121,14 +129,6 @@ input, select, textarea {
 		text-align: right;
 		top: 95px;
 	}
-
-
-/*--------------------------------------
-  MAIN
---------------------------------------*/
-.main {
-	text-align: center;
-}
 
 
 /*--------------------------------------
@@ -320,37 +320,41 @@ input, select, textarea {
 	}
 
 	/*--------------------------------------
-	  search.html
+	  sitemap.html
 	--------------------------------------*/
-	.iframe-search {
-		/*height: 150px;*/
-		height: 125px;
-		margin: 20px auto 0 auto;
-		width: 720px;
+	.sitemap {
+		margin-top: 5px;
+	}
+	.sitemap dt {
+		background: url("../images/bullet-square.png") no-repeat 0 center;
+		line-height: 2.5;
+		text-indent: 10px;
+	}
+	.sitemap dd {
+		overflow: auto;
+		text-indent: 10px;
+		width: 100%;
+	}
+	.sitemap dd a {
+		float: left;
 	}
 
-	.body-search {
-		background: #222 url("../images/hr.png") repeat-x;
-		margin: 0 auto;
-		width: 680px;
-	}
 
-	.search {
-		float: right;
-		text-align: right;
-		width: 50%
-	}
-	.search h3.subheading {
-		border-left: none;
-		border-right: 10px solid #555;
-		padding-right: 10px;
-		text-indent: 0;
-	}
-	.search .form {
-		border-right: 1px dashed #555;
-		margin: 5px 4px 0 0;
-		padding-right: 15px;
-	}
+/*--------------------------------------
+  TOOLBAR
+--------------------------------------*/
+.iframe-toolbar {
+	/*height: 150px;*/
+	height: 125px;
+	margin: 20px auto 0 auto;
+	width: 720px;
+}
+
+.body-toolbar {
+	background: #222 url("../images/hr.png") repeat-x;
+	margin: 0 auto;
+	width: 680px;
+}
 
 	/**/
 	#subnav {
@@ -423,24 +427,22 @@ input, select, textarea {
 		background: #04baff;
 	}
 
-	/*--------------------------------------
-	  sitemap.html
-	--------------------------------------*/
-	.sitemap {
-		margin-top: 5px;
+	/**/
+	.search {
+		float: right;
+		text-align: right;
+		width: 50%
 	}
-	.sitemap dt {
-		background: url("../images/bullet-square.png") no-repeat 0 center;
-		line-height: 2.5;
-		text-indent: 10px;
+	.search h3.subheading {
+		border-left: none;
+		border-right: 10px solid #555;
+		padding-right: 10px;
+		text-indent: 0;
 	}
-	.sitemap dd {
-		overflow: auto;
-		text-indent: 10px;
-		width: 100%;
-	}
-	.sitemap dd a {
-		float: left;
+	.search .form {
+		border-right: 1px dashed #555;
+		margin: 5px 4px 0 0;
+		padding-right: 15px;
 	}
 
 

@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
 @import url("reset.css");
-@import url("error-default.css");
 
 html {
 	height: 100%;
 	overflow: hidden;
 }
-
 body {
 	color: #fff;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
 	height: 100%;
-	margin: 0;
 	overflow: hidden;
 }
+
 
 a:link {
 	color: #fff;
@@ -26,6 +26,8 @@ a:hover {
 }
 
 input, select, textarea {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-size: 12px;
 }
 
 
@@ -37,6 +39,7 @@ input, select, textarea {
 	right: 50px;
 	text-align: right;
 	top: 50px;
+	width: 750px;
 }
 
 
@@ -44,27 +47,44 @@ input, select, textarea {
   HEADER
 --------------------------------------*/
 .header {
-	border: none;
 }
 .header p {
-	color: #fff;
+	margin-top: 5px;
 }
 
 	/**/
 	h1 {
-		color: #fff;
+		font-size: 18px;
+		font-weight: normal;
 	}
+
+
+/*--------------------------------------
+  CONTAINER
+--------------------------------------*/
+.container {
+	margin-top: 15px;
+}
+.container ul {
+	line-height: 2;
+	list-style: disc inside;
+}
+.container ul li {
+	margin-left: 20px;
+}
 
 
 /*--------------------------------------
   FOOTER
 --------------------------------------*/
 .footer {
-	border: none;
+	margin-top: 15px;
 }
 
 
-/**/
+/*--------------------------------------
+  NOSIGNAL
+--------------------------------------*/
 #nosignal {
 	height: 100%;
 }

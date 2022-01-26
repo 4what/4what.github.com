@@ -2,33 +2,15 @@
 
 @import url("reset.css");
 
-.body-return {
+body {
 	color: #333;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 	font-size: 12px;
-/*
-	word-break: break-all;
-	word-wrap: break-word;
-*/
-}
-
-a:link {
-}
-a:visited {
-}
-a:hover {
-}
-
-input, select, textarea {
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
-	font-size: 12px;
 }
 
 
-/*--------------------------------------
-  return.html
---------------------------------------*/
-.iframe-return {
+/**/
+.iframe-return-to-home {
 	height: 26px;
 	position: fixed !important; /* for IE7+, Std */
 	position: absolute; /* for IE6 */
@@ -37,7 +19,7 @@ input, select, textarea {
 	width: 155px;
 }
 
-.return {
+.return-to-home {
 	background: #eee;
 	border-color: #808080;
 	border-style: solid;
@@ -51,7 +33,7 @@ input, select, textarea {
 	top: 0;
 	width: 150px;
 }
-.return a {
+.return-to-home a {
 	color: #333;
 	text-decoration: none;
 }
