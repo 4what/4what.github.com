@@ -3,7 +3,7 @@
 /**
  * ExtJS Util
  *
- * @author http://4what.cn/
+ * @author http://4what.cn
  * @version 1.1 Build 2016.11.04
  * @requires ExtJS 3.2+
  */

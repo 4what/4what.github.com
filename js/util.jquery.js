@@ -3,7 +3,7 @@
 /**
  * jQuery Util
  *
- * @author http://4what.cn/
+ * @author http://4what.cn
  * @version 1.3 Build 2018.04.13
  */
 (function() {
@@ -399,11 +399,11 @@ var UtilJq = {
 	},
 
 	/**
-	 * http://open.weibo.com/
-	 * http://connect.qq.com/
-	 * http://open.t.qq.com/
-	 * http://open.kaixin001.com/
-	 * http://dev.renren.com/
+	 * http://open.weibo.com
+	 * http://connect.qq.com
+	 * http://open.t.qq.com
+	 * http://open.kaixin001.com
+	 * http://dev.renren.com
 	 *
 	 * @requires jQuery 1.3.2+
 	 * @param {Object} target (optional)
