@@ -1,7 +1,17 @@
-players.rar
+# macOS
+.DS_Store
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+
+# Windows
+Thumbs.db
+
+
+# IntelliJ IDEA
+.idea/
 *.iml
 *.ipr
+*.iws
+
+
+# ...
+players.rar
