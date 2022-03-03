@@ -1,0 +1,9 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [{
+            "appID": " 5TJ58B626U.com.example.oc.Universal-Link.alpha",
+            "paths": ["/*"]
+        }]
+    }
+}
