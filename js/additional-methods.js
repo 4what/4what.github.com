@@ -2,7 +2,7 @@
  * additional-methods
  *
  * @author 4what
- * @version 2016.11.16
+ * @version 2022.06.03
  * @requires jQuery Validation, Validate
  */
 
@@ -12,8 +12,8 @@ $.validator.addMethod("isChinese", function(value, element) {
 }, "请输入真实中文姓名");
 
 /* 身份证 */
-$.validator.addMethod("isIdCard", function(value, element) {
-	return this.optional(element) || Validate.isIdCard(value);
+$.validator.addMethod("isIdentity", function(value, element) {
+	return this.optional(element) || Validate.isIdentity(value);
 }, "请输入真实身份证号");
 
 /* 手机 */
