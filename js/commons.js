@@ -103,7 +103,7 @@ var $4what = function() {
 		var host = (function() {
 			var
 			result = "",
-			folders = ["article", "sample"],
+			folders = ["articles", "samples"],
 			path,
 			pathname = window.location.pathname,
 			re;
