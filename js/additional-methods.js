@@ -1,8 +1,4 @@
 /**
- * additional-methods
- *
- * @author 4what
- * @version 2022.06.03
  * @requires jQuery Validation, Validate
  */
 

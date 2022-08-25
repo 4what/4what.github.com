@@ -1,10 +1,8 @@
-(function() {
-
 /**
  * @param {Object} options
  * @param {Function} callback
  */
-var WeiXin = window.WeiXin = function(options, callback) {
+var WeiXin = function(options, callback) {
 	var script = document.createElement("script");
 	script.src = "http://res.wx.qq.com/open/js/jweixin-1.4.0.js";
 	document.body.appendChild(script);
@@ -52,5 +50,3 @@ var WeiXin = window.WeiXin = function(options, callback) {
 		xhr.send();
 	};
 };
-
-})();

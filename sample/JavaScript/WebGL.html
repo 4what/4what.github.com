@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - JavaScript</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
@@ -11,57 +11,58 @@
 	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Specification</span></h2>
-	<p>
-		<a href="http://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">[1]</a>
-	</p>
+	<h2><span>Specification</span></h2>
+		<p>
+			<a href="http://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial">[1]</a>
+		</p>
 
-<h2><span>Compatibility</span></h2>
-	<p>
-		IE11+,
-		Std<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">[1]</a></sup>
-	</p>
+	<h2><span>Compatibility</span></h2>
+		<p>
+			IE11+,
+			Std
+				<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">[1]</a></sup>
+		</p>
 
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="html">
-	<canvas id="canvas" height="150" width="300" style="border: 2px solid red"></canvas>
-	</textarea>
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="html">
+		<canvas id="canvas" height="150" width="300" style="border: 2px solid red"></canvas>
+		</textarea>
 
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	var canvas = document.getElementById("canvas");
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
 
-	var gl = canvas.getContext("webgl") // for Std
-		|| canvas.getContext("experimental-webgl"); // for IE11+, Std
+		var gl = canvas.getContext("webgl") // for Std
+			|| canvas.getContext("experimental-webgl"); // for IE11+, Std
 
-	if (gl) {
-		gl.clearColor(0.0, 0.0, 0.0, 1.0);
-		gl.enable(gl.DEPTH_TEST);
-		gl.depthFunc(gl.LEQUAL);
-		gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-	}
-	</script>
-	</textarea>
+		if (gl) {
+			gl.clearColor(0.0, 0.0, 0.0, 1.0);
+			gl.enable(gl.DEPTH_TEST);
+			gl.depthFunc(gl.LEQUAL);
+			gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+		}
+		</script>
+		</textarea>
 
-<h2><span>Example</span></h2>
-	<canvas id="canvas" height="150" width="300" style="border: 2px solid red"></canvas>
+	<h2><span>Example</span></h2>
+		<canvas id="canvas" height="150" width="300" style="border: 2px solid red"></canvas>
 
-	<script type="text/javascript">
-	var canvas = document.getElementById("canvas");
+		<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
 
-	var gl = canvas.getContext("webgl") // for Std
-		|| canvas.getContext("experimental-webgl"); // for IE11+, Std
+		var gl = canvas.getContext("webgl") // for Std
+			|| canvas.getContext("experimental-webgl"); // for IE11+, Std
 
-	if (gl) {
-		gl.clearColor(0.0, 0.0, 0.0, 1.0);
-		gl.enable(gl.DEPTH_TEST);
-		gl.depthFunc(gl.LEQUAL);
-		gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-	}
-	</script>
+		if (gl) {
+			gl.clearColor(0.0, 0.0, 0.0, 1.0);
+			gl.enable(gl.DEPTH_TEST);
+			gl.depthFunc(gl.LEQUAL);
+			gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+		}
+		</script>
 
-<script type="text/javascript" src="../../js/sample.js"></script>
+	<script type="text/javascript" src="../../js/sample.js"></script>
 
-<script type="text/javascript" src="../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../js/analytics.js"></script>
 </body>
 </html>

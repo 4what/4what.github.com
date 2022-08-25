@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>4what - JavaScript</title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+
+	<script type="text/javascript" src="../../js/util.js"></script>
+	<script type="text/javascript" src="../../js/commons.js"></script>
+</head>
+<body>
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="html">
+		<link rel="alternate stylesheet" type="text/css" title="Dark" href="alt.css" />
+		</textarea>
+
+		<textarea cols="" rows="" name="code" class="html">
+		<button onclick="setStyle();">Light</button>
+		<button onclick="setStyle('Dark');">Dark</button>
+		</textarea>
+
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		function setStyle(name) {
+			var links = document.getElementsByTagName("link");
+
+			for (var item, i = links.length - 1; i >= 0; i--) {
+				item = links[i];
+
+				if (item.getAttribute("rel").indexOf("alternate stylesheet") > -1) {
+					item.disabled = true;
+
+					if (item.getAttribute("title").indexOf(name) > -1) {
+						item.disabled = false;
+					}
+				}
+			}
+		}
+		</script>
+		</textarea>
+
+	<h2><span>Example</span></h2>
+		<link rel="alternate stylesheet" type="text/css" title="Dark" href="alt.css" />
+
+		<button onclick="setStyle();">Light</button>
+		<button onclick="setStyle('Dark');">Dark</button>
+
+		<script type="text/javascript">
+		function setStyle(name) {
+			var links = document.getElementsByTagName("link");
+
+			for (var item, i = links.length - 1; i >= 0; i--) {
+				item = links[i];
+
+				if (item.getAttribute("rel").indexOf("alternate stylesheet") > -1) {
+					item.disabled = true;
+
+					if (item.getAttribute("title").indexOf(name) > -1) {
+						item.disabled = false;
+					}
+				}
+			}
+		}
+		</script>
+
+	<script type="text/javascript" src="../../js/sample.js"></script>
+
+	<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>

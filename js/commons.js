@@ -107,18 +107,23 @@ var $4what = function() {
 			path,
 			pathname = window.location.pathname,
 			re;
+
 			for (var item, i = folders.length - 1; i >= 0; i--) {
 				item = folders[i];
 				re = new RegExp("(?:/|\\\\)(" + item + "(?:/|\\\\)((?!" + item + "(?:/|\\\\)).)*?$)").exec(pathname);
+
 				if (re) {
 					path = re[1];
 					re = /\/|\\/g;
+
 					while (re.exec(path)) {
 						result += "../";
 					}
+
 					break;
 				}
 			}
+
 			return result;
 		})();
 
@@ -132,6 +137,7 @@ var $4what = function() {
 							//"js/jquery/jquery-1.3.2.min.js"
 							"js/jquery/jquery-1.8.3.min.js"
 					);
+
 					break;
 
 				/* jQuery UI */
@@ -140,18 +146,23 @@ var $4what = function() {
 
 					/* v1.8 for jQuery 1.3.2+ */
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.css");
+
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery-ui.min.js");
 					//$js.include(host + "js/jquery/ui/1.8.24/jquery.ui.datepicker-zh-CN.min.js");
 
 					/* v1.12.1 for jQuery 1.7+ */
 					//$js.include(host + "js/jquery/ui/1.12.1/jquery-ui.min.css");
+
 					$js.include(host + "js/jquery/ui/1.12.1/jquery-ui.min.js");
+
 					break;
 
 				/* jQuery lightBox */
 				case "jquery-lightbox":
 					$js.include(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.css");
+
 					$js.include(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.pack.js");
+
 					break;
 
 				/* SyntaxHighlighter */
@@ -193,6 +204,7 @@ var $4what = function() {
 					$js.bind(window, "load", function() {
 						dp.SyntaxHighlighter.HighlightAll("code", true, false, false, 1, false); // (name, [showGutter], [showControls], [collapseAll], [firstLine], [showColumns])
 					});
+
 					break;
 				default:
 					break;
@@ -215,6 +227,7 @@ var $4what = function() {
 		var p = document.createElement("p");
 		p.className = "log";
 		p.innerHTML = data;
+
 		(target || document.body).appendChild(p);
 	};
 };

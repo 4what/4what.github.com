@@ -1,8 +1,4 @@
-/*___________________________________4what____________________________________*/
-
 /**
- * ExtJS Util
- *
  * @author http://4what.cn
  * @version 1.1 Build 2016.11.04
  * @requires ExtJS 3.2+
@@ -11,7 +7,7 @@
 
 Ext.ns("$ext");
 
-var UtilExt = $ext = {
+var Util = $ext = {
 	/**
 	 * @requires Ext.Desktop
 	 */
@@ -43,6 +39,7 @@ var UtilExt = $ext = {
 					var
 					desktop = this.app.getDesktop(),
 					win = desktop.getWindow(id);
+
 					if (!win) {
 						win = desktop.createWindow({
 							id: id,
@@ -58,6 +55,7 @@ var UtilExt = $ext = {
 							html: '<iframe src="' + src + '" frameborder="0" scrolling="no" style="height: 100%; width: 100%;"></iframe>'
 						});
 					}
+
 					win.show();
 				}
 			});
@@ -74,6 +72,7 @@ var UtilExt = $ext = {
 				var
 				item = Ext.getCmp(element.id),
 				value = item.getValue();
+
 				if (value) {
 					function fn() {
 						if (typeof callback === "function") {
@@ -82,6 +81,7 @@ var UtilExt = $ext = {
 					}
 					if (item.mode === "remote") {
 						var store = item.getStore();
+
 						if (store.findExact(item.valueField, value) === -1) {
 							store.load({
 								params: {
@@ -92,6 +92,7 @@ var UtilExt = $ext = {
 									fn();
 								}
 							});
+
 							delete item.lastQuery;
 						}
 					} else {
@@ -108,15 +109,19 @@ var UtilExt = $ext = {
 		 */
 		loadChild: function(parent, child) {
 			var value = parent.getValue();
+
 			if (value) {
 				var name = parent.getName();
+
 				Ext.select(child).each(function(element, composite, index) {
 					var item = Ext.getCmp(element.id);
 					item.enable();
 					item.reset();
+
 					if (item.mode === "remote") {
 						var store = item.getStore();
 						store.setBaseParam(name, value);
+
 						if (item.lastQuery !== undefined) {
 							store.load();
 						}
@@ -144,17 +149,22 @@ var UtilExt = $ext = {
 			switch (action.failureType) {
 				case Ext.form.Action.SERVER_INVALID:
 					//msg = action.result.msg;
+
 					break;
 				case Ext.form.Action.LOAD_FAILURE:
 					//msg = action.result.msg;
+
 					break;
 				case Ext.form.Action.CONNECT_FAILURE:
 					msg = action.response.status + " " + action.response.statusText;
+
 					break;
 				default:
 					msg = action.failureType;
+
 					break;
 			}
+
 			Ext.Msg.alert("错误", msg, fn).setIcon(Ext.Msg.ERROR);
 		}
 	},
@@ -268,25 +278,36 @@ var UtilExt = $ext = {
 	monthpicker: function(datefield, callback) {
 		Ext.each([datefield.getEl(), datefield.trigger], function(item, index, allItems) {
 			datefield.mun(item, "click", datefield.onTriggerClick, datefield);
+
 			datefield.mon(item, "click", function(e, target, options) {
 				datefield.onTriggerClick();
+
 				var
 				datemenu = datefield.menu,
 				datepicker = datemenu.picker;
+
 				datepicker.showMonthPicker();
+
 				if (datefield._monthpicker) {
 					return;
 				}
+
 				datepicker.mun(datepicker.monthPicker, "dblclick", datepicker.onMonthDblClick, datepicker);
+
 				datepicker.getEl().select("button.x-date-mp-cancel").remove();
+
 				datepicker.getEl().select("button.x-date-mp-ok").on("click", function(e, target, options) {
 					datemenu.hide();
+
 					var value = datefield.getValue();
+
 					datefield.setValue((datepicker.mpSelMonth + 1) + "/1/" + datepicker.mpSelYear);
+
 					if (String(datefield.getValue()) !== String(value) && typeof callback === "function") {
 						callback();
 					}
 				});
+
 				datefield._monthpicker = true;
 			}, datefield);
 		});
@@ -304,8 +325,10 @@ var UtilExt = $ext = {
 			name = multiselect.valueField,
 			record,
 			store = multiselect.store;
+
 			if (data instanceof Ext.data.Record) {
 				record = data;
+
 				if (store.indexOf(record) > -1 || store.findExact(name, record.get(name)) > -1) {
 					exist = true;
 				}
@@ -315,11 +338,13 @@ var UtilExt = $ext = {
 				} else {
 					var o = {};
 					o[name] = data;
+
 					record = new Ext.data.Record(o);
 				}
 			}
 			if (!exist) {
 				store.add(record);
+
 				multiselect.clearInvalid();
 			}
 		},
@@ -339,8 +364,10 @@ var UtilExt = $ext = {
 			multiselect = Ext.getCmp(id),
 			store = multiselect.store,
 			value = multiselect.getValue();
+
 			if (value) {
 				value = value.split(",");
+
 				for (var i = value.length - 1; i >= 0; i--) {
 					store.removeAt(store.find(multiselect.valueField, new RegExp("^" + value[i] + "$")));
 				}
@@ -353,12 +380,14 @@ var UtilExt = $ext = {
 		load: function(multiselect, data) {
 			Ext.select(multiselect).each(function(element, composite, index) {
 				var item = Ext.getCmp(element.id);
+
 				if (item.store.proxy !== undefined) {
 					item.store.load({
 						params: /number|string/.test(typeof data) ? {
 							id: data
 						} : data
 					});
+
 					item.clearInvalid();
 				}
 			});
@@ -373,9 +402,11 @@ var UtilExt = $ext = {
 				item = Ext.getCmp(element.id),
 				store = item.store,
 				total = store.getCount();
+
 				for (var i = total - 1; i >= 0; i--) {
 					data.push(store.getAt(i).get(item.valueField));
 				}
+
 				item.setValue(data.join());
 			});
 		}
@@ -389,6 +420,7 @@ var UtilExt = $ext = {
 		setBaseParam: function(store, field) {
 			Ext.select(field).each(function(element, composite, index) {
 				var item = Ext.getCmp(element.id);
+
 				store.setBaseParam(item.getName(), item.getValue());
 			});
 		}
@@ -411,13 +443,15 @@ var UtilExt = $ext = {
 			target = tabpanel.find("title", title)[0];
 
 			if (target === undefined) {
-				target = tabpanel.add(UtilExt.iframepanel(title, src));
+				target = tabpanel.add(Util.iframepanel(title, src));
+
 				if (iconCls) {
 					target.setIconClass(iconCls);
 				}
 			} else {
 				target.getFrameWindow().location.href = src;
 			}
+
 			tabpanel.setActiveTab(target);
 		},
 		/**
@@ -434,6 +468,7 @@ var UtilExt = $ext = {
 
 			if (node.isLeaf()) {
 				e.stopEvent();
+
 				this.load(tabpanel, {
 					title: title,
 					src: node.attributes.href,
@@ -452,9 +487,12 @@ var UtilExt = $ext = {
 				ctrl: false,
 				fn: function(key, e) {
 					e.preventDefault();
+
 					var tabpanel = window.top.Ext.getCmp(id);
+
 					if (tabpanel) {
 						var tab = tabpanel.getActiveTab();
+
 						if (tab.isXType("iframepanel")) {
 							tab.getFrameWindow().location.reload();
 						}
@@ -474,13 +512,17 @@ var UtilExt = $ext = {
 		 */
 		fields: function(form, name) {
 			var items = this._fields || (this._fields = {});
+
 			if (form) {
 				var id = form.getId();
+
 				items = items[id] || (items[id] = {});
+
 				if (name) {
 					items = items[name] || (items[name] = []);
 				}
 			}
+
 			return items;
 		},
 		/**
@@ -512,7 +554,9 @@ var UtilExt = $ext = {
 					}
 				]
 			});
+
 			fields.push(item.getId());
+
 			form.doLayout();
 		},
 		/**
@@ -523,6 +567,7 @@ var UtilExt = $ext = {
 			field.items.each(function(item, index, length) {
 				form.getForm().remove(item);
 			});
+
 			form.remove(field);
 		},
 		/**
@@ -532,10 +577,12 @@ var UtilExt = $ext = {
 			var
 			self = this,
 			fields = self.fields(form);
+
 			Ext.iterate(fields, function(key, value, o) {
 				Ext.each(value, function(item, index, allItems) {
 					self.remove(form, Ext.getCmp(item));
 				});
+
 				o[key] = [];
 			});
 		}
@@ -550,6 +597,7 @@ var UtilExt = $ext = {
 			function handler(target) {
 				bln ? target.expandAll() : target.collapseAll();
 			}
+
 			if (treepanel.getXType() === "treepanel") {
 				handler(treepanel);
 			} else {
@@ -579,20 +627,25 @@ var UtilExt = $ext = {
 			return {
 				daterange: function(value, field) {
 					var date = field.parseDate(value);
+
 					if (!date) {
 						return false;
 					}
+
 					if (field.startDateField && (!this.dateRangeMax || (date.getTime() !== this.dateRangeMax.getTime()))) {
 						var start = Ext.getCmp(field.startDateField);
 						start.setMaxValue(date);
 						start.validate();
+
 						this.dateRangeMax = date;
 					} else if (field.endDateField && (!this.dateRangeMin || (date.getTime() !== this.dateRangeMin.getTime()))) {
 						var end = Ext.getCmp(field.endDateField);
 						end.setMinValue(date);
 						end.validate();
+
 						this.dateRangeMin = date;
 					}
+
 					return true;
 				}
 			};
@@ -645,17 +698,21 @@ var UtilExt = $ext = {
 					if (!value) {
 						return false;
 					}
+
 					if (field.startTimeField && (!this.timeRangeMax || (value !== this.timeRangeMax))) {
 						var start = Ext.getCmp(field.startTimeField);
 						start.setMaxValue(value);
 						start.validate();
+
 						this.timeRangeMax = value;
 					} else if (field.endTimeField && (!this.timeRangeMin || (value !== this.timeRangeMin))) {
 						var end = Ext.getCmp(field.endTimeField);
 						end.setMinValue(value);
 						end.validate();
+
 						this.timeRangeMin = value;
 					}
+
 					return true;
 				}
 			};

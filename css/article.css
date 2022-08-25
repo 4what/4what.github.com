@@ -9,10 +9,10 @@ body {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
 	font-size: 12px;
 	margin: 15px 10px;
-/*
+	/*
 	word-break: break-all;
 	word-wrap: break-word;
-*/
+	*/
 }
 
 a:link {
@@ -102,13 +102,7 @@ input, select, textarea {
 		display: inline;
 	}
 
-
 	/**/
-	blockquote {
-		margin-top: 5px;
-		text-indent: 1em;
-	}
-
 	h2 {
 		border-bottom: 1px solid #808080;
 		color: #005a9c;
@@ -137,10 +131,6 @@ input, select, textarea {
 	}
 	h3 sup a {
 		border-bottom: none;
-	}
-
-	p {
-		margin-top: 5px;
 	}
 
 	pre,
@@ -205,6 +195,11 @@ input, select, textarea {
 		font-size: 70%;
 		* font-size: 100%;
 		font-size: 100%\0;
+	}
+
+	blockquote {
+		margin-top: 10px;
+		text-indent: 1em;
 	}
 
 

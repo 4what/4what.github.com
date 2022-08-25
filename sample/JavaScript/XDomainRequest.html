@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - JavaScript</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
@@ -11,54 +11,54 @@
 	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Specification</span></h2>
-	<p>
-		<a href="http://msdn.microsoft.com/en-us/library/dd573303">[1]</a>
-	</p>
+	<h2><span>Specification</span></h2>
+		<p>
+			<a href="http://msdn.microsoft.com/en-us/library/dd573303">[1]</a>
+		</p>
 
-<h2><span>Compatibility</span></h2>
-	<p>
-		IE8-10<sup><a href="http://msdn.microsoft.com/en-us/library/cc288060">[1]</a></sup>
-	</p>
+	<h2><span>Compatibility</span></h2>
+		<p>
+			IE8-10
+		</p>
 
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	var xdr = new XDomainRequest();
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		var xdr = new XDomainRequest();
 
-	xdr.onerror = function() {
-		alert("Error");
-	};
+		xdr.onerror = function() {
+			alert("Error");
+		};
 
-	xdr.onload = function() {
-		$4what.log(xdr.responseText);
-	};
+		xdr.onload = function() {
+			$4what.log(xdr.responseText);
+		};
 
-	xdr.open("POST", "http://subdomain.example.com:8080/studio/project/4what.cn/sample/JavaScript/ajax/data.jsp" + "?timestamp=" + new Date().getTime());
+		xdr.open("POST", "http://subdomain.example.com:8080/studio/project/4what.cn/sample/JavaScript/ajax/data.jsp" + "?timestamp=" + new Date().getTime());
 
-	xdr.send("name=value");
-	</script>
-	</textarea>
+		xdr.send("name=value");
+		</script>
+		</textarea>
 
-<h2><span>Example</span></h2>
-	<script type="text/javascript">
-	var xdr = new XDomainRequest();
+	<h2><span>Example</span></h2>
+		<script type="text/javascript">
+		var xdr = new XDomainRequest();
 
-	xdr.onerror = function() {
-		alert("Error");
-	};
+		xdr.onerror = function() {
+			alert("Error");
+		};
 
-	xdr.onload = function() {
-		$4what.log(xdr.responseText);
-	};
+		xdr.onload = function() {
+			$4what.log(xdr.responseText);
+		};
 
-	xdr.open("POST", "http://subdomain.example.com:8080/studio/project/4what.cn/sample/JavaScript/ajax/data.jsp" + "?timestamp=" + new Date().getTime());
+		xdr.open("POST", "http://subdomain.example.com:8080/studio/project/4what.cn/sample/JavaScript/ajax/data.jsp" + "?timestamp=" + new Date().getTime());
 
-	xdr.send("name=value");
-	</script>
+		xdr.send("name=value");
+		</script>
 
-<script type="text/javascript" src="../../js/sample.js"></script>
+	<script type="text/javascript" src="../../js/sample.js"></script>
 
-<script type="text/javascript" src="../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../js/analytics.js"></script>
 </body>
 </html>

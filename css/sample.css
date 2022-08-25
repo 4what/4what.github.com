@@ -10,10 +10,10 @@ body {
 	font-size: 12px;
 	line-height: 1.5;
 	margin: 15px 10px;
-/*
+	/*
 	word-break: break-all;
 	word-wrap: break-word;
-*/
+	*/
 }
 
 a:link {
@@ -53,10 +53,6 @@ input, select, textarea {
 	}
 	h1.heading span {
 		border-bottom: 1px dashed;
-	}
-
-	p.log {
-		/*line-height: 2;*/
 	}
 
 	/**/
@@ -108,11 +104,11 @@ input, select, textarea {
 		list-style: decimal inside;
 	}
 
-
 	/**/
 	h1 {
 		font-size: 24px;
 	}
+
 	h2 {
 		clear: both;
 		font-size: 22px;
@@ -121,6 +117,7 @@ input, select, textarea {
 	h2 span {
 		border-bottom: 1px solid #808080;
 	}
+
 	h3 {
 		font-size: 16px;
 		margin-top: 10px;
@@ -175,4 +172,11 @@ input, select, textarea {
 	textarea.textarea {
 		height: 10em;
 		width: 35em;
+	}
+
+	table {
+		margin-top: 10px;
+	}
+	th, td {
+		padding: 0 5px;
 	}

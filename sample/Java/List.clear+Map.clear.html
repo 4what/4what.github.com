@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - Java</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
@@ -11,66 +11,66 @@
 	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>List.clear()</span></h2>
-	<textarea cols="" rows="" name="code" class="java">
-	List result = new ArrayList();
+	<h2><span>List.clear()</span></h2>
+		<textarea cols="" rows="" name="code" class="java">
+		List result = new ArrayList();
 
-	List list = new ArrayList();
+		List list = new ArrayList();
 
-	list.add("foo");
+		list.add("foo");
 
-	System.out.println("list: " + list); // [foo]
+		System.out.println("list: " + list); // [foo]
 
-	result.add(list);
+		result.add(list);
 
-	System.out.println("result: " + result); // [[foo]]
+		System.out.println("result: " + result); // [[foo]]
 
-	list.clear();
+		list.clear();
 
-	System.out.println("list: " + list); // []
-	System.out.println("result: " + result); // [[]]
+		System.out.println("list: " + list); // []
+		System.out.println("result: " + result); // [[]]
 
-	list.add("bar");
+		list.add("bar");
 
-	System.out.println("list: " + list); // [bar]
-	System.out.println("result: " + result); // [[bar]]
+		System.out.println("list: " + list); // [bar]
+		System.out.println("result: " + result); // [[bar]]
 
-	result.add(list);
+		result.add(list);
 
-	System.out.println("result: " + result); // [[bar], [bar]]
-	</textarea>
+		System.out.println("result: " + result); // [[bar], [bar]]
+		</textarea>
 
-<h2><span>Map.clear()</span></h2>
-	<textarea cols="" rows="" name="code" class="java">
-	List result = new ArrayList();
+	<h2><span>Map.clear()</span></h2>
+		<textarea cols="" rows="" name="code" class="java">
+		List result = new ArrayList();
 
-	Map map = new HashMap();
+		Map map = new HashMap();
 
-	map.put("key", "value");
+		map.put("key", "value");
 
-	System.out.println("map: " + map); // {key=value}
+		System.out.println("map: " + map); // {key=value}
 
-	result.add(map);
+		result.add(map);
 
-	System.out.println("result: " + result); // [{key=value}]
+		System.out.println("result: " + result); // [{key=value}]
 
-	map.clear();
+		map.clear();
 
-	System.out.println("map: " + map); // {}
-	System.out.println("result: " + result); // [{}]
+		System.out.println("map: " + map); // {}
+		System.out.println("result: " + result); // [{}]
 
-	map.put("foo", "bar");
+		map.put("foo", "bar");
 
-	System.out.println("map: " + map); // {foo=bar}
-	System.out.println("result: " + result); // [{foo=bar}]
+		System.out.println("map: " + map); // {foo=bar}
+		System.out.println("result: " + result); // [{foo=bar}]
 
-	result.add(map);
+		result.add(map);
 
-	System.out.println("result: " + result); // [{foo=bar}, {foo=bar}]
-	</textarea>
+		System.out.println("result: " + result); // [{foo=bar}, {foo=bar}]
+		</textarea>
 
-<script type="text/javascript" src="../../js/sample.js"></script>
+	<script type="text/javascript" src="../../js/sample.js"></script>
 
-<script type="text/javascript" src="../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../js/analytics.js"></script>
 </body>
 </html>

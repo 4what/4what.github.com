@@ -1,14 +1,10 @@
-/*___________________________________4what____________________________________*/
-
 /**
- * jQuery Util
- *
  * @author http://4what.cn
  * @version 1.3 Build 2018.04.13
  */
 (function() {
 
-var UtilJq = {
+var Util = {
 	/*--------------------------------------
 	  Category: CSS
 	--------------------------------------*/
@@ -20,8 +16,10 @@ var UtilJq = {
 		var
 		body = $("body"),
 		width;
+
 		$(window).bind("load resize", function() {
 			width = $(window).width();
+
 			body.css("margin-left", width < min ? (width - min) / 2 : "auto");
 		});
 	},
@@ -46,6 +44,7 @@ var UtilJq = {
 		position = (function() {
 			if (settings.position === "bottom") {
 				var outerHeight = target.outerHeight(true);
+
 				return function() {
 					return $(window).height() - outerHeight - settings.offset;
 				};
@@ -174,12 +173,16 @@ var UtilJq = {
 	 */
 	select: function(data, target) {
 		var item, value;
+
 		target = $(target).find(":checkbox, :radio, select");
+
 		for (var key in data) {
 			item = target.filter("[name='" + key + "']");
 			value = data[key];
+
 			if (item.is(":checkbox")) {
 				item.attr("checked", false);
+
 				for (var i = value.length - 1; i >= 0; i--) {
 					item.filter("[value='" + value[i] + "']").attr("checked", true);
 				}
@@ -238,6 +241,7 @@ var UtilJq = {
 	domain: function(domains) {
 		for (var item, i = domains.length - 1; i >= 0; i --) {
 			item = domains[i];
+
 			if (window.location.hostname.indexOf("." + item + ".") > -1) {
 				return item;
 			}
@@ -284,12 +288,15 @@ var UtilJq = {
 
 				if (!settings.ajax) {
 					var params = {};
+
 					if (window.location.search) {
 						var
 						search = $js.url.params(),
 						value;
+
 						for (var key in search) {
 							value = search[key];
+
 							if (key === settings.param) {
 								if (settings.debug) {
 									index = parseInt(value, 10);
@@ -386,6 +393,7 @@ var UtilJq = {
 
 						/* recursion */
 						init(index);
+
 						/* callback */
 						settings.callback(index);
 
@@ -446,13 +454,13 @@ var UtilJq = {
 };
 
 if (typeof module === "object" && typeof module.exports === "object") { // for CommonJS
-	module.exports = UtilJq;
+	module.exports = Util;
 } else if (typeof define === "function" && define.amd) { // for RequireJS
-	define(/*"UtilJq", */function() {
-		return UtilJq;
+	define(/*"Util", */function() {
+		return Util;
 	});
 } else {
-	window.$jq = UtilJq;
+	window.$jq = Util;
 }
 
 })();

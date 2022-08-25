@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - JavaScript</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
@@ -11,103 +11,108 @@
 	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Specification</span></h2>
-	<p>
-		<a href="http://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">[1]</a>
-	</p>
+	<h2><span>Specification</span></h2>
+		<p>
+			<a href="http://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">[1]</a>
+		</p>
 
-<h2><span>Compatibility</span></h2>
-	<p>
-		IE10+,
-		Std<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/WebSocket">[1]</a></sup>
-	</p>
+	<h2><span>Compatibility</span></h2>
+		<p>
+			IE10+,
+			Std
+				<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/WebSocket">[1]</a></sup>
+		</p>
 
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="html">
-	id: <input type="text" name="" value="" id="id" />
-	<button id="open">Open</button>
-	<button id="close">Close</button>
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="html">
+		id:
+		<input type="text" name="" value="" id="id" />
+		<button id="open">Open</button>
+		<button id="close">Close</button>
 
-	message: <input type="text" name="" value="" id="message" />
-	<button id="send">Send</button>
-	</textarea>
+		message:
+		<input type="text" name="" value="" id="message" />
+		<button id="send">Send</button>
+		</textarea>
 
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	document.getElementById("open").onclick = function() {
-		var ws = new WebSocket("ws://localhost:8080/j2ee/websocket/" + document.getElementById("id").value);
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		document.getElementById("open").onclick = function() {
+			var ws = new WebSocket("ws://localhost:8080/j2ee/websocket/" + document.getElementById("id").value);
 
-		ws.onclose = function(e) {
-			console.log(e);
+			ws.onclose = function(e) {
+				console.log(e);
+			};
+
+			ws.onerror = function(e) {
+				console.log(e);
+			};
+
+			ws.onmessage = function(e) {
+				console.log(e)
+
+				$4what.log(e.data);
+			};
+
+			ws.onopen = function(e) {
+				console.log(e);
+			};
+
+			document.getElementById("close").onclick = function() {
+				ws.close();
+			};
+
+			document.getElementById("send").onclick = function() {
+				ws.send(document.getElementById("message").value);
+			};
 		};
+		</script>
+		</textarea>
 
-		ws.onerror = function(e) {
-			console.log(e);
+	<h2><span>Example</span></h2>
+		id:
+		<input type="text" name="" value="" id="id" />
+		<button id="open">Open</button>
+		<button id="close">Close</button>
+
+		message:
+		<input type="text" name="" value="" id="message" />
+		<button id="send">Send</button>
+
+		<script type="text/javascript">
+		document.getElementById("open").onclick = function() {
+			var ws = new WebSocket("ws://localhost:8080/j2ee/websocket/" + document.getElementById("id").value);
+
+			ws.onclose = function(e) {
+				console.log(e);
+			};
+
+			ws.onerror = function(e) {
+				console.log(e);
+			};
+
+			ws.onmessage = function(e) {
+				console.log(e)
+
+				$4what.log(e.data);
+			};
+
+			ws.onopen = function(e) {
+				console.log(e);
+			};
+
+			document.getElementById("close").onclick = function() {
+				ws.close();
+			};
+
+			document.getElementById("send").onclick = function() {
+				ws.send(document.getElementById("message").value);
+			};
 		};
+		</script>
 
-		ws.onmessage = function(e) {
-			console.log(e)
+	<script type="text/javascript" src="../../js/sample.js"></script>
 
-			$4what.log(e.data);
-		};
-
-		ws.onopen = function(e) {
-			console.log(e);
-		};
-
-		document.getElementById("close").onclick = function() {
-			ws.close();
-		};
-
-		document.getElementById("send").onclick = function() {
-			ws.send(document.getElementById("message").value);
-		};
-	};
-	</script>
-	</textarea>
-
-<h2><span>Example</span></h2>
-	id: <input type="text" name="" value="" id="id" />
-	<button id="open">Open</button>
-	<button id="close">Close</button>
-
-	message: <input type="text" name="" value="" id="message" />
-	<button id="send">Send</button>
-
-	<script type="text/javascript">
-	document.getElementById("open").onclick = function() {
-		var ws = new WebSocket("ws://localhost:8080/j2ee/websocket/" + document.getElementById("id").value);
-
-		ws.onclose = function(e) {
-			console.log(e);
-		};
-
-		ws.onerror = function(e) {
-			console.log(e);
-		};
-
-		ws.onmessage = function(e) {
-			console.log(e)
-
-			$4what.log(e.data);
-		};
-
-		ws.onopen = function(e) {
-			console.log(e);
-		};
-
-		document.getElementById("close").onclick = function() {
-			ws.close();
-		};
-
-		document.getElementById("send").onclick = function() {
-			ws.send(document.getElementById("message").value);
-		};
-	};
-	</script>
-
-<script type="text/javascript" src="../../js/sample.js"></script>
-
-<script type="text/javascript" src="../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../js/analytics.js"></script>
 </body>
 </html>

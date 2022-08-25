@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - Cascading Style Sheets</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
 
@@ -11,122 +11,132 @@
 	<script type="text/javascript" src="../../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Specification</span></h2>
-	<p>
-		<a href="http://www.w3.org/TR/css3-animations/">[1]</a>
-		<a href="http://developer.mozilla.org/en-US/docs/Web/CSS/animation">[2]</a>
-		<a href="http://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">[3]</a>
-	</p>
+	<h2><span>Specification</span></h2>
+		<p>
+			<a href="http://w3.org/TR/css3-animations">[1]</a>
+			<a href="http://developer.mozilla.org/en-US/docs/Web/CSS/animation">[2]</a>
+			<a href="http://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">[3]</a>
+		</p>
 
-<h2><span>Compatibility</span></h2>
-	<p>
-		IE10+, Std
-	</p>
+	<h2><span>Compatibility</span></h2>
+		<p>
+			IE10+, Std
+		</p>
 
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="css">
-	<style type="text/css">
-	#box {
-		animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for IE10+, Std */
-		background: #000;
-		height: 100px;
-		width: 100px;
-	}
-	@keyframes name { /* for IE10+, Std */
-		from {
-			background: red;
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="css">
+		<style type="text/css">
+		#box {
+			animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for IE10+, Std */
+			background: #000;
+			height: 100px;
+			width: 100px;
 		}
-		50% {
-			background: green;
-		}
-		to {
-			background: blue;
-			border-radius: 10px;
-			height: 50px;
-			opacity: 0.5;
-			transform: rotate(360deg);
-			width: 50px;
-		}
-	}
-	</style>
-	</textarea>
 
-	<textarea cols="" rows="" name="code" class="html">
-	<div id="box"></div>
-	</textarea>
-
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	function listener(e) {
-		switch (e.type) {
-			case "animationstart":
-				$4what.log("animationstart: " + e.elapsedTime);
-				break;
-			case "animationend":
-				$4what.log("animationend: " + e.elapsedTime);
-				break;
-			case "animationiteration":
-				$4what.log("animationiteration: " + e.elapsedTime);
-				break;
+		@keyframes name { /* for IE10+, Std */
+			from {
+				background: red;
+			}
+			50% {
+				background: green;
+			}
+			to {
+				background: blue;
+				border-radius: 10px;
+				height: 50px;
+				opacity: 0.5;
+				transform: rotate(360deg);
+				width: 50px;
+			}
 		}
-	}
-	var box = document.getElementById("box");
-	box.addEventListener("animationstart", listener, false);
-	box.addEventListener("animationend", listener, false);
-	box.addEventListener("animationiteration", listener, false);
-	</script>
-	</textarea>
+		</style>
+		</textarea>
 
-<h2><span>Example</span></h2>
-	<style type="text/css">
-	#box {
-		animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for IE10+, Std */
-		background: #000;
-		height: 100px;
-		width: 100px;
-	}
-	@keyframes name { /* for IE10+, Std */
-		from {
-			background: red;
+		<textarea cols="" rows="" name="code" class="html">
+		<div id="box"></div>
+		</textarea>
+
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		function listener(e) {
+			switch (e.type) {
+				case "animationstart":
+					$4what.log("animationstart: " + e.elapsedTime);
+
+					break;
+				case "animationend":
+					$4what.log("animationend: " + e.elapsedTime);
+
+					break;
+				case "animationiteration":
+					$4what.log("animationiteration: " + e.elapsedTime);
+
+					break;
+			}
 		}
-		50% {
-			background: green;
+
+		var box = document.getElementById("box");
+		box.addEventListener("animationstart", listener, false);
+		box.addEventListener("animationend", listener, false);
+		box.addEventListener("animationiteration", listener, false);
+		</script>
+		</textarea>
+
+	<h2><span>Example</span></h2>
+		<style type="text/css">
+		#box {
+			animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for IE10+, Std */
+			background: #000;
+			height: 100px;
+			width: 100px;
 		}
-		to {
-			background: blue;
-			border-radius: 10px;
-			height: 50px;
-			opacity: 0.5;
-			transform: rotate(360deg);
-			width: 50px;
+
+		@keyframes name { /* for IE10+, Std */
+			from {
+				background: red;
+			}
+			50% {
+				background: green;
+			}
+			to {
+				background: blue;
+				border-radius: 10px;
+				height: 50px;
+				opacity: 0.5;
+				transform: rotate(360deg);
+				width: 50px;
+			}
 		}
-	}
-	</style>
+		</style>
 
-	<div id="box"></div>
+		<div id="box"></div>
 
-	<script type="text/javascript">
-	function listener(e) {
-		switch (e.type) {
-			case "animationstart":
-				$4what.log("animationstart: " + e.elapsedTime);
-				break;
-			case "animationend":
-				$4what.log("animationend: " + e.elapsedTime);
-				break;
-			case "animationiteration":
-				$4what.log("animationiteration: " + e.elapsedTime);
-				break;
+		<script type="text/javascript">
+		function listener(e) {
+			switch (e.type) {
+				case "animationstart":
+					$4what.log("animationstart: " + e.elapsedTime);
+
+					break;
+				case "animationend":
+					$4what.log("animationend: " + e.elapsedTime);
+
+					break;
+				case "animationiteration":
+					$4what.log("animationiteration: " + e.elapsedTime);
+
+					break;
+			}
 		}
-	}
-	var box = document.getElementById("box");
-	box.addEventListener("animationstart", listener, false);
-	box.addEventListener("animationend", listener, false);
-	box.addEventListener("animationiteration", listener, false);
-	</script>
 
-<script type="text/javascript" src="../../../js/sample.js"></script>
+		var box = document.getElementById("box");
+		box.addEventListener("animationstart", listener, false);
+		box.addEventListener("animationend", listener, false);
+		box.addEventListener("animationiteration", listener, false);
+		</script>
 
-<script type="text/javascript" src="../../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../../js/sample.js"></script>
+
+	<script type="text/javascript" src="../../../js/analytics.js"></script>
 </body>
 </html>

@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - JavaScript</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
 
@@ -11,41 +11,48 @@
 	<script type="text/javascript" src="../../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Specification</span></h2>
-	<p>
-		Window.self<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/self">[1]</a></sup>,
-		Window.parent<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/parent">[1]</a></sup>,
-		Window.top<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/top">[1]</a></sup>
-	</p>
+	<h2><span>Specification</span></h2>
+		<p>
+			Window.self
+				<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/self">[1]</a></sup>
+		</p>
+		<p>
+			Window.parent
+				<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/parent">[1]</a></sup>
+		</p>
+		<p>
+			Window.top
+				<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/top">[1]</a></sup>
+		</p>
 
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="html">
-	<iframe src="iframe.html"></iframe>
-	</textarea>
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="html">
+		<iframe src="iframe.html"></iframe>
+		</textarea>
 
-<h3>iframe.html</h3>
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	//window.parent = window.self; // Std
-	//window.top = window.self;
+	<h3>iframe.html</h3>
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		//window.parent = window.self; // Std
+		//window.top = window.self;
 
-	var
-	parent = self, // IE, Std
-	top = self; // IE
+		var
+		parent = self, // IE, Std
+		top = self; // IE
 
-	document.write(
-		"(window.parent === window.self) ? " + (window.parent === window.self)
-		+ "<br />"
-		+ "(window.top === window.self) ? " + (window.top === window.self)
-	);
-	</script>
-	</textarea>
+		document.write(
+			"(window.parent === window.self) ? " + (window.parent === window.self)
+			+ "<br />"
+			+ "(window.top === window.self) ? " + (window.top === window.self)
+		);
+		</script>
+		</textarea>
 
-<h2><span>Example</span></h2>
-	<iframe src="iframe.html"></iframe>
+	<h2><span>Example</span></h2>
+		<iframe src="iframe.html"></iframe>
 
-<script type="text/javascript" src="../../../js/sample.js"></script>
+	<script type="text/javascript" src="../../../js/sample.js"></script>
 
-<script type="text/javascript" src="../../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../../js/analytics.js"></script>
 </body>
 </html>

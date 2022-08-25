@@ -38,7 +38,7 @@ Ext.onReady(function() {
 		//Ext.data.Store
 		Ext.data.GroupingStore
 		({
-/*
+			/*
 			proxy: new
 				Ext.data.HttpProxy
 				//Ext.data.ScriptTagProxy
@@ -46,7 +46,7 @@ Ext.onReady(function() {
 					method: "GET",
 					url: "data/json.json" // (自定义)
 				}),
-*/
+			*/
 			url: "data/json.json", // (自定义)
 			autoDestroy: true,
 			autoLoad: {
@@ -389,7 +389,7 @@ Ext.onReady(function() {
 
 									_win.show().setTitle("修改");
 
-/*
+									/*
 									_form.getForm().load({
 										url: "data/form.json", // (自定义)
 										params: {
@@ -419,7 +419,7 @@ Ext.onReady(function() {
 										},
 										waitMsg: "正在载入…"
 									});
-*/
+									*/
 
 									_form.getForm().loadRecord(record);
 
@@ -1635,20 +1635,20 @@ Ext.onReady(function() {
 					action = target.parentNode !== dropNode.parentNode ? "replace" : "sort";
 
 					/* replace */
-/*
+					/*
 					if (target.parentNode === dropNode.parentNode) {
 						return false;
 					}
 					action = "replace";
-*/
+					*/
 
 					/* sort */
-/*
+					/*
 					if (target.parentNode !== dropNode.parentNode) {
 						return false;
 					}
 					action = "sort";
-*/
+					*/
 
 					id = dropNode.id;
 					parentId = dropNode.parentNode.id;
@@ -1724,13 +1724,13 @@ Ext.onReady(function() {
 		region: "center",
 		xtype: "linechart",
 		//extraStyle: {},
-/*
+		/*
 		seriesStyles: {
 			//color: "",
 			image: "js/extjs/3.4.1.1/examples/chart/bar.gif",
 			mode: "stretch"
 		},
-*/
+		*/
 		store: _jsonstore,
 		tipRenderer: function(chart, record) {
 			return record.get("id") + " : " + record.get("date");
@@ -1762,20 +1762,20 @@ Ext.onReady(function() {
 		overClass: "x-view-over",
 		plugins: [
 			new Ext.DataView.DragSelector()
-/*
+			/*
 			new Ext.DataView.LabelEditor(
 				{
 					dataIndex: "name"
 				}
 			),
-*/
+			*/
 			/* TODO: bug, Ext.data.JsonStore ? */
-/*
+			/*
 			new Ext.ux.DataViewTransition({
 				//duration: 750,
 				idProperty: "id"
 			})
-*/
+			*/
 		],
 		prepareData: function(data) {
 			return data;
@@ -1825,11 +1825,11 @@ Ext.onReady(function() {
 	var _pivotgrid = new Ext.grid.PivotGrid({
 		aggregator: "sum", // sum|avg|count|max|min
 		measure: "value",
-/*
+		/*
 		renderer: function(value) {
 			return value;
 		},
-*/
+		*/
 		store: new Ext.data.Store({
 			url: "data/pivotgrid.json", // (自定义)
 			autoDestroy: true,
@@ -1848,11 +1848,11 @@ Ext.onReady(function() {
 		}),
 		viewConfig: {
 			title: "标题"
-/*
+			/*
 			getCellCls: function(value) {
 				return "";
 			}
-*/
+			*/
 		},
 		leftAxis: [
 			{

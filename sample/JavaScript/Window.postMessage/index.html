@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - JavaScript</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
 
@@ -11,84 +11,85 @@
 	<script type="text/javascript" src="../../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Specification</span></h2>
-	<p>
-		<a href="http://www.w3.org/TR/webmessaging/">[1]</a>
-	</p>
+	<h2><span>Specification</span></h2>
+		<p>
+			<a href="http://html.spec.whatwg.org/multipage/web-messaging.html">[1]</a>
+		</p>
 
-<h2><span>Compatibility</span></h2>
-	<p>
-		IE8+,
-		Std<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">[1]</a></sup>
-	</p>
+	<h2><span>Compatibility</span></h2>
+		<p>
+			IE8+,
+			Std
+				<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">[1]</a></sup>
+		</p>
 
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	var iframe = document.createElement("iframe");
-	iframe.src = "http://subdomain.example.com:8080/studio/project/4what.cn/sample/JavaScript/Window.postMessage/iframe.html";
-	iframe.style.display = "none";
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		var iframe = document.createElement("iframe");
+		iframe.src = "http://subdomain.example.com:8080/studio/project/4what.cn/sample/JavaScript/Window.postMessage/iframe.html";
+		iframe.style.display = "none";
 
-	document.body.appendChild(iframe);
+		document.body.appendChild(iframe);
 
-	iframe.onload = function() {
-		iframe.contentWindow.postMessage(new Date(), "http://subdomain.example.com:8080");
-	};
+		iframe.onload = function() {
+			iframe.contentWindow.postMessage(new Date(), "http://subdomain.example.com:8080");
+		};
 
-	function receiver(e) {
-		if (e.origin !== "http://subdomain.example.com:8080") {
-			//return;
+		function receiver(e) {
+			if (e.origin !== "http://subdomain.example.com:8080") {
+				//return;
+			}
+
+			alert("RESPONSE\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
 		}
 
-		alert("RESPONSE\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
-	}
+		$js.bind(window, "message", receiver);
+		</script>
+		</textarea>
 
-	$js.bind(window, "message", receiver);
-	</script>
-	</textarea>
+	<h3>iframe.html</h3>
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		function receiver(e) {
+			if (e.origin !== "http://www.example.com:8080") {
+				//return;
+			}
 
-<h3>iframe.html</h3>
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	function receiver(e) {
-		if (e.origin !== "http://www.example.com:8080") {
-			//return;
+			alert("REQUEST\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
+
+			e.source.postMessage(new Date(), e.origin);
 		}
 
-		alert("REQUEST\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
+		$js.bind(window, "message", receiver);
+		</script>
+		</textarea>
 
-		e.source.postMessage(new Date(), e.origin);
-	}
+	<h2><span>Example</span></h2>
+		<script type="text/javascript">
+		var iframe = document.createElement("iframe");
+		iframe.src = "http://subdomain.example.com:8080/studio/project/4what.cn/sample/JavaScript/Window.postMessage/iframe.html";
+		iframe.style.display = "none";
 
-	$js.bind(window, "message", receiver);
-	</script>
-	</textarea>
+		document.body.appendChild(iframe);
 
-<h2><span>Example</span></h2>
-	<script type="text/javascript">
-	var iframe = document.createElement("iframe");
-	iframe.src = "http://subdomain.example.com:8080/studio/project/4what.cn/sample/JavaScript/Window.postMessage/iframe.html";
-	iframe.style.display = "none";
+		iframe.onload = function() {
+			iframe.contentWindow.postMessage(new Date(), "http://subdomain.example.com:8080");
+		};
 
-	document.body.appendChild(iframe);
+		function receiver(e) {
+			if (e.origin !== "http://subdomain.example.com:8080") {
+				//return;
+			}
 
-	iframe.onload = function() {
-		iframe.contentWindow.postMessage(new Date(), "http://subdomain.example.com:8080");
-	};
-
-	function receiver(e) {
-		if (e.origin !== "http://subdomain.example.com:8080") {
-			//return;
+			alert("RESPONSE\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
 		}
 
-		alert("RESPONSE\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
-	}
+		$js.bind(window, "message", receiver);
+		</script>
 
-	$js.bind(window, "message", receiver);
-	</script>
+	<script type="text/javascript" src="../../../js/sample.js"></script>
 
-<script type="text/javascript" src="../../../js/sample.js"></script>
-
-<script type="text/javascript" src="../../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../../js/analytics.js"></script>
 </body>
 </html>

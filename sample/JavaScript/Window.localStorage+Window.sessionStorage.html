@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - JavaScript</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
@@ -11,42 +11,49 @@
 	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Specification</span></h2>
-	<p>
-		<a href="http://www.w3.org/TR/webstorage/">[1]</a>
-		<a href="http://developer.mozilla.org/en-US/docs/Web/API/Storage">[2]</a>
-		<a href="http://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">[3]</a>
-	</p>
+	<h2><span>Specification</span></h2>
+		<p>
+			<a href="http://html.spec.whatwg.org/multipage/webstorage.html">[1]</a>
+			<a href="http://developer.mozilla.org/en-US/docs/Web/API/Storage">[2]</a>
+			<a href="http://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">[3]</a>
+		</p>
 
-<h2><span>Compatibility</span></h2>
-	<p>
-		Window.localStorage
-		<sup>IE8+</sup>
-		<sup>Std<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">[1]</a></sup></sup>,
+	<h2><span>Compatibility</span></h2>
+		<p>
+			Window.localStorage
+				<sup>IE8+</sup>
+				<sup>
+					Std
+						<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">[1]</a></sup>
+				</sup>
+		</p>
+		<p>
+			Window.sessionStorage
+				<sup>IE8+</sup>
+				<sup>
+					Std
+						<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">[1]</a></sup>
+				</sup>
+		</p>
 
-		Window.sessionStorage
-		<sup>IE8+</sup>
-		<sup>Std<sup><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">[1]</a></sup></sup>
-	</p>
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		localStorage.setItem("key", new Date());
 
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	localStorage.setItem("key", new Date());
+		$4what.log(localStorage.getItem("key"));
+		</script>
+		</textarea>
 
-	$4what.log(localStorage.getItem("key"));
-	</script>
-	</textarea>
+	<h2><span>Example</span></h2>
+		<script type="text/javascript">
+		localStorage.setItem("key", new Date());
 
-<h2><span>Example</span></h2>
-	<script type="text/javascript">
-	localStorage.setItem("key", new Date());
+		$4what.log(localStorage.getItem("key"));
+		</script>
 
-	$4what.log(localStorage.getItem("key"));
-	</script>
+	<script type="text/javascript" src="../../js/sample.js"></script>
 
-<script type="text/javascript" src="../../js/sample.js"></script>
-
-<script type="text/javascript" src="../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../js/analytics.js"></script>
 </body>
 </html>

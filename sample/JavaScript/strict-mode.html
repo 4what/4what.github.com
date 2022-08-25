@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - JavaScript</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
@@ -11,50 +11,50 @@
 	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Specification</span></h2>
-	<p>
-		<a href="http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">[1]</a>
-	</p>
+	<h2><span>Specification</span></h2>
+		<p>
+			<a href="http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">[1]</a>
+		</p>
 
-<h2><span>Compatibility</span></h2>
-	<p>
-		IE10+, Std
-	</p>
+	<h2><span>Compatibility</span></h2>
+		<p>
+			IE10+, Std
+		</p>
 
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	"use strict";
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		"use strict";
 
-	try {
-		foobar = ""; // (!)
+		try {
+			foobar = ""; // (!)
 
-		if (true) {
-			function method() {} // (!)
+			if (true) {
+				function method() {} // (!)
+			}
+		} catch (e) {
+			$4what.log(e);
 		}
-	} catch (e) {
-		$4what.log(e);
-	}
-	</script>
-	</textarea>
+		</script>
+		</textarea>
 
-<h2><span>Example</span></h2>
-	<script type="text/javascript">
-	"use strict";
+	<h2><span>Example</span></h2>
+		<script type="text/javascript">
+		"use strict";
 
-	try {
-		foobar = ""; // (!)
+		try {
+			foobar = ""; // (!)
 
-		if (true) {
-			function method() {} // (!)
+			if (true) {
+				function method() {} // (!)
+			}
+		} catch (e) {
+			$4what.log(e);
 		}
-	} catch (e) {
-		$4what.log(e);
-	}
-	</script>
+		</script>
 
-<script type="text/javascript" src="../../js/sample.js"></script>
+	<script type="text/javascript" src="../../js/sample.js"></script>
 
-<script type="text/javascript" src="../../js/analytics.js"></script>
+	<script type="text/javascript" src="../../js/analytics.js"></script>
 </body>
 </html>

@@ -1,6 +1,4 @@
-(function() {
-
-var WebViewJsBridge = window.WebViewJsBridge = {
+var WebViewJsBridge = {
 	/**
 	 * @param {String} method
 	 * @param {Object} data (optional)
@@ -20,6 +18,7 @@ var WebViewJsBridge = window.WebViewJsBridge = {
 
 			window[fn] = function(result) {
 				callback(result);
+
 				window[fn] = undefined;
 			};
 		}
@@ -29,7 +28,9 @@ var WebViewJsBridge = window.WebViewJsBridge = {
 		var iframe = document.createElement("iframe");
 		iframe.src = url;
 		iframe.style.display = "none";
+
 		document.body.appendChild(iframe);
+
 		setTimeout(function() {
 			document.body.removeChild(iframe);
 		}, 0);
@@ -41,11 +42,11 @@ var WebViewJsBridge = window.WebViewJsBridge = {
 	 */
 	serialize: function(map) {
 		var result = [];
+
 		for (var key in map) {
 			result.push(encodeURIComponent(key) + "=" + encodeURIComponent(map[key]));
 		}
+
 		return result.join("&");
 	}
 };
-
-})();

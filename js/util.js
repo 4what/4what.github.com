@@ -1,8 +1,4 @@
-/*___________________________________4what____________________________________*/
-
 /**
- * 4what JavaScript Library
- *
  * @author http://4what.cn
  * @version 1.2 Build 2019.09.16
  */
@@ -23,6 +19,7 @@ Util.prototype = {
 	 */
 	extend: function(name, fn) {
 		Util.prototype[name] = fn;
+
 		return this;
 	},
 
@@ -58,10 +55,12 @@ Util.prototype = {
 			if (xhr.readyState === 4) {
 				if (xhr.status === 200) {
 					var result = xhr.responseText || xhr.responseXML;
+
 					success(result, xhr);
 				} else {
 					error(xhr);
 				}
+
 				complete(xhr);
 			}
 		}
@@ -196,12 +195,16 @@ Util.prototype = {
 		this.bind(iframe, "load", function() {
 			if (complete) {
 				var result = iframe.contentWindow.name;
+
 				iframe.contentWindow.document.write("");
 				iframe.contentWindow.close();
+
 				document.body.removeChild(iframe);
+
 				callback(result);
 			} else {
 				complete = true;
+
 				iframe.contentWindow.location.href = local;
 			}
 		});
@@ -227,12 +230,14 @@ Util.prototype = {
 		if ("indexOf" in array) {
 			return array.indexOf(element);
 		}
+
 		/* for IE8- */
 		for (var i = 0, l = array.length; i < l; i++) {
 			if (array[i] === element) {
 				return i;
 			}
 		}
+
 		return -1;
 	},
 
@@ -250,20 +255,23 @@ Util.prototype = {
 		array = [],
 		element,
 		map = {};
+
 		while (array.length < size) {
 			element = this.random(min, max, isInt);
-			if (
-				!(element in map)
-			) {
+
+			if (!(element in map)) {
 				array.push(element);
+
 				map[element] = true;
 			}
 		}
+
 		if (sort || sort === undefined) {
 			array.sort(function(a, b) {
 				return a - b;
 			});
 		}
+
 		return array;
 	},
 
@@ -275,9 +283,11 @@ Util.prototype = {
 	 */
 	removeElement: function(element, array) {
 		var index = this.inArray(element, array);
+
 		if (index !== -1) {
 			array.splice(index, 1);
 		}
+
 		return array;
 	},
 
@@ -290,15 +300,17 @@ Util.prototype = {
 		result = [],
 		element,
 		map = {};
+
 		for (var i = 0, l = array.length; i < l; i++) {
 			element = array[i];
-			if (
-				!(element in map)
-			) {
+
+			if (!(element in map)) {
 				result.push(element);
+
 				map[element] = true;
 			}
 		}
+
 		return result;
 	},
 
@@ -317,10 +329,12 @@ Util.prototype = {
 
 			for (var item, i = classname.length - 1; i >= 0; i--) {
 				item = classname[i];
+
 				if (this.inArray(item, classes) === -1) {
 					classes.push(item);
 				}
 			}
+
 			target.className = classes.join(" ");
 		} else {
 			target.className = classname;
@@ -340,6 +354,7 @@ Util.prototype = {
 			for (var i = classname.length - 1; i >= 0; i--) {
 				this.removeElement(classname[i], classes);
 			}
+
 			target.setAttribute("class", classes.join(" "));
 		} else {
 			target.setAttribute("class", "");
@@ -356,9 +371,12 @@ Util.prototype = {
 		var
 		self = this,
 		iframe = document.getElementById(id);
+
 		iframe.onload = function() {
 			//alert(iframe === this); // for IE9+, Std
+
 			var body = iframe.contentWindow.document.body;
+
 			iframe.height = body.offsetHeight
 				+ parseInt(self.style(body, "margin-top"), 10)
 				+ parseInt(self.style(body, "margin-bottom"), 10);
@@ -372,14 +390,17 @@ Util.prototype = {
 	 */
 	style: function(target, name) {
 		var value;
+
 		if ("getComputedStyle" in window) { // for IE9+, Std
 			value = target.ownerDocument.defaultView.getComputedStyle(target, null).getPropertyValue(name);
 		} else { // for IE
 			var camelCase = name.replace(/-([a-z])/ig, function(all, letter){
 				return letter.toUpperCase();
 			});
+
 			value = target.currentStyle[camelCase];
 		}
+
 		return value;
 	},
 
@@ -454,6 +475,7 @@ Util.prototype = {
 		if ("stopPropagation" in e) { // for IE9+, Std
 			e.stopPropagation();
 		}
+
 		e.cancelBubble = true;
 	},
 
@@ -485,13 +507,16 @@ Util.prototype = {
 		var
 		key = String.fromCharCode(this.keyCode(e)),
 		re;
+
 		switch (type) {
 			case "digit":
 				re = /\d/;
+
 				break;
 			default:
 				break;
 		}
+
 		return !re.test(key);
 	},
 
@@ -562,6 +587,7 @@ Util.prototype = {
 			if (typeof expires === "number") {
 				var date = new Date();
 				date.setDate(date.getDate() + expires);
+
 				expires = date;
 			}
 
@@ -578,6 +604,7 @@ Util.prototype = {
 
 		for (var entry, i = 0, l = map.length; i < l; i++) {
 			entry = map[i].split("=");
+
 			if (decodeURIComponent(entry[0]) === key) {
 				return decodeURIComponent(entry[1]);
 			}
@@ -593,6 +620,7 @@ Util.prototype = {
 		var
 		css = '<style type="text/css">@import url("' + url + '");</style>',
 		js = '<script type="text/javascript" src="' + url + '"></script>';
+
 		document.write(/\.css$/i.test(url) ? css : js);
 	},
 
@@ -626,6 +654,7 @@ Util.prototype = {
 
 		if (obj) {
 			callback();
+
 			return;
 		}
 
@@ -638,6 +667,7 @@ Util.prototype = {
 
 		if (self._loader[url].loaded) {
 			callback();
+
 			return;
 		}
 
@@ -692,10 +722,13 @@ Util.prototype = {
 		 */
 		encode: function(url) {
 			var index = url.indexOf("?");
+
 			if (index > -1) {
 				var search = url.slice(index + 1);
+
 				url = url.slice(0, index) + "?" + this.serialize(this.parse(search));
 			}
+
 			return url;
 		},
 		/**
@@ -717,10 +750,13 @@ Util.prototype = {
 		 */
 		parse: function(search) {
 			var result = {};
+
 			if (search) {
 				var map = search.split("&");
+
 				for (var entry, i = 0, l = map.length; i < l; i++) {
 					entry = map[i].split("="); // TODO: Base64
+
 					result[entry[0]] = entry[1];
 				}
 			}
@@ -732,9 +768,11 @@ Util.prototype = {
 		 */
 		serialize: function(map) {
 			var result = [];
+
 			for (var key in map) {
 				result.push(encodeURIComponent(key) + "=" + encodeURIComponent(map[key]));
 			}
+
 			return result.join("&");
 		}
 	}

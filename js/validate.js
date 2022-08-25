@@ -1,12 +1,4 @@
-/**
- * Validate
- *
- * @author 4what
- * @version 2016.11.14
- */
-(function() {
-
-var Validate = window.Validate = {
+var Validate = {
 	isChinese: function(value) {
 		return /^[\u0391-\uFFE5]+$/.test(value);
 	},
@@ -51,5 +43,3 @@ var Validate = window.Validate = {
 		return /^[a-zA-Z]([a-zA-Z]|\d|_){4,16}([a-zA-Z]|\d)$/.test(value);
 	}
 };
-
-})();

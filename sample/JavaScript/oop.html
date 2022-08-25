@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 	<title>4what - JavaScript</title>
-	<meta name="author" content="4what" />
 
 	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
@@ -11,114 +11,116 @@
 	<script type="text/javascript" src="../../js/commons.js"></script>
 </head>
 <body>
-<h2><span>Syntax</span></h2>
-	<textarea cols="" rows="" name="code" class="js">
-	<script type="text/javascript">
-	/* object */
-	var o =
-		new Object()
-		//new Array("x", "y")
-		//new Boolean(true)
-		//new Date()
-		//new Function("arg", "")
-		//new Number(0)
-		//new RegExp("", "")
-		//new String("qwerty")
-	;
-	$4what.log("o: " + o);
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		/* object */
+		var o =
+			new Object()
+			//new Array("x", "y")
+			//new Boolean(true)
+			//new Date()
+			//new Function("arg", "")
+			//new Number(0)
+			//new RegExp("", "")
+			//new String("qwerty")
+		;
+		$4what.log("o: " + o);
 
-	o.prop = "value";
-	$4what.log("o.prop: " + o.prop); // value
+		o.prop = "value";
+		$4what.log("o.prop: " + o.prop); // value
 
-	/* prototype */
-	var Human = function() {
-		$4what.log("new Human");
-	};
+		/* prototype */
+		var Human = function() {
+			$4what.log("new Human");
+		};
 
-	Human.id = "id";
-	$4what.log("Human.id: " + Human.id); // id
+		Human.id = "id";
+		$4what.log("Human.id: " + Human.id); // id
 
-	Human.prototype.age = 0;
-	$4what.log("Human.age: " + Human.age); // undefined
+		Human.prototype.age = 0;
+		$4what.log("Human.age: " + Human.age); // undefined
 
-	var adam = new Human(); // new Human
-	$4what.log("adam.id: " + adam.id); // undefined
-	$4what.log("adam.age: " + adam.age); // 0
+		var adam = new Human(); // new Human
+		$4what.log("adam.id: " + adam.id); // undefined
+		$4what.log("adam.age: " + adam.age); // 0
 
-	adam.age = 100;
-	$4what.log("adam.age: " + adam.age); // 100
+		adam.age = 100;
+		$4what.log("adam.age: " + adam.age); // 100
 
-	delete adam.age;
-	$4what.log("adam.age: " + adam.age); // 0
+		delete adam.age;
+		$4what.log("adam.age: " + adam.age); // 0
 
-	/* inheritance */
-	var Woman = function(gender) {
-		$4what.log("new Woman");
-		/* constructor */
-		this.gender = gender;
-	};
-	Woman.prototype = new Human(); // new Human
+		/* inheritance */
+		var Woman = function(gender) {
+			$4what.log("new Woman");
 
-	var eve = new Woman("female"); // new Woman
-	$4what.log("eve.age: " + eve.age); // 0
-	$4what.log("eve.gender: " + eve.gender); // female
-	</script>
-	</textarea>
+			/* constructor */
+			this.gender = gender;
+		};
+		Woman.prototype = new Human(); // new Human
 
-<h2><span>Example</span></h2>
-	<script type="text/javascript">
-	/* object */
-	var o =
-		new Object()
-		//new Array("x", "y")
-		//new Boolean(true)
-		//new Date()
-		//new Function("arg", "")
-		//new Number(0)
-		//new RegExp("", "")
-		//new String("qwerty")
-	;
-	$4what.log("o: " + o);
+		var eve = new Woman("female"); // new Woman
+		$4what.log("eve.age: " + eve.age); // 0
+		$4what.log("eve.gender: " + eve.gender); // female
+		</script>
+		</textarea>
 
-	o.prop = "value";
-	$4what.log("o.prop: " + o.prop); // value
+	<h2><span>Example</span></h2>
+		<script type="text/javascript">
+		/* object */
+		var o =
+			new Object()
+			//new Array("x", "y")
+			//new Boolean(true)
+			//new Date()
+			//new Function("arg", "")
+			//new Number(0)
+			//new RegExp("", "")
+			//new String("qwerty")
+		;
+		$4what.log("o: " + o);
 
-	/* prototype */
-	var Human = function() {
-		$4what.log("new Human");
-	};
+		o.prop = "value";
+		$4what.log("o.prop: " + o.prop); // value
 
-	Human.id = "id";
-	$4what.log("Human.id: " + Human.id); // id
+		/* prototype */
+		var Human = function() {
+			$4what.log("new Human");
+		};
 
-	Human.prototype.age = 0;
-	$4what.log("Human.age: " + Human.age); // undefined
+		Human.id = "id";
+		$4what.log("Human.id: " + Human.id); // id
 
-	var adam = new Human(); // new Human
-	$4what.log("adam.id: " + adam.id); // undefined
-	$4what.log("adam.age: " + adam.age); // 0
+		Human.prototype.age = 0;
+		$4what.log("Human.age: " + Human.age); // undefined
 
-	adam.age = 100;
-	$4what.log("adam.age: " + adam.age); // 100
+		var adam = new Human(); // new Human
+		$4what.log("adam.id: " + adam.id); // undefined
+		$4what.log("adam.age: " + adam.age); // 0
 
-	delete adam.age;
-	$4what.log("adam.age: " + adam.age); // 0
+		adam.age = 100;
+		$4what.log("adam.age: " + adam.age); // 100
 
-	/* inheritance */
-	var Woman = function(gender) {
-		$4what.log("new Woman");
-		/* constructor */
-		this.gender = gender;
-	};
-	Woman.prototype = new Human(); // new Human
+		delete adam.age;
+		$4what.log("adam.age: " + adam.age); // 0
 
-	var eve = new Woman("female"); // new Woman
-	$4what.log("eve.age: " + eve.age); // 0
-	$4what.log("eve.gender: " + eve.gender); // female
-	</script>
+		/* inheritance */
+		var Woman = function(gender) {
+			$4what.log("new Woman");
 
-<script type="text/javascript" src="../../js/sample.js"></script>
+			/* constructor */
+			this.gender = gender;
+		};
+		Woman.prototype = new Human(); // new Human
 
-<script type="text/javascript" src="../../js/analytics.js"></script>
+		var eve = new Woman("female"); // new Woman
+		$4what.log("eve.age: " + eve.age); // 0
+		$4what.log("eve.gender: " + eve.gender); // female
+		</script>
+
+	<script type="text/javascript" src="../../js/sample.js"></script>
+
+	<script type="text/javascript" src="../../js/analytics.js"></script>
 </body>
 </html>
