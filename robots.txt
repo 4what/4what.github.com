@@ -1,6 +1,6 @@
 # robots.txt
 
-#Sitemap: http://www.example.com/sitemap.xml
+#Sitemap: http://example.com/sitemap.xml
 
 #User-Agent: *
 
