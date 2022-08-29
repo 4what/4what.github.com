@@ -1,8 +1,8 @@
 var WebViewJsBridge = {
 	/**
 	 * @param {String} method
-	 * @param {Object} data (optional)
-	 * @param {Function} callback (optional)
+	 * @param {Object} data?
+	 * @param {Function} callback?
 	 */
 	invoke: function(method, data, callback) {
 		var url = "wvjb".toLowerCase() + "://?method=" + method;

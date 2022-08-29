@@ -97,7 +97,7 @@ var $4what = function() {
 	/**
 	 * @requires jQuery 1.3.2+
 	 * @param {String} args
-	 * @param {String} callback (optional)
+	 * @param {String} callback?
 	 */
 	this.include = function(args) {
 		var host = (function() {
@@ -221,7 +221,7 @@ var $4what = function() {
 
 	/**
 	 * @param {Object} data
-	 * @param {Object} target (optional)
+	 * @param {Object} target?
 	 */
 	this.log = function(data, target) {
 		var p = document.createElement("p");

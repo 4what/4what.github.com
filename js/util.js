@@ -115,7 +115,7 @@ Util.prototype = {
 	 * @requires $js.url
 	 * @param {String} url
 	 * @param {Function} callback
-	 * @param {Boolean|String} jsonp (optional)
+	 * @param {Boolean|String} jsonp?
 	 */
 	getScript: function(url, callback, jsonp) {
 		var
@@ -246,8 +246,8 @@ Util.prototype = {
 	 * @param {Number} size
 	 * @param {Number} min
 	 * @param {Number} max
-	 * @param {Boolean} isInt (optional)
-	 * @param {Boolean} sort (optional)
+	 * @param {Boolean} isInt?
+	 * @param {Boolean} sort?
 	 * @return {Number[]}
 	 */
 	randoms: function(size, min, max, isInt, sort) {
@@ -524,9 +524,9 @@ Util.prototype = {
 	  Category: Misc
 	--------------------------------------*/
 	/**
-	 * @param {String} id (optional)
-	 * @param {String} lang (optional)
-	 * @return {String} (optional)
+	 * @param {String} id?
+	 * @param {String} lang?
+	 * @return {String|Void}
 	 */
 	clock: function(id, lang) {
 		var
@@ -566,8 +566,8 @@ Util.prototype = {
 
 	/**
 	 * @param {String} key
-	 * @param {String} value (optional)
-	 * @param {Object} options (optional)
+	 * @param {String} value?
+	 * @param {Object} options?
 	 * @return {String}
 	 */
 	cookie: function(key, value, options) {
@@ -685,7 +685,7 @@ Util.prototype = {
 	/**
 	 * @param {Number} min (>=)
 	 * @param {Number} max (<=)
-	 * @param {Boolean} isInt (optional)
+	 * @param {Boolean} isInt?
 	 * @return {Number}
 	 */
 	random: function(min, max, isInt) {
@@ -696,8 +696,8 @@ Util.prototype = {
 
 	/**
 	 * @param {Function} fn
-	 * @param {Function} callback (optional)
-	 * @return {String} (optional)
+	 * @param {Function} callback?
+	 * @return {String|Void}
 	 */
 	timer: function(fn, callback) {
 		var start = new Date();

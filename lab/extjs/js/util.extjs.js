@@ -65,7 +65,7 @@ var Util = $ext = {
 	combo: {
 		/**
 		 * @param {String|Ext.Element[]} combo
-		 * @param {Function} callback (optional)
+		 * @param {Function} callback?
 		 */
 		load: function(combo, callback) {
 			Ext.select(combo).each(function(element, composite, index) {
@@ -142,8 +142,8 @@ var Util = $ext = {
 		/**
 		 * @param {Ext.form.BasicForm} form
 		 * @param {Ext.form.Action} action
-		 * @param {String} msg (optional)
-		 * @param {Function} fn (optional)
+		 * @param {String} msg?
+		 * @param {Function} fn?
 		 */
 		form: function(form, action, msg, fn) {
 			switch (action.failureType) {
@@ -222,7 +222,7 @@ var Util = $ext = {
 
 	msg: {
 		/**
-		 * @param {Object} options (optional)
+		 * @param {Object} options?
 		 */
 		alert: function(options) {
 			var
@@ -273,7 +273,7 @@ var Util = $ext = {
 
 	/**
 	 * @param {Ext.form.DateField} datefield
-	 * @param {Function} callback (optional)
+	 * @param {Function} callback?
 	 */
 	monthpicker: function(datefield, callback) {
 		Ext.each([datefield.getEl(), datefield.trigger], function(item, index, allItems) {
@@ -431,7 +431,7 @@ var Util = $ext = {
 		 * @requires $ext.iframepanel
 		 * @param {Ext.TabPanel|String} tabpanel
 		 * @param {Object} options
-		 * @param {Object} scope (optional)
+		 * @param {Object} scope?
 		 */
 		load: function(tabpanel, options, scope) {
 			var
@@ -459,7 +459,7 @@ var Util = $ext = {
 		 * @param {Ext.data.Node} node
 		 * @param {Ext.EventObject} e
 		 * @param {Ext.TabPanel} tabpanel
-		 * @param {Object} options (optional)
+		 * @param {Object} options?
 		 */
 		loadOnClickLeaf: function(node, e, tabpanel, options) {
 			var
@@ -506,8 +506,8 @@ var Util = $ext = {
 
 	textfield: {
 		/**
-		 * @param {Ext.form.FormPanel} form (optional)
-		 * @param {String} name (optional)
+		 * @param {Ext.form.FormPanel} form?
+		 * @param {String} name?
 		 * @return {Ext.form.CompositeField[]}
 		 */
 		fields: function(form, name) {
@@ -529,7 +529,7 @@ var Util = $ext = {
 		 * @param {Ext.form.FormPanel} form
 		 * @param {Number} id
 		 * @param {String} name
-		 * @param {Object} options (optional)
+		 * @param {Object} options?
 		 */
 		insert: function(form, id, name, options) {
 			var
@@ -651,8 +651,8 @@ var Util = $ext = {
 			};
 		},
 		/**
-		 * @param {String} text (optional)
-		 * @param {RegExp} mask (optional)
+		 * @param {String} text?
+		 * @param {RegExp} mask?
 		 * @return {Object}
 		 */
 		html: function(text, mask) {
@@ -665,8 +665,8 @@ var Util = $ext = {
 			};
 		},
 		/**
-		 * @param {String} text (optional)
-		 * @param {RegExp} mask (optional)
+		 * @param {String} text?
+		 * @param {RegExp} mask?
 		 * @return {Object}
 		 */
 		password2: function(text, mask) {

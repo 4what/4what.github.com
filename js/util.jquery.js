@@ -27,7 +27,7 @@ var Util = {
 	/**
 	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
-	 * @param {Object} options (optional)
+	 * @param {Object} options?
 	 */
 	fixed: function(target, options) {
 		var
@@ -132,7 +132,7 @@ var Util = {
 	/**
 	 * @requires jQuery 1.3.2+
 	 * @param {Number[]} code
-	 * @param {Object|String} target (optional)
+	 * @param {Object|String} target?
 	 */
 	blockKey: function(code, target) {
 		$(target || document).keydown(function(e) {
@@ -169,7 +169,7 @@ var Util = {
 	/**
 	 * @requires jQuery 1.3.2+
 	 * @param {Object} data {"name": value | [value, ...], ...}
-	 * @param {Object|String} target (optional)
+	 * @param {Object|String} target?
 	 */
 	select: function(data, target) {
 		var item, value;
@@ -200,7 +200,7 @@ var Util = {
 	/**
 	 * @requires jQuery 1.3.2+, jQuery ColorBox
 	 * @param {Object} options
-	 * @param {Object} params (optional)
+	 * @param {Object} params?
 	 */
 	dialog: function(options, params) {
 		var
@@ -414,9 +414,9 @@ var Util = {
 	 * http://dev.renren.com
 	 *
 	 * @requires jQuery 1.3.2+
-	 * @param {Object} target (optional)
-	 * @param {Object} params (optional)
-	 * @return {String} (optional)
+	 * @param {Object} target?
+	 * @param {Object} params?
+	 * @return {String|Void}
 	 */
 	share: function(target, params) {
 		params = $.extend({
