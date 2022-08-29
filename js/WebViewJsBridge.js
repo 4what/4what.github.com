@@ -1,3 +1,6 @@
+/**
+ * @requires $js
+ */
 var WebViewJsBridge = {
 	/**
 	 * @param {String} method
@@ -8,7 +11,7 @@ var WebViewJsBridge = {
 		var url = "wvjb".toLowerCase() + "://?method=" + method;
 
 		if (data) {
-			url += "&" + this.serialize(data);
+			url += "&" + $js.url.serialize(data);
 		}
 
 		if (callback) {
@@ -34,19 +37,5 @@ var WebViewJsBridge = {
 		setTimeout(function() {
 			document.body.removeChild(iframe);
 		}, 0);
-	},
-
-	/**
-	 * @param {Object} map
-	 * @return {String}
-	 */
-	serialize: function(map) {
-		var result = [];
-
-		for (var key in map) {
-			result.push(encodeURIComponent(key) + "=" + encodeURIComponent(map[key]));
-		}
-
-		return result.join("&");
 	}
 };
