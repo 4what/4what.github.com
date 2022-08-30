@@ -1,5 +1,5 @@
 /**
- * @author http://4what.cn
+ * @author https://4what.cn
  * @version 1.2 Build 2019.09.16
  */
 (function() {

@@ -1,6 +1,6 @@
 /**
- * @author http://4what.cn
- * @version 1.3 Build 2018.04.13
+ * @author https://4what.cn
+ * @version 1.4 Build 2022.08.30
  */
 (function() {
 
@@ -404,43 +404,6 @@ var Util = {
 		}
 
 		init(settings.pageNum);
-	},
-
-	/**
-	 * http://open.weibo.com
-	 * http://connect.qq.com
-	 * http://open.t.qq.com
-	 * http://open.kaixin001.com
-	 * http://dev.renren.com
-	 *
-	 * @requires jQuery 1.3.2+
-	 * @param {Object} target?
-	 * @param {Object} params?
-	 * @return {String|Void}
-	 */
-	share: function(target, params) {
-		params = $.extend({
-			url: window.location.href, // {String}
-			title: document.title, // {String}
-			pic: "" // {String}
-		}, params);
-
-		var
-		url = encodeURIComponent(params.url),
-		title = params.title,
-		pic = encodeURIComponent(params.pic),
-
-		html = '<a href=\'javascript: void(window.open("http://service.weibo.com/share/share.php?url=" + "' + url + '" + "&title=" + "' + title + '" + "&pic=" + "' + pic + '" + "&appkey=", "", ""));\'><img src="http://www.weibo.com/favicon.ico" alt="分享到新浪微博" title="分享到新浪微博" style="height: 16px; width: 16px;" /></a>'
-				+ '\n' + '<a href=\'javascript: void(window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + "' + url + '" + "&title=" + "' + title + '" + "&pics=" + "' + pic + '", "", ""));\'><img src="http://qzonestyle.gtimg.cn/qzone_v6/img/favicon.ico" alt="分享到QQ空间" title="分享到QQ空间" style="height: 16px; width: 16px;" /></a>'
-				+ '\n' + '<a href=\'javascript: void(window.open("http://share.v.t.qq.com/index.php?c=share&a=index&url=" + "' + url + '" + "&title=" + "' + title + '" + "&pic=" + "' + pic + '" + "&appkey=", "", ""));\'><img src="http://t.qq.com/favicon.ico" alt="分享到腾讯微博" title="分享到腾讯微博" style="height: 16px; width: 16px;" /></a>'
-				+ '\n' + '<a href=\'javascript: void(window.open("http://www.kaixin001.com/rest/records.php?style=11&url=" + "' + url + '" + "&content=" + "' + title + '" + "&pic=" + "' + pic + '", "", ""));\'><img src="http://www.kaixin001.com/favicon.ico" alt="分享到开心网" title="分享到开心网" style="height: 16px; width: 16px;" /></a>'
-				+ '\n' + '<a href=\'javascript: void(window.open("http://widget.renren.com/dialog/share?resourceUrl=" + "' + url + '" + "&title=" + "' + title + '" + "&pic=" + "' + pic + '", "", ""));\'><img src="http://dev.renren.com/img/rrshare16_16.png" alt="分享到人人网" title="分享到人人网" style="height: 16px; width: 16px;" /></a>';
-
-		if (target) {
-			$(target).html(html);
-		} else {
-			return html;
-		}
 	},
 
 	/**

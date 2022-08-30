@@ -35,7 +35,6 @@
 			<li class="paginator">支持 Ajax 的分页组件</li>
 			<li class="select">加载 select, radio, checkbox 的默认值</li>
 			<li class="setIFrameHeight">same-origin；IFRAME 自适应高度</li>
-			<li class="share">分享按钮</li>
 			<li class="stripHtml">过滤 HTML 标签</li>
 		</ul>
 
@@ -212,15 +211,6 @@
 					$jq.setIFrameHeight("#setIFrameHeight");
 					</textarea>
 				</li>
-				<li class="share">
-					<textarea cols="" rows="" name="code" class="js">
-					$jq.share("#api-example", {
-						//url: "http://example.com",
-						//title: "title",
-						//pic: ""
-					});
-					</textarea>
-				</li>
 				<li class="stripHtml">
 					<textarea cols="" rows="" name="code" class="js">
 					$4what.log($jq.stripHtml($("#api-syntax").html()));
@@ -380,13 +370,6 @@
 						"agree": "no",
 						"city": ["sh", "gz"]
 					}, $("#select"));
-				},
-				share: function() {
-					$jq.share("#api-example", {
-						//url: "http://example.com",
-						//title: "title",
-						//pic: ""
-					});
 				},
 				stripHtml: function() {
 					$4what.log($jq.stripHtml($("#api-syntax").html()));
