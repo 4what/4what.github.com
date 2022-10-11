@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>4what - JavaScript</title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+
+	<script type="text/javascript" src="../../js/util.js"></script>
+	<script type="text/javascript" src="../../js/commons.js"></script>
+</head>
+<body>
+	<h2><span>Specification</span></h2>
+		<p>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API">[1]</a>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard">[2]</a>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent">[3]</a>
+		</p>
+
+	<h2><span>Compatibility</span></h2>
+		<p>
+			Std?
+		</p>
+
+	<h2><span>Syntax</span></h2>
+		<textarea cols="" rows="" name="code" class="html">
+		<button id="write">Write</button>
+		</textarea>
+
+		<textarea cols="" rows="" name="code" class="js">
+		<script type="text/javascript">
+		document.addEventListener("copy", function(event) {
+			console.log('copy', event);
+		});
+
+		document.getElementById("write").addEventListener("click", function() {
+			navigator.clipboard.writeText("Hello, Clipboard!").then(function() {
+
+			}, function() {
+
+			});
+		});
+		</script>
+		</textarea>
+
+	<h2><span>Example</span></h2>
+		<button id="write">Write</button>
+
+		<script type="text/javascript">
+		document.addEventListener("copy", function(event) {
+			console.log('copy', event);
+		});
+
+		document.getElementById("write").addEventListener("click", function() {
+			navigator.clipboard.writeText("Hello, Clipboard!").then(function() {
+
+			}, function() {
+
+			});
+		});
+		</script>
+
+	<script type="text/javascript" src="../../js/sample.js"></script>
+
+	<script type="text/javascript" src="../../js/analytics.js"></script>
+</body>
+</html>
