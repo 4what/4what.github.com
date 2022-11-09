@@ -18,6 +18,7 @@
 				BufferedReader reader = request.getReader();
 
 				String data;
+
 				while ((data = reader.readLine()) != null) {
 					for (String item : data.split("&")) {
 						String[] array = item.split("=");
@@ -41,17 +42,14 @@
 	request.setCharacterEncoding("UTF-8");
 
 
-	/* for CORS */
-	response.setHeader("Access-Control-Allow-Credentials", "true"); // cookie
-
+	/* CORS */
 	String origin = request.getHeader("Origin");
+
 	//if (origin.contains("example.com")) {
 		response.setHeader("Access-Control-Allow-Origin", origin);
 	//}
 
-
-	/* P3P */
-	//response.setHeader("P3P", "CP=\"\"");
+	//response.setHeader("Access-Control-Allow-Credentials", "true");
 
 
 	/* defer */
