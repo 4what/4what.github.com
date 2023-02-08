@@ -1,9 +1,5 @@
-# robots.txt
-
-#Sitemap: http://example.com/sitemap.xml
+Sitemap: https://4what.cn/sitemap.xml
 
 #User-Agent: *
-
 #Allow: /
-
 #Disallow:
