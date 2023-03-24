@@ -25,24 +25,21 @@
 
 	<h2><span>Syntax</span></h2>
 		<textarea cols="" rows="" name="code" class="html">
-		id: <input type="text" name="" value="" id="id" />
+		action: <input type="text" name="" value="" id="action" />
 		<button id="open">Open</button>
-		<button id="close">Close</button>
 
 		message: <input type="text" name="" value="" id="message" />
 		<button id="send">Send</button>
+
+		<button id="close">Close</button>
 		</textarea>
 
 		<textarea cols="" rows="" name="code" class="js">
 		<script type="text/javascript">
 		document.getElementById("open").onclick = function() {
-			var ws = new WebSocket("ws://localhost:8080/j2ee/websocket/" + document.getElementById("id").value);
+			var ws = new WebSocket("ws://localhost:8080/websocket/" + document.getElementById("action").value);
 
-			ws.onclose = function(e) {
-				console.log(e);
-			};
-
-			ws.onerror = function(e) {
+			ws.onopen = function(e) {
 				console.log(e);
 			};
 
@@ -52,38 +49,39 @@
 				$4what.log(e.data);
 			};
 
-			ws.onopen = function(e) {
+			ws.onerror = function(e) {
 				console.log(e);
 			};
 
-			document.getElementById("close").onclick = function() {
-				ws.close();
+			ws.onclose = function(e) {
+				console.log(e);
 			};
 
 			document.getElementById("send").onclick = function() {
 				ws.send(document.getElementById("message").value);
+			};
+
+			document.getElementById("close").onclick = function() {
+				ws.close();
 			};
 		};
 		</script>
 		</textarea>
 
 	<h2><span>Example</span></h2>
-		id: <input type="text" name="" value="" id="id" />
+		action: <input type="text" name="" value="" id="action" />
 		<button id="open">Open</button>
-		<button id="close">Close</button>
 
 		message: <input type="text" name="" value="" id="message" />
 		<button id="send">Send</button>
 
+		<button id="close">Close</button>
+
 		<script type="text/javascript">
 		document.getElementById("open").onclick = function() {
-			var ws = new WebSocket("ws://localhost:8080/j2ee/websocket/" + document.getElementById("id").value);
+			var ws = new WebSocket("ws://localhost:8080/websocket/" + document.getElementById("action").value);
 
-			ws.onclose = function(e) {
-				console.log(e);
-			};
-
-			ws.onerror = function(e) {
+			ws.onopen = function(e) {
 				console.log(e);
 			};
 
@@ -93,16 +91,20 @@
 				$4what.log(e.data);
 			};
 
-			ws.onopen = function(e) {
+			ws.onerror = function(e) {
 				console.log(e);
 			};
 
-			document.getElementById("close").onclick = function() {
-				ws.close();
+			ws.onclose = function(e) {
+				console.log(e);
 			};
 
 			document.getElementById("send").onclick = function() {
 				ws.send(document.getElementById("message").value);
+			};
+
+			document.getElementById("close").onclick = function() {
+				ws.close();
 			};
 		};
 		</script>
