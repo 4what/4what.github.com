@@ -50,7 +50,7 @@ var $4what = function() {
 
 		try {
 			code[param]();
-		} catch(e) {}
+		} catch (e) {}
 	};
 
 	/**
