@@ -760,6 +760,7 @@ Util.prototype = {
 					result[entry[0]] = entry[1];
 				}
 			}
+
 			return result;
 		},
 		/**
