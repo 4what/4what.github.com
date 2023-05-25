@@ -64,22 +64,22 @@ var $4what = function() {
 		hash = url.indexOf("#"),
 		search = url.indexOf("?");
 
-        if (search > -1) {
+        if (search !== -1) {
 			result = url.slice(0, search);
-        } else if (hash > -1) {
+        } else if (hash !== -1) {
 			result = url.slice(0, hash);
 		} else {
         	result = url;
 		}
 
 		var slash = result.lastIndexOf("/");
-		if (slash > -1) {
+		if (slash !== -1) {
 			result = result.slice(slash + 1);
 		}
 
 		/* for Win */
 		var backslash = result.lastIndexOf("\\");
-		if (backslash > -1) {
+		if (backslash !== -1) {
 			result = result.slice(backslash + 1);
 		}
 

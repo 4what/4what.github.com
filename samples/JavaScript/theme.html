@@ -29,10 +29,10 @@
 			for (var item, i = links.length - 1; i >= 0; i--) {
 				item = links[i];
 
-				if (item.getAttribute("rel").indexOf("alternate stylesheet") > -1) {
+				if (item.getAttribute("rel").indexOf("alternate stylesheet") !== -1) {
 					item.disabled = true;
 
-					if (item.getAttribute("title").indexOf(name) > -1) {
+					if (item.getAttribute("title").indexOf(name) !== -1) {
 						item.disabled = false;
 					}
 				}
@@ -54,10 +54,10 @@
 			for (var item, i = links.length - 1; i >= 0; i--) {
 				item = links[i];
 
-				if (item.getAttribute("rel").indexOf("alternate stylesheet") > -1) {
+				if (item.getAttribute("rel").indexOf("alternate stylesheet") !== -1) {
 					item.disabled = true;
 
-					if (item.getAttribute("title").indexOf(name) > -1) {
+					if (item.getAttribute("title").indexOf(name) !== -1) {
 						item.disabled = false;
 					}
 				}

@@ -723,7 +723,7 @@ Util.prototype = {
 		encode: function(url) {
 			var index = url.indexOf("?");
 
-			if (index > -1) {
+			if (index !== -1) {
 				var search = url.slice(index + 1);
 
 				url = url.slice(0, index) + "?" + this.serialize(this.parse(search));

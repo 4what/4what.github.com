@@ -242,7 +242,7 @@ var Util = {
 		for (var item, i = domains.length - 1; i >= 0; i --) {
 			item = domains[i];
 
-			if (window.location.hostname.indexOf("." + item + ".") > -1) {
+			if (window.location.hostname.indexOf("." + item + ".") !== -1) {
 				return item;
 			}
 		}

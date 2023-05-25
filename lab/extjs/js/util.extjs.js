@@ -329,11 +329,11 @@ var Util = $ext = {
 			if (data instanceof Ext.data.Record) {
 				record = data;
 
-				if (store.indexOf(record) > -1 || store.findExact(name, record.get(name)) > -1) {
+				if (store.indexOf(record) !== -1 || store.findExact(name, record.get(name)) !== -1) {
 					exist = true;
 				}
 			} else {
-				if (store.findExact(name, data) > -1) {
+				if (store.findExact(name, data) !== -1) {
 					exist = true;
 				} else {
 					var o = {};
