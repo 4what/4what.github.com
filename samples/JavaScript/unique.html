@@ -22,22 +22,22 @@
 				function(array) {
 					var
 					result = [],
-					element, exist;
+					element, exists;
 
 					for (var i = 0, l = array.length; i < l; i++) {
 						element = array[i];
 
-						exist = false;
+						exists = false;
 
 						for (var j = result.length - 1; j >= 0; j--) {
 							if (result[j] === element) {
-								exist = true;
+								exists = true;
 
 								break;
 							}
 						}
 
-						if (!exist) {
+						if (!exists) {
 							result.push(element);
 						}
 					}

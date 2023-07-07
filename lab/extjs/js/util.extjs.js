@@ -320,7 +320,7 @@ var Util = $ext = {
 		 */
 		add: function(id, data) {
 			var
-			exist = false,
+			exists = false,
 			multiselect = Ext.getCmp(id),
 			name = multiselect.valueField,
 			record,
@@ -330,11 +330,11 @@ var Util = $ext = {
 				record = data;
 
 				if (store.indexOf(record) !== -1 || store.findExact(name, record.get(name)) !== -1) {
-					exist = true;
+					exists = true;
 				}
 			} else {
 				if (store.findExact(name, data) !== -1) {
-					exist = true;
+					exists = true;
 				} else {
 					var o = {};
 					o[name] = data;
@@ -342,7 +342,7 @@ var Util = $ext = {
 					record = new Ext.data.Record(o);
 				}
 			}
-			if (!exist) {
+			if (!exists) {
 				store.add(record);
 
 				multiselect.clearInvalid();
