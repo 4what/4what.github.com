@@ -35,13 +35,13 @@
 			}
 
 			var
-			btns = document.getElementById("box").getElementsByTagName("button"),
+			buttons = document.getElementById("box").getElementsByTagName("button"),
 			handler;
 
-			for (var i = 0, l = btns.length; i < l; i++) {
+			for (var i = 0, l = buttons.length; i < l; i++) {
 				handler = log(i + 1);
 
-				btns[i].onclick =
+				buttons[i].onclick =
 					//function() { alert(i + 1); }; // failure
 					//function() { handler(); }; // failure
 
@@ -70,13 +70,13 @@
 			}
 
 			var
-			btns = document.getElementById("box").getElementsByTagName("button"),
+			buttons = document.getElementById("box").getElementsByTagName("button"),
 			handler;
 
-			for (var i = 0, l = btns.length; i < l; i++) {
+			for (var i = 0, l = buttons.length; i < l; i++) {
 				handler = log(i + 1);
 
-				btns[i].onclick =
+				buttons[i].onclick =
 					//function() { alert(i + 1); }; // failure
 					//function() { handler(); }; // failure
 
