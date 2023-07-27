@@ -68,16 +68,16 @@
 						//async: false,
 						//contentType: false,
 						//processData: false,
-						beforeSend: function(xhr) {
+						beforeSend: function (xhr) {
 							//if ("withCredentials" in xhr) {
 								//xhr.withCredentials = true; // for Std?
 							//}
 						},
-						complete: function(xhr) {},
-						success: function(data, xhr) {
+						complete: function (xhr) {},
+						success: function (data, xhr) {
 							$4what.log(data);
 						},
-						error: function(xhr) {
+						error: function (xhr) {
 							alert("Error: " + xhr.status + " " + xhr.statusText);
 						}
 					});
@@ -99,7 +99,7 @@
 				</li>
 				<li class="getScript">
 					<textarea cols="" rows="" name="code" class="js">
-					$js.getScript("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+					$js.getScript("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function () {
 						$4what.log($.ui.version)
 					});
 					</textarea>
@@ -111,7 +111,7 @@
 				</li>
 				<li class="jsonp">
 					<textarea cols="" rows="" name="code" class="js">
-					$js.jsonp("http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/jsonp/data.jsp?name=value", function(data) {
+					$js.jsonp("http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/jsonp/data.jsp?name=value", function (data) {
 						for (var key in data) {
 							$4what.log(key + ": " + data[key])
 						}
@@ -120,7 +120,7 @@
 				</li>
 				<li class="loader">
 					<textarea cols="" rows="" name="code" class="js">
-					$js.loader($.ui, "../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+					$js.loader($.ui, "../../js/jquery/ui/1.9.2/jquery-ui.min.js", function () {
 						$4what.log($.ui.version);
 					});
 					</textarea>
@@ -181,19 +181,19 @@
 					</textarea>
 
 					<textarea cols="" rows="" name="code" class="js">
-					document.getElementById("windowName-request").onclick = function() {
+					document.getElementById("windowName-request").onclick = function () {
 						$js.windowName({
 							url: "http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/Window.name/data.jsp?windowname=1&name=value",
-							callback: function(data) {
+							callback: function (data) {
 								$4what.log(data);
 							}
 						});
 					};
 
-					document.getElementById("windowName-submit").onclick = function() {
+					document.getElementById("windowName-submit").onclick = function () {
 						$js.windowName({
 							form: document.getElementById("windowName-form"),
-							callback: function(data) {
+							callback: function (data) {
 								$4what.log(data);
 							}
 						});
@@ -208,7 +208,7 @@
 					</textarea>
 
 					<textarea cols="" rows="" name="code" class="js">
-					window.onload = function() {
+					window.onload = function () {
 						$js.zoomOut(document.getElementById("zoomOut"), 50, 50);
 					};
 					</textarea>
@@ -255,7 +255,7 @@
 				$("#api-syntax > li"),
 				$("#api-example > li")
 			], {
-				ajax: function() {
+				ajax: function () {
 					$js.ajax({
 						url:
 							"ajax/data.jsp"
@@ -268,21 +268,21 @@
 						//async: false,
 						//contentType: false,
 						//processData: false,
-						beforeSend: function(xhr) {
+						beforeSend: function (xhr) {
 							//if ("withCredentials" in xhr) {
 								//xhr.withCredentials = true; // for Std?
 							//}
 						},
-						complete: function(xhr) {},
-						success: function(data, xhr) {
+						complete: function (xhr) {},
+						success: function (data, xhr) {
 							$4what.log(data);
 						},
-						error: function(xhr) {
+						error: function (xhr) {
 							alert("Error: " + xhr.status + " " + xhr.statusText);
 						}
 					});
 				},
-				cookie: function() {
+				cookie: function () {
 					$js.cookie("key", "value"/*, {
 						domain: ".example.com",
 						expires: 7, // new Date()
@@ -294,79 +294,79 @@
 
 					$4what.log($js.cookie("key"));
 				},
-				getScript: function() {
-					$js.getScript("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+				getScript: function () {
+					$js.getScript("../../js/jquery/ui/1.9.2/jquery-ui.min.js", function () {
 						$4what.log($.ui.version)
 					});
 				},
-				setIFrameHeight: function() {
+				setIFrameHeight: function () {
 					$js.setIFrameHeight("setIFrameHeight");
 				},
-				inArray: function() {
+				inArray: function () {
 					$4what.log($js.inArray("b", ["a", "b", "c"]));
 				},
-				jsonp: function() {
-					$js.jsonp("http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/jsonp/data.jsp?name=value", function(data) {
+				jsonp: function () {
+					$js.jsonp("http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/jsonp/data.jsp?name=value", function (data) {
 						for (var key in data) {
 							$4what.log(key + ": " + data[key])
 						}
 					});
 				},
-				loader: function() {
-					$js.loader($.ui, "../../js/jquery/ui/1.9.2/jquery-ui.min.js", function() {
+				loader: function () {
+					$js.loader($.ui, "../../js/jquery/ui/1.9.2/jquery-ui.min.js", function () {
 						$4what.log($.ui.version);
 					});
 				},
-				random: function() {
+				random: function () {
 					$4what.log($js.random(0, 10));
 
 					$4what.log($js.random(0, 10, true));
 				},
-				randoms: function() {
+				randoms: function () {
 					$4what.log($js.randoms(3, 0, 10));
 
 					$4what.log($js.randoms(3, 0, 10, true));
 
 					$4what.log($js.randoms(3, 0, 10, true, false));
 				},
-				removeElement: function() {
+				removeElement: function () {
 					$4what.log($js.removeElement("b", ["a", "b", "c"]));
 				},
-				style: function() {
+				style: function () {
 					$4what.log($js.style(document.body, "color"));
 				},
-				timer: function() {
-					document.getElementById("timer-run").onclick = function() {
-						eval('$js.timer(function() { ' + document.getElementById("timer-fn").value + ' }, function(result) { $4what.log(result); });');
+				timer: function () {
+					document.getElementById("timer-run").onclick = function () {
+						eval('$js.timer(function () { ' + document.getElementById("timer-fn").value + ' }, function (result) { $4what.log(result); });');
 					};
 				},
-				unique: function() {
+				unique: function () {
 					$4what.log($js.unique([0, 1, 0, 1]));
 				},
-				url: function() {
+				url: function () {
 					$4what.log($js.url.param("method"));
 				},
-				windowName: function() {
-					document.getElementById("windowName-request").onclick = function() {
+				windowName: function () {
+					document.getElementById("windowName-request").onclick = function () {
 						$js.windowName({
 							url: "http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/Window.name/data.jsp?windowname=1&name=value",
-							callback: function(data) {
+							callback: function (data) {
 								$4what.log(data);
 							}
 						});
 					};
 
-					document.getElementById("windowName-submit").onclick = function() {
+					document.getElementById("windowName-submit").onclick = function () {
 						$js.windowName({
 							form: document.getElementById("windowName-form"),
-							callback: function(data) {
+							callback: function (data) {
 								$4what.log(data);
 							}
 						});
 					};
 				},
-				zoomOut: function() {
-					window.onload = function() {
+				zoomOut: function () {
+					window.onload = function () {
 						$js.zoomOut(document.getElementById("zoomOut"), 50, 50);
 					};
 				}

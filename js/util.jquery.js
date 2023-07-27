@@ -2,7 +2,7 @@
  * @author https://4what.cn
  * @version 1.4 Build 2022.08.30
  */
-(function() {
+(function () {
 
 var Util = {
 	/*--------------------------------------
@@ -12,12 +12,12 @@ var Util = {
 	 * @requires jQuery 1.3.2+
 	 * @param {Number} min
 	 */
-	center: function(min) {
+	center: function (min) {
 		var
-		body = $("body"),
-		width;
+			body = $("body"),
+			width;
 
-		$(window).bind("load resize", function() {
+		$(window).bind("load resize", function () {
 			width = $(window).width();
 
 			body.css("margin-left", width < min ? (width - min) / 2 : "auto");
@@ -29,48 +29,48 @@ var Util = {
 	 * @param {Object|String} target
 	 * @param {Object} options?
 	 */
-	fixed: function(target, options) {
+	fixed: function (target, options) {
 		var
-		defaults = {
-			duration: 0, // {Number|String}
-			offset: 0, // {Number}
-			position: "bottom" // {String} bottom|top
-		},
-		settings = $.extend(defaults, options);
+			defaults = {
+				duration: 0, // {Number|String}
+				offset: 0, // {Number}
+				position: "bottom" // {String} bottom|top
+			},
+			settings = $.extend(defaults, options);
 
 		target = $(target);
 
 		var
-		position = (function() {
-			if (settings.position === "bottom") {
-				var outerHeight = target.outerHeight(true);
+			position = (function () {
+				if (settings.position === "bottom") {
+					var outerHeight = target.outerHeight(true);
 
-				return function() {
-					return $(window).height() - outerHeight - settings.offset;
-				};
-			} else {
-				return function() {
-					return settings.offset;
-				};
-			}
-		})(),
+					return function () {
+						return $(window).height() - outerHeight - settings.offset;
+					};
+				} else {
+					return function () {
+						return settings.offset;
+					};
+				}
+			})(),
 
-		prop = function() {
-			return {
-				"top": $(window).scrollTop() + position()
-					+ "px" // for IE
-			};
-		},
-
-		handler = (function() {
-			return !settings.duration ?
-				function() {
-					target.css(prop());
-				} :
-				function() {
-					target.stop().animate(prop(), settings.duration);
+			prop = function () {
+				return {
+					"top": $(window).scrollTop() + position()
+						+ "px" // for IE
 				};
-		})();
+			},
+
+			handler = (function () {
+				return !settings.duration ?
+					function () {
+						target.css(prop());
+					} :
+					function () {
+						target.stop().animate(prop(), settings.duration);
+					};
+			})();
 
 		$(window).bind("load resize scroll", handler);
 	},
@@ -80,8 +80,8 @@ var Util = {
 	 * @param {Object|String} target
 	 * @param {Number} limit
 	 */
-	maxHeight: function(target, limit) {
-		$(target).each(function() {
+	maxHeight: function (target, limit) {
+		$(target).each(function () {
 			if ($(this).height() > limit) {
 				$(this).height(limit);
 			}
@@ -93,8 +93,8 @@ var Util = {
 	 * @param {Object|String} target
 	 * @param {Number} limit
 	 */
-	minHeight: function(target, limit) {
-		$(target).each(function() {
+	minHeight: function (target, limit) {
+		$(target).each(function () {
 			if ($(this).height() < limit) {
 				$(this).height(limit);
 			}
@@ -108,8 +108,8 @@ var Util = {
 	 * @param {Object|String} target
 	 * @param {Number} width
 	 */
-	minWidth: function(target, width) {
-		$(window).bind("load resize", function() {
+	minWidth: function (target, width) {
+		$(window).bind("load resize", function () {
 			$(target).width($(window).width() <= width ? width : "auto");
 		});
 	},
@@ -120,8 +120,8 @@ var Util = {
 	 * @requires jQuery 1.3.2+
 	 * @param {Object|String} target
 	 */
-	setIFrameHeight: function(target) {
-		$(target).load(function() {
+	setIFrameHeight: function (target) {
+		$(target).load(function () {
 			$(this).height($(this).contents().find("body").outerHeight(true));
 		});
 	},
@@ -134,8 +134,8 @@ var Util = {
 	 * @param {Number[]} code
 	 * @param {Object|String} target?
 	 */
-	blockKey: function(code, target) {
-		$(target || document).keydown(function(e) {
+	blockKey: function (code, target) {
+		$(target || document).keydown(function (e) {
 			for (var i = code.length - 1; i >= 0; i--) {
 				if (e.which === code[i]) {
 					e.preventDefault();
@@ -152,7 +152,7 @@ var Util = {
 	 * @param {Object|String} form
 	 * @param {Boolean} bln
 	 */
-	disableSubmit: function(form, bln) {
+	disableSubmit: function (form, bln) {
 		$(form).find(":submit, :image").attr("disabled", bln);
 	},
 
@@ -162,7 +162,7 @@ var Util = {
 	 * @param {String} name
 	 * @return {Object}
 	 */
-	field: function(form, name) {
+	field: function (form, name) {
 		return $(form).find(":checkbox, :file, :hidden, :password, :radio, :text, select, textarea").filter("[name='" + name + "']");
 	},
 
@@ -171,7 +171,7 @@ var Util = {
 	 * @param {Object} data {"name": value | [value, ...], ...}
 	 * @param {Object|String} target?
 	 */
-	select: function(data, target) {
+	select: function (data, target) {
 		var item, value;
 
 		target = $(target).find(":checkbox, :radio, select");
@@ -202,22 +202,22 @@ var Util = {
 	 * @param {Object} options
 	 * @param {Object} params?
 	 */
-	dialog: function(options, params) {
+	dialog: function (options, params) {
 		var
-		defaults = {
-			callback: new Function(), // {Function}
-			template: new Function("id", ""), // {Function} (*)
-			timeout: false // {Boolean|Number}
-		},
-		settings = $.extend(defaults, options),
+			defaults = {
+				callback: new Function(), // {Function}
+				template: new Function("id", ""), // {Function} (*)
+				timeout: false // {Boolean|Number}
+			},
+			settings = $.extend(defaults, options),
 
-		id = "dialog-" + new Date().getTime();
+			id = "dialog-" + new Date().getTime();
 
 		params = $.extend({
 			html: settings.template(id),
-			onComplete: function() {
+			onComplete: function () {
 				/* close */
-				$("#" + id).find("[class*='dialog-close']").click(function() {
+				$("#" + id).find("[class*='dialog-close']").click(function () {
 					$.colorbox.close();
 				});
 
@@ -238,8 +238,8 @@ var Util = {
 	 * @param {String[]} domains
 	 * @return {String}
 	 */
-	domain: function(domains) {
-		for (var item, i = domains.length - 1; i >= 0; i --) {
+	domain: function (domains) {
+		for (var item, i = domains.length - 1; i >= 0; i--) {
 			item = domains[i];
 
 			if (window.location.hostname.indexOf("." + item + ".") !== -1) {
@@ -254,30 +254,30 @@ var Util = {
 	 * @param {Object|String} target
 	 * @param {Object} options
 	 */
-	paginator: function(target, options) {
+	paginator: function (target, options) {
 		var
-		defaults = {
-			debug: false, // {Boolean} !ajax
+			defaults = {
+				debug: false, // {Boolean} !ajax
 
-			ajax: false, // {Boolean}
-			callback: new Function(), // {Function} ajax
+				ajax: false, // {Boolean}
+				callback: new Function(), // {Function} ajax
 
-			param: "pageNum", // {String}
-			data: null, // {Object} !ajax
+				param: "pageNum", // {String}
+				data: null, // {Object} !ajax
 
-			ellipsis: true, // {Boolean}
-			pages: 5, // {Number}
+				ellipsis: true, // {Boolean}
+				pages: 5, // {Number}
 
-			pageNum: 1, // {Number}
-			pageSize: 10, // {Number}
-			total: 0, // {Number} (*)
+				pageNum: 1, // {Number}
+				pageSize: 10, // {Number}
+				total: 0, // {Number} (*)
 
-			previous: "Previous", // {String}
-			next: "Next", // {String}
-			first: "First", // {String}
-			last: "Last" // {String}
-		},
-		settings = $.extend(defaults, options);
+				previous: "Previous", // {String}
+				next: "Next", // {String}
+				first: "First", // {String}
+				last: "Last" // {String}
+			},
+			settings = $.extend(defaults, options);
 
 		/* init */
 		function init(index) {
@@ -291,8 +291,8 @@ var Util = {
 
 					if (window.location.search) {
 						var
-						search = $js.url.params(),
-						value;
+							search = $js.url.params(),
+							value;
 
 						for (var key in search) {
 							value = search[key];
@@ -321,18 +321,18 @@ var Util = {
 				}
 
 				var
-				pages = Math.min(settings.pages, totalPages),
+					pages = Math.min(settings.pages, totalPages),
 
-				start = Math.max(1, Math.ceil(index - (pages / 2))),
-				end = Math.min(totalPages, start + pages - 1),
+					start = Math.max(1, Math.ceil(index - (pages / 2))),
+					end = Math.min(totalPages, start + pages - 1),
 
-				/* adjust */
-				delta = pages - (end - start + 1),
-				start = Math.max(1, start - delta),
+					/* adjust */
+					delta = pages - (end - start + 1),
+					start = Math.max(1, start - delta),
 
-				box = $('<div class="pagination"></div>'),
-				component = "",
-				widget;
+					box = $('<div class="pagination"></div>'),
+					component = "",
+					widget;
 
 				$(target).html(box);
 
@@ -349,8 +349,8 @@ var Util = {
 				/* first & previous */
 				if (index > 1) {
 					var
-					first = '<a href="' + url(1) + '" class="first" rel="' + 1 + '">' + settings.first + '</a> ',
-					previous = index - 1;
+						first = '<a href="' + url(1) + '" class="first" rel="' + 1 + '">' + settings.first + '</a> ',
+						previous = index - 1;
 
 					widget = previous = '<a href="' + url(previous) + '" class="previous" rel="' + previous + '">' + settings.previous + '</a> ';
 
@@ -369,8 +369,8 @@ var Util = {
 				/* last & next */
 				if (index < totalPages) {
 					var
-					last = '<a href="' + url(totalPages) + '" class="last" rel="' + totalPages + '">' + settings.last + '</a> ',
-					next = index + 1;
+						last = '<a href="' + url(totalPages) + '" class="last" rel="' + totalPages + '">' + settings.last + '</a> ',
+						next = index + 1;
 
 					widget = next = '<a href="' + url(next) + '" class="next" rel="' + next + '">' + settings.next + '</a> ';
 
@@ -388,7 +388,7 @@ var Util = {
 
 				/* ajax */
 				if (settings.ajax) {
-					box.find("a").click(function() {
+					box.find("a").click(function () {
 						var index = parseInt($(this).attr("rel"), 10);
 
 						/* recursion */
@@ -410,7 +410,7 @@ var Util = {
 	 * @param {String} value
 	 * @return {String}
 	 */
-	stripHtml: function(value) {
+	stripHtml: function (value) {
 		return value.replace(/<.[^<>]*?>/g, "") // /<\/?[^>]+>/gi
 			.replace(/&nbsp;|&#160;/gi, ""); // non-breaking space
 	}
@@ -419,7 +419,7 @@ var Util = {
 if (typeof module === "object" && typeof module.exports === "object") { // for CommonJS
 	module.exports = Util;
 } else if (typeof define === "function" && define.amd) { // for RequireJS
-	define(/*"Util", */function() {
+	define(/*"Util", */function () {
 		return Util;
 	});
 } else {

@@ -7,7 +7,7 @@ var WebViewJsBridge = {
 	 * @param {Object} data?
 	 * @param {Function} callback?
 	 */
-	invoke: function(method, data, callback) {
+	invoke: function (method, data, callback) {
 		var url = "wvjb".toLowerCase() + "://?method=" + method;
 
 		if (data) {
@@ -19,7 +19,7 @@ var WebViewJsBridge = {
 
 			url += "&callback=" + fn;
 
-			window[fn] = function(result) {
+			window[fn] = function (result) {
 				callback(result);
 
 				window[fn] = undefined;
@@ -34,7 +34,7 @@ var WebViewJsBridge = {
 
 		document.body.appendChild(iframe);
 
-		setTimeout(function() {
+		setTimeout(function () {
 			document.body.removeChild(iframe);
 		}, 0);
 	}

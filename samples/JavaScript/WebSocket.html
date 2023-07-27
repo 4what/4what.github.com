@@ -36,32 +36,32 @@
 
 		<textarea cols="" rows="" name="code" class="js">
 		<script type="text/javascript">
-		document.getElementById("open").onclick = function() {
+		document.getElementById("open").onclick = function () {
 			var ws = new WebSocket("ws://localhost:8080/websocket/" + document.getElementById("action").value);
 
-			ws.onopen = function(e) {
+			ws.onopen = function (e) {
 				console.log(e);
 			};
 
-			ws.onmessage = function(e) {
+			ws.onmessage = function (e) {
 				console.log(e)
 
 				$4what.log(e.data);
 			};
 
-			ws.onerror = function(e) {
+			ws.onerror = function (e) {
 				console.log(e);
 			};
 
-			ws.onclose = function(e) {
+			ws.onclose = function (e) {
 				console.log(e);
 			};
 
-			document.getElementById("send").onclick = function() {
+			document.getElementById("send").onclick = function () {
 				ws.send(document.getElementById("message").value);
 			};
 
-			document.getElementById("close").onclick = function() {
+			document.getElementById("close").onclick = function () {
 				ws.close();
 			};
 		};
@@ -78,32 +78,32 @@
 		<button id="close">Close</button>
 
 		<script type="text/javascript">
-		document.getElementById("open").onclick = function() {
+		document.getElementById("open").onclick = function () {
 			var ws = new WebSocket("ws://localhost:8080/websocket/" + document.getElementById("action").value);
 
-			ws.onopen = function(e) {
+			ws.onopen = function (e) {
 				console.log(e);
 			};
 
-			ws.onmessage = function(e) {
+			ws.onmessage = function (e) {
 				console.log(e)
 
 				$4what.log(e.data);
 			};
 
-			ws.onerror = function(e) {
+			ws.onerror = function (e) {
 				console.log(e);
 			};
 
-			ws.onclose = function(e) {
+			ws.onclose = function (e) {
 				console.log(e);
 			};
 
-			document.getElementById("send").onclick = function() {
+			document.getElementById("send").onclick = function () {
 				ws.send(document.getElementById("message").value);
 			};
 
-			document.getElementById("close").onclick = function() {
+			document.getElementById("close").onclick = function () {
 				ws.close();
 			};
 		};

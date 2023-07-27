@@ -32,13 +32,13 @@
 
 		<textarea cols="" rows="" name="code" class="js">
 		<script type="text/javascript">
-		document.getElementById("file").onchange = function() {
+		document.getElementById("file").onchange = function () {
 			if (this.value) {
 				var formData = new FormData(document.getElementById("form"));
 				formData.append("name", "value");
 
 				var xhr = new XMLHttpRequest();
-				xhr.onload = function() {
+				xhr.onload = function () {
 					$4what.log(xhr.responseText);
 				};
 				xhr.open("POST", "http://localhost:8080/j2ee/sample/fileupload/upload.jsp", true);
@@ -54,13 +54,13 @@
 		</form>
 
 		<script type="text/javascript">
-		document.getElementById("file").onchange = function() {
+		document.getElementById("file").onchange = function () {
 			if (this.value) {
 				var formData = new FormData(document.getElementById("form"));
 				formData.append("name", "value");
 
 				var xhr = new XMLHttpRequest();
-				xhr.onload = function() {
+				xhr.onload = function () {
 					$4what.log(xhr.responseText);
 				};
 				xhr.open("POST", "http://localhost:8080/j2ee/sample/fileupload/upload.jsp", true);

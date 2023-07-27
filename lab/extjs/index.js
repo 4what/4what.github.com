@@ -1,4 +1,4 @@
-Ext.onReady(function() {
+Ext.onReady(function () {
 
 	/* nav */
 	var _nav = new Ext.Panel({
@@ -24,7 +24,7 @@ Ext.onReady(function() {
 			//singleExpand: true,
 			useArrows: true,
 			listeners: {
-				click: function(node, e) {
+				click: function (node, e) {
 					$ext.tab.loadOnClickLeaf(node, e, _main, {
 						iconCls: "icon-grid"
 					});
@@ -98,7 +98,7 @@ Ext.onReady(function() {
 					text: "退出",
 					xtype: "button",
 					iconCls: "icon-logout",
-					handler: function(button, e) {
+					handler: function (button, e) {
 						// (自定义)
 						window.location.href = "login.html";
 					}
@@ -112,7 +112,7 @@ Ext.onReady(function() {
 					//text: "展开",
 					xtype: "button",
 					iconCls: "icon-expand",
-					handler: function(button, e) {
+					handler: function (button, e) {
 						$ext.tree.toggle(_nav, true);
 					}
 				},
@@ -121,7 +121,7 @@ Ext.onReady(function() {
 					//text: "折叠",
 					xtype: "button",
 					iconCls: "icon-collapse",
-					handler: function(button, e) {
+					handler: function (button, e) {
 						$ext.tree.toggle(_nav, false);
 					}
 				}

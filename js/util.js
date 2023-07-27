@@ -2,9 +2,9 @@
  * @author https://4what.cn
  * @version 1.2 Build 2019.09.16
  */
-(function() {
+(function () {
 
-var Util = function() {
+var Util = function () {
 	//this.version = "";
 };
 
@@ -17,7 +17,7 @@ Util.prototype = {
 	 * @param {Function} fn
 	 * @return {Object}
 	 */
-	extend: function(name, fn) {
+	extend: function (name, fn) {
 		Util.prototype[name] = fn;
 
 		return this;
@@ -32,24 +32,24 @@ Util.prototype = {
 	 * @requires $js.url
 	 * @param {Object} options
 	 */
-	ajax: function(options) {
+	ajax: function (options) {
 		var
-		url = options.url, // {String} (*)
-		type = (options.type || "GET").toUpperCase(), // {String}
-		data = options.data || null, // {Object|String} {name: value, ...} | "key=value&..."
-		async = options.async !== false, // {Boolean}
-		contentType = options.contentType === false ? false : "application/x-www-form-urlencoded", // {Boolean|String}
-		processData = options.processData !== false, // {Boolean}
-		beforeSend = options.beforeSend || new Function(), // {Function}
-		complete = options.complete || new Function(), // {Function}
-		success = options.success || new Function(), // {Function}
-		error = options.error || new Function(), // {Function}
+			url = options.url, // {String} (*)
+			type = (options.type || "GET").toUpperCase(), // {String}
+			data = options.data || null, // {Object|String} {name: value, ...} | "key=value&..."
+			async = options.async !== false, // {Boolean}
+			contentType = options.contentType === false ? false : "application/x-www-form-urlencoded", // {Boolean|String}
+			processData = options.processData !== false, // {Boolean}
+			beforeSend = options.beforeSend || new Function(), // {Function}
+			complete = options.complete || new Function(), // {Function}
+			success = options.success || new Function(), // {Function}
+			error = options.error || new Function(), // {Function}
 
-		//crossDomain = /^https?:\/\//.test(url) && !new RegExp("^" + window.location.protocol + "\/\/" + window.location.host + "(?:\/|$)").test(url),
+			//crossDomain = /^https?:\/\//.test(url) && !new RegExp("^" + window.location.protocol + "\/\/" + window.location.host + "(?:\/|$)").test(url),
 
-		xhr = "XMLHttpRequest" in window ?
-			new XMLHttpRequest() : // for IE7+, Std
-			new ActiveXObject("Microsoft.XMLHTTP"); // for IE6
+			xhr = "XMLHttpRequest" in window ?
+				new XMLHttpRequest() : // for IE7+, Std
+				new ActiveXObject("Microsoft.XMLHTTP"); // for IE6
 
 		function callback() {
 			if (xhr.readyState === 4) {
@@ -105,7 +105,7 @@ Util.prototype = {
 	 * @param {String} url
 	 * @param {Function} callback
 	 */
-	jsonp: function(url, callback) {
+	jsonp: function (url, callback) {
 		this.getScript(url, callback, "jsonp");
 	},
 
@@ -117,28 +117,28 @@ Util.prototype = {
 	 * @param {Function} callback
 	 * @param {Boolean|String} jsonp?
 	 */
-	getScript: function(url, callback, jsonp) {
+	getScript: function (url, callback, jsonp) {
 		var
-		head = document.getElementsByTagName("head")[0],
-		script = document.createElement("script"),
+			head = document.getElementsByTagName("head")[0],
+			script = document.createElement("script"),
 
-		clean = function() {
-			head.removeChild(script);
-			script = undefined;
-		};
+			clean = function () {
+				head.removeChild(script);
+				script = undefined;
+			};
 
 		script.src = url;
 		script.type = "text/javascript";
 
 		if (!jsonp) {
 			if ("onload" in script) {
-				script.onload = function() { // for IE9+, Std
+				script.onload = function () { // for IE9+, Std
 					callback();
 
 					clean();
 				}
 			} else {
-				script.onreadystatechange = function() { // for IE10-
+				script.onreadystatechange = function () { // for IE10-
 					if (/complete|loaded/.test(script.readyState)) {
 						callback();
 
@@ -151,7 +151,7 @@ Util.prototype = {
 
 			script.src = this.url.encode(url + (/\?/.test(url) ? "&" : "?") + "callback=" + fn);
 
-			window[fn] = function(result) {
+			window[fn] = function (result) {
 				callback(result);
 
 				/* garbage collect */
@@ -172,15 +172,15 @@ Util.prototype = {
 	 * @requires $js.bind, $js.url
 	 * @param {Object} options
 	 */
-	windowName: function(options) {
+	windowName: function (options) {
 		var
-		callback = options.callback || new Function(), // {Function}
-		form = options.form, // {Object} (*: !url)
-		url = options.url, // {String} (*: !form)
+			callback = options.callback || new Function(), // {Function}
+			form = options.form, // {Object} (*: !url)
+			url = options.url, // {String} (*: !form)
 
-		complete, iframe,
-		local = window.location.protocol + "//" + window.location.host + "/robots.txt", // {String} (*: ?) // IE9: absolute path
-		name = "windowname-" + new Date().getTime();
+			complete, iframe,
+			local = window.location.protocol + "//" + window.location.host + "/robots.txt", // {String} (*: ?) // IE9: absolute path
+			name = "windowname-" + new Date().getTime();
 
 		try {
 			iframe = document.createElement('<iframe name="' + name + '"></iframe>'); // for IE8-
@@ -192,7 +192,7 @@ Util.prototype = {
 		iframe.src = form ? local : this.url.encode(url);
 		iframe.style.display = "none";
 
-		this.bind(iframe, "load", function() {
+		this.bind(iframe, "load", function () {
 			if (complete) {
 				var result = iframe.contentWindow.name;
 
@@ -225,7 +225,7 @@ Util.prototype = {
 	 * @param {Object[]} array
 	 * @return {Number}
 	 */
-	inArray: function(element, array) {
+	inArray: function (element, array) {
 		/* for IE9+, Std */
 		if ("indexOf" in array) {
 			return array.indexOf(element);
@@ -250,11 +250,11 @@ Util.prototype = {
 	 * @param {Boolean} sort?
 	 * @return {Number[]}
 	 */
-	randoms: function(size, min, max, isInt, sort) {
+	randoms: function (size, min, max, isInt, sort) {
 		var
-		array = [],
-		element,
-		map = {};
+			array = [],
+			element,
+			map = {};
 
 		while (array.length < size) {
 			element = this.random(min, max, isInt);
@@ -267,7 +267,7 @@ Util.prototype = {
 		}
 
 		if (sort || sort === undefined) {
-			array.sort(function(a, b) {
+			array.sort(function (a, b) {
 				return a - b;
 			});
 		}
@@ -281,7 +281,7 @@ Util.prototype = {
 	 * @param {Object[]} array
 	 * @return {Object[]}
 	 */
-	removeElement: function(element, array) {
+	removeElement: function (element, array) {
 		var index = this.inArray(element, array);
 
 		if (index !== -1) {
@@ -295,11 +295,11 @@ Util.prototype = {
 	 * @param {Number[]|String[]} array
 	 * @return {Number[]|String[]}
 	 */
-	unique: function(array) {
+	unique: function (array) {
 		var
-		result = [],
-		element,
-		map = {};
+			result = [],
+			element,
+			map = {};
 
 		for (var i = 0, l = array.length; i < l; i++) {
 			element = array[i];
@@ -321,7 +321,7 @@ Util.prototype = {
 	 * @param {Object} target
 	 * @param {String} classname
 	 */
-	addClass: function(target, classname) {
+	addClass: function (target, classname) {
 		if (target.className) {
 			var classes = target.className.split(" ");
 
@@ -345,7 +345,7 @@ Util.prototype = {
 	 * @param {Object} target
 	 * @param {String} classname
 	 */
-	removeClass: function(target, classname) {
+	removeClass: function (target, classname) {
 		if (arguments.length > 1) {
 			var classes = target.getAttribute("class").split(" ");
 
@@ -367,12 +367,12 @@ Util.prototype = {
 	 * @requires $js.style
 	 * @param {String} id
 	 */
-	setIFrameHeight: function(id) {
+	setIFrameHeight: function (id) {
 		var
-		self = this,
-		iframe = document.getElementById(id);
+			self = this,
+			iframe = document.getElementById(id);
 
-		iframe.onload = function() {
+		iframe.onload = function () {
 			//alert(iframe === this); // for IE9+, Std
 
 			var body = iframe.contentWindow.document.body;
@@ -388,13 +388,13 @@ Util.prototype = {
 	 * @param {String} name
 	 * @return {String}
 	 */
-	style: function(target, name) {
+	style: function (target, name) {
 		var value;
 
 		if ("getComputedStyle" in window) { // for IE9+, Std
 			value = target.ownerDocument.defaultView.getComputedStyle(target, null).getPropertyValue(name);
 		} else { // for IE
-			var camelCase = name.replace(/-([a-z])/ig, function(all, letter){
+			var camelCase = name.replace(/-([a-z])/ig, function (all, letter) {
 				return letter.toUpperCase();
 			});
 
@@ -411,11 +411,11 @@ Util.prototype = {
 	 * @param {Number} x
 	 * @param {Number} y
 	 */
-	zoomOut: function(target, x, y) {
+	zoomOut: function (target, x, y) {
 		var
-		imgs = target.getElementsByTagName("img"),
+			imgs = target.getElementsByTagName("img"),
 
-		width, height;
+			width, height;
 
 		for (var item, i = imgs.length - 1; i >= 0; i--) {
 			item = imgs[i];
@@ -442,7 +442,7 @@ Util.prototype = {
 	 * @param {String} type
 	 * @param {Function} listener
 	 */
-	bind: function(target, type, listener) {
+	bind: function (target, type, listener) {
 		if ("addEventListener" in target) { // for IE9+, Std
 			target.addEventListener(type, listener, false);
 		} else { // for IE10-
@@ -454,7 +454,7 @@ Util.prototype = {
 	 * @param {Event} e
 	 * @return {Number}
 	 */
-	keyCode: function(e) {
+	keyCode: function (e) {
 		return e.keyCode
 			|| e.which; // for IE9+, Std
 	},
@@ -462,7 +462,7 @@ Util.prototype = {
 	/**
 	 * @param {Event} e
 	 */
-	preventDefault: function(e) {
+	preventDefault: function (e) {
 		"preventDefault" in e ?
 			e.preventDefault() : // for IE9+, Std
 			e.returnValue = false; // for IE8-
@@ -471,7 +471,7 @@ Util.prototype = {
 	/**
 	 * @param {Event} e
 	 */
-	stopPropagation: function(e) {
+	stopPropagation: function (e) {
 		if ("stopPropagation" in e) { // for IE9+, Std
 			e.stopPropagation();
 		}
@@ -484,7 +484,7 @@ Util.prototype = {
 	 * @param {String} type
 	 * @param {Function} listener
 	 */
-	unbind: function(target, type, listener) {
+	unbind: function (target, type, listener) {
 		if ("removeEventListener" in target) { // for IE9+, Std
 			target.removeEventListener(type, listener, false);
 		} else { // for IE10-
@@ -503,10 +503,10 @@ Util.prototype = {
 	 * @param {String} type
 	 * @return {Boolean}
 	 */
-	verify: function(e, type) {
+	verify: function (e, type) {
 		var
-		key = String.fromCharCode(this.keyCode(e)),
-		re;
+			key = String.fromCharCode(this.keyCode(e)),
+			re;
 
 		switch (type) {
 			case "digit":
@@ -528,17 +528,17 @@ Util.prototype = {
 	 * @param {String} lang?
 	 * @return {String|Void}
 	 */
-	clock: function(id, lang) {
+	clock: function (id, lang) {
 		var
-		date = new Date(),
+			date = new Date(),
 
-		YYYY = date.getFullYear(), // Year
-		MM = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], // Month
-		DD = date.getDate(), // Day
-		WwwD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // Weekday
-		hh = date.getHours(), // Hour
-		mm = date.getMinutes(), // Minute
-		ss = date.getSeconds(); // Second
+			YYYY = date.getFullYear(), // Year
+			MM = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], // Month
+			DD = date.getDate(), // Day
+			WwwD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // Weekday
+			hh = date.getHours(), // Hour
+			mm = date.getMinutes(), // Minute
+			ss = date.getSeconds(); // Second
 
 		/* +0 */
 		if (mm < 10) {
@@ -570,15 +570,15 @@ Util.prototype = {
 	 * @param {Object} options?
 	 * @return {String}
 	 */
-	cookie: function(key, value, options) {
+	cookie: function (key, value, options) {
 		if (arguments.length > 1) {
 			options = options || {};
 
 			var
-			domain = options.domain, // {String}
-			expires = options.expires, // {Number|Date}
-			path = options.path, // {String}
-			secure = options.secure; // {Boolean}
+				domain = options.domain, // {String}
+				expires = options.expires, // {Number|Date}
+				path = options.path, // {String}
+				secure = options.secure; // {Boolean}
 
 			if (value === null) {
 				expires = -1;
@@ -616,10 +616,10 @@ Util.prototype = {
 	/**
 	 * @param {String} url
 	 */
-	include: function(url) {
+	include: function (url) {
 		var
-		css = '<style type="text/css">@import url("' + url + '");</style>',
-		js = '<script type="text/javascript" src="' + url + '"></script>';
+			css = '<style type="text/css">@import url("' + url + '");</style>',
+			js = '<script type="text/javascript" src="' + url + '"></script>';
 
 		document.write(/\.css$/i.test(url) ? css : js);
 	},
@@ -632,7 +632,7 @@ Util.prototype = {
 		 * @param {String} text
 		 * @return {Object}
 		 */
-		parse: function(text) {
+		parse: function (text) {
 			return "JSON" in window ?
 				window.JSON.parse(text) : // for IE8+, Std
 				eval("(" + text + ")");
@@ -647,7 +647,7 @@ Util.prototype = {
 	 * @param {String} url
 	 * @param {Function} callback
 	 */
-	loader: function(obj, url, callback) {
+	loader: function (obj, url, callback) {
 		var self = this;
 
 		//callback = callback || new Function();
@@ -672,7 +672,7 @@ Util.prototype = {
 		}
 
 		if (self._loader[url].queue.push(callback) === 1) {
-			self.getScript(url, function() {
+			self.getScript(url, function () {
 				self._loader[url].loaded = true;
 
 				for (var i = 0, l = self._loader[url].queue.length; i < l; i++) {
@@ -688,7 +688,7 @@ Util.prototype = {
 	 * @param {Boolean} isInt?
 	 * @return {Number}
 	 */
-	random: function(min, max, isInt) {
+	random: function (min, max, isInt) {
 		return isInt ?
 			(Math.floor(Math.random() * (max - min + 1)) + min) : // Integer
 			(Math.random() * (max - min) + min);
@@ -699,14 +699,14 @@ Util.prototype = {
 	 * @param {Function} callback?
 	 * @return {String|Void}
 	 */
-	timer: function(fn, callback) {
+	timer: function (fn, callback) {
 		var start = new Date();
 
 		fn();
 
 		var
-		end = new Date(),
-		result = end - start + " ms";
+			end = new Date(),
+			result = end - start + " ms";
 
 		if (typeof callback === "function") {
 			callback(result)
@@ -720,7 +720,7 @@ Util.prototype = {
 		 * @param {String} url
 		 * @return {String}
 		 */
-		encode: function(url) {
+		encode: function (url) {
 			var index = url.indexOf("?");
 
 			if (index !== -1) {
@@ -735,20 +735,20 @@ Util.prototype = {
 		 * @param {String} key
 		 * @return {String}
 		 */
-		param: function(key) {
+		param: function (key) {
 			return this.params()[key];
 		},
 		/**
 		 * @return {Object}
 		 */
-		params: function() {
+		params: function () {
 			return this.parse(window.location.search.slice(1));
 		},
 		/**
 		 * @param {String} search
 		 * @return {Object}
 		 */
-		parse: function(search) {
+		parse: function (search) {
 			var result = {};
 
 			if (search) {
@@ -767,7 +767,7 @@ Util.prototype = {
 		 * @param {Object} map
 		 * @return {String}
 		 */
-		serialize: function(map) {
+		serialize: function (map) {
 			var result = [];
 
 			for (var key in map) {
@@ -782,7 +782,7 @@ Util.prototype = {
 if (typeof module === "object" && typeof module.exports === "object") { // for CommonJS
 	module.exports = new Util();
 } else if (typeof define === "function" && define.amd) { // for RequireJS
-	define(/*"Util", */function() {
+	define(/*"Util", */function () {
 		return new Util();
 	});
 } else {

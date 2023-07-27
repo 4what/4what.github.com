@@ -1,4 +1,4 @@
-Ext.onReady(function() {
+Ext.onReady(function () {
 
 	/* vtypes */
 	Ext.apply(Ext.form.VTypes, $ext.vtypes.daterange());
@@ -12,7 +12,7 @@ Ext.onReady(function() {
 
 
 	/* arraystore */
-	var _arraystore = function() {
+	var _arraystore = function () {
 		return new Ext.data.Store({
 			url: "data/array.json", // (自定义)
 			autoDestroy: true,
@@ -23,8 +23,8 @@ Ext.onReady(function() {
 			reader: new Ext.data.ArrayReader({
 				fields: [
 					// (自定义)
-					{name: "value"},
-					{name: "text"}
+					{ name: "value" },
+					{ name: "text" }
 				],
 				root: "rows",
 				totalProperty: "total"
@@ -62,10 +62,10 @@ Ext.onReady(function() {
 			reader: new Ext.data.JsonReader({
 				fields: [
 					// (自定义)
-					{name: "id", type: "int"},
-					{name: "number", type: "float"},
-					{name: "date", type: "date"},
-					{name: "boolean", type: "boolean"}
+					{ name: "id", type: "int" },
+					{ name: "number", type: "float" },
+					{ name: "date", type: "date" },
+					{ name: "boolean", type: "boolean" }
 				],
 				root: "rows",
 				totalProperty: "total"
@@ -82,7 +82,7 @@ Ext.onReady(function() {
 
 			//data: "",
 			listeners: {
-				beforeload: function(store, options) {
+				beforeload: function (store, options) {
 					$ext.store.setBaseParam(
 						store,
 						"[id^='search-']" // (自定义)
@@ -93,7 +93,7 @@ Ext.onReady(function() {
 
 
 	/* dummy */
-	var _dummy = function(size) {
+	var _dummy = function (size) {
 		var data = "abcdefghijklmnopqrstuvwxyz";
 		data = size ? data.slice(0, size) : data;
 		return data.split("");
@@ -108,7 +108,7 @@ Ext.onReady(function() {
 		errorText: "",
 		saveText: "保存",
 		listeners: {
-			afteredit: function(roweditor, changes, record, rowIndex) {
+			afteredit: function (roweditor, changes, record, rowIndex) {
 				Ext.Ajax.extraParams = {
 					// (自定义)
 					action: "update",
@@ -119,13 +119,13 @@ Ext.onReady(function() {
 					url: "data/data.json", // (自定义)
 					method: "POST",
 					params: changes,
-					callback: function(options, success, response) {
+					callback: function (options, success, response) {
 						_grid.body.unmask();
 					},
-					success: function(response, options) {
+					success: function (response, options) {
 						var
-						msg,
-						result = Ext.util.JSON.decode(response.responseText);
+							msg,
+							result = Ext.util.JSON.decode(response.responseText);
 						if (!result.success) {
 							record.reject();
 							switch (result.msg) {
@@ -140,7 +140,7 @@ Ext.onReady(function() {
 							Ext.Msg.alert("错误", msg).setIcon(Ext.Msg.ERROR);
 						}
 					},
-					failure: function(response, options) {
+					failure: function (response, options) {
 						record.reject();
 						$ext.failure.ajax(response, options);
 					}
@@ -167,15 +167,15 @@ Ext.onReady(function() {
 		({
 			//singleSelect: true,
 			listeners: {
-				rowselect: function(sm, rowIndex, record) {
+				rowselect: function (sm, rowIndex, record) {
 					new Ext.Template(
 						'{id}' // (自定义)
 					).overwrite(_preview.body, record.data);
 				},
-				selectionchange: function(sm) {
+				selectionchange: function (sm) {
 					var
-					count = sm.getCount(),
-					records = sm.getSelections();
+						count = sm.getCount(),
+						records = sm.getSelections();
 
 					_grid["btn-del"].setDisabled(count < 1);
 					_grid["btn-update"].setDisabled(count !== 1);
@@ -241,7 +241,7 @@ Ext.onReady(function() {
 							dataIndex: "id",
 							//align: "center",
 							//editable: false,
-							//renderer: function(value, metaData, record, rowIndex, colIndex, store) {},
+							//renderer: function (value, metaData, record, rowIndex, colIndex, store) {},
 							//tooltip: "文字",
 							//width: 100
 							editor: {
@@ -285,13 +285,13 @@ Ext.onReady(function() {
 								{
 									iconCls: "icon-valid icon-16",
 									//tooltip: "文字",
-									getClass: function(value, metadata, record, rowIndex, colIndex, store) {
+									getClass: function (value, metadata, record, rowIndex, colIndex, store) {
 										if (record.get("boolean")) {
 											//this.items[0].tooltip = "文字";
 											return "icon-hide";
 										}
 									},
-									handler: function(grid, rowIndex, colIndex, item, e) {
+									handler: function (grid, rowIndex, colIndex, item, e) {
 										var record = _jsonstore.getAt(rowIndex);
 										alert(record.get("id"));
 									}
@@ -309,7 +309,7 @@ Ext.onReady(function() {
 							text: "新增",
 							xtype: "button",
 							iconCls: "icon-add",
-							handler: function(button, e) {
+							handler: function (button, e) {
 								_win.show(button.getEl()).setTitle("新增");
 							}
 						},
@@ -319,14 +319,14 @@ Ext.onReady(function() {
 							xtype: "button",
 							disabled: true,
 							iconCls: "icon-del",
-							handler: function(button, e) {
-								Ext.Msg.confirm("", "确定删除？", function(buttonId, text, opt) {
+							handler: function (button, e) {
+								Ext.Msg.confirm("", "确定删除？", function (buttonId, text, opt) {
 									switch (buttonId) {
 										case "yes":
 											var
-											ids = [],
-											records = _grid.getSelectionModel().getSelections();
-											Ext.each(records, function(item, index, allItems) {
+												ids = [],
+												records = _grid.getSelectionModel().getSelections();
+											Ext.each(records, function (item, index, allItems) {
 												ids.push(item.get(
 													"id" // (自定义)
 												));
@@ -340,13 +340,13 @@ Ext.onReady(function() {
 													action: "delete",
 													id: ids
 												},
-												callback: function(options, success, response) {
+												callback: function (options, success, response) {
 													_grid.body.unmask();
 												},
-												success: function(response, options) {
+												success: function (response, options) {
 													var
-													msg,
-													result = Ext.util.JSON.decode(response.responseText);
+														msg,
+														result = Ext.util.JSON.decode(response.responseText);
 													if (result.success) {
 														_jsonstore.remove(records);
 													} else {
@@ -380,12 +380,12 @@ Ext.onReady(function() {
 							disabled: true,
 							iconCls: "icon-edit",
 							listeners: {
-								click: function(button, e) {
+								click: function (button, e) {
 									var
-									record = _grid.getSelectionModel().getSelected(),
-									id = record.get(
-										"id" // (自定义)
-									);
+										record = _grid.getSelectionModel().getSelected(),
+										id = record.get(
+											"id" // (自定义)
+										);
 
 									_win.show().setTitle("修改");
 
@@ -397,10 +397,10 @@ Ext.onReady(function() {
 											action: "form",
 											id: id
 										},
-										success: function(form, action) {
+										success: function (form, action) {
 											// (自定义)
 										},
-										failure: function(form, action) {
+										failure: function (form, action) {
 											var
 											msg,
 											result = action.result;
@@ -445,9 +445,9 @@ Ext.onReady(function() {
 							xtype: "button",
 							disabled: true,
 							iconCls: "icon-save",
-							handler: function(button, e) {
+							handler: function (button, e) {
 								var data = [];
-								Ext.each(_grid.getSelectionModel().getSelections(), function(item, index, allItems) {
+								Ext.each(_grid.getSelectionModel().getSelections(), function (item, index, allItems) {
 									if (item.dirty) {
 										data.push(item.data);
 									}
@@ -464,15 +464,15 @@ Ext.onReady(function() {
 										action: "save",
 										data: Ext.util.JSON.encode(data)
 									},
-									callback: function(options, success, response) {
+									callback: function (options, success, response) {
 										_grid.body.unmask();
 									},
-									success: function(response, options) {
+									success: function (response, options) {
 										var
-										msg,
-										result = Ext.util.JSON.decode(response.responseText);
+											msg,
+											result = Ext.util.JSON.decode(response.responseText);
 										if (result.success) {
-											Ext.Msg.alert("", "操作成功", function(buttonId, text, opt) {
+											Ext.Msg.alert("", "操作成功", function (buttonId, text, opt) {
 												// (自定义)
 												_jsonstore.reload();
 											});
@@ -500,7 +500,7 @@ Ext.onReady(function() {
 					text: "刷新",
 					xtype: "button",
 					iconCls: "icon-refresh",
-					handler: function(button, e) {
+					handler: function (button, e) {
 						_jsonstore.reload();
 					}
 				},
@@ -509,7 +509,7 @@ Ext.onReady(function() {
 					text: "配置",
 					xtype: "button",
 					iconCls: "icon-cfg",
-					handler: function(button, e) {
+					handler: function (button, e) {
 						// (自定义)
 						$ext.iframewindow({
 							title: "配置",
@@ -525,12 +525,12 @@ Ext.onReady(function() {
 					xtype: "button",
 					disabled: true,
 					iconCls: "icon-tab-new",
-					handler: function(button, e) {
+					handler: function (button, e) {
 						var
-						record = _grid.getSelectionModel().getSelected(),
-						id = record.get(
-							"id" // (自定义)
-						);
+							record = _grid.getSelectionModel().getSelected(),
+							id = record.get(
+								"id" // (自定义)
+							);
 
 						// (自定义)
 						$ext.tab.load("main", {
@@ -714,7 +714,7 @@ Ext.onReady(function() {
 				store: _jsonstore
 			},
 			listeners: {
-				rowdblclick: function(grid, rowIndex, e) {
+				rowdblclick: function (grid, rowIndex, e) {
 					// (自定义)
 					//_grid["btn-update"].fireEvent("click");
 				}
@@ -726,7 +726,7 @@ Ext.onReady(function() {
 	var _form = new Ext.form.FormPanel({
 		/* no ajax */
 		//standardSubmit: true,
-		//url: "data/data.jsp", // (自定义)
+		//url: "", // (自定义)
 		//method: "POST",
 
 		//fileUpload: true, // TODO: (Java) response.setContentType("text/html");
@@ -826,7 +826,7 @@ Ext.onReady(function() {
 				xtype: "button",
 				autoWidth: true,
 				iconCls: "icon-add",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					$ext.textfield.insert(
 						_form,
 						button.getId(),
@@ -915,13 +915,13 @@ Ext.onReady(function() {
 						xtype: "button",
 						autoWidth: true,
 						iconCls: "icon-add",
-						handler: function(button, e) {
+						handler: function (button, e) {
 							var
-							combo = Ext.getCmp(
-								"form-combo-id" // (自定义)
-							),
-							//text = combo.getRawValue(),
-							value = combo.getValue();
+								combo = Ext.getCmp(
+									"form-combo-id" // (自定义)
+								),
+								//text = combo.getRawValue(),
+								value = combo.getValue();
 							if (value) {
 								$ext.multiselect.add(
 									"form-multiselect-id", // (自定义)
@@ -942,7 +942,7 @@ Ext.onReady(function() {
 						id: "startdate",
 						xtype: "datefield",
 						name: "startdate",
-						//disabledDates: ["2011-01-01", "01-01", "2011-02", "..-03-..", "2012"],
+						//disabledDates: ["1970-01-01", "01-01", "1970-01", "..-01-..", "1970"],
 						//disabledDays: [0, 6],
 						editable: false,
 						format: "Y-m-d",
@@ -952,7 +952,7 @@ Ext.onReady(function() {
 						endDateField: "enddate",
 						emptyText: "开始日期",
 						listeners: {
-							select: function(cmp, date) {
+							select: function (cmp, date) {
 								Ext.getCmp(cmp.endDateField).onTriggerClick();
 							}
 						}
@@ -984,7 +984,7 @@ Ext.onReady(function() {
 				//buttonOnly: true,
 				buttonText: "",
 				listeners: {
-					fileselected: function(cmp, value) {
+					fileselected: function (cmp, value) {
 						alert(value)
 					}
 				}
@@ -1011,11 +1011,11 @@ Ext.onReady(function() {
 						height: 240,
 						width: 240,
 						store: [],
-						tbar:[
+						tbar: [
 							{
 								text: "清空",
 								xtype: "button",
-								handler: function(button, e) {
+								handler: function (button, e) {
 									_form.getForm().findField("itemselector").reset();
 								}
 							}
@@ -1050,7 +1050,7 @@ Ext.onReady(function() {
 						//text: "删除",
 						xtype: "button",
 						iconCls: "icon-del",
-						handler: function(button, e) {
+						handler: function (button, e) {
 							$ext.multiselect.del(
 								"form-multiselect-id" // (自定义)
 							);
@@ -1113,7 +1113,7 @@ Ext.onReady(function() {
 				//increment: 10,
 				maxValue: 100,
 				minValue: 0
-				//tipText: function(thumb) {return thumb.value;},
+				//tipText: function (thumb) {return thumb.value;},
 				//vertical: true
 			},
 			{
@@ -1149,7 +1149,7 @@ Ext.onReady(function() {
 						endTimeField: "endtime",
 						emptyText: "开始时间",
 						listeners: {
-							select: function(combo, record, index) {
+							select: function (combo, record, index) {
 								Ext.getCmp(combo.endTimeField).onTriggerClick();
 							}
 						}
@@ -1178,14 +1178,14 @@ Ext.onReady(function() {
 				text: "提交",
 				xtype: "button",
 				iconCls: "icon-submit",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					_submit();
 				}
 			},
 			{
 				text: "重置",
 				xtype: "button",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					_reset();
 				}
 			}
@@ -1195,18 +1195,18 @@ Ext.onReady(function() {
 			//alt: true,
 			ctrl: true,
 			//shift: true,
-			fn: function(key, e) {
+			fn: function (key, e) {
 				_submit();
 			}
 		},
 		listeners: {
-			beforeaction: function(form, action) {
+			beforeaction: function (form, action) {
 				this.getFooterToolbar().disable();
 			},
-			actioncomplete: function(form, action) {
+			actioncomplete: function (form, action) {
 				this.getFooterToolbar().enable();
 			},
-			actionfailed: function(form, action) {
+			actionfailed: function (form, action) {
 				this.getFooterToolbar().enable();
 			}
 		}
@@ -1244,17 +1244,17 @@ Ext.onReady(function() {
 					// (自定义)
 					action: "save"
 				},
-				success: function(form, action) {
-					Ext.Msg.alert("", "操作成功", function(buttonId, text, opt) {
+				success: function (form, action) {
+					Ext.Msg.alert("", "操作成功", function (buttonId, text, opt) {
 						// (自定义)
 						_win.hide();
 						_jsonstore.reload();
 					});
 				},
-				failure: function(form, action) {
+				failure: function (form, action) {
 					var
-					msg,
-					result = action.result;
+						msg,
+						result = action.result;
 					if (result) {
 						switch (result.msg) {
 							// (自定义)
@@ -1287,7 +1287,7 @@ Ext.onReady(function() {
 		iconCls: "icon-form",
 		maximizable: true,
 		modal: true,
-		//onEsc: function() {Ext.emptyFn();},
+		//onEsc: function () {Ext.emptyFn();},
 		plain: true,
 		//resizable: false,
 		width: 800, // (自定义)
@@ -1295,28 +1295,28 @@ Ext.onReady(function() {
 		//y: 0,
 		items: [_form],
 		tools: [
-			{id: "toggle"},
-			{id: "close"},
-			{id: "minimize"},
-			{id: "maximize"},
-			{id: "restore"},
-			{id: "gear"},
-			{id: "pin"},
-			{id: "unpin"},
-			{id: "right"},
-			{id: "left"},
-			{id: "up"},
-			{id: "down"},
-			{id: "refresh"},
-			{id: "minus"},
-			{id: "plus"},
-			{id: "help"},
-			{id: "search"},
-			{id: "save"},
-			{id: "print"}
+			{ id: "toggle" },
+			{ id: "close" },
+			{ id: "minimize" },
+			{ id: "maximize" },
+			{ id: "restore" },
+			{ id: "gear" },
+			{ id: "pin" },
+			{ id: "unpin" },
+			{ id: "right" },
+			{ id: "left" },
+			{ id: "up" },
+			{ id: "down" },
+			{ id: "refresh" },
+			{ id: "minus" },
+			{ id: "plus" },
+			{ id: "help" },
+			{ id: "search" },
+			{ id: "save" },
+			{ id: "print" }
 		],
 		listeners: {
-			beforeshow: function(cmp) {
+			beforeshow: function (cmp) {
 				_reset();
 			}
 		}
@@ -1358,7 +1358,7 @@ Ext.onReady(function() {
 						store: _dummy(),
 						emptyText: "父级",
 						listeners: {
-							select: function(combo, record, index) {
+							select: function (combo, record, index) {
 								$ext.combo.loadChild(
 									combo,
 									"#search-cascade-child" // (自定义)
@@ -1391,8 +1391,8 @@ Ext.onReady(function() {
 						format: "Y年m月",
 						value: new Date(),
 						listeners: {
-							afterrender: function(cmp) {
-								$ext.monthpicker(cmp, function() {
+							afterrender: function (cmp) {
+								$ext.monthpicker(cmp, function () {
 									_jsonstore.load();
 								});
 							}
@@ -1431,7 +1431,7 @@ Ext.onReady(function() {
 			//Ext.tree.MultiSelectionModel
 			({
 				listeners: {
-					selectionchange: function(sm, node) {
+					selectionchange: function (sm, node) {
 						_tree["btn-update"].setDisabled(!node || node.isLeaf());
 						_tree["btn-del"].setDisabled(sm.isSelected());
 
@@ -1443,7 +1443,7 @@ Ext.onReady(function() {
 			{
 				id: "refresh",
 				//qtip: "刷新"
-				handler: function(e, tool, panel, config) {
+				handler: function (e, tool, panel, config) {
 					panel.getRootNode().reload();
 				}
 			}
@@ -1453,7 +1453,7 @@ Ext.onReady(function() {
 				text: "新增",
 				xtype: "button",
 				iconCls: "icon-add",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					_win.show().setTitle("新增");
 				}
 			},
@@ -1463,8 +1463,8 @@ Ext.onReady(function() {
 				xtype: "button",
 				disabled: true,
 				iconCls: "icon-del",
-				handler: function(button, e) {
-					Ext.Msg.confirm("", "确定删除？", function(buttonId, text, opt) {
+				handler: function (button, e) {
+					Ext.Msg.confirm("", "确定删除？", function (buttonId, text, opt) {
 						switch (buttonId) {
 							case "yes":
 								var node = _tree.getSelectionModel().getSelectedNode();
@@ -1477,13 +1477,13 @@ Ext.onReady(function() {
 										action: "delete",
 										id: node.id
 									},
-									callback: function(options, success, response) {
+									callback: function (options, success, response) {
 										_tree.body.unmask();
 									},
-									success: function(response, options) {
+									success: function (response, options) {
 										var
-										msg,
-										result = Ext.util.JSON.decode(response.responseText);
+											msg,
+											result = Ext.util.JSON.decode(response.responseText);
 										if (result.success) {
 											node.remove();
 										} else {
@@ -1516,7 +1516,7 @@ Ext.onReady(function() {
 				xtype: "button",
 				disabled: true,
 				iconCls: "icon-edit",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					_win.show().setTitle("修改");
 					_form.getForm().load({
 						url: "data/data.json", // (自定义)
@@ -1525,10 +1525,10 @@ Ext.onReady(function() {
 							action: "form",
 							id: _tree.getSelectionModel().getSelectedNode().id
 						},
-						failure: function(form, action) {
+						failure: function (form, action) {
 							var
-							msg,
-							result = action.result;
+								msg,
+								result = action.result;
 							if (result) {
 								switch (result.msg) {
 									// (自定义)
@@ -1554,7 +1554,7 @@ Ext.onReady(function() {
 					//text: "展开",
 					xtype: "button",
 					iconCls: "icon-expand",
-					handler: function(button, e) {
+					handler: function (button, e) {
 						$ext.tree.toggle(_tree, true);
 					}
 				},
@@ -1563,24 +1563,24 @@ Ext.onReady(function() {
 					//text: "折叠",
 					xtype: "button",
 					iconCls: "icon-collapse",
-					handler: function(button, e) {
+					handler: function (button, e) {
 						$ext.tree.toggle(_tree, false);
 					}
 				}
 			]
 		},
 		listeners: {
-			beforenodedrop: function(dropEvent) {
+			beforenodedrop: function (dropEvent) {
 				var
-				callback = new Function(),
+					callback = new Function(),
 
-				action = "",
-				dropNode = dropEvent.dropNode,
-				position = dropEvent.point, // above|append|below
-				target = dropEvent.target,
+					action = "",
+					dropNode = dropEvent.dropNode,
+					position = dropEvent.point, // above|append|below
+					target = dropEvent.target,
 
-				id = "",
-				parentId = "";
+					id = "",
+					parentId = "";
 
 				if (position !== "append" && target.parentNode === _tree.getRootNode()) {
 					return false;
@@ -1603,7 +1603,7 @@ Ext.onReady(function() {
 						return false;
 					}
 
-					callback = function() {
+					callback = function () {
 						var node = new Ext.tree.TreeNode({
 							id: id,
 							text: record.get(
@@ -1668,16 +1668,16 @@ Ext.onReady(function() {
 						targetId: target.id,
 						targetParentId: target.parentNode.id
 					},
-					callback: function(options, success, response) {
+					callback: function (options, success, response) {
 						if (!success) {
 							_tree.getRootNode().reload();
 						}
 						_tree.body.unmask();
 					},
-					success: function(response, options) {
+					success: function (response, options) {
 						var
-						msg,
-						result = Ext.util.JSON.decode(response.responseText);
+							msg,
+							result = Ext.util.JSON.decode(response.responseText);
 						if (result.success) {
 							// (自定义)
 							callback();
@@ -1703,7 +1703,7 @@ Ext.onReady(function() {
 		}
 	});
 
-	//new Ext.tree.TreeSorter(_tree, {caseSensitive: true, dir: "desc", folderSort: true, sortType: function(node) {return parseInt(node.id, 10);}});
+	//new Ext.tree.TreeSorter(_tree, {caseSensitive: true, dir: "desc", folderSort: true, sortType: function (node) {return parseInt(node.id, 10);}});
 
 
 	/* preview */
@@ -1732,7 +1732,7 @@ Ext.onReady(function() {
 		},
 		*/
 		store: _jsonstore,
-		tipRenderer: function(chart, record) {
+		tipRenderer: function (chart, record) {
 			return record.get("id") + " : " + record.get("date");
 		},
 		xAxis: new Ext.chart.TimeAxis({
@@ -1746,7 +1746,7 @@ Ext.onReady(function() {
 		}),
 		yField: "id",
 		listeners: {
-			itemclick: function(o) {
+			itemclick: function (o) {
 				var record = _jsonstore.getAt(o.index);
 				alert(record.get("id"));
 			}
@@ -1777,7 +1777,7 @@ Ext.onReady(function() {
 			})
 			*/
 		],
-		prepareData: function(data) {
+		prepareData: function (data) {
 			return data;
 		},
 		//simpleSelect: true,
@@ -1789,10 +1789,10 @@ Ext.onReady(function() {
 			reader: new Ext.data.JsonReader({
 				fields: [
 					// (自定义)
-					{name: "id", type: "int"},
-					{name: "name", type: "string"},
-					{name: "price", type: "float"},
-					{name: "status", type: "boolean"}
+					{ name: "id", type: "int" },
+					{ name: "name", type: "string" },
+					{ name: "price", type: "float" },
+					{ name: "status", type: "boolean" }
 				],
 				root: "rows"
 			})
@@ -1800,16 +1800,16 @@ Ext.onReady(function() {
 		tpl: new Ext.XTemplate(
 			'<ul>',
 				'<tpl for=".">',
-				'<li class="item" style="height: 120px; width: 120px;" title="{name}">',
-					'<img src="js/extjs/3.4.1.1/examples/view/images/phones/{[values.name.replace(/ /g, "-")]}.png" alt="" style="height: 64px; width: 64px;"/>',
-					'<span class="x-editable">{name:ellipsis(15)}</span>',
-					'<em>{price:usMoney} {[values.status ? "(Sales)" : ""]}</em>',
-				'</li>',
+					'<li class="item" style="height: 120px; width: 120px;" title="{name}">',
+						'<img src="js/extjs/3.4.1.1/examples/view/images/phones/{[values.name.replace(/ /g, "-")]}.png" alt="" style="height: 64px; width: 64px;"/>',
+						'<span class="x-editable">{name:ellipsis(15)}</span>',
+						'<em>{price:usMoney} {[values.status ? "(Sales)" : ""]}</em>',
+					'</li>',
 				'</tpl>',
 			'</ul>'
 		),
 		listeners: {
-			dblclick: function(cmp, index, node, e) {
+			dblclick: function (cmp, index, node, e) {
 				var record = cmp.getRecord(node);
 				alert(record.get("id"));
 			}
@@ -1826,7 +1826,7 @@ Ext.onReady(function() {
 		aggregator: "sum", // sum|avg|count|max|min
 		measure: "value",
 		/*
-		renderer: function(value) {
+		renderer: function (value) {
 			return value;
 		},
 		*/
@@ -1837,11 +1837,11 @@ Ext.onReady(function() {
 			reader: new Ext.data.JsonReader({
 				fields: [
 					// (自定义)
-					{name: "category", type: "string"},
-					{name: "city", type: "string"},
-					{name: "product", type: "string"},
-					{name: "value", type: "int"},
-					{name: "year", type: "int"}
+					{ name: "category", type: "string" },
+					{ name: "city", type: "string" },
+					{ name: "product", type: "string" },
+					{ name: "value", type: "int" },
+					{ name: "year", type: "int" }
 				],
 				root: "rows"
 			})
@@ -1849,7 +1849,7 @@ Ext.onReady(function() {
 		viewConfig: {
 			title: "标题"
 			/*
-			getCellCls: function(value) {
+			getCellCls: function (value) {
 				return "";
 			}
 			*/
@@ -1915,10 +1915,10 @@ Ext.onReady(function() {
 				text: "新增",
 				xtype: "button",
 				iconCls: "icon-add",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					var
-					parentId = "",
-					sm = _treegrid.getSelectionModel();
+						parentId = "",
+						sm = _treegrid.getSelectionModel();
 					if (!sm.isSelected()) {
 						var node = sm.getSelectedNode();
 						parentId = node.parentNode.id;
@@ -1931,7 +1931,7 @@ Ext.onReady(function() {
 				//text: "展开",
 				xtype: "button",
 				iconCls: "icon-expand",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					_treegrid.expandAll();
 				}
 			},
@@ -1940,7 +1940,7 @@ Ext.onReady(function() {
 				//text: "折叠",
 				xtype: "button",
 				iconCls: "icon-collapse",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					_treegrid.collapseAll();
 				}
 			}
@@ -1951,7 +1951,7 @@ Ext.onReady(function() {
 
 
 	/* treetotree */
-	var _treetotree = function(region) {
+	var _treetotree = function (region) {
 		return {
 			region: region,
 			xtype: "treepanel",
@@ -2045,7 +2045,7 @@ Ext.onReady(function() {
 	/* init */
 	$ext.combo.load(
 		"#search-cascade-parent", // (自定义)
-		function(combo, value) {
+		function (combo, value) {
 			$ext.combo.loadChild(
 				combo,
 				"#search-cascade-child" // (自定义)

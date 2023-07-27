@@ -1,4 +1,4 @@
-Ext.onReady(function() {
+Ext.onReady(function () {
 
 	/* form */
 	var _form = new Ext.form.FormPanel({
@@ -64,32 +64,32 @@ Ext.onReady(function() {
 			{
 				text: "登录",
 				xtype: "button",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					_form_submit();
 				}
 			},
 			{
 				text: "重置",
 				xtype: "button",
-				handler: function(button, e) {
+				handler: function (button, e) {
 					_form.getForm().reset();
 				}
 			}
 		],
 		keys: {
 			key: Ext.EventObject.ENTER,
-			fn: function() {
+			fn: function () {
 				_form_submit();
 			}
 		},
 		listeners: {
-			beforeaction: function(form, action) {
+			beforeaction: function (form, action) {
 				this.getFooterToolbar().disable();
 			},
-			actioncomplete: function(form, action) {
+			actioncomplete: function (form, action) {
 				this.getFooterToolbar().enable();
 			},
-			actionfailed: function(form, action) {
+			actionfailed: function (form, action) {
 				this.getFooterToolbar().enable();
 			}
 		}
@@ -106,14 +106,14 @@ Ext.onReady(function() {
 					// (自定义)
 					action: "login"
 				},
-				success: function(form, action) {
+				success: function (form, action) {
 					// (自定义)
 					window.location.href = "index.html";
 				},
-				failure: function(form, action) {
+				failure: function (form, action) {
 					var
-					msg,
-					result = action.result;
+						msg,
+						result = action.result;
 					if (result) {
 						switch (result.msg) {
 							// (自定义)

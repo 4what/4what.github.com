@@ -1,9 +1,9 @@
 var Validate = {
-	isChinese: function(value) {
+	isChinese: function (value) {
 		return /^[\u0391-\uFFE5]+$/.test(value);
 	},
 
-	isIdentity: function(value) {
+	isIdentity: function (value) {
 		var date, Ai;
 		var verify = "10x98765432";
 		var Wi = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
@@ -27,19 +27,19 @@ var Validate = {
 		return (value.length == 15 || value.length == 18 && value == Ai);
 	},
 
-	isMobile: function(value) {
+	isMobile: function (value) {
 		return /^1\d{10}$/.test(value);
 	},
 
-	isPostalCode: function(value) {
+	isPostalCode: function (value) {
 		return /^[1-9]\d{5}$/.test(value);
 	},
 
-	isTel: function(value) {
+	isTel: function (value) {
 		return /^((\(\d{2,3}\))|(\d{3}\-))?(\(0\d{2,3}\)|0\d{2,3}-)?[1-9]\d{6,7}(\-\d{1,4})?$/.test(value);
 	},
 
-	isUsername: function(value) {
+	isUsername: function (value) {
 		return /^[a-zA-Z]([a-zA-Z]|\d|_){4,16}([a-zA-Z]|\d)$/.test(value);
 	}
 };

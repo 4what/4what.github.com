@@ -1,21 +1,21 @@
-(function() {
+(function () {
 
 /**
  * @requires $js
  */
-var $4what = function() {
+var $4what = function () {
 	/**
 	 * @requires jQuery 1.3.2+
 	 * @param {Object} obj
 	 * @param {Object[]|String[]} spec
 	 * @param {Object} code
 	 */
-	this.api = function(obj, spec, code) {
+	this.api = function (obj, spec, code) {
 		var
-		menu = [],
-		methods = [],
-		param = $js.url.param("method"),
-		status = false;
+			menu = [],
+			methods = [],
+			param = $js.url.param("method"),
+			status = false;
 
 		for (var key in obj) {
 			methods.push(key);
@@ -35,7 +35,7 @@ var $4what = function() {
 		$("#api-menu").html(menu.join(" | "));
 
 		for (var i = spec.length - 1; i >= 0; i--) {
-			$(spec[i]).each(function() {
+			$(spec[i]).each(function () {
 				if (!$(this).hasClass(param)) {
 					$(this).hide();
 				}
@@ -57,19 +57,19 @@ var $4what = function() {
 	 * @param {String} url
 	 * @return {String}
 	 */
-	this.filename = function(url) {
+	this.filename = function (url) {
 		var
-		result,
+			result,
 
-		hash = url.indexOf("#"),
-		search = url.indexOf("?");
+			hash = url.indexOf("#"),
+			search = url.indexOf("?");
 
-        if (search !== -1) {
+		if (search !== -1) {
 			result = url.slice(0, search);
-        } else if (hash !== -1) {
+		} else if (hash !== -1) {
 			result = url.slice(0, hash);
 		} else {
-        	result = url;
+			result = url;
 		}
 
 		var slash = result.lastIndexOf("/");
@@ -90,7 +90,7 @@ var $4what = function() {
 	 * @param {String} name
 	 * @return {RegExp}
 	 */
-	this.fileRe = function(name) {
+	this.fileRe = function (name) {
 		return new RegExp("(?:/|\\\\)" + (name || "([^\\s\\./\\\\]+?)") + "\\.[^\\s\\./\\\\]+?$");
 	};
 
@@ -99,14 +99,14 @@ var $4what = function() {
 	 * @param {String} args
 	 * @param {String} callback?
 	 */
-	this.include = function(args) {
-		var host = (function() {
+	this.include = function (args) {
+		var host = (function () {
 			var
-			result = "",
-			folders = ["articles", "samples"],
-			path,
-			pathname = window.location.pathname,
-			re;
+				result = "",
+				folders = ["articles", "samples"],
+				path,
+				pathname = window.location.pathname,
+				re;
 
 			for (var item, i = folders.length - 1; i >= 0; i--) {
 				item = folders[i];
@@ -183,7 +183,7 @@ var $4what = function() {
 					$js.include(host + "js/syntaxhighlighter/3.0.83/shBrushXml.js");
 
 					/* v3.x */
-					$(function() {
+					$(function () {
 
 						//SyntaxHighlighter.defaults["auto-links"] = true;
 						//SyntaxHighlighter.defaults["class-name"] = "";
@@ -201,7 +201,7 @@ var $4what = function() {
 					});
 
 					/* v1.5 */
-					$js.bind(window, "load", function() {
+					$js.bind(window, "load", function () {
 						dp.SyntaxHighlighter.HighlightAll("code", true, false, false, 1, false); // (name, [showGutter], [showControls], [collapseAll], [firstLine], [showColumns])
 					});
 
@@ -223,7 +223,7 @@ var $4what = function() {
 	 * @param {Object} data
 	 * @param {Object} target?
 	 */
-	this.log = function(data, target) {
+	this.log = function (data, target) {
 		var p = document.createElement("p");
 		p.className = "log";
 		p.innerHTML = data;

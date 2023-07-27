@@ -6,7 +6,7 @@ Ext.chart.Chart.CHART_URL = "js/extjs/3.4.1.1/resources/charts.swf";
 
 /* msg */
 $ext.msg.alert(/*{
-	timeout: function(o, title, msg) {
+	timeout: function (o, title, msg) {
 		return !title ? 1000 : false;
 	}
 }*/);

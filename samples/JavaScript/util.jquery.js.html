@@ -174,7 +174,7 @@
 
 					$jq.paginator("#paginator-ajax", {
 						ajax: true,
-						callback: function(index) {},
+						callback: function (index) {},
 						total: 100
 					});
 					</textarea>
@@ -294,19 +294,19 @@
 				$("#api-syntax > li"),
 				$("#api-example > li")
 			], {
-				blockKey: function() {
+				blockKey: function () {
 					/* Backspace, Space */
 					$jq.blockKey([8, 32], "#blockKey");
 				},
-				center: function() {
+				center: function () {
 					$jq.center(960);
 				},
-				disableSubmit: function() {
+				disableSubmit: function () {
 					$jq.disableSubmit("#disableSubmit-disable", true);
 
 					$jq.disableSubmit("#disableSubmit-enable", false);
 				},
-				domain: function() {
+				domain: function () {
 					$4what.log(
 						$jq.domain([
 							"pconline",
@@ -318,22 +318,22 @@
 						])
 					);
 				},
-				field: function() {
+				field: function () {
 					$4what.log($jq.field("#field", "name").val());
 				},
-				setIFrameHeight: function() {
+				setIFrameHeight: function () {
 					$jq.setIFrameHeight("#setIFrameHeight");
 				},
-				maxHeight: function() {
+				maxHeight: function () {
 					$jq.maxHeight("#maxHeight", 100);
 				},
-				minHeight: function() {
+				minHeight: function () {
 					$jq.minHeight("#minHeight", 100);
 				},
-				minWidth: function() {
+				minWidth: function () {
 					$jq.minWidth("#minWidth", 960);
 				},
-				paginator: function() {
+				paginator: function () {
 					$jq.paginator("#paginator", {
 						debug: true,
 						//param: "pageNum",
@@ -353,25 +353,25 @@
 
 					$jq.paginator("#paginator-ajax", {
 						ajax: true,
-						callback: function(index) {},
+						callback: function (index) {},
 						total: 100
 					});
 				},
-				fixed: function() {
+				fixed: function () {
 					$jq.fixed("#fixed", {
 						duration: "slow"
 						//offset: 50,
 						//position: "top"
 					});
 				},
-				select: function() {
+				select: function () {
 					$jq.select({
 						"gender": "female",
 						"agree": "no",
 						"city": ["sh", "gz"]
 					}, $("#select"));
 				},
-				stripHtml: function() {
+				stripHtml: function () {
 					$4what.log($jq.stripHtml($("#api-syntax").html()));
 				}
 			});

@@ -1,11 +1,11 @@
-(function() {
+(function () {
 
 	/*
 	(function toggle() {
 		var headings = document.getElementsByTagName("h2");
 
 		for (var i = headings.length - 1; i >= 0; i--) {
-			headings[i].getElementsByTagName("a")[0].onclick = function() {
+			headings[i].getElementsByTagName("a")[0].onclick = function () {
 				var
 				icon = this.getElementsByTagName("span")[0],
 				section = document.getElementById("chapter-" + this.name);
@@ -18,7 +18,7 @@
 	*/
 
 	/* toggle */
-	$("h2 a").click(function() {
+	$("h2 a").click(function () {
 		var icon = $(this).find("span").eq(0);
 		icon.text(icon.is(":contains('-')") ? "+" : "-");
 

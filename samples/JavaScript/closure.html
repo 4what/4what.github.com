@@ -29,7 +29,7 @@
 		<script type="text/javascript">
 		function closure() {
 			function log(i) {
-				return function() {
+				return function () {
 					alert(i);
 				};
 			}
@@ -42,8 +42,8 @@
 				handler = log(i + 1);
 
 				buttons[i].onclick =
-					//function() { alert(i + 1); }; // failure
-					//function() { handler(); }; // failure
+					//function () { alert(i + 1); }; // failure
+					//function () { handler(); }; // failure
 
 					//log(i + 1); // success
 					handler; // success
@@ -64,7 +64,7 @@
 		<script type="text/javascript">
 		function closure() {
 			function log(i) {
-				return function() {
+				return function () {
 					alert(i);
 				};
 			}
@@ -77,8 +77,8 @@
 				handler = log(i + 1);
 
 				buttons[i].onclick =
-					//function() { alert(i + 1); }; // failure
-					//function() { handler(); }; // failure
+					//function () { alert(i + 1); }; // failure
+					//function () { handler(); }; // failure
 
 					//log(i + 1); // success
 					handler; // success

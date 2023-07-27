@@ -2,24 +2,24 @@
  * @param {Object} options
  * @param {Function} callback
  */
-var WeiXin = function(options, callback) {
+var WeiXin = function (options, callback) {
 	var script = document.createElement("script");
 	script.src = "https://res.wx.qq.com/open/js/jweixin-1.6.0.js";
 
 	document.body.appendChild(script);
 
-	script.onload = function() {
+	script.onload = function () {
 		options = options || {};
 
 		var
-		host = options.host,
-		url = window.location.protocol + "//" + window.location.host + window.location.pathname + encodeURIComponent(window.location.search);
+			host = options.host,
+			url = window.location.protocol + "//" + window.location.host + window.location.pathname + encodeURIComponent(window.location.search);
 
 		var xhr = new XMLHttpRequest();
-		xhr.onerror = function(e) {
+		xhr.onerror = function (e) {
 			alert("XHR Error");
 		};
-		xhr.onload = function(e) {
+		xhr.onload = function (e) {
 			var result = JSON.parse(xhr.responseText);
 
 			switch (result[options.status || "status"]) {
@@ -38,7 +38,7 @@ var WeiXin = function(options, callback) {
 						jsApiList: jsApiList
 					});
 
-					wx.ready(function() {
+					wx.ready(function () {
 						callback();
 					});
 

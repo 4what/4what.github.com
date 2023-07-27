@@ -1,10 +1,10 @@
-// desktop configuration
+// Sample desktop configuration
 MyDesktop = new Ext.app.App({
-	init: function() {
+	init: function () {
 		Ext.QuickTips.init();
 	},
 
-	getModules: function() {
+	getModules: function () {
 		return [
 			new MyDesktop.IFrameWindow(),
 			new MyDesktop.CalendarWindow(),
@@ -18,7 +18,7 @@ MyDesktop = new Ext.app.App({
 	},
 
 	// config for the start menu
-	getStartConfig: function() {
+	getStartConfig: function () {
 		return {
 			title: "username",
 			iconCls: "user",
@@ -40,12 +40,13 @@ MyDesktop = new Ext.app.App({
 });
 
 
-// windows
+/**/
 MyDesktop.IFrameWindow = $ext.desktop.IFrameWindow({
 	id: "iframe-win",
 	title: "后台",
 	src: "index.html"
 });
+
 MyDesktop.CalendarWindow = $ext.desktop.IFrameWindow({
 	id: "calendar-win",
 	title: "日历",

@@ -25,8 +25,8 @@
 
 		<textarea cols="" rows="" name="code" class="js">
 		<script type="text/javascript">
-		var popup = function() {
-			this.close = function() {
+		var popup = function () {
+			this.close = function () {
 				if (this.child && !this.child.closed) {
 					this.child.close();
 				}
@@ -36,7 +36,7 @@
 			 * @param {String} name?
 			 * @param {String} features?
 			 */
-			this.open = function(url, name, features) {
+			this.open = function (url, name, features) {
 				if (!this.child || this.child.closed) {
 					this.child = window.open(url, name, features);
 				} else {
@@ -47,7 +47,7 @@
 
 		var pop = new popup();
 
-		document.getElementById("open").onclick = function() {
+		document.getElementById("open").onclick = function () {
 			pop.open(
 				"child.html",
 				"",
@@ -55,11 +55,11 @@
 			);
 		};
 
-		document.getElementById("close").onclick = function() {
+		document.getElementById("close").onclick = function () {
 			pop.close();
 		};
 
-		document.getElementById("child").onclick = function() {
+		document.getElementById("child").onclick = function () {
 			alert(pop.child);
 			//alert(pop.child.document);
 		};
@@ -69,7 +69,7 @@
 	<h3>child.html</h3>
 		<textarea cols="" rows="" name="code" class="js">
 		<script type="text/javascript">
-		window.onload = function() {
+		window.onload = function () {
 			var parent = window.opener;
 
 			if (parent) {
@@ -88,8 +88,8 @@
 		<button id="child">Child</button>
 
 		<script type="text/javascript">
-		var popup = function() {
-			this.close = function() {
+		var popup = function () {
+			this.close = function () {
 				if (this.child && !this.child.closed) {
 					this.child.close();
 				}
@@ -99,7 +99,7 @@
 			 * @param {String} name?
 			 * @param {String} features?
 			 */
-			this.open = function(url, name, features) {
+			this.open = function (url, name, features) {
 				if (!this.child || this.child.closed) {
 					this.child = window.open(url, name, features);
 				} else {
@@ -110,7 +110,7 @@
 
 		var pop = new popup();
 
-		document.getElementById("open").onclick = function() {
+		document.getElementById("open").onclick = function () {
 			pop.open(
 				"child.html",
 				"",
@@ -118,11 +118,11 @@
 			);
 		};
 
-		document.getElementById("close").onclick = function() {
+		document.getElementById("close").onclick = function () {
 			pop.close();
 		};
 
-		document.getElementById("child").onclick = function() {
+		document.getElementById("child").onclick = function () {
 			alert(pop.child);
 			//alert(pop.child.document);
 		};
