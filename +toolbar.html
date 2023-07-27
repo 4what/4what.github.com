@@ -34,10 +34,10 @@
 		/* subnav */
 		$("#subnav li a").each(function () {
 			var
-			item = $(this).find("span"),
+				item = $(this).find("span"),
 
-			href = $(this).attr("href"),
-			pathname = $4what.filename(window.top.location.pathname);
+				href = $(this).attr("href"),
+				pathname = $4what.filename(window.top.location.pathname);
 
 			if (href === pathname || (href === "index.html" && /\/$/.test(window.top.location.pathname))) {
 				$(this).find("em").css("background", item.css("background-color")).addClass("highlight");

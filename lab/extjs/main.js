@@ -402,8 +402,8 @@ Ext.onReady(function () {
 										},
 										failure: function (form, action) {
 											var
-											msg,
-											result = action.result;
+												msg,
+												result = action.result;
 											if (result) {
 												switch (result.msg) {
 													// (自定义)

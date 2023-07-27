@@ -35,10 +35,10 @@
 
 		(function breadcrumb() {
 			var
-			anchors = document.getElementById("navbar").getElementsByTagName("a"),
+				anchors = document.getElementById("navbar").getElementsByTagName("a"),
 
-			href,
-			pathname = $4what.filename(window.top.location.pathname);
+				href,
+				pathname = $4what.filename(window.top.location.pathname);
 
 			for (var item, i = 0, l = anchors.length; i < l; i++) {
 				item = anchors[i];

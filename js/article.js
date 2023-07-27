@@ -7,8 +7,8 @@
 		for (var i = headings.length - 1; i >= 0; i--) {
 			headings[i].getElementsByTagName("a")[0].onclick = function () {
 				var
-				icon = this.getElementsByTagName("span")[0],
-				section = document.getElementById("chapter-" + this.name);
+					icon = this.getElementsByTagName("span")[0],
+					section = document.getElementById("chapter-" + this.name);
 
 				icon.innerHTML = icon.innerHTML === "-" ? "+" : "-";
 				section.style.display = section.style.display === "none" ? "block" : "none";
