@@ -4,99 +4,100 @@
 -->
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<title>4what - Global</title>
+		<title>4what - Global</title>
 
-	<meta name="author" content="4what" />
-	<meta name="copyright" content="4what" />
+		<meta name="author" content="4what" />
+		<meta name="copyright" content="4what" />
 
-	<meta name="description" content="4what" />
-	<meta name="keywords" content="4what" />
+		<meta name="description" content="4what" />
+		<meta name="keywords" content="4what" />
 
-	<!--<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width" />-->
+		<!--<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width" />-->
 
-	<!--<meta http-equiv="X-UA-Compatible" content="IE=Edge" />-->
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=Edge" />-->
 
-	<!--<meta name="robots" content="index, follow" />--> <!-- index|noindex|follow|nofollow -->
+		<!--<meta name="robots" content="index, follow" />--> <!-- index|noindex|follow|nofollow -->
+
+		<!--
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Expires" content="0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		-->
+
+		<!--<meta http-equiv="refresh" content="0[; url=http://example.com]" />-->
+
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!--<base target="_top" />-->
+
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+
+		<script type="text/javascript" src="js/util.js"></script>
+		<script type="text/javascript" src="js/commons.js"></script>
+	</head>
 
 	<!--
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Expires" content="0" />
-	<meta http-equiv="Pragma" content="no-cache" />
+	<frameset rows="120px,*,50px" frameborder="no" framespacing="0">
+		<frame src="header.html" name="header" noresize="noresize" scrolling="no" />
+		<frame src="home.html" name="blank" noresize="noresize" scrolling="auto" />
+		<frame src="footer.html" name="footer" noresize="noresize" scrolling="no" />
+		<noframes>
+			<body>
+
+			</body>
+		</noframes>
+	</frameset>
 	-->
 
-	<!--<meta http-equiv="refresh" content="0[; url=http://example.com]" />-->
+	<body class="body-home">
+		<div class="main">
+			<iframe src="header.html" frameborder="0" scrolling="no" class="iframe-header"></iframe>
 
-	<link rel="shortcut icon" href="favicon.ico" />
+			<div class="container">
+				<div id="overview">
+					<!-- lorem -->
+				</div>
 
-	<!--<base target="_top" />-->
+				<div class="catalog">
+					<div class="layer">
+						<h3 class="subheading"><span>News</span></h3>
+						<ul>
+							<li><a href="https://github.com/4what">Github.com/4what</a></li>
+							<li><em>js</em> <a href="samples/JavaScript/util.js.html">Util.js</a></li>
+							<li><em>js</em> <a href="lab/extjs/index.html">ExtJS</a></li>
+						</ul>
+					</div>
 
-	<link rel="stylesheet" type="text/css" href="css/base.css" />
+					<div class="layer">
+						<h3 class="subheading"><span>Category</span></h3>
+						<ul>
+							<li><a href="samples/Cascading-Style-Sheets/index.html">CSS</a></li>
+							<li><a href="samples/JavaScript/index.html">JavaScript</a></li>
+							<li><a href="articles/Hypertext-Markup-Language.html">HTML</a></li>
+							<li><a href="samples/Java/index.html">Java</a></li>
+						</ul>
+					</div>
 
-	<script type="text/javascript" src="js/util.js"></script>
-	<script type="text/javascript" src="js/commons.js"></script>
-</head>
+					<div class="layer">
+						<h3 class="subheading"><span>Games</span></h3>
+						<ul>
+							<li>Biohazard <a href="articles/Biohazard 3.html">3</a>,
+								<a href="articles/Biohazard 4.html">4</a></li>
+							<li><a href="articles/Shin Onimusha.html">新鬼武者</a></li>
+						</ul>
+					</div>
+				</div>
 
-<!--
-<frameset rows="120px,*,50px" frameborder="no" framespacing="0">
-	<frame src="header.html" name="header" noresize="noresize" scrolling="no" />
-	<frame src="home.html" name="blank" noresize="noresize" scrolling="auto" />
-	<frame src="footer.html" name="footer" noresize="noresize" scrolling="no" />
-	<noframes>
-		<body>
-
-		</body>
-	</noframes>
-</frameset>
--->
-
-<body class="body-home">
-	<div class="main">
-		<iframe src="header.html" frameborder="0" scrolling="no" class="iframe-header"></iframe>
-
-		<div class="container">
-			<div id="overview">
-				<!-- lorem -->
+				<iframe src="+toolbar.html" frameborder="0" scrolling="no" class="iframe-toolbar"></iframe>
 			</div>
 
-			<div class="catalog">
-				<div class="layer">
-					<h3 class="subheading"><span>News</span></h3>
-					<ul>
-						<li><a href="https://github.com/4what">Github.com/4what</a></li>
-						<li><em>js</em> <a href="samples/JavaScript/util.js.html">Util.js</a></li>
-						<li><em>js</em> <a href="lab/extjs/index.html">ExtJS</a></li>
-					</ul>
-				</div>
-
-				<div class="layer">
-					<h3 class="subheading"><span>Category</span></h3>
-					<ul>
-						<li><a href="samples/Cascading-Style-Sheets/index.html">CSS</a></li>
-						<li><a href="samples/JavaScript/index.html">JavaScript</a></li>
-						<li><a href="articles/Hypertext-Markup-Language.html">HTML</a></li>
-						<li><a href="samples/Java/index.html">Java</a></li>
-					</ul>
-				</div>
-
-				<div class="layer">
-					<h3 class="subheading"><span>Games</span></h3>
-					<ul>
-						<li>Biohazard <a href="articles/Biohazard 3.html">3</a>, <a href="articles/Biohazard 4.html">4</a></li>
-						<li><a href="articles/Shin Onimusha.html">新鬼武者</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<iframe src="+toolbar.html" frameborder="0" scrolling="no" class="iframe-toolbar"></iframe>
+			<iframe src="+footer.html" frameborder="0" scrolling="no" class="iframe-footer"></iframe>
 		</div>
+		<!-- /main -->
 
-		<iframe src="+footer.html" frameborder="0" scrolling="no" class="iframe-footer"></iframe>
-	</div>
-	<!-- /main -->
-
-	<script type="text/javascript" src="js/analytics.js"></script>
-</body>
+		<script type="text/javascript" src="js/analytics.js"></script>
+	</body>
 </html>

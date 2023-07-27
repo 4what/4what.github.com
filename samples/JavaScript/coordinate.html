@@ -1,110 +1,110 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<title>4what - JavaScript</title>
+		<title>4what - JavaScript</title>
 
-	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
-	<script type="text/javascript" src="../../js/util.js"></script>
-	<script type="text/javascript" src="../../js/commons.js"></script>
-</head>
-<body>
-	<h2><span>Syntax</span></h2>
-		<textarea cols="" rows="" name="code" class="css">
-		<style type="text/css">
-		html, body {
-			height: 200%;
-			width: 200%;
-		}
+		<script type="text/javascript" src="../../js/util.js"></script>
+		<script type="text/javascript" src="../../js/commons.js"></script>
+	</head>
+	<body>
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="css">
+				<style type="text/css">
+					html, body {
+						height: 200%;
+						width: 200%;
+					}
 
-		#box {
-			background: #000;
-			height: 100px;
-			position: absolute;
-			right: 100px;
-			top: 100px;
-			width: 100px;
-		}
-		</style>
-		</textarea>
+					#box {
+						background: #000;
+						height: 100px;
+						position: absolute;
+						right: 100px;
+						top: 100px;
+						width: 100px;
+					}
+				</style>
+			</textarea>
 
-		<textarea cols="" rows="" name="code" class="html">
-		<div id="coords"></div>
-		<div id="box"></div>
-		</textarea>
+			<textarea cols="" rows="" name="code" class="html">
+				<div id="coords"></div>
+				<div id="box"></div>
+			</textarea>
 
-		<textarea cols="" rows="" name="code" class="js">
-		<script type="text/javascript">
-		var coords = $("#coords");
+			<textarea cols="" rows="" name="code" class="js">
+				<script type="text/javascript">
+					var coords = $("#coords");
 
-		$("*").mousemove(function (e) {
-			e = e.originalEvent;
+					$("*").mousemove(function (e) {
+						e = e.originalEvent;
 
-			coords.html(
-				"clientX: " + e.clientX
-				+ ", clientY: " + e.clientY
-				+ ", layerX: " + e.layerX
-				+ ", layerY: " + e.layerY
-				+ ", offsetX: " + e.offsetX
-				+ ", offsetY: " + e.offsetY
-				+ ", pageX: " + e.pageX
-				+ ", pageY: " + e.pageY
-				+ ", screenX: " + e.screenX
-				+ ", screenY: " + e.screenY
-				+ ", x: " + e.x
-				+ ", y: " + e.y
-			);
-		});
-		</script>
-		</textarea>
+						coords.html(
+							"clientX: " + e.clientX
+							+ ", clientY: " + e.clientY
+							+ ", layerX: " + e.layerX
+							+ ", layerY: " + e.layerY
+							+ ", offsetX: " + e.offsetX
+							+ ", offsetY: " + e.offsetY
+							+ ", pageX: " + e.pageX
+							+ ", pageY: " + e.pageY
+							+ ", screenX: " + e.screenX
+							+ ", screenY: " + e.screenY
+							+ ", x: " + e.x
+							+ ", y: " + e.y
+						);
+					});
+				</script>
+			</textarea>
 
-	<h2><span>Example</span></h2>
-		<style type="text/css">
-		html, body {
-			height: 200%;
-			width: 200%;
-		}
+		<h2><span>Example</span></h2>
+			<style type="text/css">
+				html, body {
+					height: 200%;
+					width: 200%;
+				}
 
-		#box {
-			background: #000;
-			height: 100px;
-			position: absolute;
-			right: 100px;
-			top: 100px;
-			width: 100px;
-		}
-		</style>
+				#box {
+					background: #000;
+					height: 100px;
+					position: absolute;
+					right: 100px;
+					top: 100px;
+					width: 100px;
+				}
+			</style>
 
-		<div id="coords"></div>
-		<div id="box"></div>
+			<div id="coords"></div>
+			<div id="box"></div>
 
-		<script type="text/javascript">
-		var coords = $("#coords");
+			<script type="text/javascript">
+				var coords = $("#coords");
 
-		$("*").mousemove(function (e) {
-			e = e.originalEvent;
+				$("*").mousemove(function (e) {
+					e = e.originalEvent;
 
-			coords.html(
-				"clientX: " + e.clientX
-				+ ", clientY: " + e.clientY
-				+ ", layerX: " + e.layerX
-				+ ", layerY: " + e.layerY
-				+ ", offsetX: " + e.offsetX
-				+ ", offsetY: " + e.offsetY
-				+ ", pageX: " + e.pageX
-				+ ", pageY: " + e.pageY
-				+ ", screenX: " + e.screenX
-				+ ", screenY: " + e.screenY
-				+ ", x: " + e.x
-				+ ", y: " + e.y
-			);
-		});
-		</script>
+					coords.html(
+						"clientX: " + e.clientX
+						+ ", clientY: " + e.clientY
+						+ ", layerX: " + e.layerX
+						+ ", layerY: " + e.layerY
+						+ ", offsetX: " + e.offsetX
+						+ ", offsetY: " + e.offsetY
+						+ ", pageX: " + e.pageX
+						+ ", pageY: " + e.pageY
+						+ ", screenX: " + e.screenX
+						+ ", screenY: " + e.screenY
+						+ ", x: " + e.x
+						+ ", y: " + e.y
+					);
+				});
+			</script>
 
-	<script type="text/javascript" src="../../js/sample.js"></script>
+		<script type="text/javascript" src="../../js/sample.js"></script>
 
-	<script type="text/javascript" src="../../js/analytics.js"></script>
-</body>
+		<script type="text/javascript" src="../../js/analytics.js"></script>
+	</body>
 </html>

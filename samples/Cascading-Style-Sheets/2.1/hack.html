@@ -1,278 +1,278 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<title>4what - Cascading Style Sheets</title>
+		<title>4what - Cascading Style Sheets</title>
 
-	<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
 
-	<script type="text/javascript" src="../../../js/util.js"></script>
-	<script type="text/javascript" src="../../../js/commons.js"></script>
-</head>
-<body>
-	<h2><span>Specification</span></h2>
-		<table>
-			<tr>
-				<th>
-					Selector
-						<sup>
-							<a href="https://w3.org/TR/CSS21/selector.html#pattern-matching">[1]</a>
-							<a href="https://w3.org/TR/selectors/#overview">[2]</a>
-						</sup>
-				</th>
-				<th>IE6</th>
-				<th>IE7</th>
-				<th>IE8</th>
-				<th>IE9</th>
-				<th>IE10</th>
-				<th>IE11</th>
-				<th>Std</th>
-			</tr>
-			<tr>
-				<td>E { <strong>_</strong> property: value; }</td>
-				<td>√</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-			</tr>
-			<tr>
-				<td><strong>* html</strong> E { property: value; }</td>
-				<td>√</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-			</tr>
-			<tr>
-				<td>E { <strong>*</strong> property: value; }</td>
-				<td>√</td>
-				<td>√</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-			</tr>
-			<tr>
-				<td>E { <strong>*</strong> property: value <strong>!important</strong>; }</td>
-				<td>×</td>
-				<td>√</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-			</tr>
-			<tr>
-				<td><strong>*+ html</strong> E { property<strong>/**/</strong>: value; }</td>
-				<td>×</td>
-				<td>√</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-			</tr>
-			<tr>
-				<td>E { property: value <strong>!important</strong>; }</td>
-				<td>×</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-			</tr>
-			<tr>
-				<td>E<strong>[attr]</strong> { property: value; }</td>
-				<td>×</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-			</tr>
-			<tr>
-				<td>E { property: value<strong>\9</strong>; }</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>×</td>
-				<td>×</td>
-			</tr>
-			<tr>
-				<td>E { property: value<strong>\0</strong>; }</td>
-				<td>×</td>
-				<td>×</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>√</td>
-				<td>×</td>
-			</tr>
-			<tr>
-				<td>E { property: value<strong>\9\0</strong>; }</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>√</td>
-				<td>√</td>
-				<td>×</td>
-				<td>×</td>
-			</tr>
-			<tr>
-				<td><strong>@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {</strong> E { property: value; } <strong>}</strong></td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>×</td>
-				<td>√</td>
-				<td>√</td>
-				<td>×</td>
-			</tr>
-		</table>
+		<script type="text/javascript" src="../../../js/util.js"></script>
+		<script type="text/javascript" src="../../../js/commons.js"></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<table>
+				<tr>
+					<th>
+						Selector
+							<sup>
+								<a href="https://w3.org/TR/CSS21/selector.html#pattern-matching">[1]</a>
+								<a href="https://w3.org/TR/selectors/#overview">[2]</a>
+							</sup>
+					</th>
+					<th>IE6</th>
+					<th>IE7</th>
+					<th>IE8</th>
+					<th>IE9</th>
+					<th>IE10</th>
+					<th>IE11</th>
+					<th>Std</th>
+				</tr>
+				<tr>
+					<td>E { <strong>_</strong> property: value; }</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td><strong>* html</strong> E { property: value; }</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>E { <strong>*</strong> property: value; }</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>E { <strong>*</strong> property: value <strong>!important</strong>; }</td>
+					<td>×</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td><strong>*+ html</strong> E { property<strong>/**/</strong>: value; }</td>
+					<td>×</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>E { property: value <strong>!important</strong>; }</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+				</tr>
+				<tr>
+					<td>E<strong>[attr]</strong> { property: value; }</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+				</tr>
+				<tr>
+					<td>E { property: value<strong>\9</strong>; }</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>E { property: value<strong>\0</strong>; }</td>
+					<td>×</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>E { property: value<strong>\9\0</strong>; }</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td><strong>@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {</strong> E { property: value; } <strong>}</strong></td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+				</tr>
+			</table>
 
-	<h2><span>Syntax</span></h2>
-		<textarea cols="" rows="" name="code" class="css">
-		<style type="text/css">
-		#hack-1 {
-			_ color: red;
-		}
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="css">
+				<style type="text/css">
+					#hack-1 {
+						_ color: red;
+					}
 
-		* html #hack-2 {
-			color: red;
-		}
+					* html #hack-2 {
+						color: red;
+					}
 
-		#hack-3 {
-			* color: red;
-		}
+					#hack-3 {
+						* color: red;
+					}
 
-		#hack-4 {
-			* color: red !important;
-			color: blue;
-		}
+					#hack-4 {
+						* color: red !important;
+						color: blue;
+					}
 
-		*+ html #hack-5 {
-			color/**/: red;
-		}
+					*+ html #hack-5 {
+						color/**/: red;
+					}
 
-		#hack-6 {
-			color: red !important;
-			color: blue;
-		}
+					#hack-6 {
+						color: red !important;
+						color: blue;
+					}
 
-		#hack-7[id] {
-			color: red;
-		}
+					#hack-7[id] {
+						color: red;
+					}
 
-		#hack-8 {
-			color: red\9;
-		}
+					#hack-8 {
+						color: red\9;
+					}
 
-		#hack-9 {
-			color: red\0;
-		}
+					#hack-9 {
+						color: red\0;
+					}
 
-		#hack-10 {
-			color: red\9\0;
-		}
+					#hack-10 {
+						color: red\9\0;
+					}
 
-		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-			#hack-11 {
-				color: red;
-			}
-		}
-		</style>
-		</textarea>
+					@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+						#hack-11 {
+							color: red;
+						}
+					}
+				</style>
+			</textarea>
 
-		<textarea cols="" rows="" name="code" class="html">
-		<div>1: <span id="hack-1">E { _ property: value; }</span></div>
-		<div>2: <span id="hack-2">* html E { property: value; }</span></div>
-		<div>3: <span id="hack-3">E { * property: value; }</span></div>
-		<div>4: <span id="hack-4">E { * property: value !important; }</span></div>
-		<div>5: <span id="hack-5">*+ html E { property/**/: value; }</span></div>
-		<div>6: <span id="hack-6">E { property: value !important; }</span></div>
-		<div>7: <span id="hack-7">E[attr] { property: value; }</span></div>
-		<div>8: <span id="hack-8">E { property: value\9; }</span></div>
-		<div>9: <span id="hack-9">E { property: value\0; }</span></div>
-		<div>10: <span id="hack-10">E { property: value\9\0; }</span></div>
-		<div>11: <span id="hack-11">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { E { property: value; } }</span></div>
-		</textarea>
+			<textarea cols="" rows="" name="code" class="html">
+				<div>1: <span id="hack-1">E { _ property: value; }</span></div>
+				<div>2: <span id="hack-2">* html E { property: value; }</span></div>
+				<div>3: <span id="hack-3">E { * property: value; }</span></div>
+				<div>4: <span id="hack-4">E { * property: value !important; }</span></div>
+				<div>5: <span id="hack-5">*+ html E { property/**/: value; }</span></div>
+				<div>6: <span id="hack-6">E { property: value !important; }</span></div>
+				<div>7: <span id="hack-7">E[attr] { property: value; }</span></div>
+				<div>8: <span id="hack-8">E { property: value\9; }</span></div>
+				<div>9: <span id="hack-9">E { property: value\0; }</span></div>
+				<div>10: <span id="hack-10">E { property: value\9\0; }</span></div>
+				<div>11: <span id="hack-11">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { E { property: value; } }</span></div>
+			</textarea>
 
-	<h2><span>Example</span></h2>
-		<style type="text/css">
-		#hack-1 {
-			_ color: red;
-		}
+		<h2><span>Example</span></h2>
+			<style type="text/css">
+				#hack-1 {
+					_ color: red;
+				}
 
-		* html #hack-2 {
-			color: red;
-		}
+				* html #hack-2 {
+					color: red;
+				}
 
-		#hack-3 {
-			* color: red;
-		}
+				#hack-3 {
+					* color: red;
+				}
 
-		#hack-4 {
-			* color: red !important;
-			color: blue;
-		}
+				#hack-4 {
+					* color: red !important;
+					color: blue;
+				}
 
-		*+ html #hack-5 {
-			color/**/: red;
-		}
+				*+ html #hack-5 {
+					color/**/: red;
+				}
 
-		#hack-6 {
-			color: red !important;
-			color: blue;
-		}
+				#hack-6 {
+					color: red !important;
+					color: blue;
+				}
 
-		#hack-7[id] {
-			color: red;
-		}
+				#hack-7[id] {
+					color: red;
+				}
 
-		#hack-8 {
-			color: red\9;
-		}
+				#hack-8 {
+					color: red\9;
+				}
 
-		#hack-9 {
-			color: red\0;
-		}
+				#hack-9 {
+					color: red\0;
+				}
 
-		#hack-10 {
-			color: red\9\0;
-		}
+				#hack-10 {
+					color: red\9\0;
+				}
 
-		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-			#hack-11 {
-				color: red;
-			}
-		}
-		</style>
+				@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+					#hack-11 {
+						color: red;
+					}
+				}
+			</style>
 
-		<div>1: <span id="hack-1">E { _ property: value; }</span></div>
-		<div>2: <span id="hack-2">* html E { property: value; }</span></div>
-		<div>3: <span id="hack-3">E { * property: value; }</span></div>
-		<div>4: <span id="hack-4">E { * property: value !important; }</span></div>
-		<div>5: <span id="hack-5">*+ html E { property/**/: value; }</span></div>
-		<div>6: <span id="hack-6">E { property: value !important; }</span></div>
-		<div>7: <span id="hack-7">E[attr] { property: value; }</span></div>
-		<div>8: <span id="hack-8">E { property: value\9; }</span></div>
-		<div>9: <span id="hack-9">E { property: value\0; }</span></div>
-		<div>10: <span id="hack-10">E { property: value\9\0; }</span></div>
-		<div>11: <span id="hack-11">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { E { property: value; } }</span></div>
+			<div>1: <span id="hack-1">E { _ property: value; }</span></div>
+			<div>2: <span id="hack-2">* html E { property: value; }</span></div>
+			<div>3: <span id="hack-3">E { * property: value; }</span></div>
+			<div>4: <span id="hack-4">E { * property: value !important; }</span></div>
+			<div>5: <span id="hack-5">*+ html E { property/**/: value; }</span></div>
+			<div>6: <span id="hack-6">E { property: value !important; }</span></div>
+			<div>7: <span id="hack-7">E[attr] { property: value; }</span></div>
+			<div>8: <span id="hack-8">E { property: value\9; }</span></div>
+			<div>9: <span id="hack-9">E { property: value\0; }</span></div>
+			<div>10: <span id="hack-10">E { property: value\9\0; }</span></div>
+			<div>11: <span id="hack-11">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { E { property: value; } }</span></div>
 
-	<script type="text/javascript" src="../../../js/sample.js"></script>
+		<script type="text/javascript" src="../../../js/sample.js"></script>
 
-	<script type="text/javascript" src="../../../js/analytics.js"></script>
-</body>
+		<script type="text/javascript" src="../../../js/analytics.js"></script>
+	</body>
 </html>

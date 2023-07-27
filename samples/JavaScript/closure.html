@@ -1,95 +1,95 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<title>4what - JavaScript</title>
+		<title>4what - JavaScript</title>
 
-	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
-	<script type="text/javascript" src="../../js/util.js"></script>
-	<script type="text/javascript" src="../../js/commons.js"></script>
-</head>
-<body>
-	<h2><span>Specification</span></h2>
-		<p>
-			<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">[1]</a>
-		</p>
+		<script type="text/javascript" src="../../js/util.js"></script>
+		<script type="text/javascript" src="../../js/commons.js"></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">[1]</a>
+			</p>
 
-	<h2><span>Syntax</span></h2>
-		<textarea cols="" rows="" name="code" class="html">
-		<div id="box">
-			<button>1</button>
-			<button>2</button>
-			<button>3</button>
-		</div>
-		</textarea>
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="html">
+				<div id="box">
+					<button>1</button>
+					<button>2</button>
+					<button>3</button>
+				</div>
+			</textarea>
 
-		<textarea cols="" rows="" name="code" class="js">
-		<script type="text/javascript">
-		function closure() {
-			function log(i) {
-				return function () {
-					alert(i);
-				};
-			}
+			<textarea cols="" rows="" name="code" class="js">
+				<script type="text/javascript">
+					function closure() {
+						function log(i) {
+							return function () {
+								alert(i);
+							};
+						}
 
-			var
-				buttons = document.getElementById("box").getElementsByTagName("button"),
-				handler;
+						var
+							buttons = document.getElementById("box").getElementsByTagName("button"),
+							handler;
 
-			for (var i = 0, l = buttons.length; i < l; i++) {
-				handler = log(i + 1);
+						for (var i = 0, l = buttons.length; i < l; i++) {
+							handler = log(i + 1);
 
-				buttons[i].onclick =
-					//function () { alert(i + 1); }; // failure
-					//function () { handler(); }; // failure
+							buttons[i].onclick =
+								//function () { alert(i + 1); }; // failure
+								//function () { handler(); }; // failure
 
-					//log(i + 1); // success
-					handler; // success
-			}
-		}
+								//log(i + 1); // success
+								handler; // success
+						}
+					}
 
-		closure();
-		</script>
-		</textarea>
+					closure();
+				</script>
+			</textarea>
 
-	<h2><span>Example</span></h2>
-		<div id="box">
-			<button>1</button>
-			<button>2</button>
-			<button>3</button>
-		</div>
+		<h2><span>Example</span></h2>
+			<div id="box">
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
+			</div>
 
-		<script type="text/javascript">
-		function closure() {
-			function log(i) {
-				return function () {
-					alert(i);
-				};
-			}
+			<script type="text/javascript">
+				function closure() {
+					function log(i) {
+						return function () {
+							alert(i);
+						};
+					}
 
-			var
-				buttons = document.getElementById("box").getElementsByTagName("button"),
-				handler;
+					var
+						buttons = document.getElementById("box").getElementsByTagName("button"),
+						handler;
 
-			for (var i = 0, l = buttons.length; i < l; i++) {
-				handler = log(i + 1);
+					for (var i = 0, l = buttons.length; i < l; i++) {
+						handler = log(i + 1);
 
-				buttons[i].onclick =
-					//function () { alert(i + 1); }; // failure
-					//function () { handler(); }; // failure
+						buttons[i].onclick =
+							//function () { alert(i + 1); }; // failure
+							//function () { handler(); }; // failure
 
-					//log(i + 1); // success
-					handler; // success
-			}
-		}
+							//log(i + 1); // success
+							handler; // success
+					}
+				}
 
-		closure();
-		</script>
+				closure();
+			</script>
 
-	<script type="text/javascript" src="../../js/sample.js"></script>
+		<script type="text/javascript" src="../../js/sample.js"></script>
 
-	<script type="text/javascript" src="../../js/analytics.js"></script>
-</body>
+		<script type="text/javascript" src="../../js/analytics.js"></script>
+	</body>
 </html>

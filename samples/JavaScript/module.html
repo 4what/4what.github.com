@@ -1,58 +1,58 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<title>4what - JavaScript</title>
+		<title>4what - JavaScript</title>
 
-	<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
 
-	<script type="text/javascript" src="../../js/util.js"></script>
-	<script type="text/javascript" src="../../js/commons.js"></script>
-</head>
-<body>
-	<h2><span>Syntax</span></h2>
-		<textarea cols="" rows="" name="code" class="js">
-		<script type="text/javascript">
-		var module = (function (o) {
-			var private = "private";
+		<script type="text/javascript" src="../../js/util.js"></script>
+		<script type="text/javascript" src="../../js/commons.js"></script>
+	</head>
+	<body>
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="js">
+				<script type="text/javascript">
+					var module = (function (o) {
+						var private = "private";
 
-			o.property = "property";
+						o.property = "property";
 
-			o.method = function () {
-				$4what.log("method()");
-			};
+						o.method = function () {
+							$4what.log("method()");
+						};
 
-			return o;
-		})(module || {});
+						return o;
+					})(module || {});
 
-		$4what.log(module.property);
+					$4what.log(module.property);
 
-		module.method();
-		</script>
-		</textarea>
+					module.method();
+				</script>
+			</textarea>
 
-	<h2><span>Example</span></h2>
-		<script type="text/javascript">
-		var module = (function (o) {
-			var private = "private";
+		<h2><span>Example</span></h2>
+			<script type="text/javascript">
+				var module = (function (o) {
+					var private = "private";
 
-			o.property = "property";
+					o.property = "property";
 
-			o.method = function () {
-				$4what.log("method()");
-			};
+					o.method = function () {
+						$4what.log("method()");
+					};
 
-			return o;
-		})(module || {});
+					return o;
+				})(module || {});
 
-		$4what.log(module.property);
+				$4what.log(module.property);
 
-		module.method();
-		</script>
+				module.method();
+			</script>
 
-	<script type="text/javascript" src="../../js/sample.js"></script>
+		<script type="text/javascript" src="../../js/sample.js"></script>
 
-	<script type="text/javascript" src="../../js/analytics.js"></script>
-</body>
+		<script type="text/javascript" src="../../js/analytics.js"></script>
+	</body>
 </html>

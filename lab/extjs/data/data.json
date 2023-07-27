@@ -1,1 +1,4 @@
-{"success": true, "msg": "message"}
+{
+	"success": true,
+	"msg": "message"
+}
