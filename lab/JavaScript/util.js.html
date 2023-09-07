@@ -111,7 +111,7 @@
 					</li>
 					<li class="jsonp">
 						<textarea cols="" rows="" name="code" class="js">
-							$js.jsonp("http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/jsonp/data.jsp?name=value", function (data) {
+							$js.jsonp("http://example.com:8080/studio/projects/4what.cn/lab/JavaScript/jsonp/data.jsp?name=value", function (data) {
 								for (var key in data) {
 									$4what.log(key + ": " + data[key])
 								}
@@ -174,7 +174,7 @@
 						<textarea cols="" rows="" name="code" class="html">
 							<a href="javascript: void(0);" id="windowName-request">Request</a>
 
-							<form action="http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/Window.name/data.jsp?windowname=1" method="post" id="windowName-form">
+							<form action="http://example.com:8080/studio/projects/4what.cn/lab/JavaScript/Window.name/data.jsp?windowname=1" method="post" id="windowName-form">
 								<input type="text" name="name" value="value" class="text" />
 								<button id="windowName-submit">Submit</button>
 							</form>
@@ -183,7 +183,7 @@
 						<textarea cols="" rows="" name="code" class="js">
 							document.getElementById("windowName-request").onclick = function () {
 								$js.windowName({
-									url: "http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/Window.name/data.jsp?windowname=1&name=value",
+									url: "http://example.com:8080/studio/projects/4what.cn/lab/JavaScript/Window.name/data.jsp?windowname=1&name=value",
 									callback: function (data) {
 										$4what.log(data);
 									}
@@ -234,7 +234,7 @@
 					<li class="windowName">
 						<a href="javascript: void(0);" id="windowName-request">Request</a>
 
-						<form action="http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/Window.name/data.jsp?windowname=1" method="post" id="windowName-form">
+						<form action="http://example.com:8080/studio/projects/4what.cn/lab/JavaScript/Window.name/data.jsp?windowname=1" method="post" id="windowName-form">
 							<input type="text" name="name" value="value" class="text" />
 							<button id="windowName-submit">Submit</button>
 						</form>
@@ -305,7 +305,7 @@
 							$4what.log($js.inArray("b", ["a", "b", "c"]));
 						},
 						jsonp: function () {
-							$js.jsonp("http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/jsonp/data.jsp?name=value", function (data) {
+							$js.jsonp("http://example.com:8080/studio/projects/4what.cn/lab/JavaScript/jsonp/data.jsp?name=value", function (data) {
 								for (var key in data) {
 									$4what.log(key + ": " + data[key])
 								}
@@ -348,7 +348,7 @@
 						windowName: function () {
 							document.getElementById("windowName-request").onclick = function () {
 								$js.windowName({
-									url: "http://example.com:8080/studio/projects/4what.cn/sample/JavaScript/Window.name/data.jsp?windowname=1&name=value",
+									url: "http://example.com:8080/studio/projects/4what.cn/lab/JavaScript/Window.name/data.jsp?windowname=1&name=value",
 									callback: function (data) {
 										$4what.log(data);
 									}
