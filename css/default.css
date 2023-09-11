@@ -111,8 +111,6 @@ input, select, textarea {
 	#navbar a:hover {
 		text-decoration: none;
 	}
-	#navbar a span {
-	}
 
 	#navbar .highlight {
 		color: #fff;
@@ -183,8 +181,6 @@ input, select, textarea {
 		font-size: 14px;
 		margin-top: 20px;
 	}
-	#overview a {
-	}
 	#overview a:hover {
 		border-bottom: 2px solid #08c;
 		position: relative;
@@ -225,7 +221,7 @@ input, select, textarea {
 		line-height: 2;
 	}
 	.works ul li {
-		background: url("../images/bullet-square.png") no-repeat 0 10px;
+		background: url("../images/bullet-circle.png") no-repeat 0 10px;
 		padding-left: 10px;
 	}
 
@@ -267,34 +263,29 @@ input, select, textarea {
 	/*--------------------------------------
 	  about.html
 	--------------------------------------*/
-	.contact,
-	.hardware,
+	.devices,
 	.timeline {
 		margin-top: 5px;
 	}
 
-	.contact ol,
-	.hardware ol,
+	.devices ol,
 	.timeline ol {
 		float: left;
 		font-weight: bold;
 		line-height: 2;
 	}
 
-	.contact ol,
-	.hardware ol {
+	.devices ol {
 		border-left: 1px dotted #555;
 		left: 4px;
 		position: relative;
 	}
 
-	.contact ol li,
-	.hardware ol li {
+	.devices ol li {
 		text-indent: 15px;
 	}
 
-	.contact ul,
-	.hardware ul,
+	.devices ul,
 	.timeline ul {
 		float: left;
 		left: 10px;
@@ -315,28 +306,8 @@ input, select, textarea {
 		font-weight: bold;
 	}
 	.timeline dd {
-		background: url("../images/bullet-circle.png") no-repeat 0 center;
-		text-indent: 10px;
-	}
-
-	/*--------------------------------------
-	  sitemap.html
-	--------------------------------------*/
-	.sitemap {
-		margin-top: 5px;
-	}
-	.sitemap dt {
 		background: url("../images/bullet-square.png") no-repeat 0 center;
-		line-height: 2.5;
 		text-indent: 10px;
-	}
-	.sitemap dd {
-		overflow: auto;
-		text-indent: 10px;
-		width: 100%;
-	}
-	.sitemap dd a {
-		float: left;
 	}
 
 
@@ -344,8 +315,7 @@ input, select, textarea {
   TOOLBAR
 --------------------------------------*/
 .iframe-toolbar {
-	/*height: 150px;*/
-	height: 125px;
+	height: 104px;
 	margin: 20px auto 0 auto;
 	width: 720px;
 }
@@ -383,7 +353,6 @@ input, select, textarea {
 		font-style: italic;
 		font-weight: bold;
 		text-indent: 15px;
-		width: 195px;
 	}
 	#subnav span {
 		float: left;
@@ -392,7 +361,8 @@ input, select, textarea {
 	}
 
 	#subnav .highlight {
-		color: #000;
+		color: #fff;
+		padding-right: 20px;
 	}
 
 	/**/
@@ -465,13 +435,10 @@ input, select, textarea {
 	position: relative;
 	width: 720px;
 }
-.footer a {
-	text-decoration: underline;
-}
 
 	/**/
 	.copyright {
-		float: right;
+		/*float: right;*/
 		line-height: 50px;
 	}
 
@@ -480,12 +447,8 @@ input, select, textarea {
 	}
 	.valid a {
 		color: #808080;
+		text-decoration: underline;
 	}
 	.valid a:hover {
 		color: #fff;
-	}
-
-	.tools {
-		float: left;
-		line-height: 50px;
 	}

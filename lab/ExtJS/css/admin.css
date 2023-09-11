@@ -42,7 +42,7 @@ input, select, textarea {
 }
 
 
-/* <a href="" target="_blank" class="external" title="浏览"></a> */
+/* <a href="" target="_blank" title="浏览" class="external"></a> */
 a.external {
 	background: url("../images/external-link-ltr-icon.png") no-repeat right center;
 	padding-right: 13px;
