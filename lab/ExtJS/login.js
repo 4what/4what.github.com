@@ -125,7 +125,7 @@ Ext.onReady(function () {
 								break;
 						}
 					}
-					$ext.failure.form(form, action, msg);
+					$extjs.failure.form(form, action, msg);
 				},
 				waitMsg: "正在载入…"
 			});
@@ -146,7 +146,7 @@ Ext.onReady(function () {
 		resizable: false,
 		width: 380,
 		items: [_form],
-		buttons: ["&copy; 4what"]
+		buttons: ["&copy; 4what."]
 	}).show();
 
 });

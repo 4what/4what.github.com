@@ -41,13 +41,13 @@ MyDesktop = new Ext.app.App({
 
 
 /**/
-MyDesktop.IFrameWindow = $ext.desktop.IFrameWindow({
+MyDesktop.IFrameWindow = $extjs.desktop.IFrameWindow({
 	id: "iframe-win",
 	title: "后台",
 	src: "index.html"
 });
 
-MyDesktop.CalendarWindow = $ext.desktop.IFrameWindow({
+MyDesktop.CalendarWindow = $extjs.desktop.IFrameWindow({
 	id: "calendar-win",
 	title: "日历",
 	src: "calendar.html",

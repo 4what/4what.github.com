@@ -5,9 +5,9 @@
  */
 (function () {
 
-	Ext.ns("$ext");
+	Ext.ns("$extjs");
 
-	var Util = $ext = {
+	var Util = $extjs = {
 		/**
 		 * @requires Ext.Desktop
 		 */
@@ -429,7 +429,7 @@
 
 		tab: {
 			/**
-			 * @requires $ext.iframepanel
+			 * @requires $extjs.iframepanel
 			 * @param {Ext.TabPanel|String} tabpanel
 			 * @param {Object} options
 			 * @param {Object} scope?
@@ -456,7 +456,7 @@
 				tabpanel.setActiveTab(target);
 			},
 			/**
-			 * @requires $ext.tab.load
+			 * @requires $extjs.tab.load
 			 * @param {Ext.data.Node} node
 			 * @param {Ext.EventObject} e
 			 * @param {Ext.TabPanel} tabpanel

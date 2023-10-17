@@ -423,7 +423,7 @@ if (typeof module === "object" && typeof module.exports === "object") { // for C
 		return Util;
 	});
 } else {
-	window.$jq = Util;
+	window.$jquery = Util;
 }
 
 })();

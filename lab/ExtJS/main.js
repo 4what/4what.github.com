@@ -1,10 +1,10 @@
 Ext.onReady(function () {
 
 	/* vtypes */
-	Ext.apply(Ext.form.VTypes, $ext.vtypes.daterange());
-	Ext.apply(Ext.form.VTypes, $ext.vtypes.html());
-	Ext.apply(Ext.form.VTypes, $ext.vtypes.password2());
-	Ext.apply(Ext.form.VTypes, $ext.vtypes.timerange());
+	Ext.apply(Ext.form.VTypes, $extjs.vtypes.daterange());
+	Ext.apply(Ext.form.VTypes, $extjs.vtypes.html());
+	Ext.apply(Ext.form.VTypes, $extjs.vtypes.password2());
+	Ext.apply(Ext.form.VTypes, $extjs.vtypes.timerange());
 
 
 	/* pagesize */
@@ -83,7 +83,7 @@ Ext.onReady(function () {
 			//data: "",
 			listeners: {
 				beforeload: function (store, options) {
-					$ext.store.setBaseParam(
+					$extjs.store.setBaseParam(
 						store,
 						"[id^='search-']" // (自定义)
 					);
@@ -142,7 +142,7 @@ Ext.onReady(function () {
 					},
 					failure: function (response, options) {
 						record.reject();
-						$ext.failure.ajax(response, options);
+						$extjs.failure.ajax(response, options);
 					}
 				});
 			}
@@ -362,7 +362,7 @@ Ext.onReady(function () {
 														Ext.Msg.alert("错误", msg).setIcon(Ext.Msg.ERROR);
 													}
 												},
-												failure: $ext.failure.ajax
+												failure: $extjs.failure.ajax
 											});
 											break;
 										case "no":
@@ -415,7 +415,7 @@ Ext.onReady(function () {
 														break;
 												}
 											}
-											$ext.failure.form(form, action, msg);
+											$extjs.failure.form(form, action, msg);
 										},
 										waitMsg: "正在载入…"
 									});
@@ -423,11 +423,11 @@ Ext.onReady(function () {
 
 									_form.getForm().loadRecord(record);
 
-									$ext.combo.load(
+									$extjs.combo.load(
 										"[id^='form-combo-']" // (自定义)
 									);
 
-									$ext.multiselect.load(
+									$extjs.multiselect.load(
 										"[id^='form-multiselect-']", // (自定义)
 										id
 									);
@@ -489,7 +489,7 @@ Ext.onReady(function () {
 											Ext.Msg.alert("错误", msg).setIcon(Ext.Msg.ERROR);
 										}
 									},
-									failure: $ext.failure.ajax
+									failure: $extjs.failure.ajax
 								});
 							}
 						}
@@ -511,7 +511,7 @@ Ext.onReady(function () {
 					iconCls: "icon-cfg",
 					handler: function (button, e) {
 						// (自定义)
-						$ext.iframewindow({
+						$extjs.iframewindow({
 							title: "配置",
 							src: "login.html",
 							iconCls: "icon-cfg"
@@ -533,7 +533,7 @@ Ext.onReady(function () {
 							);
 
 						// (自定义)
-						$ext.tab.load("main", {
+						$extjs.tab.load("main", {
 							title: id,
 							src: "main.html?id=" + id,
 							iconCls: "icon-grid"
@@ -827,7 +827,7 @@ Ext.onReady(function () {
 				autoWidth: true,
 				iconCls: "icon-add",
 				handler: function (button, e) {
-					$ext.textfield.insert(
+					$extjs.textfield.insert(
 						_form,
 						button.getId(),
 						// (自定义)
@@ -923,7 +923,7 @@ Ext.onReady(function () {
 								//text = combo.getRawValue(),
 								value = combo.getValue();
 							if (value) {
-								$ext.multiselect.add(
+								$extjs.multiselect.add(
 									"form-multiselect-id", // (自定义)
 									combo.findRecord(combo.valueField, value)
 								);
@@ -1051,7 +1051,7 @@ Ext.onReady(function () {
 						xtype: "button",
 						iconCls: "icon-del",
 						handler: function (button, e) {
-							$ext.multiselect.del(
+							$extjs.multiselect.del(
 								"form-multiselect-id" // (自定义)
 							);
 						}
@@ -1217,14 +1217,14 @@ Ext.onReady(function () {
 
 	/* reset */
 	function _reset() {
-		$ext.vtypes.daterange.reset(Ext.getCmp("startdate"), Ext.getCmp("enddate"));
-		$ext.vtypes.timerange.reset(Ext.getCmp("starttime"), Ext.getCmp("endtime"));
+		$extjs.vtypes.daterange.reset(Ext.getCmp("startdate"), Ext.getCmp("enddate"));
+		$extjs.vtypes.timerange.reset(Ext.getCmp("starttime"), Ext.getCmp("endtime"));
 
-		$ext.multiselect.clear(
+		$extjs.multiselect.clear(
 			"[id^='form-multiselect-']" // (自定义)
 		);
 
-		$ext.textfield.removeAll(_form);
+		$extjs.textfield.removeAll(_form);
 
 		_form.getForm().reset();
 	}
@@ -1232,7 +1232,7 @@ Ext.onReady(function () {
 
 	/* submit */
 	function _submit() {
-		$ext.multiselect.selectAll(
+		$extjs.multiselect.selectAll(
 			"[id^='form-multiselect-']" // (自定义)
 		);
 
@@ -1266,7 +1266,7 @@ Ext.onReady(function () {
 								break;
 						}
 					}
-					$ext.failure.form(form, action, msg);
+					$extjs.failure.form(form, action, msg);
 				},
 				waitMsg: "正在载入…"
 			});
@@ -1359,7 +1359,7 @@ Ext.onReady(function () {
 						emptyText: "父级",
 						listeners: {
 							select: function (combo, record, index) {
-								$ext.combo.loadChild(
+								$extjs.combo.loadChild(
 									combo,
 									"#search-cascade-child" // (自定义)
 								);
@@ -1392,7 +1392,7 @@ Ext.onReady(function () {
 						value: new Date(),
 						listeners: {
 							afterrender: function (cmp) {
-								$ext.monthpicker(cmp, function () {
+								$extjs.monthpicker(cmp, function () {
 									_jsonstore.load();
 								});
 							}
@@ -1499,7 +1499,7 @@ Ext.onReady(function () {
 											Ext.Msg.alert("错误", msg).setIcon(Ext.Msg.ERROR);
 										}
 									},
-									failure: $ext.failure.ajax
+									failure: $extjs.failure.ajax
 								});
 								break;
 							case "no":
@@ -1540,7 +1540,7 @@ Ext.onReady(function () {
 										break;
 								}
 							}
-							$ext.failure.form(form, action, msg);
+							$extjs.failure.form(form, action, msg);
 						},
 						waitMsg: "正在载入…"
 					});
@@ -1555,7 +1555,7 @@ Ext.onReady(function () {
 					xtype: "button",
 					iconCls: "icon-expand",
 					handler: function (button, e) {
-						$ext.tree.toggle(_tree, true);
+						$extjs.tree.toggle(_tree, true);
 					}
 				},
 				"-",
@@ -1564,7 +1564,7 @@ Ext.onReady(function () {
 					xtype: "button",
 					iconCls: "icon-collapse",
 					handler: function (button, e) {
-						$ext.tree.toggle(_tree, false);
+						$extjs.tree.toggle(_tree, false);
 					}
 				}
 			]
@@ -1697,7 +1697,7 @@ Ext.onReady(function () {
 							_tree.getRootNode().reload();
 						}
 					},
-					failure: $ext.failure.ajax
+					failure: $extjs.failure.ajax
 				});
 			}
 		}
@@ -2043,10 +2043,10 @@ Ext.onReady(function () {
 
 
 	/* init */
-	$ext.combo.load(
+	$extjs.combo.load(
 		"#search-cascade-parent", // (自定义)
 		function (combo, value) {
-			$ext.combo.loadChild(
+			$extjs.combo.loadChild(
 				combo,
 				"#search-cascade-child" // (自定义)
 			);

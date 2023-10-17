@@ -25,7 +25,7 @@ Ext.onReady(function () {
 			useArrows: true,
 			listeners: {
 				click: function (node, e) {
-					$ext.tab.loadOnClickLeaf(node, e, _main, {
+					$extjs.tab.loadOnClickLeaf(node, e, _main, {
 						iconCls: "icon-grid"
 					});
 				}
@@ -113,7 +113,7 @@ Ext.onReady(function () {
 					xtype: "button",
 					iconCls: "icon-expand",
 					handler: function (button, e) {
-						$ext.tree.toggle(_nav, true);
+						$extjs.tree.toggle(_nav, true);
 					}
 				},
 				"-",
@@ -122,7 +122,7 @@ Ext.onReady(function () {
 					xtype: "button",
 					iconCls: "icon-collapse",
 					handler: function (button, e) {
-						$ext.tree.toggle(_nav, false);
+						$extjs.tree.toggle(_nav, false);
 					}
 				}
 			]
@@ -169,7 +169,7 @@ Ext.onReady(function () {
 
 	/* homepage */
 	// (自定义)
-	$ext.tab.load(_main, {
+	$extjs.tab.load(_main, {
 		title: "主页",
 		src: "main.html",
 		iconCls: "icon-grid"

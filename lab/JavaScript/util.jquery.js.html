@@ -47,7 +47,7 @@
 
 						<textarea cols="" rows="" name="code" class="js">
 							/* Backspace, Space */
-							$jq.blockKey([8, 32], "#blockKey");
+							$jquery.blockKey([8, 32], "#blockKey");
 						</textarea>
 					</li>
 					<li class="center">
@@ -56,7 +56,7 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.center(960);
+							$jquery.center(960);
 						</textarea>
 					</li>
 					<li class="disableSubmit">
@@ -73,15 +73,15 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.disableSubmit("#disableSubmit-disable", true);
+							$jquery.disableSubmit("#disableSubmit-disable", true);
 
-							$jq.disableSubmit("#disableSubmit-enable", false);
+							$jquery.disableSubmit("#disableSubmit-enable", false);
 						</textarea>
 					</li>
 					<li class="domain">
 						<textarea cols="" rows="" name="code" class="js">
 							$4what.log(
-								$jq.domain([
+								$jquery.domain([
 									"pconline",
 									"pcauto",
 									"pcgames",
@@ -100,7 +100,7 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$4what.log($jq.field("#field", "name").val());
+							$4what.log($jquery.field("#field", "name").val());
 						</textarea>
 					</li>
 					<li class="fixed">
@@ -109,7 +109,7 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.fixed("#fixed", {
+							$jquery.fixed("#fixed", {
 								duration: "slow"
 								//offset: 50,
 								//position: "top"
@@ -124,7 +124,7 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.maxHeight("#maxHeight", 100);
+							$jquery.maxHeight("#maxHeight", 100);
 						</textarea>
 					</li>
 					<li class="minHeight">
@@ -135,7 +135,7 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.minHeight("#minHeight", 100);
+							$jquery.minHeight("#minHeight", 100);
 						</textarea>
 					</li>
 					<li class="minWidth">
@@ -144,7 +144,7 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.minWidth("#minWidth", 960);
+							$jquery.minWidth("#minWidth", 960);
 						</textarea>
 					</li>
 					<li class="paginator">
@@ -155,7 +155,7 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.paginator("#paginator", {
+							$jquery.paginator("#paginator", {
 								debug: true,
 								//param: "pageNum",
 								data: {
@@ -172,7 +172,7 @@
 								last: ">>"
 							});
 
-							$jq.paginator("#paginator-ajax", {
+							$jquery.paginator("#paginator-ajax", {
 								ajax: true,
 								callback: function (index) {},
 								total: 100
@@ -195,7 +195,7 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.select({
+							$jquery.select({
 								"gender": "female",
 								"agree": "no",
 								"city": ["sh", "gz"]
@@ -208,12 +208,12 @@
 						</textarea>
 
 						<textarea cols="" rows="" name="code" class="js">
-							$jq.setIFrameHeight("#setIFrameHeight");
+							$jquery.setIFrameHeight("#setIFrameHeight");
 						</textarea>
 					</li>
 					<li class="stripHtml">
 						<textarea cols="" rows="" name="code" class="js">
-							$4what.log($jq.stripHtml($("#api-syntax").html()));
+							$4what.log($jquery.stripHtml($("#api-syntax").html()));
 						</textarea>
 					</li>
 				</ul>
@@ -288,26 +288,26 @@
 				<script type="text/javascript" src="../../js/util.jquery.js"></script>
 
 				<script type="text/javascript">
-					$4what.api($jq, [
+					$4what.api($jquery, [
 						$("#api-spec > li"),
 						$("#api-syntax > li"),
 						$("#api-example > li")
 					], {
 						blockKey: function () {
 							/* Backspace, Space */
-							$jq.blockKey([8, 32], "#blockKey");
+							$jquery.blockKey([8, 32], "#blockKey");
 						},
 						center: function () {
-							$jq.center(960);
+							$jquery.center(960);
 						},
 						disableSubmit: function () {
-							$jq.disableSubmit("#disableSubmit-disable", true);
+							$jquery.disableSubmit("#disableSubmit-disable", true);
 
-							$jq.disableSubmit("#disableSubmit-enable", false);
+							$jquery.disableSubmit("#disableSubmit-enable", false);
 						},
 						domain: function () {
 							$4what.log(
-								$jq.domain([
+								$jquery.domain([
 									"pconline",
 									"pcauto",
 									"pcgames",
@@ -318,22 +318,22 @@
 							);
 						},
 						field: function () {
-							$4what.log($jq.field("#field", "name").val());
+							$4what.log($jquery.field("#field", "name").val());
 						},
 						setIFrameHeight: function () {
-							$jq.setIFrameHeight("#setIFrameHeight");
+							$jquery.setIFrameHeight("#setIFrameHeight");
 						},
 						maxHeight: function () {
-							$jq.maxHeight("#maxHeight", 100);
+							$jquery.maxHeight("#maxHeight", 100);
 						},
 						minHeight: function () {
-							$jq.minHeight("#minHeight", 100);
+							$jquery.minHeight("#minHeight", 100);
 						},
 						minWidth: function () {
-							$jq.minWidth("#minWidth", 960);
+							$jquery.minWidth("#minWidth", 960);
 						},
 						paginator: function () {
-							$jq.paginator("#paginator", {
+							$jquery.paginator("#paginator", {
 								debug: true,
 								//param: "pageNum",
 								data: {
@@ -350,28 +350,28 @@
 								last: ">>"
 							});
 
-							$jq.paginator("#paginator-ajax", {
+							$jquery.paginator("#paginator-ajax", {
 								ajax: true,
 								callback: function (index) {},
 								total: 100
 							});
 						},
 						fixed: function () {
-							$jq.fixed("#fixed", {
+							$jquery.fixed("#fixed", {
 								duration: "slow"
 								//offset: 50,
 								//position: "top"
 							});
 						},
 						select: function () {
-							$jq.select({
+							$jquery.select({
 								"gender": "female",
 								"agree": "no",
 								"city": ["sh", "gz"]
 							}, $("#select"));
 						},
 						stripHtml: function () {
-							$4what.log($jq.stripHtml($("#api-syntax").html()));
+							$4what.log($jquery.stripHtml($("#api-syntax").html()));
 						}
 					});
 				</script>
