@@ -32,7 +32,7 @@ Ext.onReady(function () {
 			}
 		},
 		items: [
-			// (自定义)
+			// 自定义
 			{
 				title: "控制面板",
 				iconCls: "icon-ctrl",
@@ -99,7 +99,7 @@ Ext.onReady(function () {
 					xtype: "button",
 					iconCls: "icon-logout",
 					handler: function (button, e) {
-						// (自定义)
+						// 自定义
 						window.location.href = "login.html";
 					}
 				}
@@ -168,7 +168,7 @@ Ext.onReady(function () {
 
 
 	/* homepage */
-	// (自定义)
+	// 自定义
 	$extjs.tab.load(_main, {
 		title: "主页",
 		src: "main.html",
