@@ -27,21 +27,21 @@
 			<textarea cols="" rows="" name="code" class="js">
 				<script type="text/javascript">
 					var iframe = document.createElement("iframe");
-					iframe.src = "http://a.example.com:8080/studio/projects/4what.cn/lab/JavaScript/Window.postMessage/iframe.html";
+					iframe.src = "http://a.example.com:8080/index/studio/projects/4what.cn/lab/JavaScript/Window.postMessage/iframe.html";
 					iframe.style.display = "none";
 
 					document.body.appendChild(iframe);
 
 					iframe.onload = function () {
-						iframe.contentWindow.postMessage(new Date(), "http://a.example.com:8080");
+						iframe.contentWindow.postMessage("Hello, World!", "http://a.example.com:8080");
 					};
 
 					function receiver(e) {
 						if (e.origin !== "http://a.example.com:8080") {
-							//return;
+							return;
 						}
 
-						alert("RESPONSE\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
+						alert("[RESPONSE] " + e.data + " (" + e.origin + ")");
 					}
 
 					$js.bind(window, "message", receiver);
@@ -53,12 +53,12 @@
 				<script type="text/javascript">
 					function receiver(e) {
 						if (e.origin !== "http://example.com:8080") {
-							//return;
+							return;
 						}
 
-						alert("REQUEST\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
+						alert("[REQUEST] " + e.data + " (" + e.origin + ")");
 
-						e.source.postMessage(new Date(), e.origin);
+						e.source.postMessage("OK", e.origin);
 					}
 
 					$js.bind(window, "message", receiver);
@@ -68,21 +68,21 @@
 		<h2><span>Example</span></h2>
 			<script type="text/javascript">
 				var iframe = document.createElement("iframe");
-				iframe.src = "http://a.example.com:8080/studio/projects/4what.cn/lab/JavaScript/Window.postMessage/iframe.html";
+				iframe.src = "http://a.example.com:8080/index/studio/projects/4what.cn/lab/JavaScript/Window.postMessage/iframe.html";
 				iframe.style.display = "none";
 
 				document.body.appendChild(iframe);
 
 				iframe.onload = function () {
-					iframe.contentWindow.postMessage(new Date(), "http://a.example.com:8080");
+					iframe.contentWindow.postMessage("Hello, World!", "http://a.example.com:8080");
 				};
 
 				function receiver(e) {
 					if (e.origin !== "http://a.example.com:8080") {
-						//return;
+						return;
 					}
 
-					alert("RESPONSE\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
+					alert("[RESPONSE] " + e.data + " (" + e.origin + ")");
 				}
 
 				$js.bind(window, "message", receiver);

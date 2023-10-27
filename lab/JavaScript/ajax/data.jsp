@@ -1,68 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-<%@ page import="java.io.BufferedReader" %>
-<%@ page import="java.io.IOException" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="java.util.Map" %>
-
-<%!
-	String getParameter(HttpServletRequest request, String name) {
-		String value = request.getParameter(name);
-
-		/* for XDomainRequest */
-		try {
-			if (value == null) {
-				Map<String, String> map = new HashMap<String, String>();
-
-				BufferedReader reader = request.getReader();
-
-				String data;
-
-				while ((data = reader.readLine()) != null) {
-					for (String item : data.split("&")) {
-						String[] array = item.split("=");
-						map.put(array[0], array[1]);
-					}
-				}
-
-				return map.get(name);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return value;
-	}
-%>
-
 <%
 	out.clear();
 
 	request.setCharacterEncoding("UTF-8");
 
-
-	/* CORS */
-	String origin = request.getHeader("Origin");
-
-	//if (origin.contains("example.com")) {
-		response.setHeader("Access-Control-Allow-Origin", origin);
-	//}
-
-	//response.setHeader("Access-Control-Allow-Credentials", "true");
-
-
-	/* defer */
-	for (int i = 0; i < 10000; i++) {
-		System.out.println(new Date());
-	}
-
-
 	out.println(
 		"{"
-			+ "\"date\": \"" + new Date() + "\""
-			+ ", \"method\": \"" + request.getMethod() + "\""
-			+ ", \"name\": \"" + getParameter(request, "name") + "\""
+			+ "\"name\": \"" + request.getParameter("name") + "\""
 		+ "}"
 	);
 %>

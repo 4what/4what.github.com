@@ -1,6 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%
+	out.clear();
+
 	request.setCharacterEncoding("UTF-8");
 %>
 
@@ -13,10 +15,8 @@
 
 		<script type="text/javascript">
 			window.name = '{'
-				+ '"date": "' + new Date() + '"'
-				+ ', "method": "<%= request.getMethod() %>"'
-				+ ', "name": "<%= request.getParameter("name") %>"'
-				+ '}';
+				+ '"name": "<%= request.getParameter("name") %>"'
+			+ '}';
 		</script>
 	</head>
 	<body>

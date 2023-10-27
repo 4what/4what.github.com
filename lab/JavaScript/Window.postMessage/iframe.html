@@ -10,12 +10,12 @@
 		<script type="text/javascript">
 			function receiver(e) {
 				if (e.origin !== "http://example.com:8080") {
-					//return;
+					return;
 				}
 
-				alert("REQUEST\n" + "data: " + e.data + "\n" + "origin: " + e.origin);
+				alert("[REQUEST] " + e.data + " (" + e.origin + ")");
 
-				e.source.postMessage(new Date(), e.origin);
+				e.source.postMessage("OK", e.origin);
 			}
 
 			$js.bind(window, "message", receiver);

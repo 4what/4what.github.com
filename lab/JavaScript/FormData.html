@@ -35,13 +35,13 @@
 					document.getElementById("file").onchange = function () {
 						if (this.value) {
 							var formData = new FormData(document.getElementById("form"));
-							formData.append("name", "value");
+							formData.append("path", "/");
 
 							var xhr = new XMLHttpRequest();
 							xhr.onload = function () {
 								$4what.log(xhr.responseText);
 							};
-							xhr.open("POST", "http://localhost:8080/j2ee/sample/fileupload/upload.jsp", true);
+							xhr.open("POST", "http://localhost:8080/upload", true);
 							xhr.send(formData);
 						}
 					};
@@ -57,13 +57,13 @@
 				document.getElementById("file").onchange = function () {
 					if (this.value) {
 						var formData = new FormData(document.getElementById("form"));
-						formData.append("name", "value");
+						formData.append("path", "/");
 
 						var xhr = new XMLHttpRequest();
 						xhr.onload = function () {
 							$4what.log(xhr.responseText);
 						};
-						xhr.open("POST", "http://localhost:8080/j2ee/sample/fileupload/upload.jsp", true);
+						xhr.open("POST", "http://localhost:8080/upload", true);
 						xhr.send(formData);
 					}
 				};
