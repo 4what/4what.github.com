@@ -159,9 +159,9 @@ var $4what = function () {
 
 				/* jQuery lightBox */
 				case "jquery-lightbox":
-					$js.include(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.css");
+					$js.include(host + "js/jquery/plugins/lightbox/0.5/jquery.lightbox-0.5.css");
 
-					$js.include(host + "js/jquery/plugin/lightbox/0.5/jquery.lightbox-0.5.pack.js");
+					$js.include(host + "js/jquery/plugins/lightbox/0.5/jquery.lightbox-0.5.pack.js");
 
 					break;
 
