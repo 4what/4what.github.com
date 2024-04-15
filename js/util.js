@@ -154,7 +154,7 @@ Util.prototype = {
 			window[fn] = function (result) {
 				callback(result);
 
-				/* garbage collect */
+				/* GC */
 				window[fn] = undefined;
 
 				clean();

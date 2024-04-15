@@ -157,7 +157,7 @@ var $4what = function () {
 
 					break;
 
-				/* jQuery lightBox */
+				/* jQuery LightBox */
 				case "jquery-lightbox":
 					$js.include(host + "js/jquery/plugins/lightbox/0.5/jquery.lightbox-0.5.css");
 
@@ -211,7 +211,7 @@ var $4what = function () {
 			}
 		}
 
-		/* callback */
+		/* Callback */
 		var callback = arguments[arguments.length - 1];
 
 		if (typeof callback === "function") {
@@ -238,5 +238,5 @@ window.$4what = new $4what();
 
 })();
 
-/* init */
+/* Init */
 $4what.include("jquery");

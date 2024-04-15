@@ -216,15 +216,15 @@ var Util = {
 		params = $.extend({
 			html: settings.template(id),
 			onComplete: function () {
-				/* close */
+				/* Close */
 				$("#" + id).find("[class*='dialog-close']").click(function () {
 					$.colorbox.close();
 				});
 
-				/* callback */
+				/* Callback */
 				settings.callback();
 
-				/* timeout */
+				/* Timeout */
 				if (settings.timeout) {
 					window.setTimeout($.colorbox.close, settings.timeout === true ? 1000 * 2 : settings.timeout);
 				}
@@ -279,7 +279,7 @@ var Util = {
 			},
 			settings = $.extend(defaults, options);
 
-		/* init */
+		/* Init */
 		function init(index) {
 			var totalPages = Math.ceil(settings.total / settings.pageSize);
 
@@ -326,7 +326,7 @@ var Util = {
 					start = Math.max(1, Math.ceil(index - (pages / 2))),
 					end = Math.min(totalPages, start + pages - 1),
 
-					/* adjust */
+					/* Adjust */
 					delta = pages - (end - start + 1),
 					start = Math.max(1, start - delta),
 
@@ -346,7 +346,7 @@ var Util = {
 
 				box.append(component);
 
-				/* first & previous */
+				/* First & Previous */
 				if (index > 1) {
 					var
 						first = '<a href="' + url(1) + '" class="first" rel="' + 1 + '">' + settings.first + '</a> ',
@@ -366,7 +366,7 @@ var Util = {
 					box.prepend(widget);
 				}
 
-				/* last & next */
+				/* Last & Next */
 				if (index < totalPages) {
 					var
 						last = '<a href="' + url(totalPages) + '" class="last" rel="' + totalPages + '">' + settings.last + '</a> ',
@@ -386,15 +386,15 @@ var Util = {
 					box.append(widget);
 				}
 
-				/* ajax */
+				/* AJAX */
 				if (settings.ajax) {
 					box.find("a").click(function () {
 						var index = parseInt($(this).attr("rel"), 10);
 
-						/* recursion */
+						/* Recursion */
 						init(index);
 
-						/* callback */
+						/* Callback */
 						settings.callback(index);
 
 						return false;

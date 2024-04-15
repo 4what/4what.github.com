@@ -1,17 +1,17 @@
 Ext.onReady(function () {
 
-	/* vtypes */
+	/* VTypes */
 	Ext.apply(Ext.form.VTypes, $extjs.vtypes.daterange());
 	Ext.apply(Ext.form.VTypes, $extjs.vtypes.html());
 	Ext.apply(Ext.form.VTypes, $extjs.vtypes.password2());
 	Ext.apply(Ext.form.VTypes, $extjs.vtypes.timerange());
 
 
-	/* pagesize */
+	/* Pagesize */
 	var _pagesize = 20; // 自定义
 
 
-	/* arraystore */
+	/* ArrayStore */
 	var _arraystore = function () {
 		return new Ext.data.Store({
 			url: "data/array.json", // 自定义
@@ -33,7 +33,7 @@ Ext.onReady(function () {
 	};
 
 
-	/* jsonstore */
+	/* JsonStore */
 	var _jsonstore = new
 		//Ext.data.Store
 		Ext.data.GroupingStore
@@ -92,7 +92,7 @@ Ext.onReady(function () {
 		});
 
 
-	/* dummy */
+	/* Dummy */
 	var _dummy = function (size) {
 		var data = "abcdefghijklmnopqrstuvwxyz";
 		data = size ? data.slice(0, size) : data;
@@ -100,8 +100,8 @@ Ext.onReady(function () {
 	};
 
 
-	/* roweditor */
-	/* !Ext.grid.CheckboxSelectionModel */
+	/* RowEditor */
+	/* (!) Ext.grid.CheckboxSelectionModel */
 	var _roweditor = new Ext.ux.grid.RowEditor({
 		cancelText: "取消",
 		//commitChangesText: "",
@@ -150,7 +150,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* rowexpander */
+	/* RowExpander */
 	var _rowexpander = new Ext.ux.grid.RowExpander({
 		expandOnDblClick: false,
 		expandOnEnter: false,
@@ -160,7 +160,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* sm */
+	/* SelectionModel */
 	var _sm = new
 		//Ext.grid.RowSelectionModel
 		Ext.grid.CheckboxSelectionModel
@@ -188,7 +188,7 @@ Ext.onReady(function () {
 		});
 
 
-	/* grid */
+	/* Grid */
 	var _grid = new
 		//Ext.grid.GridPanel
 		Ext.grid.EditorGridPanel
@@ -722,9 +722,9 @@ Ext.onReady(function () {
 		});
 
 
-	/* form */
+	/* Form */
 	var _form = new Ext.form.FormPanel({
-		/* no ajax */
+		/* No AJAX */
 		//standardSubmit: true,
 		//url: "", // 自定义
 		//method: "POST",
@@ -898,7 +898,7 @@ Ext.onReady(function () {
 						//transform: "select-id", // <select name="" id="select-id"><option value=""></option></select>
 						triggerAction: "all", // query|all
 
-						/* autocomplete */
+						/* Autocomplete */
 						minChars: 2,
 						//typeAhead: true,
 
@@ -1215,7 +1215,7 @@ Ext.onReady(function () {
 	_form.$ = {};
 
 
-	/* reset */
+	/* Reset */
 	function _reset() {
 		$extjs.vtypes.daterange.reset(Ext.getCmp("startdate"), Ext.getCmp("enddate"));
 		$extjs.vtypes.timerange.reset(Ext.getCmp("starttime"), Ext.getCmp("endtime"));
@@ -1230,7 +1230,7 @@ Ext.onReady(function () {
 	}
 
 
-	/* submit */
+	/* Submit */
 	function _submit() {
 		$extjs.multiselect.selectAll(
 			"[id^='form-multiselect-']" // 自定义
@@ -1274,7 +1274,7 @@ Ext.onReady(function () {
 	}
 
 
-	/* window */
+	/* Window */
 	var _win = new Ext.Window({
 		autoScroll: true,
 		border: false,
@@ -1323,7 +1323,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* search */
+	/* Search */
 	var _search = new Ext.Panel({
 		region: "north",
 		title: "",
@@ -1404,7 +1404,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* tree */
+	/* Tree */
 	var _tree = new Ext.tree.TreePanel({
 		region: "east",
 		autoScroll: true,
@@ -1631,10 +1631,10 @@ Ext.onReady(function () {
 						return false;
 					}
 
-					/* replace | sort */
+					/* Replace or Sort */
 					action = target.parentNode !== dropNode.parentNode ? "replace" : "sort";
 
-					/* replace */
+					/* Replace */
 					/*
 					if (target.parentNode === dropNode.parentNode) {
 						return false;
@@ -1642,7 +1642,7 @@ Ext.onReady(function () {
 					action = "replace";
 					*/
 
-					/* sort */
+					/* Sort */
 					/*
 					if (target.parentNode !== dropNode.parentNode) {
 						return false;
@@ -1706,7 +1706,7 @@ Ext.onReady(function () {
 	//new Ext.tree.TreeSorter(_tree, {caseSensitive: true, dir: "desc", folderSort: true, sortType: function (node) {return parseInt(node.id, 10);}});
 
 
-	/* preview */
+	/* Preview */
 	var _preview = new Ext.Panel({
 		region: "south",
 		title: "预览",
@@ -1719,7 +1719,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* chart */
+	/* Chart */
 	var _chart = {
 		region: "center",
 		xtype: "linechart",
@@ -1754,7 +1754,7 @@ Ext.onReady(function () {
 	};
 
 
-	/* dataview */
+	/* DataView */
 	var _dataview = new Ext.DataView({
 		cls: "dataview",
 		itemSelector: "li.item",
@@ -1762,6 +1762,7 @@ Ext.onReady(function () {
 		overClass: "x-view-over",
 		plugins: [
 			new Ext.DataView.DragSelector()
+
 			/*
 			new Ext.DataView.LabelEditor(
 				{
@@ -1769,12 +1770,12 @@ Ext.onReady(function () {
 				}
 			),
 			*/
-			/* TODO: bug, Ext.data.JsonStore ? */
+
 			/*
 			new Ext.ux.DataViewTransition({
 				//duration: 750,
 				idProperty: "id"
-			})
+			}) // TODO: bug, Ext.data.JsonStore ?
 			*/
 		],
 		prepareData: function (data) {
@@ -1817,11 +1818,11 @@ Ext.onReady(function () {
 	});
 
 
-	/* pivotgrid */
 	//
 	// <!DOCTYPE ...>
-	// TODO: bug, Opera, CSS
+	//     TODO: bug, Opera, CSS
 	//
+	/* PivotGrid */
 	var _pivotgrid = new Ext.grid.PivotGrid({
 		aggregator: "sum", // sum|avg|count|max|min
 		measure: "value",
@@ -1883,7 +1884,7 @@ Ext.onReady(function () {
 	}).show();
 
 
-	/* treegrid */
+	/* TreeGrid */
 	var _treegrid = new Ext.ux.tree.TreeGrid({
 		region: "center",
 		enableSort: false,
@@ -1950,7 +1951,7 @@ Ext.onReady(function () {
 	_treegrid.getRootNode().id = "src";
 
 
-	/* treetotree */
+	/* TreeToTree */
 	var _treetotree = function (region) {
 		return {
 			region: region,
@@ -1974,7 +1975,7 @@ Ext.onReady(function () {
 	};
 
 
-	/* sample */
+	/* Sample */
 	new Ext.Window({
 		border: false,
 		height: 480,
@@ -2020,7 +2021,7 @@ Ext.onReady(function () {
 	}).show();
 
 
-	/* viewport */
+	/* Viewport */
 	var _viewport = new Ext.Viewport({
 		//autoScroll: true,
 		layout: "border",
@@ -2042,7 +2043,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* init */
+	/* Init */
 	$extjs.combo.load(
 		"#search-cascade-parent", // 自定义
 		function (combo, value) {

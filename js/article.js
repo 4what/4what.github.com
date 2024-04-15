@@ -17,7 +17,7 @@
 	})();
 	*/
 
-	/* toggle */
+	/* Toggle */
 	$("h2 a").click(function () {
 		var icon = $(this).find("span").eq(0);
 		icon.text(icon.is(":contains('-')") ? "+" : "-");

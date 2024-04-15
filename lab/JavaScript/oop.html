@@ -14,7 +14,7 @@
 		<h2><span>Syntax</span></h2>
 			<textarea cols="" rows="" name="code" class="js">
 				<script type="text/javascript">
-					/* object */
+					/* Object */
 					var o =
 						new Object()
 						//new Array("x", "y")
@@ -30,7 +30,7 @@
 					o.prop = "value";
 					$4what.log("o.prop: " + o.prop); // value
 
-					/* prototype */
+					/* Prototype */
 					var Human = function () {
 						$4what.log("new Human");
 					};
@@ -51,11 +51,11 @@
 					delete adam.age;
 					$4what.log("adam.age: " + adam.age); // 0
 
-					/* inheritance */
+					/* Inheritance */
 					var Woman = function (gender) {
 						$4what.log("new Woman");
 
-						/* constructor */
+						/* Constructor */
 						this.gender = gender;
 					};
 					Woman.prototype = new Human(); // new Human
@@ -68,7 +68,7 @@
 
 		<h2><span>Example</span></h2>
 			<script type="text/javascript">
-				/* object */
+				/* Object */
 				var o =
 					new Object()
 					//new Array("x", "y")
@@ -84,7 +84,7 @@
 				o.prop = "value";
 				$4what.log("o.prop: " + o.prop); // value
 
-				/* prototype */
+				/* Prototype */
 				var Human = function () {
 					$4what.log("new Human");
 				};
@@ -105,11 +105,11 @@
 				delete adam.age;
 				$4what.log("adam.age: " + adam.age); // 0
 
-				/* inheritance */
+				/* Inheritance */
 				var Woman = function (gender) {
 					$4what.log("new Woman");
 
-					/* constructor */
+					/* Constructor */
 					this.gender = gender;
 				};
 				Woman.prototype = new Human(); // new Human

@@ -1,6 +1,6 @@
 Ext.onReady(function () {
 
-	/* form */
+	/* Form */
 	var _form = new Ext.form.FormPanel({
 		baseCls: "x-plain",
 		buttonAlign: "center",
@@ -96,7 +96,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* submit */
+	/* Submit */
 	function _form_submit() {
 		if (_form.getForm().isValid()) {
 			_form.getForm().submit({
@@ -133,7 +133,7 @@ Ext.onReady(function () {
 	}
 
 
-	/* window */
+	/* Window */
 	new Ext.Window({
 		title: "管理员登录",
 		border: false,

@@ -248,10 +248,10 @@
 
 						var self = this;
 
-						/* icon */
+						/* Icon */
 						self.setIcon(Ext.Msg.INFO);
 
-						/* timeout */
+						/* Timeout */
 						if (typeof settings.timeout === "function") {
 							settings.timeout = settings.timeout(self, title, msg);
 						}

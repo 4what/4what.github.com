@@ -1,6 +1,6 @@
 Ext.onReady(function () {
 
-	/* nav */
+	/* Nav */
 	var _nav = new Ext.Panel({
 		region: "west",
 		title: "管理系统",
@@ -130,7 +130,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* main */
+	/* Main */
 	var _main = new Ext.TabPanel({
 		region: "center",
 		//title: "",
@@ -154,7 +154,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* viewport */
+	/* Viewport */
 	var _viewport = new Ext.Viewport({
 		layout: "border",
 		items: [
@@ -167,7 +167,7 @@ Ext.onReady(function () {
 	});
 
 
-	/* homepage */
+	/* Homepage */
 	// 自定义
 	$extjs.tab.load(_main, {
 		title: "主页",
