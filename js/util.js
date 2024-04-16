@@ -36,7 +36,7 @@ Util.prototype = {
 		var
 			url = options.url, // {String} (*)
 			type = (options.type || "GET").toUpperCase(), // {String}
-			data = options.data || null, // {Object|String} {name: value, ...} | "key=value&..."
+			data = options.data || null, // {Object|String} { name: value, ... } | "key=value&..."
 			async = options.async !== false, // {Boolean}
 			contentType = options.contentType === false ? false : "application/x-www-form-urlencoded", // {Boolean|String}
 			processData = options.processData !== false, // {Boolean}
@@ -175,8 +175,8 @@ Util.prototype = {
 	windowName: function (options) {
 		var
 			callback = options.callback || new Function(), // {Function}
-			form = options.form, // {Object} (*: !url)
-			url = options.url, // {String} (*: !form)
+			form = options.form, // {Object} (*: url == null)
+			url = options.url, // {String} (*: form == null)
 
 			complete, iframe,
 			local = window.location.protocol + "//" + window.location.host + "/robots.txt", // {String} (*: ?) // IE9: absolute path

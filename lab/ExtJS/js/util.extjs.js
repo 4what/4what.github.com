@@ -438,7 +438,7 @@
 				var
 					title = options.title, // {String} (*)
 					src = options.src, // {String} (*)
-					iconCls = options.iconCls, // {String} iconCls
+					iconCls = options.iconCls, // {String}
 
 					tabpanel = !scope ? tabpanel : scope.Ext.getCmp(tabpanel),
 					target = tabpanel.find("title", title)[0];

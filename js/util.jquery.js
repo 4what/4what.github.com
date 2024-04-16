@@ -257,13 +257,13 @@ var Util = {
 	paginator: function (target, options) {
 		var
 			defaults = {
-				debug: false, // {Boolean} !ajax
+				debug: false, // {Boolean} ajax == false
 
 				ajax: false, // {Boolean}
-				callback: new Function(), // {Function} ajax
+				callback: new Function(), // {Function} ajax == true
 
 				param: "pageNum", // {String}
-				data: null, // {Object} !ajax
+				data: null, // {Object} ajax == false
 
 				ellipsis: true, // {Boolean}
 				pages: 5, // {Number}
@@ -412,7 +412,7 @@ var Util = {
 	 */
 	stripHtml: function (value) {
 		return value.replace(/<.[^<>]*?>/g, "") // /<\/?[^>]+>/gi
-			.replace(/&nbsp;|&#160;/gi, ""); // non-breaking space
+			.replace(/&nbsp;|&#160;/gi, ""); // Non-breaking space
 	}
 };
 
