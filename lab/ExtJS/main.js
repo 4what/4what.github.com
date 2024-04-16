@@ -1338,7 +1338,7 @@ Ext.onReady(function () {
 		split: true,
 		defaults: {
 			layout: {
-				type: "hbox", // TODO: bug, 3.2.1+ ?
+				type: "hbox", // TODO: Bug, 3.2.1+ ?
 				//align: "stretch", // top|middle|stretch|stretchmax
 				defaultMargins: "0 5px"
 				//pack: "center" // start|center|end
@@ -1775,7 +1775,7 @@ Ext.onReady(function () {
 			new Ext.ux.DataViewTransition({
 				//duration: 750,
 				idProperty: "id"
-			}) // TODO: bug, Ext.data.JsonStore ?
+			}) // TODO: Bug, Ext.data.JsonStore ?
 			*/
 		],
 		prepareData: function (data) {
@@ -1820,7 +1820,7 @@ Ext.onReady(function () {
 
 	//
 	// <!DOCTYPE ...>
-	//     TODO: bug, Opera, CSS
+	//     TODO: Bug, Opera, CSS
 	//
 	/* PivotGrid */
 	var _pivotgrid = new Ext.grid.PivotGrid({

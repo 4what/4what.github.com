@@ -279,7 +279,6 @@ var Util = {
 			},
 			settings = $.extend(defaults, options);
 
-		/* Init */
 		function init(index) {
 			var totalPages = Math.ceil(settings.total / settings.pageSize);
 
