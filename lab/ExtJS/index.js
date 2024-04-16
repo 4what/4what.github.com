@@ -44,7 +44,7 @@ Ext.onReady(function () {
 							singleClickExpand: true,
 							children: []
 							//qtip: "文字",
-							//qtipCfg: {title: "标题", text: "文字"}
+							//qtipCfg: { title: "标题", text: "文字" }
 						},
 						{
 							text: "相册管理",
@@ -158,10 +158,10 @@ Ext.onReady(function () {
 	var _viewport = new Ext.Viewport({
 		layout: "border",
 		items: [
-			//{region: "north", title: "北"},
+			//{ region: "north", title: "北" },
 			_nav,
-			//{region: "south", title: "南"},
-			//{region: "east", title: "东"},
+			//{ region: "south", title: "南" },
+			//{ region: "east", title: "东" },
 			_main
 		]
 	});

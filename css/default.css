@@ -39,7 +39,7 @@ input, select, textarea {
 }
 
 
-/**/
+/* Body */
 .body-home {
 }
 
@@ -74,7 +74,7 @@ input, select, textarea {
 	width: 720px;
 }
 
-	/**/
+	/* Logo */
 	h1#logo {
 		display: none;
 		float: left;
@@ -89,7 +89,7 @@ input, select, textarea {
 		display: none;
 	}
 
-	/**/
+	/* Navbar */
 	#navbar {
 		font-family: Georgia;
 		text-align: center;
@@ -120,7 +120,7 @@ input, select, textarea {
 		line-height: 35px;
 	}
 
-	/**/
+	/* Clock */
 	#clock {
 		position: absolute;
 		right: 0;
@@ -138,13 +138,12 @@ input, select, textarea {
 	width: 720px;
 }
 
-/**/
 .body-home .container {
 	text-align: center;
 	width: 960px;
 }
 
-	/**/
+	/* Heading */
 	h2.heading {
 		font-family: Georgia;
 		font-size: 24px;
@@ -166,7 +165,7 @@ input, select, textarea {
 		border-bottom: 1px dashed;
 	}
 
-	/**/
+	/* Layer */
 	div.layer {
 		clear: both;
 		overflow: hidden;
@@ -188,7 +187,7 @@ input, select, textarea {
 		top: 1px;
 	}
 
-	/**/
+	/* Catalog */
 	.catalog {
 		margin: 20px auto 0 auto;
 		overflow: hidden;
@@ -225,7 +224,7 @@ input, select, textarea {
 		padding-left: 10px;
 	}
 
-	/**/
+	/* Gallery */
 	.gallery {
 		border-left: 1px dashed #555;
 		margin: 5px 0 0 4px;
@@ -326,7 +325,7 @@ input, select, textarea {
 	width: 680px;
 }
 
-	/**/
+	/* Subnav */
 	#subnav {
 		float: left;
 		margin-top: 20px;
@@ -365,7 +364,7 @@ input, select, textarea {
 		padding-right: 20px;
 	}
 
-	/**/
+	/* Colors */
 	.color-1 em {
 		color: #f20201;
 	}
@@ -397,7 +396,7 @@ input, select, textarea {
 		background: #04baff;
 	}
 
-	/**/
+	/* Search */
 	.search {
 		float: right;
 		text-align: right;
@@ -436,7 +435,6 @@ input, select, textarea {
 	width: 720px;
 }
 
-	/**/
 	.copyright {
 		/*float: right;*/
 		line-height: 50px;

@@ -168,7 +168,7 @@ var Util = {
 
 	/**
 	 * @requires jQuery 1.3.2+
-	 * @param {Object} data {"name": value | [value, ...], ...}
+	 * @param {Object} data { "name": value | [value, ...], ... }
 	 * @param {Object|String} target?
 	 */
 	select: function (data, target) {

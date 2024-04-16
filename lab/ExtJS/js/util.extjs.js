@@ -183,7 +183,7 @@
 				defaultSrc: src,
 				closable: true,
 				frame: true,
-				//frameConfig: {id: ""},
+				//frameConfig: { id: "" },
 				loadMask: {
 					msg: "正在载入…"
 				}

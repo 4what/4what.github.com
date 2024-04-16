@@ -36,7 +36,7 @@ Util.prototype = {
 		var
 			url = options.url, // {String} (*)
 			type = (options.type || "GET").toUpperCase(), // {String}
-			data = options.data || null, // {Object|String} { name: value, ... } | "key=value&..."
+			data = options.data || null, // {Object|String} { "name": value, ... } | "key=value&..."
 			async = options.async !== false, // {Boolean}
 			contentType = options.contentType === false ? false : "application/x-www-form-urlencoded", // {Boolean|String}
 			processData = options.processData !== false, // {Boolean}

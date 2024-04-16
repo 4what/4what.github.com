@@ -1703,7 +1703,7 @@ Ext.onReady(function () {
 		}
 	});
 
-	//new Ext.tree.TreeSorter(_tree, {caseSensitive: true, dir: "desc", folderSort: true, sortType: function (node) {return parseInt(node.id, 10);}});
+	//new Ext.tree.TreeSorter(_tree, { caseSensitive: true, dir: "desc", folderSort: true, sortType: function (node) { return parseInt(node.id, 10); } });
 
 
 	/* Preview */

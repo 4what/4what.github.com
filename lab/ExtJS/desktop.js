@@ -40,7 +40,6 @@ MyDesktop = new Ext.app.App({
 });
 
 
-/**/
 MyDesktop.IFrameWindow = $extjs.desktop.IFrameWindow({
 	id: "iframe-win",
 	title: "后台",

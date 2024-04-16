@@ -46,7 +46,7 @@ input, select, textarea {
 	width: 750px;
 }
 
-	/**/
+	/* Heading */
 	h1.heading {
 		font-variant: small-caps;
 		text-align: center;
@@ -55,7 +55,7 @@ input, select, textarea {
 		border-bottom: 1px dashed;
 	}
 
-	/**/
+	/* Catalog */
 	.catalog {
 		margin-top: 10px;
 		word-break: break-all;
@@ -104,7 +104,7 @@ input, select, textarea {
 		list-style: decimal inside;
 	}
 
-	/**/
+	/* Elements */
 	h1 {
 		font-size: 24px;
 	}

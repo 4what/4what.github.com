@@ -45,7 +45,6 @@ input, select, textarea {
 	margin: 0 auto;
 }
 
-	/**/
 	h1 {
 		color: #fff\9;
 		filter: shadow(color=#333333,direction=120); /* for IE9- */
@@ -90,7 +89,7 @@ input, select, textarea {
 	width: 95%;
 }
 
-	/**/
+	/* Subnav */
 	.subnav {
 		border-color: #ddd #ddd #ddd #808080;
 		border-style: solid;
@@ -102,7 +101,7 @@ input, select, textarea {
 		display: inline;
 	}
 
-	/**/
+	/* Elements */
 	h2 {
 		border-bottom: 1px solid #808080;
 		color: #005a9c;
