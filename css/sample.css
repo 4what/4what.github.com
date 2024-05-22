@@ -6,7 +6,7 @@
 
 body {
 	color: #333;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-family: sans-serif;
 	font-size: 12px;
 	line-height: 1.5;
 	margin: 15px 10px;
@@ -24,13 +24,13 @@ a:hover {
 }
 
 input, select, textarea {
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-family: sans-serif;
 	font-size: 12px;
 }
 
 
 /*--------------------------------------
-  MAIN
+  Main
 --------------------------------------*/
 .main {
 	text-align: center;
@@ -38,7 +38,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  CONTAINER
+  Container
 --------------------------------------*/
 .container {
 	margin: 0 auto;
@@ -74,10 +74,9 @@ input, select, textarea {
 	.catalog ul a {
 		border: 1px solid #999;
 		color: #003f7e;
-		float: left;
+		display: block;
 		font-weight: bold;
 		height: 118px;
-		overflow: hidden;
 		text-decoration: none;
 		width: 118px;
 	}
@@ -130,28 +129,15 @@ input, select, textarea {
 		font-size: 100%\0;
 	}
 
-	samp,
-	xmp {
+	samp {
 		/*background: #eee;*/
 		border-color: #ddd #ddd #ddd #808080;
 		border-style: solid;
 		border-width: 1px 1px 1px 5px;
+		display: block;
 		font-family: "Courier New", monospace;
 		margin-top: 10px;
 		padding: 20px;
-	}
-	samp {
-		display: block;
-	}
-	xmp {
-		display: block; /* for IE8+ */
-		padding-top: 3px;
-		padding-top: 20px\9; /* for IE10- */
-	}
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* for IE10+ */
-		xmp {
-			padding-top: 3px;
-		}
 	}
 
 	textarea.textarea,

@@ -141,7 +141,7 @@ var $4what = function () {
 					break;
 
 				/* jQuery UI */
-				case "jqueryui":
+				case "jquery-ui":
 					/* for IE6+ */
 
 					/* v1.8 for jQuery 1.3.2+ */

@@ -6,7 +6,7 @@
 
 body {
 	color: #333;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-family: sans-serif;
 	font-size: 12px;
 	margin: 15px 10px;
 	/*
@@ -25,13 +25,13 @@ a:hover {
 }
 
 input, select, textarea {
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-family: sans-serif;
 	font-size: 12px;
 }
 
 
 /*--------------------------------------
-  MAIN
+  Main
 --------------------------------------*/
 .main {
 	text-align: center;
@@ -39,7 +39,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  HEADER
+  Header
 --------------------------------------*/
 .header {
 	margin: 0 auto;
@@ -67,7 +67,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  NAVBAR
+  Navbar
 --------------------------------------*/
 .navbar {
 	background: #eee;
@@ -81,7 +81,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  CONTAINER
+  Container
 --------------------------------------*/
 .container {
 	margin: 0 auto;
@@ -132,8 +132,7 @@ input, select, textarea {
 		border-bottom: none;
 	}
 
-	pre,
-	xmp {
+	pre {
 		font-family: "Courier New", monospace;
 		margin-top: 5px;
 	}
@@ -203,7 +202,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  FOOTER
+  Footer
 --------------------------------------*/
 .iframe-footer {
 	height: 30px;

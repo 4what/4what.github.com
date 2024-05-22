@@ -175,8 +175,8 @@ Util.prototype = {
 	windowName: function (options) {
 		var
 			callback = options.callback || new Function(), // {Function}
-			form = options.form, // {Object} (*: url == null)
-			url = options.url, // {String} (*: form == null)
+			form = options.form, // {Object} (*: url === null)
+			url = options.url, // {String} (*: form === null)
 
 			complete, iframe,
 			local = window.location.protocol + "//" + window.location.host + "/robots.txt", // {String} (*: ?) // IE9: absolute path

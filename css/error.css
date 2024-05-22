@@ -9,7 +9,7 @@ html {
 
 body {
 	color: #fff;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-family: sans-serif;
 	font-size: 12px;
 	height: 100%;
 	overflow: hidden;
@@ -27,13 +27,13 @@ a:hover {
 }
 
 input, select, textarea {
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lantinghei SC", "Microsoft YaHei", sans-serif;
+	font-family: sans-serif;
 	font-size: 12px;
 }
 
 
 /*--------------------------------------
-  MAIN
+  Main
 --------------------------------------*/
 .main {
 	position: absolute;
@@ -45,7 +45,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  HEADER
+  Header
 --------------------------------------*/
 .header {
 }
@@ -60,7 +60,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  CONTAINER
+  Container
 --------------------------------------*/
 .container {
 	margin-top: 15px;
@@ -75,7 +75,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  FOOTER
+  Footer
 --------------------------------------*/
 .footer {
 	margin-top: 15px;
@@ -83,7 +83,7 @@ input, select, textarea {
 
 
 /*--------------------------------------
-  NOSIGNAL
+  No-signal
 --------------------------------------*/
 #nosignal {
 	height: 100%;

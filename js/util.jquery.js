@@ -257,13 +257,13 @@ var Util = {
 	paginator: function (target, options) {
 		var
 			defaults = {
-				debug: false, // {Boolean} ajax == false
+				debug: false, // {Boolean} ajax === false
 
 				ajax: false, // {Boolean}
-				callback: new Function(), // {Function} ajax == true
+				callback: new Function(), // {Function} ajax === true
 
 				param: "pageNum", // {String}
-				data: null, // {Object} ajax == false
+				data: null, // {Object} ajax === false
 
 				ellipsis: true, // {Boolean}
 				pages: 5, // {Number}
