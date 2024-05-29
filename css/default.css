@@ -75,17 +75,17 @@ input, select, textarea {
 }
 
 	/* Logo */
-	h1#logo {
+	#logo {
 		display: none;
 		float: left;
 		position: relative;
 		top: 20px;
 	}
-	h1#logo a:hover {
+	#logo a:hover {
 		position: relative;
 		top: 1px;
 	}
-	h1#logo span {
+	#logo span {
 		display: none;
 	}
 
