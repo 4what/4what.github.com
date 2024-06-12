@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	color: #fff;
+	color: #333;
 	font-family: sans-serif;
 	font-size: 12px;
 	height: 100%;
@@ -17,13 +17,13 @@ body {
 
 
 a:link {
-	color: #fff;
+	color: #333;
 }
 a:visited {
-	color: #fff;
+	color: #333;
 }
 a:hover {
-	color: #fff;
+	color: #333;
 }
 
 input, select, textarea {
@@ -32,86 +32,65 @@ input, select, textarea {
 }
 
 
-/*--------------------------------------
-  Main
---------------------------------------*/
-.main {
-	position: absolute;
-	right: 50px;
-	text-align: right;
-	top: 50px;
+.container {
+	height: 100%;
+	padding: 40px 0 0 40px;
+	position: relative;
 	width: 750px;
 }
 
 
-/*--------------------------------------
-  Header
---------------------------------------*/
-.header {
-}
-.header p {
-	margin-top: 5px;
-}
-
-	h1 {
-		font-size: 18px;
-		font-weight: normal;
-	}
-
-
-/*--------------------------------------
-  Container
---------------------------------------*/
-.container {
-	margin-top: 15px;
-}
-.container ul {
-	line-height: 2;
-	list-style: disc inside;
-}
-.container ul li {
-	margin-left: 20px;
+h1 {
+	font-size: 24px;
 }
 
 
-/*--------------------------------------
-  Footer
---------------------------------------*/
-.footer {
-	margin-top: 15px;
+.code {
+	margin-top: 10px;
 }
 
 
-/*--------------------------------------
-  No-signal
---------------------------------------*/
-#nosignal {
+.copyright {
+	bottom: 80px;
+	position: absolute;
+}
+
+
+/* No-signal */
+.nosignal {
 	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
 }
-#nosignal li {
-	float: right;
+.nosignal li {
+	float: right; /* for IE6 */
 	height: 100%;
 	width: 12.5%;
 }
 
-#nosignal .color-1 {
+.nosignal .color-1 {
 	background: black;
 }
-#nosignal .color-2 {
+.nosignal .color-2 {
 	background: blue;
 }
-#nosignal .color-3 {
+.nosignal .color-3 {
 	background: red;
 }
-#nosignal .color-4 {
+.nosignal .color-4 {
 	background: fuchsia;
 }
-#nosignal .color-5 {
+.nosignal .color-5 {
 	background: lime;
 }
-#nosignal .color-6 {
+.nosignal .color-6 {
 	background: aqua;
 }
-#nosignal .color-7 {
+.nosignal .color-7 {
 	background: yellow;
+}
+.nosignal .color-8 {
+	background: white;
 }

@@ -436,17 +436,16 @@ input, select, textarea {
 }
 
 	.copyright {
-		/*float: right;*/
 		line-height: 50px;
 	}
 
-	.valid {
+	.w3c {
 		color: #808080;
 	}
-	.valid a {
+	.w3c a {
 		color: #808080;
 		text-decoration: underline;
 	}
-	.valid a:hover {
+	.w3c a:hover {
 		color: #fff;
 	}
