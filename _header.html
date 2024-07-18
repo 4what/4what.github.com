@@ -14,8 +14,10 @@
 	<body class="body-header">
 		<div class="header">
 			<h1 id="logo">
-				<a href="index.html"><img src="images/logo-4what.png" alt="4what" title="4what" /></a>
-				<span>4what</span>
+				<a href="index.html">
+					<img src="images/logo-4what.png" alt="4what" title="4what" />
+					<span>4what</span>
+				</a>
 			</h1>
 
 			<div id="navbar">
@@ -46,13 +48,16 @@
 
 						if (href === pathname || (href === "index.html" && /\/$/.test(window.top.location.pathname))) {
 							$js.addClass(item, "highlight");
+
 							break;
 						}
 					}
 				})();
 
+
 				/* Clock */
 				window.setInterval('$js.clock("clock")', 500);
+
 
 				/* Logo */
 				$4what.include("jquery-ui");
@@ -61,7 +66,7 @@
 
 					$("#logo").show("bounce", {
 						distance: 20
-					}, 2000);
+					}, 1000 * 2);
 
 				});
 

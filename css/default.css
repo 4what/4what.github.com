@@ -331,6 +331,9 @@ input, select, textarea {
 		margin-top: 20px;
 		width: 250px;
 	}
+	#subnav ul {
+		text-transform: lowercase;
+	}
 	#subnav ul li {
 		height: 20px;
 		line-height: 20px;
