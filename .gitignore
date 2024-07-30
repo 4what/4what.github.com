@@ -1,10 +1,4 @@
-# macOS
-.DS_Store
-
-
-# Windows
-Thumbs.db
-
+players.rar
 
 # IntelliJ IDEA
 .idea/
@@ -12,6 +6,8 @@ Thumbs.db
 *.ipr
 *.iws
 
+# macOS
+.DS_Store
 
-# ...
-players.rar
+# Windows
+Thumbs.db
