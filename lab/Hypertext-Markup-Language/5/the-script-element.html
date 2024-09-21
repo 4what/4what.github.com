@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>4what - JavaScript</title>
+
+		<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
+
+		<script type="text/javascript" src="../../../js/util.js"></script>
+		<script type="text/javascript" src="../../../js/commons.js"></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://html.spec.whatwg.org/multipage/scripting.html#the-script-element">[1]</a>
+			</p>
+
+			<blockquote>
+				<p><code>async</code></p>
+				<p>The <code>async</code> and <code>defer</code> attributes are boolean attributes that indicate how the script should be evaluated. Classic scripts may specify <code>defer</code> or <code>async</code>, but must not specify either unless the <code>src</code> attribute is present. Module scripts may specify the <code>async</code> attribute, but must not specify the <code>defer</code> attribute.</p>
+
+				<p><code>defer</code></p>
+				<p>The <code>defer</code> attribute may be specified even if the <code>async</code> attribute is specified, to cause legacy web browsers that only support <code>defer</code> (and not <code>async</code>) to fall back to the <code>defer</code> behavior instead of the blocking behavior that is the default.</p>
+
+				<p><code>type</code></p>
+				<p>The default, which is used if the attribute is absent, is "<code>text/javascript</code>".</p>
+			</blockquote>
+
+		<script type="text/javascript">
+			(function () {
+
+				$4what.syntaxhighlighter("../../../");
+
+			})();
+		</script>
+
+		<script type="text/javascript" src="../../../js/analytics.js"></script>
+	</body>
+</html>

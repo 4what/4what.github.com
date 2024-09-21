@@ -8,8 +8,9 @@
 
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 
+		<script type="text/javascript" src="js/jquery/jquery-1.12.4.min.js"></script>
+
 		<script type="text/javascript" src="js/util.js"></script>
-		<script type="text/javascript" src="js/commons.js"></script>
 	</head>
 	<body class="body-header">
 		<div class="header">
@@ -34,20 +35,24 @@
 		<script type="text/javascript">
 			(function () {
 
+				/* Breadcrumb */
 				(function breadcrumb() {
 					var
 						anchors = document.getElementById("navbar").getElementsByTagName("a"),
-
 						href,
-						pathname = $4what.filename(window.top.location.pathname);
 
-					for (var item, i = 0, l = anchors.length; i < l; i++) {
-						item = anchors[i];
+						pathname = window.top.location.pathname.slice(window.top.location.pathname.lastIndexOf("/") + 1);
 
-						href = $4what.filename(item.getAttribute("href"));
+					for (var anchor, i = 0, l = anchors.length; i < l; i++) {
+						anchor = anchors[i];
+
+						href = anchor.getAttribute(
+							"href"
+							, 2 // for IE7-
+						);
 
 						if (href === pathname || (href === "index.html" && /\/$/.test(window.top.location.pathname))) {
-							$js.addClass(item, "highlight");
+							$js.addClass(anchor, "highlight");
 
 							break;
 						}
@@ -56,19 +61,11 @@
 
 
 				/* Clock */
-				window.setInterval('$js.clock("clock")', 500);
+				window.setInterval("$js.clock('clock')", 500);
 
 
 				/* Logo */
-				$4what.include("jquery-ui");
-
-				$(function () {
-
-					$("#logo").show("bounce", {
-						distance: 20
-					}, 1000 * 2);
-
-				});
+				$("#logo").show(1000);
 
 			})();
 		</script>

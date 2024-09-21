@@ -25,7 +25,6 @@
 						//new RegExp("", "")
 						//new String("qwerty")
 					;
-					$4what.log("o: " + o);
 
 					o.prop = "value";
 					$4what.log("o.prop: " + o.prop); // value
@@ -79,7 +78,6 @@
 					//new RegExp("", "")
 					//new String("qwerty")
 				;
-				$4what.log("o: " + o);
 
 				o.prop = "value";
 				$4what.log("o.prop: " + o.prop); // value
@@ -119,7 +117,13 @@
 				$4what.log("eve.gender: " + eve.gender); // female
 			</script>
 
-		<script type="text/javascript" src="../../js/sample.js"></script>
+		<script type="text/javascript">
+			(function () {
+
+				$4what.syntaxhighlighter("../../");
+
+			})();
+		</script>
 
 		<script type="text/javascript" src="../../js/analytics.js"></script>
 	</body>

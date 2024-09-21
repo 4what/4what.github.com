@@ -9,7 +9,7 @@ body {
 	font-family: sans-serif;
 	font-size: 12px;
 	line-height: 1.5;
-	margin: 15px 10px;
+	padding: 0 20px 10px 20px;
 	/*
 	word-break: break-all;
 	word-wrap: break-word;
@@ -46,12 +46,12 @@ input, select, textarea {
 	width: 750px;
 }
 
-	/* Heading */
-	h1.heading {
+	h1 {
+		font-size: 24px;
 		font-variant: small-caps;
 		text-align: center;
 	}
-	h1.heading span {
+	h1 span {
 		border-bottom: 1px dashed;
 	}
 
@@ -98,23 +98,14 @@ input, select, textarea {
 		font-weight: normal;
 	}
 
-	.catalog ol {
-		line-height: 2;
-		list-style: decimal inside;
-	}
-
 	/* Elements */
-	h1 {
-		font-size: 24px;
-	}
-
 	h2 {
 		clear: both;
-		font-size: 22px;
+		font-size: 18px;
 		margin-top: 10px;
 	}
 	h2 span {
-		border-bottom: 1px solid #808080;
+		border-bottom: 1px dashed #808080;
 	}
 
 	h3 {
@@ -122,11 +113,16 @@ input, select, textarea {
 		margin-top: 10px;
 	}
 
-	sup {
-		color: #c0c0c0;
-		font-size: 70%;
-		* font-size: 100%;
-		font-size: 100%\0;
+	blockquote {
+	}
+
+	code {
+		color: #808080;
+		font-family: "Courier New", monospace;
+	}
+
+	p {
+		padding-top: 5px;
 	}
 
 	samp {
@@ -160,9 +156,20 @@ input, select, textarea {
 		width: 35em;
 	}
 
+	sup {
+		color: #c0c0c0;
+		font-size: 70%;
+		* font-size: 100%;
+		font-size: 100%\0;
+	}
+
 	table {
+		border: 1px dashed #808080;
 		margin-top: 10px;
 	}
 	th, td {
-		padding: 0 5px;
+		padding: 5px;
+	}
+	th {
+		text-align: left;
 	}

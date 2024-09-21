@@ -8,8 +8,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 
-		<script type="text/javascript" src="js/util.js"></script>
-		<script type="text/javascript" src="js/commons.js"></script>
+		<script type="text/javascript" src="js/jquery/jquery-1.12.4.min.js"></script>
 	</head>
 	<body class="body-toolbar">
 		<div id="subnav">
@@ -29,28 +28,26 @@
 			(function () {
 
 				/* Subnav */
-				$("#subnav li a").each(function () {
-					var
-						item = $(this).find("span"),
+				var
+					href,
+					pathname = window.top.location.pathname.slice(window.top.location.pathname.lastIndexOf("/") + 1);
 
-						href = $(this).attr("href"),
-						pathname = $4what.filename(window.top.location.pathname);
+				$("#subnav li a").each(function () {
+					href = $(this).attr("href");
+
+					var bar = $(this).find("span");
 
 					if (href === pathname || (href === "index.html" && /\/$/.test(window.top.location.pathname))) {
-						$(this).find("em").css("background", item.css("background-color")).addClass("highlight");
+						$(this).find("em").css("background", bar.css("background-color")).addClass("highlight");
 					} else {
-						item = item.andSelf();
-
-						function handler(sign) {
-							item.animate({
-								"width": sign + "=15"
-							}, "fast");
-						}
-
 						$(this).mouseenter(function () {
-							handler("+");
+							bar.andSelf().animate({
+								"width": "+=15"
+							}, "fast");
 						}).mouseleave(function () {
-							handler("-");
+							bar.andSelf().animate({
+								"width": "-=15"
+							}, "fast");
 						});
 					}
 				});

@@ -220,7 +220,7 @@ input, select, textarea {
 		line-height: 2;
 	}
 	.works ul li {
-		background: url("../images/bullet-circle.png") no-repeat 0 10px;
+		background: url("../images/bullet-square.png") no-repeat 0 10px;
 		padding-left: 10px;
 	}
 
@@ -305,7 +305,7 @@ input, select, textarea {
 		font-weight: bold;
 	}
 	.timeline dd {
-		background: url("../images/bullet-square.png") no-repeat 0 center;
+		background: url("../images/bullet-circle.png") no-repeat 0 center;
 		text-indent: 10px;
 	}
 

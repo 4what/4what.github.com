@@ -8,7 +8,6 @@ body {
 	color: #333;
 	font-family: sans-serif;
 	font-size: 12px;
-	margin: 15px 10px;
 	/*
 	word-break: break-all;
 	word-wrap: break-word;
@@ -16,10 +15,15 @@ body {
 }
 
 a:link {
+	color: #005a9c;
+	text-decoration: none;
 }
 a:visited {
+	color: #005a9c;
+	text-decoration: none;
 }
 a:hover {
+	color: #aa7;
 	position: relative;
 	top: 1px;
 }
@@ -42,7 +46,6 @@ input, select, textarea {
   Header
 --------------------------------------*/
 .header {
-	margin: 0 auto;
 }
 
 	h1 {
@@ -60,7 +63,7 @@ input, select, textarea {
 	}
 	h1 sub {
 		display: block;
-		font-size: 85%;
+		font-size: 50%;
 		* font-size: 100%;
 		font-size: 100%\0;
 	}
@@ -72,7 +75,6 @@ input, select, textarea {
 .navbar {
 	background: #eee;
 	border-top: 3px solid #808080;
-	margin: 0 auto;
 	padding: 5px 0;
 }
 .navbar ul li {
@@ -84,18 +86,17 @@ input, select, textarea {
   Container
 --------------------------------------*/
 .container {
-	margin: 0 auto;
+	padding: 0 20px;
 	text-align: left;
-	width: 95%;
 }
 
 	/* Subnav */
 	.subnav {
-		border-color: #ddd #ddd #ddd #808080;
-		border-style: solid;
-		border-width: 1px 1px 1px 5px;
-		margin-top: 5px;
+		border-color: transparent #ddd #ddd #ddd;
+		border-style: none solid solid solid;
+		border-width: 0 1px 1px 5px;
 		padding: 5px;
+		text-align: center;
 	}
 	.subnav li {
 		display: inline;
@@ -103,82 +104,46 @@ input, select, textarea {
 
 	/* Elements */
 	h2 {
-		border-bottom: 1px solid #808080;
-		color: #005a9c;
-		font-size: 22px;
+		border-bottom: 1px solid #c0c0c0;
+		font-size: 16px;
 		line-height: 1.5;
 		margin-top: 20px;
+		padding-bottom: 5px;
 	}
 	h2 a {
 		cursor: pointer;
 	}
-	h2 a span {
-		font-size: 50%;
-	}
-
-	h3 {
-		color: #aa7;
-		font-size: 16px;
-		margin-top: 10px;
-	}
-	h3:first-letter {
-		font-size: 120%;
-		font-style: italic;
-	}
-	h3 a {
-		border-bottom: 1px dashed #aa7;
-	}
-	h3 sup a {
-		border-bottom: none;
-	}
-
-	pre {
-		font-family: "Courier New", monospace;
-		margin-top: 5px;
-	}
-
-	pre span {
-		text-decoration: line-through;
-	}
-
-	dl {
-		margin-top: 5px;
-	}
-	dt {
-	}
-	dd {
-	}
 
 	table {
-		border: 1px solid #808080;
+		border: 1px solid #ddd;
 		margin-top: 5px;
 	}
 	caption {
+		font-size: 14px;
 		font-weight: bold;
+		padding: 5px 0;
+		text-align: left;
+	}
+	caption:first-letter {
+		font-size: 120%;
+		font-style: italic;
 	}
 	th {
 		background: #f0f8ff;
-		border-color: transparent #808080 #c0c0c0 #808080;
-		border-style: none dashed solid dashed;
-		border-width: 0 1px 2px 1px;
+		border-color: #ddd;
+		border-style: dashed;
+		border-width: 1px;
 		padding: 5px;
-		text-align: center;
 	}
 	td {
-		border-color: #808080;
-		border-style: solid dashed;
+		border-color: #ddd;
+		border-style: dashed;
 		border-width: 1px;
 		padding: 5px;
 	}
 
 	td.dimmed {
 		background: #eee;
-	}
-
-	code {
-		background: #ddd;
-		font-family: "Courier New", monospace;
-		font-style: italic;
 	}
 
 	em {
@@ -189,17 +154,6 @@ input, select, textarea {
 		color: maroon;
 	}
 
-	sup {
-		font-size: 70%;
-		* font-size: 100%;
-		font-size: 100%\0;
-	}
-
-	blockquote {
-		margin-top: 10px;
-		text-indent: 1em;
-	}
-
 
 /*--------------------------------------
   Footer
@@ -208,10 +162,6 @@ input, select, textarea {
 	height: 30px;
 	margin-top: 20px;
 	width: 100%;
-}
-
-.body-footer {
-	margin: 0;
 }
 
 .footer {
