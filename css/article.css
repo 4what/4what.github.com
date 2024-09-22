@@ -128,20 +128,15 @@ input, select, textarea {
 		font-size: 120%;
 		font-style: italic;
 	}
+	th, td {
+		border-color: #ddd;
+		border-style: dashed;
+		border-width: 1px;
+		padding: 5px;
+	}
 	th {
 		background: #f0f8ff;
-		border-color: #ddd;
-		border-style: dashed;
-		border-width: 1px;
-		padding: 5px;
 	}
-	td {
-		border-color: #ddd;
-		border-style: dashed;
-		border-width: 1px;
-		padding: 5px;
-	}
-
 	td.dimmed {
 		background: #eee;
 	}

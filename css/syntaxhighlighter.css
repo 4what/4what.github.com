@@ -1,21 +1,29 @@
 @charset "UTF-8";
 
-.syntaxhighlighter.ie,
 .syntaxhighlighter {
-	background-color: #eee !important;
-	border-color: #ddd !important;
-	border-style: solid !important;
-	border-width: 1px 0 !important;
+	background: #fff !important;
 	font-size: 100% !important;
 	margin: 10px 0 0 0 !important;
-	padding: 10px 0 !important;
 }
-.syntaxhighlighter .line.alt1 {
-	background-color: #eee !important;
+
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+	line-height: 1.5 !important;
 }
-.syntaxhighlighter .line.alt2 {
-	background-color: #eee !important;
-}
+
 .syntaxhighlighter .gutter .line {
-	border-right: 5px solid #808080 !important;
+	border-right: 5px solid #ddd !important;
+}
+
+.syntaxhighlighter .line.alt1,
+.syntaxhighlighter .line.alt2 {
+	background: #fff !important;
 }

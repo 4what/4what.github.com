@@ -173,7 +173,7 @@ input, select, textarea {
 	}
 
 	/*--------------------------------------
-	  home.html
+	  Home
 	--------------------------------------*/
 	#overview {
 		font-family: "Comic Sans MS";
@@ -211,7 +211,7 @@ input, select, textarea {
 	}
 
 	/*--------------------------------------
-	  works.html
+	  Works
 	--------------------------------------*/
 	.works {
 		margin-top: 5px;
@@ -260,7 +260,7 @@ input, select, textarea {
 	}
 
 	/*--------------------------------------
-	  about.html
+	  About
 	--------------------------------------*/
 	.devices,
 	.timeline {

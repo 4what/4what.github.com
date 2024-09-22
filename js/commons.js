@@ -63,7 +63,7 @@ var $4what = function () {
 
 		for (var i = headings.length - 1; i >= 0; i--) {
 			headings[i].getElementsByTagName("a")[0].onclick = function () {
-				var section = document.getElementById("chapter-" + this.name);
+				var section = document.getElementById("section-" + this.name);
 				section.style.display = section.style.display === "none" ? "block" : "none";
 			};
 		}

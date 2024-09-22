@@ -9,7 +9,7 @@ body {
 	font-family: sans-serif;
 	font-size: 12px;
 	line-height: 1.5;
-	padding: 0 20px 10px 20px;
+	padding: 0 20px 20px 20px;
 	/*
 	word-break: break-all;
 	word-wrap: break-word;
@@ -102,7 +102,7 @@ input, select, textarea {
 	h2 {
 		clear: both;
 		font-size: 18px;
-		margin-top: 10px;
+		margin: 20px 0 10px 0;
 	}
 	h2 span {
 		border-bottom: 1px dashed #808080;
@@ -122,7 +122,7 @@ input, select, textarea {
 	}
 
 	p {
-		padding-top: 5px;
+		/* line-height: 2; */
 	}
 
 	samp {
@@ -136,26 +136,6 @@ input, select, textarea {
 		padding: 20px;
 	}
 
-	textarea.textarea,
-	select.select,
-	input.text {
-		border-color: #999 #ccc #ccc #999;
-		border-style: solid;
-		border-width: 1px;
-		padding: 2px;
-	}
-	select.select,
-	input.text {
-		vertical-align: middle;
-	}
-	input.text {
-		width: 25em;
-	}
-	textarea.textarea {
-		height: 10em;
-		width: 35em;
-	}
-
 	sup {
 		color: #c0c0c0;
 		font-size: 70%;
@@ -164,12 +144,32 @@ input, select, textarea {
 	}
 
 	table {
-		border: 1px dashed #808080;
 		margin-top: 10px;
 	}
 	th, td {
+		border-color: #ddd;
+		border-style: dashed;
+		border-width: 1px;
 		padding: 5px;
 	}
 	th {
 		text-align: left;
+	}
+
+	/**/
+	input.text, select.select, textarea.textarea {
+		border-color: #999 #ccc #ccc #999;
+		border-style: solid;
+		border-width: 1px;
+		padding: 2px;
+	}
+	input.text, select.select {
+		vertical-align: middle;
+	}
+	input.text {
+		width: 25em;
+	}
+	textarea.textarea {
+		height: 10em;
+		width: 35em;
 	}

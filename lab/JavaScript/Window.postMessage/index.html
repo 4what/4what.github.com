@@ -48,22 +48,22 @@
 				</script>
 			</textarea>
 
-		<h3>iframe.html</h3>
-			<textarea cols="" rows="" name="code" class="js">
-				<script type="text/javascript">
-					function receiver(e) {
-						if (e.origin !== "http://example.com:8080") {
-							return;
+			<h3>iframe.html</h3>
+				<textarea cols="" rows="" name="code" class="js">
+					<script type="text/javascript">
+						function receiver(e) {
+							if (e.origin !== "http://example.com:8080") {
+								return;
+							}
+
+							alert("[REQUEST] " + e.data + " (" + e.origin + ")");
+
+							e.source.postMessage("OK", e.origin);
 						}
 
-						alert("[REQUEST] " + e.data + " (" + e.origin + ")");
-
-						e.source.postMessage("OK", e.origin);
-					}
-
-					$js.bind(window, "message", receiver);
-				</script>
-			</textarea>
+						$js.bind(window, "message", receiver);
+					</script>
+				</textarea>
 
 		<h2><span>Example</span></h2>
 			<script type="text/javascript">
