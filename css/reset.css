@@ -4,7 +4,7 @@
  * reset.css
  *
  * @author https://4what.cn
- * @version 2024.12.07
+ * @version 2024.12.24
  */
 
 * {
@@ -12,11 +12,11 @@
 	font-style: normal;
 	margin: 0;
 	padding: 0;
+	-webkit-text-size-adjust: none; /* for Safari (iOS) */
 }
 
 html {
 	scroll-behavior: smooth; /* for Std */
-	-webkit-text-size-adjust: none; /* for Safari (iOS) */
 }
 
 img {
