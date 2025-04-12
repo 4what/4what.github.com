@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url("reset.css");
+@import "reset.css";
 
 html {
 	height: 100%;
@@ -14,7 +14,6 @@ body {
 	height: 100%;
 	overflow: hidden;
 }
-
 
 a:link {
 	color: #333;
@@ -32,65 +31,89 @@ input, select, textarea {
 }
 
 
-.container {
+/*--------------------------------------
+  Main
+--------------------------------------*/
+.main {
 	height: 100%;
-	padding: 40px 0 0 40px;
+	padding: 40px 40px 0 40px;
 	position: relative;
-	width: 750px;
 }
 
 
-h1 {
-	font-size: 24px;
+/*--------------------------------------
+  Header
+--------------------------------------*/
+.header {
 }
 
+	h1 {
+		font-size: 24px;
+	}
 
-.code {
+
+/*--------------------------------------
+  Container
+--------------------------------------*/
+.container {
 	margin-top: 10px;
 }
 
+	.code {
+		font-weight: bold;
+	}
 
-.copyright {
+
+/*--------------------------------------
+  Footer
+--------------------------------------*/
+.footer {
 	bottom: 80px;
 	position: absolute;
 }
+.footer a:link,
+.footer a:visited,
+.footer a:hover {
+	text-decoration: none;
+}
 
 
-/* No-signal */
-.nosignal {
+/*--------------------------------------
+  No-signal
+--------------------------------------*/
+.bg {
 	height: 100%;
 	position: absolute;
 	top: 0;
 	width: 100%;
 	z-index: -1;
 }
-.nosignal li {
-	float: right; /* for IE6 */
+.bg div {
+	float: right;
 	height: 100%;
 	width: 12.5%;
 }
-
-.nosignal .color-1 {
+.bg .color-1 {
 	background: black;
 }
-.nosignal .color-2 {
+.bg .color-2 {
 	background: blue;
 }
-.nosignal .color-3 {
+.bg .color-3 {
 	background: red;
 }
-.nosignal .color-4 {
+.bg .color-4 {
 	background: fuchsia;
 }
-.nosignal .color-5 {
+.bg .color-5 {
 	background: lime;
 }
-.nosignal .color-6 {
+.bg .color-6 {
 	background: aqua;
 }
-.nosignal .color-7 {
+.bg .color-7 {
 	background: yellow;
 }
-.nosignal .color-8 {
+.bg .color-8 {
 	background: white;
 }

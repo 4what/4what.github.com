@@ -1,19 +1,13 @@
 @charset "UTF-8";
 
-@import url("reset.css");
-
-@import url("return-to-home.css");
+@import "reset.css";
 
 body {
 	color: #333;
 	font-family: sans-serif;
 	font-size: 12px;
 	line-height: 1.5;
-	padding: 0 20px 20px 20px;
-	/*
-	word-break: break-all;
-	word-wrap: break-word;
-	*/
+	margin: 0 20px 20px 20px;
 }
 
 a:link {
@@ -33,49 +27,56 @@ input, select, textarea {
   Main
 --------------------------------------*/
 .main {
+	margin: 0 auto;
 	text-align: center;
+	width: 750px;
 }
+
+
+/*--------------------------------------
+  Header
+--------------------------------------*/
+.header {
+	padding-top: 10px;
+}
+
+	h1 {
+		font-size: 24px;
+		font-variant: small-caps;
+	}
+	h1 span {
+		border-bottom: 1px dashed;
+	}
 
 
 /*--------------------------------------
   Container
 --------------------------------------*/
 .container {
-	margin: 0 auto;
 	text-align: left;
-	width: 750px;
 }
-
-	h1 {
-		font-size: 24px;
-		font-variant: small-caps;
-		text-align: center;
-	}
-	h1 span {
-		border-bottom: 1px dashed;
-	}
 
 	/* Catalog */
 	.catalog {
-		margin-top: 10px;
+		margin-top: 20px;
 		word-break: break-all;
 		word-wrap: break-word;
 	}
 	.catalog ul {
 		overflow: hidden;
+		width: 100%;
 	}
 	.catalog ul li {
 		float: left;
 		height: 120px;
+		margin: 5px 5px 0 0;
 		overflow: hidden;
 		width: 120px;
-		margin: 5px 5px 0 0;
 	}
 	.catalog ul a {
 		border: 1px solid #999;
 		color: #003f7e;
 		display: block;
-		font-weight: bold;
 		height: 118px;
 		text-decoration: none;
 		width: 118px;
@@ -91,16 +92,17 @@ input, select, textarea {
 		display: block;
 		padding: 5px;
 	}
-	.catalog ul span em {
+	.catalog ul strong {
+		display: block;
+	}
+	.catalog ul em {
 		color: #999;
 		display: block;
 		font-size: 85%;
-		font-weight: normal;
 	}
 
 	/* Elements */
 	h2 {
-		clear: both;
 		font-size: 18px;
 		margin: 20px 0 10px 0;
 	}
@@ -114,6 +116,9 @@ input, select, textarea {
 	}
 
 	blockquote {
+		border-left: 5px solid #ddd;
+		margin-top: 10px;
+		padding: 5px 0 5px 1em;
 	}
 
 	code {
@@ -122,18 +127,17 @@ input, select, textarea {
 	}
 
 	p {
-		/* line-height: 2; */
+		margin-top: 10px;
 	}
 
 	samp {
-		/*background: #eee;*/
-		border-color: #ddd #ddd #ddd #808080;
-		border-style: solid;
+		border-color: #eee #eee #eee #ddd;
+		border-style: dashed dashed dashed solid;
 		border-width: 1px 1px 1px 5px;
 		display: block;
 		font-family: "Courier New", monospace;
 		margin-top: 10px;
-		padding: 20px;
+		padding: 15px 10px;
 	}
 
 	sup {
@@ -147,29 +151,19 @@ input, select, textarea {
 		margin-top: 10px;
 	}
 	th, td {
-		border-color: #ddd;
-		border-style: dashed;
-		border-width: 1px;
+		border: 1px dashed #ddd;
 		padding: 5px;
 	}
 	th {
 		text-align: left;
 	}
 
-	/**/
-	input.text, select.select, textarea.textarea {
-		border-color: #999 #ccc #ccc #999;
-		border-style: solid;
-		border-width: 1px;
-		padding: 2px;
+
+/*--------------------------------------
+  Mobile
+--------------------------------------*/
+@media (max-width: 790px) { /* for IE9+, Std */
+	.main {
+		width: auto;
 	}
-	input.text, select.select {
-		vertical-align: middle;
-	}
-	input.text {
-		width: 25em;
-	}
-	textarea.textarea {
-		height: 10em;
-		width: 35em;
-	}
+}

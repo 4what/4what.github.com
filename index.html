@@ -1,24 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<!--
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
--->
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html> <!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<html> <!-- <html xmlns="http://www.w3.org/1999/xhtml"> -->
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" /> <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<title>4what - Global</title>
+		<title>4what</title>
+
+		<link rel="shortcut icon" href="favicon.ico" />
 
 		<meta name="author" content="4what" />
 		<meta name="copyright" content="4what" />
 
 		<meta name="description" content="4what" />
 		<meta name="keywords" content="4what" />
-
-		<!--<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width" />-->
-
-		<!--<meta http-equiv="X-UA-Compatible" content="IE=Edge" />-->
 
 		<!--<meta name="robots" content="index, follow" />--> <!-- index|noindex|follow|nofollow -->
 
@@ -28,48 +22,23 @@
 		<meta http-equiv="Pragma" content="no-cache" />
 		-->
 
-		<!--<meta http-equiv="refresh" content="0[; url=http://example.com]" />-->
-
-		<link rel="shortcut icon" href="favicon.ico" />
-
 		<!--<base target="_top" />-->
 
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="css/main.css" />
+
+		<script src="js/analytics.js" defer></script>
+
+		<!--<meta http-equiv="refresh" content="0[; url=http://example.com]" />-->
 	</head>
 
-	<!--
-	<frameset rows="120px,*,50px" frameborder="no" framespacing="0">
-		<frame src="header.html" name="header" noresize="noresize" scrolling="no" />
-		<frame src="container.html" name="blank" noresize="noresize" scrolling="auto" />
-		<frame src="footer.html" name="footer" noresize="noresize" scrolling="no" />
-		<noframes>
-			<body>
-
-			</body>
-		</noframes>
-	</frameset>
-	-->
-
-	<body class="body-home">
+	<body>
 		<div class="main">
 			<iframe src="_header.html" frameborder="0" scrolling="no" class="iframe-header"></iframe>
 
 			<div class="container">
-				<div id="overview">
-					<!-- Lorem -->
-					•••
-				</div>
-
 				<div class="catalog">
-					<div class="layer">
-						<h3 class="subheading"><span>News</span></h3>
-						<ul>
-							<li><a href="https://github.com/4what">Github.com/4what</a> [<em>at</em>]</li>
-						</ul>
-					</div>
-
-					<div class="layer">
-						<h3 class="subheading"><span>Category</span></h3>
+					<div class="section">
+						<h3 class="subheading"><span>Lab</span></h3>
 						<ul>
 							<li><a href="lab/Hypertext-Markup-Language/index.html">Hypertext Markup Language</a></li>
 							<li><a href="lab/Cascading-Style-Sheets/index.html">Cascading Style Sheets</a></li>
@@ -77,26 +46,29 @@
 						</ul>
 					</div>
 
-					<div class="layer">
+					<div class="section">
+						<h3 class="subheading"><span>Codes</span></h3>
+						<ul>
+							<li><a href="https://github.com/4what">Github.com/4what</a></li>
+						</ul>
+					</div>
+
+					<div class="section">
 						<h3 class="subheading"><span>Games</span></h3>
 						<ul>
 							<li>
 								Biohazard
-								<a href="articles/Biohazard 3.html">3</a>,
-								<a href="articles/Biohazard 4.html">4</a>
+								<a href="articles/Biohazard3.html">3</a>,
+								<a href="articles/Biohazard4.html">4</a>
 							</li>
-							<li><a href="articles/Shin Onimusha.html">新鬼武者</a></li>
+							<li><a href="articles/Shin-Onimusha.html">新鬼武者</a></li>
 						</ul>
 					</div>
 				</div>
-
-				<iframe src="_toolbar.html" frameborder="0" scrolling="no" class="iframe-toolbar"></iframe>
 			</div>
 
 			<iframe src="_footer.html" frameborder="0" scrolling="no" class="iframe-footer"></iframe>
 		</div>
 		<!-- /main -->
-
-		<script type="text/javascript" src="js/analytics.js"></script>
 	</body>
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - JavaScript</title>
+
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				Window.scroll
+					<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll">[1]</a></sup>
+
+				|
+
+				Window.scrollTo
+					<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">[1]</a></sup>
+			</p>
+
+			<p>
+				Window.scrollBy
+					<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy">[1]</a></sup>
+			</p>
+
+			<p>
+				Element.scroll
+					<sup>
+						Std
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll">[1]</a>
+					</sup>
+
+				|
+
+				Element.scrollTo
+					<sup>
+						Std
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo">[1]</a>
+					</sup>
+			</p>
+
+			<p>
+				Element.scrollBy
+					<sup>
+						Std
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollBy">[1]</a>
+					</sup>
+			</p>
+
+			<p>
+				Element.scrollIntoView
+					<sup><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView">[1]</a></sup>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<div id="box" style="background: blue; height: 2048px; overflow: auto;">
+					<div style="background: red; height: 150%; margin: 100px;"></div>
+				</div>
+
+				<div style="margin-top: 10px;">
+					<button onclick="window.scroll(0, 0);">Window.scroll</button>
+					<button onclick="window.scroll({ behavior: 'smooth', left: 0, top: 0 });">Window.scroll [Smooth]</button> <!-- for Std -->
+				</div>
+
+				<div style="margin-top: 10px;">
+					<button onclick="window.scrollBy(0, -document.body.scrollHeight);">Window.scrollBy</button>
+					<button onclick="window.scrollBy({ behavior: 'smooth', left: 0, top: -document.body.scrollHeight });">Window.scrollBy [Smooth]</button> <!-- for Std -->
+				</div>
+
+				<div style="margin-top: 10px;">
+					<button onclick="document.getElementById('box').scroll(0, 0);">Element.scroll</button> <!-- for Std -->
+					<button onclick="document.getElementById('box').scroll({ behavior: 'smooth', left: 0, top: 0 });">Element.scroll [Smooth]</button> <!-- for Std -->
+				</div>
+
+				<div style="margin-top: 10px;">
+					<button onclick="document.getElementById('box').scrollBy(0, -document.getElementById('box').scrollHeight);">Element.scrollBy</button> <!-- for Std -->
+					<button onclick="document.getElementById('box').scrollBy({ behavior: 'smooth', left: 0, top: -document.getElementById('box').scrollHeight });">Element.scrollBy [Smooth]</button> <!-- for Std -->
+				</div>
+
+				<div style="margin-top: 10px;">
+					<button onclick="document.getElementById('box').scrollIntoView();">Element.scrollIntoView</button>
+					<button onclick="document.getElementById('box').scrollIntoView({ behavior: 'smooth' });">Element.scrollIntoView [Smooth]</button> <!-- for Std -->
+				</div>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<div id="box" style="background: blue; height: 2048px; overflow: auto;">
+				<div style="background: red; height: 150%; margin: 100px;"></div>
+			</div>
+
+			<div style="margin-top: 10px;">
+				<button onclick="window.scroll(0, 0);">Window.scroll</button>
+				<button onclick="window.scroll({ behavior: 'smooth', left: 0, top: 0 });">Window.scroll [Smooth]</button> <!-- for Std -->
+			</div>
+
+			<div style="margin-top: 10px;">
+				<button onclick="window.scrollBy(0, -document.body.scrollHeight);">Window.scrollBy</button>
+				<button onclick="window.scrollBy({ behavior: 'smooth', left: 0, top: -document.body.scrollHeight });">Window.scrollBy [Smooth]</button> <!-- for Std -->
+			</div>
+
+			<div style="margin-top: 10px;">
+				<button onclick="document.getElementById('box').scroll(0, 0);">Element.scroll</button> <!-- for Std -->
+				<button onclick="document.getElementById('box').scroll({ behavior: 'smooth', left: 0, top: 0 });">Element.scroll [Smooth]</button> <!-- for Std -->
+			</div>
+
+			<div style="margin-top: 10px;">
+				<button onclick="document.getElementById('box').scrollBy(0, -document.getElementById('box').scrollHeight);">Element.scrollBy</button> <!-- for Std -->
+				<button onclick="document.getElementById('box').scrollBy({ behavior: 'smooth', left: 0, top: -document.getElementById('box').scrollHeight });">Element.scrollBy [Smooth]</button> <!-- for Std -->
+			</div>
+
+			<div style="margin-top: 10px;">
+				<button onclick="document.getElementById('box').scrollIntoView();">Element.scrollIntoView</button>
+				<button onclick="document.getElementById('box').scrollIntoView({ behavior: 'smooth' });">Element.scrollIntoView [Smooth]</button> <!-- for Std -->
+			</div>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../");
+
+			})();
+		</script>
+	</body>
+</html>

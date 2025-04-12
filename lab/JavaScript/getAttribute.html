@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - JavaScript</title>
+
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://msdn.microsoft.com/en-us/library/hh771987">[1]</a>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<a href="index.html" id="link">Link</a>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
+					alert(
+						document.getElementById("link").getAttribute("href"
+							, 2 // for IE7-
+						)
+					);
+				</script>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<a href="index.html" id="link">Link</a>
+
+			<script>
+				alert(
+					document.getElementById("link").getAttribute("href"
+						, 2 // for IE7-
+					)
+				);
+			</script>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../");
+
+			})();
+		</script>
+	</body>
+</html>

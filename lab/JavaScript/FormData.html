@@ -1,14 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<title>4what - JavaScript</title>
 
-		<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+		<link rel="stylesheet" href="../../css/sample.css" />
 
-		<script type="text/javascript" src="../../js/util.js"></script>
-		<script type="text/javascript" src="../../js/commons.js"></script>
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
 	</head>
 	<body>
 		<h2><span>Specification</span></h2>
@@ -19,19 +22,18 @@
 
 		<h2><span>Compatibility</span></h2>
 			<p>
-				IE10+,
-				Std
+				IE10+, Std
 			</p>
 
 		<h2><span>Syntax</span></h2>
-			<textarea cols="" rows="" name="code" class="html">
+			<textarea cols="" rows="" name="code" class="html" title="">
 				<form action="" method="post" enctype="multipart/form-data" id="form">
 					<input type="file" name="file" multiple="multiple" id="file" />
 				</form>
 			</textarea>
 
-			<textarea cols="" rows="" name="code" class="js">
-				<script type="text/javascript">
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
 					document.getElementById("file").onchange = function () {
 						if (this.value) {
 							var formData = new FormData(document.getElementById("form"));
@@ -39,7 +41,7 @@
 
 							var xhr = new XMLHttpRequest();
 							xhr.onload = function () {
-								$4what.log(xhr.responseText);
+								Log(xhr.responseText);
 							};
 							xhr.open("POST", "http://localhost:8080/upload", true);
 							xhr.send(formData);
@@ -53,7 +55,7 @@
 				<input type="file" name="file" multiple="multiple" id="file" />
 			</form>
 
-			<script type="text/javascript">
+			<script>
 				document.getElementById("file").onchange = function () {
 					if (this.value) {
 						var formData = new FormData(document.getElementById("form"));
@@ -61,7 +63,7 @@
 
 						var xhr = new XMLHttpRequest();
 						xhr.onload = function () {
-							$4what.log(xhr.responseText);
+							Log(xhr.responseText);
 						};
 						xhr.open("POST", "http://localhost:8080/upload", true);
 						xhr.send(formData);
@@ -69,14 +71,12 @@
 				};
 			</script>
 
-		<script type="text/javascript">
+		<script>
 			(function () {
 
-				$4what.syntaxhighlighter("../../");
+				new Highlighter("../../");
 
 			})();
 		</script>
-
-		<script type="text/javascript" src="../../js/analytics.js"></script>
 	</body>
 </html>

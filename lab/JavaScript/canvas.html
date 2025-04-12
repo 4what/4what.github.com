@@ -1,14 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<title>4what - JavaScript</title>
 
-		<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+		<link rel="stylesheet" href="../../css/sample.css" />
 
-		<script type="text/javascript" src="../../js/util.js"></script>
-		<script type="text/javascript" src="../../js/commons.js"></script>
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
 	</head>
 	<body>
 		<h2><span>Specification</span></h2>
@@ -19,17 +22,16 @@
 
 		<h2><span>Compatibility</span></h2>
 			<p>
-				IE9+,
-				Std
+				IE9+, Std
 			</p>
 
 		<h2><span>Syntax</span></h2>
-			<textarea cols="" rows="" name="code" class="html">
-				<canvas id="canvas" height="150" width="300" style="border: 2px solid #000"></canvas>
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<canvas id="canvas" height="150" width="300" style="border: 2px solid #000;"></canvas>
 			</textarea>
 
-			<textarea cols="" rows="" name="code" class="js">
-				<script type="text/javascript">
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
 					var canvas = document.getElementById("canvas");
 
 					var ctx = canvas.getContext("2d");
@@ -39,9 +41,9 @@
 			</textarea>
 
 		<h2><span>Example</span></h2>
-			<canvas id="canvas" height="150" width="300" style="border: 2px solid #000"></canvas>
+			<canvas id="canvas" height="150" width="300" style="border: 2px solid #000;"></canvas>
 
-			<script type="text/javascript">
+			<script>
 				var canvas = document.getElementById("canvas");
 
 				var ctx = canvas.getContext("2d");
@@ -49,14 +51,12 @@
 				ctx.fillRect(10, 10, 100, 100);
 			</script>
 
-		<script type="text/javascript">
+		<script>
 			(function () {
 
-				$4what.syntaxhighlighter("../../");
+				new Highlighter("../../");
 
 			})();
 		</script>
-
-		<script type="text/javascript" src="../../js/analytics.js"></script>
 	</body>
 </html>

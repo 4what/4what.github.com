@@ -1,21 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<title>4what - Cascading Style Sheets</title>
 
-		<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
+		<link rel="stylesheet" href="../../../css/sample.css" />
 
-		<script type="text/javascript" src="../../../js/util.js"></script>
-		<script type="text/javascript" src="../../../js/commons.js"></script>
+		<script src="../../../js/x.js"></script>
+		<script src="../../../js/commons.js"></script>
+
+		<script src="../../../js/analytics.js" defer></script>
 	</head>
 	<body>
 		<h2><span>Specification</span></h2>
 			<p>
-				<a href="https://w3.org/TR/css3-animations">[1]</a>
+				<a href="https://w3.org/TR/css-animations#animation">[1]</a>
 				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">[2]</a>
-				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">[3]</a>
+				<a href="https://w3.org/TR/css-animations#keyframes">[3]</a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">[4]</a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">[5]</a>
 			</p>
 
 		<h2><span>Compatibility</span></h2>
@@ -24,16 +29,16 @@
 			</p>
 
 		<h2><span>Syntax</span></h2>
-			<textarea cols="" rows="" name="code" class="css">
-				<style type="text/css">
+			<textarea cols="" rows="" name="code" class="css" title="">
+				<style>
 					#box {
-						animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for IE10+, Std */
+						animation: 1s ease 0s infinite alternate none running awesome; /* for IE10+, Std */
 						background: #000;
 						height: 100px;
 						width: 100px;
 					}
 
-					@keyframes name { /* for IE10+, Std */
+					@keyframes awesome { /* for IE10+, Std */
 						from {
 							background: red;
 						}
@@ -42,56 +47,41 @@
 						}
 						to {
 							background: blue;
-							border-radius: 10px;
 							height: 50px;
-							opacity: 0.5;
-							transform: rotate(360deg);
 							width: 50px;
 						}
 					}
 				</style>
 			</textarea>
 
-			<textarea cols="" rows="" name="code" class="html">
+			<textarea cols="" rows="" name="code" class="html" title="">
 				<div id="box"></div>
 			</textarea>
 
-			<textarea cols="" rows="" name="code" class="js">
-				<script type="text/javascript">
-					function listener(e) {
-						switch (e.type) {
-							case "animationstart":
-								$4what.log("animationstart: " + e.elapsedTime);
-
-								break;
-							case "animationend":
-								$4what.log("animationend: " + e.elapsedTime);
-
-								break;
-							case "animationiteration":
-								$4what.log("animationiteration: " + e.elapsedTime);
-
-								break;
-						}
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
+					function listener(event) {
+						Log(event.type);
 					}
 
 					var box = document.getElementById("box");
-					box.addEventListener("animationstart", listener, false);
-					box.addEventListener("animationend", listener, false);
-					box.addEventListener("animationiteration", listener, false);
+					box.addEventListener("animationstart", listener);
+					box.addEventListener("animationend", listener);
+					box.addEventListener("animationcancel", listener);
+					box.addEventListener("animationiteration", listener);
 				</script>
 			</textarea>
 
 		<h2><span>Example</span></h2>
-			<style type="text/css">
+			<style>
 				#box {
-					animation: name 1s ease-in-out 0s infinite alternate none /*running*/; /* for IE10+, Std */
+					animation: 1s ease 0s infinite alternate none running awesome; /* for IE10+, Std */
 					background: #000;
 					height: 100px;
 					width: 100px;
 				}
 
-				@keyframes name { /* for IE10+, Std */
+				@keyframes awesome { /* for IE10+, Std */
 					from {
 						background: red;
 					}
@@ -100,10 +90,7 @@
 					}
 					to {
 						background: blue;
-						border-radius: 10px;
 						height: 50px;
-						opacity: 0.5;
-						transform: rotate(360deg);
 						width: 50px;
 					}
 				}
@@ -111,38 +98,25 @@
 
 			<div id="box"></div>
 
-			<script type="text/javascript">
-				function listener(e) {
-					switch (e.type) {
-						case "animationstart":
-							$4what.log("animationstart: " + e.elapsedTime);
-
-							break;
-						case "animationend":
-							$4what.log("animationend: " + e.elapsedTime);
-
-							break;
-						case "animationiteration":
-							$4what.log("animationiteration: " + e.elapsedTime);
-
-							break;
-					}
+			<script>
+				function listener(event) {
+					Log(event.type);
 				}
 
 				var box = document.getElementById("box");
-				box.addEventListener("animationstart", listener, false);
-				box.addEventListener("animationend", listener, false);
-				box.addEventListener("animationiteration", listener, false);
+				box.addEventListener("animationstart", listener);
+				box.addEventListener("animationend", listener);
+				box.addEventListener("animationcancel", listener);
+				box.addEventListener("animationiteration", listener);
 			</script>
 
-		<script type="text/javascript">
+		<script>
 			(function () {
 
-				$4what.syntaxhighlighter("../../../");
+				new Highlighter("../../../");
 
 			})();
 		</script>
 
-		<script type="text/javascript" src="../../../js/analytics.js"></script>
 	</body>
 </html>

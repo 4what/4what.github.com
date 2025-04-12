@@ -1,19 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<title>4what - Cascading Style Sheets</title>
 
-		<link rel="stylesheet" type="text/css" href="../../../css/sample.css" />
+		<link rel="stylesheet" href="../../../css/sample.css" />
 
-		<script type="text/javascript" src="../../../js/util.js"></script>
-		<script type="text/javascript" src="../../../js/commons.js"></script>
+		<script src="../../../js/x.js"></script>
+		<script src="../../../js/commons.js"></script>
+
+		<script src="../../../js/analytics.js" defer></script>
 	</head>
 	<body>
 		<h2><span>Specification</span></h2>
 			<p>
-				<a href="https://w3.org/TR/css-text-decor/#text-shadow-property">[1]</a>
+				<a href="https://w3.org/TR/css-text-decor#text-shadow-property">[1]</a>
 				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">[2]</a>
 			</p>
 
@@ -23,39 +26,33 @@
 			</p>
 
 		<h2><span>Syntax</span></h2>
-			<textarea cols="" rows="" name="code" class="css">
-				<style type="text/css">
+			<textarea cols="" rows="" name="code" class="css" title="">
+				<style>
 					#box {
-						text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* for IE10+, Std */
+						text-shadow: red 0 0 10px; /* for IE10+, Std */
 					}
 				</style>
 			</textarea>
 
-			<textarea cols="" rows="" name="code" class="html">
-				<div id="box">
-					Text
-				</div>
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<div id="box">Hello, World!</div>
 			</textarea>
 
 		<h2><span>Example</span></h2>
-			<style type="text/css">
+			<style>
 				#box {
-					text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* for IE10+, Std */
+					text-shadow: red 0 0 10px; /* for IE10+, Std */
 				}
 			</style>
 
-			<div id="box">
-				Text
-			</div>
+			<div id="box">Hello, World!</div>
 
-		<script type="text/javascript">
+		<script>
 			(function () {
 
-				$4what.syntaxhighlighter("../../../");
+				new Highlighter("../../../");
 
 			})();
 		</script>
-
-		<script type="text/javascript" src="../../../js/analytics.js"></script>
 	</body>
 </html>

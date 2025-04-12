@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - JavaScript</title>
+
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">[1]</a>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<div id="box" style="background: #000; height: 100px; width: 100px;"></div>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
+					X.bind(document.getElementById("box"), "mousemove", function (event) {
+						document.getElementById("logs").innerHTML =
+							"clientX: " + event.clientX
+							+ ", clientY: " + event.clientY
+							+ ", offsetX: " + event.offsetX
+							+ ", offsetY: " + event.offsetY
+							+ ", pageX: " + event.pageX // for IE9+, Std
+							+ ", pageY: " + event.pageY // for IE9+, Std
+							+ ", screenX: " + event.screenX
+							+ ", screenY: " + event.screenY
+							+ ", x: " + event.x
+							+ ", y: " + event.y
+						;
+					});
+				</script>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<div id="box" style="background: #000; height: 100px; width: 100px;"></div>
+
+			<div id="logs"></div>
+
+			<script>
+				X.bind(document.getElementById("box"), "mousemove", function (event) {
+					document.getElementById("logs").innerHTML =
+						"clientX: " + event.clientX
+						+ ", clientY: " + event.clientY
+						+ ", offsetX: " + event.offsetX
+						+ ", offsetY: " + event.offsetY
+						+ ", pageX: " + event.pageX // for IE9+, Std
+						+ ", pageY: " + event.pageY // for IE9+, Std
+						+ ", screenX: " + event.screenX
+						+ ", screenY: " + event.screenY
+						+ ", x: " + event.x
+						+ ", y: " + event.y
+					;
+				});
+			</script>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../");
+
+			})();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - Cascading Style Sheets</title>
+
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<table>
+				<tr>
+					<th>#</th>
+					<th>
+						Selector
+							<sup>
+								<a href="https://msdn.microsoft.com/en-us/library/hh781510#selector-support-by-version">[1]</a>
+								<a href="https://w3.org/TR/CSS21/selector.html#pattern-matching">[2]</a>
+								<a href="https://w3.org/TR/selectors#overview">[3]</a>
+							</sup>
+					</th>
+					<th>IE6</th>
+					<th>IE7</th>
+					<th>IE8</th>
+					<th>IE9</th>
+					<th>IE10</th>
+					<th>IE11</th>
+					<th>Std</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>E { <strong>_</strong> property: value; }</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><strong>* html</strong> E { property: value; }</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>E { <strong>*</strong> property: value; }</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>E { property: value<strong>\9</strong>; }</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>E { <strong>*</strong> property: value <strong>!important</strong>; }</td>
+					<td>×</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td><strong>*+ html</strong> E { property<strong>/**/</strong>: value; }</td>
+					<td>×</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>E { property: value <strong>!important</strong>; }</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>E { property: value<strong>\0</strong>; }</td>
+					<td>×</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>E { property: value<strong>\9\0</strong>; }</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+					<td>×</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td><strong>@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {</strong> E { property: value; } <strong>}</strong></td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>×</td>
+					<td>√</td>
+					<td>√</td>
+					<td>×</td>
+				</tr>
+			</table>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="css" title="">
+				<style>
+					#hack-1 {
+						_ color: red;
+					}
+
+					* html #hack-2 {
+						color: red;
+					}
+
+					#hack-3 {
+						* color: red;
+					}
+
+					#hack-4 {
+						color: red\9;
+					}
+
+					#hack-5 {
+						* color: red !important;
+						color: blue;
+					}
+
+					*+ html #hack-6 {
+						color/**/: red;
+					}
+
+					#hack-7 {
+						color: red !important;
+						color: blue;
+					}
+
+					#hack-8 {
+						color: red\0;
+					}
+
+					#hack-9 {
+						color: red\9\0;
+					}
+
+					@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+						#hack-10 {
+							color: red;
+						}
+					}
+				</style>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<p id="hack-1">1: E { _ property: value; }</p>
+				<p id="hack-2">2: * html E { property: value; }</p>
+				<p id="hack-3">3: E { * property: value; }</p>
+				<p id="hack-4">4: E { property: value\9; }</p>
+				<p id="hack-5">5: E { * property: value !important; }</p>
+				<p id="hack-6">6: *+ html E { property/**/: value; }</p>
+				<p id="hack-7">7: E { property: value !important; }</p>
+				<p id="hack-8">8: E { property: value\0; }</p>
+				<p id="hack-9">9: E { property: value\9\0; }</p>
+				<p id="hack-10">10: @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { E { property: value; } }</p>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<style>
+				#hack-1 {
+					_ color: red;
+				}
+
+				* html #hack-2 {
+					color: red;
+				}
+
+				#hack-3 {
+					* color: red;
+				}
+
+				#hack-4 {
+					color: red\9;
+				}
+
+				#hack-5 {
+					* color: red !important;
+					color: blue;
+				}
+
+				*+ html #hack-6 {
+					color/**/: red;
+				}
+
+				#hack-7 {
+					color: red !important;
+					color: blue;
+				}
+
+				#hack-8 {
+					color: red\0;
+				}
+
+				#hack-9 {
+					color: red\9\0;
+				}
+
+				@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+					#hack-10 {
+						color: red;
+					}
+				}
+			</style>
+
+			<p id="hack-1">1: E { _ property: value; }</p>
+			<p id="hack-2">2: * html E { property: value; }</p>
+			<p id="hack-3">3: E { * property: value; }</p>
+			<p id="hack-4">4: E { property: value\9; }</p>
+			<p id="hack-5">5: E { * property: value !important; }</p>
+			<p id="hack-6">6: *+ html E { property/**/: value; }</p>
+			<p id="hack-7">7: E { property: value !important; }</p>
+			<p id="hack-8">8: E { property: value\0; }</p>
+			<p id="hack-9">9: E { property: value\9\0; }</p>
+			<p id="hack-10">10: @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { E { property: value; } }</p>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../");
+
+			})();
+		</script>
+	</body>
+</html>

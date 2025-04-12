@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - JavaScript</title>
+
+		<link rel="stylesheet" href="../../../css/sample.css" />
+
+		<script src="../../../js/x.js"></script>
+		<script src="../../../js/commons.js"></script>
+
+		<script src="../../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">[1]</a>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<button id="open">Open</button>
+				<button id="close">Close</button>
+				<button id="child">Child</button>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
+					var popup = function () {
+						this.close = function () {
+							if (this.child && !this.child.closed) {
+								this.child.close();
+							}
+						};
+						/**
+						 * @param {String} url
+						 * @param {String} name?
+						 * @param {String} features?
+						 */
+						this.open = function (url, name, features) {
+							if (!this.child || this.child.closed) {
+								this.child = window.open(url, name, features);
+							} else {
+								this.child.focus();
+							}
+						}
+					};
+
+					var pop = new popup();
+
+					document.getElementById("open").onclick = function () {
+						pop.open(
+							"child.html",
+							"",
+							"height=0,left=0,resizable=no,scrollbars=no,top=0,width=0"
+						);
+					};
+
+					document.getElementById("close").onclick = function () {
+						pop.close();
+					};
+
+					document.getElementById("child").onclick = function () {
+						alert(pop.child);
+						//alert(pop.child.document);
+					};
+				</script>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="js" title="child.html:">
+				<script>
+					window.onload = function () {
+						var parent = window.opener;
+
+						if (parent) {
+							parent.focus();
+
+							//alert(parent);
+							//alert(parent.document);
+						}
+					};
+				</script>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<button id="open">Open</button>
+			<button id="close">Close</button>
+			<button id="child">Child</button>
+
+			<script>
+				var popup = function () {
+					this.close = function () {
+						if (this.child && !this.child.closed) {
+							this.child.close();
+						}
+					};
+					/**
+					 * @param {String} url
+					 * @param {String} name?
+					 * @param {String} features?
+					 */
+					this.open = function (url, name, features) {
+						if (!this.child || this.child.closed) {
+							this.child = window.open(url, name, features);
+						} else {
+							this.child.focus();
+						}
+					}
+				};
+
+				var pop = new popup();
+
+				document.getElementById("open").onclick = function () {
+					pop.open(
+						"child.html",
+						"",
+						"height=0,left=0,resizable=no,scrollbars=no,top=0,width=0"
+					);
+				};
+
+				document.getElementById("close").onclick = function () {
+					pop.close();
+				};
+
+				document.getElementById("child").onclick = function () {
+					alert(pop.child);
+					//alert(pop.child.document);
+				};
+			</script>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../../");
+
+			})();
+		</script>
+	</body>
+</html>

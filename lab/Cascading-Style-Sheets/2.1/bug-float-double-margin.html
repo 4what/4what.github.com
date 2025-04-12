@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - Cascading Style Sheets</title>
+
+		<link rel="stylesheet" href="../../../css/sample.css" />
+
+		<script src="../../../js/x.js"></script>
+		<script src="../../../js/commons.js"></script>
+
+		<script src="../../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Compatibility</span></h2>
+			<p>
+				IE6
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="css" title="">
+				<style>
+					#box {
+						background: #000;
+						height: 100px;
+						width: 200px;
+					}
+
+					#left {
+						background: red;
+						color: #fff;
+						display: inline; /* for IE6 */
+						float: left;
+						height: 50px;
+						line-height: 50px;
+						margin-left: 100px;
+						text-align: center;
+						width: 50px;
+					}
+
+					#right {
+						background: red;
+						color: #fff;
+						display: inline; /* for IE6 */
+						float: right;
+						height: 50px;
+						line-height: 50px;
+						margin-right: 100px;
+						text-align: center;
+						width: 50px;
+					}
+				</style>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<div id="box">
+					<div id="left">Left</div>
+					<div id="right">Right</div>
+					<div style="background: green; height: 50px; width: 50%;"></div>
+					<div style="background: blue; height: 50px; width: 100%;"></div>
+				</div>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<style>
+				#box {
+					background: #000;
+					height: 100px;
+					width: 200px;
+				}
+
+				#left {
+					background: red;
+					color: #fff;
+					display: inline; /* for IE6 */
+					float: left;
+					height: 50px;
+					line-height: 50px;
+					margin-left: 100px;
+					text-align: center;
+					width: 50px;
+				}
+
+				#right {
+					background: red;
+					color: #fff;
+					display: inline; /* for IE6 */
+					float: right;
+					height: 50px;
+					line-height: 50px;
+					margin-right: 100px;
+					text-align: center;
+					width: 50px;
+				}
+			</style>
+
+			<div id="box">
+				<div id="left">Left</div>
+				<div id="right">Right</div>
+				<div style="background: green; height: 50px; width: 50%;"></div>
+				<div style="background: blue; height: 50px; width: 100%;"></div>
+			</div>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../../");
+
+			})();
+		</script>
+	</body>
+</html>

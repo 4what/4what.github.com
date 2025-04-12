@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - Cascading Style Sheets</title>
+
+		<link rel="stylesheet" href="../../../css/sample.css" />
+
+		<script src="../../../js/x.js"></script>
+		<script src="../../../js/commons.js"></script>
+
+		<script src="../../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://w3.org/TR/CSS21/box.html#collapsing-margins">[1]</a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing">[2]</a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_display/Block_formatting_context#preventing_margin_collapsing">[3]</a>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="css" title="">
+				<style>
+					#box {
+						background: green;
+					}
+
+					#top {
+						background: red;
+						height: 100px;
+						margin-bottom: 10px;
+					}
+
+					#bottom {
+						background: blue;
+						height: 100px;
+						margin-top: 10px;
+					}
+				</style>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<div id="box">
+					<div id="top"></div>
+					<div id="bottom"></div>
+				</div>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<style>
+				#box {
+					background: green;
+				}
+
+				#top {
+					background: red;
+					height: 100px;
+					margin-bottom: 10px;
+				}
+
+				#bottom {
+					background: blue;
+					height: 100px;
+					margin-top: 10px;
+				}
+			</style>
+
+			<div id="box">
+				<div id="top"></div>
+				<div id="bottom"></div>
+			</div>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../../");
+
+			})();
+		</script>
+	</body>
+</html>

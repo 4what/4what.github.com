@@ -6,7 +6,7 @@
 
 var Util = {
 	/*--------------------------------------
-	  Category: CSS
+	  CSS
 	--------------------------------------*/
 	/**
 	 * @requires jQuery 1.3.2+
@@ -127,7 +127,7 @@ var Util = {
 	},
 
 	/*--------------------------------------
-	  Category: Event
+	  Event
 	--------------------------------------*/
 	/**
 	 * @requires jQuery 1.3.2+
@@ -135,17 +135,17 @@ var Util = {
 	 * @param {Object|String} target?
 	 */
 	blockKey: function (code, target) {
-		$(target || document).keydown(function (e) {
+		$(target || document).keydown(function (event) {
 			for (var i = code.length - 1; i >= 0; i--) {
-				if (e.which === code[i]) {
-					e.preventDefault();
+				if (event.which === code[i]) {
+					event.preventDefault();
 				}
 			}
 		});
 	},
 
 	/*--------------------------------------
-	  Category: Form
+	  Form
 	--------------------------------------*/
 	/**
 	 * @requires jQuery 1.3.2+
@@ -195,7 +195,7 @@ var Util = {
 	},
 
 	/*--------------------------------------
-	  Category: Misc
+	  Misc
 	--------------------------------------*/
 	/**
 	 * @requires jQuery 1.3.2+, jQuery ColorBox
@@ -226,7 +226,7 @@ var Util = {
 
 				/* Timeout */
 				if (settings.timeout) {
-					window.setTimeout($.colorbox.close, settings.timeout === true ? 1000 * 2 : settings.timeout);
+					setTimeout($.colorbox.close, settings.timeout === true ? 1000 * 2 : settings.timeout);
 				}
 			}
 		}, params);
@@ -250,7 +250,7 @@ var Util = {
 	},
 
 	/**
-	 * @requires jQuery 1.3.2+, $js.url
+	 * @requires jQuery 1.3.2+, X
 	 * @param {Object|String} target
 	 * @param {Object} options
 	 */
@@ -290,7 +290,7 @@ var Util = {
 
 					if (window.location.search) {
 						var
-							search = $js.url.params(),
+							search = X.params(window.location.href),
 							value;
 
 						for (var key in search) {
@@ -410,7 +410,8 @@ var Util = {
 	 * @return {String}
 	 */
 	stripHtml: function (value) {
-		return value.replace(/<.[^<>]*?>/g, "") // /<\/?[^>]+>/gi
+		return value
+			.replace(/<.[^<>]*?>/g, "") // /<\/?[^>]+>/gi
 			.replace(/&nbsp;|&#160;/gi, ""); // Non-breaking space
 	}
 };

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - Cascading Style Sheets</title>
+
+		<link rel="stylesheet" href="../../../css/sample.css" />
+
+		<script src="../../../js/x.js"></script>
+		<script src="../../../js/commons.js"></script>
+
+		<script src="../../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_display/Block_formatting_context#contain_internal_floats">[1]</a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow#floated_items">[2]</a>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="css" title="">
+				<style>
+					#box {
+						background: green;
+						overflow: hidden; /* auto|hidden */ /* for IE8+, Std */
+						width: 100%;
+					}
+
+					#left {
+						background: red;
+						float: left;
+						height: 100px;
+						width: 100px;
+					}
+
+					#right {
+						background: blue;
+						float: right;
+						height: 50px;
+						width: 50px;
+					}
+				</style>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<div id="box">
+					<div id="left"></div>
+					<div id="right"></div>
+				</div>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<style>
+				#box {
+					background: green;
+					overflow: hidden; /* auto|hidden */ /* for IE8+, Std */
+					width: 100%;
+				}
+
+				#left {
+					background: red;
+					float: left;
+					height: 100px;
+					width: 100px;
+				}
+
+				#right {
+					background: blue;
+					float: right;
+					height: 50px;
+					width: 50px;
+				}
+			</style>
+
+			<div id="box">
+				<div id="left"></div>
+				<div id="right"></div>
+			</div>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../../");
+
+			})();
+		</script>
+	</body>
+</html>

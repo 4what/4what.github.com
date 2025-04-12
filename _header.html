@@ -1,39 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
 		<title></title>
 
 		<base target="_top" />
 
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="css/main.css" />
 
-		<script type="text/javascript" src="js/jquery/jquery-1.12.4.min.js"></script>
-
-		<script type="text/javascript" src="js/util.js"></script>
+		<script src="js/jquery/jquery-1.12.4.min.js"></script>
+		<script src="js/x.js"></script>
 	</head>
 	<body class="body-header">
 		<div class="header">
-			<h1 id="logo">
+			<h1 class="logo" id="logo">
 				<a href="index.html">
-					<img src="images/logo-4what.png" alt="4what" title="4what" />
+					<!--<img src="images/logo.png" alt="4what" title="4what" />-->
+					<img src="images/4.png" alt="" title="4what" />
+					<img src="images/w.png" alt="" title="4what" />
+					<img src="images/h.png" alt="" title="4what" />
+					<img src="images/a.png" alt="" title="4what" />
+					<img src="images/t.png" alt="" title="4what" />
 					<span>4what</span>
 				</a>
 			</h1>
 
-			<div id="navbar">
+			<div class="navbar" id="navbar">
 				<ul>
-					<li><a href="index.html"><span>Home</span></a></li>
-					<li><a href="works.html"><span>Works</span></a></li>
-					<li><a href="about.html"><span>About</span></a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
 				</ul>
 			</div>
-
-			<div id="clock"></div>
 		</div>
 
-		<script type="text/javascript">
+		<script>
 			(function () {
+
+				/* Logo */
+				$("#logo img").each(function (index, element) {
+					setTimeout(function () {
+						$(element).animate({
+							"top": -5
+						}).mouseenter(function () {
+							$(this).animate({
+								"top": 0
+							}, "fast");
+						}).mouseleave(function () {
+							$(this).animate({
+								"top": -5
+							}, "fast");
+						});
+					}, 1000 * 0.1 * index);
+				});
+
 
 				/* Breadcrumb */
 				(function breadcrumb() {
@@ -43,29 +62,20 @@
 
 						pathname = window.top.location.pathname.slice(window.top.location.pathname.lastIndexOf("/") + 1);
 
-					for (var anchor, i = 0, l = anchors.length; i < l; i++) {
+					for (var anchor, i = 0; i < anchors.length; i++) {
 						anchor = anchors[i];
 
-						href = anchor.getAttribute(
-							"href"
+						href = anchor.getAttribute("href"
 							, 2 // for IE7-
 						);
 
 						if (href === pathname || (href === "index.html" && /\/$/.test(window.top.location.pathname))) {
-							$js.addClass(anchor, "highlight");
+							X.addClass(anchor, "highlight");
 
 							break;
 						}
 					}
 				})();
-
-
-				/* Clock */
-				window.setInterval("$js.clock('clock')", 500);
-
-
-				/* Logo */
-				$("#logo").show(1000);
 
 			})();
 		</script>

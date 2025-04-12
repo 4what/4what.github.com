@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - Cascading Style Sheets</title>
+
+		<link rel="stylesheet" href="../../../css/sample.css" />
+
+		<script src="../../../js/x.js"></script>
+		<script src="../../../js/commons.js"></script>
+
+		<script src="../../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="css" title="">
+				<style>
+					#outer {
+						background: #000;
+						height: 400px;
+						left: 50%;
+						margin: -200px 0 0 -150px;
+						position: absolute;
+						top: 50%;
+						width: 300px;
+					}
+
+					#inner {
+						background: red;
+						height: 100px;
+						left: 50%;
+						margin: -50px 0 0 -50px;
+						position: absolute;
+						top: 50%;
+						width: 100px;
+					}
+				</style>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<div id="outer">
+					<div id="inner"></div>
+				</div>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<style>
+				#outer {
+					background: #000;
+					height: 400px;
+					left: 50%;
+					margin: -200px 0 0 -150px;
+					position: absolute;
+					top: 50%;
+					width: 300px;
+				}
+
+				#inner {
+					background: red;
+					height: 100px;
+					left: 50%;
+					margin: -50px 0 0 -50px;
+					position: absolute;
+					top: 50%;
+					width: 100px;
+				}
+			</style>
+
+			<div id="outer">
+				<div id="inner"></div>
+			</div>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../../");
+
+			})();
+		</script>
+	</body>
+</html>

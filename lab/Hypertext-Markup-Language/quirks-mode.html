@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html>-->
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - Hypertext Markup Language</title>
+
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">[1]</a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/compatMode">[2]</a>
+				<a href="https://en.wikipedia.org/wiki/Quirks_mode">[3]</a>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="html" title="">
+				<html><head><title></title></head><body></body></html>
+			</textarea>
+
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
+					Log(document.compatMode);
+				</script>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<script>
+				Log(document.compatMode);
+			</script>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../");
+
+			})();
+		</script>
+	</body>
+</html>

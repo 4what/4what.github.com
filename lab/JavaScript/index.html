@@ -1,57 +1,105 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<title>4what - JavaScript</title>
 
-		<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/analytics.js" defer></script>
 	</head>
 	<body>
 		<div class="main">
-			<div class="container">
+			<div class="header">
 				<h1><span>JavaScript</span></h1>
+			</div>
+
+			<div class="container">
 				<div class="catalog">
 					<ul>
-						<li><a href="apis.html"><span>APIs</span></a></li>
+						<li><a href="closure.html"><span><strong>Closure</strong></span></a></li>
+						<li><a href="prototype.html"><span><strong>Prototype</strong></span></a></li>
+					</ul>
+				</div>
 
-						<li><a href="canvas.html"><span>Canvas<em>IE9+, Std</em></span></a></li>
-						<li><a href="CDATA.html"><span><del>CDATA</del></span></a></li>
-						<li><a href="clipboard.html"><span>Clipboard<em>Std</em></span></a></li>
-						<li><a href="cors.html"><span>CORS (Cross-Origin Resource Sharing)<em>IE10+, Std</em></span></a></li>
-						<li><a href="debugger.html"><span>debugger<em>IE11+, Std</em></span></a></li>
-						<li><a href="Document.domain/index.html"><span>Document.domain</span></a></li>
-						<li><a href="DOMContentLoaded.html"><span>DOMContentLoaded<em>IE9+, Std</em></span></a></li>
-						<li><a href="event-propagation-bubbling.html"><span>Event Propagation: Bubbling</span></a></li>
-						<li><a href="event-propagation-capturing.html"><span>Event Propagation: Capturing<em>IE9+, Std</em></span></a></li>
-						<li><a href="fetch.html"><span>Fetch<em>Std</em></span></a></li>
-						<li><a href="FormData.html"><span>FormData<em>IE10+, Std</em></span></a></li>
-						<li><a href="strict-mode.html"><span>Strict Mode<em>IE10+, Std</em></span></a></li>
-						<li><a href="svg.html"><span>SVG<em>IE9+, Std</em></span></a></li>
-						<li><a href="WebGL.html"><span>WebGL<em>IE11+, Std</em></span></a></li>
-						<li><a href="WebSocket.html"><span>WebSocket<em>IE10+, Std</em></span></a></li>
-						<li><a href="Window.localStorage+Window.sessionStorage.html"><span>Window.localStorage & Window.sessionStorage<em>IE8+, Std</em></span></a></li>
-						<li><a href="Window.open/index.html"><span>Window.open()</span></a></li>
-						<li><a href="Window.postMessage/index.html"><span>Window.postMessage()<em>IE8+, Std</em></span></a></li>
-						<li><a href="Window.self+Window.parent+Window.top/index.html"><span>Window.self, Window.parent, Window.top</span></a></li>
-						<li><a href="XMLHttpRequest.html"><span>XMLHttpRequest<em>IE7+, Std</em></span></a></li>
+				<div class="catalog">
+					<ul>
+						<li><a href="canvas.html"><span><strong>Canvas</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="clipboard.html"><span><strong>Clipboard</strong><em>Std</em></span></a></li>
+						<li><a href="cors.html"><span><strong>CORS (Cross-Origin Resource Sharing)</strong><em>IE10+, Std</em></span></a></li>
+						<li><a href="debugger.html"><span><strong>debugger</strong><em>IE11+, Std</em></span></a></li>
+						<li><a href="document.domain/index.html"><span><strong>Document.domain</strong></span></a></li>
+						<li><a href="DOMContentLoaded.html"><span><strong>DOMContentLoaded</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="getAttribute.html"><span><strong>Element.getAttribute</strong></span></a></li>
+						<li><a href="fetch.html"><span><strong>Fetch</strong><em>Std</em></span></a></li>
+						<li><a href="FormData.html"><span><strong>FormData</strong><em>IE10+, Std</em></span></a></li>
+						<li>
+							<a href="in+hasOwnProperty+hasOwn.html">
+								<span>
+									<strong>in</strong>
+									<strong>hasOwn <- hasOwnProperty</strong>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="localStorage+sessionStorage.html">
+								<span>
+									<strong>localStorage</strong>
+									<strong>sessionStorage</strong>
+									<em>IE8+, Std</em>
+								</span>
+							</a>
+						</li>
+						<li><a href="marquee.html"><span><strong>Marquee</strong></span></a></li>
+						<li><a href="open/index.html"><span><strong>Open</strong></span></a></li>
+						<li><a href="postMessage/index.html"><span><strong>postMessage</strong><em>IE8+, Std</em></span></a></li>
+						<li>
+							<a href="querySelector+querySelectorAll.html">
+								<span>
+									<strong>querySelector</strong>
+									<strong>querySelectorAll</strong>
+									<em>IE8+, Std</em>
+								</span>
+							</a>
+						</li>
+						<li><a href="strict-mode.html"><span><strong>Strict Mode</strong><em>IE10+, Std</em></span></a></li>
+						<li><a href="svg.html"><span><strong>SVG</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="WebGL.html"><span><strong>WebGL</strong><em>IE11+, Std</em></span></a></li>
+						<li><a href="WebSocket.html"><span><strong>WebSocket</strong><em>IE10+, Std</em></span></a></li>
+						<li><a href="scroll.html"><span><strong>Scroll</strong></span></a></li>
+						<li><a href="user-agent.html"><span><strong>User agent</strong></span></a></li>
+						<li>
+							<a href="window.self+window.parent+window.top/index.html">
+								<span>
+									<strong>Window.self</strong>
+									<strong>Window.parent</strong>
+									<strong>Window.top</strong>
+								</span>
+							</a>
+						</li>
+						<li><a href="XMLHttpRequest.html"><span><strong>XMLHttpRequest</strong><em>IE7+, Std</em></span></a></li>
+					</ul>
+				</div>
 
-						<li><a href="coordinate.html"><span>Coordinate</span></a></li>
-						<li><a href="marquee.html"><span>Marquee</span></a></li>
+				<div class="catalog">
+					<ul>
+						<li><a href="theme.html"><span><strong>Theme</strong></span></a></li>
+						<li><a href="unique.html"><span><strong>Unique</strong></span></a></li>
+					</ul>
+				</div>
 
-						<li><a href="closure.html"><span>Closure</span></a></li>
-						<li><a href="module.html"><span>Module</span></a></li>
-						<li><a href="oop.html"><span>OOP</span></a></li>
-
-						<li><a href="theme.html"><span>Theme</span></a></li>
-						<li><a href="unique.html"><span>Unique</span></a></li>
+				<div class="catalog">
+					<h2>Event</h2>
+					<ul>
+						<li><a href="event-propagation-bubbling.html"><span><strong>Event propagation: Bubbling</strong></span></a></li>
+						<li><a href="event-propagation-capturing.html"><span><strong>Event propagation: Capturing</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="KeyboardEvent.html"><span><strong>KeyboardEvent: Keys</strong></span></a></li>
+						<li><a href="MouseEvent.html"><span><strong>MouseEvent: Coordinates</strong></span></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-
-		<iframe src="../../_return-to-home.html" frameborder="0" scrolling="no" class="iframe-return-to-home"></iframe>
-
-		<script type="text/javascript" src="../../js/analytics.js"></script>
 	</body>
 </html>

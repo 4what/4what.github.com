@@ -19,11 +19,26 @@
 	line-height: 1.5 !important;
 }
 
-.syntaxhighlighter .gutter .line {
-	border-right: 5px solid #ddd !important;
+.syntaxhighlighter table caption {
+	color: #666 !important;
+	font-family: sans-serif !important;
+	padding: 5px 0 !important;
+}
+
+.syntaxhighlighter table td.code .container {
+	border-left: 5px solid #ddd !important;
+	padding: 5px 0 5px 1em !important;
+}
+.syntaxhighlighter table td.code .line {
+	padding: 0 !important;
 }
 
 .syntaxhighlighter .line.alt1,
 .syntaxhighlighter .line.alt2 {
 	background: #fff !important;
+}
+
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a {
+	color: #333 !important;
 }

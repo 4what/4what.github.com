@@ -1,76 +1,85 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<title>4what - Cascading Style Sheets</title>
 
-		<link rel="stylesheet" type="text/css" href="../../css/sample.css" />
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/analytics.js" defer></script>
 	</head>
 	<body>
 		<div class="main">
-			<div class="container">
+			<div class="header">
 				<h1><span>Cascading Style Sheets</span></h1>
+			</div>
+
+			<div class="container">
+				<div class="catalog">
+					<ul>
+						<li><a href="hacks.html"><span><strong>Hacks</strong></span></a></li>
+						<li><a href="at-charset.html"><span><strong>@charset</strong></span></a></li>
+						<li><a href="at-import.html"><span><strong>@import</strong></span></a></li>
+					</ul>
+				</div>
 
 				<div class="catalog">
 					<h2><a name="3">3</a></h2>
 					<ul>
-						<li><a href="3/animation.html"><span>animation<em>IE10+, Std</em></span></a></li>
-						<li><a href="3/border-radius.html"><span>border-radius<em>IE9+, Std</em></span></a></li>
-						<li><a href="3/box-shadow.html"><span>box-shadow<em>IE9+, Std</em></span></a></li>
-						<li><a href="3/filter-blur.html"><span>filter: blur<em>Std</em></span></a></li>
-						<li><a href="3/filter-grayscale.html"><span>filter: grayscale<em>Std</em></span></a></li>
-						<li><a href="3/text-shadow.html"><span>text-shadow<em>IE10+, Std</em></span></a></li>
-						<li><a href="3/text-size-adjust.html"><span>text-size-adjust<em>Safari (iOS)</em></span></a></li>
-						<li><a href="3/transform-rotate.html"><span>transform: rotate<em>IE9+, Std</em></span></a></li>
-						<li><a href="3/transform-scale.html"><span>transform: scale<em>IE9+, Std</em></span></a></li>
-						<li><a href="3/transform-skew.html"><span>transform: skew<em>IE9+, Std</em></span></a></li>
-						<li><a href="3/transform-translate.html"><span>transform: translate<em>IE9+, Std</em></span></a></li>
-						<li><a href="3/transition.html"><span>transition<em>IE10+, Std</em></span></a></li>
+						<li><a href="3/media-queries.html"><span><strong>Media queries</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="3/safe-area.html"><span><strong>Safe area</strong><em>Mobile</em></span></a></li>
 
-						<li><a href="3/calc.html"><span>calc()<em>IE9+, Std</em></span></a></li>
-						<li><a href="3/var.html"><span>var()<em>Std</em></span></a></li>
+						<li><a href="3/var.html"><span><strong>var()</strong><em>Std</em></span></a></li>
+					</ul>
+				</div>
 
-						<li><a href="3/media-queries.html"><span>Media Queries<em>IE9+, Std</em></span></a></li>
+				<div class="catalog">
+					<ul>
+						<li><a href="3/animation.html"><span><strong>animation</strong><em>IE10+, Std</em></span></a></li>
+						<li><a href="3/transition.html"><span><strong>transition</strong><em>IE10+, Std</em></span></a></li>
+					</ul>
+				</div>
+
+				<div class="catalog">
+					<ul>
+						<li><a href="3/border-radius.html"><span><strong>border-radius</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="3/box-shadow.html"><span><strong>box-shadow</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="3/filter-blur.html"><span><strong>filter: blur</strong><em>Std</em></span></a></li>
+						<li><a href="3/filter-drop-shadow.html"><span><strong>filter: drop-shadow</strong><em>Std</em></span></a></li>
+						<li><a href="3/filter-grayscale.html"><span><strong>filter: grayscale</strong><em>Std</em></span></a></li>
+						<li><a href="3/rotate.html"><span><strong>rotate</strong><em>Std</em></span></a></li>
+						<li><a href="3/scale.html"><span><strong>scale</strong><em>Std</em></span></a></li>
+						<li><a href="3/text-shadow.html"><span><strong>text-shadow</strong><em>IE10+, Std</em></span></a></li>
+						<li><a href="3/text-size-adjust.html"><span><strong>text-size-adjust</strong><em>Safari (iOS)</em></span></a></li>
+						<li><a href="3/transform-rotate.html"><span><strong>transform: rotate</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="3/transform-scale.html"><span><strong>transform: scale</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="3/transform-skew.html"><span><strong>transform: skew</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="3/transform-translate.html"><span><strong>transform: translate</strong><em>IE9+, Std</em></span></a></li>
+						<li><a href="3/translate.html"><span><strong>translate</strong><em>Std</em></span></a></li>
 					</ul>
 				</div>
 
 				<div class="catalog">
 					<h2><a name="2.1">2.1</a></h2>
 					<ul>
-						<li><a href="2.1/hack.html"><span>Hack</span></a></li>
+						<li><a href="2.1/bug-float-double-margin.html"><span><strong>[Bug] Float: Double margin (left/right)</strong><em>IE6</em></span></a></li>
+						<li><a href="2.1/bug-height-1px.html"><span><strong>[Bug] Height: 1px</strong><em>IE6</em></span></a></li>
 
-						<li><a href="2.1/bug-float-double-margin-left-and-margin-right.html"><span>[Bug] Float: Double margin-left and margin-right<em>IE6</em></span></a></li>
-						<li><a href="2.1/bug-float-liquid-height.html"><span>[Bug] Float: Liquid height<em>IE8+, Std</em></span></a></li>
-						<li><a href="2.1/bug-height-1px.html"><span>[Bug] Height: 1px<em>IE6</em></span></a></li>
-						<li><a href="2.1/bug-select-always-on-top.html"><span>[Bug] SELECT always on top<em>IE6</em></span></a></li>
-
-						<li><a href="2.1/fixed.html"><span>Fixed</span></a></li>
-						<li><a href="2.1/height-full-screen.html"><span>Height: Full screen</span></a></li>
-						<li><a href="2.1/height-liquid.html"><span>Height: Liquid</span></a></li>
-						<li><a href="2.1/horizontal-center.html"><span>Horizontal Center</span></a></li>
-						<li><a href="2.1/iframe-transparent-bg.html"><span>IFRAME: Transparent background<em>IE8-</em></span></a></li>
-						<li><a href="2.1/img-gallery.html"><span>Image: Gallery</span></a></li>
-						<li><a href="2.1/img-mouseover-highlight.html"><span>Image: MouseOver highlight</span></a></li>
-						<li><a href="2.1/img-zoom-out.html"><span>Image: Zoom out</span></a></li>
-						<li><a href="2.1/layout-3-cols-fixed-left-and-right.html"><span>Layout: 3 Cols - Fixed left and right</span></a></li>
-						<li><a href="2.1/layout-3-rows-fixed-header-and-footer.html"><span>Layout: 3 Rows - Fixed header and footer</span></a></li>
-						<li><a href="2.1/opacity.html"><span>Opacity</span></a></li>
-						<li><a href="2.1/outline-onfocus.html"><span>Outline onFocus</span></a></li>
-						<li><a href="2.1/png-transparent-bg.html"><span>PNG: Transparent background</span></a></li>
-						<li><a href="2.1/scrollbar-hide.html"><span>ScrollBar: Hide</span></a></li>
-						<li><a href="2.1/text-overflow.html"><span>Text: Overflow</span></a></li>
-						<li><a href="2.1/text-vertical-center.html"><span>Text: Vertical center</span></a></li>
-						<li><a href="2.1/text-word-break-and-word-wrap.html"><span>Text: word-break & word-wrap</span></a></li>
-						<li><a href="2.1/vertical-center-a.html"><span>Vertical Center (A)</span></a></li>
-						<li><a href="2.1/vertical-center-b.html"><span>Vertical Center (B)</span></a></li>
+						<li><a href="2.1/contain-internal-floats.html"><span><strong>Contain internal floats</strong></span></a></li>
+						<li><a href="2.1/horizontal-center.html"><span><strong>Horizontal center</strong></span></a></li>
+						<li><a href="2.1/iframe-bg-transparent.html"><span><strong>IFRAME: Background transparent</strong><em>IE8-</em></span></a></li>
+						<li><a href="2.1/layout-fixed-header-and-footer.html"><span><strong>Layout: Fixed header and footer</strong></span></a></li>
+						<li><a href="2.1/layout-fixed-left-and-right.html"><span><strong>Layout: Fixed left and right</strong></span></a></li>
+						<li><a href="2.1/margin-collapse.html"><span><strong>Margin collapsing (top/bottom)</strong></span></a></li>
+						<li><a href="2.1/text-overflow.html"><span><strong>Text: Overflow</strong></span></a></li>
+						<li><a href="2.1/text-vertical-center.html"><span><strong>Text: Vertical center</strong></span></a></li>
+						<li><a href="2.1/text-word-wrap.html"><span><strong>Text: Word wrap</strong></span></a></li>
+						<li><a href="2.1/vertical-center.html"><span><strong>Vertical center</strong></span></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-
-		<iframe src="../../_return-to-home.html" frameborder="0" scrolling="no" class="iframe-return-to-home"></iframe>
-
-		<script type="text/javascript" src="../../js/analytics.js"></script>
 	</body>
 </html>

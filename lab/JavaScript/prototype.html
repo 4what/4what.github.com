@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - JavaScript</title>
+
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype">[1]</a>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">[2]</a>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
+					var Clazz = function () {
+						Log("new Clazz()");
+
+						this.property = "Clazz :: property";
+					};
+
+					Clazz.prototype.method = function () {
+						Log("Clazz :: method()");
+					};
+
+					var clazz = new Clazz(); // new Clazz()
+
+					Log(clazz.property); // Clazz :: property
+					clazz.method(); // Clazz :: method()
+
+					var SubClazz = function () {
+						Log("new SubClazz()");
+					};
+
+					SubClazz.prototype = Clazz.prototype;
+
+					var subClazz = new SubClazz(); // new SubClazz()
+
+					Log(subClazz.property); // undefined
+					subClazz.method(); // Clazz :: method()
+				</script>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<script>
+				var Clazz = function () {
+					Log("new Clazz()");
+
+					this.property = "Clazz :: property";
+				};
+
+				Clazz.prototype.method = function () {
+					Log("Clazz :: method()");
+				};
+
+				var clazz = new Clazz(); // new Clazz()
+
+				Log(clazz.property); // Clazz :: property
+				clazz.method(); // Clazz :: method()
+
+				var SubClazz = function () {
+					Log("new SubClazz()");
+				};
+
+				SubClazz.prototype = Clazz.prototype;
+
+				var subClazz = new SubClazz(); // new SubClazz()
+
+				Log(subClazz.property); // undefined
+				subClazz.method(); // Clazz :: method()
+			</script>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../");
+
+			})();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+
+		<script src="../../../js/x.js"></script>
+
+		<script>
+			function receiver(event) {
+				if (event.origin !== "http://example.com:8080") {
+					return;
+				}
+
+				alert("[REQUEST] " + event.data + " (" + event.origin + ")");
+
+				event.source.postMessage("OK", event.origin);
+			}
+
+			X.bind(window, "message", receiver);
+		</script>
+	</head>
+	<body></body>
+</html>

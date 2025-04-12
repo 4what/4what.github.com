@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - JavaScript</title>
+
+		<link rel="stylesheet" href="../../css/sample.css" />
+
+		<script src="../../js/x.js"></script>
+		<script src="../../js/commons.js"></script>
+
+		<script src="../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<h2><span>Specification</span></h2>
+			<p>
+				in
+					<sup><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in">[1]</a></sup>
+			</p>
+
+			<p>
+				Object.hasOwn
+					<sup>
+						Std
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn">[1]</a>
+					</sup>
+
+				<-
+
+				Object.prototype.hasOwnProperty
+					<sup><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">[1]</a></sup>
+			</p>
+
+		<h2><span>Syntax</span></h2>
+			<textarea cols="" rows="" name="code" class="js" title="">
+				<script>
+					var obj = { key: "value" };
+
+					Log(
+						"key" in obj
+					);
+
+					Log(
+						obj.hasOwnProperty("key")
+					);
+
+					Log(
+						Object.hasOwn(obj, "key") // for Std
+					);
+				</script>
+			</textarea>
+
+		<h2><span>Example</span></h2>
+			<script>
+				var obj = { key: "value" };
+
+				Log(
+					"key" in obj
+				);
+
+				Log(
+					obj.hasOwnProperty("key")
+				);
+
+				Log(
+					Object.hasOwn(obj, "key") // for Std
+				);
+			</script>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../");
+
+			})();
+		</script>
+	</body>
+</html>

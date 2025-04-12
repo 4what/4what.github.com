@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>4what - Cascading Style Sheets</title>
+
+		<link rel="stylesheet" href="../../../css/sample.css" />
+
+		<script src="../../../js/x.js"></script>
+		<script src="../../../js/commons.js"></script>
+
+		<script src="../../../js/analytics.js" defer></script>
+	</head>
+	<body>
+		<style>
+			html {
+				height: 100%;
+				overflow: hidden;
+				padding: 0 100px; /* for IE6 */
+			}
+
+			body {
+				height: 100%;
+				margin: 0;
+				overflow: hidden;
+			}
+
+			#left {
+				background: red;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				width: 100px;
+			}
+
+			#container {
+				height: 100%;
+				left: 100px;
+				overflow: auto;
+				position: absolute;
+				right: 100px;
+				width: auto !important; /* for IE7+, Std */
+				width: 100%; /* for IE6 */
+			}
+
+			#right {
+				background: blue;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				width: 100px;
+			}
+		</style>
+
+		<div id="left"></div>
+
+		<div id="container">
+
+			<h2><span>Syntax</span></h2>
+				<textarea cols="" rows="" name="code" class="css" title="">
+					<style>
+						html {
+							height: 100%;
+							overflow: hidden;
+							padding: 0 100px; /* for IE6 */
+						}
+
+						body {
+							height: 100%;
+							margin: 0;
+							overflow: hidden;
+						}
+
+						#left {
+							background: red;
+							height: 100%;
+							left: 0;
+							position: absolute;
+							width: 100px;
+						}
+
+						#container {
+							height: 100%;
+							left: 100px;
+							overflow: auto;
+							position: absolute;
+							right: 100px;
+							width: auto !important; /* for IE7+, Std */
+							width: 100%; /* for IE6 */
+						}
+
+						#right {
+							background: blue;
+							height: 100%;
+							position: absolute;
+							right: 0;
+							width: 100px;
+						}
+					</style>
+				</textarea>
+
+				<textarea cols="" rows="" name="code" class="html" title="">
+					<div id="left"></div>
+					<div id="container"></div>
+					<div id="right"></div>
+				</textarea>
+
+		</div>
+
+		<div id="right"></div>
+
+		<script>
+			(function () {
+
+				new Highlighter("../../../");
+
+			})();
+		</script>
+	</body>
+</html>
